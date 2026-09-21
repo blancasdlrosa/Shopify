@@ -38,6 +38,37 @@ mantienen su ID original y los 6 nuevos resuelven a su handle correcto.
 Respaldo del árbol completo en `docs/backup-menu-principal.json`. Para revertir:
 quitar el bloque "Por necesidad" y reenviar el resto con `menuUpdate`.
 
+### Home · "¿Qué necesita tu piel hoy?" (pendiente de publicar)
+
+Las 9 tarjetas aterrizaban en colecciones de *rutina* (4-37 productos) en vez de en
+catálogo. Corregido en una copia del tema, **sin publicar**:
+`COPIA — Necesidades al catálogo (revisar y publicar)`.
+
+| Tarjeta | Antes | Ahora |
+|---|---|---|
+| Granitos | rutina-piel-grasa-con-granitos-1 · 10 | `granitos` · 328 |
+| Manchas | rutina-manchas-y-tono · 14 | `manchas` · 214 |
+| Rojeces | rutina-rojeces · 10 | `calma-y-rojeces` · 579 |
+| Poros y textura | rutina-poros-y-textura · 14 | `poros` · 322 |
+| Piel seca | rutina-piel-seca · 23 | `piel-seca` · 492 |
+| Barrera cutánea | rutina-barrera-danada · 15 | `barrera-cutanea` · 210 |
+| Piel sensible | rutina-piel-sensible · 15 | `piel-sensible` · 533 |
+| Luminosidad | rutina-luminosidad-1 · **4** | `manchas` · 214 |
+| Primeras arrugas | rutina-primeras-arrugas · 37 | `antiedad` · 435 |
+
+El MCP bloquea escribir sobre el tema publicado, así que se duplicó el tema en vivo y
+se editó la copia. Solo cambian 9 líneas de `templates/index.json`; el resto del
+fichero es byte a byte idéntico (MD5 del original `94b9a584…` verificado antes de
+editar, MD5 del subido `e4d3c274…` verificado después).
+
+**Lo publica Blanca**, desde Tienda online → Temas → Acciones → Publicar.
+
+### Colecciones ampliadas
+
+`piel-seca` 128 → **492** y `piel-sensible` 127 → **533**, añadiendo reglas por título
+a las reglas por etiqueta que ya tenían. No se crearon colecciones nuevas para no
+duplicar nombres. Se mantiene el orden MANUAL para que la curación siga saliendo primero.
+
 ## AUTOMATED · ya funciona solo
 
 - **6 colecciones de necesidad automáticas.** Se rellenan solas con cada producto nuevo que cumpla las reglas. Cero mantenimiento manual.

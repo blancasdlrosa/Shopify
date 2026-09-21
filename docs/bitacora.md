@@ -16,6 +16,11 @@ Auditadas navegación y Ofertas: ambas sanas.
 Piel con las 6 colecciones. Los 90 enlaces existentes conservan su ID; respaldo del
 árbol en `docs/backup-menu-principal.json`.
 
+**Home:** las 9 tarjetas de "¿Qué necesita tu piel hoy?" llevaban a colecciones de
+rutina de 4-37 productos. Corregidas en la copia de tema `COPIA — Necesidades al
+catálogo`, pendiente de que Blanca la publique. Ampliadas además `piel-seca`
+(128→492) y `piel-sensible` (127→533).
+
 **A medias:** las 5 colecciones duplicadas siguen sin tocar. No se pueden despublicar
 a ciegas: alguna sección del tema podría referenciarlas y con la red bloqueada no hay
 forma de comprobarlo.
