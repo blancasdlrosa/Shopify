@@ -1,0 +1,107 @@
+# Mirea Skin · Tablero operativo
+
+Tienda: **mireaskin.es** · Shopify Basic · EUR · España
+Catálogo: 7.694 productos · 108 colecciones
+Última actualización: 2026-09-21
+
+---
+
+## NOW · afecta a venta o experiencia
+
+| # | Problema | Sistema | Estado |
+|---|---|---|---|
+| 1 | Sección "Qué necesita tu piel hoy" enlaza a colecciones que no existían → 404 | Tema / colecciones | **Resuelto para 6 necesidades** |
+| 2 | Resto de enlaces de esa sección sin auditar | Tema | **Bloqueado** (ver abajo) |
+| 3 | Colecciones nuevas no están en el menú: solo se llega por la sección del tema | Navegación | Pendiente · requiere confirmación |
+
+## NEXT · conversión
+
+| # | Problema | Impacto | Estado |
+|---|---|---|---|
+| 4 | Taxonomía `Necesidad:` por etiqueta, para eliminar la contaminación de las colecciones automáticas | Alto | Pendiente |
+| 5 | 5 pares de colecciones duplicadas (ver más abajo) | Medio · SEO + confusión | Pendiente |
+| 6 | "Ofertas" es 42% packs propios al ~10% — diluye la percepción de oferta | Medio | Decisión comercial |
+
+## LATER
+Klaviyo · motor de pricing · Merchant Center · SEO engine · content engine · app · agentes.
+Nada iniciado.
+
+## AUTOMATED · ya funciona solo
+
+- **6 colecciones de necesidad automáticas.** Se rellenan solas con cada producto nuevo que cumpla las reglas. Cero mantenimiento manual.
+- Colecciones por marca (vendor), por tipo de producto y por etiqueta de rutina: ya existían.
+- "Ofertas": regla `IS_PRICE_REDUCED`, se mantiene sola.
+
+## BLOCKED
+
+| Qué | Por qué | Desbloquea |
+|---|---|---|
+| Crawl de 404s, pruebas visuales, móvil, CRO, estrellas Judge.me, umbrales de envío | El entorno de ejecución bloquea `mireaskin.es` por política de red | Cambiar la política de red del entorno |
+
+---
+
+## Hecho y verificado · 2026-09-21
+
+### Colecciones de necesidad creadas
+
+Todas automáticas (reglas por título + etiqueta), orden "más vendidos", publicadas en Tienda online.
+
+| Colección | Handle | Productos | Contaminación medida |
+|---|---|---|---|
+| Granitos | `granitos` | 328 | ~21 (6%) capilar/corporal/bucal |
+| Manchas | `manchas` | 214 | ~4 (2%) |
+| Poros | `poros` | 322 | 0 |
+| Antiedad | `antiedad` | 435 | ~11 (3%) |
+| Barrera cutánea | `barrera-cutanea` | 210 | ~17 (8%) |
+| Calma y rojeces | `calma-y-rojeces` | 579 | ~13 (2%) |
+
+**Descartadas a propósito**, para no agravar los duplicados:
+- *Hidratación* → duplicaría "Hidratantes" (658 productos, ya en el menú)
+- *Luminosidad* → solapa ~80% con Manchas
+- *Textura* → ya la cubre "Exfoliantes y pads"
+
+### Títulos traducidos al español
+
+14 colecciones tenían handle español pero título en inglés, así que el H1 salía en inglés.
+Renombradas sin tocar el handle (cero riesgo de 404):
+
+`Cleansers`→Limpiadores · `Eye Care`→Contorno de ojos · `Hair`→Cabello · `Makeup`→Maquillaje ·
+`Skin`→Piel · `Sun Protection`→Protección solar · `Offers`→Ofertas · `New Arrivals`→Novedades ·
+`Health & Wellness`→Salud y bienestar · `Baby & Men`→Bebé y Hombre · `Beauty Accessories`→Accesorios de belleza ·
+`Makeup Accessories`→Accesorios de maquillaje · `Beauty Devices`→Tecnología · `Body Care`→Cuerpo
+
+---
+
+## Incidencias detectadas, sin resolver
+
+### Colecciones duplicadas
+
+| Pequeña / huérfana | Grande | Nota |
+|---|---|---|
+| Mascarillas · 7 (pelo) | Mascarillas · 977 (cara) | Mismo nombre, categorías distintas |
+| Labios · 11 | Labios · 325 | |
+| Tónicos y esencias · 15 | Tónicos y esencias · 562 | |
+| Champús · 7 | Champús · 229 | |
+| Cuidado capilar · 33 | Cabello · 605 | Ambas en el menú |
+
+**No se ha borrado nada.** Antes de tocarlas hay que comprobar si alguna sección del tema las referencia — y eso ahora mismo está bloqueado por la red.
+
+### Otras
+
+- `Novedades automáticas Mirea`: 8.187 productos con la regla "precio > 0". Es el catálogo entero ordenado por fecha, no unas novedades.
+- `Menos de 20 €`: 5.103 productos. No está en el menú.
+- 4 colecciones `INTERNO ·` y `Nuevos de Korealy` (0 productos): **verificadas sin publicar**. Sin riesgo de fuga.
+
+## Trampa conocida de la herramienta
+
+`create-collection` del MCP de Shopify **dice que publica en Tienda online y no lo hace**.
+`resourcePublicationsV2` vuelve vacío. Hay que publicar siempre aparte con `publishablePublish`
+y verificar. Si no, creas la colección y el 404 sigue exactamente igual.
+
+## Limitación de las colecciones automáticas
+
+Shopify no permite mezclar Y/O en el mismo conjunto de reglas. No se puede expresar
+"que contenga acné **pero no sea** champú". Por eso queda contaminación residual.
+
+La solución definitiva es la etiqueta `Necesidad: X` y una colección de regla única,
+en línea con la taxonomía que ya existe (`Paso:`, `Piel:`, `Rutina:`).
