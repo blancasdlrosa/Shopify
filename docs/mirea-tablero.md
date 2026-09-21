@@ -63,6 +63,21 @@ editar, MD5 del subido `e4d3c274…` verificado después).
 
 **Lo publica Blanca**, desde Tienda online → Temas → Acciones → Publicar.
 
+### Menú · "Rutinas y Sets" plegado
+
+El mega-menú de Horizon pinta siempre los tres niveles abiertos: no hay ajuste para
+plegarlo, y `menu_style` solo controla si salen imágenes o productos. Las 22 rutinas
+colgadas de "Rutinas y Sets" llenaban tres columnas y tapaban el resto del desplegable.
+
+Solución sin tocar código: quitarle los hijos. Un item de segundo nivel sin hijos se
+pinta como enlace simple, así que ahora "Rutinas y Sets" lleva directo a
+`/pages/rutinas`, donde están las 23. El menú pasa de 97 a 75 enlaces.
+
+Las 22 entradas retiradas están guardadas en `docs/rutinas-retiradas-del-menu.json`
+por si hay que devolver alguna.
+
+**Pendiente:** "Sets de regalo" (95 productos) colgaba de ahí y ya no está en el menú.
+
 ### Colecciones ampliadas
 
 `piel-seca` 128 → **492** y `piel-sensible` 127 → **533**, añadiendo reglas por título
