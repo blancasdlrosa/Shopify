@@ -69,16 +69,17 @@ El mega-menú de Horizon pinta siempre los tres niveles abiertos: no hay ajuste 
 plegarlo, y `menu_style` solo controla si salen imágenes o productos. Las 22 rutinas
 colgadas de "Rutinas y Sets" llenaban tres columnas y tapaban el resto del desplegable.
 
-Solución sin tocar código: quitarle los hijos. Un item de segundo nivel sin hijos se
-pinta como enlace simple. El desplegable de "Piel" queda:
+Segundo problema, al plegarlo: el mega-menú trata distinto a los elementos **con** y
+**sin** hijos. Los que tienen hijos ocupan una columna con etiqueta; los que no,
+quedan sueltos rellenando huecos. Mezclar ambos dejaba el desplegable descuadrado.
 
-1. **Rutinas** → `/pages/rutinas` (plegado; las 23 al pinchar)
-2. **Sets de regalo** → `/collections/sets-de-regalo` (95 productos)
-3. **Por necesidad** → las 6 colecciones de necesidad
-4. Los 11 tipos de producto
+Solución: que **todos** sean grupos. "Piel" queda con tres columnas con etiqueta:
 
-El grupo se renombró de "Rutinas y Sets" a **Rutinas**, porque los sets ya tienen
-entrada propia. El menú pasa de 97 a 76 enlaces.
+| Por necesidad (6) | Por producto (10) | Rutinas y sets (3) |
+|---|---|---|
+| Las 6 colecciones de necesidad | Los tipos de producto | Ver las 23 rutinas · Sets de regalo · Packs y rutinas |
+
+Las 23 rutinas siguen en `/pages/rutinas`; el menú solo enlaza a la página.
 
 Las 22 entradas retiradas están guardadas en `docs/rutinas-retiradas-del-menu.json`
 por si hay que devolver alguna.
