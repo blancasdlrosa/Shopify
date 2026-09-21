@@ -76,7 +76,11 @@ pinta como enlace simple, así que ahora "Rutinas y Sets" lleva directo a
 Las 22 entradas retiradas están guardadas en `docs/rutinas-retiradas-del-menu.json`
 por si hay que devolver alguna.
 
-**Pendiente:** "Sets de regalo" (95 productos) colgaba de ahí y ya no está en el menú.
+"Sets de regalo" (95 productos) colgaba de ahí y se fue con el resto. **Restaurado**
+como elemento de segundo nivel bajo "Piel", donde se ve mejor que antes.
+
+**Lección:** antes de quitarle los hijos a un grupo del menú, revisar uno por uno qué
+se lleva por delante. No todos son de la misma familia.
 
 ### Colecciones ampliadas
 
