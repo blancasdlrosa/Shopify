@@ -12,19 +12,31 @@ Catálogo: 7.694 productos · 108 colecciones
 |---|---|---|---|
 | 1 | Sección "Qué necesita tu piel hoy" enlaza a colecciones que no existían → 404 | Tema / colecciones | **Resuelto para 6 necesidades** |
 | 2 | Resto de enlaces de esa sección sin auditar | Tema | **Bloqueado** (ver abajo) |
-| 3 | Colecciones nuevas no están en el menú: solo se llega por la sección del tema | Navegación | Pendiente · requiere confirmación |
+| 3 | Colecciones nuevas no estaban en el menú | Navegación | **Resuelto** · submenú "Por necesidad" bajo Piel |
 
 ## NEXT · conversión
 
 | # | Problema | Impacto | Estado |
 |---|---|---|---|
 | 4 | Taxonomía `Necesidad:` por etiqueta, para eliminar la contaminación de las colecciones automáticas | Alto | Pendiente |
-| 5 | 5 pares de colecciones duplicadas (ver más abajo) | Medio · SEO + confusión | Pendiente |
+| 5 | 5 pares de colecciones duplicadas (ver más abajo) | Medio · SEO + confusión | Pendiente · **no tocar sin ver el tema** |
 | 6 | "Ofertas" es 42% packs propios al ~10% — diluye la percepción de oferta | Medio | Decisión comercial |
 
 ## LATER
 Klaviyo · motor de pricing · Merchant Center · SEO engine · content engine · app · agentes.
 Nada iniciado.
+
+### Menú principal · submenú "Por necesidad"
+
+Añadido bajo **Piel**, en segunda posición (después de "Rutinas y Sets"):
+Granitos · Manchas · Poros · Calma y rojeces · Barrera cutánea · Antiedad.
+
+`menuUpdate` reemplaza el árbol entero, así que se reenviaron los 90 enlaces existentes
+con su `id` para que Shopify los conservara en vez de recrearlos. Verificado: los 90
+mantienen su ID original y los 6 nuevos resuelven a su handle correcto.
+
+Respaldo del árbol completo en `docs/backup-menu-principal.json`. Para revertir:
+quitar el bloque "Por necesidad" y reenviar el resto con `menuUpdate`.
 
 ## AUTOMATED · ya funciona solo
 

@@ -12,9 +12,13 @@ Antiedad, Barrera cutánea, Calma y rojeces) — 2.088 productos que antes no te
 puerta de entrada. Traducidos al español 14 títulos de colección que salían en inglés.
 Auditadas navegación y Ofertas: ambas sanas.
 
-**A medias:** las colecciones nuevas no están en el menú principal. Se llega a ellas
-solo desde la sección del tema. Reescribir el menú principal a ciegas es arriesgado
-y necesita luz verde de Blanca.
+**Menú:** resuelto. Blanca dio luz verde y se añadió el submenú "Por necesidad" bajo
+Piel con las 6 colecciones. Los 90 enlaces existentes conservan su ID; respaldo del
+árbol en `docs/backup-menu-principal.json`.
+
+**A medias:** las 5 colecciones duplicadas siguen sin tocar. No se pueden despublicar
+a ciegas: alguna sección del tema podría referenciarlas y con la red bloqueada no hay
+forma de comprobarlo.
 
 **Bloqueado:** el entorno bloquea `mireaskin.es` por política de red. Sin eso no hay
 crawl de 404s, ni pruebas visuales, ni móvil, ni CRO, ni Judge.me.
