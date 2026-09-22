@@ -4,6 +4,36 @@ Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
 
+## 2026-09-22 · Claude · Abib, Arencia, THE FACE SHOP, MISSHA y sueltos (24 fichas)
+
+Van **150 de 178**. Quedan **22 fichas** sin bloque (más 16 packs, que no lo necesitan).
+
+Reescritas de cero porque seguían siendo importación en bruto: **Abib** (4), **Arencia**
+(4), **mixsoon Galactomyces Toner**, **NATURE REPUBLIC Vitapair C** y **THE WHOO
+Cheongidan**. Solo bloque de venta cruzada, porque ya estaban bien: **THE FACE SHOP** (7),
+**MISSHA** (5) y la crema de cuello de IOPE.
+
+Decisiones que conviene que quede por escrito:
+
+- **La bruma de agua de arroz ahora dice que una bruma sola reseca.** El agua se evapora
+  y se lleva más de lo que trajo. Se vende igual, pero acompañada de algo que la selle,
+  que es como funciona de verdad.
+- **El peel shot de MISSHA es un 25 % de ácidos.** La ficha dice que se cronometre con
+  reloj y que la primera vez se pruebe con tres minutos en una zona pequeña. Un producto
+  de venta libre no es un producto suave.
+- **Los parches de ojos de Abib llevan retinal**, y eso no estaba dicho como advertencia:
+  ahora avisan de no usarlos en embarazo ni la misma noche que un sérum de retinal.
+- **El colágeno aplicado en la piel no se convierte en tu colágeno**, por pequeña que sea
+  la molécula. Está escrito en la ficha de Abib, que era la que más lo prometía.
+
+**Un error que cometí y corregí:** al mandar la ficha de THE WHOO se me coló un
+`PLACEHOLDER` en la descripción de la **crema de cuello de IOPE**. Estuvo así menos de un
+minuto. La restauré a partir de la copia que tenía guardada y además le añadí su bloque,
+así que ahora está mejor que antes. Lo apunto porque si Blanca la miró justo en ese
+minuto, vio algo raro.
+
+---
+
 ## 2026-09-22 · Claude · LANEIGE reescrita entera (15 fichas)
 
 Las 15 fichas de LANEIGE eran importación en bruto: tres párrafos genéricos, sin "Dónde
