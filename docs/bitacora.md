@@ -59,6 +59,14 @@ dice lo que casi ninguna tienda dice: *"la mayoría de las pieles sensibles son 
 normales a las que se les está dando demasiado"*, con la recomendación de **quitar**
 activos dos o tres semanas.
 
+Cerrada Barrera dañada con 4 más: PDRN Hydrating Gel Cleanser, Hyaluronic Moisturizing
+Capsule Cream, THE FACE SHOP Aloe Soothing Cream y MEDIHEAL Derma Madecassoside.
+Van **66 de 176**.
+
+Introducido el **par de temporada** como argumento de venta: crema densa en invierno,
+ligera en verano, y la frase de que mucha gente tiene las dos y alterna. Es honesto y
+duplica el ticket sin engañar a nadie.
+
 **PR abierta:** https://github.com/blancasdlrosa/Shopify/pull/1 — cada push la actualiza.
 
 ---
