@@ -89,3 +89,84 @@ códigos por colección en vez de sobre todo el catálogo.
 todo, sin caducidad y sin tope de usos. Habría que quedarse con uno. `MIREA10` además sí
 acumula con descuentos de envío, cosa que `BIENVENIDA10` no hace. No los he tocado porque
 puede que uno esté impreso en algún sitio o metido en el flow de bienvenida de Klaviyo.
+
+---
+
+# Seguimiento · qué ve cada influencer
+
+Añadido el 2026-09-22.
+
+## La página
+
+**`mireaskin.es/pages/mirea-influencer`** — creada y publicada. Explica qué se da, qué se
+pide, cómo funciona el seguimiento y qué datos tiene que mandar quien quiera entrar
+(alcance medio y país principal de su audiencia, sacados de sus propias estadísticas).
+
+Aún **no está enlazada desde el menú**. Lo suyo es ponerla en el pie de página, junto a
+"Hablamos". Dime y la enlazo.
+
+## Los dos números de cada influencer
+
+Cada una recibe **un código** y **un enlace**. Hacen cosas distintas y por eso van los dos:
+
+- **El código** cuenta los *pedidos*. Solo ve a quien lo escribe al pagar.
+- **El enlace** cuenta las *visitas*. Ve también a quien entra por curiosidad y compra
+  tres semanas después sin acordarse del código.
+
+### Convención del enlace
+
+```
+https://mireaskin.es/?utm_source=instagram&utm_medium=influencer&utm_campaign=ALIAS
+```
+
+`ALIAS` en minúsculas y sin acentos ni espacios: `lucia`, `martak`, `anabeauty`.
+Tiene que coincidir con el nombre del código para que los dos números cuadren.
+
+Si quieres mandarla a una rutina concreta en vez de a la home, se cambia solo la parte de
+delante:
+
+```
+https://mireaskin.es/products/pack-primera-vez?utm_source=instagram&utm_medium=influencer&utm_campaign=lucia
+```
+
+### De dónde salen los números
+
+Verificado hoy: la consulta funciona y devuelve datos reales.
+
+| Dato | Dónde |
+|---|---|
+| Visitas por influencer | Analíticas → Informes → Sesiones, agrupado por `utm_campaign` |
+| Pedidos por influencer | Analíticas → Informes → **Ventas por código de descuento** |
+| Clientes que trajo | Clientes → segmento **Mirea · Traídas por influencer** |
+
+## Lo que hay que decirle claro a cada una
+
+**No pueden entrar a ver sus números en tiempo real.** Shopify Basic no tiene panel de
+afiliados: para eso hace falta una app de pago (UpPromote, Refersion). Lo que sí hay, y
+lo que promete la página, es un **informe mensual** que se les manda.
+
+Prometer un panel que no existe es la forma más rápida de quemar una colaboración.
+
+### Plantilla del informe mensual
+
+> **[Mes] · [Nombre]**
+>
+> Visitas desde tu enlace: **[n]**
+> Pedidos con tu código `[CÓDIGO]`: **[n]**
+> Facturación generada: **[n] €**
+>
+> [Una línea honesta: qué funcionó, qué no, y qué probamos el mes que viene.]
+
+## Un aviso sobre los datos de tráfico actuales
+
+En los últimos 90 días la tienda tuvo **1.754 sesiones** y **2 pedidos**. Pero el 89 % de
+ese tráfico entra como "directo" (1.567 sesiones), que en una tienda nueva sin presencia
+offline suele ser tráfico propio, bots o enlaces sin etiquetar. Del resto: Facebook 115,
+Google 38, Instagram 33.
+
+Con ese ruido dentro **no se puede calcular una conversión real**. Si el tráfico bueno
+son solo las 187 sesiones no directas, la conversión sería del 1,07 %, que es normal. Si
+las 1.754 fueran reales, sería del 0,11 %, que sería un desastre. No lo sabemos.
+
+Etiquetar con UTM todo lo que se publique a partir de ahora es lo que va a hacer que ese
+número signifique algo. Empieza por los enlaces de influencer.

@@ -20,6 +20,8 @@ Catálogo: 7.694 productos · 108 colecciones
 | 8 | Ningún producto activo tiene coste por artículo cargado | Margen | **Bloqueado** · lo carga Blanca (CSV) |
 | 9 | Pesos de producto inflados de origen (0,2 kg un sérum de 30 ml) | Envíos | Pendiente · hacen falta pesos reales |
 | 10 | Instagram: 8.968 seguidores, alcance del 0,06 %, y España no está entre sus 45 países | Redes | **Decisión de Blanca** · ver `docs/instagram-diagnostico.md` |
+| 11 | Los 16 campos del perfil de cliente existen pero no hay dónde rellenarlos | Perfil | Pendiente · hace falta formulario (tema bloqueado) |
+| 12 | 89 % del tráfico entra como "directo": la conversión real no se puede calcular | Medición | Pendiente · etiquetar todo con UTM |
 
 ## NEXT · conversión
 
