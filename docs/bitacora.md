@@ -4,6 +4,37 @@ Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
 
+## 2026-09-22 · Claude · LANEIGE reescrita entera (15 fichas)
+
+Las 15 fichas de LANEIGE eran importación en bruto: tres párrafos genéricos, sin "Dónde
+encaja", sin ficha técnica y **sin "Para quién NO es"**. Reescritas de cero al formato de
+la casa, con bloque de venta cruzada incluido. Van **126 de 178**.
+
+Balance Mode (3), Cica Sleeping Mask, Bouncy & Firm (cara, sérum, contorno, labios),
+Lip Glowy Balm, las cuatro Lip Sleeping Mask y los dos Neo Cushion.
+
+**Lo más importante que se ha corregido son los cushions.** Ponían "SPF42" y "SPF50+"
+como una virtud sin más. Ahora las dos fichas dicen que **el SPF de un cushion no
+sustituye al protector solar**, porque nadie se aplica la cantidad de ensayo en la cara.
+Vender un cushion como si fuera tu solar del día es un problema de seguridad, no de
+marketing, y además es lo que hace que la gente acabe con manchas y culpe a la crema.
+
+Otras decisiones:
+
+- Las cuatro Lip Sleeping Mask son el mismo producto con distinto aroma. En vez de
+  inflar cada ficha, cada una dice que las otras tres existen y que **no hace falta
+  comprar más de una**. Se vende menos por pedido y se devuelve mucho menos.
+- La peel-off de poros dice lo que nadie dice: **una peel-off no reduce el tamaño del
+  poro**. El tamaño del poro es genético.
+- Las dos fichas de piel grasa (limpiador e hidratante) explican que saltarse la crema
+  hace que la piel produzca más grasa. Es el error más frecuente de ese tipo de piel.
+
+**Qué queda:** 52 fichas sin bloque, sin contar los 16 packs. Las que siguen siendo
+importación en bruto y necesitan reescritura completa, no solo el bloque: Abib (4),
+Arencia (4), mixsoon, NATURE REPUBLIC y THE WHOO.
+
+---
+
 ## 2026-09-22 · Claude · "Combina bien con": pelo, dispositivos AGE-R y línea kójico
 
 16 fichas más. Van **111 de 178** (178, no 176: al recontar el feed aparecieron dos
