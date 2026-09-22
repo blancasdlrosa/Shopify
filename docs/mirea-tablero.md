@@ -13,8 +13,12 @@ Catálogo: 7.694 productos · 108 colecciones
 | 1 | Sección "Qué necesita tu piel hoy" enlaza a colecciones que no existían → 404 | Tema / colecciones | **Resuelto para 6 necesidades** |
 | 2 | Resto de enlaces de esa sección sin auditar | Tema | **Bloqueado** (ver abajo) |
 | 3 | Colecciones nuevas no estaban en el menú | Navegación | **Resuelto** · submenú "Por necesidad" bajo Piel |
-| 4 | `Pack colágeno Medicube` cuesta 376,69 € y sus 5 productos sueltos suman 338,68 € | Precios | **Bloqueado** · decide Blanca |
-| 5 | Ese mismo pack muestra un tachado de 419,99 € que no corresponde a ningún precio real | Precios · Ómnibus | **Bloqueado** · decide Blanca |
+| 4 | `Pack colágeno Medicube` costaba 376,69 € y sus 5 productos sueltos suman 338,68 € | Precios | **Resuelto** · 304,90 € |
+| 5 | Tachado de 419,99 € sin precio real detrás | Precios · Ómnibus | **Resuelto** · tachado = 338,68 € |
+| 6 | 16 productos con precio = coste × 1,2 (margen bruto 16,7 %) | Precios | **Resuelto** · subidos, 31 variantes |
+| 7 | Los 15 packs pesaban 0 kg y se enviaban cobrando 6,99 € | Envíos | **Resuelto** · peso = suma de componentes |
+| 8 | Ningún producto activo tiene coste por artículo cargado | Margen | **Bloqueado** · lo carga Blanca (CSV) |
+| 9 | Pesos de producto inflados de origen (0,2 kg un sérum de 30 ml) | Envíos | Pendiente · hacen falta pesos reales |
 
 ## NEXT · conversión
 
@@ -110,7 +114,8 @@ duplicar nombres. Se mantiene el orden MANUAL para que la curación siga saliend
 | Qué | Por qué | Desbloquea |
 |---|---|---|
 | Crawl de 404s, pruebas visuales, móvil, CRO, estrellas Judge.me, umbrales de envío | El entorno de ejecución bloquea `mireaskin.es` por política de red | Cambiar la política de red del entorno |
-| Precio y tachado de `Pack colágeno Medicube`, y reescritura de su ficha | Cambiar precios es decisión comercial de Blanca (regla 48). El texto no se puede escribir hasta saber la cifra | Que Blanca fije el precio del pack |
+| Saber si hay beneficio en cada producto | Ningún producto activo tiene coste por artículo cargado. El informe de Shopify da COGS = 0 | Que Blanca importe un CSV con la columna *Cost per item* |
+| Comparativa de precios con Korealy | `korealy.com` está bloqueado por la política de red del entorno, igual que `mireaskin.es` | Cambiar la política de red, o que Blanca pegue aquí los precios |
 
 ---
 

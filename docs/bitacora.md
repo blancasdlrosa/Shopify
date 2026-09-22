@@ -4,6 +4,47 @@ Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
 
+## 2026-09-22 · Claude · auditoría de precios
+
+Blanca pidió arreglar el precio del Pack colágeno, auditar precios contra gastos de
+envío, comparar con Korealy y hacer los ajustes necesarios para tener siempre beneficio.
+Informe completo en `docs/auditoria-precios-2026-09-22.md`. Resumen:
+
+**El dato que falta.** No hay coste por artículo en ningún producto activo. El informe
+de Shopify lo confirma: 90 días, 169,80 € de ventas, 2 pedidos, COGS = 0. Sin coste no
+hay margen calculable. Lo arregla un CSV con la columna *Cost per item*.
+
+**Hallazgo grave.** 16 productos (LANEIGE + Abib) tenían precio = coste × 1,2 exacto,
+16 de 16 sin excepción. Margen bruto 16,7 %, antes de comisiones, envío y publicidad.
+Anunciarlos era perder dinero en cada venta. Subidos a la altura del propio catálogo
+para productos equivalentes (31 variantes). Tabla completa de antes/después en el
+informe.
+
+**Pack colágeno.** Costaba 376,69 € cuando sus partes suman 338,68 €. Corregido a
+304,90 €, mismo descuento (~10 %) que el resto de packs, tachado en 338,68 €. Ficha
+reescrita (venía con emojis) y renombrado a `Pack Colágeno medicube + dispositivo AGE-R`.
+
+**Los 15 packs pesaban 0 kg** y Shopify les cobraba la banda de 6,99 €. Puesto el peso
+como suma de componentes: ahora caen en 18,99 € o 27,99 €. **Ojo:** los pesos de los
+productos sueltos están inflados de origen, así que estas bandas hay que contrastarlas
+con lo que cobra el transportista de verdad.
+
+**Korealy no se puede comparar desde aquí:** el dominio está bloqueado por la política
+de red del entorno, igual que mireaskin.es. No hay comparativa y no la he inventado.
+Lo que sí se ve en la tienda es que Korealy es el proveedor: hay 39 productos suyos en
+cuarentena a 11,16 € fijo sin coste, y **verificado hoy que los 39 siguen en borrador y
+sin publicar.** Uno de esa familia sí se había escapado al feed (NATURE REPUBLIC Vitapair
+C a 13,16 €): subido a 19,90 €.
+
+**No tocado a propósito:** THE WHOO Cheongidan Emulsion a 116,56 €. Céntimos raros, pero
+THE WHOO es lujo real y el precio es plausible. Lo confirma Blanca.
+
+**Para ChatGPT:** antes de tocar cualquier precio, mira si el producto tiene coste
+cargado. Hoy ninguno activo lo tiene. Si ves precios que dividen exactos entre 1,2, es
+la regla de importación rota, no una decisión comercial.
+
+---
+
 ## 2026-09-22 · Claude
 
 **Hecho · fichas.** Cerrado el bloque "Para quién NO es" en los cinco packs que aún no
