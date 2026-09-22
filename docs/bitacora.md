@@ -4,6 +4,47 @@ Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
 
+## 2026-09-22 · Claude · el idioma de la tienda está mal y se nota en los nombres
+
+Buscando por qué las fichas del catálogo largo están en inglés he encontrado algo más
+gordo: **el idioma principal de la tienda es el inglés.** El español es secundario y vive
+en `/es/`. Informe entero en `docs/idioma-tienda-2026-09-22.md`.
+
+Como **todos los enlaces del menú apuntan a `/es/`**, cualquiera que navegue acaba en la
+versión traducida. Y la traducción automática ha hecho destrozos, porque el texto de
+origen ya estaba en español y la máquina tradujo español a español:
+
+| Lo que pusimos | Lo que ve el cliente |
+|---|---|
+| medicube Triple Collagen Cream | **Crema de triple colágeno medicube** |
+| Anua Heartleaf Quercetinol Pore Deep Cleansing Foam | **Espuma de limpieza profunda de poros Anua Heartleaf Quercetinol** |
+| **Pack Primera vez** | **Paquete Primera vez** |
+| Tipo `Hidratar` | **Hydrate** |
+| Tipo `Limpiar` | **Clean up** |
+
+Los nombres de marca no se traducen nunca: nadie busca "Espuma de limpieza profunda de
+poros Anua". Y los tipos de producto se han traducido **del español al inglés**, dentro
+de la versión española.
+
+**Arreglado ya:** borradas las traducciones de título y tipo de producto de los **15
+packs activos** — los que tienen nombre propio y salen en el test, el blog y el menú.
+Comprobado que "Paquete Primera vez" ha desaparecido.
+
+**No he tocado las descripciones traducidas**, porque en los ~7.560 productos del
+proveedor la original sí está en inglés y ahí la traducción suma.
+
+**Decisión pendiente de Blanca**, porque es un cambio global de producción: borrar las
+traducciones de título de los 7.700 restantes y **cambiar el idioma principal a español**.
+Ese cambio mueve todas las URLs, la canónica y el hreflang. Además es candidato serio a
+explicar por qué los **440 productos llevan semanas en PENDING en Merchant Center**: el
+sitio se declara en inglés y vende a España.
+
+**Y una cosa que hay que saber antes de montar el chat con IA que ha pedido Blanca:**
+unos 7.560 productos tienen la descripción en inglés del proveedor. Un asistente que lea
+eso va a contestar en inglés y sin saber para qué sirve el producto.
+
+---
+
 ## 2026-09-22 · Claude · me equivoqué en la auditoría de colecciones huérfanas
 
 Auditando los enlaces del test "Encuentra tu rutina" acabé destapando un error mío de
