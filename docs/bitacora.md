@@ -78,6 +78,16 @@ declarado como "combina con absolutamente todo lo que vendemos" (y por qué eso 
 frase comercial), y la alternancia ácidos/calmante escrita en las dos fichas que forman
 ese par.
 
+Segunda tanda de 8: la línea **Red** (acné) y cuerpo — Succinic Acid Peel, Peeling Pad,
+SOS Invisible Patch, Red Acne Body Wash, Red Clear Cica Body Mist, Red Clear Body Lotion,
+Red Concealer Tip y Hyaluronic Ceramide Jelly Cream. Van **82 de 176**.
+
+Aquí la lógica de venta es **prevención + rescate**: los discos para que salgan menos, el
+peel para el que ya está. Y dos consejos que no venden nada y generan confianza: lavarse
+el pelo antes que el cuerpo (el acondicionador que resbala por la espalda es causa
+frecuente de granitos ahí), y que saltarse la crema en piel grasa hace que produzcas más
+grasa todavía.
+
 **PR abierta:** https://github.com/blancasdlrosa/Shopify/pull/1 — cada push la actualiza.
 
 ---
