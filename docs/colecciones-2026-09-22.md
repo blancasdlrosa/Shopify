@@ -110,4 +110,70 @@ Para llenarlas hay dos caminos, y esto sí es una decisión tuya:
   incidencia nueva en Merchant Center.
 
 Yo empezaría por lo primero, en un puñado de secciones, y miraría los resultados
-antes de seguir. Dime y lo hago.
+antes de seguir.
+
+---
+
+## Segunda tanda: las secciones por necesidad (hecho)
+
+Blanca dio luz verde al camino del ingrediente en el título. Hecho, con reglas del
+tipo "el título contiene X", sumadas a las etiquetas que ya había (así que las fichas
+curadas siguen dentro).
+
+| Sección | Antes | Ahora |
+|---|---:|---:|
+| Calma y rojeces | 10 | **1.104** |
+| Piel seca | 32 | **832** |
+| Poros y textura | 14 | **737** |
+| Antiedad y firmeza | 39 | **639** |
+| Piel sensible | 29 | **629** |
+| Barrera cutánea | 16 | **514** |
+| Manchas y tono | 14 | **457** |
+| Granitos y marcas | 12 | **329** |
+
+Criterio de cada una:
+
+- **Granitos:** solo ingredientes y palabras que actúan sobre el grano — Acne, Trouble,
+  Blemish, Pimple, Salicylic, BHA, Tea Tree, Azelaic, Succinic, Sebum, Sulfur, Spot Patch.
+- **Manchas:** Vitamin C, Ascorbic, Niacinamide, Niacin, Tranexamic, Glutathione,
+  Arbutin, Kojic, Brightening, Dark Spot, Whitening, Melasma, Yuja, Turmeric.
+- **Poros:** Pore, Blackhead, BHA, PHA, AHA, Peel, Scrub, Exfoli, Clay, Charcoal, Sebum.
+- **Calma y rojeces:** Cica, Centella, TECA, Madecassoside, Heartleaf, Houttuynia,
+  Mugwort, Artemisia, Soothing, Calming, Relief, Panthenol, Allantoin, Aloe, Green Tea.
+- **Barrera:** Ceramide, Barrier, Panthenol, Repair, Recovery, Squalane, Lipid, Atopalm.
+- **Antiedad:** Retinol, Retinal, Bakuchiol, Peptide, Wrinkle, Firming, Lifting,
+  Anti-Aging, Adenosine, Elasticity, EGF, PDRN, Exosome, Tension.
+
+### Una corrección que hice sobre la marcha
+
+En el primer intento metí Cica, Centella, Heartleaf, Mugwort y Artemisia en **Granitos**.
+Al revisar los títulos que salían vi el error: son ingredientes **calmantes**, y la
+sección se llenó de "Heartleaf Soothing Toner" y "Calming Cream". Se lee mal en una
+sección que se llama Granitos. Los moví a Calma y rojeces, que es su sitio. Granitos
+bajó de 412 a 329 y ganó en precisión.
+
+### Lo que se cuela y hay que saber
+
+Las reglas miran el título, y el título no distingue cara de cuerpo ni de pelo. Así que
+se cuelan cosas como **"Retinol Retinal Firming Body Cream"** en Antiedad o **"Yuja
+Niacin Brightening Body Serum Mist"** en Manchas. No son productos equivocados — son
+productos correctos en la sección de la cara. Son pocos y no molestan, pero están.
+
+**Calma y rojeces se ha quedado enorme (1.104)** porque "Soothing" y "Calming" aparecen
+en muchísimos productos coreanos. Si te parece demasiado, se afina quitando esas dos
+palabras y dejando solo los ingredientes; bajaría bastante.
+
+La limpieza de verdad sigue siendo etiquetar los productos, y eso sigue pendiente de
+decisión por lo que cuesta y por el riesgo con Merchant Center.
+
+## El menú, segunda pasada
+
+El desplegable de **Piel** vuelve a tener "Por necesidad" y "Por tipo de piel" — pero
+esta vez cada uno se abre en sus propias secciones, en lugar de llevar los tres al
+mismo sitio:
+
+- **Por necesidad:** Granitos y marcas · Manchas y tono · Poros y textura · Calma y
+  rojeces · Barrera cutánea · Antiedad y firmeza
+- **Por tipo de piel:** Piel seca · Piel grasa · Piel mixta · Piel sensible
+- Y debajo, las diez secciones por producto.
+

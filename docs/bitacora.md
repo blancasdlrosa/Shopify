@@ -4,6 +4,34 @@ Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
 
+## 2026-09-22 · Claude · secciones por necesidad, llenas
+
+Blanca dio el visto bueno al camino del ingrediente en el título. Hecho.
+
+Calma y rojeces 10 → **1.104**. Piel seca 32 → **832**. Poros 14 → **737**. Antiedad
+39 → **639**. Piel sensible 29 → **629**. Barrera 16 → **514**. Manchas 14 → **457**.
+Granitos 12 → **329**.
+
+Las reglas suman el ingrediente en el título **a la etiqueta que ya existía**, así que
+las fichas curadas siguen dentro y no se ha perdido nada.
+
+**Me equivoqué en el primer intento y lo corregí.** Metí Cica, Centella, Heartleaf,
+Mugwort y Artemisia en Granitos. Al revisar los títulos resultantes vi que la sección
+se había llenado de "Heartleaf Soothing Toner" y "Calming Cream": son ingredientes
+calmantes, no anti-grano. Los pasé a Calma y rojeces. Granitos bajó de 412 a 329 y es
+mucho más honesto.
+
+Dos cosas que conviene vigilar y están escritas en `docs/colecciones-2026-09-22.md`:
+el título no distingue cara de cuerpo, así que se cuela algún producto corporal en
+secciones faciales; y Calma y rojeces se ha quedado muy grande porque "Soothing" y
+"Calming" aparecen en medio catálogo coreano.
+
+**Menú:** el desplegable de Piel ya tiene tres niveles. "Por necesidad" y "Por tipo de
+piel" se abren cada uno en sus propias secciones, en vez de llevar los dos al mismo
+sitio como antes.
+
+---
+
 ## 2026-09-22 · Claude · las secciones salían vacías: arreglado
 
 Blanca avisó de que entraba en una sección y salían diez productos de casi ocho mil.
