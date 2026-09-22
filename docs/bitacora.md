@@ -50,6 +50,15 @@ Cerrada la familia Piel de porcelana con 4 más: Glutathione Cleansing Foam, Glu
 Serum Mist, PDRN Collagen Glow Jelly Serum y Deep Vita C Daily Quick Mask. Van
 **58 de 176**.
 
+Y 4 de Barrera dañada: PDRN Pink Cica Soothing Toner, PDRN Booster Gel, PDRN Pink
+Niacinamide Whip Cleanser y PDRN Pink Hyaluronic Moisturizing Cream. Van **62 de 176**.
+
+Dos apuntes de estas: el **PDRN Booster Gel** queda declarado como el gel conductor del
+AGE-R, que es venta cruzada real con los dispositivos de 138-449 €. Y el tónico Cica
+dice lo que casi ninguna tienda dice: *"la mayoría de las pieles sensibles son pieles
+normales a las que se les está dando demasiado"*, con la recomendación de **quitar**
+activos dos o tres semanas.
+
 **PR abierta:** https://github.com/blancasdlrosa/Shopify/pull/1 — cada push la actualiza.
 
 ---
