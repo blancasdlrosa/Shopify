@@ -67,6 +67,17 @@ Introducido el **par de temporada** como argumento de venta: crema densa en invi
 ligera en verano, y la frase de que mucha gente tiene las dos y alterna. Es honesto y
 duplica el ticket sin engañar a nadie.
 
+**Tanda de 8** (a petición de Blanca, en vez de 4): los productos héroe que van dentro de
+los packs — Green Plum Cleanser, COSRX Snail 96, BoJ Relief Sun, SOME BY MI Toner,
+Isntree Watery Sun Gel, illiyoon Ceramide Ato, Anua Heartleaf 77% y MEDIHEAL PDRN Patch.
+Van **74 de 176**.
+
+Estos son los que más tráfico van a recibir cuando se lance Shopping, así que llevan los
+argumentos más fuertes: la doble limpieza como pareja obligada del gel, el solar
+declarado como "combina con absolutamente todo lo que vendemos" (y por qué eso no es una
+frase comercial), y la alternancia ácidos/calmante escrita en las dos fichas que forman
+ese par.
+
 **PR abierta:** https://github.com/blancasdlrosa/Shopify/pull/1 — cada push la actualiza.
 
 ---
