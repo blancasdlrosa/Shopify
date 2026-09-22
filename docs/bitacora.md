@@ -4,6 +4,33 @@ Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
 
+## 2026-09-22 · Claude · influencers y fichas
+
+**Programa de influencers montado.** Cinco códigos activos `MIREAINF01`-`05` al 10 %
+(porcentaje elegido por Blanca), con guardarraíles: tope de 200 usos, uno por cliente,
+mínimo de 35 €, caducidad 22-12-2026 y **sin acumular** con descuentos de pedido,
+producto ni envío — eso es lo que impide encadenarlos con `BIENVENIDA10` o `MIREA10`.
+
+Manual completo en `docs/programa-influencers.md`: cómo renombrar un código al fichar a
+alguien, el texto que hay que mandarle (con el aviso de `#publi`, obligatorio en España,
+y los límites de lo que puede decir sobre la piel), y dónde se miran los resultados
+(Analíticas → Ventas por código de descuento).
+
+**Detectado, sin tocar:** `BIENVENIDA10` y `MIREA10` son el mismo descuento duplicado,
+los dos al 10 % sobre todo, sin caducidad ni tope. `MIREA10` además acumula con envío y
+`BIENVENIDA10` no. Habría que quedarse con uno, pero puede que alguno esté impreso o
+metido en el flow de bienvenida de Klaviyo, así que lo decide Blanca.
+
+**Nota de criterio:** el 10 % es el único porcentaje que hoy sabemos que no hace perder
+dinero. Con un 20 % sobre el catálogo importado se vendería por debajo de coste, porque
+ese bloque sigue al 16,7 % de margen bruto. No escalar el programa hasta que los costes
+estén cargados.
+
+**"Combina bien con":** 8 fichas más de la familia Manchas y tono (Kojic y TXA
+completas). Van **38 de 176**.
+
+---
+
 ## 2026-09-22 · Claude · Klaviyo y fichas
 
 **Klaviyo: cuatro flows disparaban antes de que llegara el paquete.** El envío desde
