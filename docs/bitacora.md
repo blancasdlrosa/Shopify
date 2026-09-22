@@ -29,6 +29,15 @@ En estas hay dos avisos que evitan devoluciones además de vender: los discos de
 colágeno **no** son como los de ácidos (se confunden constantemente y se usan mal), y el
 retinal **no se compra** si no se va a usar solar a diario.
 
+Otras 4 después: EGF NAD Firming Serum, Ultra Light PDRN Peptide Serum, PDRN Pink
+Peptide Eye Cream y Gua Sha Neck Cream. Van **50 de 176**.
+
+**Criterio de estos bloques:** dos de ellos recomiendan explícitamente *no* comprar. La
+ficha del EGF NAD dice que subas el sérum por el cuello en vez de comprar crema de cuello
+aparte, y la del Gua Sha dice que si ya usas un sérum de péptidos puedes ahorrártela,
+porque lo que aporta es el aplicador, no la fórmula. Se pierde alguna venta suelta y se
+gana la clienta que vuelve.
+
 **PR abierta:** https://github.com/blancasdlrosa/Shopify/pull/1 — cada push la actualiza.
 
 ---
