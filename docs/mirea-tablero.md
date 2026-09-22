@@ -6,6 +6,18 @@ Catálogo: 7.694 productos · 108 colecciones
 
 ---
 
+## LO ÚNICO QUE IMPORTA AHORA
+
+**Cero ventas reales.** Los 3 pedidos y los 3 carritos abandonados son de Blanca.
+1.754 sesiones en 90 días, el 89 % "directo" (bots o tráfico propio). 0 impresiones en
+Google. Alcance del último post de Instagram: 5 personas.
+
+La tienda funciona y puede cobrar. **Lo que falta es gente.** Diagnóstico completo y plan
+en `docs/por-que-no-vende.md`.
+
+Siguiente paso real: **cargar costes → lanzar Google Shopping en España** con los 440
+productos ya aprobados. Todo lo demás es secundario hasta que haya visitantes reales.
+
 ## NOW · afecta a venta o experiencia
 
 | # | Problema | Sistema | Estado |
