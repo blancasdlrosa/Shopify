@@ -1,5 +1,28 @@
 # Colecciones sin enlazar · auditoría 2026-09-22
 
+> ## CORRECCIÓN · segunda pasada, 22-09
+>
+> La primera versión de este documento **estaba mal en dos filas**, y el error era mío.
+> Crucé las colecciones contra el menú y contra las plantillas del tema, pero **no contra
+> el cuerpo de las páginas ni contra los artículos del blog**. Ahí había enlaces.
+>
+> Si Blanca hubiera despublicado la lista tal y como estaba, habría creado **tres 404**:
+>
+> | Colección | La enlazaba | Qué he hecho |
+> |---|---|---|
+> | `cuidado-capilar` | `/pages/rutinas` y `/pages/marcas` | **Sacada de la lista.** Además la he llenado: 33 → 533 productos |
+> | `cuerpo` | `/pages/rutinas` y `/pages/marcas` | **Sacada de la lista.** Llenada: 9 → 369 productos |
+> | `proteger` | artículo del blog sobre protector solar | He cambiado ese enlace a `/collections/proteccion-solar`. **Ya se puede despublicar** |
+>
+> Y de paso encontré **un 404 que ya estaba en vivo**: el artículo *"Por qué cuanto más
+> limpias la piel grasa, más grasa produce"* enlazaba a
+> `/collections/rutina-piel-grasa-con-granitos`, que **no existe** — el handle real lleva
+> un `-1` al final. Corregido.
+>
+> Cruzado ahora contra: menú principal, menú del pie, plantillas del tema, **las 19
+> páginas** y **los 12 artículos del blog**. Las 10 colecciones que quedan en la lista de
+> abajo no las enlaza nada.
+
 Cruce de las 113 colecciones contra el menú principal completo y contra las
 plantillas del tema en vivo (`index`, `404`, `cart`, `collection`,
 `list-collections`, `search`, `footer-group`, `settings_data`).
@@ -28,13 +51,11 @@ entrante. Google las indexa como páginas pobres que compiten contra las buenas.
 | Tratar | `tratar` | 153 | — (etiqueta `Paso:`) |
 | Hidratar | `hidratar` | 61 | Hidratantes · 658 |
 | Limpiar | `limpiar` | 43 | Limpiadores · 905 |
-| Proteger | `proteger` | 20 | Protección solar · 560 |
+| Proteger | `proteger` | 20 | Protección solar · 578 — *enlace del blog ya redirigido* |
 | Mascarillas y exfoliantes | `mascarillas-y-exfoliantes` | 34 | Mascarillas · 977 |
-| Cuidado capilar | `cuidado-capilar` | 33 | Cabello · 605 |
 | Tónicos y esencias | `tonicos-y-esencias` | 15 | Tónicos y esencias · 562 |
 | Mascarillas y tratamientos capilares | `mascarillas-y-tratamientos-capilares` | 14 | Mascarillas (pelo) · 7 |
 | Labios | `labios` | 11 | Labios · 325 |
-| Cuerpo | `cuerpo` | 8 | Cuidado corporal · 344 |
 | Champús | `champus` | 7 | Champús · 229 |
 | Cuidados sin aclarado | `cuidados-sin-aclarado` | 7 | Sérums, aceites y mists · 104 |
 

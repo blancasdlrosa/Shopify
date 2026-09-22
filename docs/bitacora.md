@@ -4,6 +4,43 @@ Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
 
+## 2026-09-22 · Claude · me equivoqué en la auditoría de colecciones huérfanas
+
+Auditando los enlaces del test "Encuentra tu rutina" acabé destapando un error mío de
+ayer. **La lista de 12 colecciones para despublicar estaba mal.**
+
+Ayer crucé las colecciones contra el menú y contra las plantillas del tema. **No las
+crucé contra el cuerpo de las páginas ni contra los artículos del blog.** Ahí había
+enlaces. Si Blanca llega a despublicar esa lista tal cual, se habrían creado **tres 404**:
+
+| Colección | Quién la enlazaba | Qué he hecho |
+|---|---|---|
+| `cuidado-capilar` | `/pages/rutinas`, `/pages/marcas` | Fuera de la lista, y llenada: 33 → **533** |
+| `cuerpo` | `/pages/rutinas`, `/pages/marcas` | Fuera de la lista, y llenada: 9 → **369** |
+| `proteger` | artículo del blog del solar | Enlace redirigido a `proteccion-solar`. Ya se puede despublicar |
+
+**Y había un 404 que ya estaba en vivo.** El artículo *"Por qué cuanto más limpias la
+piel grasa, más grasa produce"* enlazaba a `/collections/rutina-piel-grasa-con-granitos`.
+Esa colección no existe: el handle real acaba en `-1`. Llevaba ahí desde que se escribió
+el artículo. Corregido, y de paso le he añadido un enlace a la nueva sección de granitos,
+que ahora tiene 329 productos en vez de 12.
+
+También he cambiado el enlace del artículo del orden de la rutina: apuntaba a
+`/collections/rutinas` (19 productos) y ahora va a `/pages/rutinas`, que es la página con
+las 23 rutinas de verdad.
+
+**Lo demás sí estaba bien.** Los cinco enlaces del test, sus cinco permalinks de carrito
+y los precios tachados coinciden con la realidad. Los 23 enlaces de `/pages/rutinas` y
+los productos enlazados desde el blog, todos existen y están activos.
+
+Ahora el cruce está hecho contra: menú principal, menú del pie, plantillas del tema, las
+19 páginas y los 12 artículos. **Quedan 10 colecciones para despublicar**, no 12.
+
+También hecho: **la página Mirea Influencer ya está enlazada en el pie**, que estaba
+pendiente desde ayer.
+
+---
+
 ## 2026-09-22 · Claude · auditoría del pedido: un producto no se podía comprar
 
 Blanca pidió comprobar si un pedido llega de verdad: pago, pedido y envío. Auditada la
