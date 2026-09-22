@@ -65,9 +65,21 @@ No lo puedo afirmar al 100% desde aquí. Pero es la primera cosa que yo miraría
 
 ## Lo que ya he arreglado
 
-He borrado las traducciones automáticas de **título** y **tipo de producto** de los **15
-packs activos**. Son los productos que aparecen en el test, en el blog y en el menú, y
-los que tienen nombre propio. Comprobado: ya no hay "Paquete Primera vez".
+### Las 178 fichas escritas por nosotras · hecho y verificado
+
+Estas eran las graves. Su "traducción al español" **estaba en inglés**. Ejemplo real, el
+medicube PDRN Pink Peptide Serum, una ficha que escribí yo en español:
+
+> *"**What it's for.** The peptide serum from the PDRN line. Deep hydration and a firmer
+> appearance..."*
+
+Un cliente español entraba en esa ficha y leía inglés.
+
+Borradas las traducciones de **título, tipo de producto, descripción y los dos campos de
+SEO** en las 178. Ahora la versión española cae al contenido original, que es el español
+bueno. Comprobado producto a producto: ya no queda ninguna con traducción.
+
+De paso eso arregla también los 15 packs: "Paquete Primera vez" ya no existe.
 
 No he tocado las descripciones traducidas, porque en los ~7.560 productos que vinieron
 del proveedor **la descripción original sí está en inglés**, y ahí la traducción sí
