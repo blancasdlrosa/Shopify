@@ -38,6 +38,14 @@ aparte, y la del Gua Sha dice que si ya usas un sérum de péptidos puedes ahorr
 porque lo que aporta es el aplicador, no la fórmula. Se pierde alguna venta suelta y se
 gana la clienta que vuelve.
 
+Y 4 más de la familia Piel de porcelana: Deep Vita C Capsule Serum, Deep Vita C Capsule
+Cream, Glutathione Glow Toner y Glutathione Glow Serum. Van **54 de 176**.
+
+La regla de **turno mañana / turno noche** queda escrita en las fichas de vitamina C:
+vitamina C por la mañana (se potencia con el solar), retinal o kójico por la noche.
+Nunca los dos en la misma aplicación. Es el error de uso más común y el que más
+devoluciones genera.
+
 **PR abierta:** https://github.com/blancasdlrosa/Shopify/pull/1 — cada push la actualiza.
 
 ---
