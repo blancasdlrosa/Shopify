@@ -21,8 +21,15 @@ informe de ventas o conversión a partir de hoy es real.
 Quedan **3 carritos abandonados**, también de Blanca. Shopify no tiene mutación para
 borrarlos; caducan solos. No ensucian las ventas, solo el informe de carritos.
 
-**"Combina bien con":** 4 fichas más de la familia Triple Collagen (tónico, sérum, crema
-y booster). Van **42 de 176**.
+**"Combina bien con":** 8 fichas más — Triple Collagen completa (tónico, sérum, crema,
+booster) y el bloque de péptidos y retinal (PDRN Pink Capsule Cream, Gel Toner Pad, Deep
+Lifting Peptide Eye Cream, K-SECRET Refining Pad C-Retinal). Van **46 de 176**.
+
+En estas hay dos avisos que evitan devoluciones además de vender: los discos de gel de
+colágeno **no** son como los de ácidos (se confunden constantemente y se usan mal), y el
+retinal **no se compra** si no se va a usar solar a diario.
+
+**PR abierta:** https://github.com/blancasdlrosa/Shopify/pull/1 — cada push la actualiza.
 
 ---
 
