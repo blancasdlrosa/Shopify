@@ -1,0 +1,470 @@
+{
+  "menuId": "gid://shopify/Menu/343673831761",
+  "handle": "main-menu",
+  "nota": "Estado tras anadir 'Por necesidad'. Para revertir, borrar ese bloque y reenviar.",
+  "items": [
+    {
+      "id": "gid://shopify/MenuItem/894638621009",
+      "title": "Encuentra tu rutina",
+      "type": "PAGE",
+      "resourceId": "gid://shopify/Page/171470258513"
+    },
+    {
+      "id": "gid://shopify/MenuItem/895644303697",
+      "title": "Piel",
+      "type": "COLLECTION",
+      "resourceId": "gid://shopify/Collection/690395185489",
+      "items": [
+        {
+          "id": "gid://shopify/MenuItem/894638653777",
+          "title": "Rutinas y Sets",
+          "type": "PAGE",
+          "resourceId": "gid://shopify/Page/171820187985"
+        },
+        {
+          "title": "Por necesidad",
+          "type": "COLLECTION",
+          "resourceId": "gid://shopify/Collection/690395185489",
+          "items": [
+            {
+              "title": "Granitos",
+              "type": "COLLECTION",
+              "resourceId": "gid://shopify/Collection/690827395409"
+            },
+            {
+              "title": "Manchas",
+              "type": "COLLECTION",
+              "resourceId": "gid://shopify/Collection/690828345681"
+            },
+            {
+              "title": "Poros",
+              "type": "COLLECTION",
+              "resourceId": "gid://shopify/Collection/690828378449"
+            },
+            {
+              "title": "Calma y rojeces",
+              "type": "COLLECTION",
+              "resourceId": "gid://shopify/Collection/690828509521"
+            },
+            {
+              "title": "Barrera cutánea",
+              "type": "COLLECTION",
+              "resourceId": "gid://shopify/Collection/690828476753"
+            },
+            {
+              "title": "Antiedad",
+              "type": "COLLECTION",
+              "resourceId": "gid://shopify/Collection/690828443985"
+            }
+          ]
+        },
+        {
+          "id": "gid://shopify/MenuItem/895644336465",
+          "title": "Limpiadores",
+          "type": "COLLECTION",
+          "resourceId": "gid://shopify/Collection/690373067089"
+        },
+        {
+          "id": "gid://shopify/MenuItem/895644369233",
+          "title": "Tónicos y esencias",
+          "type": "COLLECTION",
+          "resourceId": "gid://shopify/Collection/690373624145"
+        },
+        {
+          "id": "gid://shopify/MenuItem/895644402001",
+          "title": "Sérums y ampollas",
+          "type": "COLLECTION",
+          "resourceId": "gid://shopify/Collection/690373853521"
+        },
+        {
+          "id": "gid://shopify/MenuItem/895644434769",
+          "title": "Hidratantes",
+          "type": "COLLECTION",
+          "resourceId": "gid://shopify/Collection/690374410577"
+        },
+        {
+          "id": "gid://shopify/MenuItem/895644467537",
+          "title": "Mascarillas",
+          "type": "COLLECTION",
+          "resourceId": "gid://shopify/Collection/690376638801"
+        },
+        {
+          "id": "gid://shopify/MenuItem/895644500305",
+          "title": "Contorno de ojos",
+          "type": "COLLECTION",
+          "resourceId": "gid://shopify/Collection/690376999249"
+        },
+        {
+          "id": "gid://shopify/MenuItem/895644533073",
+          "title": "Protección solar",
+          "type": "COLLECTION",
+          "resourceId": "gid://shopify/Collection/690377195857"
+        },
+        {
+          "id": "gid://shopify/MenuItem/895644565841",
+          "title": "Dispositivos faciales",
+          "type": "COLLECTION",
+          "resourceId": "gid://shopify/Collection/690377359697"
+        },
+        {
+          "id": "gid://shopify/MenuItem/897314390353",
+          "title": "Exfoliantes y pads",
+          "type": "COLLECTION",
+          "resourceId": "gid://shopify/Collection/690765857105"
+        },
+        {
+          "id": "gid://shopify/MenuItem/897314423121",
+          "title": "Cuidado de labios",
+          "type": "COLLECTION",
+          "resourceId": "gid://shopify/Collection/690765889873"
+        },
+        {
+          "id": "gid://shopify/MenuItem/897314455889",
+          "title": "Packs y rutinas",
+          "type": "COLLECTION",
+          "resourceId": "gid://shopify/Collection/690765922641"
+        }
+      ]
+    },
+    {
+      "id": "gid://shopify/MenuItem/895644598609",
+      "title": "Cabello",
+      "type": "COLLECTION",
+      "resourceId": "gid://shopify/Collection/690377752913",
+      "items": [
+        {
+          "id": "gid://shopify/MenuItem/895644631377",
+          "title": "Champús",
+          "type": "COLLECTION",
+          "resourceId": "gid://shopify/Collection/690378178897"
+        },
+        {
+          "id": "gid://shopify/MenuItem/895644664145",
+          "title": "Acondicionadores",
+          "type": "COLLECTION",
+          "resourceId": "gid://shopify/Collection/690378277201"
+        },
+        {
+          "id": "gid://shopify/MenuItem/895644696913",
+          "title": "Mascarillas",
+          "type": "COLLECTION",
+          "resourceId": "gid://shopify/Collection/690378408273"
+        },
+        {
+          "id": "gid://shopify/MenuItem/895644729681",
+          "title": "Sérums, aceites y mists",
+          "type": "COLLECTION",
+          "resourceId": "gid://shopify/Collection/690378670417"
+        },
+        {
+          "id": "gid://shopify/MenuItem/895644762449",
+          "title": "Tónicos capilares",
+          "type": "COLLECTION",
+          "resourceId": "gid://shopify/Collection/690378801489"
+        },
+        {
+          "id": "gid://shopify/MenuItem/895644795217",
+          "title": "Cuero cabelludo",
+          "type": "COLLECTION",
+          "resourceId": "gid://shopify/Collection/690378899793"
+        }
+      ]
+    },
+    {
+      "id": "gid://shopify/MenuItem/894639931729",
+      "title": "Tecnología",
+      "type": "COLLECTION",
+      "resourceId": "gid://shopify/Collection/690003804497"
+    },
+    {
+      "id": "gid://shopify/MenuItem/895644827985",
+      "title": "Cuidado corporal",
+      "type": "COLLECTION",
+      "resourceId": "gid://shopify/Collection/690379686225",
+      "items": [
+        {
+          "id": "gid://shopify/MenuItem/896430276945",
+          "title": "Cuidado íntimo",
+          "type": "COLLECTION",
+          "resourceId": "gid://shopify/Collection/690589794641"
+        },
+        {
+          "id": "gid://shopify/MenuItem/895644860753",
+          "title": "Higiene bucal",
+          "type": "COLLECTION",
+          "resourceId": "gid://shopify/Collection/690379325777"
+        },
+        {
+          "id": "gid://shopify/MenuItem/895644893521",
+          "title": "Corporal",
+          "type": "COLLECTION",
+          "resourceId": "gid://shopify/Collection/690379686225"
+        }
+      ]
+    },
+    {
+      "id": "gid://shopify/MenuItem/895645090129",
+      "title": "Maquillaje",
+      "type": "COLLECTION",
+      "resourceId": "gid://shopify/Collection/690384503121",
+      "items": [
+        {
+          "id": "gid://shopify/MenuItem/895645122897",
+          "title": "Rostro",
+          "type": "COLLECTION",
+          "resourceId": "gid://shopify/Collection/690384863569"
+        },
+        {
+          "id": "gid://shopify/MenuItem/895645155665",
+          "title": "Ojos",
+          "type": "COLLECTION",
+          "resourceId": "gid://shopify/Collection/690385289553"
+        },
+        {
+          "id": "gid://shopify/MenuItem/895645188433",
+          "title": "Labios",
+          "type": "COLLECTION",
+          "resourceId": "gid://shopify/Collection/690385682769"
+        },
+        {
+          "id": "gid://shopify/MenuItem/895645221201",
+          "title": "Preparación y acabado",
+          "type": "COLLECTION",
+          "resourceId": "gid://shopify/Collection/690386010449"
+        },
+        {
+          "id": "gid://shopify/MenuItem/895645253969",
+          "title": "Desmaquillante",
+          "type": "COLLECTION",
+          "resourceId": "gid://shopify/Collection/690387026257"
+        },
+        {
+          "id": "gid://shopify/MenuItem/895645286737",
+          "title": "Accesorios maquillaje",
+          "type": "COLLECTION",
+          "resourceId": "gid://shopify/Collection/690387845457"
+        }
+      ]
+    },
+    {
+      "id": "gid://shopify/MenuItem/895645319505",
+      "title": "Suplementos alimenticios coreanos",
+      "type": "COLLECTION",
+      "resourceId": "gid://shopify/Collection/690388762961"
+    },
+    {
+      "id": "gid://shopify/MenuItem/894639964497",
+      "title": "Tienda",
+      "type": "HTTP",
+      "url": "/collections/all",
+      "items": [
+        {
+          "id": "gid://shopify/MenuItem/895644959057",
+          "title": "Todos los productos",
+          "type": "CATALOG",
+          "url": "/collections/all"
+        },
+        {
+          "id": "gid://shopify/MenuItem/895644991825",
+          "title": "Novedades",
+          "type": "COLLECTION",
+          "resourceId": "gid://shopify/Collection/690380407121"
+        },
+        {
+          "id": "gid://shopify/MenuItem/895645024593",
+          "title": "Más vendidos",
+          "type": "HTTP",
+          "url": "/collections/all?sort_by=best-selling"
+        },
+        {
+          "id": "gid://shopify/MenuItem/895645057361",
+          "title": "Ofertas",
+          "type": "COLLECTION",
+          "resourceId": "gid://shopify/Collection/690467963217"
+        }
+      ]
+    },
+    {
+      "id": "gid://shopify/MenuItem/896429523281",
+      "title": "Bebé y Hombre",
+      "type": "COLLECTION",
+      "resourceId": "gid://shopify/Collection/690589598033",
+      "items": [
+        {
+          "id": "gid://shopify/MenuItem/896429556049",
+          "title": "Bebé",
+          "type": "COLLECTION",
+          "resourceId": "gid://shopify/Collection/690589204817"
+        },
+        {
+          "id": "gid://shopify/MenuItem/896429588817",
+          "title": "Hombre",
+          "type": "COLLECTION",
+          "resourceId": "gid://shopify/Collection/690589663569"
+        }
+      ]
+    },
+    {
+      "id": "gid://shopify/MenuItem/894639374673",
+      "title": "Marcas",
+      "type": "PAGE",
+      "resourceId": "gid://shopify/Page/171787354449",
+      "items": [
+        {
+          "id": "gid://shopify/MenuItem/896448659793",
+          "title": "Ver todas las marcas (266) →",
+          "type": "PAGE",
+          "resourceId": "gid://shopify/Page/171787354449"
+        },
+        {
+          "id": "gid://shopify/MenuItem/894639407441",
+          "title": "medicube",
+          "type": "COLLECTION",
+          "resourceId": "gid://shopify/Collection/690003444049"
+        },
+        {
+          "id": "gid://shopify/MenuItem/894639440209",
+          "title": "Beauty of Joseon",
+          "type": "COLLECTION",
+          "resourceId": "gid://shopify/Collection/689934762321"
+        },
+        {
+          "id": "gid://shopify/MenuItem/894639472977",
+          "title": "Round Lab",
+          "type": "COLLECTION",
+          "resourceId": "gid://shopify/Collection/689934795089"
+        },
+        {
+          "id": "gid://shopify/MenuItem/894639505745",
+          "title": "COSRX",
+          "type": "COLLECTION",
+          "resourceId": "gid://shopify/Collection/689934827857"
+        },
+        {
+          "id": "gid://shopify/MenuItem/894639538513",
+          "title": "Anua",
+          "type": "COLLECTION",
+          "resourceId": "gid://shopify/Collection/689934860625"
+        },
+        {
+          "id": "gid://shopify/MenuItem/894639571281",
+          "title": "SKIN1004",
+          "type": "COLLECTION",
+          "resourceId": "gid://shopify/Collection/689934893393"
+        },
+        {
+          "id": "gid://shopify/MenuItem/894639604049",
+          "title": "MISSHA",
+          "type": "COLLECTION",
+          "resourceId": "gid://shopify/Collection/690003509585"
+        },
+        {
+          "id": "gid://shopify/MenuItem/894639636817",
+          "title": "Isntree",
+          "type": "COLLECTION",
+          "resourceId": "gid://shopify/Collection/689935122769"
+        },
+        {
+          "id": "gid://shopify/MenuItem/894639669585",
+          "title": "THE FACE SHOP",
+          "type": "COLLECTION",
+          "resourceId": "gid://shopify/Collection/690003476817"
+        },
+        {
+          "id": "gid://shopify/MenuItem/894639702353",
+          "title": "illiyoon",
+          "type": "COLLECTION",
+          "resourceId": "gid://shopify/Collection/689935155537"
+        },
+        {
+          "id": "gid://shopify/MenuItem/894639735121",
+          "title": "SOME BY MI",
+          "type": "COLLECTION",
+          "resourceId": "gid://shopify/Collection/689935188305"
+        },
+        {
+          "id": "gid://shopify/MenuItem/894639767889",
+          "title": "MEDIHEAL",
+          "type": "COLLECTION",
+          "resourceId": "gid://shopify/Collection/689935221073"
+        },
+        {
+          "id": "gid://shopify/MenuItem/894639800657",
+          "title": "d'Alba",
+          "type": "COLLECTION",
+          "resourceId": "gid://shopify/Collection/690003640657"
+        },
+        {
+          "id": "gid://shopify/MenuItem/894639833425",
+          "title": "IOPE",
+          "type": "COLLECTION",
+          "resourceId": "gid://shopify/Collection/690003542353"
+        },
+        {
+          "id": "gid://shopify/MenuItem/894639866193",
+          "title": "K-SECRET",
+          "type": "COLLECTION",
+          "resourceId": "gid://shopify/Collection/690003575121"
+        },
+        {
+          "id": "gid://shopify/MenuItem/894639898961",
+          "title": "LABO-H",
+          "type": "COLLECTION",
+          "resourceId": "gid://shopify/Collection/690003607889"
+        }
+      ]
+    },
+    {
+      "id": "gid://shopify/MenuItem/894639997265",
+      "title": "La guía",
+      "type": "PAGE",
+      "resourceId": "gid://shopify/Page/171786830161",
+      "items": [
+        {
+          "id": "gid://shopify/MenuItem/894640030033",
+          "title": "La guía y el checklist",
+          "type": "PAGE",
+          "resourceId": "gid://shopify/Page/171786830161"
+        },
+        {
+          "id": "gid://shopify/MenuItem/894640062801",
+          "title": "Consejos",
+          "type": "BLOG",
+          "resourceId": "gid://shopify/Blog/131349479761"
+        },
+        {
+          "id": "gid://shopify/MenuItem/894640095569",
+          "title": "Experiencias reales",
+          "type": "PAGE",
+          "resourceId": "gid://shopify/Page/171488837969"
+        }
+      ]
+    },
+    {
+      "id": "gid://shopify/MenuItem/894640128337",
+      "title": "Ayuda",
+      "type": "PAGE",
+      "resourceId": "gid://shopify/Page/171458101585",
+      "items": [
+        {
+          "id": "gid://shopify/MenuItem/894640161105",
+          "title": "Hablamos",
+          "type": "PAGE",
+          "resourceId": "gid://shopify/Page/171458101585"
+        },
+        {
+          "id": "gid://shopify/MenuItem/894640193873",
+          "title": "Preguntas frecuentes",
+          "type": "PAGE",
+          "resourceId": "gid://shopify/Page/171817075025"
+        },
+        {
+          "id": "gid://shopify/MenuItem/894640226641",
+          "title": "Envíos y devoluciones",
+          "type": "PAGE",
+          "resourceId": "gid://shopify/Page/171470127441"
+        }
+      ]
+    }
+  ]
+}

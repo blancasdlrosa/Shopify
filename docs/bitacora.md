@@ -4,6 +4,42 @@ Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
 
+## 2026-09-22 · Claude · las secciones salían vacías: arreglado
+
+Blanca avisó de que entraba en una sección y salían diez productos de casi ocho mil.
+Tenía razón y la causa era estructural, no un fallo suyo.
+
+**Diagnóstico:** la tienda tiene 7.738 productos activos y publicados, pero las
+colecciones del menú preguntaban por **etiquetas Mirea** que solo llevan unos 180
+productos. Las colecciones que preguntaban por **tipo de producto** (el que vino con
+la importación del proveedor) sí estaban llenas. Dos clasificaciones en paralelo que
+no se hablaban.
+
+**Arreglado:** reescritas las reglas de **30 colecciones** para que usen el tipo de
+producto. **Sin tocar ni un producto** — solo la regla de cada colección, reversible
+y sin efecto sobre el feed de Google.
+
+Lo más llamativo: **Piel 3.737 → 5.037**, mascarillas capilares **7 → 128**,
+Tecnología **16 → 92**, dispositivos faciales **10 → 51**, exfoliantes **106 → 273**,
+cuero cabelludo **62 → 145**, higiene **68 → 142**.
+
+**El menú también estaba roto.** El desplegable de Piel tenía "Por necesidad", "Por
+tipo de piel" y "Por producto", y los tres llevaban al mismo sitio. Sustituido por
+diez entradas que sí llevan a colecciones distintas. Respaldo del menú anterior en
+`docs/respaldos/menu-principal-antes-2026-09-22.json`.
+
+**Límite que encontré:** Shopify no admite más de 60 reglas por colección. Lo intenté
+con 76 en Piel y lo rechazó sin tocar nada. Con ese techo hay que priorizar, así que
+elegí las 60 reglas midiendo cuántos productos tiene cada tipo. Coste honesto: unos
+69 productos de tipos minoritarios salen de la sección Piel; entran ~1.300.
+
+**Lo que sigue sin resolverse y necesita decisión de Blanca:** las secciones *por
+necesidad* (manchas, granitos, poros, rojeces, barrera) siguen entre 10 y 16
+productos, porque el tipo de producto dice qué es algo, no para qué sirve. Las dos
+salidas y sus riesgos están en `docs/colecciones-2026-09-22.md`.
+
+---
+
 ## 2026-09-22 · Claude · Abib, Arencia, THE FACE SHOP, MISSHA y sueltos (24 fichas)
 
 Van **150 de 178**. Quedan **22 fichas** sin bloque (más 16 packs, que no lo necesitan).
