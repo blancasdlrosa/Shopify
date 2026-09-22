@@ -4,6 +4,31 @@ Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
 
+## 2026-09-22 · Claude · fichas terminadas
+
+**164 de 178 con "Combina bien con".** Las 14 que faltan son packs, y un pack no
+necesita venta cruzada: un pack *es* la venta cruzada.
+
+**178 de 178 con "Para quién NO es".** Eso cierra el pendiente de las 24 fichas
+importadas en bruto que no lo tenían. Ya no queda ninguna ficha del feed de Google
+que no diga a quién no le conviene el producto.
+
+Última tanda: K-SECRET solar, Isntree solar corporal, MEDIHEAL árbol del té, los tres
+de d'Alba y la Rutina Facial Hombre.
+
+Dos avisos nuevos que merecen quedar por escrito:
+
+- **El voluminizador de labios de d'Alba hincha porque la canela irrita el labio a
+  propósito.** Es seguro y es temporal, pero usarlo a diario sobre labios secos mete a
+  la clienta en un bucle. La ficha lo dice y recomienda usarlo cuando apetezca, no como
+  bálsamo fijo.
+- **El dispositivo de d'Alba no es compatible con los accesorios de medicube**, y su
+  ficha ahora avisa de mirar qué consumible se va a poder reponer antes de elegir
+  dispositivo. Un aparato no falla por la tecnología: falla porque se acaba el gel y
+  no vuelve a salir del cajón.
+
+---
+
 ## 2026-09-22 · Claude · secciones por necesidad, llenas
 
 Blanca dio el visto bueno al camino del ingrediente en el título. Hecho.

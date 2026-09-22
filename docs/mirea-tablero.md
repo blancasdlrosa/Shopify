@@ -1,7 +1,7 @@
 # Mirea Skin · Tablero operativo
 
 Tienda: **mireaskin.es** · Shopify Basic · EUR · España
-Catálogo: 7.694 productos · 108 colecciones
+Catálogo: 7.738 productos activos y publicados · 112 colecciones
 Última actualización: 2026-09-22
 
 ---
@@ -25,6 +25,9 @@ productos ya aprobados. Todo lo demás es secundario hasta que haya visitantes r
 | 1 | Sección "Qué necesita tu piel hoy" enlaza a colecciones que no existían → 404 | Tema / colecciones | **Resuelto para 6 necesidades** |
 | 2 | Resto de enlaces de esa sección sin auditar | Tema | **Bloqueado** (ver abajo) |
 | 3 | Colecciones nuevas no estaban en el menú | Navegación | **Resuelto** · submenú "Por necesidad" bajo Piel |
+| 3b | Las secciones se alimentaban de etiquetas que solo llevan ~180 productos: salían 10 de 7.738 | Colecciones | **Resuelto** · 38 colecciones reescritas por tipo de producto e ingrediente. Piel 3.737 → 5.037. Ver `docs/colecciones-2026-09-22.md` |
+| 3c | El desplegable de Piel tenía tres entradas que llevaban al mismo sitio | Navegación | **Resuelto** · tres niveles: por necesidad, por tipo de piel, por producto |
+| 3d | Fichas del feed de Google sin "Combina bien con" ni "Para quién NO es" | Fichas | **Resuelto** · 164 de 178 con venta cruzada (las 14 restantes son packs) y **178 de 178** con "Para quién NO es" |
 | 4 | `Pack colágeno Medicube` costaba 376,69 € y sus 5 productos sueltos suman 338,68 € | Precios | **Resuelto** · 304,90 € |
 | 5 | Tachado de 419,99 € sin precio real detrás | Precios · Ómnibus | **Resuelto** · tachado = 338,68 € |
 | 6 | **1.056+ productos** con precio = coste × 1,2 (margen bruto 16,7 %), 56 marcas | Precios | **Parcial** · arreglados los 16 del feed de Google. El resto necesita el coste |
