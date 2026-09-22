@@ -58,8 +58,28 @@ texto tiene que decir la cifra correcta.
 "Para quién NO es". Ese último bloque no es adorno: es donde se descarta al cliente
 equivocado y donde van los avisos médicos. Si escribes una ficha de pack, llévalo.
 
-**Siguiente:** añadir "Combina bien con" a las fichas buenas que no lo tienen. Ahora
-mismo lo llevan 9 de 178. Es lo que más sube el ticket medio sin tocar precios ni
+**Hecho · "Combina bien con".** Contado de verdad sobre la tienda, no de memoria: lo
+llevaban **16 de 176** fichas del feed. Escrito el bloque para las **13 de la familia
+Zero Pore** (poros y textura) — aceite, dos espumas, tónico, dos tipos de disco,
+mascarilla de arcilla, ampolla de exosomas, dos sérums y dos cremas. Van **26 de 176**.
+
+No es texto de relleno: cada bloque dice qué producto va antes, cuál va después y qué
+NO se puede juntar la misma noche (discos de ácidos con sérum de BHA, mascarilla de
+arcilla con discos). Eso evita devoluciones por irritación además de subir el ticket.
+
+**Estado de los dos bloques de plantilla, medido hoy:**
+
+| Bloque | Fichas que lo llevan |
+|---|---|
+| "Para quién NO es" | 152 de 176 |
+| "Combina bien con" | 26 de 176 |
+
+Las 24 que siguen sin "Para quién NO es" son las importaciones en bruto ya renombradas
+(Arencia, Abib, LANEIGE, mixsoon, NATURE REPUBLIC, THE WHOO) más el Pack colágeno.
+
+**Siguiente:** seguir con "Combina bien con" por familias — Manchas y tono (Kojic +
+TXA), Primeras arrugas (Triple Collagen), Piel de porcelana (Vita C + Glutathione),
+Barrera dañada (PDRN Pink). Es lo que más sube el ticket medio sin tocar precios ni
 traer tráfico nuevo.
 
 ---
