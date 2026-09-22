@@ -4,6 +4,45 @@ Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
 
+## 2026-09-22 · Claude · "Combina bien con": pelo, dispositivos AGE-R y línea kójico
+
+16 fichas más. Van **111 de 178** (178, no 176: al recontar el feed aparecieron dos
+productos más publicados en Google).
+
+**Pelo (4):** sérum de romero, champú de romero, acondicionador y LABO-H. El argumento
+que sostiene la línea: la caída que se ve hoy viene de hace tres meses, así que hay que
+darle doce semanas antes de juzgar. Se dice en la ficha para que nadie devuelva a las
+tres semanas pensando que no funciona.
+
+**Dispositivos AGE-R (8):** Ultra Tune, Booster Pro Lemon, Lavender, Pink, X2, Mini Rosa,
+Mini Blanco, High Focus Shot PLUS+, V Roller y el cabezal limpiador.
+
+Aquí hay un hallazgo comercial que no estaba documentado: **el Mini y el Booster Pro Pink
+vienen sin gel conductor**, solo con el cable. Sin gel no conducen. Es decir, quien compra
+esos dos modelos *necesita* el PDRN Booster Gel el primer día y hasta ahora la ficha no se
+lo decía. Eso es un pedido incompleto y un cliente frustrado. Ya está escrito en las dos
+fichas.
+
+En todos los dispositivos se repite lo mismo: el gel se acaba en unas seis semanas. Es el
+único consumible recurrente del catálogo de tecnología y conviene tratarlo como tal.
+
+**Línea kójico (6):** body wash, body peel shot, peel shot facial, limpiador 500 ml,
+mascarilla de gel y night wrapping mask. El eje de toda la línea es que **un peeling sin
+solar al día siguiente deja la mancha peor que antes**. Va escrito en las tres fichas de
+peeling, no como recomendación sino como condición.
+
+Dos avisos que evitan devoluciones: depilación y peeling de cuerpo nunca el mismo día, y
+no estrenar una mascarilla la víspera de un evento.
+
+**Qué queda:** 67 fichas sin bloque, sin contar los 16 packs (los packs no necesitan
+venta cruzada, son la venta cruzada). Las familias grandes que faltan son LANEIGE (13),
+THE FACE SHOP (7), MISSHA (5), Abib (4), Arencia (4) y la línea PDRN Pink de medicube.
+
+Recordatorio que sigue en pie: **esto mejora la tienda, no trae gente.** Los 440 productos
+aprobados en Google Shopping siguen parados esperando los costes.
+
+---
+
 ## 2026-09-22 · Claude · pedidos de prueba borrados
 
 Blanca confirmó que los pedidos eran suyos y pidió borrarlos. Comprobado uno a uno antes
