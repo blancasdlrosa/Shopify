@@ -147,9 +147,25 @@ contrario de lo que dice la sección "Experiencias reales" de la propia tienda.
 
 ---
 
+## Nombres de tema
+
+Había tres temas cuyo nombre decía lo contrario de su estado: el **publicado** se
+llamaba *"COPIA — revisar y publicar"* y dos **sin publicar** se llamaban
+*"PUBLICAR ESTA"*. Eso ya provocó un error de lectura. Renombrados:
+
+| Antes | Ahora | Estado |
+|---|---|---|
+| COPIA — Necesidades al catálogo (revisar y publicar) | **EN VIVO · Mirea · necesidades al catálogo** | MAIN |
+| PUBLICAR ESTA — Mirea · CRO + tracking + reseñas | ANTERIOR · CRO + tracking + reseñas · 21-09 | Sin publicar |
+
+Queda `PUBLICAR ESTA — Mirea · buscador PRO` sin tocar: puede que sí esté pendiente
+de publicar y esa decisión es de Blanca.
+
+**Regla:** el nombre del tema dice su estado, no su intención.
+
 ## Orden recomendado
 
-1. Publicar la copia del tema (pendiente)
+1. ~~Publicar la copia del tema~~ — **hecho por Blanca el 21-09**, verificado por MD5
 2. Montar la medición (B) — sin esto lo demás no se puede evaluar
 3. Corregir los tiempos de reseña y reposición (C) — son dos ajustes, 10 minutos
 4. Primera campaña de Shopping en España con los 178 que ya están aprobados

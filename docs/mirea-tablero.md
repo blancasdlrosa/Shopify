@@ -61,7 +61,8 @@ se editó la copia. Solo cambian 9 líneas de `templates/index.json`; el resto d
 fichero es byte a byte idéntico (MD5 del original `94b9a584…` verificado antes de
 editar, MD5 del subido `e4d3c274…` verificado después).
 
-**Lo publica Blanca**, desde Tienda online → Temas → Acciones → Publicar.
+**Publicado por Blanca el 21-09.** Verificado: el tema en vivo sirve `templates/index.json`
+con MD5 `e4d3c274…`, el mismo fichero revisado. Las 9 tarjetas llevan a las colecciones grandes.
 
 ### Menú · desplegable de "Piel" reorganizado
 
