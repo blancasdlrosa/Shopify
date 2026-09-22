@@ -4,6 +4,28 @@ Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
 
+## 2026-09-22 · Claude · pedidos de prueba borrados
+
+Blanca confirmó que los pedidos eran suyos y pidió borrarlos. Comprobado uno a uno antes
+de tocar nada, porque borrar un pedido no tiene vuelta atrás:
+
+| Pedido | Qué era | Dinero real |
+|---|---|---|
+| #1001 · 26,70 € | `test: true` — pedido de prueba de Shopify | No |
+| #1002 · 91,89 € | Manual, pago pendiente | No |
+| #1003 · 91,89 € | Manual, pago pendiente | No |
+
+Ninguno movió dinero. **Borrados los tres.** `ordersCount` ahora es 0, así que cualquier
+informe de ventas o conversión a partir de hoy es real.
+
+Quedan **3 carritos abandonados**, también de Blanca. Shopify no tiene mutación para
+borrarlos; caducan solos. No ensucian las ventas, solo el informe de carritos.
+
+**"Combina bien con":** 4 fichas más de la familia Triple Collagen (tónico, sérum, crema
+y booster). Van **42 de 176**.
+
+---
+
 ## 2026-09-22 · Claude · influencers y fichas
 
 **Programa de influencers montado.** Cinco códigos activos `MIREAINF01`-`05` al 10 %
