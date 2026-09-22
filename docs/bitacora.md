@@ -4,6 +4,39 @@ Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
 
+## 2026-09-22 · Claude · auditoría del pedido: un producto no se podía comprar
+
+Blanca pidió comprobar si un pedido llega de verdad: pago, pedido y envío. Auditada la
+cadena entera con datos, no a ojo. Informe completo en `docs/auditoria-pedido-2026-09-22.md`.
+
+**El fallo gordo: el Pack Colágeno + AGE-R (304,90 €) estaba marcado como producto que no
+necesita envío**, como si fuera digital. Lo detecté simulando un pedido real a Madrid: el
+cálculo devolvía **cero tarifas de envío**, lo que en el checkout significa "no hay
+métodos de envío disponibles" y **el pedido no se puede terminar**. Era el producto más
+caro del catálogo. Arreglado y vuelto a simular: ahora sí da tarifa. Revisados los otros
+17 packs y 20 productos del feed: el fallo estaba aislado en ese.
+
+**Lo que está bien:** SSL, EUR, España como mercado principal, IVA incluido en precios,
+Shop Pay / Apple Pay / Google Pay activos (señal de que Shopify Payments funciona), y
+7.726 de 7.738 productos activos con stock.
+
+**Lo que cuesta dinero y es decisión de Blanca:** está activo "Envío gratis España desde
+35 €" y las cuatro bandas de peso de España cuestan **todas 3,99 €**. O sea que el trabajo
+que hice poniendo el peso real a cada pack **no sirvió de nada**, porque las cuatro bandas
+valen lo mismo. Lo apunto porque fue trabajo mío. Las bandas de la UE sí están bien
+escalonadas.
+
+**Lo que ninguna auditoría puede demostrar:** que la tarjeta se cobre. Los tres pedidos que
+había eran de Blanca y **ninguno pasó por la pasarela**: uno era pedido de prueba de
+Shopify y dos eran manuales con pago pendiente. Nunca se ha cobrado una tarjeta en esta
+tienda. El paso a paso para comprobarlo en diez minutos está en el informe.
+
+**Pendiente de mirar con la gestoría:** el IVA sale a 0 en el cálculo y "cobrar impuestos
+sobre el envío" está desactivado. En España el transporte lleva el mismo IVA que el
+producto. No lo toco: es materia fiscal.
+
+---
+
 ## 2026-09-22 · Claude · fichas terminadas
 
 **164 de 178 con "Combina bien con".** Las 14 que faltan son packs, y un pack no
