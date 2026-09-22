@@ -21,10 +21,25 @@ Serum", tipo de producto "Fundación") pasan a ser los nombres reales del catál
 ## Estado
 
 - [x] **178 / 178** fichas propias · hecho y verificado
-- [ ] **264 / 7.560** productos del proveedor
+- [ ] **440 / 7.560** productos del proveedor
 
-Índices ya procesados de `proveedor.json` (lotes de 88): **0 al 2**. Siguiente lote: **3**
-(elemento 264 en adelante).
+Índices ya procesados de `proveedor.json` (lotes de 88): **0 al 4**. Siguiente lote: **5**
+(elemento 440 en adelante).
+
+**Total: 618 de 7.738.**
+
+### Comprobado sobre producto real
+
+`BANILA CO Covericious Serum Foundation 30g`, antes y después:
+
+| Campo | Antes (versión /es/) | Ahora |
+|---|---|---|
+| Título | Base de maquillaje BANILA CO Covericious Serum 30g | **BANILA CO Covericious Serum Foundation 30g** |
+| Tipo | Fundación | **Foundation** |
+| Descripción | *(español correcto)* | *(español correcto — se conserva)* |
+
+Es justo lo que se buscaba: el nombre de marca vuelve, el disparate se va, y la
+descripción en español se queda.
 
 La operación en bloque de Shopify (`bulkOperationRunMutation`) **está bloqueada por la
 política de seguridad del MCP**, así que va por lotes de 88 con alias. Son 86 lotes en
