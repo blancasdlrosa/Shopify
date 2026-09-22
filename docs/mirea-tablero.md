@@ -15,7 +15,7 @@ Catálogo: 7.694 productos · 108 colecciones
 | 3 | Colecciones nuevas no estaban en el menú | Navegación | **Resuelto** · submenú "Por necesidad" bajo Piel |
 | 4 | `Pack colágeno Medicube` costaba 376,69 € y sus 5 productos sueltos suman 338,68 € | Precios | **Resuelto** · 304,90 € |
 | 5 | Tachado de 419,99 € sin precio real detrás | Precios · Ómnibus | **Resuelto** · tachado = 338,68 € |
-| 6 | 16 productos con precio = coste × 1,2 (margen bruto 16,7 %) | Precios | **Resuelto** · subidos, 31 variantes |
+| 6 | **1.056+ productos** con precio = coste × 1,2 (margen bruto 16,7 %), 56 marcas | Precios | **Parcial** · arreglados los 16 del feed de Google. El resto necesita el coste |
 | 7 | Los 15 packs pesaban 0 kg y se enviaban cobrando 6,99 € | Envíos | **Resuelto** · peso = suma de componentes |
 | 8 | Ningún producto activo tiene coste por artículo cargado | Margen | **Bloqueado** · lo carga Blanca (CSV) |
 | 9 | Pesos de producto inflados de origen (0,2 kg un sérum de 30 ml) | Envíos | Pendiente · hacen falta pesos reales |
