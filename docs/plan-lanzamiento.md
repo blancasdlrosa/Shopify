@@ -12,6 +12,55 @@ El resto del catálogo son importaciones en crudo del proveedor, en inglés y si
 
 ---
 
+## A · Catálogo héroe · estado real
+
+**Segunda corrección: las fichas curadas ya son excelentes.** La muestra que llevó a
+proponer "reescribir 200 fichas" era del catálogo en crudo, no de los 178.
+
+Las buenas siguen una plantilla propia y muy sólida: *Para qué sirve · Cómo se usa ·
+En qué paso va · Aparece en · [sección con criterio] · La ficha en detalle ·
+Combina bien con · Para quién NO es*. Con porcentajes de ingrediente, textura,
+acabado, fragancia y venta cruzada a las rutinas.
+
+### Medición de la plantilla sobre los 178
+
+| Bloque | Cuántas lo tienen |
+|---|---|
+| "Para quién NO es" | 136 · 76% |
+| "En qué paso va" | 101 · 57% |
+| **"Combina bien con"** | **9 · 5%** |
+
+Dos frentes, por este orden:
+
+**1. Las 42 sin plantilla.** Reparto: 5 packs propios (buenos, solo les falta el
+bloque), 5 con plantilla vieja *(Qué es / Ingredientes / Cómo se usa)*, y el resto
+fichas flojas de tres párrafos (LANEIGE, Arencia, dos Anua).
+
+**2. "Combina bien con" está en 9 de 178.** Es el bloque que sube el ticket medio y
+está sin usar en el 95% del escaparate. Llevarlo a las 136 buenas es, con diferencia,
+la mejora de mayor retorno por hora de trabajo del catálogo.
+
+### Hecho el 2026-09-22
+
+Siete fichas subidas al estándar, elegidas por estar dentro de los packs o por precio:
+
+| Producto | Qué se añadió |
+|---|---|
+| COSRX Oil-Free Ultra-Moisturizing Lotion | Plantilla completa + por qué la piel grasa necesita hidratación |
+| SKIN1004 Centella Light Cleansing Oil | Plantilla + por qué aceite y no gel + aviso de aromáticos |
+| medicube Deep Vita C Pad | Plantilla + cómo introducir el ácido láctico sin irritarse |
+| medicube Collagen Jelly Cream | Plantilla + qué hace y qué no hace el colágeno tópico |
+| medicube PDRN Pink Peptide Serum | Plantilla + PDRN cosmético ≠ inyectable de clínica |
+| Anua 3 Ceramide Barrier Cream | Plantilla + qué es la barrera y cómo se rompe · **etiquetas corregidas** |
+| Anua Peach 77 Niacin Cream | Plantilla completa · **etiquetas corregidas** |
+
+### Etiquetas del proveedor sin traducir
+
+`Anua Peach 77` llevaba `["BEAUTY","Cream","FACE","Facial Cream"]` y
+`Anua 3 Ceramide` llevaba `["Cream","Facial Cream"]`: sin `Paso:` ni `Piel:`, así que
+**no aparecían en ninguna colección por etiqueta**. Corregidas. Hay más casos entre
+las 42 (Arencia con `Scrub`, `Multi Balm`, `SERUMS`; LANEIGE con `Moisturizer`).
+
 ## A · Catálogo héroe
 
 | | |
