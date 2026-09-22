@@ -46,6 +46,10 @@ vitamina C por la mañana (se potencia con el solar), retinal o kójico por la n
 Nunca los dos en la misma aplicación. Es el error de uso más común y el que más
 devoluciones genera.
 
+Cerrada la familia Piel de porcelana con 4 más: Glutathione Cleansing Foam, Glutathione
+Serum Mist, PDRN Collagen Glow Jelly Serum y Deep Vita C Daily Quick Mask. Van
+**58 de 176**.
+
 **PR abierta:** https://github.com/blancasdlrosa/Shopify/pull/1 — cada push la actualiza.
 
 ---
