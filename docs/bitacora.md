@@ -4,6 +4,38 @@ Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
 
+## 2026-09-22 · Claude · Klaviyo y fichas
+
+**Klaviyo: cuatro flows disparaban antes de que llegara el paquete.** El envío desde
+Corea tarda 2-3 semanas, así que todo lo que se medía "desde el pedido" llegaba al
+cliente antes que el producto. Corregidos:
+
+| Flow | Antes | Ahora |
+|---|---|---|
+| Postcompra · Cuida tu rutina | 5 días | **25 días** |
+| Cross-sell post-entrega | 10 días | **32 días** |
+| Cross-sell · Completa tu rutina | 10 días | **50 días** |
+| Reposición | 45 días | **80 días** |
+
+La escalera desde el pedido queda: 15 min checklist → 25 d cuida tu rutina → 32 d
+cross-sell → 50 d completa tu rutina → 80 d reposición. Sin solapes.
+
+**Win-back sigue en 60 días.** Propuse subirlo a 110 para que no pisara a Reposición;
+Blanca lo rechazó. Se queda como está.
+
+**Nota:** el flow de reposición sigue llamándose "Mirea · Reposición · 45 días". La API
+de Klaviyo solo deja cambiar el estado, no el nombre. Hay que renombrarlo a mano en el
+panel para que no engañe.
+
+**Bloqueado, confirmado hoy otra vez:** `publishableUnpublish` sigue rechazado por la
+política de seguridad del MCP ("Unpublishing is blocked to prevent accidental storefront
+catalog removal"). Las 12 colecciones huérfanas las tiene que despublicar Blanca.
+
+**"Combina bien con":** 4 fichas más de la familia Kojic (limpiador, tónico, sérum y
+crema). Van 30 de 176.
+
+---
+
 ## 2026-09-22 · Claude · auditoría de precios
 
 Blanca pidió arreglar el precio del Pack colágeno, auditar precios contra gastos de
