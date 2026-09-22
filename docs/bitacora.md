@@ -4,6 +4,54 @@ Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
 
+## 2026-09-22 · Claude · la "Guía Mirea PRO" duplicada: era la misma guía
+
+Blanca vio en `/pages/la-guia` una tarjeta **"REGALO EXCLUSIVO MIREA · Guía Mirea PRO
+Premium"** y preguntó si era la misma guía que se regala con la compra de 35 €.
+
+**Sí, es la misma.** Solo existe una guía. Estaba montada a mano dentro de
+`sections/main-page.liquid`, condicionada a `page.handle == 'la-guia'`:
+
+- cliente **sin** pedido de más de 35 € → tarjeta rosa de bloqueo con botones
+  *Iniciar sesión* / *Ver tienda*;
+- cliente **con** primer pedido de más de 35 € → se despliega la guía entera (12 bloques)
+  con botón de imprimir.
+
+Es decir: la tarjeta que ella veía no era una segunda guía, era **el envoltorio del
+mismo regalo**. Lo que sí estaba mal era el nombre, que iba por tres sitios distintos:
+portada "Guía Mirea PRO", página "Guía Digital Mirea", tema "Guía Mirea PRO **Premium**".
+
+**Qué hice.** Quité la tarjeta duplicada, no la guía. Borrar el bloque entero habría
+dejado la promesa de los 35 € sin forma de entregarse, y eso no es lo que pedía.
+
+- fuera la tarjeta `mirea-guide-download` y su CSS;
+- `Guía Mirea PRO Premium` → **`Guía Mirea PRO`**, un solo nombre en toda la tienda;
+- antetítulo `EDICIÓN PRO · EXCLUSIVA` → `TU REGALO · PEDIDO SUPERIOR A 35 €`;
+- **bug que había de antes:** ese borrador ocultaba el cuerpo de la página en
+  `/pages/la-guia` con un `{% unless %}`. Al quitar la tarjeta, la página se habría
+  quedado **en blanco** para quien no ha comprado. Ahora el `unless` solo afecta a
+  `mirea-checklist-4-semanas`, que es donde sí tiene sentido (ahí el contenido de la
+  página *es* el regalo).
+
+**Dónde está el cambio.** Shopify **bloquea escribir en el tema publicado**, así que el
+cambio está en el borrador **"PUBLICAR ESTA · Mirea · regalos protegidos"**
+(206747861329). `sections/main-page.liquid` pasó de 17.490 a 15.538 bytes; verificado
+releyendo el archivo.
+
+→ **Blanca tiene que publicarlo**: Tienda online → Temas → ese borrador → Publicar.
+Mirar antes la vista previa de `/pages/la-guia` con y sin sesión iniciada.
+
+**Pendiente de decisión suya.** En el tema vive `assets/guia-mirea-pro.pdf`, descargable
+por cualquiera que dé con la URL, sin comprar ni iniciar sesión. Ahora mismo no hay
+ningún enlace hacia él, así que no está expuesto, pero mientras siga ahí el regalo de
+35 € no está del todo protegido. No lo borro yo: borrar archivos lo decide ella.
+
+**Nota para ChatGPT:** hay tres temas con el mismo nombre de sección y contenidos
+distintos. El bueno es el borrador "regalos protegidos". No toquéis el tema en vivo por
+API, está bloqueado.
+
+---
+
 ## 2026-09-22 · Claude · el idioma de la tienda está mal y se nota en los nombres
 
 Buscando por qué las fichas del catálogo largo están en inglés he encontrado algo más
