@@ -14,8 +14,12 @@ Informe completo en `docs/auditoria-precios-2026-09-22.md`. Resumen:
 de Shopify lo confirma: 90 días, 169,80 € de ventas, 2 pedidos, COGS = 0. Sin coste no
 hay margen calculable. Lo arregla un CSV con la columna *Cost per item*.
 
-**Hallazgo grave.** 16 productos (LANEIGE + Abib) tenían precio = coste × 1,2 exacto,
-16 de 16 sin excepción. Margen bruto 16,7 %, antes de comisiones, envío y publicidad.
+**Hallazgo grave.** Precio = coste × 1,2 exacto. Primero lo conté como "16 productos"
+porque solo miré el feed de Google: **mal contado**. Barrido el catálogo: 1.056 productos
+activos afectados de 1.500 revisados, 56 marcas, y quedaban páginas. Es la regla con la
+que entró toda la importación de Korealy de septiembre. Arreglados solo los 16 del feed
+(los que se anuncian); los otros ~1.040 necesitan el coste cargado, porque a ojo serían
+mil precios inventados. Margen bruto 16,7 %, antes de comisiones, envío y publicidad.
 Anunciarlos era perder dinero en cada venta. Subidos a la altura del propio catálogo
 para productos equivalentes (31 variantes). Tabla completa de antes/después en el
 informe.

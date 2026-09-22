@@ -24,9 +24,53 @@ producto, y las decisiones de precio dejan de ser opinión.
 
 ---
 
-## Hallazgo grave: 16 productos a coste × 1,2
+## CORRECCIÓN IMPORTANTE (misma tarde)
 
-Los 16 productos del bloque LANEIGE + Abib importado tenían precios que **dividen
+La sección de abajo decía "16 productos". **Está mal, y el error es mío.** Busqué el
+patrón solo dentro de los 176 productos del feed de Google y di por hecho que ahí
+acababa. Al verificar los cambios apareció el mismo patrón en productos Abib que no
+había tocado, así que barrí el catálogo entero.
+
+**Revisados 1.500 productos activos creados desde el 10-09: 1.056 tienen precio =
+coste × 1,2, en 56 marcas distintas, y aún quedaban páginas por revisar.**
+
+| | |
+|---|---|
+| Variantes afectadas | 1.340 y subiendo |
+| Productos afectados | 1.056 y subiendo |
+| Marcas | 56 |
+| Precio medio afectado | 19,94 € |
+| Rango | 4,80 € – 124,80 € |
+
+Marcas con más productos afectados: Abib (58), TIRTIR (49), Anua (44), beplain (43),
+Torriden (41), I'm from (36), numbuzin (26), ILLIYOON (24), AXIS-Y (19), TOCOBO (18).
+
+No son casos sueltos: **es la regla con la que entró toda la importación de Korealy de
+septiembre**, y está viva en la tienda.
+
+**Los 16 que arreglé son el 1,5 % del problema.** Los arreglé porque eran los que van al
+feed de Google, que es lo que se anuncia, así que no es trabajo perdido — pero no está
+arreglado.
+
+### Por qué no sigo yo con los 1.040 restantes
+
+Porque los 16 los puse a ojo, comparando con productos equivalentes de tu propio
+catálogo. Eso es defendible para 16 productos revisados uno a uno. Hacerlo mil veces
+sería inventarme mil precios.
+
+**Con el coste cargado esto se arregla de una pasada y bien:** una regla de coste ×
+margen, aplicada a todo el bloque, con la aritmética correcta en vez de mi criterio.
+Diez minutos de trabajo. Sin el coste, no.
+
+Mientras tanto los 1.040 siguen vendiéndose al 16,7 % de margen bruto. No es urgente en
+el sentido de que apenas hay tráfico todavía (2 pedidos en 90 días), pero **no se puede
+lanzar publicidad sobre ese catálogo**.
+
+---
+
+## Hallazgo grave: la regla de coste × 1,2
+
+Los productos importados tienen precios que **dividen
 exactos entre 1,2**, sin una sola excepción:
 
 | Precio | ÷ 1,2 |
@@ -40,7 +84,7 @@ exactos entre 1,2**, sin una sola excepción:
 | 18,00 € | 15,00 |
 | 20,40 € | 17,00 |
 
-Dieciséis de dieciséis no es casualidad: es una regla de **coste × 1,2** aplicada en la
+Mil y pico de mil y pico no es casualidad: es una regla de **coste × 1,2** aplicada en la
 importación. Eso es un **margen bruto del 16,7 %**, antes de comisiones de Shopify y de
 pasarela, antes del envío y antes de un solo euro de publicidad.
 
@@ -49,7 +93,7 @@ quedan ~2,20 €. Un clic de Google Ads en belleza en España cuesta entre 0,30 
 a un 2 % de conversión, cada venta cuesta entre 15 y 40 € de publicidad. **Anunciar esos
 productos era perder dinero en cada venta, garantizado.**
 
-### Qué se ha cambiado
+### Qué se ha cambiado (solo los 16 del feed de Google)
 
 Precios subidos **a la altura de tu propio catálogo** para productos equivalentes — no a
 un margen inventado, porque sin coste cargado no se puede calcular un margen. Todos los
