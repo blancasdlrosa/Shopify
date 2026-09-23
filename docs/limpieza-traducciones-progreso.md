@@ -1,6 +1,6 @@
 # Limpieza de traducciones automáticas · estado
 
-Última actualización: 2026-09-23, en curso.
+Última actualización: 2026-09-23. **TERMINADO.**
 
 ## Qué se está haciendo
 
@@ -21,12 +21,12 @@ Serum", tipo de producto "Fundación") pasan a ser los nombres reales del catál
 ## Estado
 
 - [x] **178 / 178** fichas propias · hecho y verificado
-- [ ] **7.216 / 7.560** productos del proveedor
+- [x] **7.560 / 7.560** productos del proveedor · hecho y verificado
 
-Índices ya procesados de `proveedor.json` (lotes de 88): **0 al 81**. Siguiente lote: **82**
-(elemento 7.216 en adelante).
+Índices procesados de `proveedor.json` (lotes de 88): **0 al 85**, los 86 lotes completos.
+No queda ninguno pendiente.
 
-**Total: 7.394 de 7.738.**
+**Total: 7.738 de 7.738.** ✅
 
 ### Comprobado sobre producto real
 
@@ -54,9 +54,28 @@ Los ficheros de trabajo están en el directorio temporal de la sesión y se rege
    "En qué paso va" o "Dónde encaja" → ficha propia. Si no → proveedor.
 3. Por cada producto, `translationsRemove` con las claves de la tabla de arriba.
 
-## Comprobación al terminar
+## Comprobación al terminar · hecha el 2026-09-23
 
-Mirar tres productos de marcas distintas y confirmar que:
-- El título en español es el nombre de marca original, sin traducir.
-- El tipo de producto ya no dice "Fundación", "Clean up", "Hydrate" ni "almohadilla".
-- En los del proveedor, la descripción **sigue** en español.
+Tres productos de marcas distintas, consultados después del último lote:
+
+| Producto | Título en /es/ | Tipo en /es/ |
+|---|---|---|
+| 3CE Gummy Oil Tint 4g | 3CE Gummy Oil Tint 4g (10colors) | LIP TINT |
+| NATURE REPUBLIC Real Nature Mask Sheet | \[NATURE REPUBLIC\] Real Nature Mask Sheet 23ml X 30ea | Facial Mask |
+| Elizavecca Real 1 Vitamin C Toner 200ml | Elizavecca Real 1 Vitamin C Toner 200ml | Toner |
+
+Ninguno conserva ya traducción al español de `title` ni de `product_type`: el
+nombre de marca original es lo que ve la clienta.
+
+**Sobre las descripciones:** se hizo un muestreo aleatorio de 25 productos del
+proveedor. 13 conservan su `body_html` traducido al español —intacto, como
+estaba previsto— y 12 no tienen ninguna traducción al español porque la app
+nunca llegó a traducirles la descripción. Eso no lo hemos provocado nosotras:
+en el grupo proveedor jamás se tocó `body_html`. A esos 12 les toca descripción
+en inglés en la versión /es/ hasta que se escriban a mano o los traduzca la app.
+
+## Siguiente paso (de Blanca)
+
+Ya se puede **cambiar el idioma principal de la tienda a español** sin que los
+títulos destrozados se conviertan en los nombres reales del catálogo. Era el
+bloqueo que impedía ese cambio.

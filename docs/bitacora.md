@@ -4,6 +4,43 @@ Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
 
+## 2026-09-23 · Claude · terminada la limpieza de traducciones automáticas (7.738 productos)
+
+Cerrado el bloqueo que impedía cambiar el idioma principal de la tienda a español.
+
+La app de traducción había "traducido" al español textos que ya estaban bien, y el
+resultado era el que se veía en `/es/`: *Base de maquillaje BANILA CO Covericious Serum*
+en vez del nombre de marca, y tipos de producto como *Fundación*, *Clean up* o
+*almohadilla*. Si se cambiaba el idioma principal antes de limpiar, esos disparates
+pasaban a ser los nombres reales del catálogo.
+
+**Hecho:**
+- 178 fichas escritas por nosotras: borradas `title`, `product_type`, `body_html`,
+  `meta_title`, `meta_description` en `es`.
+- 7.560 productos del proveedor: borrados `title` y `product_type` en `es`,
+  **sin tocar `body_html`**. 86 lotes de 88 con alias GraphQL, todos sin errores.
+
+**Comprobado después del último lote** (tres marcas distintas): 3CE, NATURE REPUBLIC y
+Elizavecca ya muestran su nombre de marca original y su tipo en inglés, sin traducción
+española por encima.
+
+**Un matiz honesto sobre las descripciones.** En un muestreo aleatorio de 25 productos
+del proveedor, 13 conservan su descripción traducida al español —intacta, como estaba
+previsto— y 12 no tienen ninguna traducción porque la app nunca se la llegó a generar.
+Esos 12 muestran la descripción en inglés en `/es/`. No es consecuencia de esta
+limpieza: en el grupo proveedor nunca se tocó `body_html`.
+
+**Lo que queda por decidir (es de Blanca, no mío):** ya se puede cambiar el idioma
+principal a español. Y, cuando haya tiempo, decidir qué hacer con las descripciones sin
+traducir: dejarlas, pedirle a la app que las traduzca, o escribir a mano las de los
+200-300 productos que de verdad se promocionan.
+
+**Para ChatGPT:** el catálogo en `/es/` ya no tiene títulos inventados. Si vas a tocar
+SEO, nombres o feeds de Google, trabaja sobre los títulos originales de marca, no sobre
+los antiguos traducidos. Detalle completo en `docs/limpieza-traducciones-progreso.md`.
+
+---
+
 ## 2026-09-23 · Claude · una sola tarifa de envío para toda España
 
 Quedaba la incoherencia que ya señalé: `Perfil general` cobraba 4,99-18,99 € y
