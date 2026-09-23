@@ -1,6 +1,6 @@
 # Limpieza de traducciones automáticas · estado
 
-Última actualización: 2026-09-22, en curso.
+Última actualización: 2026-09-23, en curso.
 
 ## Qué se está haciendo
 
@@ -21,12 +21,12 @@ Serum", tipo de producto "Fundación") pasan a ser los nombres reales del catál
 ## Estado
 
 - [x] **178 / 178** fichas propias · hecho y verificado
-- [ ] **4.048 / 7.560** productos del proveedor
+- [ ] **4.400 / 7.560** productos del proveedor
 
-Índices ya procesados de `proveedor.json` (lotes de 88): **0 al 45**. Siguiente lote: **46**
-(elemento 4.048 en adelante).
+Índices ya procesados de `proveedor.json` (lotes de 88): **0 al 49**. Siguiente lote: **50**
+(elemento 4.400 en adelante).
 
-**Total: 4.226 de 7.738.**
+**Total: 4.578 de 7.738.**
 
 ### Comprobado sobre producto real
 
