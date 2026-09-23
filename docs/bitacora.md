@@ -4,6 +4,46 @@ Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
 
+## 2026-09-23 · Claude · ya tenemos el coste real de Korealy y el envío pierde dinero en cada pedido
+
+Blanca sacó las cifras de la Shipping Calculator de Korealy (España, USD, **por pedido**).
+Análisis entero en `docs/coste-envio-korealy-2026-09-23.md`.
+
+| Peso | Standard | Economy | Express |
+|---|---|---|---|
+| 1,0 kg | 17 $ | 18 $ | 36 $ |
+| 1,3 kg | 21 $ | 22 $ | 41 $ |
+| 1,5 kg | 22 $ | 22 $ | 41 $ |
+| 2,0 kg | 25 $ | 25 $ | 47 $ |
+| 2,3 kg | 28 $ | 28 $ | 54 $ |
+
+A 0,92 €/$, **cada pedido a España pierde entre 11,65 € y 16,01 € solo en transporte**, y
+hasta 20,00 € si el pedido pasa de 35 € y entra el envío gratis. Con la tarifa plana de
+3,99 € que había esta mañana, un pedido de 2 kg perdía 19,01 €.
+
+**Falta el tramo por debajo de 1 kg**, que es donde vive el pedido corriente (artículo
+mediano 0,2 kg). Extrapolando al coste marginal de 8,46 $/kg saldría ~9,41 € a 0,2 kg,
+pero **es extrapolación y no sirve para decidir**: los transportistas no son lineales
+abajo. Hay que mirar 0,2 / 0,4 / 0,6 / 0,8 kg en la calculadora.
+
+**Conclusión:** no es un problema de afinar la tarifa. A estos costes no hay ninguna
+tarifa de envío que un cliente español pague y que cubra el coste. El paquete sale de
+Corea en **cada** pedido. Las salidas reales son: meter el envío en el precio del
+producto, subir mucho el umbral de gratis, **cambiar a un proveedor que envíe desde
+España** (ya hay hilo abierto con BTSWholesaler, contestaron el 21-09), o agrupar pedidos
+si Korealy lo permite.
+
+**No se ha perdido dinero todavía:** cero tarjetas cobradas, los pedidos #1001-#1003 son
+pruebas de Blanca. Visto antes de la primera venta real.
+
+**No he vuelto a tocar tarifas.** Subir el envío a 16 € o quitar el gratis de 35 € es
+política comercial y lo decide ella. Lo de hoy baja la sangría de ~19 € a 12-16 €, no la
+para.
+
+**Nota para ChatGPT:** antes de tocar precios o envíos, leer ese documento. El margen de
+esta tienda no está en el producto, está en si el paquete sale de Corea o de España.
+
+
 ## 2026-09-23 · Claude · la tabla de envíos de Korealy NO existe en el correo
 
 Blanca dijo que Korealy le había pasado la tarifa de envíos por Gmail. **No es así.**
