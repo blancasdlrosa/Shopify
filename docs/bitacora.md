@@ -4,6 +4,50 @@ Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
 
+## 2026-09-23 · Claude · con el tramo <1 kg, escalera definitiva y cuentas cerradas
+
+Blanca consultó la calculadora de Korealy por debajo de 1 kg. **Mi extrapolación estaba
+mal** (estimé 10,2 $ a 0,2 kg; son 6 $) y menos mal que avisé de no decidir con ella.
+
+| Peso | Standard | en € |
+|---|---|---|
+| 0,2 kg | 6 $ | 5,52 € |
+| 0,4 kg | 9 $ | 8,28 € |
+| 0,6 kg | 12 $ | 11,04 € |
+| 0,8 kg | 15 $ | 13,80 € |
+| 1,0 kg | 17 $ | 15,64 € |
+
+La curva sube a 13,75 $/kg entre 0,2 y 1,0 kg y luego se aplana a 8,46 $/kg. **Economy no
+compensa nunca** (15 $ donde Standard son 6 $) y Express cuesta el doble. Siempre Standard.
+
+**Lo que destapó:** la banda 0-1 kg de la mañana era demasiado ancha. El coste se
+triplicaba dentro de la misma banda (5,52 € → 15,64 €) con el cobro plano en 3,99 €.
+
+**Escalera definitiva, verificada con `draftOrderCalculate`:**
+
+| Peso | Coste | Tarifa |
+|---|---|---|
+| 0 – 0,3 kg | ≤5,52 € | **4,99 €** |
+| 0,3 – 0,6 kg | ≤11,04 € | **7,99 €** |
+| 0,6 – 1,0 kg | ≤15,64 € | **10,99 €** |
+| +1,0 kg | 19,32 €↑ | **18,99 €** |
+
+**Tope del descuento: 3,99 € → 10,99 €.** Es lo que hace que "envío gratis desde 69 €" sea
+verdad: un pedido de 69 € pesa ~0,8 kg, cae en la banda de 10,99 € y el descuento la cubre
+entera.
+
+**Resultado, con margen pesimista del 25 %:** 20 € → +4,47 € · 40 € → +9,71 € · 69 € →
++3,45 € · 69 € y 1,6 kg → +5,01 € · 120 € → +17,76 € · 200 € → +32,24 €. **Ningún
+escenario en pérdidas.**
+
+**Se estudió bajar el umbral a 49 € y se descartó:** un pedido de 49 € de artículos
+baratos pesa 1,2 kg y da −1,07 €. Se queda en 69 €.
+
+También actualizado "desde 3,99 €" → "desde 4,99 €" en la tabla de la página de envíos
+(inglés y español), y la frase del pedido pesado ya no lleva cifra, para no tener que
+reescribir la página cada vez que cambie el tope.
+
+
 ## 2026-09-23 · Claude · umbral de envío gratis a 69 € · ejecutado
 
 Blanca descartó cambiar de distribuidor ("si lo que crees es que cambie los 8000

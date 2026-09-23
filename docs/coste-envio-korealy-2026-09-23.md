@@ -237,3 +237,78 @@ hasta los 69 €, que es donde el pedido se paga solo.
    la conversión mejora mucho. Bajarlo después es fácil; subirlo, no.
 2. **El margen real.** Sin él seguimos eligiendo por el escenario pesimista.
 3. **Publicar el borrador** para que la barra del carrito entre en juego.
+
+---
+
+# EL DATO QUE FALTABA · tramos por debajo de 1 kg
+
+Blanca consultó la calculadora de Korealy en 0,2 / 0,4 / 0,6 / 0,8 kg. **Sale mucho más
+barato de lo que yo extrapolaba**, y eso cambia el diseño de la escalera.
+
+| Peso | Standard | Economy | Express | Standard en € |
+|---|---|---|---|---|
+| **0,2 kg** | **6 $** | 15 $ | 30 $ | **5,52 €** |
+| **0,4 kg** | **9 $** | 15 $ | 31 $ | **8,28 €** |
+| **0,6 kg** | **12 $** | 17 $ | 35 $ | **11,04 €** |
+| **0,8 kg** | **15 $** | 18 $ | 36 $ | **13,80 €** |
+| 1,0 kg | 17 $ | 18 $ | 36 $ | 15,64 € |
+| 1,3 kg | 21 $ | 22 $ | 41 $ | 19,32 € |
+| 1,5 kg | 22 $ | 22 $ | 41 $ | 20,24 € |
+| 2,0 kg | 25 $ | 25 $ | 47 $ | 23,00 € |
+| 2,3 kg | 28 $ | 28 $ | 54 $ | 25,76 € |
+
+**Mi extrapolación estaba mal, como avisé.** Yo estimaba 10,2 $ a 0,2 kg; son 6 $.
+La curva no es lineal: sube a 13,75 $/kg entre 0,2 y 1,0 kg, y luego se aplana a
+8,46 $/kg. Menos mal que no se decidió con la estimación.
+
+También queda claro que **Economy no compensa nunca**: cuesta 15 $ donde Standard cuesta
+6 $, por ganar unos días. Y Express cuesta el doble o más. **Siempre Standard.**
+
+## El problema que destapa: la banda 0-1 kg era demasiado ancha
+
+Con la escalera de esta mañana (3,99 € hasta 1 kg), el coste se triplicaba dentro de la
+misma banda —de 5,52 € a 15,64 €— mientras el cobro no se movía. Un pedido de 1 kg perdía
+11,65 € y uno de 0,2 kg solo 1,53 €. Misma tarifa, pérdidas siete veces distintas.
+
+## Escalera definitiva · verificada con carritos reales
+
+| Peso | Coste Korealy | Tarifa Mirea | Diferencia |
+|---|---|---|---|
+| 0 – 0,3 kg | hasta 5,52 € | **4,99 €** | −0,53 € |
+| 0,3 – 0,6 kg | hasta 11,04 € | **7,99 €** | −3,05 € |
+| 0,6 – 1,0 kg | hasta 15,64 € | **10,99 €** | −4,65 € |
+| más de 1,0 kg | 19,32 € y subiendo | **18,99 €** | −0,33 € a 1,3 kg |
+
+Comprobado con `draftOrderCalculate` sobre carritos reales: 0,2 kg → 4,99 € · 0,4 kg →
+7,99 € · 0,8 kg → 10,99 € · 2,0 kg → 18,99 €.
+
+**Tope del descuento de envío gratis: 3,99 € → 10,99 €.** Es lo que hace que "envío
+gratis desde 69 €" sea verdad y no un truco: un pedido de 69 € pesa alrededor de 0,8 kg,
+cae en la banda de 10,99 € y el descuento la cubre entera. Solo los pedidos por encima de
+1 kg ven una diferencia, y la ven en el checkout antes de pagar.
+
+## El pedido completo, con margen pesimista del 25 %
+
+| Pedido | Peso | Coste envío | Cliente paga | **Beneficio** |
+|---|---|---|---|---|
+| 20 € | 0,2 kg | 5,52 € | 4,99 € | **+4,47 €** |
+| 40 € | 0,4 kg | 8,28 € | 7,99 € | **+9,71 €** |
+| 69 € | 0,8 kg | 13,80 € | 0 € (gratis) | **+3,45 €** |
+| 69 € | 1,6 kg | 20,24 € | 8,00 € | **+5,01 €** |
+| 120 € | 1,5 kg | 20,24 € | 8,00 € | **+17,76 €** |
+| 200 € | 2,3 kg | 25,76 € | 8,00 € | **+32,24 €** |
+
+**Todos en positivo, y eso suponiendo solo un 25 % de margen.** No hay ningún escenario
+construible en el que un pedido a España salga en pérdidas.
+
+## ¿Y bajar el umbral a 49 €?
+
+Se estudió y **no**. Un pedido de 49 € hecho de artículos baratos pesa 1,2 kg: coste
+19,32 €, el cliente pagaría 8,00 € y el margen al 25 % son 12,25 € → **−1,07 €**. Con 69 €
+ese mismo caso da +5,01 €. El umbral se queda en **69 €**.
+
+## Textos actualizados a la vez
+
+- Tabla de la página de envíos: "desde 3,99 €" → **"desde 4,99 €"**, en inglés y español.
+- La frase del pedido pesado ya no dice una cifra ("cubrimos una parte del envío"), así
+  que si mañana cambia el tope no hay que reescribir la página otra vez.
