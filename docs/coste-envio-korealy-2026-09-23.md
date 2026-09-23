@@ -188,3 +188,52 @@ fijar el número definitivo.
 2. **El margen real de 30-50 productos**, los que de verdad se promocionan. El precio de
    Korealy está en su app, en dólares. No hacen falta los 7.738: con los que se anuncian
    basta para saber en qué fila de la tabla estamos.
+
+---
+
+# EJECUTADO · "solucionalo"
+
+Blanca descartó cambiar de distribuidor y pidió que se resolviera. Aplicado el plan del
+umbral. **Todo verificado leyendo el dato de vuelta.**
+
+## En producción, ya activo
+
+| Qué | Antes | Ahora |
+|---|---|---|
+| Umbral de envío gratis España | 35 € | **69 €** |
+| Tope del descuento | sin tope | 3,99 € |
+| Título del descuento | "…desde 35 €" | "…desde 69 €" |
+| Barra superior (ES) | "Más de 5.000 referencias de belleza y cuidado ✦ Encuentra tu rutina en Mirea" | **"Envío gratis en España desde 69 € ✦ Todos los packs Mirea lo llevan incluido"** |
+| Página de envíos, inglés | "over €35" | "over €69" |
+| Página de envíos, español | "más de 35 €" | "más de 69 €" |
+
+La barra superior se cambió **por traducción**, no tocando el tema. Eso esquiva el bloqueo
+de escritura sobre el tema publicado y, como todos los enlaces del menú llevan a `/es/`,
+es lo que ve el cliente. Registrada en el tema en vivo **y** en el borrador, porque las
+traducciones de tema van por `theme_id` y publicar el borrador perdería la del otro.
+
+## En el borrador (pendiente de publicar)
+
+`snippets/mirea-envio-gratis.liquid`: umbral de 3.500 a **6.900 céntimos**. La barra del
+carrito dice "te faltan X €" contra los 69 €.
+
+## Qué cambia esto en dinero
+
+Con el coste de 15,64 € por pedido a 1 kg:
+
+| Pedido | Antes | Ahora |
+|---|---|---|
+| 40 € · 0,6 kg | gratis → pierde 15,64 € | cliente paga 3,99 € → pierde 11,65 € |
+| 69 € · 0,8 kg | gratis → pierde 15,64 € | gratis, pero el pedido ya carga margen desde el 25 % |
+| 120 € · 1,5 kg | gratis → pierde 20,24 € | cliente paga 3,00 € y el pedido lo absorbe |
+
+El cambio de verdad no está en lo que se cobra de envío. Está en que **el pedido de 40 €
+deja de llevar envío gratis**, y en que la barra del carrito y la barra superior empujan
+hasta los 69 €, que es donde el pedido se paga solo.
+
+## Lo que sigue sin estar cerrado
+
+1. **Los tramos por debajo de 1 kg.** Si salen a ~9,41 €, el umbral puede bajar a 49 € y
+   la conversión mejora mucho. Bajarlo después es fácil; subirlo, no.
+2. **El margen real.** Sin él seguimos eligiendo por el escenario pesimista.
+3. **Publicar el borrador** para que la barra del carrito entre en juego.

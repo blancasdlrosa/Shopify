@@ -4,6 +4,41 @@ Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
 
+## 2026-09-23 · Claude · umbral de envío gratis a 69 € · ejecutado
+
+Blanca descartó cambiar de distribuidor ("si lo que crees es que cambie los 8000
+productos que tengo por otra distribuidora NOOOO") y dijo "solucionalo".
+
+**El principio:** Korealy cobra **por pedido**, no por artículo, y casi plano (15,64 € a
+1 kg). El enemigo no es la tarifa de envío, es el pedido pequeño. Un pedido de 16 € se
+come el 98 % en transporte; uno de 69 €, el 23 %.
+
+**Umbral elegido: 69 €.** Da beneficio con cualquier margen desde el 25 %. Los 35 €
+anteriores solo dejaban de perder por encima del 45 % de margen, que no está confirmado.
+
+**Aplicado y verificado:**
+
+- Descuento automático: mínimo 35 € → **69 €**, tope 3,99 €, título actualizado.
+- **Barra superior de la web** (se ve en todas las páginas): "Más de 5.000 referencias…"
+  → **"Envío gratis en España desde 69 € ✦ Todos los packs Mirea lo llevan incluido"**.
+  Hecho **por traducción**, no tocando el tema: esquiva el bloqueo del tema publicado y es
+  lo que se sirve en `/es/`. Registrada en el tema en vivo **y** en el borrador, porque
+  las traducciones de tema van por `theme_id`.
+- Página `/pages/envios-y-devoluciones`: 35 € → 69 € en inglés y en español.
+- Borrador: `snippets/mirea-envio-gratis.liquid` con umbral 6.900 céntimos.
+
+**Comprobado que no hacía falta tocar más:** los demás "35 €" de la tienda (portada,
+`la-guia`, `mis-beneficios-mirea`) son el regalo de la Guía PRO, no el envío. Se quedan.
+Queda una escalera coherente: 35 € guía · 60 € Journal · 69 € envío gratis.
+
+**El argumento de venta.** Subir el umbral no se presenta como castigo: el Pack Primera
+vez cuesta 84,90 €, así que el titular pasa a ser "todos los packs llevan envío gratis".
+Empuja del producto suelto (que pierde dinero siempre) al pack (que se paga solo).
+
+**Sin cerrar:** los tramos por debajo de 1 kg (si salen ~9,41 €, el umbral baja a 49 € y
+la conversión mejora), el margen real, y publicar el borrador.
+
+
 ## 2026-09-23 · Claude · ya tenemos el coste real de Korealy y el envío pierde dinero en cada pedido
 
 Blanca sacó las cifras de la Shipping Calculator de Korealy (España, USD, **por pedido**).
