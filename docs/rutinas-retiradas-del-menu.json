@@ -1,0 +1,28 @@
+{
+  "nota": "Las 22 entradas que colgaban de 'Rutinas y Sets' en el menu principal, retiradas el 2026-09-21 porque el mega-menu de Horizon las pintaba todas abiertas en tres columnas. Siguen accesibles en /pages/rutinas. Para devolverlas al menu, volver a enviarlas como items de 'Rutinas y Sets' (MenuItem 894638653777) con menuUpdate. Los ids antiguos ya no existen: se crearan nuevos.",
+  "parent": {"id": "gid://shopify/MenuItem/894638653777", "title": "Rutinas y Sets", "type": "PAGE", "resourceId": "gid://shopify/Page/171820187985"},
+  "items": [
+    {"title": "Ver las 23 rutinas", "type": "PAGE", "resourceId": "gid://shopify/Page/171820187985"},
+    {"title": "Sets de regalo", "type": "COLLECTION", "resourceId": "gid://shopify/Collection/690395644241", "handle": "sets-de-regalo", "productos": 95},
+    {"title": "Primera vez", "type": "COLLECTION", "resourceId": "gid://shopify/Collection/690591400273", "handle": "rutina-primera-vez-1"},
+    {"title": "Piel grasa con granitos", "type": "COLLECTION", "resourceId": "gid://shopify/Collection/690591433041", "handle": "rutina-piel-grasa-con-granitos-1"},
+    {"title": "Piel seca", "type": "COLLECTION", "resourceId": "gid://shopify/Collection/689300111697", "handle": "rutina-piel-seca"},
+    {"title": "Piel sensible", "type": "COLLECTION", "resourceId": "gid://shopify/Collection/689300144465", "handle": "rutina-piel-sensible"},
+    {"title": "Rojeces y piel reactiva", "type": "COLLECTION", "resourceId": "gid://shopify/Collection/690065146193", "handle": "rutina-rojeces"},
+    {"title": "Poros y textura", "type": "COLLECTION", "resourceId": "gid://shopify/Collection/690003706193", "handle": "rutina-poros-y-textura"},
+    {"title": "Manchas y tono", "type": "COLLECTION", "resourceId": "gid://shopify/Collection/690003738961", "handle": "rutina-manchas-y-tono"},
+    {"title": "Piel de porcelana", "type": "COLLECTION", "resourceId": "gid://shopify/Collection/690003673425", "handle": "rutina-piel-de-porcelana"},
+    {"title": "Primeras arrugas", "type": "COLLECTION", "resourceId": "gid://shopify/Collection/690003771729", "handle": "rutina-primeras-arrugas"},
+    {"title": "Ojeras y mirada cansada", "type": "COLLECTION", "resourceId": "gid://shopify/Collection/690064916817", "handle": "rutina-ojeras"},
+    {"title": "Embarazo y lactancia", "type": "COLLECTION", "resourceId": "gid://shopify/Collection/690064818513", "handle": "rutina-embarazo-y-lactancia"},
+    {"title": "Barrera dañada", "type": "COLLECTION", "resourceId": "gid://shopify/Collection/690064851281", "handle": "rutina-barrera-danada"},
+    {"title": "Adolescente", "type": "COLLECTION", "resourceId": "gid://shopify/Collection/690064884049", "handle": "rutina-adolescente"},
+    {"title": "Piel madura", "type": "COLLECTION", "resourceId": "gid://shopify/Collection/690065113425", "handle": "rutina-piel-madura"},
+    {"title": "Hombre", "type": "COLLECTION", "resourceId": "gid://shopify/Collection/689909301585", "handle": "rutina-hombre"},
+    {"title": "Exprés · 3 minutos", "type": "COLLECTION", "resourceId": "gid://shopify/Collection/690065015121", "handle": "rutina-expres"},
+    {"title": "Antes de un evento", "type": "COLLECTION", "resourceId": "gid://shopify/Collection/690064982353", "handle": "rutina-antes-de-un-evento"},
+    {"title": "Cuello y escote", "type": "COLLECTION", "resourceId": "gid://shopify/Collection/690064949585", "handle": "rutina-cuello-y-escote"},
+    {"title": "Cabello", "type": "COLLECTION", "resourceId": "gid://shopify/Collection/689678385489", "handle": "cuidado-capilar"},
+    {"title": "Cuerpo", "type": "COLLECTION", "resourceId": "gid://shopify/Collection/690003837265", "handle": "cuerpo"}
+  ]
+}

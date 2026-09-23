@@ -1,0 +1,15 @@
+{
+  "nota": "Reglas originales de las colecciones pequenas antes de ampliarlas al catalogo completo (23-09-2026). Para revertir: poner appliedDisjunctively=false y la unica regla TAG que figura aqui.",
+  "colecciones": [
+    {"id": "gid://shopify/Collection/689450484049", "handle": "tonicos-y-esencias", "productos": 16, "regla": {"column": "TAG", "relation": "EQUALS", "condition": "tonicos-y-esencias"}},
+    {"id": "gid://shopify/Collection/689450680657", "handle": "champus", "productos": 7, "regla": {"column": "TAG", "relation": "EQUALS", "condition": "champu"}},
+    {"id": "gid://shopify/Collection/689450746193", "handle": "mascarillas-y-tratamientos-capilares", "productos": 14, "regla": {"column": "TAG", "relation": "EQUALS", "condition": "tratamientos-capilares"}},
+    {"id": "gid://shopify/Collection/689450778961", "handle": "cuidados-sin-aclarado", "productos": 7, "regla": {"column": "TAG", "relation": "EQUALS", "condition": "cuidado-sin-aclarado"}},
+    {"id": "gid://shopify/Collection/689450516817", "handle": "mascarillas-y-exfoliantes", "productos": 34, "regla": {"column": "TAG", "relation": "EQUALS", "condition": "mascarillas-y-exfoliantes"}},
+    {"id": "gid://shopify/Collection/689678418257", "handle": "labios", "productos": 17, "regla": {"column": "TAG", "relation": "EQUALS", "condition": "labios"}},
+    {"id": "gid://shopify/Collection/689299325265", "handle": "limpiar", "productos": 44, "regla": {"column": "TAG", "relation": "EQUALS", "condition": "Paso: Limpiar"}},
+    {"id": "gid://shopify/Collection/689299358033", "handle": "tratar", "productos": 160, "regla": {"column": "TAG", "relation": "EQUALS", "condition": "Paso: Tratar"}},
+    {"id": "gid://shopify/Collection/689299390801", "handle": "hidratar", "productos": 70, "regla": {"column": "TAG", "relation": "EQUALS", "condition": "Paso: Hidratar"}},
+    {"id": "gid://shopify/Collection/689299423569", "handle": "proteger", "productos": 20, "regla": {"column": "TAG", "relation": "EQUALS", "condition": "Paso: Proteger"}}
+  ]
+}
