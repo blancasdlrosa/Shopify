@@ -4,6 +4,49 @@ Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
 
+## 2026-09-23 · Claude · el envío no está roto por el precio, está roto por la estructura
+
+Blanca preguntó si 3,99 € de envío le sale rentable, porque Korealy le cobra a ella por
+peso. Informe entero en `docs/envios-rentabilidad-2026-09-23.md`.
+
+**No se puede responder todavía**: falta la tabla de tarifas de Korealy, y `korealy.com`
+sigue bloqueado por la política de red del entorno. Pero al mirarlo salieron tres
+errores que no dependen de ese dato:
+
+1. **La escalera por peso del `Perfil general` cobra 3,99 € en las cuatro bandas.**
+   0–0,3, 0,3–0,6, 0,6–1,2 y +1,2 kg: todas a 3,99 €. La estructura existe, los precios
+   no se pusieron. Da igual que el pedido pese 100 g o 3,7 kg.
+2. **El descuento `Envío gratis España desde 35 €` tiene `maximumShippingPrice: null`.**
+   Sin tope. Cubre cualquier tarifa, incluidas las de 27,99 € del otro perfil.
+3. **Dos perfiles con tarifas incompatibles conviviendo.** `Perfil general` 3,99 € plano
+   y `Mirea · Korealy margen protegido` 6,99 / 11,99 / 18,99 / 27,99 €. Según el producto,
+   el mismo envío a España cuesta 3,99 € o 27,99 €.
+
+**Corrección a `auditoria-precios-2026-09-22.md`:** allí escribí que el perfil
+`Mirea · Korealy margen protegido` estaba vacío. **Estaba mal.** Hoy tiene productos
+(línea masculina: Dashu, Paul Medison, Sulwhasoo Men, Kundal…). Shopify tapa el contador
+de variantes a 500, así que el número exacto se ve en el admin, no por API.
+
+**Aritmética de la cesta** (12.475 variantes activas): precio mediano 16,12 €, peso
+mediano 0,2 kg. Para cruzar los 35 € del envío gratis hacen falta 2-3 artículos, que es
+justo cuando el peso salta de banda. El cliente más caro de enviar es el que no paga
+envío.
+
+**Los pesos son de relleno.** 8.206 de 12.475 variantes pesan exactamente 0,2 kg (66 %).
+Otras 1.910 pesan 0,3. Nadie ha pesado nada. Aunque la escalera funcionara, calcularía
+sobre datos falsos.
+
+**No he tocado ninguna tarifa.** Es política comercial y la decide Blanca.
+
+### Guía PRO · el PDF
+
+Blanca autorizó borrar `assets/guia-mirea-pro.pdf`. **No se puede por API**:
+`themeFilesDelete` está bloqueado por la política de seguridad del MCP ("Theme deletion
+is blocked"). Está en los tres temas (10.868 bytes cada copia). Lo tiene que borrar ella
+desde Temas → ⋯ → Editar código → `assets/guia-mirea-pro.pdf`.
+
+---
+
 ## 2026-09-22 · Claude · la "Guía Mirea PRO": era la misma, pero Blanca la quiere tal cual
 
 Blanca vio en `/pages/la-guia` la tarjeta **"REGALO EXCLUSIVO MIREA · Guía Mirea PRO
