@@ -4,6 +4,50 @@ Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
 
+## 2026-09-23 · Claude · Klaviyo a 80 días, código duplicado resuelto, IVA a 0 y dos cosas que creía rotas y no lo estaban
+
+**Klaviyo · Reposición.** El flujo `Mirea · Reposición · 45 días` esperaba de verdad 45
+días. Con 2-3 semanas de envío desde Corea, el recordatorio llegaba cuando la clienta
+llevaba tres semanas usando el producto. **Cambiado a 80 días** y renombrado el paso de
+correo a "Reposición · Día 80". El nombre del flujo sigue diciendo "45 días" porque la
+API de Klaviyo no tiene forma de renombrar un flujo: eso hay que cambiarlo a mano.
+
+**Códigos de bienvenida duplicados.** Miré qué código entrega de verdad el sistema: tanto
+el correo de bienvenida de Klaviyo como el popup del tema (`snippets/mirea-welcome-popup.liquid`)
+entregan **MIREA10**. `BIENVENIDA10` no lo enlaza nada, llevaba 1 uso. **Desactivado.**
+Queda MIREA10 como único código de bienvenida.
+
+**IVA: esto es lo más serio del día.** Simulé un pedido de 55,80 € a Madrid: impuesto
+**0,00 €** y **ninguna línea de IVA**. La tienda tiene los precios marcados como "IVA
+incluido" pero **no tiene ningún tipo impositivo dado de alta**. Ningún pedido registraría
+IVA. No lo toco: es materia fiscal. Hay un **borrador de correo en Gmail** con los cinco
+datos comprobados y las cinco preguntas, listo para enviar a quien lleve los impuestos.
+
+**Pesos: me equivocaba yo.** Dije que el catálogo llevaba "pesos de relleno" porque 8.206
+variantes pesan 0,2 kg. Falso: crucé peso declarado contra tamaño del envase en las 12.475
+variantes y el peso sube con el tamaño en todo el catálogo. El 0,2 kg es el mínimo del
+proveedor. Solo había **un** error real (un bote de 400 ml declarado a 0,3 kg), corregido
+a 0,55 kg. Tenía el cálculo listo para reescribir 11.427 pesos y **no lo he aplicado**:
+habría bajado el peso mediano a la mitad, casi todos los pedidos caerían en el tramo más
+barato y Mirea perdería aún más en cada envío. Detalle en `docs/pesos-envio-2026-09-23.md`.
+
+**Google Merchant Center.** Los 440 "pendientes" no son un error: en España hay **0
+rechazados**, y los 222 pendientes de fichas gratuitas son cola de revisión de Google.
+El problema real es otro: hay 8.191 productos publicados en Shopify y solo **440** llegan
+a Merchant Center. Es la configuración del canal Google & YouTube y hay que mirarla a
+mano. Detalle en `docs/google-merchant-2026-09-23.md`.
+
+**Descripciones en inglés.** Medido uno a uno sobre los 7.738 productos activos:
+**4.194 (54 %) enseñan la descripción en inglés o vacía**. 3.369 sí tienen traducción al
+español y 175 están escritas en español en la capa base. La vía rápida es un clic en
+Translate & Adapt (gratis) y después vuelvo yo a limpiar los títulos que esa app
+destroza. Detalle y el orden correcto en `docs/descripciones-idioma-2026-09-23.md`.
+
+**Colecciones de la estructura vieja (Limpiar/Tratar/Hidratar/Proteger).** Explicadas,
+decisión pendiente de Blanca. No he tocado nada: son colecciones inteligentes por
+etiqueta `Paso: …` y despublicarlas está bloqueado por API de todos modos.
+
+---
 ## 2026-09-23 · Claude · auditoría de colecciones y un descuento que se podía usar sin límite
 
 Revisadas las 113 colecciones y los 7 códigos de descuento. Detalle completo en
