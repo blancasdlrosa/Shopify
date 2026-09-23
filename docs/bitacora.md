@@ -4,6 +4,28 @@ Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
 
+## 2026-09-23 · Claude · una sola tarifa de envío para toda España
+
+Quedaba la incoherencia que ya señalé: `Perfil general` cobraba 4,99-18,99 € y
+`Mirea · Korealy margen protegido` cobraba 6,99-27,99 € por el mismo peso al mismo país,
+según qué producto tocara.
+
+Con los costes reales de Korealy en la mano se puede resolver sin riesgo: la escalera
+nueva cubre coste en las dos. **Alineado el perfil protegido a la misma tabla**
+(4,99 / 7,99 / 10,99 / 18,99, bandas 0-0,3 / 0,3-0,6 / 0,6-1,0 / +1,0 kg).
+
+**Desactivadas además las cuatro tarifas "Envío Mirea · ahorro aplicado"** de ese perfil
+(≥69 € → 19,99 €, ≥109 € → 12,99 €, ≥139 € → 7,99 €, ≥159 € → 4,99 €). Eran una segunda
+escalera por importe de carrito que se solapaba con el envío gratis desde 69 € y que
+podía darle a un cliente un precio distinto por un motivo invisible. Desactivadas, no
+borradas: si hicieran falta, se reactivan desde el admin.
+
+Verificado releyendo el perfil: las cuatro bandas de peso correctas y activas, las cuatro
+de importe en `active: false`.
+
+**Resultado:** un cliente en España paga lo mismo por el mismo peso, compre lo que compre.
+
+
 ## 2026-09-23 · Claude · con el tramo <1 kg, escalera definitiva y cuentas cerradas
 
 Blanca consultó la calculadora de Korealy por debajo de 1 kg. **Mi extrapolación estaba
