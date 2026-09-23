@@ -4,6 +4,49 @@ Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
 
+## 2026-09-23 · Claude · la tabla de envíos de Korealy NO existe en el correo
+
+Blanca dijo que Korealy le había pasado la tarifa de envíos por Gmail. **No es así.**
+Leído el hilo entero (`Mirea Skin — imported products priced at 11.16 EUR`, 5 mensajes,
+21 al 23 de septiembre): no hay ni una sola tarifa de envío. Todo el hilo va de precios
+de producto y de moneda.
+
+Además, **en ninguno de los cuatro correos que Blanca les envió se les preguntó por el
+coste de envío.** Por eso no lo han mandado.
+
+### Lo que Korealy sí ha contestado, y cambia el plan
+
+1. **Sus precios están en USD**, no en euros. Eso explica los 11,16 € idénticos: era un
+   precio en dólares metido en una tienda en euros.
+2. **"We do not provide a separate pricing template or file."** No hay CSV de costes, no
+   hay API de costes, no sincronizan `Cost per item` de Shopify. El coste solo se ve en
+   el campo "Price" dentro de su app, producto a producto.
+3. **"We are unable to determine how the products were originally imported into your
+   store or what margin settings were applied on your side."** No van a reconstruir los
+   costes de lo ya importado.
+
+**Consecuencia para el bloqueo de costes:** cargar el coste por artículo por CSV no es
+"exportar de Korealy e importar en Shopify". Ese fichero **no existe**. Hay que sacar los
+precios de la app de Korealy y montarlo a mano, o empezar solo por los productos que de
+verdad se venden.
+
+### Pendiente de respuesta de Korealy
+
+Blanca les escribió el 23-09 a las 08:27 con seis preguntas sobre importar en borrador y
+no publicar automáticamente. Sin contestar todavía.
+
+### Hecho
+
+Dejado un **borrador en Gmail** dirigido a `hello@korealy.co`, en el mismo hilo, pidiendo
+exactamente la tarifa de envío: tramos de peso para España y UE, moneda, si es por pedido
+o por artículo, si hay fee fijo de manipulación, si facturan por peso real o volumétrico,
+y si publican el peso por producto. **Sin enviar** — lo revisa y lo manda Blanca.
+
+Los dos `image.png` que Korealy adjuntó no se pueden abrir desde aquí (el MCP de Gmail no
+descarga adjuntos). Si la tarifa estuviera dentro de una de esas capturas, hay que
+pegarla en el chat.
+
+
 ## 2026-09-23 · Claude · envío: arreglado todo lo que no exigía inventarse un número
 
 Blanca: *"haz lo que tengas que hacer, pero que siempre tenga beneficio y ESTANDO SEGURO
