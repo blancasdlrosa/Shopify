@@ -21,12 +21,12 @@ Serum", tipo de producto "Fundación") pasan a ser los nombres reales del catál
 ## Estado
 
 - [x] **178 / 178** fichas propias · hecho y verificado
-- [ ] **3.168 / 7.560** productos del proveedor
+- [ ] **3.344 / 7.560** productos del proveedor
 
-Índices ya procesados de `proveedor.json` (lotes de 88): **0 al 35**. Siguiente lote: **36**
-(elemento 3.168 en adelante).
+Índices ya procesados de `proveedor.json` (lotes de 88): **0 al 37**. Siguiente lote: **38**
+(elemento 3.344 en adelante).
 
-**Total: 3.346 de 7.738.**
+**Total: 3.522 de 7.738.**
 
 ### Comprobado sobre producto real
 
