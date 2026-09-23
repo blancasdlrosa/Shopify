@@ -113,3 +113,78 @@ solo la baja de 19 € a 12-16 € por pedido.
 3. **Confirmar con Korealy si el importe es por pedido o admite agrupación.** Ya hay un
    borrador preparado en Gmail preguntándolo.
 4. **La decisión de Blanca** sobre cuál de las cuatro salidas se toma.
+
+---
+
+# LA SOLUCIÓN, SIN CAMBIAR DE DISTRIBUIDOR
+
+Blanca descartó cambiar de proveedor: mover 8.000 productos es rehacer la tienda. De
+acuerdo. Entonces el problema se resuelve por el otro lado.
+
+## El principio
+
+Korealy cobra **por pedido**, no por artículo. El coste es casi plano: 15,64 € tanto si
+mandas una crema como si mandas cinco.
+
+Eso significa que **el enemigo no es el envío, es el pedido pequeño.**
+
+- Pedido de 16 € → el transporte se come el 98 % del importe. Imposible.
+- Pedido de 69 € → el transporte es el 23 %. Se sostiene.
+- Pedido de 120 € → el transporte es el 13 %. Cómodo.
+
+No hay que tocar el catálogo ni el proveedor. Hay que **dejar de vender pedidos de un
+solo producto** y llevar el pedido medio arriba.
+
+## Dónde poner el umbral de envío gratis
+
+Beneficio del pedido = margen bruto − 15,64 € de transporte.
+
+| Margen sobre PVP | Pedido mínimo para no perder | A 35 € | A 59 € | **A 69 €** | A 89 € |
+|---|---|---|---|---|---|
+| 25 % | 62,56 € | −6,89 € | −0,89 € | **+1,61 €** | +6,61 € |
+| 30 % | 52,13 € | −5,14 € | +2,06 € | **+5,06 €** | +11,06 € |
+| 35 % | 44,69 € | −3,39 € | +5,01 € | **+8,51 €** | +15,51 € |
+| 40 % | 39,10 € | −1,64 € | +7,96 € | **+11,96 €** | +19,96 € |
+| 45 % | 34,76 € | +0,11 € | +10,91 € | **+15,41 €** | +24,41 € |
+| 50 % | 31,28 € | +1,86 € | +13,86 € | **+18,86 €** | +28,86 € |
+
+**Los 35 € actuales son, en el mejor de los casos, cero.** Solo dejan de perder dinero si
+el margen supera el 45 %, y eso no está confirmado.
+
+**69 € da beneficio con cualquier margen desde el 25 %.** Ese es el número que no
+depende de datos que todavía no tenemos.
+
+### Si el envío por debajo de 1 kg resultara más barato
+
+Si el tramo de 0,2-0,6 kg fuera 9,41 € en vez de 15,64 €:
+
+| Margen | Pedido mínimo | A 35 € | A 49 € | A 59 € |
+|---|---|---|---|---|
+| 25 % | 37,64 € | −0,66 € | +2,84 € | +5,34 € |
+| 30 % | 31,37 € | +1,09 € | +5,29 € | +8,29 € |
+| 35 % | 26,89 € | +2,84 € | +7,74 € | +11,24 € |
+| 40 % | 23,52 € | +4,59 € | +10,19 € | +14,19 € |
+
+Ahí el umbral podría bajar a **49 €**. Por eso hace falta consultar esos tramos antes de
+fijar el número definitivo.
+
+## El plan concreto
+
+1. **Umbral de envío gratis: de 35 € a 69 €** (o 49 € si el tramo bajo lo permite).
+2. **El mensaje no es un castigo, es el argumento de venta de los packs.** Un pack de
+   Mirea ya cuesta 69-85 €: *"todos los packs llevan envío gratis"*. Deja de ser una
+   barrera y pasa a ser un motivo para comprar el pack en vez de la crema suelta.
+3. **El producto suelto paga envío real**, con la escalera puesta hoy. Quien quiere una
+   sola crema la tiene, pagando lo que cuesta mandarla.
+4. **La barra del carrito ya está hecha** y apunta al umbral: *"te faltan X € para el
+   envío gratis"*. Solo hay que cambiarle el número.
+5. **Al procesar cada pedido en Korealy, elegir Standard (17 $), nunca Express (36 $).**
+   Express cuesta el doble por llegar cuatro días antes.
+
+## Lo que sigue haciendo falta
+
+1. **Los tramos de 0,2 / 0,4 / 0,6 / 0,8 kg** en la calculadora de Korealy. Decide si el
+   umbral es 49 € o 69 €.
+2. **El margen real de 30-50 productos**, los que de verdad se promocionan. El precio de
+   Korealy está en su app, en dólares. No hacen falta los 7.738: con los que se anuncian
+   basta para saber en qué fila de la tabla estamos.
