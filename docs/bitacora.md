@@ -4,6 +4,44 @@ Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
 
+## 2026-09-23 · Claude · auditoría de colecciones y un descuento que se podía usar sin límite
+
+Revisadas las 113 colecciones y los 7 códigos de descuento. Detalle completo en
+`docs/auditoria-colecciones-descuentos-2026-09-23.md`.
+
+**Lo más serio: `BIENVENIDA10` tenía desactivado "una vez por cliente".** Un 10 % sin
+mínimo de compra que cualquier clienta podía meter en todos sus pedidos, siempre. Se
+anuncia como "10 % en tu primer pedido" y en la práctica era un 10 % de por vida.
+**Corregido**: ahora es un uso por cliente. Llevaba 1 uso, así que no ha habido daño.
+
+**Siete colecciones duplicadas** están publicadas y no las enlaza nada —comprobado
+contra menús, portada, las 20 páginas y los 14 artículos del blog—. Duplican a otra
+colección mucho mayor (`tonicos-y-esencias` 16 vs 814, `champus` 7 vs 234, etc.) y
+compiten con ella en Google.
+
+**Creadas las 7 redirecciones 301** de la URL vieja a la buena. No hacen nada mientras
+la colección siga publicada, así que no rompen nada hoy y entran solas cuando se
+despubliquen.
+
+**Despublicar está bloqueado por la política del MCP** (`publishableUnpublish`), igual
+que el borrado de archivos de tema. Lo tiene que hacer Blanca desde el admin; está el
+paso a paso en el documento.
+
+**No he tocado** las seis colecciones de la estructura antigua (Limpiar, Tratar,
+Hidratar, Proteger, Todo para la cara, Packs y rutinas): son el método Mirea y tiene
+tanto sentido enlazarlas desde la portada como enterrarlas. Esa la decide Blanca.
+
+**Tampoco he desactivado** ninguno de los dos códigos de bienvenida duplicados
+(`BIENVENIDA10` y `MIREA10`, idénticos): uno de los dos puede estar dentro de un correo
+de Klaviyo ya enviado, y desactivarlo sería incumplir algo prometido a una clienta.
+Hay que mirar en Klaviyo cuál entrega el formulario del pie y desactivar el otro.
+
+**Para ChatGPT:** si tocas SEO de colecciones, las siete redirecciones ya existen; no
+crees otras encima. Y las colecciones duplicadas siguen publicadas hasta que Blanca las
+despublique a mano, así que de momento las dos URLs responden.
+
+---
+
 ## 2026-09-23 · Claude · terminada la limpieza de traducciones automáticas (7.738 productos)
 
 Cerrado el bloqueo que impedía cambiar el idioma principal de la tienda a español.
