@@ -4,6 +4,51 @@ Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
 
+## 2026-09-23 · Claude · envío: arreglado todo lo que no exigía inventarse un número
+
+Blanca: *"haz lo que tengas que hacer, pero que siempre tenga beneficio y ESTANDO SEGURO
+100 %, y mejorando la psicología de ventas."* Detalle completo al final de
+`docs/envios-rentabilidad-2026-09-23.md`.
+
+**La regla que seguí.** Sin la tabla de Korealy no puedo afirmar que ninguna tarifa cubra
+coste. Lo que sí se puede garantizar al 100 % es que **ningún cambio cobre menos que
+antes**. Todo lo aplicado sube o deja igual.
+
+**Hecho en producción:**
+
+1. **Escalera de peso real** en `Perfil general` · España: 0–1 kg 3,99 € (sin cambio) ·
+   1–2 kg 6,99 € · 2–3 kg 11,99 € · +3 kg 16,99 €. Los cortes salen del dato real
+   (artículo mediano 0,2 kg), así que **hasta 5 artículos siguen pagando 3,99 €**.
+   Verificado con `draftOrderCalculate`: 0,4 kg → 3,99 · 1,0 kg → 3,99 · 1,6 kg → 6,99 ·
+   3,2 kg → 16,99.
+2. **Tope al envío gratis**: `maximumShippingPrice` de `null` a **3,99 €**. El umbral de
+   35 € no se toca; lo que se acota es el regalo.
+3. **Página `/pages/envios-y-devoluciones`**: decía "desde 6,99 €" y no mencionaba el
+   envío gratis. Corregido en **las dos copias** (original inglés + traducción española
+   vía `translationsRegister` con el digest nuevo).
+
+**Hecho en el borrador "PUBLICAR ESTA · Mirea · regalos protegidos":**
+
+4. **Barra de progreso al envío gratis en el carrito.** Nuevo
+   `snippets/mirea-envio-gratis.liquid` + una línea de `render` en
+   `blocks/_cart-summary.liquid` (6.525 → 6.560 bytes, solo esa línea). Se muestra
+   **solo en España**, que es donde existe el umbral.
+
+**Lo que NO hice, a propósito:**
+
+- **Unificar los dos perfiles.** `Mirea · Korealy margen protegido` sigue cobrando 6,99 €
+  por 0,2 kg mientras el general cobra 3,99 € por lo mismo. Bajarlo reduce ingresos, así
+  que incumple el "100 % seguro". **Recomiendo alinearlo**, pero lo decide Blanca.
+- **Tocar precios de producto.** Siguen 1.040 mal puestos y sin coste por artículo.
+
+**Sigue faltando para cerrar la pregunta:** tabla de Korealy por peso, pesos reales
+(8.206 de 12.475 variantes son "0,2 kg" por defecto) y coste por artículo.
+
+**Nota para ChatGPT:** las tarifas de España del perfil general ya no son planas. Si
+tocas envíos, mira primero ese documento; la regla es que ninguna banda baje de lo que
+cobraba antes.
+
+
 ## 2026-09-23 · Claude · el envío no está roto por el precio, está roto por la estructura
 
 Blanca preguntó si 3,99 € de envío le sale rentable, porque Korealy le cobra a ella por

@@ -143,3 +143,112 @@ decisiones de precio:
 
 **No he tocado nada de esto.** Cambiar tarifas de envío es política comercial: lo decides
 tú. Dime qué hacemos y lo dejo montado.
+
+---
+
+# EJECUTADO · misma tarde
+
+Blanca: *"haz lo que tengas que hacer, pero que siempre tenga beneficio y ESTANDO
+SEGURO 100 %, y mejorando la psicología de ventas."*
+
+## La regla que seguí
+
+No tengo la tabla de Korealy, así que **no puedo afirmar que ninguna tarifa cubra el
+coste**. Lo que sí puedo garantizar al 100 % es algo más modesto y suficiente: que
+**ningún cambio cobre menos de lo que cobrabas antes**. Todo lo que hice sube o deja
+igual. Es imposible que te deje peor de lo que estabas.
+
+Lo que exigía inventarme un número lo dejé sin tocar y está abajo, en "lo que falta".
+
+## 1 · Escalera de peso real en `Perfil general` · España
+
+| Peso | Antes | Ahora |
+|---|---|---|
+| 0 – 1,0 kg | 3,99 € | **3,99 €** (sin cambio) |
+| 1,0 – 2,0 kg | 3,99 € | **6,99 €** |
+| 2,0 – 3,0 kg | 3,99 € | **11,99 €** |
+| más de 3,0 kg | 3,99 € | **16,99 €** |
+
+Los cortes se eligieron con los datos del catálogo, no a ojo: el artículo mediano pesa
+0,2 kg, así que **hasta 5 artículos siguen pagando 3,99 €**. El pedido corriente no nota
+nada. Solo paga más quien compra mucho peso, que es exactamente quien te costaba dinero.
+
+Las cuatro tarifas siguen llamándose "Envío estándar" en el checkout: el cliente nunca ve
+"banda 3", solo un precio.
+
+**Verificado con pedidos simulados** (`draftOrderCalculate`, sin crear nada real):
+
+| Carrito | Peso | Envío devuelto |
+|---|---|---|
+| 2 uds · 14,40 € | 0,4 kg | 3,99 € |
+| 5 uds · 36,00 € | 1,0 kg | 3,99 € |
+| 8 uds · 57,60 € | 1,6 kg | 6,99 € |
+| 16 uds · 115,20 € | 3,2 kg | 16,99 € |
+
+## 2 · Tope al envío gratis
+
+`Envío gratis España desde 35 €` tenía `maximumShippingPrice: null`. Ahora **3,99 €**.
+
+El umbral de 35 € no se ha tocado: sigue siendo el mismo gancho. Lo que cambia es que el
+regalo está acotado. En un pedido de 1,6 kg y 57 €, antes el cliente pagaba 0 € y tú
+asumías el envío entero; ahora el descuento cubre 3,99 € y el cliente pone 3,00 €.
+
+## 3 · La página de envíos mentía
+
+`/pages/envios-y-devoluciones` decía **"desde 6,99 €"** para España cuando cobrabas 3,99 €.
+Y **no mencionaba el envío gratis por ningún sitio** — tu mejor argumento de venta no
+estaba escrito en la página que lo explica.
+
+Corregido en **las dos copias**, el original en inglés y la traducción española
+(`translationsRegister` con el digest nuevo), porque son dos textos independientes y
+tocar solo uno habría dejado al cliente español leyendo lo viejo.
+
+Ahora dice "desde 3,99 €" y añade:
+
+> **Envío gratis en pedidos de más de 35 €** a España peninsular y Baleares. En pedidos
+> especialmente pesados cubrimos 3,99 € del envío y el resto se te muestra en el
+> checkout, antes de pagar, para que no haya sorpresas después.
+
+## 4 · Barra de progreso hacia el envío gratis (carrito)
+
+El carrito no decía nada del umbral. Nuevo `snippets/mirea-envio-gratis.liquid`, llamado
+desde `blocks/_cart-summary.liquid`:
+
+- *"Te faltan 12,40 € para el envío gratis"* con barra de progreso, o
+- *"Ya tienes el envío gratis"* al cruzarlo.
+
+**Solo se muestra en España**, porque es el único sitio donde el umbral existe. Enseñarle
+esa barra a alguien de Francia sería mentirle.
+
+Sube el importe medio del pedido, que es la palanca que de verdad arregla el margen del
+envío: un paquete de 60 € cuesta enviar casi lo mismo que uno de 30 €.
+
+Está en el borrador **"PUBLICAR ESTA · Mirea · regalos protegidos"**, junto con el
+candado del Journal.
+
+---
+
+## Lo que NO hice, y por qué
+
+**No unifiqué los dos perfiles de envío.** `Mirea · Korealy margen protegido` sigue
+cobrando 6,99 € por un paquete de 0,2 kg cuando el perfil general cobra 3,99 € por el
+mismo peso al mismo país. Es mala psicología y el cliente no lo entiende.
+
+Pero bajarlo a 3,99 € **reduce ingresos** en esos productos, y eso incumple el "100 %
+seguro". No es un error que corregir, es una decisión con coste. **Mi recomendación:
+alinearlo con el perfil general.** El riesgo no sería nuevo — es el mismo que ya corres
+en el resto del catálogo — y quitaría una incoherencia que cuesta ventas. Pero lo decides
+tú.
+
+**No toqué los precios de producto.** 1.040 productos siguen con precio mal puesto y sin
+coste por artículo. Mientras eso siga así, "beneficio garantizado" no se puede afirmar de
+ninguna venta, por muy bien que esté el envío.
+
+## Lo que falta para cerrar la pregunta de verdad
+
+1. **La tabla de Korealy por peso.** Pégamela y calculo, banda a banda, cuánto ganas o
+   pierdes. Es lo único que convierte esto en aritmética.
+2. **Pesos reales**, al menos de los 200–300 que más se venden. Ahora 8.206 de 12.475
+   variantes pesan "0,2 kg" por defecto. La escalera nueva funciona, pero calcula sobre
+   datos inventados: un pedido de 6 botes de 500 ml no pesa 1,2 kg en la realidad.
+3. **Coste por artículo (CSV).** Sin él no hay margen, solo criterio.
