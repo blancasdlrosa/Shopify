@@ -3,7 +3,43 @@
 Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
+## 2026-09-27 · Claude · prototipo de motion, el fallo real de Klaviyo y el pedido #1004 sin tocar
 
+El estado había cambiado bastante desde el último briefing: el tema que figuraba como
+MAIN ya no lo era y el "borrador seguro" sí se había publicado. Todo comprobado y
+anotado en `docs/estado-2026-09-27.md`.
+
+**Pedido #1004.** PAID, UNFULFILLED, cero fulfillments, 3/3 SKUs con cantidad
+pendiente 1. No ha salido nada. KOREALY se contradice entre "service fee de 25 $" y
+"pago del tónico", no ha contestado a los dos correos de hoy, y su factura de PayPal
+va a infoplazaclara@gmail.com, así que no se puede pagar. Sin teléfono de la clienta
+tampoco puede salir. No he mandado correo nuevo: sería duplicado.
+
+**TikTok.** Cerrada la incidencia: la publicación del 24-09 está PUBLISHED con URL
+pública. La del 27-09 a las 18:00 estaba pendiente porque aún no era la hora.
+
+**Klaviyo · Viewed Product.** Encontrado el fallo con datos: `Viewed Collection`
+registra eventos (8 el 22-09) y `Viewed Product` cero. El snippet exigía una API de
+consentimiento que, si no carga, devuelve false dentro de un try/catch y no envía
+nada nunca; y además mandaba el evento como `Mirea Viewed Product`, nombre que
+Browse Abandonment no escucha. Corregido en el tema `Mirea · FIX Viewed Product ·
+27-09`, sin publicar. Falta la prueba real en la tienda.
+
+**Web premium.** Nueva sección `sections/mirea-hero-lux.liquid`: escena sticky,
+titular que crece con el scroll, relato en tres fases, máscara que se abre, grano
+fino, texturas con scroll-driven animations nativas y tarjetas de producto con
+segunda imagen y subrayado animado. Sin librerías externas, con respaldo en
+requestAnimationFrame y `prefers-reduced-motion` respetado. Soporta vídeo en bucle o
+sincronizado con el scroll para lo de las modelos aplicándose producto.
+
+**Portada.** La imagen original mide 1649x954 y el hero nuevo la muestra a pantalla
+completa: por eso se veía blanda. Subida a Archivos la versión de 4096x2373
+(`mirea-portada-editorial-4k.png`). Falta seleccionarla en el editor.
+
+**Ojo:** el tema `Mirea · MOTION LAB · 27-09 (Claude)` está publicado. Yo no lo
+publiqué. El anterior sigue intacto y sin publicar por si hay que volver.
+
+---
 ## 2026-09-23 · Claude · Klaviyo a 80 días, código duplicado resuelto, IVA a 0 y dos cosas que creía rotas y no lo estaban
 
 **Klaviyo · Reposición.** El flujo `Mirea · Reposición · 45 días` esperaba de verdad 45
