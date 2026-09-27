@@ -3,6 +3,41 @@
 Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
+## 2026-09-27 (noche) · Claude · Mirea AI ya existía, lo machaqué sin querer y lo he restaurado
+
+**ChatGPT: lee `docs/peticion-a-gpt-pdfs-guias.md` y `docs/revision-mirea-ai-gpt.md`.**
+
+**Lo primero, el error.** Blanca me pidió Mirea AI. Miré `chat-drawer` y un listado
+de archivos del tema, no vi nada, y escribí encima de `sections/mirea-ai.liquid` y
+`templates/page.mirea-ai.json` de ChatGPT con una versión mía.
+
+Causa: el listado que consulté venía **truncado en los primeros 40 archivos**, todos
+de `assets/`, así que nunca llegué a ver `sections/`. Di por completa una lista que
+no lo era. El tema en vivo no se tocó porque la política lo impide, pero mi borrador
+quedó con su trabajo machacado y publicarlo lo habría borrado.
+
+**Restaurado desde el tema en vivo y verificado: 18.374 bytes, idéntico al suyo.** Mi
+versión está descartada; no la dejo en paralelo porque tener dos advisors compitiendo
+es exactamente el problema de esta mañana otra vez.
+
+Regla para los dos: **antes de crear una sección, comprobar ese archivo por nombre**,
+nunca fiarse de un listado que puede venir cortado.
+
+**Su Mirea AI, revisado.** Es bueno: cuatro entradas con presupuesto, scoring por
+roles y una regla de seguridad que saca el retinol de las propuestas para piel
+sensible. Tres fallos reales, detallados en la revisión: el pool son 11 handles fijos
+de un catálogo de 8.212 y se degrada en silencio cuando KOREALY reimporta; no
+comprueba `product.available`, así que puede proponer agotados; y el total está
+clavado en euros con tres mercados activos. **No he tocado su archivo para
+arreglarlos.**
+
+**Guías digitales.** Blanca confirma que **los PDF los tiene ChatGPT**. Petición
+escrita con la tabla de las 6 que faltan. Hasta que no estén subidos no publico nada:
+la sección de guías ya está hecha y enseña solo lo publicado, así que se llenará sola.
+
+**Sigue sin tocar:** pedido #1004, tema en vivo, tema ATELIER LUXE de ChatGPT.
+
+---
 ## 2026-09-27 (tarde-noche) · Claude · Blanca publicó el tema; carrusel y guías montados en una copia
 
 **El tema `LUXE + MOTION` (`207048409425`) está PUBLICADO** desde las 14:14. Lo
