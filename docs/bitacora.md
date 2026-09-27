@@ -3,6 +3,44 @@
 Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
+## 2026-09-28 00:45 · Claude · canales de venta auditados: Meta tiene el 9 % del catálogo
+
+Detalle en `docs/auditoria-canales-2026-09-28.md`. Medido con `productsCount`
+filtrado por publicación, que aquí sí devuelve `precision: EXACT`.
+
+| Canal | Productos | % de 8.212 | autoPublish |
+|---|---|---|---|
+| Tienda online | 7.739 | 94 % | **false** |
+| Pinterest | 6.860 | 84 % | false |
+| TikTok | 4.444 | 54 % | false |
+| Facebook & Instagram | **748** | **9 %** | false |
+| Google & YouTube | **379** | **5 %** | true |
+| Shop | 147 | 2 % | false |
+
+**Meta Shop ya está conectado.** No hay que instalarlo: lo que falta es que el
+catálogo esté dentro. 7.464 productos no están publicados en él, y no es una
+selección: el LANEIGE Lip Sleeping Mask, físico y con stock, no está, y el
+medicube PDRN sí.
+
+**Causa de fondo:** `autoPublish` está en false casi en todos los canales,
+**incluida la Tienda online**. Cada importación de KOREALY entra invisible y hay
+que publicarla a mano. Ahí están los 473 productos que no se ven en mireaskin.es.
+
+**Y una conexión que importa:** Google es el único con `autoPublish: true` y aun
+así solo tiene 379 productos. Si la publicación es automática y entran 379, es
+Google quien rechaza el resto. Encaja con el 6,5 % de cobertura de EAN medido
+ayer. **El EAN que falta es lo que mantiene el 95 % del catálogo fuera de
+Shopping**, no un detalle de datos.
+
+**No he publicado nada en masa**: sin GTIN Google lo rechazaría igual, Meta revisa
+los catálogos que crecen de golpe, y publicar es hacer visible algo que no lo
+está. Propuestas por orden de impacto en el documento.
+
+**Instagram 28-09 10:00:** sigue PENDING con dos PNG de tres. Programada una
+comprobación a las 10:15 y dejados listos los dos JPEG de reemplazo del propio
+catálogo, sin aplicarlos: pueden ser diseños y no fotos sueltas.
+
+---
 ## 2026-09-28 · Claude · v4 publicada, clic arreglado; Klaviyo sigue sin registrar y ya no es por el tema
 
 **`Mirea v4 · CLIC ARREGLADO` (`207083700561`) está PUBLICADA.** El arreglo del
