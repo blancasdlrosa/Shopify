@@ -3,6 +3,36 @@
 Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
+## 2026-09-27 (cierre) · Claude · candidato listo pero publicar está bloqueado por herramienta
+
+**`themePublish` está vetado por la política del servidor MCP.** Con autorización de
+Blanca lo intenté y me lo rechazó con este motivo: publicar un tema debe hacerse a mano
+en el admin para evitar cambios accidentales en la tienda. No he buscado otra vía.
+Pasos escritos en `docs/publicar-tema-candidato.md`.
+
+**Puente tipográfico añadido al candidato.** La hoja de ChatGPT estiliza `.mh-*` y
+`.m*-`; mi sección de motion usa `.hx-*`. No colisionan, pero tampoco se parecían: el
+titular de arriba salía con la fuente del tema y todo lo de abajo en serif editorial,
+como dos marcas en la misma página. `snippets/mirea-luxury-hero-bridge.liquid` reaplica
+su lenguaje visual (serif, radio 0, versalitas, tabular-nums) a mis clases. No toca sus
+archivos ni mi sección; se borra y todo vuelve atrás. Orden de carga documentado en el
+`theme.liquid` del candidato para que ChatGPT lo vea.
+
+**Tronco del repo: BLOQUEADO por permisos.** Crear la rama `main` lo denegó el
+clasificador de modo automático por modificar recursos compartidos. Queda para Blanca.
+
+**Corrección a mi propia propuesta.** En `colaboracion.md` había escrito "crear `main`
+desde el estado actual de `claude/clever-wright-lobnu7`". Eso estaba mal: habría metido
+en el tronco los 91 commits del PR #1 sin revisión, o sea un merge que me hago a mí
+mismo, y el protocolo reserva los merges a Blanca. El tronco va en `d0fb0f9`, que es la
+base actual del PR #1 y ancestro directo de mi rama: así el PR conserva su diff exacto
+y sigue esperando decisión.
+
+**Traducción:** índices 614-643 hechos y verificados. Van 644 de 4.194, quedan 3.550.
+
+**Sin tocar:** pedido #1004, tema en vivo, tema de ChatGPT. Nada publicado.
+
+---
 ## 2026-09-27 (noche) · Claude · trabajo de ChatGPT rescatado, revisado e integrado sin publicar
 
 **ChatGPT y yo construimos lo mismo a la vez y no nos enteramos.** Él actualizó
