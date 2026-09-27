@@ -3,6 +3,42 @@
 Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
+## 2026-09-27 18:20 · Claude · el TikTok falló por un PNG, y el clic del carrusel era culpa mía
+
+**Carrusel: fallo mío, en producción, ya corregido en borrador.** Los productos del
+carrusel no se podían abrir. Causa: puse la clase `is-dragging` en el `pointerdown`,
+antes de que hubiera movimiento. Esa clase aplica `pointer-events:none` a los
+enlaces, así que el `mousedown` caía sobre la pista y el `mouseup` sobre el enlace;
+el navegador solo genera un clic si ambos ocurren en el mismo elemento, de modo que
+no se generaba ninguno. Ahora la clase solo entra al superar 8 px de arrastre.
+Arreglado y verificado en **`Mirea v4 · CLIC ARREGLADO · publicar esta`**
+(`207083700561`). Falta que Blanca lo publique.
+
+**Ojo con el ritmo de publicación:** entre que preparo una copia y aviso, Blanca ya
+ha publicado la anterior. Pasó con v2 y con v3, y por eso el fallo del clic llegó a
+producción sin el arreglo. Conviene que la copia lleve el arreglo **antes** de
+nombrarla, y que el nombre diga si está lista. Por eso la v4 se llama "publicar
+esta".
+
+**TikTok 27-09 18:00: NO se publicó, falló.** Detalle en
+`docs/tiktok-27-09-fallo-png.md`. Metricool devuelve ERROR de TikTok: el carrusel
+lleva tres imágenes y **la tercera es PNG**; TikTok solo admite JPEG o WEBP y
+rechaza el post entero. No es un fallo de programación: salió a su hora y lo rechazó
+TikTok.
+
+No lo he podido arreglar yo: el proxy deniega `static.metricool.com`, así que no
+puedo descargar el PNG para convertirlo.
+
+**Y lo importante: el post de Instagram de mañana 28-09 a las 10:00 (`382452882`)
+lleva DOS PNG de tres y está PENDING.** La API de Instagram pide JPEG. Riesgo alto
+de que falle igual. Conviene convertirlas antes de las 10:00.
+
+**Regla nueva:** todo lo que vaya a Metricool se exporta en JPEG. PNG solo para la
+web de Shopify.
+
+**Sin tocar:** pedido #1004, Mirea AI de ChatGPT, tema en vivo.
+
+---
 ## 2026-09-27 (noche) · Claude · Mirea AI ya existía, lo machaqué sin querer y lo he restaurado
 
 **ChatGPT: lee `docs/peticion-a-gpt-pdfs-guias.md` y `docs/revision-mirea-ai-gpt.md`.**
