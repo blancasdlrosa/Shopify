@@ -3,6 +3,52 @@
 Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
+## 2026-09-27 (tarde) · Claude · traducción retomada, un lote desplazado y reparado, idioma principal en inglés
+
+**Idioma principal de la tienda: está en INGLÉS.** `shopLocales` devuelve
+`en` como `primary: true` y `es` como secundaria. Es la causa de raíz de que las
+fichas salieran en inglés. No se puede cambiar por API: `ShopLocaleInput` solo acepta
+`published` y `marketWebPresenceIds`, así que el cambio es manual en el admin
+(Configuración → Idiomas) y además es un cambio visible, de los que decide Blanca.
+Mientras siga en inglés, la traducción se está escribiendo en el contenido base del
+producto, así que se ve bien en los dos casos.
+
+**Mercados.** Los tres mercados están activos: España (principal), Unión Europea con
+26 países (Austria, Croacia y Eslovenia incluidos) e International con 30. La
+internacionalización a nivel de mercado ya está puesta; lo que falta es precio y
+envío por mercado, no el mercado.
+
+**Traducción de descripciones.** El punto de guardado decía 494 y era falso:
+comprobado contra la tienda, el índice 523 ya estaba en español y el 524 no. Corregido
+a 524 y traducidos los índices 524-583. Quedan 3.610.
+
+**Incidente, y cómo se reparó.** El lote 554-583 lo escribí a mano y me salté un
+índice, así que 28 productos recibieron la descripción del producto siguiente. La API
+devolvió `userErrors: []` en los 30, porque escribir el texto equivocado en el producto
+correcto es una operación válida para Shopify: el error no lo detecta la herramienta,
+lo detecta releer. Reparado el mismo día y verificado producto a producto.
+
+Para que no vuelva a pasar: `docs/respaldos/gen-lote.py` genera el GraphQL del lote
+resolviendo el ID desde la cola y **se niega a emitir nada** si el texto no cuadra con
+el título. Los lotes no se escriben a mano a partir de ahora.
+
+**Pedido #1004.** Recomprobado: PAID, UNFULFILLED, `fulfillments: []`, los 3 SKUs con
+`remainingQuantity: 1`, FulfillmentOrder OPEN + UNSUBMITTED, sin teléfono ni en el
+cliente ni en la dirección. Sigue retenido como toca. No he tocado nada ni mandado
+ningún correo.
+
+**Higgsfield / vídeo.** BLOQUEADO por plan, no por créditos: el clip de 5 s cuesta 10
+créditos, pero Kling 3.0 exige plan basic o superior y la cuenta no tiene plan (el
+trial venció el 12-09). Tampoco hay recargas sueltas disponibles para este workspace.
+Presentados los precios reales (PLUS 49 €/mes o 39 €/mes anual; ULTRA 129/99 €) sin
+contratar nada. Mi recomendación a Blanca: no pagarlo ahora, porque el hero animado ya
+funciona con CSS puro y no depende de vídeo.
+
+**Qué necesito de ChatGPT:** nada bloqueante. Si tocas fichas de producto, usa
+`gen-lote.py` o un método equivalente que verifique el par ID-título; escribir lotes
+de descripciones a mano ya ha costado un desplazamiento de 28 productos.
+
+---
 ## 2026-09-27 · Claude · prototipo de motion, el fallo real de Klaviyo y el pedido #1004 sin tocar
 
 El estado había cambiado bastante desde el último briefing: el tema que figuraba como

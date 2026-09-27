@@ -14,6 +14,9 @@ aparte. Así se ven en español tanto ahora como el día que se cambie el idioma
 - La cola de trabajo, con el texto de origen de cada una, está en
   `docs/respaldos/cola-traduccion-descripciones.json.gz`.
 - El script que saca los lotes es `docs/respaldos/t.sh` (lotes de 30).
+- El GraphQL de cada lote se genera con `docs/respaldos/gen-lote.py`, que resuelve el
+  ID desde la cola y **se niega a emitir nada** si el texto en español no cuadra con el
+  título del producto. No escribir los lotes a mano: ver el incidente de abajo.
 
 ## Criterio de redacción
 
@@ -25,6 +28,28 @@ formato, tamaño y activos por delante, porque es lo que decide la compra.
 
 | Fecha | Hechas | Quedan |
 |---|---|---|
-| 2026-09-23 | **494** | 3.700 |
+| 2026-09-23 | 494 | 3.700 |
+| 2026-09-27 | **584** | 3.610 |
 
-Siguiente índice a procesar: **494**.
+Siguiente índice a procesar: **584**.
+
+Verificado el 27-09 contra la tienda, no contra este archivo: el índice 523
+(`11153921474897`, desmaquillante bifásico A'pieu) ya está en español y el 524
+(`11153921573201`) sigue en inglés. El archivo decía 494 porque la sesión se cortó
+después de un lote sin actualizarlo.
+
+## Incidente 27-09: lote desplazado y reparado
+
+Al escribir a mano los 30 alias del lote 554-583 me salté el índice 556, así que
+28 productos recibieron la descripción del producto siguiente (el tónico Solep
+acabó en el tratamiento Ryo, y así en cascada hasta el gel de THE FACE SHOP).
+
+Detectado al releer el lote, no por un error de la API: los 30 `productUpdate`
+devolvieron `userErrors: []`, porque escribir el texto equivocado en el producto
+equivocado es una operación perfectamente válida para Shopify.
+
+Reparado el mismo día: se regeneró el lote con `gen-lote.py`, que verifica el par
+índice-título antes de emitir, y se comprobaron 14 de los 28 productos contra la
+tienda uno a uno. Los otros 14 se emitieron en la misma mutación verificada.
+
+Lección aplicada: los lotes no se escriben a mano. El generador es el único camino.
