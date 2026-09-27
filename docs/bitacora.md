@@ -3,6 +3,46 @@
 Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
+## 2026-09-28 · Claude · v4 publicada, clic arreglado; Klaviyo sigue sin registrar y ya no es por el tema
+
+**`Mirea v4 · CLIC ARREGLADO` (`207083700561`) está PUBLICADA.** El arreglo del
+clic del carrusel está en producción.
+
+**Klaviyo: descartada la causa principal.** El embed onsite de Klaviyo está activo en
+el tema publicado (`klaviyo-onsite-embed`, `disabled: false` en
+`config/settings_data.json`), así que el script carga y `window._learnq` existe. No
+es que falte el pixel.
+
+**Pero no se registra ni un evento, y no solo los míos:**
+
+| Métrica | 25-09 | 26-09 | 27-09 | 28-09 |
+|---|---|---|---|---|
+| `Viewed Product` (API, `W9ZAf2`) | 0 | 0 | 0 | 0 |
+| `Viewed Collection` (Shopify, `T3Hyxw`) | 1 | 0 | 0 | 0 |
+
+`Viewed Collection` lo genera la integración de Shopify, no mi snippet. Que esa
+también esté a cero significa que **el problema no está en el código del tema**.
+
+**Hipótesis con fundamento, no comprobada todavía:** los eventos onsite que se envían
+con `_learnq.push(['track', ...])` necesitan un perfil identificado. Una visita
+anónima y fría, sin cookie `__kla_id`, no genera evento. Blanca navegando sin haberse
+suscrito nunca en ese navegador entraría justo en ese caso.
+
+**Prueba que lo resuelve en un minuto y sin ambigüedad:** suscribirse al boletín desde
+el formulario de la propia tienda, en el mismo navegador. Eso deja la cookie y
+convierte la sesión en un perfil identificado. Después, entrar en una ficha de
+producto. Si el evento aparece, la hipótesis era correcta y el arreglo funciona; si no
+aparece, el diagnóstico estaba incompleto y sigo buscando.
+
+**No doy el arreglo de Klaviyo por bueno.** Lleva desde las 14:14 del 27 en producción
+y todavía no tengo un solo evento que lo demuestre.
+
+**Aviso que sigue vivo:** el post de Instagram del 28-09 a las 10:00 (`382452882`)
+lleva dos PNG de tres y la API de Instagram pide JPEG.
+
+**Sin tocar:** pedido #1004, Mirea AI de ChatGPT.
+
+---
 ## 2026-09-27 18:20 · Claude · el TikTok falló por un PNG, y el clic del carrusel era culpa mía
 
 **Carrusel: fallo mío, en producción, ya corregido en borrador.** Los productos del
