@@ -3,6 +3,49 @@
 Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
+## 2026-09-27 (tarde-noche) · Claude · Blanca publicó el tema; carrusel y guías montados en una copia
+
+**El tema `LUXE + MOTION` (`207048409425`) está PUBLICADO** desde las 14:14. Lo
+publicó Blanca. Me enteré porque `themeFilesUpsert` empezó a rechazarme por escribir
+contra el tema en vivo. Trabajo nuevo en `Mirea · LUXE v2 · carrusel + guías`
+(`207050211665`), sin publicar.
+
+**Dos correcciones de diseño pedidas por Blanca sobre la portada en vivo:**
+
+1. *"Esos 4 tan pegados, qué sentido tiene."* Tenía razón y el motivo era peor de lo
+   que parecía: esos 4 productos salían del ajuste `coleccion: novedades` de mi
+   sección de hero, **y más abajo había otra sección "Novedades" con los mismos
+   productos**. Se veía lo mismo dos veces, y arriba sin titular ni contexto.
+   Quitado el ajuste del hero, creada `sections/mirea-carrusel-luxe.liquid`
+   (scroll-snap nativo, arrastre con ratón, flechas, barra de progreso, sin
+   librerías) y desactivada la rejilla duplicada de abajo. La rejilla no está
+   borrada: `disabled: true`, se recupera con un clic.
+
+2. *"Repetir la misma foto que arriba me chirría."* Literal: el hero clásico usaba el
+   mismo archivo `531B27F0-...png` que el hero de motion. Hero clásico puesto en
+   `disabled: true` (no borrado, conserva todos sus ajustes) y en su hueco
+   `sections/mirea-guias-luxe.liquid`: las portadas de las guías en perspectiva con
+   lomo, que se enderezan al entrar en pantalla. Scroll-driven nativo con respaldo en
+   IntersectionObserver y `prefers-reduced-motion` respetado.
+
+**Guías digitales: bloqueadas, y no por configuración.** Detalle en
+`docs/guias-digitales-estado.md`. Existen 7 guías ES + 7 EN + 6 packs, con portada,
+precio y la app Digital Products conectada. Pero **6 de las 7 devuelven `files: []`:
+no tienen PDF**. Solo "Retinoides sin errores" lo tiene (137 KB) y es la única
+publicada. No las he publicado: sería cobrar por un archivo inexistente. Buscados
+también en Drive, no están.
+
+**Klaviyo, verificación pendiente todavía.** El arreglo lleva en producción desde las
+14:14, pero `Viewed Product` (API, `W9ZAf2`) marca 0 eventos hoy. No prueba nada:
+`Viewed Collection` también marca 0 hoy y solo 1 evento el 25-09. **No hay tráfico
+que medir.** Hace falta que alguien entre en una ficha de producto. No doy el arreglo
+por bueno hasta ver el evento.
+
+**Ojo para quien siga:** hay dos métricas llamadas `Viewed Product` en Klaviyo,
+`RpJYkc` (integración Shopify) y `W9ZAf2` (integración API). El snippet onsite escribe
+en la de API. Al montar Browse Abandonment hay que elegir la correcta.
+
+---
 ## 2026-09-27 (cierre) · Claude · candidato listo pero publicar está bloqueado por herramienta
 
 **`themePublish` está vetado por la política del servidor MCP.** Con autorización de
