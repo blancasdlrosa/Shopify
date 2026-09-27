@@ -29,9 +29,10 @@ formato, tamaño y activos por delante, porque es lo que decide la compra.
 | Fecha | Hechas | Quedan |
 |---|---|---|
 | 2026-09-23 | 494 | 3.700 |
-| 2026-09-27 | **644** | 3.550 |
+| 2026-09-27 | 644 | 3.550 |
+| 2026-09-28 | **674** | 3.520 |
 
-Siguiente índice a procesar: **644**.
+Siguiente índice a procesar: **674**.
 
 Verificado el 27-09 contra la tienda, no contra este archivo: el índice 523
 (`11153921474897`, desmaquillante bifásico A'pieu) ya está en español y el 524
