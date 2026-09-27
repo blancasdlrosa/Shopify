@@ -3,6 +3,57 @@
 Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
+## 2026-09-27 (noche) · Claude · trabajo de ChatGPT rescatado, revisado e integrado sin publicar
+
+**ChatGPT y yo construimos lo mismo a la vez y no nos enteramos.** Él actualizó
+`ATELIER LUXE` (`206799831377`) a las 13:08; yo publiqué `MOTION LAB` a las 13:15. El
+tema que quedó en vivo es el mío y **no llevaba ninguno de sus dos snippets**: 18 KB de
+su trabajo colgando de un tema sin publicar que nadie iba a abrir.
+
+**Qué había construido él, exactamente.** Su tema es una copia del tema base del 23-09
+con un solo archivo tocado el 27-09: `layout/theme.liquid`, al que añadió dos `render`
+condicionales por plantilla. Detrás hay dos snippets suyos:
+`mirea-luxury-home.liquid` (10.767 B) y `mirea-luxury-global.liquid` (7.464 B). Es una
+capa de override en CSS puro, sin tocar markup, acotada con
+`#MainContent[data-template="..."]`: paleta marfil/piedra, serif de display, radio a
+cero, filetes de 1 px, micro-etiquetas en versalitas, precios con `tabular-nums`.
+
+**Revisión completa en `docs/revision-atelier-luxe-gpt.md`.** Resumen: el enfoque es
+bueno y en un punto mejor que el mío, porque es reversible borrando dos líneas. Y tiene
+**un fallo real de bastante impacto**: su `--ml-serif` es
+`"Iowan Old Style","Baskerville","Times New Roman",serif`, y las dos primeras solo
+existen en macOS/iOS. En Windows y Android —la mayoría del tráfico en España— todos los
+titulares caen a Times New Roman y la identidad tipográfica se evapora.
+
+**No he editado sus archivos.** El arreglo va en un tercer snippet mío,
+`mirea-luxury-fonts.liquid`, que solo carga Cormorant Garamond y redefine la variable.
+Se borra ese archivo y su cascada original vuelve intacta.
+
+**Tema candidato nuevo: `Mirea · LUXE + MOTION · Claude+GPT · 27-09` (`207048409425`),
+SIN PUBLICAR.** Duplicado del tema en vivo más: sus dos snippets copiados verbatim
+(verificado: 10.767 y 7.464 B, byte a byte idénticos), mi arreglo de fuente, mi sección
+de motion y **el snippet de Klaviyo corregido**.
+
+Ese último punto importa: el tema en vivo lleva el Klaviyo viejo (4.302 B, el que no
+dispara `Viewed Product` nunca) y el arreglo estaba en un tema aparte. Publicar uno
+costaba perder el otro. Ahora hay **un solo candidato con las dos cosas**.
+
+Ni el tema en vivo ni el de ChatGPT han sido modificados. Nada publicado.
+
+**Dos decisiones abiertas que no son mías:**
+- Hay **dos héroes apilados** en el candidato: mi sección de motion encima de su
+  `.mh-hero`. No colisionan de clases (`.hx-*` contra `.mh-*`) pero sobra uno visualmente.
+  Quitar uno es quitar algo visible: lo decide Blanca.
+- El repo **no tiene rama troncal**: solo dos ramas `claude/`, ni `main` ni `master`, y
+  el PR #1 apunta a otra rama de trabajo. El flujo de `colaboracion.md` no funciona sin
+  tronco. Propuesto, no hecho.
+
+**Qué necesito de ChatGPT:** que use el repo. No hay ninguna rama `gpt/` ni ningún PR
+suyo; todo su trabajo vive solo dentro de Shopify, y por eso hoy hemos duplicado
+esfuerzo. Con una línea en esta bitácora antes de empezar se habría evitado. Propuesta
+de convención de temas añadida al final de `docs/colaboracion.md`.
+
+---
 ## 2026-09-27 (tarde) · Claude · traducción retomada, un lote desplazado y reparado, idioma principal en inglés
 
 **Idioma principal de la tienda: está en INGLÉS.** `shopLocales` devuelve
