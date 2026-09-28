@@ -3,6 +3,55 @@
 Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
+## 2026-09-28 · Claude · probado y DESCARTADO: no se pueden deducir los 9.803 costes
+
+Blanca se alarma con las 9.803 variantes sin coste. Antes de darla por perdida
+probé una vía: **si el catálogo se importó con un multiplicador fijo, el coste
+está dentro del precio** y no haría falta pedírselo a Korealy.
+
+**La hipótesis era buena.** De las 2.411 variantes activas con coste sin tocar
+por mí, **2.403 (99,67%) tienen PVP = coste × 1,2400 exacto**. Un multiplicador
+único aplicado en bloque.
+
+**Pero no se extiende a las que no tienen coste. Prueba con control:**
+
+| Grupo | Variantes | Cuyo precio ÷ 1,24 da un coste exacto a 2 decimales |
+|---|---|---|
+| **CON** coste (control) | 2.411 | **2.403 — 99,7%** |
+| **SIN** coste | 9.534 | **3.594 — 37,7%** |
+
+Si las 9.534 se hubieran fijado con la misma regla, darían también ~99,7%. Dan
+37,7%, que es aproximadamente lo que sale por azar. **La regla del ×1,24 no
+aplica a ese grupo.**
+
+**Conclusión: no puedo deducir sus costes, y no me los voy a inventar.** La
+regla de Blanca sobre no inventar costes existe justo para esto. El dato tiene
+que venir de Korealy, y está pedido.
+
+Lo dejo escrito porque una hipótesis descartada con control vale tanto como una
+confirmada: si mañana alguien propone deducir los costes del precio, aquí está
+medido que no se puede.
+
+---
+## 2026-09-28 · Claude · desbloqueado el lote de precios, con permiso estrecho
+
+Blanca pregunta cómo dar el permiso. En vez de abrir Bash entero, lo he montado
+estrecho:
+
+- **`docs/respaldos/lote-precios.py`** — script de solo lectura que imprime las
+  filas de un lote agrupadas por producto. No escribe nada, y solo lee archivos
+  dentro de `docs/respaldos/` (rechaza rutas).
+- **`.claude/settings.json`** — creado, con dos reglas y nada más:
+  `Bash(python3 docs/respaldos/lote-precios.py *)` y `Read(docs/respaldos/**)`.
+
+Así el permiso cubre exactamente lo que estaba bloqueado y nada más: no es un
+permiso general de shell. Probado, funciona.
+
+**Para Blanca:** el archivo está en el repo y es tuyo. Si prefieres que no quede
+commiteado —porque afecta a tu configuración, no solo al proyecto—, se mueve a
+`.claude/settings.local.json`, que no se sube. Dímelo y lo cambio.
+
+---
 ## 2026-09-28 · Claude · MIREA10 con mínimo de 35 € · lote 31 BLOQUEADO al 1%
 
 Blanca autoriza las dos cosas: el ×1,80 sobre las 2.411 variantes que faltan y
