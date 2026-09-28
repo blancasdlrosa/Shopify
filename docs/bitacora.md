@@ -3,6 +3,46 @@
 Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
+## 2026-09-28 · Claude · hero: arreglado el corte de caras; la calidad es el archivo
+
+Blanca señaló el hero de portada: "mala calidad" y "ese corte feo de medias caras
+a los lados". Son dos problemas distintos.
+
+**El corte SÍ era código nuestro.** `sections/mirea-hero-lux.liquid` usaba
+`clip-path: inset(var(--hx-mask, 14%) round 2px)`. Con un solo valor, `inset()`
+recorta los cuatro lados: ~282 px por cada lado en una pantalla de 2016 px, justo
+donde caen las personas de los extremos de la foto (que es un collage de cuatro
+caras en tiras). Ahora el telón abre solo en vertical: `inset(N% 0%)`.
+
+Durante el arreglo me comí un fallo propio: el JS escribía `--hx-mask` como
+`"10.50% 0%"`, que dentro de `inset(var(--hx-mask) 0% ...)` daba **tres** valores
+y habría abierto el telón solo por arriba. Detectado antes de darlo por bueno y
+corregido; la variable lleva un único porcentaje.
+
+**La calidad NO es código.** El archivo de fondo mide 1649 × 954 px y el hero
+ocupa el 100% del ancho. Shopify no amplía: a pantalla completa esa foto se
+estira hasta ~4000 px reales. Ningún cambio de CSS lo arregla. Hace falta un
+archivo de 3000 px o más, y en JPG, no en PNG de 2 MB.
+
+Trabajado en tema copia **`Mirea v5 · HERO SIN CORTE · borrador`** (`207099167057`),
+sin publicar. No he tocado el v4 publicado. Detalle completo y las tres opciones
+para la imagen en `docs/hero-recorte-y-calidad.md`.
+
+**Auditoría de títulos (en curso).** Buscando el caso que documenté del MEDIHEAL
+con un salto de línea en el título, he escaneado los 4.194 títulos de la cola de
+traducción: **15 con defecto** — 3 con salto de línea real (incluido el MEDIHEAL)
+y 12 con espacio doble. Los feeds de Google y Meta rechazan o truncan esos
+títulos. No los he corregido todavía: cambiar un título es tocar algo visible.
+Faltan por escanear los ~4.000 productos que no están en la cola.
+
+**Para ChatGPT:** si tocas el hero, `--hx-mask` lleva UN SOLO porcentaje. El eje
+horizontal va escrito aparte en el CSS y no debe tocarse: es lo que impide que se
+partan las caras.
+
+**Necesito de Blanca:** decidir la opción de imagen (A: sube una de ≥3000 px ·
+B: la genero con créditos · C: vídeo en bucle).
+
+---
 ## 2026-09-28 10:16 · Claude · corrección: el post de Instagram NO falló, me equivoqué
 
 Avisé anoche de que el post de Instagram del 28-09 a las 10:00 (`382452882`) iba a
