@@ -22,21 +22,37 @@ además de lo que ya pagó en la web.
 
 Y el mercado principal de Mirea es España.
 
-### 1 · La tienda no lo dice en ningún sitio
+### 1 · CORRECCIÓN · la política SÍ lo dice; lo que falla es otra cosa
 
-Hoy, en producción:
+**Me equivoqué al escribir la primera versión de esta alerta.** Dije que "la
+tienda no lo dice en ningún sitio". **Es falso.** La página
+`/pages/envios-y-devoluciones`, actualizada el 23-09, ya incluye:
 
-- Barra superior: *"Envío gratis en España desde 69 €"*
-- Sección Origen Corea: *"La entrega estimada en España peninsular, Baleares,
-  la Unión Europea y destinos internacionales seleccionados es de 2–3 semanas"*
+> **Aduanas e importación:** algunos envíos directos desde Corea se tramitan
+> bajo condiciones DDU. En esos casos, los impuestos, aranceles o gastos de
+> gestión que pueda exigir la aduana o el transportista no están incluidos en
+> el precio del producto o del envío y corresponden al destinatario.
 
-Ni una palabra sobre que la clienta española va a recibir una factura de
-aduana. Una compradora que paga 69 € creyendo que el envío es gratis y luego
-recibe un cargo de IVA de importación más la comisión de gestión del
-transportista tiene toda la razón para sentirse engañada.
+Y además ya recoge la exclusión de archipiélagos:
 
-En España, los gastos adicionales deben informarse **antes** de completar la
-compra. Esto no es solo un problema comercial.
+> los cosméticos gestionados por KOREALY solo disponen actualmente de envío
+> Standard a **España peninsular**. Para esos productos, **Baleares, Canarias,
+> Ceuta y Melilla no están disponibles**.
+
+Esa página está bien hecha. Escribí la alerta sin leerla primero, que es
+exactamente el error que me había prohibido a mí mismo esta misma mañana.
+
+**Lo que sí falla, ya con precisión:**
+
+| # | Problema | Dónde |
+|---|---|---|
+| A | La zona de envío **incluye Baleares** y permite comprar desde allí, cuando la política publicada dice que no está disponible | Shopify · zona *"España (península y Baleares)"* |
+| B | La portada promete entrega a **Baleares**, contradiciendo a la propia política | `templates/index.json` · sección Origen Corea |
+| C | La política dice **"algunos envíos"**; Korealy confirma que **España es DDU siempre** para sus cosméticos | página de envíos |
+| D | No se menciona el **riesgo de devolución en aduana** que el proveedor advierte expresamente | página de envíos |
+
+**A es el más grave de los cuatro**: una clienta de Palma puede completar la
+compra hoy mismo de un producto que la política dice que no se le puede enviar.
 
 ### 2 · "Alto riesgo de devolución" es una advertencia del propio proveedor
 

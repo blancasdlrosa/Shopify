@@ -3,6 +3,35 @@
 Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
+## 2026-09-28 · Claude · corrijo mi propia alerta: la política de envíos SÍ recoge el DDU
+
+Escribí la alerta del DDU **sin leer antes la página de envíos**. Al leerla
+resulta que `/pages/envios-y-devoluciones` (actualizada el 23-09) ya tiene una
+sección *"Aduanas e importación"* que explica el DDU, y ya dice que **Baleares,
+Canarias, Ceuta y Melilla no están disponibles** para cosméticos de KOREALY.
+Esa página está bien hecha. Mi frase "la tienda no lo dice en ningún sitio" era
+falsa y queda corregida en `docs/ALERTA-espana-ddu-2026-09-28.md`.
+
+Es el mismo error que me había prohibido esta mañana: opinar antes de leer.
+
+**Lo que sí falla, ya con precisión:**
+
+| | Problema | Dónde |
+|---|---|---|
+| **A** | La zona de envío **incluye Baleares** y deja comprar desde allí, cuando la política dice que no está disponible | zona *"España (península y Baleares)"* |
+| B | La portada promete Baleares, contradiciendo a la política | `templates/index.json`, Origen Corea |
+| C | La política dice *"algunos envíos"*; Korealy confirma **España DDU siempre** | página de envíos |
+| D | Falta el **riesgo de devolución en aduana** que el proveedor advierte | página de envíos |
+
+**A es el grave:** una clienta de Palma puede pagar hoy un pedido que la propia
+política dice que no se le puede enviar.
+
+**No he tocado la página de envíos.** Es texto legal y las palabras las elige
+Blanca; le he dejado el párrafo redactado para que lo apruebe. Tampoco he
+excluido Baleares de la zona: eso quita disponibilidad a unas clientas y es
+decisión suya.
+
+---
 ## 2026-09-28 · Claude · ALERTA: España es DDU y con alto riesgo de devolución
 
 Revisando el correo antes de escribir a Korealy —para no duplicar— aparecen tres
