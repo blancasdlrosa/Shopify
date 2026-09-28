@@ -30,6 +30,7 @@ formato, tamaño y activos por delante, porque es lo que decide la compra.
 |---|---|---|
 | 28-09-2026 | **728** | 3.466 |
 | 28-09-2026 | **750** | 3.444 |
+| 28-09-2026 | **770** | 3.424 |
 | 2026-09-23 | 494 | 3.700 |
 | 2026-09-27 | 644 | 3.550 |
 | 2026-09-28 | 674 | 3.520 |
@@ -112,3 +113,24 @@ que tenía. Lo arreglé esta misma mañana en el lote de títulos defectuosos.
 comprobados uno a uno: los dos limpiadores EUNYUL (limón / aloe) y los dos
 solares YUNJAC (*Daily Lightweight* / *Ultra Comfort Waterproof*). Sin
 desplazamiento.
+
+## 28-09-2026 · lote 750-769
+
+20 fichas más, verificadas releyendo de la tienda.
+
+**Criterio nuevo sobre reclamos, y conviene que quede fijado.** El original de
+`O HUI Prime Advancer` (#769) dice *"skin that looks 7 years younger"*. **No se
+ha publicado esa cifra.** En la UE, el Reglamento 655/2013 exige que los
+reclamos cosméticos estén respaldados por evidencia documentada, y no la
+tenemos. La ficha describe el producto y menciona su funcionalidad antiarrugas
+reconocida en Corea, que sí es una categoría regulatoria real allí.
+
+Traducir fielmente lo que dice el fabricante **no incluye republicar cifras de
+eficacia sin respaldo**. El generador lleva ahora un chequeo que rechaza el lote
+si detecta patrones tipo *"N años más joven"*.
+
+**Duplicado encontrado en el catálogo:** `O HUI AGE RECOVERY EYE CREAM 25ml`
+(`11163761344849`) y `O HUI Age Recovery Eye Cream 25ml` (`11163761738065`) son
+el mismo producto con dos fichas distintas. Se han traducido las dos porque
+ambas están activas, pero **conviene decidir qué se hace con los duplicados**:
+compiten entre sí en buscador y reparten las señales de SEO. No los he tocado.
