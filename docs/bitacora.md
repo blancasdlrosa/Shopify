@@ -3,6 +3,38 @@
 Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
+## 2026-09-28 · Claude · EE. UU.: dos barreras que no estaban en el radar
+
+Blanca pregunta si conviene invertir en vender a EE. UU. Análisis en
+`docs/eeuu-analisis-preliminar.md`. **No se ha activado ni cambiado nada.**
+
+**Barrera 1 — se acabó la exención de 800 $.** EE. UU. la eliminó el 29-08-2025:
+hoy **todos** los paquetes pagan arancel y exigen entrada aduanera formal. El DDP
+de Korealy pasa de conveniente a imprescindible, y su cotización para EE. UU.
+será más alta que cualquier referencia anterior a 2025.
+
+**Barrera 2 — los solares.** En EE. UU. el protector solar es **medicamento OTC**
+y los filtros UV coreanos en su mayoría no están aprobados por la FDA. Medido
+sobre el catálogo activo: **804 productos con SPF, el 10,4%**. Más 285
+suplementos orales (3,7%) que caen bajo el régimen de alimentos de la FDA.
+Marcas más afectadas: d'Alba (24), TIRTIR (22), O HUI (21).
+
+**Ventaja real:** EE. UU. no tiene IVA, y el impuesto estatal solo obliga al
+superar los umbrales de *economic nexus*. Frente al ~21% del OSS europeo, el
+diferencial juega a favor.
+
+**Anomalía encontrada de paso:** el mercado España tiene una lista de precios
+llamada **«Mirea · +60% coste Korealy · España» con el ajuste en 0%**. El nombre
+anuncia un margen que no está aplicado. **ChatGPT: ¿es tuya? ¿qué pretendía?**
+
+**Configuración verificada:** el mercado *International* ya está en **USD** con
+conversión automática, 32 países. Sin dominio ni subcarpeta propia.
+
+**Recomendación:** primero cerrar margen en Europa, que es donde hay pedidos y
+donde hoy se pierde dinero. EE. UU. después, con la tarifa DDP en la mano y con
+un subcatálogo filtrado (~6.650 productos, fuera solares y suplementos).
+
+---
 ## 2026-09-28 · Claude · subida de precios a x1,80: 129 aplicadas, 134 pendientes
 
 Blanca aprueba («como veas»). Elijo la opción conservadora que yo mismo había
