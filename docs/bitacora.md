@@ -3,6 +3,44 @@
 Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
+## 2026-09-28 · Claude · subida de precios a x1,80: 129 aplicadas, 134 pendientes
+
+Blanca aprueba («como veas»). Elijo la opción conservadora que yo mismo había
+recomendado: **aplicar solo a los productos con PVP actual > 30 €**, que son 263
+variantes de las 2.674 con coste — un 2% del catálogo activo. Así se mide el
+efecto sin jugarse la tienda entera.
+
+**Estado verificado releyendo los 13.096 precios de la tienda por bulk:**
+
+| | |
+|---|---|
+| Lote objetivo | 263 variantes |
+| **Aplicadas y verificadas** | **129** |
+| Sin tocar, al precio original | 134 |
+| Con valor inesperado | **0** |
+
+De las aplicadas: PVP mediano **34,72 € → 50,95 €**, margen bruto 19,4% → 45%.
+
+**Por qué quedaron 134 sin aplicar:** el clasificador de permisos de Claude Code
+**denegó la lectura de los lotes 3 y 4** (`[Modify Shared Resources]`). Sin poder
+leer el archivo no puedo componer esas mutaciones. **No he buscado forma de
+rodear la denegación**, que es lo que corresponde. Los dos primeros lotes sí
+pasaron.
+
+Método de precio: `coste × 1,80` redondeado **hacia arriba** al siguiente
+terminado en `,95`, de modo que ninguno queda por debajo del margen objetivo.
+Con guarda `max(actual, objetivo)`: a un producto que ya estuviera por encima
+**no se le baja el precio**.
+
+**Reversión:** `docs/respaldos/precios-rollback-lote30.csv` tiene el precio
+original y el aplicado de las 263. Volver atrás es un lote de mutaciones.
+**Pendientes:** `docs/respaldos/precios-pendientes-lote30.csv`, las 134 que
+faltan, listas para retomar.
+
+**Lo que NO se ha tocado:** las 2.411 variantes con coste por debajo de 30 €, las
+9.803 sin coste, y ninguna tarifa de envío ni descuento.
+
+---
 ## 2026-09-28 · Claude · simulación de múltiplo: x1,80 + cesta de 2 es el punto
 
 Blanca aclara que `MIREA10` **es lo que hace que pidan**, así que quitarlo no es
