@@ -3,6 +3,40 @@
 Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
+## 2026-09-28 · Claude · envíos por país: diseño, y aparece el código MIREA10
+
+Blanca decide **seguir siendo internacional** y configurar el envío por país.
+Diseño propuesto en `docs/envios-por-pais-propuesta.md`. **No he tocado ninguna
+tarifa.**
+
+**Lo que ya estaba bien:** las tarifas son **por peso**, no por importe (tramos
+0–0,3 / 0,3–0,6 / 0,6–1,2 / +1,2 kg). La arquitectura es correcta. Y el descuento
+«Envío gratis España desde 69 €» está activo y **correctamente limitado a ES**.
+Eso responde a la duda que dejé abierta en la auditoría de márgenes.
+
+**Lo que falla:** tres zonas para 59 países, con valores por debajo de coste.
+Propongo seis zonas agrupadas por lo que Korealy realmente ofrece, no por
+geografía: España peninsular · UE con Standard DDP · UE sin Standard (PT, DK) ·
+Europa no UE · Norteamérica · Resto del mundo.
+
+**Hallazgo nuevo — el descuento.** El #1005 cuadra al céntimo: 52,92 + 8,99 −
+5,88 = 61,91. Ese 5,88 € es el código **`MIREA10`**, 10%. Sobre un margen bruto
+del 19,4%, un 10% de descuento **se lleva la mitad del margen**: 5,88 € de los
+11,38 € brutos del producto. **Sin `MIREA10`, el #1005 habría cerrado en +1,59 €
+en vez de en pérdidas.**
+
+**Corrección de un error mío.** En la revisión del documento de ChatGPT planteé
+que el IVA podía llevar la pérdida de −2,24 € a ~−13 €. **Falso:** el pedido
+trae `totalTax: 0,00`, así que el ingreso neto son los 61,91 € íntegros. La
+pérdida real es ≈ −4,29 € contando comisiones. El número de ChatGPT era el
+correcto y mi objeción no aplicaba. Queda anotada aquí en vez de borrada.
+(Aparte: `taxesIncluded: true` con 0 € recaudado en un pedido a Portugal es una
+pregunta de OSS para la gestoría, no una conclusión mía.)
+
+**Pendiente de decisión de Blanca:** subir tarifas de envío, subir el múltiplo
+del catálogo, o las dos. Y qué hacer con `MIREA10`.
+
+---
 ## 2026-09-28 · Claude · el #1005 no es un accidente: el margen del catálogo es 19,4% fijo
 
 Blanca pidió el estudio de rentabilidad internacional. La mitad que depende de
