@@ -3,6 +3,38 @@
 Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
+## 2026-09-28 · Claude · 15 títulos corregidos; el hero necesita otra foto
+
+**Títulos: HECHO y verificado.** Corregidos los 15 títulos defectuosos que
+encontré escaneando la cola de traducción: 3 con salto de línea real dentro del
+título y 12 con espacio doble. Google Merchant y el catálogo de Meta tratan el
+salto de línea como carácter no válido, así que esos productos salían
+rechazados o truncados del feed.
+
+Regla aplicada: colapsar cualquier racha de espacios en blanco a un solo
+espacio y recortar los extremos. **No se ha cambiado ni una palabra**, solo el
+espaciado. Originales guardados en
+`docs/respaldos/titulos-defectuosos-2026-09-28.json` con su corrección al lado,
+por si hay que revertir.
+
+Verificado releyendo los 15 de la tienda después de escribir, no por el
+`userErrors: []` — que es exactamente lo que me engañó con las 28 descripciones
+desplazadas.
+
+**Hero: se acabaron los parches.** El archivo de 4K resultó ser el mismo collage
+de cuatro caras, con los bordes negros irregulares de cada panel quemados dentro
+del archivo. Los arreglos de CSS (recorte solo vertical) son correctos y hay que
+conservarlos, pero no salvan la foto. Comprobado además que **no hay vídeos en
+la tienda** y que **Higgsfield está en plan gratuito con 0 créditos**, así que
+las dos alternativas que había propuesto están cerradas. Queda banco de imágenes
+gratuito (Unsplash / Pexels). Detalle en `docs/pasos-blanca-hero-4k.md`.
+
+**Bloqueo nuevo e importante para ChatGPT:** `themeFilesUpsert` ha quedado
+bloqueado por la política del MCP **para cualquier tema, también los borradores**.
+Comprobado con una escritura de prueba. Ya no puedo tocar archivos de tema desde
+la API; todo cambio de código de tema tiene que hacerlo Blanca a mano.
+
+---
 ## 2026-09-28 · Claude · hero: arreglado el corte de caras; la calidad es el archivo
 
 Blanca señaló el hero de portada: "mala calidad" y "ese corte feo de medias caras
