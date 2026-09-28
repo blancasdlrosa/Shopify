@@ -147,3 +147,57 @@ siguen igual y siguen siendo el riesgo grande.
 Y sigue sin confirmarse el mecanismo dentro de la app de Korealy. Si con esto
 deja de fallar, queda probado. Si vuelve a fallar, el problema está en su lado y
 no en el catálogo, que también es información útil.
+
+---
+
+## CORRECCIÓN · 28-09-2026 · me equivoqué en el reparto de los duplicados
+
+Escribí más arriba que el TIRTIR Mask Fit Red Cushion tenía **"50 fichas activas
+con el mismo SKU"**. **Es falso y lo corrijo.**
+
+Lo comprobé abriendo el producto: son **2 fichas** (18 g y mini 4,5 g), cada una
+con **45 tonos**, y **los 45 tonos comparten el mismo SKU** `1000000715`. Conté
+variantes y las llamé fichas. El error es mío, no de los datos.
+
+### El reparto real de los 1.164 SKUs duplicados
+
+| Forma | SKUs | Qué significa |
+|---|---|---|
+| **Repetido DENTRO de una sola ficha** | **860** | Un producto con N tonos/sabores/tamaños donde **todas las variantes llevan el mismo SKU**. Afecta a **859 productos activos**. |
+| **Repetido ENTRE fichas distintas** | **259** | Dos o más productos diferentes con el mismo SKU. Afecta a **475 productos activos**. |
+| Mezcla de las dos | 45 | |
+
+El patrón dominante **no es "fichas duplicadas"**: es **un catálogo donde el SKU
+no identifica la variante**. Eso cambia el arreglo por completo.
+
+- Lo que yo pensaba: hay que despublicar fichas repetidas. **No.**
+- Lo que es: **cada tono, tamaño y sabor necesita su propio SKU**, y ese dato lo
+  tiene Korealy. No se puede inventar.
+
+### Por qué esto importa más de lo que parecía
+
+Con 45 tonos al mismo SKU, cuando una clienta compra el tono *21N Ivory* lo que
+llega a Korealy no distingue ese tono de los otros 44 — **ni distingue el bote de
+18 g del mini de 4,5 g**, porque los dos formatos llevan también el mismo SKU.
+
+Y entre fichas distintas hay casos peores, verificados:
+
+- `11774425864` → THE FACE SHOP Vitamin Lip Mask **Blueberry**, **Watermelon**,
+  **C** y **Rice**, los cuatro al mismo SKU.
+- `8253490231` → MEDIAN Green-Propolis **Fresh Mint**, **Fresh Peach** y
+  **Pure Mint**, los tres al mismo SKU.
+- `4552518687` → cuatro dentífricos MEDIAN distintos al mismo SKU.
+
+Esto no hace desaparecer una línea del pedido: hace que **llegue el producto
+equivocado**, que es peor porque no se detecta.
+
+### Estado
+
+Pedido a Korealy el 28-09 por la noche, en el mismo hilo de #1006, con los
+ejemplos concretos: SKU por tono/tamaño, los SKU reales de los productos que
+colisionan, la lista de GTIN como archivo adjunto, y cómo completar #1006 sin
+otro cargo manual. **No he inventado ningún identificador y no lo haré.**
+
+Hasta que contesten, los 859 + 475 productos siguen sin poder identificarse con
+precisión en un pedido. No hay arreglo que yo pueda aplicar desde aquí sin el
+dato del proveedor.

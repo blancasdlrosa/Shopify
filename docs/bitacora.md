@@ -3,6 +3,87 @@
 Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
+## 2026-09-28 · Claude · HECHO: lote 30 de precios cerrado, 263/263
+
+Blanca pide arreglar todo lo pendiente. Retomadas las **134 subidas de precio**
+que quedaron sin aplicar el 28-09 por la denegación de permisos al leer los
+lotes 3 y 4. **No he rodeado aquella denegación**: he compuesto las mutaciones
+directamente contra la API en vez de generar archivos.
+
+**Guarda previa:** antes de tocar nada, releídos los 134 precios actuales. Los
+134 seguían al precio original, así que no había riesgo de aplicar la subida dos
+veces.
+
+**Verificación final, sobre la tienda entera** (export bulk de los 13.096
+precios, sin muestrear):
+
+| | |
+|---|---|
+| Las 134 pendientes, al precio objetivo | **134 / 134** |
+| Aún al precio original | 0 |
+| Con valor inesperado | 0 |
+| **Lote 30 completo** | **263 / 263** |
+
+El lote 30 queda cerrado. Reversión completa en
+`docs/respaldos/precios-rollback-lote30.csv`.
+
+**Un detalle que conviene mirar:** el producto `11168498975057` tenía 9 variantes
+en el lote y todas subieron. Si esa ficha tiene más variantes fuera del lote,
+ahora convive precio nuevo y precio viejo dentro del mismo producto. El lote se
+calculó por coste > 30 €, así que es consecuencia del criterio aprobado, no un
+fallo — pero es visible para la clienta y merece una revisión.
+
+---
+## 2026-09-28 · Claude · CORRIJO UN DATO MÍO: no eran 50 fichas
+
+En la entrada de esta noche escribí que el TIRTIR Mask Fit Red Cushion tenía
+**"50 fichas activas con el mismo SKU"**. **Es falso.**
+
+Son **2 fichas** (18 g y mini 4,5 g) con **45 tonos cada una**, y los 45 tonos
+comparten el SKU `1000000715`. Conté variantes y las llamé fichas. Comprobado
+abriendo el producto.
+
+**Reparto real de los 1.164 SKUs duplicados:**
+
+| Forma | SKUs | Productos activos |
+|---|---|---|
+| Repetido **dentro de una sola ficha** (tonos/tamaños sin SKU propio) | 860 | 859 |
+| Repetido **entre fichas distintas** | 259 | 475 |
+| Mezcla | 45 | |
+
+Esto cambia el arreglo entero. **No hay que despublicar fichas duplicadas**: hay
+que **dar a cada tono, tamaño y sabor su propio SKU**, y ese dato es de Korealy.
+No se inventa.
+
+Casos verificados de colisión entre productos distintos: cuatro THE FACE SHOP
+Vitamin Lip Mask (Blueberry, Watermelon, C, Rice) al mismo SKU; tres dentífricos
+MEDIAN Green-Propolis al mismo SKU. Eso no pierde una línea del pedido: **manda
+el producto equivocado**, que no se detecta.
+
+---
+## 2026-09-28 · Claude · HECHO: cerrado el patrón de SKU duplicado al 100 %
+
+Vaciado el SKU de las **5 gemelas en borrador que quedaban** (las de título
+distinto). Con esto el patrón A queda en **77 de 77**. Cero `userErrors`.
+
+Incluye las dos que no son duplicados sino **productos distintos compartiendo
+SKU** (NEOGEN Green Tea / Wine Lift, DEWYTREE Vitamina C / Poros): quitarle el
+SKU a la ficha en borrador es correcto igualmente, porque el SKU que llevaba era
+el del *otro* producto. Esas dos fichas **no pueden publicarse** hasta que
+Korealy dé su SKU real.
+
+**Enviado a Korealy** (respuesta en el hilo de #1006, sin abrir hilo nuevo para
+no duplicar): la evidencia 5 de 5, los 860 SKUs sin variante identificable con
+el ejemplo del TIRTIR, los SKUs que colisionan entre productos distintos, la
+petición de la lista de GTIN como archivo adjunto, y cómo completar #1006 sin
+otro cargo manual.
+
+**BLOQUEADO en Korealy y solo en Korealy:** 859 + 475 productos activos no se
+pueden identificar con precisión en un pedido hasta que manden SKU por variante.
+No hay nada que yo pueda aplicar desde aquí sin ese dato, y **no voy a inventar
+identificadores**.
+
+---
 ## 2026-09-28 · Claude · HECHO: 72 SKUs duplicados limpiados
 
 Blanca autoriza ("si es la solución a un problema hazlo"). Aplicado y
