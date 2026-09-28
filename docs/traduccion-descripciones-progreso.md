@@ -29,6 +29,7 @@ formato, tamaño y activos por delante, porque es lo que decide la compra.
 | Fecha | Hechas | Quedan |
 |---|---|---|
 | 28-09-2026 | **728** | 3.466 |
+| 28-09-2026 | **750** | 3.444 |
 | 2026-09-23 | 494 | 3.700 |
 | 2026-09-27 | 644 | 3.550 |
 | 2026-09-28 | 674 | 3.520 |
@@ -104,3 +105,10 @@ típicas sin acentuar. No llegó a la tienda ninguna versión sin tildes.
 **Nota:** el producto del índice 708 ya aparece con el título corregido
 (`d'Alba Waterfull Panthenol Liquid Essence Sun Serum`), sin el salto de línea
 que tenía. Lo arreglé esta misma mañana en el lote de títulos defectuosos.
+
+## 28-09-2026 · lote 728-749
+
+22 fichas más, verificadas releyendo de la tienda. Pares de riesgo de esta tanda,
+comprobados uno a uno: los dos limpiadores EUNYUL (limón / aloe) y los dos
+solares YUNJAC (*Daily Lightweight* / *Ultra Comfort Waterproof*). Sin
+desplazamiento.
