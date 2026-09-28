@@ -3,6 +3,40 @@
 Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
+## 2026-09-28 · Claude · HECHO: configuración alineada con la política de envíos
+
+Blanca autoriza las dos correcciones. Aplicadas y **verificadas releyendo de la
+tienda**.
+
+**1 · Zonas de España.** La política publicada dice desde el 23-09 que Baleares,
+Canarias, Ceuta y Melilla **no están disponibles** para cosméticos de KOREALY,
+pero la configuración permitía comprar desde allí:
+
+| Perfil | Antes | Ahora |
+|---|---|---|
+| Perfil general | 48 provincias, **con Baleares** | **47, España peninsular** |
+| Mirea · Korealy margen protegido | **52 provincias**: Baleares, Las Palmas, Tenerife, Ceuta y Melilla | **47, España peninsular** |
+
+El segundo era el peor: el perfil que lleva el nombre del proveedor daba servicio
+justo a los cinco destinos que el proveedor no sirve. Zonas renombradas a
+*"España peninsular"*, que es lo que realmente cubren.
+
+**2 · Página de envíos.** El párrafo de aduanas decía *"algunos envíos"*; Korealy
+confirma que **España es DDU siempre** para sus cosméticos. Actualizado, y
+añadido un párrafo nuevo sobre **retenciones en aduana**, que el proveedor
+advierte expresamente y que no estaba recogido. Original guardado en
+`docs/respaldos/envios-y-devoluciones-antes-2026-09-28.html` (8.432 caracteres;
+la versión nueva tiene 8.897).
+
+**Verificado:** los dos perfiles leídos después de escribir, 47 provincias cada
+uno, sin PM, GC, TF, CE ni ML. Página actualizada a las 16:08 UTC, publicada.
+
+**Efecto para las clientas:** quien compre desde Baleares, Canarias, Ceuta o
+Melilla ya no verá opción de envío en el checkout, en vez de pagar un pedido que
+no se le puede servir. Es una pérdida de ventas deliberada y preferible a un
+pedido que acaba en reembolso.
+
+---
 ## 2026-09-28 · Claude · corrijo mi propia alerta: la política de envíos SÍ recoge el DDU
 
 Escribí la alerta del DDU **sin leer antes la página de envíos**. Al leerla
