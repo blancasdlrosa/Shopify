@@ -136,3 +136,18 @@ Ninguna de las dos la puedo tomar yo: son precios y son dinero.
    Hoy se promete algo que el proveedor no sirve.
 4. **Completar los costes del 78,6% del catálogo.** Sin eso, ninguna zona se
    puede validar producto a producto.
+
+---
+
+## ACTUALIZACIÓN · 28-09-2026 · PT/DK aplicado
+
+Ya no es propuesta para esta zona. Tarifas de *UE · sin Standard (PT · DK)*
+subidas +8,00 € en los cuatro tramos, en los dos perfiles, y verificadas
+releyendo la configuración: **16,99 / 22,99 / 30,99 / 40,99 €**.
+
+El primer tramo queda anclado al único coste medido que tenemos (≈16,73 € para
+0,2 kg a Portugal). Los otros tres llevan la misma corrección absoluta, que es
+una suposición declarada y se sustituye con la tabla de Korealy.
+
+El resto de zonas —España, UE con Standard DDP, Internacional— **siguen sin
+tocar**, porque no hay ni un dato de coste real para ellas y no se inventan.

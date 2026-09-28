@@ -3,6 +3,76 @@
 Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
+## 2026-09-28 · Claude · HECHO: tarifa PT/DK subida al coste real
+
+Blanca señala, con razón, que el lote de precios **no arreglaba su pedido de
+Portugal**. Tenía razón y el motivo es concreto:
+
+**El IOPE Retinol Super Bounce Serum (SKU 8390872165) no tiene coste unitario
+registrado** (`unitCost: null`). El lote 30 se calculó a partir del coste, así
+que ese producto **nunca pudo entrar en el lote**. Comprobado: su SKU no aparece
+ni en `precios-rollback-lote30.csv` ni en `precios-pendientes-lote30.csv`.
+
+Y además el precio del producto no era el agujero principal:
+
+| | |
+|---|---|
+| Envío cobrado a Portugal (0,2 kg) | 8,99 € |
+| Envío real implícito de Korealy | ≈ 16,73 € |
+| **Desfase** | **≈ 7,74 € por pedido** |
+| Margen bruto del producto en ese pedido | 11,38 € |
+
+**El agujero del envío era mayor que la mitad del margen del producto.** Subir
+precios no lo podía tapar.
+
+**APLICADO** — zona *UE · sin Standard (PT · DK)*, en **los dos perfiles**:
+
+| Tramo | Antes | Ahora |
+|---|---|---|
+| 0 – 0,3 kg | 8,99 € | **16,99 €** |
+| 0,3 – 0,6 kg | 14,99 € | **22,99 €** |
+| 0,6 – 1,2 kg | 22,99 € | **30,99 €** |
+| > 1,2 kg | 32,99 € | **40,99 €** |
+
++8,00 € en todos los tramos. El primero está anclado al desfase medido (7,74 €,
+redondeado); **los otros tres llevan la misma corrección absoluta por
+coherencia, y eso es una suposición, no un dato**. Se sustituyen enteros en
+cuanto Korealy mande su tabla por país y peso.
+
+**No se han tocado** España, UE con Standard DDP ni Internacional. El dato de
+16,73 € es de Portugal, donde Korealy **no ofrece Standard** (solo Economy o
+Express, más caros). Extrapolarlo a Alemania o Francia sería inventar.
+
+**Verificado** releyendo los dos perfiles después de escribir: PT/DK a
+16,99 / 22,99 / 30,99 / 40,99 en ambos, el resto de zonas intacto.
+
+**Efecto sobre el pedido #1005, rehaciéndolo con la tarifa nueva:**
+
+| | Antes | Ahora |
+|---|---|---|
+| Cobrado a la clienta | 61,91 € | 69,91 € |
+| Korealy pide | 64,15 € | 64,15 € |
+| Antes de comisiones | −2,24 € | **+5,76 €** |
+| **Con comisiones (~2,9% + 0,25 €)** | **−4,29 €** | **≈ +3,48 €** |
+
+Ese pedido pasa de perder 4,29 € a ganar ~3,48 €. Un giro de ~7,77 €.
+
+**Contrapartida honesta:** 16,99 € de envío en un pedido pequeño a Portugal va a
+bajar la conversión allí. Es deliberado: la alternativa es seguir vendiendo a
+pérdida. Se revierte en un minuto bajando las cuatro tarifas.
+
+**SIGUE ABIERTO, y es lo que queda del problema de márgenes:**
+
+- **2.411 variantes con coste** por debajo de 30 € siguen a **×1,24 (19,4%)**.
+  El lote 30 solo cubrió las de PVP > 30 €. Subirlas es decisión de Blanca:
+  son cambios de precio visibles en la mayor parte del catálogo vendible.
+- **9.803 variantes (78,6%) no tienen coste registrado.** De esas no se puede
+  calcular margen ni decidir precio. Pedido a Korealy.
+- **`MIREA10` sin mínimo de pedido**: se llevó 5,88 € de los 11,38 € de margen
+  bruto del #1005. Blanca dijo que ese código es lo que hace que pidan, así que
+  no propongo quitarlo: propongo ponerle un mínimo. Pendiente de su decisión.
+
+---
 ## 2026-09-28 · Claude · HECHO: lote 30 de precios cerrado, 263/263
 
 Blanca pide arreglar todo lo pendiente. Retomadas las **134 subidas de precio**
