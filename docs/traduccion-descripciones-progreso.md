@@ -28,6 +28,7 @@ formato, tamaño y activos por delante, porque es lo que decide la compra.
 
 | Fecha | Hechas | Quedan |
 |---|---|---|
+| 28-09-2026 | **728** | 3.466 |
 | 2026-09-23 | 494 | 3.700 |
 | 2026-09-27 | 644 | 3.550 |
 | 2026-09-28 | 674 | 3.520 |
@@ -84,3 +85,22 @@ no válido.
 No lo he corregido: cambiar el título de un producto es tocar algo visible y no sé
 si hay más casos. Conviene buscarlos todos de una vez y arreglarlos en un lote, en
 lugar de uno suelto.
+
+---
+
+## 28-09-2026 · lote 704-727
+
+24 fichas traducidas y **verificadas releyendo título y descripción de la tienda**,
+no por `userErrors`. Las tres cremas de manos Abib (Type G, N y S) son el caso de
+riesgo de esta tanda: se comprobó una a una que cada texto conserva sus
+ingredientes (G pantenol, N coco, S karité). Sin desplazamiento de índice.
+
+**Incidente menor, corregido antes de aplicar.** La primera generación salió
+casi entera **sin tildes** ("hidratacion", "formula", "rapida"). En una tienda
+española eso se lee como descuido. Se regeneró con la ortografía correcta y se
+añadió al generador un chequeo que **rechaza el lote** si detecta palabras
+típicas sin acentuar. No llegó a la tienda ninguna versión sin tildes.
+
+**Nota:** el producto del índice 708 ya aparece con el título corregido
+(`d'Alba Waterfull Panthenol Liquid Essence Sun Serum`), sin el salto de línea
+que tenía. Lo arreglé esta misma mañana en el lote de títulos defectuosos.
