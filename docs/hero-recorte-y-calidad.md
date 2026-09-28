@@ -69,13 +69,41 @@ completa.
 Y mejor JPG que PNG: el PNG de 2 MB no aporta nada en una foto y penaliza la
 velocidad de carga.
 
-### Opciones (pendiente de decisión de Blanca)
+### SOLUCIÓN SIN COSTE: ya existe el archivo bueno
 
-| | Qué es | Coste | Resultado |
-|---|---|---|---|
-| A | Blanca sube una foto de ≥3000 px | 0 | El mejor. Sin sorpresas. |
-| B | Genero una imagen editorial en alta resolución | Créditos de Higgsfield | Bueno, pero es imagen generada |
-| C | Vídeo en bucle en vez de foto | 0 si ya hay vídeo | El movimiento disimula la resolución; la sección ya lo soporta (`video` / `video_url`) |
+Buscando en los archivos de Shopify aparece, subido después del actual:
+
+**`mirea-portada-editorial-4k.png` — 4096 × 2373 px**
+(alt: "Mirea Skin · portada editorial (4K)")
+
+Proporción 1,726:1, prácticamente idéntica a la del archivo en uso (1,729:1).
+Es decir: **entra como sustituto directo, sin recortar nada distinto**, y
+multiplica por 2,5 el ancho disponible. El hero estaba usando el archivo
+pequeño teniendo el de 4K al lado.
+
+**No se ha podido aplicar por API.** La política de seguridad del MCP bloquea
+`themeFilesUpsert` sobre `templates/index.json` (lo clasifica como escritura
+contra el tema publicado, aunque el destino fuese el borrador v5; el `.liquid`
+del mismo tema sí lo permitió). Queda para Blanca, que además es quien debe
+decidir sobre algo visible:
+
+> Tienda online → Temas → editor → sección del hero →
+> **Imagen de fondo** → elegir `mirea-portada-editorial-4k.png`
+
+Se puede hacer sobre el tema publicado sin riesgo: cambiar una imagen es
+reversible al instante y no requiere publicar nada.
+
+**Sin verificar:** no he podido descargar el archivo para inspeccionarlo (el
+proxy bloquea `cdn.shopify.com`). Si resultara ser un reescalado del pequeño
+en vez de un original en 4K, se verá igual de blando. Se sabrá al ponerlo.
+
+### Si el 4K no sirve (pendiente de decisión)
+
+| | Qué es | Coste |
+|---|---|---|
+| A | Blanca sube una foto original de ≥3000 px, en JPG | 0 |
+| B | Generar una imagen editorial en alta resolución | Créditos de Higgsfield |
+| C | Vídeo en bucle en vez de foto (la sección ya lo soporta) | 0 si ya hay vídeo |
 
 No he tocado el tema publicado (v4). Todo esto está en el borrador v5.
 
@@ -83,5 +111,6 @@ No he tocado el tema publicado (v4). Todo esto está en el borrador v5.
 
 ## Pendiente
 
-- Decisión de Blanca sobre la imagen (A / B / C).
+- Blanca cambia la imagen del hero a `mirea-portada-editorial-4k.png` desde el editor.
+- Si con eso no basta, decidir entre A / B / C.
 - Si aprueba el v5, publicarlo desde el admin (publicar tema es manual).
