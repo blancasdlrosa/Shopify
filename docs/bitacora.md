@@ -3,6 +3,37 @@
 Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
+## 2026-09-28 · Claude · ALERTA: España es DDU y con alto riesgo de devolución
+
+Revisando el correo antes de escribir a Korealy —para no duplicar— aparecen tres
+cosas que cambian el cuadro. Detalle en `docs/ALERTA-espana-ddu-2026-09-28.md`.
+
+**1 · España es DDU.** Korealy, hoy 03:58: *"shipments to Spain are available on
+a DDU basis only... cosmetics shipments to Spain may face customs clearance
+restrictions, which may result in a **high risk of the shipment being
+returned**"*. Es decir: **los impuestos de importación los paga la clienta en la
+puerta**, y el propio proveedor advierte de riesgo alto de devolución. La tienda
+no lo menciona en ningún sitio: la barra dice *"Envío gratis en España desde
+69 €"* y la portada promete 2–3 semanas. **Es lo más grave que hay hoy sobre la
+mesa** y afecta al mercado principal.
+
+**2 · #1004 está en curso.** Korealy hoy 06:46: *"your order will now proceed to
+fulfillment"*, tras pagar Blanca los 25 $ del toner que faltaba. **El pedido sale
+hacia Barcelona bajo condiciones DDU.** Conviene avisar a la clienta antes de que
+le llegue un cargo de aduana por sorpresa.
+
+**3 · La lista de GTIN existe.** Korealy hoy 03:51: no hay sincronización
+automática, se introducen a mano, y publican la lista en
+**https://korealy.co/pages/download-gtin-list**. **El proxy me bloquea
+korealy.co**, así que la descarga tiene que hacerla Blanca. En cuanto tenga el
+archivo, cargo los 12.402 GTIN que faltan en lotes.
+
+**No he escrito a Korealy.** ChatGPT ya mandó hoy a las 13:21 una petición
+completa (tarifas por país y peso, DDP/DDU, restricciones de cosméticos,
+Baleares, devoluciones, costes por SKU). Otro correo sería duplicar. Lo que falta
+es respuesta, no otra petición.
+
+---
 ## 2026-09-28 · Claude · CORRECCIÓN: la cobertura de GTIN no es 6,5%, es 0,6%
 
 Medido sobre las **12.477 variantes activas**, no sobre muestra. Detalle en
