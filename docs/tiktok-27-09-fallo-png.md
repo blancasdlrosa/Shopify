@@ -47,25 +47,37 @@ https://cdn.shopify.com/s/files/1/1079/5814/1265/files/product_images_1733237030
 No la he sustituido por mi cuenta: si la tercera diapositiva es un diseño y no la
 foto suelta, cambiarla alteraría el carrusel. Eso lo decide Blanca.
 
-## AVISO · el post de mañana va a fallar igual
+## CORREGIDO · el post de Instagram NO falló
 
-El post `382452882`, **Instagram, 28-09 a las 10:00**, está PENDING y lleva
-**dos PNG** de tres:
+Avisé de que el post de Instagram del 28-09 a las 10:00 (`382452882`) iba a fallar
+igual porque llevaba dos PNG de tres y la API de Instagram pide JPEG.
 
-| # | Archivo | Formato |
+**Me equivoqué.** Comprobado a las 10:16 del 28-09:
+
+```
+network: instagram
+status: PUBLISHED
+publicUrl: https://www.instagram.com/p/Dd0tl_aCmXU/
+```
+
+Se publicó con los dos PNG dentro, sin tocar nada. O Metricool los convierte antes
+de enviarlos, o Instagram los acepta. El resultado es el que cuenta: **Instagram sí
+admite PNG.**
+
+Dejo el error escrito en vez de borrarlo, porque el razonamiento era plausible y
+aun así falso: extrapolé de TikTok a Instagram sin comprobarlo. Lo que valía para
+una red no valía para la otra.
+
+## Regla, ya acotada con datos de las dos redes
+
+| Red | PNG | Comprobado |
 |---|---|---|
-| 1 | `...8341177994110251311.jpeg` | JPEG |
-| 2 | `...9067136572603353524.png` | **PNG** |
-| 3 | `...4612223838571807193.png` | **PNG** |
+| **TikTok** | **rechaza el post entero** | 27-09, post 381157649, ERROR |
+| **Instagram** | lo acepta | 28-09, post 382452882, PUBLISHED |
 
-La API de publicación de Instagram pide JPEG para imágenes. Con dos PNG hay
-riesgo alto de que mañana pase lo mismo.
+La regla no es "siempre JPEG": es **"JPEG o WEBP para todo lo que lleve TikTok"**.
+Para Instagram da igual el formato.
 
-**Conviene convertirlas antes de las 10:00.** Es el mismo arreglo: exportar en
-JPEG y reemplazar en el planificador.
-
-## Regla para no repetirlo
-
-Exportar **siempre en JPEG** lo que vaya a Metricool. PNG solo sirve para la web
-de Shopify, donde sí se acepta. Si el diseño se hace en Canva, es un desplegable
-en el momento de descargar.
+Como los carruseles suelen programarse para las dos redes a la vez, exportar en
+JPEG por defecto sigue siendo lo cómodo. Pero si algún diseño necesita PNG por
+transparencia o nitidez de texto, en Instagram no hay problema.

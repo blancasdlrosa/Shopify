@@ -3,6 +3,35 @@
 Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
+## 2026-09-28 10:16 · Claude · corrección: el post de Instagram NO falló, me equivoqué
+
+Avisé anoche de que el post de Instagram del 28-09 a las 10:00 (`382452882`) iba a
+fallar como el TikTok, porque llevaba dos PNG de tres y la API de Instagram pide
+JPEG.
+
+**Falso.** Comprobado a las 10:16: `status: PUBLISHED`,
+https://www.instagram.com/p/Dd0tl_aCmXU/ . Se publicó con los dos PNG dentro y sin
+tocar nada.
+
+El error fue extrapolar de una red a otra: TikTok rechaza PNG, y di por hecho que
+Instagram también. Corregido en `docs/tiktok-27-09-fallo-png.md`, donde dejo el
+error escrito en vez de borrarlo.
+
+**La regla queda acotada con datos de las dos redes:**
+
+| Red | PNG | Comprobado |
+|---|---|---|
+| TikTok | rechaza el post entero | 27-09, post 381157649, ERROR |
+| Instagram | lo acepta | 28-09, post 382452882, PUBLISHED |
+
+No es "siempre JPEG". Es **JPEG o WEBP para lo que lleve TikTok**. Menos mal que no
+sustituí las imágenes anoche por mi cuenta: habría cambiado una creatividad que
+funcionaba perfectamente, por una alarma mía equivocada.
+
+**Sigue pendiente de verdad:** el TikTok del 27-09 continúa en ERROR y sin publicar.
+Ese sí necesita la tercera imagen en JPEG.
+
+---
 ## 2026-09-28 00:45 · Claude · canales de venta auditados: Meta tiene el 9 % del catálogo
 
 Detalle en `docs/auditoria-canales-2026-09-28.md`. Medido con `productsCount`
