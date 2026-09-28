@@ -3,6 +3,66 @@
 Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
+## 2026-09-28 · Claude · CAUSA RAÍZ: los pedidos incompletos son SKU duplicados
+
+Blanca avisa de que el tercer pedido, #1006, vuelve a salir con un producto de
+menos en Korealy, como el #1004. Paro la traducción y lo investigo.
+
+**Encontrado, y medido sobre el catálogo entero** (export completo por
+`bulkOperationRunQuery`, 13.096 variantes; sin muestreo):
+
+- Los 5 artículos de los dos pedidos fallidos: los 3 que sincronizaron tienen SKU
+  único; **los 2 que se perdieron tienen una ficha gemela en BORRADOR con el
+  mismo SKU y el mismo título** (`handle` acabado en `-1`). 5 de 5.
+- **1.164 SKUs duplicados** en total, 6.028 variantes implicadas.
+- **77** son el patrón que rompe pedidos (1 activa + 1 borrador); 72 con título
+  idéntico.
+- **1.033** son SKUs compartidos entre varias fichas ACTIVAS. El extremo:
+  `1000000715`, TIRTIR Mask Fit Red Cushion, **50 fichas activas con el mismo
+  SKU**, una por tono — Korealy no puede saber qué tono se pidió.
+- **1.310 productos activos de 7.740 (16,9 %)** comparten SKU con otro activo.
+
+**HECHO:** pedido #1006 puesto en `ON_HOLD` (`FulfillmentOrder/9403425685841`)
+con el motivo anotado, para que no salga 1 de 2. Verificado releyendo el pedido.
+Es la misma regla que Blanca fijó para #1004. Se libera en cuanto Korealy
+confirme los dos artículos. No he borrado, archivado ni despublicado nada.
+
+Detalle en `docs/sku-duplicados-pedidos-incompletos-2026-09-28.md`; respaldos en
+`docs/respaldos/sku-duplicados-*.csv`.
+
+**BLOQUEADO, esperando el sí de Blanca:** vaciar el SKU de las 72 gemelas en
+borrador. Reversible, invisible para la clienta, respaldo completo guardado. No
+lo hago sin permiso porque su regla 1 cubre las fichas de producto.
+
+**PENDIENTE de Korealy:** por qué el SKU ambiguo tira la línea, qué ficha debe
+quedar conectada, y cómo añadir el artículo que falta a #1006 sin otro cargo
+manual. Preguntado por Blanca el 28-09 a las 19:39. **No he duplicado el correo.**
+
+---
+## 2026-09-28 · Claude · los regalos digitales sí se envían, pero no son PDF
+
+Blanca duda de si se mandan los PDF prometidos con el pedido. Comprobado en
+Klaviyo y en el Admin:
+
+- Dos flujos `live`: guía PRO (primer pedido >35 €) y Journal (≥60 €), los dos
+  desde `my.mireaskin@gmail.com`.
+- **No llevan PDF ni enlace de descarga**: llevan un enlace a
+  `/pages/la-guia` y `/pages/mirea-checklist-4-semanas`. Las dos páginas
+  **existen, están publicadas y tienen contenido**. El enlace no está roto.
+- Últimos 30 días: 2 entregados de la guía, 1 del Journal, **0 rebotes**, pero
+  **0 aperturas y 0 clics**. Sale y llega; nadie lo ha abierto todavía.
+- Los 5 PDF de rutinas que hay en Archivos desde el 14-09 **no se enlazan desde
+  ningún correo**.
+
+**PARA BLANCA:** el flujo definitivo se puso live hoy a las 10:48 y el pedido
+#1004 es del 25-09, así que esa clienta puede haberse quedado sin regalo —
+conviene mirarlo y mandárselo a mano. Y si en la tienda prometemos "PDF
+descargable" mientras entregamos una página web, hay que igualar las dos cosas;
+no puedo leer la tienda publicada desde aquí para comprobarlo.
+
+Detalle en `docs/regalos-digitales-entrega-real-2026-09-28.md`.
+
+---
 ## 2026-09-28 · Claude · HECHO: configuración alineada con la política de envíos
 
 Blanca autoriza las dos correcciones. Aplicadas y **verificadas releyendo de la
