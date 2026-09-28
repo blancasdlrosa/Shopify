@@ -3,6 +3,39 @@
 Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
+## 2026-09-28 · Claude · CORRECCIÓN: la cobertura de GTIN no es 6,5%, es 0,6%
+
+Medido sobre las **12.477 variantes activas**, no sobre muestra. Detalle en
+`docs/auditoria-gtin-catalogo-completo-2026-09-28.md`.
+
+El 27-09 informé de un **6,5%** de cobertura a partir de una muestra de 1.000
+productos. **Era erróneo:** la muestra no era representativa. La cifra real es
+**0,6%** — diez veces peor.
+
+| | Variantes | % |
+|---|---|---|
+| Sin código de barras | **12.402** | **99,4%** |
+| Con GTIN válido | 75 | 0,6% |
+| Con barcode inválido | 0 | 0% |
+| Duplicados | 0 | — |
+
+Lo poco que hay está limpio: los 75 pasan el dígito de control GS1 y ninguno se
+repite. No hay que corregir, hay que rellenar. Cobertura **0,0% en todas** las
+marcas principales: TIRTIR (568 variantes), 3CE (296), TONYMOLY (265), BBIA (258).
+
+Esto explica que Google tenga **379 productos de 8.212** pese a la publicación
+automática: sin GTIN, Merchant desaprueba la ficha. **El 95% del catálogo fuera
+de Google Shopping tiene aquí su causa principal.**
+
+**Camino único:** pedir los EAN a Korealy. El borrador ya está en Gmail
+(`r-5827688799193718216`). Conviene mandarlo **junto con las tarifas y los costes
+por SKU**: son los tres datos que faltan del proveedor y caben en un solo correo.
+
+**Lección de método, para los dos agentes:** es la segunda vez hoy que una
+muestra me engaña. Con bulk, medir el catálogo entero cuesta dos consultas y un
+curl. No hay excusa para muestrear.
+
+---
 ## 2026-09-28 · Claude · EE. UU.: dos barreras que no estaban en el radar
 
 Blanca pregunta si conviene invertir en vender a EE. UU. Análisis en
