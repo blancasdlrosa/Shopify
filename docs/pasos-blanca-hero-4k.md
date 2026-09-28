@@ -175,3 +175,56 @@ Orden recomendado, todo sin coste:
 primero para `templates/index.json`, después también para los `.liquid` del
 mismo tema borrador `207099167057` — aunque minutos antes me hubiese dejado
 escribir dos veces ese mismo archivo en ese mismo tema.
+
+---
+
+# CIERRE · 28-09-2026 · la conclusión
+
+Tras poner el archivo de 4K, las bandas negras siguen. **El 4K es el mismo
+collage**, con los bordes irregulares en negro de cada panel quemados dentro
+del archivo. Más nítido, pero igual de roto.
+
+## Error de criterio por mi parte
+
+Ofrecí dos rondas de parches de CSS (`inset(… 0%)`, luego `inset(… 3%)`)
+cuando el defecto estaba en la imagen desde el principio. Lo señalé en la
+primera respuesta, pero debí insistir en cambiar la foto en vez de seguir
+puliendo el recorte. Los parches del recorte lateral **sí** eran correctos y
+necesarios — las caras ya no se parten — pero no resuelven lo que Blanca
+estaba viendo.
+
+## Material disponible, comprobado
+
+| Vía | Estado |
+|---|---|
+| Vídeo en la tienda | **Ninguno.** `files(query: "media_type:VIDEO")` devuelve 0 |
+| Higgsfield | **Plan gratuito, 0 créditos.** Generar cuesta dinero |
+| Escribir en el tema por API | **Bloqueado.** `themeFilesUpsert` refusado también para el borrador |
+
+Es decir: las tres vías que había propuesto están cerradas. Queda una.
+
+## La salida: banco de imágenes gratuito
+
+Unsplash y Pexels: gratis, uso comercial, sin atribución obligatoria,
+originales de 4000–6000 px.
+
+1. unsplash.com o pexels.com
+2. Buscar: `korean skincare`, `beauty editorial`, `skincare routine face`,
+   `glowing skin portrait`
+3. Filtrar **horizontal**, descargar el tamaño máximo
+4. Criterios: **una sola protagonista**, fondo continuo, zona vacía a la
+   izquierda o abajo para que respire el texto blanco
+5. Shopify → Contenido → Archivos → subir → seleccionarla en el hero
+
+## Alternativa si se quieren conservar esas caras
+
+Recortar el 4K a **un solo panel** (el de la chica aplicándose crema es el más
+limpio) con Vista Previa del Mac: abrir → seleccionar → ⌘K → guardar copia.
+Resultado: ~1024 × 2373 px, limpio y sin costuras, pero **vertical**. Sirve
+para móvil, no para el hero de escritorio a pantalla completa.
+
+## Lo que queda hecho y es bueno
+
+El arreglo del recorte lateral (`inset(N% 0%)` en vez de `inset(N%)`) sigue
+siendo correcto y hay que conservarlo, sea cual sea la foto: evita que el
+telón parta por la mitad a quien esté en los extremos del encuadre.
