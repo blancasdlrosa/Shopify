@@ -131,12 +131,21 @@ Ningún `clip-path` las quita: recortar solo actúa en los bordes.
 
 En `sections/mirea-hero-lux.liquid`, cambiar el `0%` por `3%`:
 
-```css
-/* antes */
-clip-path: inset(var(--hx-mask, 12%) 0% round 2px);
-/* después */
-clip-path: inset(var(--hx-mask, 12%) 3% round 2px);
+En el archivo la línea está escrita con la variable Liquid, **no** con el 12
+ya resuelto. Es la **línea 76**, y literalmente pone:
+
+```liquid
+clip-path: inset(var(--hx-mask, {{ recorte }}%) 0% round 2px);
 ```
+
+Cambiar solo el `0%` por `3%`, dejando `{{ recorte }}` intacto:
+
+```liquid
+clip-path: inset(var(--hx-mask, {{ recorte }}%) 3% round 2px);
+```
+
+`{{ recorte }}` es el control *Franja de apertura* del editor. El `3%` es un
+margen lateral fijo.
 
 3% son ~60 px por lado: se come el filo sin llegar a las caras. El 14%
 original se comía 282 px, que es por lo que las partía. Margen útil: 2–5%.
