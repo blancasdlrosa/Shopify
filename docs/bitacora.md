@@ -3,6 +3,45 @@
 Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
+## 2026-09-28 · Claude · HECHO: 72 SKUs duplicados limpiados
+
+Blanca autoriza ("si es la solución a un problema hazlo"). Aplicado y
+**verificado releyendo de la tienda**.
+
+**Vaciado el campo SKU de las 72 fichas gemelas en BORRADOR** que compartían SKU
+y título con una ficha activa. 72 mutaciones, **cero `userErrors`**.
+
+- **No se ha borrado, archivado ni despublicado nada.** Las fichas siguen
+  existiendo, en borrador, con precio, inventario, handle e imágenes intactos.
+- **Verificación independiente:** seis SKUs releídos de la tienda, entre ellos
+  `11774774813` (el de #1006) y `13516780955` (el de #1004). Cada uno devuelve
+  ahora **exactamente una ficha, la ACTIVA**, con su SKU intacto. Comprobada
+  además una gemela completa: `DRAFT`, 20,91 €, 1.000 uds, `sku: null`.
+- **Reversible entero** desde
+  `docs/respaldos/sku-duplicados-activo-borrador-2026-09-28.csv`.
+
+**BLOQUEADO / PARA BLANCA — las 5 que dejé fuera** (título distinto en las dos
+fichas, no son duplicados limpios):
+
+- Tres son el mismo producto mal escrito (K-SECRET, PAUL MEDISON, Dr.G): se
+  limpian igual en cuanto lo confirmes.
+- **Dos son productos DISTINTOS compartiendo SKU** y eso es peor que un
+  duplicado: `2398643640` (NEOGEN Green Tea vs Wine Lift) y `7631623401`
+  (DEWYTREE Vitamin C 40ml vs Pore Minimizing 30ml). Korealy puede mandar el
+  producto equivocado sin que nadie lo note. Hace falta el SKU real de cada uno,
+  y lo tiene Korealy.
+
+**SIGUE ABIERTO:** los 1.033 SKUs compartidos entre varias fichas ACTIVAS
+(el TIRTIR con 50 fichas al mismo SKU). Es el riesgo grande y no lo toco con un
+cambio masivo: hay que decidir producto por producto si son variantes de una
+ficha o importaciones mal hechas, y conviene hacerlo sabiendo cómo resuelve
+Korealy.
+
+**PARA GPT:** si tocas catálogo, no vuelvas a crear fichas con SKU repetido. El
+inventario completo de duplicados está en
+`docs/respaldos/sku-duplicados-catalogo-2026-09-28.csv`.
+
+---
 ## 2026-09-28 · Claude · CAUSA RAÍZ: los pedidos incompletos son SKU duplicados
 
 Blanca avisa de que el tercer pedido, #1006, vuelve a salir con un producto de

@@ -91,3 +91,59 @@ Preguntado el 28-09 a las 19:39, sin respuesta todavía:
 por qué el SKU duplicado rompe la sincronización, qué ficha debe quedar
 conectada, cómo añadir el artículo que falta a #1006 sin otro cargo manual, y
 cómo evitar que vuelva a pasar.
+
+---
+
+## ACTUALIZACIÓN · 28-09-2026, misma noche · APLICADO
+
+Blanca autoriza: *"si es la solución a un problema hazlo"*.
+
+**Vaciado el SKU de las 72 fichas gemelas en borrador.** 72 mutaciones,
+**cero `userErrors`**. No se ha borrado, archivado ni despublicado nada: las
+fichas siguen existiendo, en borrador, con su precio, su inventario y sus
+imágenes. Lo único que ha cambiado es que el campo SKU está vacío.
+
+**Verificado releyendo de la tienda**, no fiándome de la respuesta de la
+mutación. Seis SKUs comprobados uno a uno —entre ellos los dos que rompieron
+#1004 y #1006— y **cada uno devuelve ahora exactamente una ficha, la ACTIVA**,
+con su SKU intacto. Comprobada además una gemela entera
+(`Product/11163080458577`): sigue `DRAFT`, `handle` intacto, precio 20,91 €,
+1.000 unidades, `sku: null`.
+
+Reversible al completo desde
+`docs/respaldos/sku-duplicados-activo-borrador-2026-09-28.csv`, que guarda el
+valor exacto de cada SKU retirado.
+
+### Las 5 que he dejado fuera, y por qué
+
+De los 77 pares, 5 tienen títulos distintos en las dos fichas. No las he tocado
+porque no son duplicados limpios y hay que mirarlas a mano:
+
+| SKU | Ficha ACTIVA | Ficha BORRADOR |
+|---|---|---|
+| 12669558556 | K-SECRET Seoul 1988 Sun Collagen Complex 7 SPF50+ · 50 ml | K-SECRET SEOUL 1988 SUN : COLLAGEN COMPLEX 7 + PLUM 50ml |
+| 2398643640 | NEOGEN Dermalogy **Green Tea Moist** PHA Gauze Peeling | NEOGEN Dermalogy **Wine Lift** PHA Gauze Peeling |
+| 4843151328 | Paul Madison Signature Body Wash White Musk 1077mL | PAUL MEDISON Signature Body Wash 1077ml #White Musk |
+| 4947540764 | Dr.G pH Cleansing R.E.D Blemish Clear Soothing Foam 150ml | Dr.G pH Cleansing Red Blemish Clear Soothing Foam 150ml |
+| 7631623401 | DEWYTREE Miracle **Vitamin C** Serum 40ml | DEWYTREE Miracle **Pore Minimizing** Serum 30ml |
+
+Tres son el mismo producto escrito de dos maneras (K-SECRET, PAUL MEDISON,
+Dr.G): se pueden limpiar igual que las 72, pero quiero que lo confirmes porque
+el título no coincide y no quiero asumir.
+
+**Las dos en negrita son peores que un duplicado: son productos distintos
+compartiendo un SKU.** Un té verde y un vino; una vitamina C de 40 ml y un
+minimizador de poros de 30 ml. Si una clienta pide uno, Korealy puede mandar el
+otro y nadie se entera hasta que se abre la caja. Esas dos hay que corregirlas
+dándole a cada producto su SKU real, y el SKU real lo tiene Korealy.
+
+### Qué esperar ahora
+
+El patrón que rompió #1004 y #1006 está cerrado: ningún SKU de esos 72 productos
+activos apunta ya a dos fichas. Lo que **no** arregla esto son los 1.033 SKUs
+compartidos entre varias fichas ACTIVAS —el caso TIRTIR de las 50 fichas—, que
+siguen igual y siguen siendo el riesgo grande.
+
+Y sigue sin confirmarse el mecanismo dentro de la app de Korealy. Si con esto
+deja de fallar, queda probado. Si vuelve a fallar, el problema está en su lado y
+no en el catálogo, que también es información útil.
