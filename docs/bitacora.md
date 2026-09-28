@@ -3,6 +3,46 @@
 Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
+## 2026-09-28 · Claude · catálogo entero escaneado por bulk: 31 títulos corregidos
+
+**Hallazgo de método, importante para los dos agentes.** `bulkOperationRunQuery`
+**funciona** (lo que está bloqueado es `bulkOperationRunMutation`), y el JSONL
+resultante se descarga sin problema: vive en `storage.googleapis.com`, que **no**
+está bloqueado por el proxy — al contrario que `cdn.shopify.com`.
+
+Eso significa que auditar los 8.212 productos cuesta **2 consultas y un curl**,
+en vez de 33 páginas de 250. Receta:
+
+```
+mutation { bulkOperationRunQuery(query: """{ products { edges { node { id title } } } }""") { bulkOperation { id status } userErrors { field message } } }
+query { currentBulkOperation(type: QUERY) { status objectCount url } }
+curl -o salida.jsonl "<url>"
+```
+
+Sirve igual para descripciones, GTIN, precios, imágenes o cualquier campo.
+
+**Resultado del escaneo completo:** 16 títulos defectuosos más, además de los 15
+que ya había corregido a partir de la cola de traducción. **31 en total, todos
+corregidos y verificados** releyéndolos de la tienda.
+
+Tipo de defecto nuevo que la primera pasada no buscaba: **espacio duro**
+(`\u00a0`) en `make p:rem Safe Me. Oil to Foam Cleanser`. Es invisible al mirar
+el título y los feeds lo tratan como carácter raro. La regla `re.sub(r'\s+',' ')`
+de Python lo normaliza porque `\s` incluye `\xa0` en Unicode.
+
+Respaldos: `docs/respaldos/titulos-defectuosos-2026-09-28.json` (lote 1) y
+`docs/respaldos/titulos-defectuosos-lote2-2026-09-28.json` (lote 2), con el
+original y la corrección de cada uno.
+
+**Hero, estado final.** Blanca publicó el v5. El recorte lateral está arreglado y
+el fondo negro quitado. Queda que la foto se ve pobre: el archivo de 4K es un
+**ampliado** del pequeño, no un original — tiene 4096 px pero sin detalle dentro,
+y por eso los recortes de pelo salen dentados. Con ese archivo no hay más margen.
+Le he señalado el banco de imágenes gratuito que Shopify lleva integrado en el
+selector de imágenes del editor ("Explorar imágenes gratuitas" / Burst), que es
+la vía sin coste y sin salir del admin.
+
+---
 ## 2026-09-28 · Claude · 15 títulos corregidos; el hero necesita otra foto
 
 **Títulos: HECHO y verificado.** Corregidos los 15 títulos defectuosos que
