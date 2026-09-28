@@ -3,6 +3,39 @@
 Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
+## 2026-09-28 · Claude · simulación de múltiplo: x1,80 + cesta de 2 es el punto
+
+Blanca aclara que `MIREA10` **es lo que hace que pidan**, así que quitarlo no es
+opción. De acuerdo: el problema no es el descuento, es que un margen del 19,4%
+no aguanta un descuento normal.
+
+Simulado sobre las **2.674 variantes activas con coste real**. Detalle en
+`docs/simulacion-multiplicador-2026-09-28.md`. **No se ha tocado ningún precio.**
+
+| Múltiplo | Margen | 1 producto | 2 productos | 3 productos |
+|---|---|---|---|---|
+| ×1,24 (hoy) | 19,4% | 0% | 0% | 2% |
+| ×1,80 | 44,4% | 33% | **81%** | 86% |
+| ×2,50 | 60,0% | 80% | 98% | 98% |
+
+*(% de cestas rentables a la UE con `MIREA10`, 4.000 simuladas al azar.)*
+
+**Lo que cambia el planteamiento:** el envío se paga **por pedido, no por
+producto**. Repartir los ~16,73 € entre dos artículos hace más por la
+rentabilidad que subir el precio. Con ×1,24 no hay salida ni con tres productos
+en la cesta (2%).
+
+**Propuesta: ×1,80 + empujar la cesta a 2 productos.** PVP mediano 21,60 € en vez
+de 14,88 €; subir a ×2,50 lo dejaría en 30 €, el doble que hoy, y en K-beauty eso
+probablemente cuesta más ventas de las que salva. La maquinaria para subir la
+cesta ya existe: «Completa tu rutina», los packs, y los umbrales de 35 €/60 €.
+
+**Hallazgo colateral:** hay **5 códigos de influencer** (`MIREAINF01`–`05`), 10%
+con mínimo de 35 €, **200 usos cada uno y 0 usados**, activos hasta el 22-12.
+Son 1.000 pedidos potenciales que hoy perderían dinero. Recomiendo no repartirlos
+hasta ajustar el margen.
+
+---
 ## 2026-09-28 · Claude · HECHO: Portugal y Dinamarca separados de la zona UE
 
 Aplicado en los **dos** perfiles de envío, con las **mismas tarifas** que tenían.
