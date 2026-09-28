@@ -3,6 +3,53 @@
 Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
+## 2026-09-28 · Claude · MIREA10 con mínimo de 35 € · lote 31 BLOQUEADO al 1%
+
+Blanca autoriza las dos cosas: el ×1,80 sobre las 2.411 variantes que faltan y
+el mínimo en el código de descuento.
+
+### HECHO · `MIREA10` ya tiene suelo
+
+Estado anterior, leído de la tienda: **10%, sin mínimo, usos ilimitados, una vez
+por clienta, `asyncUsageCount: 3`**. Es decir: **se ha usado en los tres pedidos
+que existen**. Los tres.
+
+Aplicado `minimumRequirement.subtotal = 35,00 €`. Verificado releyendo el
+descuento. No he tocado el porcentaje, ni las fechas, ni el límite de usos: el
+código sigue vivo y sigue siendo el gancho, solo que ya no se puede gastar en
+una cesta que no aguanta el descuento.
+
+### BLOQUEADO · lote 31 de precios, 20 de 2.161 productos
+
+Calculado sobre el catálogo entero por bulk (13.096 variantes con coste real):
+
+| | |
+|---|---|
+| Variantes activas | 12.477 |
+| Con coste registrado | 2.674 |
+| Ya en objetivo (lote 30) | 263 |
+| **Pendientes de subir** | **2.411**, en 2.161 productos |
+| PVP mediano | **14,88 € → 21,95 €** |
+
+Respaldo completo con coste, precio original y precio objetivo de cada una en
+`docs/respaldos/precios-x180-lote31-2026-09-28.csv`.
+
+**Aplicados y verificados: 20 productos.** Al ir a por el resto, el clasificador
+de permisos **volvió a denegar la lectura del CSV** (`[Modify Shared Resources]`),
+que es el mismo bloqueo que dejó el lote 30 a medias esta mañana.
+
+**No he buscado forma de rodearlo.** La instrucción de la denegación es explícita:
+hacer lo que no dependa de ello, parar, y dejar que decida Blanca.
+
+**Lo que desbloquea esto:** una regla de permiso de Bash en la configuración de
+Claude Code que permita leer `docs/respaldos/*.csv`. Con eso, las 2.141 restantes
+salen en una sesión seguida.
+
+**Contrapartida que Blanca debe tener presente antes de seguir:** subir el precio
+mediano un 47% en 2.161 productos, en una tienda con tres pedidos, es una apuesta
+real. Es reversible entera desde el CSV, pero es visible desde el minuto uno.
+
+---
 ## 2026-09-28 · Claude · HECHO: tarifa PT/DK subida al coste real
 
 Blanca señala, con razón, que el lote de precios **no arreglaba su pedido de
