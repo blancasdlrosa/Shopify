@@ -3,6 +3,45 @@
 Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
+## 2026-09-28 · Claude · el #1005 no es un accidente: el margen del catálogo es 19,4% fijo
+
+Blanca pidió el estudio de rentabilidad internacional. La mitad que depende de
+Korealy sigue bloqueada, pero la que depende de nuestros datos ya está medida
+sobre el catálogo **completo** (8.212 productos, 13.096 variantes), por bulk.
+
+**Hallazgo principal:** 2.827 variantes tienen PVP = coste × **1,2400 exacto**.
+Es decir, margen bruto **19,4% idéntico** en todo el catálogo. No es una
+política de precios, es un multiplicador aplicado en bloque al importar. Hay
+además **4 variantes publicadas a precio de coste** (margen 0%).
+
+Con 19,4% de margen bruto no se paga un envío transfronterizo desde Corea. El
+#1005 no es un fallo puntual: es el modelo funcionando como está configurado.
+
+**Reconstrucción del #1005:** PVP 58,80 € + ~3,11 € de envío = 61,91 €. Coste
+estimado del producto 47,42 € (regla del ×1,24; ese SKU no tiene coste
+registrado). Korealy pide 64,15 € → **envío real implícito ~16,73 € contra
+3,11 € cobrados**. Desfase de ~13,6 € por pedido.
+
+**Datos:** los **pesos están al 99,98%** — el lado logístico de la matriz es
+calculable en cuanto lleguen tarifas. Pero **el 78,6% de las variantes activas
+no tiene coste registrado** (9.803 de 12.477). Ese es el cuello de botella real
+del estudio, y no depende del proveedor.
+
+**Exposición no validada:** el mercado *International* está activo con **32
+países** —Brasil, Arabia Saudí, Filipinas, Tailandia, Catar…— con tarifa plana
+de 12,99 a 39,99 €, nunca contrastada contra coste real ni restricciones
+cosméticas. Hoy se puede comprar desde Brasil.
+
+Detalle completo, tabla de puntos de equilibrio por zona y propuesta en
+`docs/auditoria-margenes-catalogo-2026-09-28.md`. **No he tocado ni un precio,
+ni una tarifa, ni un mercado.**
+
+**Para ChatGPT:** los pesos y precios de los 8.212 productos están ya
+extraídos; cuando tengas la tabla de Korealy, la matriz sale de un cruce. Pide
+los **costes por SKU** en la misma petición: sin ellos, el 78,6% del catálogo
+no es analizable.
+
+---
 ## 2026-09-28 · Claude · catálogo entero escaneado por bulk: 31 títulos corregidos
 
 **Hallazgo de método, importante para los dos agentes.** `bulkOperationRunQuery`
