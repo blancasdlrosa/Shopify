@@ -30,9 +30,10 @@ formato, tamaño y activos por delante, porque es lo que decide la compra.
 |---|---|---|
 | 2026-09-23 | 494 | 3.700 |
 | 2026-09-27 | 644 | 3.550 |
-| 2026-09-28 | **674** | 3.520 |
+| 2026-09-28 | 674 | 3.520 |
+| 2026-09-28 | **704** | 3.490 |
 
-Siguiente índice a procesar: **674**.
+Siguiente índice a procesar: **704**.
 
 Verificado el 27-09 contra la tienda, no contra este archivo: el índice 523
 (`11153921474897`, desmaquillante bifásico A'pieu) ya está en español y el 524
@@ -65,3 +66,21 @@ que no hay ficha en inglés colgando.
 No he unido ni archivado nada: son productos existentes y visibles, y eso lo decide
 Blanca. Queda anotado para revisar si hay más casos iguales cuando se audite el
 catálogo entero.
+
+## Defecto de datos encontrado el 28-09: salto de línea dentro de un título
+
+El producto `11163758690641` se llama literalmente:
+
+```
+MEDIHEAL PDRN
+Lifting Serum 100ml
+```
+
+Con un salto de línea real en mitad del título, no un espacio. Se ve raro en la
+ficha y, más importante, **los feeds comerciales rechazan o truncan títulos con
+saltos de línea**: Google Merchant y el catálogo de Meta los tratan como carácter
+no válido.
+
+No lo he corregido: cambiar el título de un producto es tocar algo visible y no sé
+si hay más casos. Conviene buscarlos todos de una vez y arreglarlos en un lote, en
+lugar de uno suelto.
