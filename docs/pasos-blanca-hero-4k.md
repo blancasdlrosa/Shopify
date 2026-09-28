@@ -101,3 +101,68 @@ En la sección del hero, bajo **Encuadre del telón**:
 - **Zoom al bajar** (0–10%, por defecto 3) — antes era 6 fijo. Cuanto más alto,
   más se amplía la foto y más se nota si el archivo es corto de resolución.
   Si quieres la máxima nitidez posible, ponlo a **0**.
+
+---
+
+# ACTUALIZACIÓN · 28-09-2026 (tras ver el preview de v5)
+
+Al quitar el recorte lateral aparecen **bandas oscuras verticales** en el hero.
+Blanca: *"fatal mira esos cortes en negro"*.
+
+## Qué son
+
+El recorte del 14% que había antes **estaba tapando los bordes exteriores** de
+la foto. Cortaba las caras (el problema original), pero de paso escondía los
+filos. Al quitarlo, los filos quedan a la vista.
+
+Y hay algo más de fondo: **la foto son cuatro fotos distintas pegadas**, cada
+una con su propio fondo. Las costuras alternan:
+
+| Entre | Banda |
+|---|---|
+| pelirroja ↔ asiática | oscura |
+| asiática ↔ morena | clara |
+| morena ↔ rubia | oscura |
+
+Esas costuras están **dentro del archivo raster**, en mitad de la imagen.
+Ningún `clip-path` las quita: recortar solo actúa en los bordes.
+
+## Parche para los bordes exteriores (no para las costuras)
+
+En `sections/mirea-hero-lux.liquid`, cambiar el `0%` por `3%`:
+
+```css
+/* antes */
+clip-path: inset(var(--hx-mask, 12%) 0% round 2px);
+/* después */
+clip-path: inset(var(--hx-mask, 12%) 3% round 2px);
+```
+
+3% son ~60 px por lado: se come el filo sin llegar a las caras. El 14%
+original se comía 282 px, que es por lo que las partía. Margen útil: 2–5%.
+
+Nota: con este cambio, el JS sigue animando solo el eje vertical
+(`--hx-mask` lleva un único porcentaje). El 3% horizontal es fijo y no se
+anima — es un margen de limpieza, no parte del telón.
+
+## La conclusión honesta
+
+La foto no da para un hero a pantalla completa. Dos defectos que el CSS no
+arregla: **1649 px de ancho** y **costuras entre las cuatro fotos**.
+
+Orden recomendado, todo sin coste:
+
+1. **Poner el archivo de 4K** (`mirea-portada-editorial-4k.png`). 10 segundos.
+   Si es una versión limpia, resuelto. Si es el mismo collage en grande, al
+   menos deja de verse borroso.
+2. **Si siguen las costuras: una sola protagonista.** Fondo continuo, ≥3000 px.
+   El collage de cuatro se lee barato precisamente por las costuras.
+3. **Si no hay esa foto: vídeo en bucle.** La sección ya lo soporta (`video` /
+   `video_url`). Es la opción que mejor resultado da con menos material.
+
+## Por qué no lo he hecho yo
+
+`themeFilesUpsert` quedó bloqueado por la política del MCP a mitad de sesión:
+primero para `templates/index.json`, después también para los `.liquid` del
+mismo tema borrador `207099167057` — aunque minutos antes me hubiese dejado
+escribir dos veces ese mismo archivo en ese mismo tema.
