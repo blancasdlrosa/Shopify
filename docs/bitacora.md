@@ -3,6 +3,42 @@
 Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
+## 2026-09-28 · Claude · HECHO: Portugal y Dinamarca separados de la zona UE
+
+Aplicado en los **dos** perfiles de envío, con las **mismas tarifas** que tenían.
+Ningún cliente nota nada: es estructura, no precio.
+
+| Perfil | Zona antes | Zonas ahora |
+|---|---|---|
+| Perfil general (`147793248593`) | UE (26 países) | **UE · con Standard DDP** (24) + **UE · sin Standard (PT · DK)** (2) |
+| Mirea · Korealy margen protegido (`148370293073`) | UE (26 países) | idem |
+
+**Por qué los dos:** `productVariantsCount` devuelve 500 en ambos (el tope que
+cuenta Shopify), o sea que **los dos perfiles están en uso**. Dividir solo uno
+habría dejado la estructura incoherente y cualquier cambio futuro de tarifas se
+habría aplicado a medias.
+
+**Motivo del corte:** Korealy no ofrece Standard para Portugal ni Dinamarca,
+solo Economy o Express. Tenerlos en la misma zona que Alemania —que sí tiene
+Standard DDP— hacía imposible tarifarlos distinto. Ahora se puede, en cuanto
+lleguen las tarifas.
+
+**Verificado releyendo los dos perfiles después de escribir:** 24 + 2 = 26 países
+de la UE, ninguno sin cobertura, y los cuatro tramos de peso (8,99 / 14,99 /
+22,99 / 32,99 €) presentes y activos en la zona nueva.
+
+**Trampa encontrada:** el primer intento lo rechazó Shopify entero
+(«el país Ireland debe tener al menos una provincia asociada»). La mutación es
+atómica: devolvió `profile: null` y no tocó nada. Se resolvió añadiendo
+`includeAllProvinces: true` a todos los países. **Para ChatGPT: al escribir
+zonas de envío por GraphQL, ese campo es obligatorio en los países con
+provincias (IE, IT, ES, PT, RO…).**
+
+**No he tocado ni una tarifa, ni un precio, ni un mercado.** Siguen pendientes
+de decisión de Blanca: qué hacer con `MIREA10` y si la palanca es subir el
+envío, subir el múltiplo del catálogo, o ambas.
+
+---
 ## 2026-09-28 · Claude · envíos por país: diseño, y aparece el código MIREA10
 
 Blanca decide **seguir siendo internacional** y configurar el envío por país.
