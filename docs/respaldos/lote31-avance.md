@@ -7,15 +7,15 @@
 
 | | |
 |---|---|
-| Productos aplicados | **379** (índices 0–378) |
-| **Siguiente índice a aplicar** | **379** |
-| Productos pendientes | 1.782 |
+| Productos aplicados | **539** (índices 0–538) |
+| **Siguiente índice a aplicar** | **539** |
+| Productos pendientes | 1.622 |
 | `userErrors` hasta ahora | **0** |
 
 ## Cómo continuar
 
 ```
-python3 docs/respaldos/lote-precios.py precios-x180-lote31-2026-09-28.csv 379 40
+python3 docs/respaldos/lote-precios.py precios-x180-lote31-2026-09-28.csv 539 40
 ```
 
 y aplicar cada línea `<product_id>|<variant_id>:<precio>` con
