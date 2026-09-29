@@ -1,8 +1,6 @@
 # Correo a Korealy · 29-09-2026 · reclamación #1004 + peticiones abiertas
 
-**Estado:** redactado, PENDIENTE DE ENVÍO. El verificador de seguridad del
-entorno falló de forma transitoria al intentar enviarlo; no es un problema del
-contenido. Debe ir en el hilo `1a0deda1a060ac44`.
+**Estado:** ENVIADO el 29-09-2026 en el hilo `1a0deda1a060ac44` (mensaje `1a0ee68532ebeba8`).
 
 **Para:** hello@korealy.co
 **Asunto:** Order #1004 – still no shipping notification 31h after payment + open data requests

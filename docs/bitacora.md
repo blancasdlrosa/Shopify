@@ -3,6 +3,37 @@
 Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
+## 2026-09-29 · Claude · reclamado a Korealy el #1004 y pedidos los datos que faltan
+
+El #1004 (Mireia, Barcelona, comprado el 25-09) **sigue sin enviar**: verificado
+en Shopify, `displayFulfillmentStatus: UNFULFILLED`, sin fulfillments y sin
+número de seguimiento. Korealy confirmó el cobro el 28-09 a las 06:46 y dijo que
+avisaría al enviar. 31 horas después, nada.
+
+Antes de escribir se comprobó el hilo entero para no mandar un correo duplicado
+(regla de Blanca sobre el #1004): el último mensaje era el suyo del 28-09, así
+que la reclamación es la primera.
+
+**Correo enviado** (hilo `1a0deda1a060ac44`, mensaje `1a0ee68532ebeba8`). Texto
+íntegro en `docs/correos/korealy-2026-09-29-reclamacion-1004.md`. Cinco bloques:
+
+1. **#1004:** ¿ha salido? Tracking ya, y confirmación de que van los TRES
+   artículos, incluido el tónico por el que se pagaron 25 USD de más.
+2. **#1006:** confirmar que el protector solar está disponible y el total exacto
+   a pagar cuando Yolanda elija sustituto. **No se ha comprometido ningún pago.**
+3. **Stock (petición nueva):** fichero de disponibilidad por SKU, o cada cuánto
+   sincroniza su app, porque vendimos algo que estaba agotado y en Shopify hay
+   miles de variantes con 100/999/1000 de relleno.
+4. **Aduanas:** si un envío a España se rechaza y vuelve, ¿quién paga la
+   devolución y se nos reembolsa el producto? ¿Qué porcentaje se ha rechazado?
+   Esto lo necesita Blanca para decidir si se avisa en la web.
+5. **Lo que llevan sin contestar:** SKU por tono (859 productos), los SKU que
+   colisionan, y la lista de GTIN como fichero adjunto.
+
+**Sigue pendiente de Blanca:** el reembolso o pago del #1006 según lo que elija
+Yolanda, y decidir el aviso de aduanas en la web.
+
+---
 ## 2026-09-29 · Claude · escrito a la clienta del #1006 ofreciéndole sustituto
 
 Blanca autorizó ofrecer sustituto. Correo enviado a Yolanda del Río
