@@ -17,6 +17,25 @@ directo entre ellos. Todo se coordina a través del repositorio.
   `docs/bitacora.md` diciendo qué hiciste, qué dejaste a medias y qué necesitas
   del otro agente.
 
+**Regla de negocio, dicha por Blanca (29-09-2026):** *"nunca cambies cosas para
+perder, siempre para ganar"*. Ningún cambio puede dejar el negocio peor de como
+estaba. En concreto:
+
+- **Nunca bajar un precio** en un cambio masivo. Los lotes de precios llevan
+  guarda `max(precio_actual, objetivo)`: suben lo que está por debajo de margen
+  y dejan intacto lo que ya está por encima.
+- **Nunca bajar una tarifa de envío** ni ampliar un envío gratis sin comprobar
+  antes que el pedido sigue siendo rentable. El envío gratis nunca debe provocar
+  pérdidas.
+- **Nunca quitar ni relajar un mínimo de pedido** de un descuento existente.
+- Si un cambio puede salir a pérdida y falta un dato para saberlo (p. ej. el
+  coste real de envío), **no se hace**: se deja como está y se le pregunta a
+  Blanca. No se inventan costes.
+- Antes de dar por bueno un cambio de precios o márgenes: comprobarlo con datos
+  reales de la tienda, no de memoria. Ojo con que **los precios llevan el IVA
+  incluido** (`taxesIncluded: true`): el margen en euros es menor de lo que
+  parece.
+
 **Contexto del proyecto:** tienda de Shopify de Blanca. El alcance todavía no está
 definido; consulta la bitácora antes de asumir nada.
 
