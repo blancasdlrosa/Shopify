@@ -3,6 +3,62 @@
 Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
+## 2026-09-29 · Claude · España cobraba coste × 1,60: 2.640 precios fijos subidos al precio base
+
+**Hallazgo.** La lista de precios «Mirea · +60% coste Korealy · España»
+(`PriceList/34062532945`, catálogo «Mirea · Margen seguro España», mercado Spain)
+tiene el ajuste al 0 %, pero contiene **2.842 precios fijos**, y un precio fijo manda
+sobre el precio base de la ficha. 2.801 de ellos eran exactamente coste × 1,60.
+Resultado: en el mercado principal se cobraba coste × 1,60 en 2.640 variantes
+activas, **incluidas 2.377 de las 2.411 del lote 31**. La verificación del lote 31
+comprobó el precio base y no el precio que ve la clienta, y por eso no lo detectó.
+
+Prueba con `contextualPricing` antes del cambio (Dashu BB Cushion Refill, coste 8 €,
+base 14,95 €): España **12,80 €**, Francia 14,95 €.
+
+Autoría de la lista: **desconocida**. No hay rama `gpt/` ni documento que la mencione.
+
+**Autorizado por Blanca.** Subir esos precios fijos hasta el precio base, con la guarda
+`max(fijo, base)`. No se borra la lista: en 41 variantes activas está **por encima**
+del precio base y, si se borrara, esas bajarían.
+
+**Hecho:**
+- Respaldo completo antes de tocar nada:
+  `docs/respaldos/lista-espana-precios-fijos-antes-2026-09-29.csv` (2.842 filas con
+  precio antes y después y la acción). Para revertir: `priceListFixedPricesAdd` con la
+  columna `precio_fijo_espana_antes_eur`.
+- 2.640 precios fijos subidos al precio base con `priceListFixedPricesAdd`, en 11 lotes
+  de hasta 250. `userErrors: []` en todos.
+- En la prueba inicial se borró por error el precio fijo de una variante
+  (`55026960007505`) en lugar de subirlo. Quedó restaurado como precio fijo de 25,95 €
+  en el lote 1.
+
+**Verificación independiente** (nueva exportación masiva de la lista, cruzada con el
+respaldo): **2.640 de 2.640 al precio previsto, 202 sin cambio como debían, 0 precios
+bajados, 0 variantes activas por debajo del base**, y la lista sigue con 2.842 fijos.
+Comprobado además con `contextualPricing` en España sobre variantes de los lotes 1, 6
+y 11, y sobre una de las que la lista mantiene por encima del base (Kerasys, 8,95 €).
+
+**Impacto:**
+
+| | Antes | Después |
+|---|---|---|
+| Subida media por unidad | | +3,28 € (mediana +15,1 %) |
+| Margen bruto mediano, **con** IVA del 21 % descontado | 24,4 % | **34,3 %** |
+| Margen bruto mediano, **sin** IVA | 37,5 % | **45,7 %** |
+
+Sumando una unidad de cada variante afectada salen +8.665 € de precio en España.
+Los márgenes son sobre el coste del producto; no incluyen el envío ni las comisiones.
+
+**Lección para cualquier cambio de precios:** verificar con `contextualPricing` por
+mercado, no solo `variant.price`. Un precio fijo de catálogo pisa al precio base sin
+dar ningún error.
+
+**Para ChatGPT:** si creaste tú esta lista, déjalo escrito en la bitácora. No vuelvas
+a poner precios fijos a coste × 1,60 en ella: en la mayoría de fichas deshacen el
+×1,80 que Blanca aprobó.
+
+---
 ## 2026-09-29 · Claude · la app de Korealy devuelve error de servidor (5xx)
 
 Blanca informa de que al entrar en Korealy sale un **error de servidor**. Es un
