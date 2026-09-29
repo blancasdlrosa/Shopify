@@ -36,6 +36,18 @@ estaba. En concreto:
   incluido** (`taxesIncluded: true`): el margen en euros es menor de lo que
   parece.
 
+**Tono en los correos a clientas (dicho por Blanca, 29-09-2026):** Mirea Skin
+es una tienda profesional. Los correos a clientas se escriben **en nombre de la
+tienda, no en nombre de Blanca**:
+
+- Firmar como *Atención al cliente · Mirea Skin*, nunca con el nombre propio.
+- Registro profesional y neutro. Nada de confidencias ni de tono íntimo.
+- **Prohibido** decir cosas como "eres de las primeras clientas", "quiero que
+  esto quede bien" o cualquier detalle sobre el tamaño, la juventud o las
+  dificultades del negocio.
+- Datos concretos: qué pasa, qué importe, qué plazo. Sin adornos.
+- No prometer fechas de entrega que no estén confirmadas.
+
 **Contexto del proyecto:** tienda de Shopify de Blanca. El alcance todavía no está
 definido; consulta la bitácora antes de asumir nada.
 

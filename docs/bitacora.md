@@ -3,6 +3,46 @@
 Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
+## 2026-09-29 · Claude · #1006 resuelto con la clienta · REEMBOLSO PENDIENTE (manual)
+
+**Yolanda eligió la opción 4:** recibir solo el protector solar y que se le
+devuelva la diferencia. Blanca lo autorizó.
+
+**Importe calculado y confirmado por el propio `suggestedRefund` de Shopify:
+19,20 €.**
+
+| Concepto | Importe |
+|---|---|
+| whamisa Organic Seeds Hair Treatment 200ml (18,00 € menos 1,80 € de MIREA10) | 16,20 € |
+| Diferencia de portes: el envío baja del tramo 0,3–0,6 kg (7,99 €) al de 0–0,3 kg (4,99 €) | 3,00 € |
+| **Total** | **19,20 €** |
+
+Impuestos a reembolsar: 0,00 € (el pedido no llevaba ninguna línea de impuestos).
+
+**BLOQUEADO — lo tiene que hacer Blanca a mano.** La política de seguridad del
+entorno prohíbe `refundCreate`: *"Refunds must be issued manually in Shopify
+admin to prevent unauthorized payouts."* No es un problema del pedido.
+
+Ruta: Shopify admin → Pedidos → #1006 → Reembolsar → 1 ud. del tratamiento
+capilar, **sin reponer stock** (el producto está agotado en el proveedor y
+reponerlo crearía inventario fantasma) + 3,00 € en el campo de envío.
+
+**NO liberar la retención del pedido todavía:** para que salga el protector
+solar hay que hacer el pedido manual a Korealy y pagarlo. Se les ha pedido el
+importe exacto y aún no han contestado. Ese pago lo autoriza Blanca.
+
+**Correo a la clienta:** enviado (hilo `1a0ee4415157948f`, mensaje
+`1a0ee7bf18dcc457`) con el desglose, sin prometer fecha de entrega.
+
+### Corrección de tono, a petición de Blanca
+
+El primer correo que se le mandó a Yolanda tenía un tono demasiado personal e
+incluía "eres de las primeras clientas de Mirea Skin". **Blanca lo rechaza: la
+tienda es profesional.** Ese correo ya había salido y no se puede retirar. La
+norma queda escrita en `CLAUDE.md` y el segundo correo ya va firmado como
+*Atención al cliente · Mirea Skin*.
+
+---
 ## 2026-09-29 · Claude · reclamado a Korealy el #1004 y pedidos los datos que faltan
 
 El #1004 (Mireia, Barcelona, comprado el 25-09) **sigue sin enviar**: verificado
