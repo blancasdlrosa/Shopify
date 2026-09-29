@@ -3,6 +3,42 @@
 Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
+## 2026-09-29 · Claude · escrito a la clienta del #1006 ofreciéndole sustituto
+
+Blanca autorizó ofrecer sustituto. Correo enviado a Yolanda del Río
+(yolanda_dr@yahoo.es) el 29-09, hilo Gmail `1a0ee4415157948f`.
+
+**Contenido:** disculpa, explicación de que el whamisa Organic Seeds Hair
+Treatment 200ml está agotado en el proveedor, y que el pedido está en espera a
+propósito para no mandarlo incompleto. Cinco opciones, que elige ella:
+
+1. UNOVE Heating Guard No-Wash Treatment 147ml — 18,00 €, mismo precio exacto
+2. GROWUS Damage Therapy No Wash Treatment 250ml — 18,00 €, mismo precio
+3. Daleaf Origin No-Wash Treatment 150ml — 16,80 €, se le devuelve la diferencia
+4. whamisa Organic Seeds Hair Scalp Tonic 165ml — 32,95 €, paga la diferencia
+5. Reembolso del tratamiento y enviar solo el protector, o cancelar todo
+
+Los cuatro productos se verificaron **activos y con stock** antes de ofrecerlos.
+El protector solar sí está disponible.
+
+**Sobre los PDF: comprobado, SÍ le llegó.** La guía se le envió el 28-09 a las
+19:38 (flow `SMvtLa`, asunto *"Tu Guía Mirea PRO Premium está desbloqueada"*),
+la **abrió** hoy a las 11:41 y **pinchó** el enlace a
+`mireaskin.es/pages/la-guia` 16 segundos después. No había nada que reenviar.
+Aun así el correo incluye el enlace otra vez por si acaso.
+
+Su pedido tiene subtotal 35,18 €, así que le corresponde la guía (>35 €) pero
+no el Journal (≥60 €). Correcto.
+
+**Limitación a resolver:** el correo salió desde `blancasdlr@gmail.com`. La
+herramienta de Gmail solo envía desde la cuenta conectada y no admite otro
+remitente, así que no se pudo usar `my.mireaskin@gmail.com`. Para futuros
+correos a clientas habría que conectar esa cuenta o configurarla como alias.
+
+**Pendiente:** esperar la respuesta de Yolanda. Cuando conteste, hará falta que
+Blanca autorice el reembolso o el pago manual a Korealy, según lo que elija.
+
+---
 ## 2026-09-29 · Claude · Korealy contesta: #1006 no se puede servir, y aviso de aduanas
 
 Korealy respondió a los tres hilos entre las 00:26 y las 06:35 de hoy. Detalle
