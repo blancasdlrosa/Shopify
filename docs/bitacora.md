@@ -3,6 +3,32 @@
 Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
+## 2026-09-29 · Claude · #1006 · reembolso HECHO por Blanca, verificado
+
+Blanca emitió el reembolso a mano en el admin de Shopify (yo no puedo: la
+política del entorno bloquea `refundCreate`). Verificado por API:
+
+- Reembolso `gid://shopify/Refund/1101421478225`, creado 29-09 18:50 UTC
+- Transacción `REFUND` de **19,20 €**, estado `PENDING` (Shopify Payments aún
+  no lo ha liquidado; es normal)
+- El tratamiento capilar pasa a *Eliminado*: el pedido queda con 1 artículo
+- **Total del pedido ahora: 23,97 €**
+- `displayFulfillmentStatus`: sigue **ON_HOLD**, correcto
+
+**23,97 € es el techo** para pagar a Korealy el protector solar (~26 USD al
+cambio de PayPal 1 € = 1,0911 $). Por encima de eso el pedido pierde dinero.
+
+**Pedida factura de PayPal a Korealy** para el protector solar (hilo
+`1a0e9872ecf8f284`, mensaje `1a0ee7ea9fe2442c`), en vez de rehacer el pedido en
+su app: es la vía que ya funcionó con el #1004. Sin respuesta todavía.
+
+**Aviso:** la nota de la retención quedó desfasada, todavía dice *"no se enviará
+1 de 2... cuando KOREALY confirme ambos artículos"*, cuando ya es un pedido de
+un solo artículo. **No se ha tocado a propósito**: cambiarla obliga a levantar
+la retención un instante y el pedido podría escaparse. Cuando Korealy confirme
+y se pague, basta con pulsar *Levantar espera*.
+
+---
 ## 2026-09-29 · Claude · #1006 resuelto con la clienta · REEMBOLSO PENDIENTE (manual)
 
 **Yolanda eligió la opción 4:** recibir solo el protector solar y que se le
