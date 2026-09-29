@@ -3,6 +3,28 @@
 Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
+## 2026-09-29 · Claude · la app de Korealy devuelve error de servidor (5xx)
+
+Blanca informa de que al entrar en Korealy sale un **error de servidor**. Es un
+fallo del lado de ellos, no de su equipo.
+
+**No se ha podido verificar desde aquí:** el entorno tiene bloqueado el acceso
+saliente a `korealy.co` y `app.korealy.co` (curl devuelve `000`, sin respuesta),
+así que no se puede distinguir una caída real del bloqueo propio. Se le han dado
+a Blanca tres comprobaciones (datos móviles sin wifi, otro navegador, entrar
+desde Shopify → Aplicaciones).
+
+**Por qué importa:** la solución que propuso Korealy para el #1006 era hacer el
+pedido manual **dentro de su app**. Si la app no carga, esa vía no existe. La
+**factura de PayPal pasa de ser la vía cómoda a ser la única**.
+
+**Correo enviado** (hilo `1a0e9872ecf8f284`, mensaje `1a0ee849aaa25adc`)
+reportando la caída, preguntando si hay incidencia conocida y cuándo estará
+disponible, repitiendo la petición de factura y recordando que el #1004 sigue
+parado. No es un correo duplicado: la caída de la app es información nueva que
+bloquea la solución que ellos mismos propusieron.
+
+---
 ## 2026-09-29 · Claude · decisión de Blanca sobre el #1006: pagar aunque pierda un poco
 
 Planteadas las dos salidas si la factura de Korealy por el protector solar
