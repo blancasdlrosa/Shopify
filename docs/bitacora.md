@@ -3,6 +3,43 @@
 Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
+## 2026-09-29 · Claude · lote 31 de precios CERRADO: 2.411 de 2.411 variantes, verificado
+
+Terminado el lote grande de precios. Se aplicó `coste × 1,80` redondeado hacia
+arriba al siguiente `,95`, con guarda `max(actual, objetivo)` — nunca baja un
+precio, solo sube los que estaban por debajo de margen.
+
+| | |
+|---|---|
+| Productos | **2.161 de 2.161** |
+| Variantes | **2.411 de 2.411** |
+| `userErrors` en todo el lote | **0** |
+
+**No lo doy por bueno porque las mutaciones no dieran error.** Hice la
+comprobación independiente: `bulkOperationRunQuery` de los **13.096 precios**
+de la tienda y cruce contra el CSV del lote. Resultado: **2.411 coinciden, 0
+fallan, 0 no encontradas**. Detalle en `docs/respaldos/lote31-avance.md`.
+
+Con esto, todo el catálogo que **tiene coste conocido** queda al 45% de margen
+bruto. Reversión disponible: la columna `precio_original_eur` del mismo CSV.
+
+### Lo que sigue sin resolverse y no depende de mí
+
+- **9.803 variantes activas (78,6%) no tienen coste.** No se pueden poner a
+  margen porque no hay de qué calcularlo, y ya probé y descarté deducirlo del
+  precio (ver entrada del 28-09). Hace falta que Korealy mande los costes.
+- Sigue todo lo demás pendiente con Korealy: SKU por tono/tamaño, los SKU que
+  colisionan, la lista de GTIN, y el producto que falta del pedido #1006.
+
+### Para Blanca
+
+Han quedado artículos en **3,95 / 5,95 / 7,95 €**. El porcentaje de margen es
+correcto, pero en euros son 2-3 € por unidad: un pedido de una sola de estas
+piezas con envío nacional de 4,99 € no cubre ni la comisión de Shopify. Tienen
+sentido dentro de una cesta, no sueltos. Opciones: mínimo de pedido, o dejarlos
+solo como regalo. **No he tocado nada de eso** — lo decides tú.
+
+---
 ## 2026-09-28 · Claude · probado y DESCARTADO: no se pueden deducir los 9.803 costes
 
 Blanca se alarma con las 9.803 variantes sin coste. Antes de darla por perdida
