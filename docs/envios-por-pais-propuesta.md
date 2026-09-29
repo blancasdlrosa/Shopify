@@ -151,3 +151,57 @@ una suposición declarada y se sustituye con la tabla de Korealy.
 
 El resto de zonas —España, UE con Standard DDP, Internacional— **siguen sin
 tocar**, porque no hay ni un dato de coste real para ellas y no se inventan.
+
+---
+
+## VERIFICACIÓN CON DATOS REALES · 29-09-2026
+
+Las tarifas PT · DK están **aplicadas y activas** en los dos perfiles de envío,
+comprobado en vivo hoy:
+
+| Tramo | Antes | Ahora |
+|---|---|---|
+| 0–0,3 kg | 8,99 € | **16,99 €** |
+| 0,3–0,6 kg | 14,99 € | **22,99 €** |
+| 0,6–1,2 kg | 22,99 € | **30,99 €** |
+| +1,2 kg | 32,99 € | **40,99 €** |
+
+Perfiles: `Perfil general` (147793248593) y `Mirea · Korealy margen protegido`
+(148370293073). PT y DK están fuera de la zona UE normal, que sigue en 8,99 €.
+
+### ¿Arreglan el caso que provocó la pérdida?
+
+Sí. Ahora se puede comprobar con cifras reales, no estimadas:
+
+- **Coste real del pedido #1005:** Korealy confirmó por correo (29-09, 00:26)
+  que el total a pagar son **70 USD**, producto + envío incluidos.
+- **Tipo de cambio real:** del recibo de PayPal del 26-09 de Blanca a Korealy
+  (55,00 USD = 50,41 EUR), **1 EUR = 1,0911 USD**. No es una cotización
+  inventada, es la que PayPal le aplicó.
+- 70 USD ÷ 1,0911 = **64,15 €**.
+
+Datos del pedido #1005, leídos de Shopify:
+
+| Concepto | Como pasó | Con tarifa nueva |
+|---|---|---|
+| Producto (IOPE Retinol Super Bounce 50ml, 0,2 kg) | 58,80 € | 58,80 € |
+| Descuento MIREA10 | −5,88 € | −5,88 € |
+| Envío cobrado | 8,99 € | **16,99 €** |
+| Impuestos | 0,00 € | 0,00 € |
+| **Total cobrado** | **61,91 €** | **69,91 €** |
+| Coste Korealy | −64,15 € | −64,15 € |
+| **Resultado bruto** | **−2,24 €** | **+5,76 €** |
+
+Descontando comisión de pasarela, el pedido pasa de perder ~3,40 € a ganar
+~4,50 €.
+
+**Límite de esta comprobación:** el +8,00 € cubre un paquete de 0,2 kg con este
+coste de origen. Un pedido a Portugal más pesado o con producto más caro habría
+que recalcularlo. Lo que ya no ocurre es salir perdiendo de partida.
+
+### Observación que NO se ha tocado
+
+El pedido #1005 a Portugal se cobró con **0,00 € de impuestos**. Puede ser
+correcto si aún no se supera el umbral de ventas a distancia en la UE, pero si
+se supera habría que repercutir el IVA del país de destino. **Es una cuestión
+fiscal, la decide Blanca con su gestor.** No se ha modificado nada.
