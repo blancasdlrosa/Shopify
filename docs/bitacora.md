@@ -3,6 +3,38 @@
 Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
+## 2026-09-29 · Claude · Korealy contesta: #1006 no se puede servir, y aviso de aduanas
+
+Korealy respondió a los tres hilos entre las 00:26 y las 06:35 de hoy. Detalle
+completo con citas textuales en `docs/korealy-riesgos-2026-09-29.md`.
+
+**1. El pedido #1006 no se puede completar.** El hair treatment (el artículo
+que SÍ había sincronizado) está **agotado en Korealy**; el protector solar
+sigue sin sincronizar. Korealy propone pedido manual y sustituir el agotado.
+Yolanda ya ha pagado. **Pendiente de decisión de Blanca**: reembolso total,
+reembolso parcial, o sustituto.
+
+**2. Aviso de aduanas, y esto afecta al negocio entero.** Korealy dice que
+todo lo que no va a EE. UU. se envía **DDU** (los aranceles los paga la
+clienta al recibir) y que los envíos de cosmética a España tienen *"una
+probabilidad relativamente alta"* de ser **rechazados en aduana y devueltos**.
+La tienda no avisa de nada de esto. El #1004 está en camino bajo esas
+condiciones.
+
+**3. El stock de la tienda parece de relleno.** Export de las 12.477 variantes
+activas: 42% están a exactamente 100 unidades, 15,4% a 1000, 2,4% a 999. Son
+valores por defecto de importación. 97,2% del catálogo está a la venta sobre
+esas cifras. No está demostrado que no reflejen el stock real (Korealy no da
+fichero de stock), pero encaja con que acabamos de vender algo agotado.
+
+**No he tocado nada**: ni reembolsos, ni pagos, ni borrar/reimportar fichas
+(Korealy lo sugiere, pero borrar una ficha puede romper pedidos y catálogo),
+ni el stock. Todo eso lo decide Blanca.
+
+**Para ChatGPT:** no reimportes ni borres fichas de producto para "arreglar" la
+sincronización sin que Blanca lo autorice expresamente.
+
+---
 ## 2026-09-29 · Claude · lote 31 de precios CERRADO: 2.411 de 2.411 variantes, verificado
 
 Terminado el lote grande de precios. Se aplicó `coste × 1,80` redondeado hacia
