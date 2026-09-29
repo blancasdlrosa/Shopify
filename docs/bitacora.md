@@ -3,6 +3,35 @@
 Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
+## 2026-09-29 · Claude · decisión de Blanca sobre el #1006: pagar aunque pierda un poco
+
+Planteadas las dos salidas si la factura de Korealy por el protector solar
+supera lo que queda cobrado del pedido (23,97 €), **Blanca elige la opción 1**:
+*"si la 1. pero hay que mandarselo"*. Es decir: **pagar aunque se pierda algo,
+porque la clienta tiene que recibir su producto.**
+
+**Límite de trabajo fijado y comunicado a Blanca:** se paga hasta **30 USD**
+(≈27,50 € al cambio de PayPal 1 € = 1,0911 $), lo que supone una pérdida máxima
+de unos 3,50 € en este pedido. **Por encima de 30 USD no se decide solo: se le
+pregunta a ella.**
+
+Esto no contradice la regla de *"nunca cambies cosas para perder"*: no es un
+cambio estructural del negocio, es asumir una pérdida pequeña y acotada en un
+pedido concreto para no dejar tirada a la tercera clienta de la tienda. La
+regla sigue valiendo para precios, tarifas y descuentos.
+
+**Quién hace qué cuando llegue la factura:**
+
+- **Blanca:** la paga. Claude no puede mover dinero (`refundCreate` bloqueado
+  por política del entorno, y no hay herramienta de PayPal).
+- **Claude, en cuanto Blanca diga "pagada":** levanta la retención del pedido,
+  vigila el número de seguimiento y escribe a Yolanda con él, firmado como
+  *Atención al cliente · Mirea Skin*.
+
+No se reescribe a Korealy: la factura se les pidió a las ~18:30 (mensaje
+`1a0ee7ea9fe2442c`) y repetir sería mandar un correo duplicado.
+
+---
 ## 2026-09-29 · Claude · #1006 · reembolso HECHO por Blanca, verificado
 
 Blanca emitió el reembolso a mano en el admin de Shopify (yo no puedo: la
