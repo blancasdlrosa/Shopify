@@ -37,9 +37,10 @@ formato, tamaño y activos por delante, porque es lo que decide la compra.
 | 2026-09-28 | 770 | 3.424 |
 | 2026-09-30 | 790 | 3.404 |
 | 2026-09-30 | 815 | 3.379 |
-| 2026-09-30 | **840** | 3.354 |
+| 2026-09-30 | 840 | 3.354 |
+| 2026-09-30 | **865** | 3.329 |
 
-Siguiente índice a procesar: **840**.
+Siguiente índice a procesar: **865**.
 
 Verificado el 30-09 contra la tienda: los índices 704-769 están todos en español, sin
 huecos, y el 770 estaba en inglés. La línea anterior («siguiente 704») estaba desfasada;
@@ -165,3 +166,14 @@ extractos de ginseng rojo de Jung Kwan Jang (#829, #834, #835) son complementos
 alimenticios y en la UE las declaraciones de salud están reguladas (Reglamento
 1924/2006). No se publican frases como *"fatigue relief"* o *"supports your energy"*: se
 describen formato, sabor y modo de uso, y se indica «Complemento alimenticio».
+
+## 30-09-2026 · lote 840-864
+
+25 fichas, verificadas releyendo de la tienda. No publicados: *"normalize cell cycle to 28
+days"* (su:m37, #845) y *"immune enhancement"* del Kid Tonic (#856).
+
+**Para decidir Blanca:** `[Jung Kwan Jang] Kid Tonic Step 1 (Ages 3-4)`
+(`11163767275857`) es un complemento de ginseng para niños de 3-4 años y está ACTIVO. Un
+complemento infantil con ginseng exige cumplir la normativa de complementos alimenticios
+(notificación, etiquetado en español). No se ha tocado su estado; la ficha dice «consultar
+con el pediatra». Conviene revisar si debe seguir a la venta.

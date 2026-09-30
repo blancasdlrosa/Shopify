@@ -3,6 +3,17 @@
 Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
+## 2026-09-30 · Claude · traducción: 815 → 865, y un producto infantil a revisar
+
+- Lotes 815-839 y 840-864 (50 fichas), generados con `gen-lote.py` y verificados releyendo
+  de la tienda. Sin desplazamientos. **Quedan 3.329.**
+- Complementos de ginseng (Jung Kwan Jang): se describen sin declaraciones de salud
+  (Reglamento UE 1924/2006) y con la mención «Complemento alimenticio».
+- **Para Blanca:** el `Kid Tonic Step 1 (Ages 3-4)` es un complemento de ginseng para niños
+  y está a la venta. No lo he tocado; decide si debe seguir activo. Detalle en
+  `docs/traduccion-descripciones-progreso.md`.
+
+---
 ## 2026-09-30 · Claude · traducción retomada: 770 → 815
 
 - Punto real verificado contra la tienda: 704-769 en español sin huecos, 770 en inglés.
