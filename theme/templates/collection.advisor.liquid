@@ -1,9 +1,10 @@
 {%- comment -%}
   Vista JSON para el Mirea Skin Advisor.
   Se pide con /collections/<handle>?view=advisor y devuelve hasta 250 productos
-  disponibles de esa colección, con el paso de rutina, los tipos de piel y los
-  objetivos que ya tiene asignados en la tienda. No inventa nada: todo sale de
-  las colecciones a las que pertenece cada producto.
+  disponibles de esa colección, con el paso de rutina, los tipos de piel, los
+  objetivos que ya tiene asignados en la tienda y el id de variante, que hace
+  falta para el botón de añadir la rutina entera al carrito. No inventa nada:
+  todo sale de las colecciones a las que pertenece cada producto.
 {%- endcomment -%}
 {%- layout none -%}
 {%- liquid
@@ -29,7 +30,7 @@
       {%- if objetivos contains c.handle -%}{%- assign objetivosProducto = objetivosProducto | append: c.handle | append: ' ' -%}{%- endif -%}
     {%- endfor -%}
     {%- unless paso == '' or esCuerpo -%}
-      {{ sep }}{"t":{{ p.title | json }},"u":{{ p.url | json }},"p":{{ p.price }},"i":{{ p.featured_image | image_url: width: 360 | json }},"s":{{ paso | json }},"k":{{ pielesProducto | strip | json }},"o":{{ objetivosProducto | strip | json }},"v":{{ p.vendor | json }}}
+      {{ sep }}{"t":{{ p.title | json }},"u":{{ p.url | json }},"p":{{ p.price }},"i":{{ p.featured_image | image_url: width: 360 | json }},"s":{{ paso | json }},"k":{{ pielesProducto | strip | json }},"o":{{ objetivosProducto | strip | json }},"v":{{ p.vendor | json }},"id":{{ p.selected_or_first_available_variant.id }}}
       {%- assign sep = ',' -%}
     {%- endunless -%}
   {%- endif -%}

@@ -21,12 +21,59 @@
         proteger: 'Proteger'
       };
 
+      const collectionNames = {
+        'granitos': 'granitos',
+        'poros': 'poros',
+        'manchas': 'manchas y tono',
+        'barrera-cutanea': 'barrera cutánea',
+        'calma-y-rojeces': 'rojeces',
+        'antiedad': 'antiedad',
+        'piel-seca': 'piel seca',
+        'piel-grasa': 'piel grasa',
+        'piel-mixta': 'piel mixta',
+        'piel-sensible': 'piel sensible'
+      };
+
+      const skinLabels = {
+        normal: 'piel normal',
+        seca: 'piel seca',
+        mixta: 'piel mixta',
+        grasa: 'piel grasa',
+        sensible: 'piel sensible'
+      };
+
       const stepOrder = ['limpiar', 'tratar', 'hidratar', 'proteger'];
 
       const fuertes = /retinol|retinal|retinoid|\baha\b|\bbha\b|\bpha\b|peeling|peel\b|exfolia|glycolic|glicolic|salicyl|salicil|vitamin c|vitamina c/i;
 
       function tokens(value) {
         return String(value || '').split(/\s+/).filter(Boolean);
+      }
+
+      function esFuerte(p) {
+        return fuertes.test(p.t || '');
+      }
+
+      function momento(p) {
+        if (p.s === 'proteger') return 'Solo por la mañana';
+        if (p.s === 'tratar' && esFuerte(p)) return 'Solo por la noche';
+        return 'Mañana y noche';
+      }
+
+      function razon(p, goal, skin) {
+        const partes = [];
+        const objetivos = tokens(p.o).filter(h => (goalCollections[goal] || []).includes(h));
+        if (objetivos.length) {
+          partes.push('está en la selección de ' + objetivos.map(h => collectionNames[h] || h).join(' y '));
+        }
+        const handlePiel = skinCollection[skin];
+        if (handlePiel && tokens(p.k).includes(handlePiel)) {
+          partes.push('marcado como apto para ' + (collectionNames[handlePiel] || skin));
+        }
+        if (p.s === 'proteger') partes.push('cierra la rutina de la mañana');
+        if (!partes.length) partes.push('cubre el paso de ' + (stepLabels[p.s] || '').toLowerCase());
+        const texto = partes.join(' · ');
+        return texto.charAt(0).toUpperCase() + texto.slice(1) + '.';
       }
 
       function score(p, goal, skin) {
