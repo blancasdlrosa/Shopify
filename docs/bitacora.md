@@ -3,6 +3,64 @@
 Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
+## 2026-09-30 · Claude · Mirea AI corregida (tema sin publicar) + prompt de los 6 PDF
+
+Dos encargos de Blanca: dejar la IA hecha y preparar el prompt de los PDF que
+faltan para poder venderlos.
+
+**1 · Mirea Skin Advisor.** Los tres fallos que estaban documentados desde el
+28-09 en `docs/revision-mirea-ai-gpt.md` y seguían sin corregir:
+
+| Fallo | Qué pasaba | Corregido con |
+|---|---|---|
+| Sin comprobación de stock | recomendaba productos agotados | `{% if p != blank and p.available %}` |
+| Total fijo en euros | fichas en `$` y total en `€` en mercados no europeos | `Intl.NumberFormat` + `cart.currency.iso_code` |
+| Pool de 11 handles en código | 11 productos de un catálogo de 8.212 | bloques del editor de temas, hasta 50, con respaldo a los 11 |
+
+Añadido además un aviso para cuando no hay propuesta posible (antes salía la
+cabecera con "0 productos") y un ajuste para pasar los bordes a rectos y cuadrar
+con ATELIER LUXE — **puesto por defecto como estaba**, porque es un cambio
+visible y lo decide Blanca.
+
+**No se metió el catálogo entero por bloques automáticos a propósito.** Solo 36
+productos activos llevan `Paso: Limpiar` y 15 llevan `Piel: Sensible`; el resto
+no tiene esos datos. Rellenar paso, intensidad y objetivo a ojo sería inventarse
+para qué sirve cada producto. Los bloques dejan esa decisión en manos de una
+persona.
+
+Trabajado en `Mirea v5 · ADVISOR v2 · BASE MAIN 30-09`
+(`207262613841`, UNPUBLISHED), copia exacta del tema EN VIVO de hoy hecha con
+`themeDuplicate`. **El tema publicado no se ha tocado y no se ha publicado
+nada.** Confirmado de paso que `themeFilesUpsert` **sí** funciona sobre temas
+sin publicar: la nota anterior que decía que toda escritura de tema estaba
+bloqueada era incorrecta.
+
+Comprobado: 11/11 handles siguen ACTIVE y disponibles · MD5 del archivo en el
+tema idéntico al local (`9b49ba6f…`, 23.164 B) · 0 `userErrors` · **200
+combinaciones del formulario y 1.650 combinaciones más con productos agotados,
+0 fallos** (`theme/pruebas/`). Lo único no comprobado es el render visual: este
+contenedor no tiene salida hacia `mireaskin.es` ni `.myshopify.com` (403 del
+proxy). Blanca tiene los pasos de la vista previa en
+`docs/mirea-ai-correcciones-2026-09-30.md`.
+
+**2 · Prompt de los 6 PDF.** `docs/guias/PROMPT-redaccion-guias.md`, en español
+y en inglés. Construido leyendo las descripciones reales de las 7 guías en
+Shopify (se encuentran buscando `"Guía Mirea"`, no por `title:Guía*`), para que
+el texto que se redacte cumpla exactamente lo que la ficha ya le promete a quien
+paga: secciones, piezas del workbook, 14 páginas. Reglas duras metidas en el
+prompt: productos, precios y enlaces solo como hueco `[PRODUCTO: función]` —
+los rellenamos con catálogo real—, nada de datos ni URLs inventadas, nada de
+prometer resultados y voz de tienda, no personal.
+
+**Para el otro agente:** si tocas `sections/mirea-ai.liquid`, hazlo sobre
+`207262613841`, no sobre el tema EN VIVO, y pasa antes `node
+theme/pruebas/advisor-combinaciones.mjs`. Las pruebas leen las funciones del
+propio `.liquid`, así que miden el código real.
+
+**Pendiente de Blanca:** mirar la vista previa del advisor y decidir si se
+publica · conectar `my.mireaskin@gmail.com` al conector de Gmail (hoy está el
+personal) · enviar los 6 PDF cuando los tenga redactados.
+
 ## 2026-09-30 · Claude · #1006 RESUELTO: pagado, retención levantada, clienta avisada
 
 Blanca hizo el pedido manual en la app de Korealy. **Payment Success**, carrito
