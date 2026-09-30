@@ -159,3 +159,65 @@ quiera ayudar.
 2. Con esa respuesta, rehacer el análisis de EE. UU. con números.
 3. Si dicen que no hay solución: sentarse a decidir si se sigue vendiendo a
    España con este proveedor.
+
+---
+
+## Segunda confirmación por escrito · 30-09-2026 00:24
+
+Korealy lo ha repetido, sin que se lo preguntáramos otra vez, en respuesta al
+correo del 29-09 18:23. Textual:
+
+> *"Spain is one of the countries with particularly strict customs procedures
+> for cosmetic products. Based on our shipping experience, the return rate is
+> approximately 50%. Customs clearance is outside of our control and is
+> therefore not considered our responsibility. If a shipment is returned to
+> Korea due to customs clearance issues, we will refund the product value only,
+> excluding the original international shipping cost and a $2 return handling
+> fee."*
+
+Ya no es una frase suelta de un correo: es su posición, dicha dos veces y con
+los mismos términos económicos. El cálculo de este documento se mantiene.
+
+## Y además han admitido que el stock no es fiable
+
+En el mismo correo, textual:
+
+> *"Please note that inventory synchronization is not always real-time,
+> particularly due to the nature of cosmetic products. There may be a delay
+> between the actual stock status and the inventory information displayed in the
+> app. In some cases, we may need to inform you that an item is out of stock
+> after we have received your order."*
+
+O sea: **el proveedor reconoce por escrito que podemos cobrar un pedido y
+enterarnos después de que no hay producto.** Es exactamente lo que pasó con el
+#1006 y con el tercer artículo del #1004. No es un fallo puntual, es cómo
+funciona.
+
+Esto convierte el indicio del 29-09 (5.246 variantes con stock exactamente 100,
+1.916 con exactamente 1000) en algo peor que un indicio: aunque esas cifras
+fueran reales en el momento de importarlas, el propio proveedor dice que no se
+actualizan en tiempo real.
+
+## Lo que han contestado y lo que han esquivado
+
+Del correo de 8 preguntas del 29-09:
+
+| Pregunta | Respuesta |
+|---|---|
+| ¿Ha salido el #1004? | **Sí. "Order 1004 was shipped yesterday"** (es decir, el 29-09) |
+| Número de seguimiento | **No lo dan.** Reclamado otra vez el 30-09 a las 08:37 |
+| ¿Van los TRES artículos del #1004? | **No contestan.** Es la pregunta que decide si el pedido está bien |
+| Plazo de preparación | 3–5 días hábiles desde el pago |
+| ¿Fichero de stock por SKU? | **No contestan.** Solo admiten que el stock no es fiable |
+| SKU por tono y SKU duplicados | **No contestan.** Repiten que el SKU es "un identificador interno" |
+| Fichero GTIN/EAN | **No lo envían.** Vuelven a enlazar la misma hoja de Google |
+| ¿% de rechazos en aduana? | Contestado: **~50%** |
+
+**Pendiente de respuesta:** seguimiento del #1004, confirmación de los 3
+artículos, DDP a España y qué países de la UE despachan sin problema.
+
+**Importante para el #1004:** que Korealy diga "shipped" **no confirma que vayan
+los tres artículos**. Hasta que no lo confirmen, el pedido no se da por bueno ni
+se marca fulfillment, tal y como está acordado. Tampoco se le escribe a la
+clienta diciendo que ha salido: si el envío va incompleto, ese correo hay que
+desdecirlo.

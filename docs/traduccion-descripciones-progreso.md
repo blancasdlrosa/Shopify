@@ -35,8 +35,32 @@ formato, tamaño y activos por delante, porque es lo que decide la compra.
 | 2026-09-27 | 644 | 3.550 |
 | 2026-09-28 | 674 | 3.520 |
 | 2026-09-28 | **704** | 3.490 |
+| 30-09-2026 | **865** | 3.329 |
+| 30-09-2026 | **880** | 3.314 |
 
-Siguiente índice a procesar: **704**.
+Siguiente índice a procesar: **880**.
+
+**Corrección del 30-09.** Este archivo decía 704 y el registro de abajo llegaba
+a 769, pero **ninguno de los dos era cierto**. Comprobado contra la tienda por
+búsqueda binaria: los índices hasta el **864 ya estaban en español** y el 865
+(`11163767669073`, TONYMOLY Snail PDRN Recovery Cream) seguía en inglés. Se
+habían hecho unos 95 más de los anotados. Dos sesiones cerraron sin actualizar
+el archivo.
+
+Frontera verificada el 30-09, leyendo de la tienda:
+
+| Índice | Producto | Estado antes del lote |
+|---|---|---|
+| 860 | Sulwhasoo Essential Comfort | español |
+| 861 | Sulwhasoo Concentrated Ginseng Creamy Mask | español |
+| 862 | The Whoo Gongjinhyang Seol Corrector | español |
+| 863 | REJURAN Turnover Ampoule | español |
+| 864 | IOPE RETINOL EXPERT 0.1% | español |
+| **865** | **TONYMOLY Snail PDRN Recovery Cream** | **inglés** |
+| 870, 875, 880, 890, 900 | varios | inglés |
+
+Lección: el índice de este archivo no vale como fuente. Antes de retomar, se
+busca la frontera en la tienda. Cuesta dos consultas.
 
 Verificado el 27-09 contra la tienda, no contra este archivo: el índice 523
 (`11153921474897`, desmaquillante bifásico A'pieu) ya está en español y el 524
@@ -113,6 +137,28 @@ que tenía. Lo arreglé esta misma mañana en el lote de títulos defectuosos.
 comprobados uno a uno: los dos limpiadores EUNYUL (limón / aloe) y los dos
 solares YUNJAC (*Daily Lightweight* / *Ultra Comfort Waterproof*). Sin
 desplazamiento.
+
+## 30-09-2026 · lote 865-879
+
+15 fichas. Las 15 releídas de la tienda una a una después de escribir: cada
+texto está en su producto. `userErrors: []` en los 15.
+
+**Pares de riesgo de esta tanda, comprobados uno a uno:**
+- Los **tres formatos de ginseng rojo Jung Kwan Jang** (Every Time LONGEST, 20
+  sobres · Every Time FILM MAX, 45 láminas · Basic, dos envases de 100 g). Es
+  justo el tipo de trío que provocó el incidente del 27-09. Cada ficha describe
+  su propio formato.
+- Los dos **Royal Regina** de The Whoo (sérum de 45 ml y crema de 50 ml).
+- Los dos **d'Alba** (parches de contorno de 90 g y mascarillas de 35 g).
+
+**Reclamos de salud no republicados.** Las tres fichas de ginseng son
+complementos alimenticios, y el texto del fabricante decía que *"may help
+improve immunity, reduce fatigue... enhance memory"*. **No se ha publicado nada
+de eso.** El Reglamento (CE) 1924/2006 regula las declaraciones de propiedades
+saludables, y las del ginseng están pendientes de evaluación en la UE. Las
+fichas describen el producto, el formato y cómo se toma, y llevan la mención
+"Complemento alimenticio". Mismo criterio que con el *"7 años más joven"* de
+O HUI el 28-09.
 
 ## 28-09-2026 · lote 750-769
 
