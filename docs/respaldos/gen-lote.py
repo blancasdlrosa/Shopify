@@ -9,7 +9,10 @@ expected keyword. Feed it a dict of {index: (title_keyword, html)}.
 
 Usage: edit LOTE below, then `python3 docs/respaldos/gen-lote.py`.
 """
-import json, os, sys
+import json, os, re, sys
+
+# EU Regulation 655/2013: efficacy figures need documented evidence we don't have.
+CLAIM = re.compile(r"\d+\s*(años|years)\s*(más\s*joven|younger)|\d+\s*%\s*(menos|más)\s*arrugas", re.I)
 
 QUEUE = os.environ.get(
     "COLA",
@@ -27,6 +30,9 @@ def build(lote, queue_path=QUEUE):
         row = rows[i]
         if keyword.lower() not in row["t"].lower():
             errors.append(f"index {i}: expected '{keyword}' in title '{row['t']}'")
+            continue
+        if CLAIM.search(html):
+            errors.append(f"index {i}: unsupported efficacy claim in text ('{CLAIM.search(html).group(0)}')")
             continue
         if '"""' in html or "\\" in html:
             errors.append(f"index {i}: html is not safe inside a GraphQL block string")

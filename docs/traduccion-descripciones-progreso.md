@@ -28,15 +28,20 @@ formato, tamaño y activos por delante, porque es lo que decide la compra.
 
 | Fecha | Hechas | Quedan |
 |---|---|---|
-| 28-09-2026 | **728** | 3.466 |
-| 28-09-2026 | **750** | 3.444 |
-| 28-09-2026 | **770** | 3.424 |
 | 2026-09-23 | 494 | 3.700 |
 | 2026-09-27 | 644 | 3.550 |
 | 2026-09-28 | 674 | 3.520 |
-| 2026-09-28 | **704** | 3.490 |
+| 2026-09-28 | 704 | 3.490 |
+| 2026-09-28 | 728 | 3.466 |
+| 2026-09-28 | 750 | 3.444 |
+| 2026-09-28 | 770 | 3.424 |
+| 2026-09-30 | **790** | 3.404 |
 
-Siguiente índice a procesar: **704**.
+Siguiente índice a procesar: **790**.
+
+Verificado el 30-09 contra la tienda: los índices 704-769 están todos en español, sin
+huecos, y el 770 estaba en inglés. La línea anterior («siguiente 704») estaba desfasada;
+la tabla era la correcta. Tabla reordenada por fecha.
 
 Verificado el 27-09 contra la tienda, no contra este archivo: el índice 523
 (`11153921474897`, desmaquillante bifásico A'pieu) ya está en español y el 524
@@ -134,3 +139,12 @@ si detecta patrones tipo *"N años más joven"*.
 el mismo producto con dos fichas distintas. Se han traducido las dos porque
 ambas están activas, pero **conviene decidir qué se hace con los duplicados**:
 compiten entre sí en buscador y reparten las señales de SEO. No los he tocado.
+
+
+## 30-09-2026 · lote 770-789
+
+20 fichas, generadas con `gen-lote.py` y verificadas releyendo de la tienda: las 20
+coinciden con su título. `O HUI Prime Advancer 50ml` (#775) repetía la cifra *"7 years
+younger"*: no se publica, igual que en #769. El chequeo de reclamos que describía este
+fichero no estaba en el generador del repo; añadido (`CLAIM` en `gen-lote.py`) y probado:
+rechaza *"7 años más joven"*.
