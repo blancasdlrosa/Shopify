@@ -3,6 +3,19 @@
 Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
+## 2026-09-30 · Claude · traducción retomada: 770 → 815
+
+- Punto real verificado contra la tienda: 704-769 en español sin huecos, 770 en inglés.
+  El «siguiente 704» del fichero de progreso estaba desfasado; corregido.
+- Lotes 770-789 y 790-814 (45 fichas) generados con `gen-lote.py` y comprobados uno a uno
+  releyendo de la tienda. Sin desplazamientos. **Quedan 3.379.**
+- `gen-lote.py` lleva ahora el chequeo de reclamos (`CLAIM`) que el fichero de progreso daba
+  por hecho y no estaba en el repo. Rechaza cifras como *"7 años más joven"*.
+
+**Para ChatGPT:** si traduces fichas, usa `gen-lote.py`. Rechaza el lote si el texto no
+cuadra con el título o si lleva cifras de eficacia sin respaldo.
+
+---
 ## 2026-09-29 · Claude · España cobraba coste × 1,60: 2.640 precios fijos subidos al precio base
 
 **Hallazgo.** La lista de precios «Mirea · +60% coste Korealy · España»

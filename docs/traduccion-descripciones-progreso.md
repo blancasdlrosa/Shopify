@@ -35,9 +35,10 @@ formato, tamaño y activos por delante, porque es lo que decide la compra.
 | 2026-09-28 | 728 | 3.466 |
 | 2026-09-28 | 750 | 3.444 |
 | 2026-09-28 | 770 | 3.424 |
-| 2026-09-30 | **790** | 3.404 |
+| 2026-09-30 | 790 | 3.404 |
+| 2026-09-30 | **815** | 3.379 |
 
-Siguiente índice a procesar: **790**.
+Siguiente índice a procesar: **815**.
 
 Verificado el 30-09 contra la tienda: los índices 704-769 están todos en español, sin
 huecos, y el 770 estaba en inglés. La línea anterior («siguiente 704») estaba desfasada;
@@ -148,3 +149,10 @@ coinciden con su título. `O HUI Prime Advancer 50ml` (#775) repetía la cifra *
 younger"*: no se publica, igual que en #769. El chequeo de reclamos que describía este
 fichero no estaba en el generador del repo; añadido (`CLAIM` en `gen-lote.py`) y probado:
 rechaza *"7 años más joven"*.
+
+## 30-09-2026 · lote 790-814
+
+25 fichas, generadas con `gen-lote.py` y verificadas releyendo de la tienda: las 25
+coinciden con su título. Reclamos no publicados: Sulwhasoo First Care (#802) *"within four
+weeks... 10 signs of visible aging"* y el *"significant increase in collagen"* de Whoo
+Cheonyuldan (#807). Se describe el producto sin cifras de eficacia.
