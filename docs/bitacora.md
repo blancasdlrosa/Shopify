@@ -3,6 +3,51 @@
 Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
+## 2026-09-30 · Claude · Korealy admite 50% de devoluciones en aduana para España
+
+Korealy contestó de madrugada a los tres frentes. **Lo más grave, textual:**
+*"Based on our shipping experience, the return rate is approximately 50%"* para
+envíos de cosmética a España, no se hacen responsables, y en una devolución
+reembolsan solo el valor del producto, sin el envío internacional y cobrando 2 $.
+
+Análisis completo con números en `docs/ALERTA-devoluciones-50-por-ciento-2026-09-30.md`.
+Resumen: con el #1004 (margen real 13,01 €) y una pérdida por devolución de
+12-16 €, el resultado medio por pedido a España ronda **−0,50 €**. Subir precios
+no lo arregla: ninguna política de precios compensa que uno de cada dos paquetes
+no llegue.
+
+**Lo que puede salvarlo:** Korealy envía **DDP solo a EE. UU.** Se les ha
+preguntado (mensaje `1a0f1760daac9e51`) si pueden hacer DDP a España, qué
+países de la UE despachan bien, y qué documentación mejoraría el despacho. Esa
+respuesta decide la estrategia. Si no hay DDP a España, **el mercado viable
+puede ser EE. UU. y no España**, justo al revés de lo que parecía: ver
+`docs/eeuu-analisis-preliminar.md`.
+
+**También admitido por escrito:**
+- El stock **no** es en tiempo real: *"we may need to inform you that an item is
+  out of stock after we have received your order"*. Confirma lo del #1006.
+- Los SKU son internos suyos y **no se sincronizan**: *"you may change or manage
+  the SKUs separately within your own store"*. La petición de SKU por tono para
+  los 859 productos queda respondida con un **no**.
+
+**#1004:** dicen que salió, pero **siguen sin dar número de seguimiento** pese a
+pedirlo dos veces. Reclamado otra vez.
+
+**#1006:** rechazan mandar factura de PayPal; hay que pagar en su app. La app
+estuvo caída y dijeron a las 00:15 que estaría en ~4-5 h. Blanca hará el pago
+manual con un tope de ~30 USD, informada del riesgo del 50%.
+
+**GTIN:** han mandado por fin la lista, una hoja de Google
+(`1Kn1yk3tA48aPijnJm9tCQIo6koWwJlw3qaKnVs6D0J8`, "Korealy-Download GTIN List").
+Se puede abrir con las herramientas de Drive, pero **`docs.google.com` está
+bloqueado por el proxy** para descarga directa. Además **está indexada por
+nombre de producto, no por SKU**, así que el cruce contra el catálogo será
+parcial. Pendiente de procesar.
+
+**Para ChatGPT:** antes de proponer nada sobre precios, márgenes o crecimiento en
+España, lee el documento de la alerta. El problema no es el precio.
+
+---
 ## 2026-09-29 · Claude · la app de Korealy devuelve error de servidor (5xx)
 
 Blanca informa de que al entrar en Korealy sale un **error de servidor**. Es un
