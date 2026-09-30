@@ -1,25 +1,26 @@
 {%- comment -%}
   Mirea Skin Advisor
   ------------------
-  Base: sección escrita por ChatGPT (18.374 B, tema EN VIVO 28-09).
-  Revisión Claude 30-09-2026. Tres correcciones y una ampliación:
+  Base: sección escrita por ChatGPT. Revisión Claude 30-09-2026.
 
-  1. Disponibilidad. Antes se recomendaban productos sin comprobar el stock:
-     una clienta podía recibir una propuesta con un producto agotado. Ahora
-     cada ficha exige `product.available`.
-  2. Moneda. El total estaba fijo en euros mientras las fichas usaban el
-     filtro `money`, que sí cambia con el mercado. En un mercado en dólares
-     las fichas decían $ y el total decía €. Ahora el total se formatea con
-     la divisa del carrito.
-  3. Catálogo. El pool estaba fijado a 11 handles escritos en el código.
-     Ahora la sección acepta bloques desde el editor de temas (hasta 50
-     productos) con su paso, intensidad, objetivos y tipos de piel. Si no
-     hay bloques, se usa el pool original de 11 como respaldo, así que la
-     página nunca se queda vacía.
+  Cambio grande de esta versión: el advisor ya no elige entre 11 productos
+  escritos en el código. Pide los productos a las colecciones reales de la
+  tienda y elige entre cientos. Cada producto trae su paso de rutina, sus
+  tipos de piel y sus objetivos de las colecciones a las que ya pertenece:
 
-  No se ha cambiado nada visible del diseño. El radio de los bordes se puede
-  pasar a recto (para cuadrar con ATELIER LUXE) desde los ajustes, y viene
-  por defecto como estaba.
+    Limpiar 967 · Tratar 857 · Hidratar 845 · Proteger 578
+    Calma y rojeces 1.104 · Poros 737 · Antiedad 660 · Barrera 516 ·
+    Manchas 457 · Granitos 329
+    Piel sensible 977 · Piel seca 844 · Piel grasa 175 · Piel mixta 172
+
+  No se inventa ninguna clasificación: sale de la colección a la que Blanca
+  (o las reglas automáticas de la tienda) ya asignó cada producto.
+
+  Si la petición falla, se usa el pool de respaldo que hay más abajo, así que
+  la página nunca se queda sin propuesta.
+
+  Correcciones anteriores que se mantienen: solo se proponen productos
+  disponibles, y el total se formatea con la divisa del mercado.
 {%- endcomment -%}
 
 {%- liquid
@@ -39,11 +40,15 @@
   if guia == blank
     assign guia = all_products['guia-mirea-retinoides-sin-errores']
   endif
+
+  assign alternativas = section.settings.alternativas | default: 4
 -%}
 
 <section id="mirea-ai-{{ section.id }}" class="mai"
          data-currency="{{ divisa }}"
-         data-locale="{{ idioma }}">
+         data-locale="{{ idioma }}"
+         data-root="{{ routes.root_url }}"
+         data-alternativas="{{ alternativas }}">
   <div class="mai-wrap">
     <p class="mai-kicker">MIREA SKIN ADVISOR · BETA</p>
     <h1>Tu rutina, mejor pensada.</h1>
@@ -99,6 +104,11 @@
           <p>Completa las preguntas y el advisor ordenará productos según compatibilidad con tu objetivo, piel y presupuesto.</p>
         </div>
 
+        <div class="mai-loading" hidden>
+          <h2>Buscando en el catálogo…</h2>
+          <p>Comparando los productos disponibles para tu objetivo y tu tipo de piel.</p>
+        </div>
+
         <div class="mai-output" hidden>
           <div class="mai-head">
             <span>PROPUESTA MIREA</span>
@@ -107,10 +117,17 @@
             <div class="mai-meta">
               <span class="mai-total"></span>
               <span class="mai-count"></span>
+              <span class="mai-universo"></span>
             </div>
           </div>
           <div class="mai-cards"></div>
           <p class="mai-budget-note" hidden></p>
+
+          <div class="mai-alts" hidden>
+            <h3>Más opciones para cada paso</h3>
+            <div class="mai-alts-body"></div>
+          </div>
+
           {%- if guia != blank and guia.available -%}
             <a class="mai-guide" href="{{ guia.url }}" hidden>{{ guia.title }} →</a>
           {%- endif -%}
@@ -125,66 +142,29 @@
     </div>
 
     <div class="mai-pool" hidden>
-      {%- if section.blocks.size > 0 -%}
+      {%- comment -%}
+        Pool de respaldo: los 11 productos que la sección traía escritos en el
+        código. Solo se usa si la petición al catálogo falla.
+      {%- endcomment -%}
+      {%- assign respaldo = 'beauty-of-joseon-relief-sun-rice-probiotics-50ml-spf50-pa|proteger|Mañana · Proteger|granitos manchas barrera hidratacion edad|normal seca mixta grasa sensible|-,anua-heartleaf-quercetinol-pore-deep-cleansing-foam-150ml|limpiar|Limpiar|granitos manchas barrera hidratacion edad|normal mixta grasa sensible|-,medicube-zero-foam-cleanser-120g|limpiar|Limpiar|granitos manchas hidratacion edad|normal mixta grasa|sensible,medicube-kojic-acid-turmeric-niacinamide-serum-30ml|tratar|Tratar|manchas granitos|normal mixta grasa|sensible,medicube-txa-niacinamide-capsule-cream-55g|hidratar|Hidratar|manchas granitos hidratacion|normal mixta seca|-,anua-3-ceramide-panthenol-moisture-barrier-cream-100ml|hidratar|Reparar|barrera hidratacion granitos edad|seca sensible normal mixta|-,beplain-cicaful-ampoule-30ml|tratar|Calmar|barrera granitos hidratacion|sensible seca normal mixta grasa|-,medicube-hyaluronic-multi-peptide-serum-30ml|tratar|Hidratar|hidratacion barrera edad manchas|normal seca mixta sensible grasa|-,medicube-collagen-jelly-cream-50ml|hidratar|Sellar|hidratacion edad barrera|seca normal mixta|grasa,medicube-deep-vita-a-retinol-serum-30ml|tratar|Noche · Retinoide|edad|normal mixta grasa seca|sensible,medicube-pdrn-pink-peptide-serum-30ml|tratar|Apoyar|edad hidratacion barrera|normal seca mixta sensible grasa|-' | split: ',' -%}
 
-        {%- for block in section.blocks -%}
-          {%- assign p = block.settings.producto -%}
-          {%- if p != blank and p.available -%}
-            {%- capture objetivos -%}
-              {% if block.settings.obj_granitos %}granitos {% endif %}
-              {% if block.settings.obj_manchas %}manchas {% endif %}
-              {% if block.settings.obj_barrera %}barrera {% endif %}
-              {% if block.settings.obj_hidratacion %}hidratacion {% endif %}
-              {% if block.settings.obj_edad %}edad {% endif %}
-            {%- endcapture -%}
-            {%- capture pieles -%}
-              {% if block.settings.piel_normal %}normal {% endif %}
-              {% if block.settings.piel_seca %}seca {% endif %}
-              {% if block.settings.piel_mixta %}mixta {% endif %}
-              {% if block.settings.piel_grasa %}grasa {% endif %}
-              {% if block.settings.piel_sensible %}sensible {% endif %}
-            {%- endcapture -%}
-            {%- capture evitar -%}{% if block.settings.evitar_sensible %}sensible{% endif %}{%- endcapture -%}
-
-            <article class="mai-card"
-                     data-role="{{ block.settings.rol }}"
-                     data-goals="{{ objetivos | strip_newlines | strip }}"
-                     data-skins="{{ pieles | strip_newlines | strip }}"
-                     data-avoid="{{ evitar | strip }}"
-                     data-intensity="{{ block.settings.intensidad }}"
-                     data-price="{{ p.price | divided_by: 100.0 }}"
-                     {{ block.shopify_attributes }}>
-              <a href="{{ p.url }}">{% if p.featured_image %}{{ p.featured_image | image_url: width:520 | image_tag: loading:'lazy', alt: p.title }}{% endif %}<small>{{ block.settings.etiqueta }}</small><h3>{{ p.title }}</h3><b>{{ p.price | money }}</b></a>
-            </article>
-          {%- endif -%}
-        {%- endfor -%}
-
-      {%- else -%}
-
-        {%- comment -%}
-          Pool de respaldo. Son los 11 productos que la sección traía escritos
-          en el código. Se mantienen para que la página siga funcionando
-          mientras no se añadan bloques desde el editor.
-        {%- endcomment -%}
-        {%- assign respaldo = 'beauty-of-joseon-relief-sun-rice-probiotics-50ml-spf50-pa|spf|Mañana · Proteger|granitos manchas barrera hidratacion edad|normal seca mixta grasa sensible|-|gentle,anua-heartleaf-quercetinol-pore-deep-cleansing-foam-150ml|cleanser|Limpiar|granitos manchas barrera hidratacion edad|normal mixta grasa sensible|-|gentle,medicube-zero-foam-cleanser-120g|cleanser|Limpiar|granitos manchas hidratacion edad|normal mixta grasa|sensible|medium,medicube-kojic-acid-turmeric-niacinamide-serum-30ml|treatment|Tratar|manchas granitos|normal mixta grasa|sensible|medium,medicube-txa-niacinamide-capsule-cream-55g|moisturizer|Hidratar|manchas granitos hidratacion|normal mixta seca|-|gentle,anua-3-ceramide-panthenol-moisture-barrier-cream-100ml|moisturizer|Reparar|barrera hidratacion granitos edad|seca sensible normal mixta|-|gentle,beplain-cicaful-ampoule-30ml|serum|Calmar|barrera granitos hidratacion|sensible seca normal mixta grasa|-|gentle,medicube-hyaluronic-multi-peptide-serum-30ml|serum|Hidratar|hidratacion barrera edad manchas|normal seca mixta sensible grasa|-|gentle,medicube-collagen-jelly-cream-50ml|moisturizer|Sellar|hidratacion edad barrera|seca normal mixta|grasa|gentle,medicube-deep-vita-a-retinol-serum-30ml|treatment|Noche · Retinoide|edad|normal mixta grasa seca|sensible|strong,medicube-pdrn-pink-peptide-serum-30ml|serum|Apoyar|edad hidratacion barrera|normal seca mixta sensible grasa|-|gentle' | split: ',' -%}
-
-        {%- for fila in respaldo -%}
-          {%- assign campos = fila | split: '|' -%}
-          {%- assign p = all_products[campos[0]] -%}
-          {%- if p != blank and p.available -%}
-            <article class="mai-card"
-                     data-role="{{ campos[1] }}"
-                     data-goals="{{ campos[3] }}"
-                     data-skins="{{ campos[4] }}"
-                     data-avoid="{{ campos[5] | remove: '-' }}"
-                     data-intensity="{{ campos[6] }}"
-                     data-price="{{ p.price | divided_by: 100.0 }}">
-              <a href="{{ p.url }}">{% if p.featured_image %}{{ p.featured_image | image_url: width:520 | image_tag: loading:'lazy', alt: p.title }}{% endif %}<small>{{ campos[2] }}</small><h3>{{ p.title }}</h3><b>{{ p.price | money }}</b></a>
-            </article>
-          {%- endif -%}
-        {%- endfor -%}
-
-      {%- endif -%}
+      {%- for fila in respaldo -%}
+        {%- assign campos = fila | split: '|' -%}
+        {%- assign p = all_products[campos[0]] -%}
+        {%- if p != blank and p.available -%}
+          <article class="mai-card"
+                   data-role="{{ campos[1] }}"
+                   data-label="{{ campos[2] }}"
+                   data-goals="{{ campos[3] }}"
+                   data-skins="{{ campos[4] }}"
+                   data-avoid="{{ campos[5] | remove: '-' }}"
+                   data-price="{{ p.price | divided_by: 100.0 }}"
+                   data-title="{{ p.title | escape }}"
+                   data-url="{{ p.url }}"
+                   data-image="{% if p.featured_image %}{{ p.featured_image | image_url: width: 360 }}{% endif %}">
+          </article>
+        {%- endif -%}
+      {%- endfor -%}
     </div>
   </div>
 
@@ -200,26 +180,32 @@
     .mai-form label{display:block;font-size:13px;font-weight:600;margin-bottom:15px}
     .mai-form select{width:100%;display:block;margin-top:7px;padding:13px;border:1px solid #dfd1cb;border-radius:var(--mai-r-media);background:white}
     .mai-form button{width:100%;padding:14px;border:0;border-radius:var(--mai-r-pill);background:var(--ink);color:white;font-weight:600;cursor:pointer}
+    .mai-form button[disabled]{opacity:.55;cursor:progress}
     .mai-form>small{display:block;color:#927c78;font-size:10px;line-height:1.5;margin-top:12px}
-    .mai-empty,.mai-none{min-height:420px;display:flex;flex-direction:column;justify-content:center;padding:28px;background:linear-gradient(145deg,#fff,#f5ebe6);border-radius:var(--mai-r-media)}
+    .mai-empty,.mai-none,.mai-loading{min-height:420px;display:flex;flex-direction:column;justify-content:center;padding:28px;background:linear-gradient(145deg,#fff,#f5ebe6);border-radius:var(--mai-r-media)}
     .mai-empty span,.mai-head>span{font-size:10px;letter-spacing:.18em;color:#a28782}
-    .mai-empty h2,.mai-head h2,.mai-none h2{font:400 32px Georgia,serif;margin:8px 0}
-    .mai-empty p,.mai-head p,.mai-none p{color:#745f5c;line-height:1.55}
+    .mai-empty h2,.mai-head h2,.mai-none h2,.mai-loading h2{font:400 32px Georgia,serif;margin:8px 0}
+    .mai-empty p,.mai-head p,.mai-none p,.mai-loading p{color:#745f5c;line-height:1.55}
     .mai-none a{display:inline-block;margin-top:16px;color:var(--ink)}
     .mai-meta{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 6px}
     .mai-meta span{font-size:11px;padding:7px 10px;border:1px solid #eadbd5;border-radius:var(--mai-r-pill);background:#fffaf7}
     .mai-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
     .mai-card{border:1px solid #eaded8;border-radius:var(--mai-r-media);padding:11px;background:#fff}
-    .mai-card a{text-decoration:none;color:inherit}
+    .mai-card a{text-decoration:none;color:inherit;display:block}
     .mai-card img{width:100%;aspect-ratio:1/1;object-fit:contain;background:#fbf8f5;border-radius:11px}
-    .mai-card small{display:block;text-transform:uppercase;letter-spacing:.07em;color:#9c817d;margin-top:9px}
-    .mai-card h3{font-size:13px;line-height:1.35;margin:5px 0}
+    .mai-card small{display:block;text-transform:uppercase;letter-spacing:.07em;color:#9c817d;margin-top:9px;font-size:10px}
+    .mai-card h3{font-size:13px;line-height:1.35;margin:5px 0;font-weight:600}
     .mai-card b{font-size:13px}
     .mai-budget-note{font-size:12px;color:#806b67;background:#fbf5f1;padding:10px 12px;border-radius:var(--mai-r-media);margin-top:14px}
+    .mai-alts{margin-top:30px;border-top:1px solid #eadbd5;padding-top:22px}
+    .mai-alts h3{font:400 24px Georgia,serif;margin:0 0 4px}
+    .mai-alt-grupo{margin-top:18px}
+    .mai-alt-grupo>p{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#a28782;margin:0 0 8px}
+    .mai-alt-grupo .mai-cards{margin-top:0;grid-template-columns:repeat(4,1fr)}
     .mai-guide{display:inline-block;margin-top:18px;color:var(--ink)}
     [hidden]{display:none!important}
-    @media(max-width:850px){.mai-grid{grid-template-columns:1fr}.mai-cards{grid-template-columns:repeat(2,1fr)}}
-    @media(max-width:520px){.mai-cards{grid-template-columns:1fr}.mai-form,.mai-result{padding:16px}}
+    @media(max-width:850px){.mai-grid{grid-template-columns:1fr}.mai-cards,.mai-alt-grupo .mai-cards{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:520px){.mai-cards{grid-template-columns:1fr}.mai-alt-grupo .mai-cards{grid-template-columns:repeat(2,1fr)}.mai-form,.mai-result{padding:16px}}
   </style>
 
   <script>
@@ -228,20 +214,26 @@
       if (!root) return;
 
       const form = root.querySelector('.mai-form');
+      const boton = form.querySelector('button[type="submit"]');
       const empty = root.querySelector('.mai-empty');
+      const loading = root.querySelector('.mai-loading');
       const none = root.querySelector('.mai-none');
       const output = root.querySelector('.mai-output');
       const cardsBox = root.querySelector('.mai-cards');
       const totalEl = root.querySelector('.mai-total');
       const countEl = root.querySelector('.mai-count');
+      const universoEl = root.querySelector('.mai-universo');
       const titleEl = root.querySelector('.mai-result-title');
       const copyEl = root.querySelector('.mai-result-copy');
       const budgetNote = root.querySelector('.mai-budget-note');
+      const altsBox = root.querySelector('.mai-alts');
+      const altsBody = root.querySelector('.mai-alts-body');
       const guide = root.querySelector('.mai-guide');
-      const pool = Array.from(root.querySelectorAll('.mai-pool .mai-card'));
 
       const currency = root.dataset.currency || 'EUR';
       const locale = root.dataset.locale || 'es';
+      const rootUrl = (root.dataset.root || '').replace(/\/$/, '');
+      const maxAlts = Number(root.dataset.alternativas || 4);
 
       let formatter = null;
       try {
@@ -271,78 +263,188 @@
         sensible: 'piel sensible'
       };
 
+      // Colecciones reales de la tienda de las que sale cada objetivo.
+      const goalCollections = {
+        granitos: ['granitos', 'poros'],
+        manchas: ['manchas'],
+        barrera: ['barrera-cutanea', 'calma-y-rojeces'],
+        hidratacion: ['piel-seca', 'barrera-cutanea'],
+        edad: ['antiedad']
+      };
+
+      const skinCollection = {
+        seca: 'piel-seca',
+        grasa: 'piel-grasa',
+        mixta: 'piel-mixta',
+        sensible: 'piel-sensible',
+        normal: ''
+      };
+
+      const stepOrder = ['limpiar', 'tratar', 'hidratar', 'proteger'];
+      const stepLabels = {
+        limpiar: 'Limpiar',
+        tratar: 'Tratar',
+        hidratar: 'Hidratar',
+        proteger: 'Proteger'
+      };
+
+      // Activos que no se proponen a piel sensible.
+      const fuertes = /retinol|retinal|retinoid|\baha\b|\bbha\b|\bpha\b|peeling|peel\b|exfolia|glycolic|glicolic|salicyl|salicil|vitamin c|vitamina c/i;
+
       function tokens(value) {
         return String(value || '').split(/\s+/).filter(Boolean);
       }
 
-      function price(card) {
-        return Number(card.dataset.price || 0);
-      }
-
-      function score(card, goal, skin) {
-        const goals = tokens(card.dataset.goals);
-        const skins = tokens(card.dataset.skins);
-        const avoid = tokens(card.dataset.avoid);
+      function score(p, goal, skin) {
+        const objetivos = tokens(p.o);
+        const pieles = tokens(p.k);
         let s = 0;
 
-        if (goals.includes(goal)) s += 40;
-        if (skins.includes(skin)) s += 18;
-        if (avoid.includes(skin)) s -= 80;
-        if (skin === 'sensible' && card.dataset.intensity === 'strong') s -= 100;
+        const buscados = goalCollections[goal] || [];
+        buscados.forEach(h => { if (objetivos.includes(h)) s += 40; });
 
-        const role = card.dataset.role;
-        if (role === 'spf') s += 16;
-        if (role === 'treatment') s += 14;
-        if (role === 'serum') s += 12;
-        if (role === 'moisturizer') s += 10;
-        if (role === 'cleanser') s += 9;
+        const handlePiel = skinCollection[skin];
+        if (handlePiel) {
+          if (pieles.includes(handlePiel)) s += 18;
+          else if (pieles.length) s -= 25;
+        }
 
-        if (goal === 'barrera' && card.dataset.intensity === 'gentle') s += 12;
-        if (goal === 'edad' && skin === 'sensible' && role === 'serum') s += 10;
-        if (goal === 'granitos' && skin === 'grasa' && role === 'cleanser') s += 8;
+        if (skin === 'sensible') {
+          if (!pieles.includes('piel-sensible')) s -= 30;
+          if (fuertes.test(p.t)) s -= 100;
+        }
+
+        if (p.s === 'proteger') s += 16;
+        if (p.s === 'tratar') s += 14;
+        if (p.s === 'hidratar') s += 10;
+        if (p.s === 'limpiar') s += 9;
 
         return s;
       }
 
-      function choose(goal, skin, stepLimit, budget) {
-        const ranked = pool
-          .map(card => ({ card, score: score(card, goal, skin), price: price(card), role: card.dataset.role }))
-          .filter(x => x.score > 0 && x.price > 0)
-          .sort((a, b) => b.score - a.score || a.price - b.price);
+      async function pedirColecciones(handles) {
+        const vistos = new Set();
+        const productos = [];
+        let universo = 0;
 
-        const selected = [];
-        const usedRoles = new Set();
-        let total = 0;
-
-        const roleOrder = ['spf', 'cleanser', 'treatment', 'serum', 'moisturizer'];
-
-        roleOrder.forEach(role => {
-          if (selected.length >= stepLimit) return;
-          const candidates = ranked.filter(x => x.role === role && !selected.includes(x));
-          const candidate = candidates.find(x => total + x.price <= budget);
-          if (candidate) {
-            selected.push(candidate);
-            usedRoles.add(role);
-            total += candidate.price;
+        for (const handle of handles) {
+          let datos = null;
+          try {
+            const respuesta = await fetch(rootUrl + '/collections/' + handle + '?view=advisor', {
+              headers: { 'Accept': 'text/plain' }
+            });
+            if (!respuesta.ok) continue;
+            datos = JSON.parse(await respuesta.text());
+          } catch (error) {
+            continue;
           }
-        });
-
-        if (selected.length < stepLimit) {
-          ranked.forEach(candidate => {
-            if (selected.length >= stepLimit) return;
-            if (selected.includes(candidate)) return;
-            if (total + candidate.price > budget) return;
-            if (usedRoles.has(candidate.role) && stepLimit <= 4) return;
-            selected.push(candidate);
-            usedRoles.add(candidate.role);
-            total += candidate.price;
+          if (!datos || !Array.isArray(datos.productos)) continue;
+          universo += Number(datos.total || datos.productos.length);
+          datos.productos.forEach(p => {
+            if (vistos.has(p.u)) return;
+            vistos.add(p.u);
+            productos.push(p);
           });
         }
 
-        return { selected, total };
+        return { productos, universo };
       }
 
-      form.addEventListener('submit', event => {
+      function poolDeRespaldo() {
+        return Array.from(root.querySelectorAll('.mai-pool .mai-card')).map(c => ({
+          t: c.dataset.title,
+          u: c.dataset.url,
+          p: Math.round(Number(c.dataset.price || 0) * 100),
+          i: c.dataset.image,
+          s: c.dataset.role,
+          k: tokens(c.dataset.skins).map(x => 'piel-' + x).join(' '),
+          o: c.dataset.goals,
+          etiqueta: c.dataset.label,
+          respaldo: true
+        }));
+      }
+
+      function elegir(productos, goal, skin, stepLimit, budget) {
+        const ordenados = productos
+          .map(p => ({ p: p, score: score(p, goal, skin), precio: Number(p.p || 0) / 100 }))
+          .filter(x => x.score > 0 && x.precio > 0)
+          .sort((a, b) => b.score - a.score || a.precio - b.precio);
+
+        const rutina = [];
+        const usados = new Set();
+        let total = 0;
+
+        // Un producto por paso, en el orden de la rutina.
+        stepOrder.forEach(paso => {
+          if (rutina.length >= stepLimit) return;
+          const elegido = ordenados.find(x => x.p.s === paso && !usados.has(x.p.u) && total + x.precio <= budget);
+          if (elegido) {
+            rutina.push(elegido);
+            usados.add(elegido.p.u);
+            total += elegido.precio;
+          }
+        });
+
+        // Si pidió rutina completa, un segundo producto en tratar e hidratar.
+        if (stepLimit > 4) {
+          ['tratar', 'hidratar'].forEach(paso => {
+            if (rutina.length >= stepLimit) return;
+            const elegido = ordenados.find(x => x.p.s === paso && !usados.has(x.p.u) && total + x.precio <= budget);
+            if (elegido) {
+              rutina.push(elegido);
+              usados.add(elegido.p.u);
+              total += elegido.precio;
+            }
+          });
+        }
+
+        rutina.sort((a, b) => stepOrder.indexOf(a.p.s) - stepOrder.indexOf(b.p.s));
+
+        // Alternativas por paso, sin repetir lo ya propuesto.
+        const alternativas = {};
+        stepOrder.forEach(paso => {
+          const lista = ordenados
+            .filter(x => x.p.s === paso && !usados.has(x.p.u))
+            .slice(0, maxAlts);
+          if (lista.length) alternativas[paso] = lista;
+        });
+
+        return { rutina: rutina, total: total, alternativas: alternativas, candidatos: ordenados.length };
+      }
+
+      function pintarCard(x) {
+        const art = document.createElement('article');
+        art.className = 'mai-card';
+        const a = document.createElement('a');
+        a.href = x.p.u;
+        if (x.p.i) {
+          const img = document.createElement('img');
+          img.src = x.p.i;
+          img.alt = x.p.t;
+          img.loading = 'lazy';
+          a.appendChild(img);
+        }
+        const small = document.createElement('small');
+        small.textContent = x.p.etiqueta || stepLabels[x.p.s] || '';
+        a.appendChild(small);
+        const h3 = document.createElement('h3');
+        h3.textContent = x.p.t;
+        a.appendChild(h3);
+        const b = document.createElement('b');
+        b.textContent = money(Number(x.p.p || 0) / 100);
+        a.appendChild(b);
+        art.appendChild(a);
+        return art;
+      }
+
+      function mostrar(estado) {
+        empty.hidden = estado !== 'inicio';
+        loading.hidden = estado !== 'cargando';
+        output.hidden = estado !== 'resultado';
+        none.hidden = estado !== 'vacio';
+      }
+
+      form.addEventListener('submit', async event => {
         event.preventDefault();
 
         const data = new FormData(form);
@@ -350,49 +452,74 @@
         const skin = data.get('skin');
         const stepLimit = Number(data.get('steps') || 4);
         const budget = Number(data.get('budget') || 70);
-
         if (!goal) return;
 
-        const result = choose(goal, skin, stepLimit, budget);
+        boton.disabled = true;
+        mostrar('cargando');
+        root.querySelector('.mai-result').scrollIntoView({ behavior: 'smooth', block: 'start' });
 
-        if (result.selected.length === 0) {
-          empty.hidden = true;
-          output.hidden = true;
-          none.hidden = false;
-          root.querySelector('.mai-result').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        let productos = [];
+        let universo = 0;
+        try {
+          const traido = await pedirColecciones(goalCollections[goal] || []);
+          productos = traido.productos;
+          universo = traido.universo;
+        } catch (error) {
+          productos = [];
+        }
+
+        let desdeRespaldo = false;
+        if (!productos.length) {
+          productos = poolDeRespaldo();
+          desdeRespaldo = true;
+        }
+
+        const resultado = elegir(productos, goal, skin, stepLimit, budget);
+        boton.disabled = false;
+
+        if (!resultado.rutina.length) {
+          mostrar('vacio');
           return;
         }
 
         cardsBox.innerHTML = '';
+        resultado.rutina.forEach(x => cardsBox.appendChild(pintarCard(x)));
 
-        result.selected.forEach(item => {
-          const clone = item.card.cloneNode(true);
-          clone.removeAttribute('data-goals');
-          clone.removeAttribute('data-skins');
-          clone.removeAttribute('data-avoid');
-          clone.removeAttribute('data-intensity');
-          clone.removeAttribute('data-role');
-          clone.removeAttribute('data-price');
-          cardsBox.appendChild(clone);
+        altsBody.innerHTML = '';
+        let hayAlternativas = false;
+        stepOrder.forEach(paso => {
+          const lista = resultado.alternativas[paso];
+          if (!lista || !lista.length) return;
+          hayAlternativas = true;
+          const grupo = document.createElement('div');
+          grupo.className = 'mai-alt-grupo';
+          const titulo = document.createElement('p');
+          titulo.textContent = stepLabels[paso];
+          grupo.appendChild(titulo);
+          const rejilla = document.createElement('div');
+          rejilla.className = 'mai-cards';
+          lista.forEach(x => rejilla.appendChild(pintarCard(x)));
+          grupo.appendChild(rejilla);
+          altsBody.appendChild(grupo);
         });
+        altsBox.hidden = !hayAlternativas;
 
-        empty.hidden = true;
-        none.hidden = true;
-        output.hidden = false;
         titleEl.textContent = goalLabels[goal] || 'Tu propuesta';
         copyEl.textContent = 'Selección adaptada a ' + (skinLabels[skin] || skin) + ', con hasta ' + stepLimit + ' pasos y priorizando productos compatibles con tu objetivo.';
-        totalEl.textContent = 'Total aprox. ' + money(result.total);
-        countEl.textContent = result.selected.length + (result.selected.length === 1 ? ' producto' : ' productos');
+        totalEl.textContent = 'Total aprox. ' + money(resultado.total);
+        countEl.textContent = resultado.rutina.length + (resultado.rutina.length === 1 ? ' producto' : ' productos');
+        universoEl.hidden = desdeRespaldo || !universo;
+        universoEl.textContent = 'Elegido entre ' + universo + ' productos';
 
-        const hitLimit = result.selected.length < Math.min(stepLimit, 3);
-        budgetNote.hidden = !hitLimit;
-        budgetNote.textContent = hitLimit
+        const corto = resultado.rutina.length < Math.min(stepLimit, 3);
+        budgetNote.hidden = !corto;
+        budgetNote.textContent = corto
           ? 'Con este presupuesto priorizamos los productos con mayor encaje. Puedes ampliar el presupuesto para ver una propuesta más completa.'
           : '';
 
         if (guide) guide.hidden = goal !== 'edad';
 
-        root.querySelector('.mai-result').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        mostrar('resultado');
       });
     })();
   </script>
@@ -401,8 +528,21 @@
 {% schema %}
 {
   "name": "Mirea Skin Advisor",
-  "max_blocks": 50,
   "settings": [
+    {
+      "type": "header",
+      "content": "Resultados"
+    },
+    {
+      "type": "range",
+      "id": "alternativas",
+      "label": "Alternativas que se muestran por paso",
+      "min": 0,
+      "max": 8,
+      "step": 1,
+      "default": 4,
+      "info": "Además del producto elegido para cada paso. Ponlo a 0 para enseñar solo la rutina."
+    },
     {
       "type": "header",
       "content": "Guía recomendada"
@@ -426,80 +566,6 @@
         { "value": "recto", "label": "Rectos (para cuadrar con ATELIER LUXE)" }
       ],
       "default": "redondeado"
-    }
-  ],
-  "blocks": [
-    {
-      "type": "producto",
-      "name": "Producto del advisor",
-      "settings": [
-        {
-          "type": "product",
-          "id": "producto",
-          "label": "Producto"
-        },
-        {
-          "type": "text",
-          "id": "etiqueta",
-          "label": "Etiqueta de la ficha",
-          "default": "Tratar",
-          "info": "Lo que se lee encima del nombre. Ej.: Limpiar, Tratar, Hidratar, Sellar, Calmar, Mañana · Proteger."
-        },
-        {
-          "type": "select",
-          "id": "rol",
-          "label": "Paso de la rutina",
-          "info": "El advisor propone como mucho un producto por paso.",
-          "options": [
-            { "value": "cleanser", "label": "Limpiar" },
-            { "value": "treatment", "label": "Tratar" },
-            { "value": "serum", "label": "Sérum" },
-            { "value": "moisturizer", "label": "Hidratar o sellar" },
-            { "value": "spf", "label": "Protección solar" }
-          ],
-          "default": "serum"
-        },
-        {
-          "type": "select",
-          "id": "intensidad",
-          "label": "Intensidad",
-          "info": "«Fuerte» se descarta automáticamente para piel sensible.",
-          "options": [
-            { "value": "gentle", "label": "Suave" },
-            { "value": "medium", "label": "Media" },
-            { "value": "strong", "label": "Fuerte (retinoides, exfoliantes)" }
-          ],
-          "default": "gentle"
-        },
-        {
-          "type": "header",
-          "content": "Objetivos para los que encaja"
-        },
-        { "type": "checkbox", "id": "obj_granitos", "label": "Granitos y poros", "default": false },
-        { "type": "checkbox", "id": "obj_manchas", "label": "Manchas y marcas", "default": false },
-        { "type": "checkbox", "id": "obj_barrera", "label": "Sensibilidad y barrera", "default": false },
-        { "type": "checkbox", "id": "obj_hidratacion", "label": "Hidratación y luminosidad", "default": false },
-        { "type": "checkbox", "id": "obj_edad", "label": "Primeras líneas y textura", "default": false },
-        {
-          "type": "header",
-          "content": "Tipos de piel"
-        },
-        { "type": "checkbox", "id": "piel_normal", "label": "Normal", "default": false },
-        { "type": "checkbox", "id": "piel_seca", "label": "Seca", "default": false },
-        { "type": "checkbox", "id": "piel_mixta", "label": "Mixta", "default": false },
-        { "type": "checkbox", "id": "piel_grasa", "label": "Grasa", "default": false },
-        { "type": "checkbox", "id": "piel_sensible", "label": "Sensible", "default": false },
-        {
-          "type": "header",
-          "content": "Exclusiones"
-        },
-        {
-          "type": "checkbox",
-          "id": "evitar_sensible",
-          "label": "No recomendar nunca a piel sensible",
-          "default": false
-        }
-      ]
     }
   ],
   "presets": [

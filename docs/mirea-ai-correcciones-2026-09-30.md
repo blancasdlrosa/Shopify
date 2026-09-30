@@ -167,3 +167,102 @@ Si se ve bien, se publica. **La publicación la decides tú**: yo no publico tem
   navegador.
 - **SIGUIENTE:** que mires la vista previa. Si te vale, publicas. Y cuando
   quieras, añadir bloques para pasar de 11 productos a los que decidas.
+
+---
+
+# Segunda versión · 30-09-2026 · el advisor ya elige entre cientos de productos
+
+Dijiste que recomendaba poquísimos. Tenías razón y la causa era la de siempre:
+**elegía entre 11 productos escritos a mano en el código**, sobre un catálogo de
+8.212.
+
+## Lo que he encontrado: la tienda ya tiene el trabajo hecho
+
+No hacía falta etiquetar nada. Cada producto **ya está clasificado** en las
+colecciones de la tienda. Medido hoy:
+
+| Paso de rutina | Productos | | Objetivo | Productos |
+|---|---|---|---|---|
+| Limpiar | 967 | | Calma y rojeces | 1.104 |
+| Tratar | 857 | | Poros | 737 |
+| Hidratar | 845 | | Antiedad | 660 |
+| Proteger | 578 | | Barrera cutánea | 516 |
+| | | | Manchas | 457 |
+| | | | Granitos | 329 |
+
+Y por tipo de piel: sensible 977 · seca 844 · grasa 175 · mixta 172.
+
+Comprobado abriendo productos uno a uno. El limpiador de Anua, por ejemplo,
+está en `limpiar`, `piel-grasa`, `piel-sensible`, `piel-mixta`, `granitos`,
+`poros` y `calma-y-rojeces`. Es decir: **el paso, la piel y el objetivo de cada
+producto ya existen como dato real.** Nada que inventar.
+
+## Cómo funciona ahora
+
+1. La clienta contesta las cuatro preguntas.
+2. El advisor pide al catálogo los productos del objetivo elegido, con una
+   plantilla nueva: `templates/collection.advisor.liquid`, que se sirve en
+   `/collections/<handle>?view=advisor` y devuelve hasta 250 productos
+   **disponibles** con su paso, sus tipos de piel y sus objetivos.
+3. Puntúa, respeta el presupuesto y monta la rutina en orden: limpiar → tratar
+   → hidratar → proteger.
+4. Y debajo enseña **más opciones para cada paso**.
+
+Objetivo → colecciones que consulta:
+
+| Objetivo de la clienta | Colecciones |
+|---|---|
+| Granitos y poros | `granitos` + `poros` |
+| Manchas y marcas | `manchas` |
+| Sensibilidad y barrera | `barrera-cutanea` + `calma-y-rojeces` |
+| Hidratación y luminosidad | `piel-seca` + `barrera-cutanea` |
+| Primeras líneas y textura | `antiedad` |
+
+## Seguridad para piel sensible
+
+Además de preferir los productos de `piel-sensible`, descarta por nombre los
+activos fuertes: retinol, retinal, AHA, BHA, PHA, peeling, exfoliantes, ácido
+glicólico, salicílico y vitamina C. **Ni en la rutina ni en las alternativas.**
+
+## Cuánto enseña ahora
+
+| | Antes | Ahora |
+|---|---|---|
+| Productos entre los que elige | 11 | **329 a 1.104 según objetivo** |
+| Productos que ve la clienta | ~4 | **20,6 de media** |
+
+## Comprobaciones
+
+| Qué | Resultado |
+|---|---|
+| Colecciones y cifras | Leídas de la Admin API, no de memoria |
+| Liquid y schema de las dos plantillas | `userErrors: []`, JSON del schema válido, etiquetas balanceadas |
+| Archivos subidos = archivos escritos | MD5 idénticos: `604af055…` (24.263 B) y `b2668738…` (2.027 B) |
+| Lógica de recomendación | **200 combinaciones, 0 fallos** (`theme/pruebas/advisor-catalogo.mjs`) |
+
+Las 200 combinaciones comprueban: no se pasa del número de pasos, no se pasa del
+presupuesto, el total cuadra con la suma, la rutina va en orden, no se repite
+ningún producto, **nunca se propone un activo fuerte a piel sensible** (ni como
+alternativa) y las alternativas no repiten lo que ya está en la rutina.
+
+## Si el catálogo no responde
+
+La sección conserva los 11 productos de siempre como respaldo. Si la petición
+falla, la clienta sigue recibiendo una propuesta. En ese caso no se enseña el
+contador de "elegido entre N productos", para no decir algo que no es.
+
+## Lo que sigue sin poder comprobar
+
+**El render y la petición reales.** Este contenedor no tiene salida a
+`mireaskin.es`. La lógica está probada y los archivos subidos son idénticos a
+los escritos, pero que la llamada a `/collections/granitos?view=advisor`
+devuelva lo esperado **hay que verlo en la vista previa**.
+
+Pruébalo así, en el tema borrador:
+1. `/es/pages/mirea-ai` → contesta y mira que salgan la rutina **y** el bloque
+   "Más opciones para cada paso".
+2. Si quieres la prueba de fuego, abre
+   `/es/collections/granitos?view=advisor`: debe salir un texto que empieza por
+   `{"handle":"granitos"...`.
+
+Si eso sale, está terminado y solo falta publicar.
