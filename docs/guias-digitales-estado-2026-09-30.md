@@ -190,3 +190,41 @@ real en cada una en un momento. Los textos de las fichas también hablan de
 dos sitios.
 
 **Dime que sí y lo corrijo antes de que se publiquen las demás.**
+
+
+---
+
+# Páginas corregidas · 12 de 12 · 30-09-2026
+
+Hecho y releído de la tienda una por una. Cada ficha llevaba el número en dos
+sitios (el bloque *Formato* y el *Edición final* del Workbook); los dos están
+cambiados. No se ha tocado nada más del texto.
+
+| Guía | Decía | Dice |
+|---|---|---|
+| Gua Sha facial · ES | 14 páginas | **9** |
+| Activos para signos de edad · ES | 14 páginas | **12** |
+| Cómo combinar ingredientes · ES | 14 páginas | **10** |
+| Tu rutina K-Beauty paso a paso · ES | 14 páginas | **10** |
+| Fotoprotección · ES | 14 páginas | **10** |
+| Recuperar la barrera cutánea · ES | 14 páginas | **9** |
+| Facial Gua Sha · EN | 14 pages | **9** |
+| Ingredients for Visible Signs of Aging · EN | 14 pages | **12** |
+| How to Combine Skincare Ingredients · EN | 14 pages | **10** |
+| Your Step-by-Step K-Beauty Routine · EN | 14 pages | **10** |
+| Sun Protection & Photoaging · EN | 14 pages | **10** |
+| Repairing the Skin Barrier · EN | 14 pages | **9** |
+
+`userErrors: []` en las 12. Comprobado releyendo las 14 fichas de la tienda
+después de escribir.
+
+## La única que sigue diciendo 14, y por qué
+
+**Guía Mirea · Retinoides sin errores (ES).** Su ficha dice "14 páginas en
+español" y **no la he tocado**, porque el PDF que tiene adjunto pesa 137 KB y no
+puedo leer cuántas páginas tiene. Si es la versión buena, 14 puede ser correcto.
+Si es la versión pobre, hay que cambiar el archivo, no el número.
+
+`Mirea Guide · Retinoids Without Mistakes (EN)` también dice 14 pages, y ahí
+**sí está bien**: su PDF de 1,73 MB lleva impreso "01 / 14" en la primera
+página. Es la única guía que cumple lo que promete sin cambiar nada.
