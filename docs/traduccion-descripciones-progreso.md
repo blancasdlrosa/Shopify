@@ -36,9 +36,10 @@ formato, tamaño y activos por delante, porque es lo que decide la compra.
 | 2026-09-28 | 750 | 3.444 |
 | 2026-09-28 | 770 | 3.424 |
 | 2026-09-30 | 790 | 3.404 |
-| 2026-09-30 | **815** | 3.379 |
+| 2026-09-30 | 815 | 3.379 |
+| 2026-09-30 | **840** | 3.354 |
 
-Siguiente índice a procesar: **815**.
+Siguiente índice a procesar: **840**.
 
 Verificado el 30-09 contra la tienda: los índices 704-769 están todos en español, sin
 huecos, y el 770 estaba en inglés. La línea anterior («siguiente 704») estaba desfasada;
@@ -156,3 +157,11 @@ rechaza *"7 años más joven"*.
 coinciden con su título. Reclamos no publicados: Sulwhasoo First Care (#802) *"within four
 weeks... 10 signs of visible aging"* y el *"significant increase in collagen"* de Whoo
 Cheonyuldan (#807). Se describe el producto sin cifras de eficacia.
+
+## 30-09-2026 · lote 815-839
+
+25 fichas, verificadas releyendo de la tienda. **Criterio nuevo para suplementos:** los
+extractos de ginseng rojo de Jung Kwan Jang (#829, #834, #835) son complementos
+alimenticios y en la UE las declaraciones de salud están reguladas (Reglamento
+1924/2006). No se publican frases como *"fatigue relief"* o *"supports your energy"*: se
+describen formato, sabor y modo de uso, y se indica «Complemento alimenticio».
