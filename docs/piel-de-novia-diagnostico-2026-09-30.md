@@ -159,3 +159,68 @@ cosa: apunta a la página `mirea-app`, que está **sin publicar**.
 
 **Lo que no hago sin tu OK:** apagar la app en el tema publicado, cambiar el
 idioma principal y tocar el menú. Las tres son visibles.
+
+---
+
+# Actualización · 30-09-2026, después de revisar la capa de traducción entera
+
+## Descartado del todo: Shopify NO traduce "Mirea Skin"
+
+He leído **las 4.589 traducciones al español que guarda Shopify** del tema
+(`ONLINE_STORE_THEME_LOCALE_CONTENT` y `ONLINE_STORE_THEME_APP_EMBED`).
+
+| Búsqueda | Resultado |
+|---|---|
+| Traducciones revisadas | **4.589** |
+| Contienen "novia" | **0** |
+| Contienen "Mirea Skin" | **0** |
+
+Sumado a lo de arriba (nombre de tienda, hero, menú, páginas y colecciones, todo
+comprobado), queda cerrado: **"Piel de novia" no existe en ningún dato de
+Shopify.** Lo mete algo en el navegador, y el único candidato activo es
+Transtore.
+
+## Hecho: "Mirea AI" ya está en el menú principal
+
+Añadido con `menuUpdate`, justo después de "Encuentra tu rutina":
+
+- **Mirea AI** → `/es/pages/mirea-ai` (página "Mirea Skin Advisor · Beta").
+
+Comprobado después de escribir, nivel por nivel: el menú tenía **84 elementos** y
+ahora tiene **85**. Los tres niveles siguen completos, con sus mismos
+identificadores. `userErrors: []`.
+
+Copia del menú tal y como estaba antes, por si hay que volver atrás:
+`docs/respaldos/menus/main-menu-antes-2026-09-30.json`.
+
+**Un arreglo de paso:** el elemento "Todos los productos" tenía la dirección
+`/es/collections/all` escrita a mano. Ahora va como enlace de catálogo sin idioma
+fijo, así que genera la dirección correcta según el idioma de quien navega. Antes
+mandaba a la versión española siempre.
+
+## Los dos selectores: cuál es cuál
+
+Lo que sé con certeza:
+
+- Shopify tiene el suyo activado: `show_country: true` y `show_language: true` en
+  `sections/header-group.json`.
+- Transtore tiene el suyo: `switcher_embed_block`, activado.
+
+Lo que **no** puedo saber desde aquí es cuál de los dos se dibuja a la izquierda
+y cuál a la derecha, porque no puedo cargar la tienda. Y quitar el que no es
+dejaría a las clientas sin poder cambiar de idioma.
+
+**La prueba que lo resuelve, en el tema borrador y sin tocar la tienda
+publicada:** apagar Transtore y mirar cuál de los dos desaparece.
+
+**Importante: apagar Transtore no apaga la traducción.** El español de la tienda
+lo sirve Shopify, no la app. La prueba:
+
+- El idioma `es` está publicado en Shopify (Mercados e Idiomas).
+- Todas las direcciones del menú son `/es/...`, que es el enrutado nativo de
+  Shopify.
+- Shopify guarda **4.589 traducciones al español** del tema, que siguen ahí
+  aunque la app se apague.
+
+Transtore está **encima** de eso, duplicando el selector y cambiando el nombre de
+la marca.
