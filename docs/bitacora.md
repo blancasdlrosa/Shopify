@@ -3,6 +3,54 @@
 Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
+## 2026-09-30 · Claude · #1006 RESUELTO: pagado, retención levantada, clienta avisada
+
+Blanca hizo el pedido manual en la app de Korealy. **Payment Success**, carrito
+vacío. Guiado por capturas, porque la app no es accesible desde aquí.
+
+**Números reales del pedido manual, leídos de su checkout:**
+
+| Concepto | USD |
+|---|---|
+| whamisa Organic Pear Blossom Sunscreen SPF50+ 50ml (0,20 kg) | 17,00 |
+| Envío a España | 6,00 |
+| **Total pagado a Korealy** | **23,00** |
+
+23,00 USD ÷ 1,0911 = **21,08 €**. De Yolanda quedaban cobrados 23,97 €, así que
+el pedido cierra con **+2,89 €**. Por debajo del tope de 30 USD que había fijado
+Blanca, así que no hizo falta consultarlo.
+
+**Hecho después del pago:**
+- `fulfillmentOrderReleaseHold` sobre `9403425685841`. La retención queda
+  levantada y el fulfillment order pasa a `OPEN`, sin holds.
+- Correo a Yolanda (hilo `1a0ee4415157948f`, mensaje `1a0f1878051801d3`)
+  confirmando preparación y recordando el reembolso. Sin prometer fechas.
+  Firmado como *Atención al cliente · Mirea Skin*.
+
+**OJO para quien siga esto:** el pedido manual en Korealy es **independiente**
+del pedido #1006 que ellos tenían (que sigue con el tratamiento agotado). Es
+probable que **no marquen el #1006 de Shopify como enviado automáticamente** y
+haya que meter el número de seguimiento a mano cuando lo den.
+
+### Hallazgo importante: la app de Korealy SÍ enseña el coste real
+
+En `My Orders` aparecen dos columnas: *Order price* (nuestro PVP) y *Product
+price* (**su coste**). Ejemplos vistos hoy:
+
+| Producto | Coste Korealy | PVP en la tienda | Margen |
+|---|---|---|---|
+| whamisa Organic Seeds Hair Treatment 200ml | 15,00 USD | 18,00 € | ~31% |
+| whamisa Organic Pear Blossom Sunscreen 50ml | 17,00 USD | 21,08 € | ~26% |
+
+Los dos están entre las **9.803 variantes sin coste registrado**, por eso el
+lote ×1,80 no los tocó y se quedaron con un margen malo.
+
+**Esto abre una vía que dábamos por cerrada.** Si su app muestra el coste
+producto a producto, quizá se puedan recuperar los 9.803 costes que no se
+pudieron deducir por cálculo. Pendiente de investigar: ver si hay export,
+listado masivo o alguna pantalla que los dé todos de golpe, en vez de uno a uno.
+
+---
 ## 2026-09-30 · Claude · Korealy admite 50% de devoluciones en aduana para España
 
 Korealy contestó de madrugada a los tres frentes. **Lo más grave, textual:**
