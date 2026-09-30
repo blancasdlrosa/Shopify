@@ -116,3 +116,77 @@ tomas tú.
 
 **Confírmame el mapa de arriba y monto los descuentos automáticos.** Solo puedo
 montarlo para guías que existan: hoy, Retinoides y Gua Sha.
+
+---
+
+# Encontrados · los PDF están en tu Google Drive
+
+Tenías razón y yo me había quedado en lo que decía Shopify. Los subiste **hoy a
+las 09:41-09:42** a tu Drive, pero **no están adjuntos a los productos**: por eso
+la app Digital Products devuelve `files: []`.
+
+13 PDF localizados, todos de 1,38-1,73 MB:
+
+| Archivo en Drive | Guía |
+|---|---|
+| `Mirea_Guia_Gua_Sha_ES.pdf` | Gua Sha · ES (ya adjunto y publicado) |
+| `Mirea_Activos_Edad_ES.pdf` | Activos para signos de edad · ES |
+| `Mirea_Combinar_ES.pdf` | Cómo combinar ingredientes · ES |
+| `Mirea_KBeauty_ES.pdf` | Rutina K-Beauty · ES |
+| `Mirea_Fotoproteccion_ES.pdf` | Fotoprotección · ES |
+| `Mirea_Barrera_ES.pdf` | Recuperar la barrera · ES |
+| `Mirea_Guide_Retinoids_Without_Mistakes_EN.pdf` | Retinoids · EN (ya adjunto y publicado) |
+| `Mirea_Guide_Gua_Sha_EN.pdf` | Facial Gua Sha · EN |
+| `Mirea_Activos_Edad_EN.pdf` | Signs of Aging · EN |
+| `Mirea_Combinar_EN.pdf` | How to Combine · EN |
+| `Mirea_KBeauty_EN.pdf` | K-Beauty Routine · EN |
+| `Mirea_Fotoproteccion_EN.pdf` | Sun Protection · EN |
+| `Mirea_Barrera_EN.pdf` | Repairing the Barrier · EN |
+
+**No veo `Mirea_Guia_Retinoides_ES.pdf`.** La versión española de Retinoides que
+está publicada pesa 137 KB contra los 1,73 MB de la inglesa. Busca ese archivo
+en la misma carpeta: casi seguro que la publicada es una versión antigua.
+
+## Por qué no puedo adjuntarlos yo
+
+La herramienta de subida de Digital Products **abre un selector de archivos en tu
+navegador**: el archivo va de tu ordenador a Shopify sin pasar por aquí. Es una
+medida de la propia app, no un permiso que me falte. Tienes que darle tú.
+
+Son dos clics por guía: producto → **Upload file** → eliges el PDF.
+
+---
+
+# ⚠️ Lo importante: las fichas prometen 14 páginas y los PDF no las tienen
+
+He leído la primera página de cada PDF, donde va impreso el número de páginas.
+**Ninguna guía española tiene 14 páginas.** Y todas las fichas dicen
+*"Formato: 1 PDF · 14 páginas · Español"*.
+
+| Guía | La ficha promete | El PDF tiene |
+|---|---|---|
+| Gua Sha · ES | 14 páginas | **9** |
+| Activos para signos de edad · ES | 14 páginas | **12** |
+| Cómo combinar ingredientes · ES | 14 páginas | **10** |
+| Rutina K-Beauty · ES | 14 páginas | **10** |
+| Fotoprotección · ES | 14 páginas | **10** |
+| Recuperar la barrera · ES | 14 páginas | **9** |
+| Facial Gua Sha · EN | 14 pages | **9** |
+| Signs of Aging · EN | 14 pages | **12** |
+| How to Combine · EN | 14 pages | **10** |
+| K-Beauty Routine · EN | 14 pages | **10** |
+| Sun Protection · EN | 14 pages | **10** |
+| Repairing the Barrier · EN | 14 pages | **9** |
+| Retinoids · EN | 14 pages | **14** ✓ |
+
+**La guía de Gua Sha ya está publicada prometiendo 14 páginas y entregando 9.**
+
+No es un detalle: es lo que la clienta lee antes de pagar. Y una guía de 9
+páginas bien hecha no tiene nada de malo — lo que está mal es decir que son 14.
+
+**La solución rápida es cambiar la ficha, no el PDF.** Puedo poner el número
+real en cada una en un momento. Los textos de las fichas también hablan de
+"Edición final: 14 páginas" en el bloque del Workbook, así que hay que tocar los
+dos sitios.
+
+**Dime que sí y lo corrijo antes de que se publiquen las demás.**
