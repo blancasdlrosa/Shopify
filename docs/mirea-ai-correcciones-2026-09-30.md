@@ -266,3 +266,63 @@ Pruébalo así, en el tema borrador:
    `{"handle":"granitos"...`.
 
 Si eso sale, está terminado y solo falta publicar.
+
+---
+
+# v3 subida · tema `Mirea v5 · ADVISOR v3 · RUTINA PRO 30-09`
+
+`gid://shopify/OnlineStoreTheme/207273066833`, sin publicar. Duplicado del tema
+que Blanca publicó a las 11:11, así que lleva todo lo de v2 más lo de abajo.
+
+## Qué cambia respecto a v2
+
+v2 elegía bien pero seguía enseñando cuatro fichas sueltas. v3 enseña una
+rutina:
+
+- **Pasos numerados en orden de aplicación** (limpiar → tratar → hidratar →
+  proteger), con foto, nombre, precio y **por qué está ahí cada producto**.
+  La explicación se construye solo con lo que el producto tiene de verdad:
+  *«Está en la selección de granitos y poros · marcado como apto para piel
+  grasa.»* Si un producto no está en una colección, no se nombra.
+- **Cuándo usar cada uno**: el solar *Solo por la mañana*, un activo fuerte
+  *Solo por la noche*, el resto *Mañana y noche*.
+- **Botón para añadir la rutina entera al carrito**, con `/cart/add.js`. Solo
+  aparece si se conoce la variante de todos los pasos; si falla, lo dice y deja
+  abrir los productos a mano.
+- **Plan de 8 semanas** para introducir el tratamiento, que solo sale si la
+  rutina lleva un activo fuerte. Mismo calendario que la guía de retinoides.
+- **Avisos construidos con la rutina concreta**: introducción gradual y SPF
+  diario si hay activo fuerte, el aviso de embarazo para retinoides, prueba en
+  zona pequeña si la piel es sensible, reaplicación del solar, y cuándo parar y
+  consultar.
+
+## Comprobado
+
+| Qué | Resultado |
+|---|---|
+| Lógica de rutina | **200 combinaciones, 0 fallos** (`advisor-catalogo.mjs`) |
+| Momento de uso, activos fuertes y explicaciones | **0 fallos** (`advisor-rutina.mjs`) |
+| Degradación con productos agotados | **1.650 combinaciones, 0 fallos** (`advisor-agotados.mjs`) |
+| Archivos subidos = archivos probados | MD5 idénticos: `ef393bdc…` (34.239 B) y `fcc563a0…` (2.170 B) |
+
+La prueba de explicaciones comprueba, entre otras cosas, que **una razón nunca
+nombra un objetivo que el producto no tenga**.
+
+## Un fallo que salió al verificar, y por qué importa
+
+Subí la plantilla de datos justo después de duplicar el tema, mientras Shopify
+todavía estaba copiando archivos (`processing: true`). **La copia pisó mi
+subida** y la plantilla se quedó en la versión vieja, sin el id de variante.
+
+Como el id de variante es lo que necesita el botón de carrito, el botón no
+habría aparecido nunca y no habría dado ningún error: simplemente no se
+mostraría. Se vio al comparar los MD5 y se volvió a subir.
+
+**Lección: después de `themeDuplicate`, esperar a `processing: false` antes de
+escribir.**
+
+## Lo que falta
+
+Probarlo en la vista previa de ese tema: `/es/pages/mirea-ai`. Y comprobar que
+`/es/collections/granitos?view=advisor` devuelve texto que empieza por
+`{"handle":"granitos"`. Si sale, se publica.
