@@ -3,6 +3,42 @@
 Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
+## 2026-10-01 · Claude · #1007: los regalos sí llegaron, y el primer coste real de Korealy
+
+Blanca pagó el #1007 a Korealy y pidió comprobar los regalos digitales. Detalle en
+`pedido-1007-regalos-y-coste-2026-10-01.md`.
+
+**Los dos correos salieron.** Eventos `Received Email` en Klaviyo para el perfil de
+la clienta: el Journal (flow `VtbF3p`) a las 23:51 UTC y la Guía PRO (flow `SMvtLa`)
+a las 23:52, 21 y 23 minutos después del pedido. Entregados a Hotmail. Sin evento de
+apertura todavía: entregado no es leído.
+
+**Pero esos correos llevan un enlace a una página de la tienda, no un PDF adjunto.**
+Las dos páginas (`la-guia` y `mirea-checklist-4-semanas`) están publicadas, así que la
+clienta tiene contenido real; lo que no recibe son los PDFs de las guías. Esto ya se
+documentó el 28-09 y sigue igual. Es una decisión pendiente de Blanca, no un fallo.
+
+**Primer coste de proveedor verificado.** La factura de Korealy dice 25,00 USD/unidad
+de `medicube2720` = 22,91 € al cambio de su recibo de PayPal. Guardado como coste por
+artículo en Shopify. Es 1 de 9.803 variantes sin coste, pero es el primero con
+respaldo documental.
+
+**Y destapa un problema de precio.** Ese producto se vende a 30,00 € con IVA incluido:
+base 24,79 €, coste 22,91 € → 1,88 € de margen antes de flete y comisiones. Con el
+flete (≈9,62 €/unidad en este envío) **se vende a pérdida en España**. El coste que se
+asumió con la regla ×1,80 (~17 €) era más bajo que el real. **No se ha tocado ningún
+precio**: subirlo lo decide Blanca y hay que presentarle los números antes, y sin la
+lista de costes completa de Korealy no se puede revisar el resto del catálogo.
+
+Cuenta real del #1007: +84,81 cobrado − 3,74 comisiones Shopify − 65,07 a Korealy =
+**+16,00 €**. Pero el pedido se cobró con 0,00 € de impuestos: si hay que declarar IVA
+danés vía OSS (16,96 €), queda en pérdida. La gestoría sigue sin contestar y esa es
+hoy la decisión más cara de las pendientes.
+
+**Para ChatGPT:** si tocas precios de medicube, el coste real está en el
+`unitCost` del variante, no en la regla ×1,80. Y falta la lista de costes de Korealy.
+
+---
 ## 2026-10-01 · Claude · #1007 (Dinamarca): stock pedido a Korealy ANTES de pagar
 
 Pedido nuevo de anoche: 2 × medicube Deoxyribose Scalp Serum 20 ml a Copenhague,
