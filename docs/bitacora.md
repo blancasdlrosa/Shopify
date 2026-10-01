@@ -3,6 +3,50 @@
 Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
+## 2026-10-01 · Claude · los PDF de regalo ya se descargan, y el traductor duplicado era Transtore
+
+Detalle en `pdf-regalo-y-cabecera-2026-10-01.md`.
+
+**Por qué los correos de regalo no llevaban PDF.** Porque se dejaron hechos el 28-09
+con un botón a una página de la tienda, no con un adjunto. Y porque los PDF de las
+guías no estaban en Shopify: estaban en el Drive. No era un fallo, era el diseño.
+
+**Arreglado.** Los 11 PDF descargados del Drive están subidos a los archivos de
+Shopify (`stagedUploadsCreate` → POST a `storage.googleapis.com` → `fileCreate`; los
+11 en `READY` con URL de `cdn.shopify.com`). Y las dos páginas de regalo
+(`/pages/la-guia` y `/pages/mirea-checklist-4-semanas`) tienen ya un bloque de
+descarga directa en PDF. Como los correos enviados apuntan a esas páginas, **el
+arreglo es retroactivo**: el cliente del #1007 encuentra los PDF pulsando el mismo
+botón que ya tiene en su correo. Con los 5 PDF de rutinas de septiembre, la tienda
+tiene 16 PDF.
+
+Faltan tres archivos que no estaban en el Drive: Gua Sha ES y Retinoides ES/EN.
+
+Lo que no se pudo: meter los enlaces en el cuerpo del correo de Klaviyo. `PATCH`
+sobre la plantilla devuelve 404 porque está atada a un flow. Se lee por API, no se
+escribe. Es un paso manual en el editor de Klaviyo.
+
+**El selector de idioma que salía dos veces.** No eran dos iguales. Uno es el nativo
+de Shopify (un botón con bandera + EUR + / + ES) y es el que funciona. El otro es el
+app embed `switcher_embed_block` de **Transtore**, y es además el que inyectaba «Piel
+de novia». Sobre un tema duplicado (`207341814097`): Transtore pasa a
+`"disabled": true` en `settings_data.json`, y un snippet nuevo
+(`mirea-selector-idioma.liquid`, renderizado desde `layout/theme.liquid`) deja la
+etiqueta del botón en `ES` / `EN` ocultando bandera, divisa y barra. El panel sigue
+teniendo país y divisa: no se pierde el cambio de moneda. `sections/header.liquid`
+no se tocó. Falta que Blanca publique el tema.
+
+**Aviso:** si Transtore traducía algo por su cuenta, eso dejará de traducirse. La
+traducción nativa de Shopify no se toca.
+
+**La IA v3 ya está en vivo**: Blanca publicó el tema. `mirea-ai.liquid` (34.239 B) y
+`collection.advisor.liquid` (2.170 B) coinciden byte a byte con la versión probada.
+
+**Para ChatGPT:** las URL de los 16 PDF salen de `files(query: "media_type:GENERIC_FILE")`.
+Si tocas las páginas `la-guia` o `mirea-checklist-4-semanas`, no borres el bloque
+`.dl`: es lo único que hace que los correos de regalo entreguen un PDF.
+
+---
 ## 2026-10-01 · Claude · #1007: los regalos sí llegaron, y el primer coste real de Korealy
 
 Blanca pagó el #1007 a Korealy y pidió comprobar los regalos digitales. Detalle en
