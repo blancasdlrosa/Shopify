@@ -3,6 +3,41 @@
 Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
+## 2026-10-01 · Claude · #1007 (Dinamarca): stock pedido a Korealy ANTES de pagar
+
+Pedido nuevo de anoche: 2 × medicube Deoxyribose Scalp Serum 20 ml a Copenhague,
+84,80 € cobrados. **No se ha pagado nada a Korealy**, a propósito.
+
+Shopify dice 942 unidades. Ese número no vale: es relleno de importación, y
+Korealy admitió por escrito el 30-09 que su stock no se sincroniza en tiempo
+real y que pueden avisar de una rotura **después** de cobrar. Con el #1006 pasó
+exactamente eso. Así que el orden ahora es confirmar stock → pagar → avisar al
+cliente, y no al revés.
+
+Correo a Korealy pidiendo: 2 unidades confirmadas de `medicube2720`, total
+exacto en USD desglosado, plazo, su experiencia en aduana **con Dinamarca** (el
+50 % lo dijeron de España) y si pueden enviar DDP a la UE. Más el seguimiento
+del #1004, que lleva tres días pedido.
+
+**Comprobado de paso que las tarifas del 29-09 funcionan.** Cobró 23,54 € y la
+tarifa DK para 0,40 kg es 22,99 €. La diferencia es conversión de divisa: el
+mercado UE tiene `localCurrencies: true` y al danés se le cobra en coronas. La
+zona PT·DK está bien puesta en los dos perfiles.
+
+**Margen: estimado, no sabido.** Sin coste registrado para este producto. Por la
+regla ×1,80 el coste rondaría los 17 € por unidad, pero eso es deducir de la
+fórmula. El dato real llega con la respuesta de Korealy.
+
+**No se ha avisado al cliente de las condiciones DDU** — Dinamarca está en la UE
+pero el paquete sale de Corea y el IVA de importación lo paga él al recibir. Hay
+texto preparado y no se manda sin OK, porque la tienda todavía no avisa de esto
+en ningún sitio.
+
+**Encontrado sin buscarlo:** el **#1005** (Portugal, Gerda Nunes) está
+**REFUNDED** con el fulfillment **CLOSED**. No lo hice yo ni estaba anotado.
+
+Detalle en `docs/pedido-1007-dinamarca-2026-10-01.md`.
+
 ## 2026-09-30 · Claude · Mirea AI corregida (tema sin publicar) + prompt de los 6 PDF
 
 Dos encargos de Blanca: dejar la IA hecha y preparar el prompt de los PDF que
