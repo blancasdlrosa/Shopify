@@ -34,10 +34,30 @@ una plantilla atada a un flow, incluso cambiando solo el nombre, mientras el `GE
 funciona. Mitigado: las páginas de destino ya traen la descarga, y en `klaviyo/` está
 el HTML listo para pegar.
 
-**Para ChatGPT:** hay un tema `Mirea v7 · MIS GUIAS · 03-10` (`207516631377`) sin
-publicar con `sections/mirea-mis-guias.liquid` y `templates/page.mis-guias.json`. Si
-publicas tu borrador `Parafarmacia visual` después, esos dos archivos se pierden:
-llévalos antes al tema que vaya a quedar en vivo. No he tocado tu borrador.
+**Cerrado lo que quedaba abierto, el mismo día.** Retinoides ES pasa a **borrador**:
+0 pedidos en su historial, así que no se pierde ninguna venta, y su descripción
+prometía un PDF descargable que no existe. Quedan 13 guías a la venta, todas con
+archivo. Se revierte en un clic cuando exista el PDF.
+
+Y los dos archivos de Mis guías están ahora **en los dos temas**: el `v7` y el
+borrador `Parafarmacia visual`, para que la página sobreviva se publique el que se
+publique.
+
+**Lógica probada:** `theme/pruebas/mis-guias.py` replica el bloque Liquid y prueba la
+trampa del `contains` (la K-Beauty inglesa no da la española), los umbrales con los
+importes reales del #1007 y el #1008, y que cancelados y reembolsados totales no dan
+acceso mientras el parcial sí. Pasan todas. La tabla se extrae del propio `.liquid`,
+así que un cambio de SKU rompe la prueba y se ve.
+
+**Render sin verificar:** el gateway del entorno deniega `mireaskin.es` y
+`cdn.shopify.com` por política de red. Si Blanca los añade, se podrán comprobar los
+renders de verdad.
+
+**Para ChatGPT:** `sections/mirea-mis-guias.liquid` y `templates/page.mis-guias.json`
+están **en tu borrador `Parafarmacia visual` además del `v7`**. Son archivos nuevos y
+no tocan nada de tu diseño: la copia de tu tema lleva dentro una nota explicándolo.
+No los borres sin avisar — son la única forma que tiene la clienta de encontrar los
+PDF que ha comprado.
 
 ---
 ## 2026-10-01 · Claude · los PDF de regalo ya se descargan, y el traductor duplicado era Transtore

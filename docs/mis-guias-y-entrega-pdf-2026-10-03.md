@@ -137,3 +137,43 @@ No puedo cargar `mireaskin.es` ni `cdn.shopify.com` desde aquí: el proxy devuel
 - Al publicar el v7, ojo con el orden: hay un borrador `Mirea v6 · DRAFT Parafarmacia
   visual` del otro agente. Si se publica ese después, se pierde «Mis guías». Habría
   que llevar los dos archivos al tema que se publique al final.
+
+---
+
+## Añadido el mismo día, al cerrar lo que quedaba abierto
+
+**Retinoides ES pasa a borrador.** Comprobado antes: `sku:MIREA-GUIA-RETINOIDES`
+devuelve **0 pedidos**, así que no se pierde ninguna venta. Y su descripción
+prometía «PDF digital descargable» y «14 páginas en español», una promesa que hoy no
+se puede cumplir. Se revierte en un clic en cuanto exista el archivo: volver a
+`ACTIVE` y añadir su línea a la tabla `guias_es` de la sección.
+
+Quedan **13 guías a la venta**, todas con su PDF.
+
+**Los dos archivos están también en el borrador de Parafarmacia visual**
+(`207515582801`). `themeFilesCopy` solo copia dentro del mismo tema, así que se
+reescribieron. Son dos archivos nuevos y no tocan nada del trabajo del otro agente;
+la copia de ese tema lleva además una nota dirigida a ChatGPT explicando por qué está
+ahí y pidiendo que no se borre. Así la página sobrevive publique Blanca el v7 o el
+borrador de Parafarmacia.
+
+**Lógica probada.** `theme/pruebas/mis-guias.py` replica el bloque Liquid y lo somete
+a los casos que de verdad pueden romperlo. Extrae la tabla del propio `.liquid`, así
+que si alguien cambia un SKU o un fichero, la prueba lo detecta. Cubre:
+
+- La trampa del `contains`: quien compra `MIREA-GUIDE-KBEAUTY-EN` no recibe la
+  española, y al revés. Es el mismo error que ya nos costó un fallo con
+  `piel` / `piel-seca` en el advisor.
+- Los umbrales con importes reales: 34,19 € del #1008 no entra, 84,80 € del #1007
+  da los dos regalos, y los bordes exactos de 3500 y 6000 céntimos.
+- Cancelados y reembolsados no dan acceso; el reembolso **parcial** sí cuenta
+  (como el #1006).
+- Un SKU de producto físico no inventa una guía, y comprar la misma guía dos veces
+  no la duplica.
+
+Pasan todas.
+
+**El render sigue sin verificar, y ahora sé por qué.** El gateway del entorno deniega
+por política `mireaskin.es` y `cdn.shopify.com` (`connect_rejected: policy denial`).
+No es algo que se pueda sortear desde aquí. Si Blanca añade esos dos dominios a la
+red del entorno, se podrán comprobar los renders y los PDF de verdad en adelante.
