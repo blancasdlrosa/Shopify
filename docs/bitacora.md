@@ -3,6 +3,43 @@
 Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
+## 2026-10-03 · Claude · Mis guías, las 14 guías a la venta y por qué no salía nada
+
+Detalle en `mis-guias-y-entrega-pdf-2026-10-03.md`.
+
+**La raíz del problema.** Los 3 productos de guía que estaban publicados eran justo
+los 3 sin PDF; los 11 que ya tenían archivo estaban en borrador. Y no existía ningún
+sitio donde el cliente las viera al entrar, porque la tienda usa cuentas de cliente
+nuevas (`NEW_CUSTOMER_ACCOUNTS`) y ese perfil no admite código del tema.
+
+**Los PDF, completos.** Faltaban tres y dos estaban en el Drive con otro nombre:
+`Mirea_Guia_Gua_Sha_ES.pdf` y `Mirea_Guide_Retinoids_Without_Mistakes_EN.pdf`.
+Subidos y `READY`, verificados por tamaño y cabecera `%PDF-`. **Retinoides ES no
+existe**: buscado por título y por fecha, en el Drive hay 13. La tienda tiene 18 PDF.
+
+**Las 14 guías, a la venta.** Las 11 en borrador pasadas a ACTIVE y publicadas en
+Tienda online y Shop. Los 6 packs se quedan en borrador a propósito: dos incluyen
+Retinoides y en español no hay archivo. Retinoides ES sigue publicado sin PDF y **no
+lo he despublicado**: eso lo decide Blanca.
+
+**Zona privada.** `/pages/mis-guias` + `sections/mirea-mis-guias.liquid`. Cruza el
+SKU de los pedidos del cliente con la tabla de 13 guías y añade los regalos según el
+pedido más alto (35 € guías, 60 € rutinas). Enlazada desde el menú
+`customer-account-main-menu` («Mi Mirea»), que es el que se ve DENTRO del perfil, y
+desde el pie. Los dos menús reescritos completos conservando los ids.
+
+**Correo automático.** Los flows ya se disparan solos con sus umbrales. Meter los PDF
+en el cuerpo **no se puede por API**: Klaviyo devuelve 404 en cualquier `PATCH` sobre
+una plantilla atada a un flow, incluso cambiando solo el nombre, mientras el `GET`
+funciona. Mitigado: las páginas de destino ya traen la descarga, y en `klaviyo/` está
+el HTML listo para pegar.
+
+**Para ChatGPT:** hay un tema `Mirea v7 · MIS GUIAS · 03-10` (`207516631377`) sin
+publicar con `sections/mirea-mis-guias.liquid` y `templates/page.mis-guias.json`. Si
+publicas tu borrador `Parafarmacia visual` después, esos dos archivos se pierden:
+llévalos antes al tema que vaya a quedar en vivo. No he tocado tu borrador.
+
+---
 ## 2026-10-01 · Claude · los PDF de regalo ya se descargan, y el traductor duplicado era Transtore
 
 Detalle en `pdf-regalo-y-cabecera-2026-10-01.md`.

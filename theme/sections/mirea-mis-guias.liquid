@@ -1,0 +1,230 @@
+{%- comment -%}
+  MIREA · Mis guias · 03-10-2026 · Claude.
+
+  Zona privada donde la clienta encuentra los PDF que le corresponden.
+
+  POR QUE ESTA PAGINA Y NO EL PERFIL DE SHOPIFY:
+  la tienda usa cuentas de cliente nuevas (NEW_CUSTOMER_ACCOUNTS). Ese perfil lo
+  sirve Shopify en su propio dominio y NO admite codigo del tema: no existen
+  plantillas templates/customers/*. Meter una seccion ahi dentro exige una app
+  con extension de cuenta de cliente. Esta pagina hace lo mismo con el objeto
+  `customer`, que si esta disponible en el escaparate cuando hay sesion.
+
+  QUE MUESTRA:
+  1. Las guias que la clienta ha comprado, cruzando el SKU de sus pedidos con la
+     tabla GUIAS de abajo.
+  2. Los regalos por importe: desde 35 EUR las guias, desde 60 EUR los PDF de
+     rutina. Se mira el pedido mas alto del historial.
+
+  DECISIONES QUE CONVIENE SABER:
+  - Los SKU se comparan envueltos en comas (',SKU,'). En Liquid `contains` sobre
+    una cadena es subcadena, no igualdad: sin las comas, un SKU corto podria dar
+    un falso positivo dentro de otro mas largo.
+  - Se ignoran los pedidos cancelados y los reembolsados: no dan acceso.
+  - `order.total_price` viene en centimos y en la moneda de presentacion del
+    pedido. Para una moneda mas debil que el euro (DKK) el umbral se cruza antes.
+    Se acepta a proposito: el peor caso es regalar un PDF de mas, nunca quitarle
+    a nadie un regalo al que tiene derecho.
+  - Retinoides ES (MIREA-GUIA-RETINOIDES) NO tiene PDF. No esta en la tabla, asi
+    que no se muestra enlace roto: si alguien lo compra, sale el aviso de que se
+    le envia aparte. En cuanto exista el archivo, se anade su linea a GUIAS.
+
+  Para quitar la pagina: borrar su plantilla templates/page.mis-guias.json.
+{%- endcomment -%}
+
+{%- liquid
+  comment
+    Tabla: SKU | nombre visible | fichero en los archivos de Shopify
+  endcomment
+  assign cdn = 'https://cdn.shopify.com/s/files/1/1079/5814/1265/files/'
+
+  capture guias_es
+    echo 'MIREA-GUIA-BARRERA|Recuperar la barrera cutánea|Mirea_Barrera_ES.pdf?v=1790839541;'
+    echo 'MIREA-GUIA-ACTIVOS-EDAD|Activos para signos de edad|Mirea_Activos_Edad_ES.pdf?v=1790839702;'
+    echo 'MIREA-GUIA-COMBINA-ACTIVOS|Cómo combinar ingredientes|Mirea_Combinar_ES.pdf?v=1790839702;'
+    echo 'MIREA-GUIA-FOTOPROTECCION|Fotoprotección y fotoenvejecimiento|Mirea_Fotoproteccion_ES.pdf?v=1790839702;'
+    echo 'MIREA-GUIA-KBEAUTY|Tu rutina K-Beauty paso a paso|Mirea_KBeauty_ES.pdf?v=1790839702;'
+    echo 'MIREA-GUIA-GUASHA|Gua Sha facial|Mirea_Guia_Gua_Sha_ES.pdf?v=1791039876'
+  endcapture
+
+  capture guias_en
+    echo 'MIREA-GUIDE-BARRIER-EN|Repairing the Skin Barrier|Mirea_Barrera_EN.pdf?v=1790839703;'
+    echo 'MIREA-GUIDE-AGING-EN|Ingredients for Visible Signs of Aging|Mirea_Activos_Edad_EN.pdf?v=1790839702;'
+    echo 'MIREA-GUIDE-COMBINE-EN|How to Combine Skincare Ingredients|Mirea_Combinar_EN.pdf?v=1790839702;'
+    echo 'MIREA-GUIDE-SPF-EN|Sun Protection & Photoaging|Mirea_Fotoproteccion_EN.pdf?v=1790839703;'
+    echo 'MIREA-GUIDE-KBEAUTY-EN|Your Step-by-Step K-Beauty Routine|Mirea_KBeauty_EN.pdf?v=1790839702;'
+    echo 'MIREA-GUIDE-GUASHA-EN|Facial Gua Sha|Mirea_Guide_Gua_Sha_EN.pdf?v=1790839702;'
+    echo 'MIREA-GUIDE-RETINOIDS-EN|Retinoids Without Mistakes|Mirea_Guide_Retinoids_EN.pdf?v=1791039876'
+  endcapture
+
+  capture rutinas
+    echo 'Primera vez con skincare|mirea-skin-rutina-primera-vez.pdf?v=1789399127;'
+    echo 'Piel grasa con granitos|mirea-skin-rutina-piel-grasa.pdf?v=1789399127;'
+    echo 'Piel seca|mirea-skin-rutina-piel-seca.pdf?v=1789399127;'
+    echo 'Piel sensible|mirea-skin-rutina-piel-sensible.pdf?v=1789399128;'
+    echo 'Rutina hombre|mirea-skin-rutina-hombre.pdf?v=1789406943'
+  endcapture
+
+  assign lista_es = guias_es | strip | split: ';'
+  assign lista_en = guias_en | strip | split: ';'
+  assign lista_rutinas = rutinas | strip | split: ';'
+
+  comment
+    SKU comprados, envueltos en comas, y el importe del pedido mas alto.
+  endcomment
+  assign comprados = ','
+  assign mejor_pedido = 0
+  assign sin_pdf = false
+
+  if customer
+    for order in customer.orders
+      unless order.cancelled
+        if order.financial_status != 'refunded' and order.financial_status != 'voided'
+          if order.total_price > mejor_pedido
+            assign mejor_pedido = order.total_price
+          endif
+          for item in order.line_items
+            assign sku = item.sku | strip
+            if sku != blank
+              assign envuelto = sku | prepend: ',' | append: ','
+              unless comprados contains envuelto
+                assign comprados = comprados | append: sku | append: ','
+              endunless
+            endif
+          endfor
+        endif
+      endunless
+    endfor
+  endif
+
+  assign tiene_regalo_guias = false
+  assign tiene_regalo_rutinas = false
+  if mejor_pedido >= 3500
+    assign tiene_regalo_guias = true
+  endif
+  if mejor_pedido >= 6000
+    assign tiene_regalo_rutinas = true
+  endif
+
+  if comprados contains ',MIREA-GUIA-RETINOIDES,'
+    assign sin_pdf = true
+  endif
+-%}
+
+<div class="mg">
+  <style>
+    .mg{--g2:#F4E5E2;--ln:#E1CBC6;--ink:#352B30;--sf:#715B63;--ac:#925B6D;color:var(--ink);max-width:900px;margin-inline:auto;padding:2rem 1rem 3rem;line-height:1.6}
+    .mg *{box-sizing:border-box}
+    .mg .eb{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ac);margin:0 0 .6rem}
+    .mg h1{font-size:clamp(1.8rem,1.2rem + 2vw,2.8rem);line-height:1.1;font-weight:500;margin:0 0 .8rem;letter-spacing:-.02em}
+    .mg h2{font-size:1.15rem;font-weight:600;margin:2.4rem 0 .4rem}
+    .mg p{margin:0 0 1rem;color:var(--sf)}
+    .mg .dl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:1rem 0 0}
+    .mg .dl a{display:flex;align-items:center;gap:.6rem;border:1px solid var(--ln);border-radius:12px;padding:.9rem 1rem;background:#fff;text-decoration:none;color:var(--ink);font-size:.94rem}
+    .mg .dl a:hover{border-color:var(--ac)}
+    .mg .dl a .fmt{margin-left:auto;color:var(--ac);font-size:.72rem;letter-spacing:.12em}
+    .mg .caja{background:var(--g2);border-left:3px solid var(--ac);padding:1.2rem 1.4rem;margin:1.6rem 0;border-radius:0 10px 10px 0}
+    .mg .caja p:last-child{margin-bottom:0}
+    .mg .cta{display:inline-block;margin-top:.6rem;background:var(--ink);color:#fff;border-radius:999px;font-weight:600;padding:.85rem 1.6rem;text-decoration:none}
+    .mg .vacio{border:1px dashed var(--ln);border-radius:14px;padding:1.6rem;text-align:center}
+    @media(max-width:640px){.mg .dl{grid-template-columns:1fr}}
+  </style>
+
+  <p class="eb">MIREA SKIN · ZONA PRIVADA</p>
+  <h1>Mis guías</h1>
+
+  {%- if customer == nil -%}
+
+    <p>Entra con tu cuenta para ver las guías de tus pedidos y los regalos que te corresponden.</p>
+    <p><a class="cta" href="/account/login?return_url=/pages/mis-guias">Iniciar sesión</a></p>
+    <div class="caja">
+      <p>Usa el mismo correo con el que hiciste el pedido. Si todavía no tienes cuenta, puedes crearla con ese correo y tus pedidos aparecerán aquí.</p>
+    </div>
+
+  {%- else -%}
+
+    {%- assign hay_compradas = false -%}
+    {%- for fila in lista_es -%}
+      {%- assign campos = fila | strip | split: '|' -%}
+      {%- assign envuelto = campos[0] | prepend: ',' | append: ',' -%}
+      {%- if comprados contains envuelto -%}{%- assign hay_compradas = true -%}{%- endif -%}
+    {%- endfor -%}
+    {%- for fila in lista_en -%}
+      {%- assign campos = fila | strip | split: '|' -%}
+      {%- assign envuelto = campos[0] | prepend: ',' | append: ',' -%}
+      {%- if comprados contains envuelto -%}{%- assign hay_compradas = true -%}{%- endif -%}
+    {%- endfor -%}
+
+    {%- if hay_compradas -%}
+      <h2>Tus guías compradas</h2>
+      <p>Se descargan al momento. Puedes volver aquí cuando quieras.</p>
+      <div class="dl">
+        {%- for fila in lista_es -%}
+          {%- assign campos = fila | strip | split: '|' -%}
+          {%- assign envuelto = campos[0] | prepend: ',' | append: ',' -%}
+          {%- if comprados contains envuelto -%}
+            <a href="{{ cdn }}{{ campos[2] }}">{{ campos[1] }}<span class="fmt">PDF</span></a>
+          {%- endif -%}
+        {%- endfor -%}
+        {%- for fila in lista_en -%}
+          {%- assign campos = fila | strip | split: '|' -%}
+          {%- assign envuelto = campos[0] | prepend: ',' | append: ',' -%}
+          {%- if comprados contains envuelto -%}
+            <a href="{{ cdn }}{{ campos[2] }}">{{ campos[1] }}<span class="fmt">PDF</span></a>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+
+    {%- if sin_pdf -%}
+      <div class="caja">
+        <p><strong>Guía Mirea · Retinoides sin errores</strong></p>
+        <p>Esta guía todavía no está disponible para descarga automática. Te la enviamos por correo. Si no te ha llegado, escríbenos a my.mireaskin@gmail.com indicando tu número de pedido.</p>
+      </div>
+    {%- endif -%}
+
+    {%- if tiene_regalo_guias -%}
+      <h2>Tus guías de regalo</h2>
+      <p>Incluidas con tu pedido desde 35 €. Están en español y en inglés: descarga las que quieras.</p>
+      <div class="dl">
+        {%- for fila in lista_es -%}
+          {%- assign campos = fila | strip | split: '|' -%}
+          <a href="{{ cdn }}{{ campos[2] }}">{{ campos[1] }}<span class="fmt">PDF · ES</span></a>
+        {%- endfor -%}
+        {%- for fila in lista_en -%}
+          {%- assign campos = fila | strip | split: '|' -%}
+          <a href="{{ cdn }}{{ campos[2] }}">{{ campos[1] }}<span class="fmt">PDF · EN</span></a>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+
+    {%- if tiene_regalo_rutinas -%}
+      <h2>Tus rutinas de regalo</h2>
+      <p>Incluidas con tu pedido desde 60 €. Cada PDF trae la rutina paso a paso y su checklist.</p>
+      <div class="dl">
+        {%- for fila in lista_rutinas -%}
+          {%- assign campos = fila | strip | split: '|' -%}
+          <a href="{{ cdn }}{{ campos[1] }}">{{ campos[0] }}<span class="fmt">PDF</span></a>
+        {%- endfor -%}
+      </div>
+      <p style="margin-top:1rem"><a href="/pages/mirea-checklist-4-semanas">Abrir tu journal de 4 semanas</a></p>
+    {%- endif -%}
+
+    {%- unless hay_compradas or tiene_regalo_guias or sin_pdf -%}
+      <div class="vacio">
+        <p>Todavía no hay guías asociadas a tu cuenta.</p>
+        <p>Las guías compradas aparecen aquí automáticamente. Los pedidos desde 35 € incluyen además las guías de regalo.</p>
+        <p><a class="cta" href="/collections/all">Ver la tienda</a></p>
+      </div>
+    {%- endunless -%}
+
+  {%- endif -%}
+</div>
+
+{% schema %}
+{
+  "name": "Mirea · Mis guías",
+  "tag": "section",
+  "settings": []
+}
+{% endschema %}
