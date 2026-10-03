@@ -1,0 +1,27 @@
+{%- comment -%}
+  MIREA · 01-10-2026 · Claude.
+
+  Acorta el boton del selector nativo de Shopify a las iniciales del idioma.
+
+  Antes el boton mostraba bandera + EUR + barra + ES, y con el switcher de
+  Transtore al lado quedaban dos controles de idioma y mucho ancho ocupado.
+  Blanca pidio dejar solo "ES".
+
+  NO se quita ninguna funcion: show_country sigue activo y el panel que se
+  abre al pulsar mantiene pais, divisa e idioma. Solo se oculta lo que
+  sobraba EN LA ETIQUETA del boton.
+
+  El span de la barra "/" no tiene clase propia en el tema, asi que se
+  selecciona por su posicion: va justo detras del span .visually-hidden.
+  Si Shopify cambiase ese orden, el selector dejaria de coincidir y el boton
+  volveria a mostrar la barra, sin romper nada.
+
+  Para revertirlo: borrar el render de este snippet en layout/theme.liquid.
+{%- endcomment -%}
+<style>
+  .dropdown-localization__button .icon-flag,
+  .dropdown-localization__button .currency-code,
+  .dropdown-localization__button .visually-hidden + span {
+    display: none;
+  }
+</style>

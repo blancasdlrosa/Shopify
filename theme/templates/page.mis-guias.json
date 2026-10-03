@@ -1,0 +1,9 @@
+{
+  "sections": {
+    "main": {
+      "type": "mirea-mis-guias",
+      "settings": {}
+    }
+  },
+  "order": ["main"]
+}
