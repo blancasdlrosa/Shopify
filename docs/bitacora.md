@@ -3,6 +3,39 @@
 Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
+## 2026-10-04 · Claude · la cuenta real: 33,15 € de 310 € facturados
+
+Detalle en `cuenta-real-pedidos-2026-10-04.md`. Primera cuenta de la tienda con datos
+verificados: comisiones leídas una a una de la API, y los cinco pagos a Korealy
+sacados de los recibos de PayPal. Nada estimado.
+
+Facturado 310,41 €. Entró 229,30 €. Comisiones 11,02 €. A Korealy 185,13 €.
+**Quedan 33,15 €**, un 14,5 % de lo recibido.
+
+Por pedido: #1004 +10,90 · #1005 −1,60 · #1006 **+0,39** · #1007 +16,00 · #1008 +7,46.
+
+Tres cosas que salen de ahí:
+
+- **El #1006 ganó 39 céntimos.** La comisión de Klarna se cobra sobre el total antes
+  del reembolso, así que un reembolso parcial se come el margen entero. Lección
+  aplicable: si el proveedor rompe stock, reembolsar el pedido completo, no medio.
+- **El #1005 costó 1,60 €** de comisión, pero no pagar a Korealy evitó una pérdida de
+  unos 64 €. La decisión fue la correcta y ahora se ve en números.
+- **Ningún pedido lleva IVA** (`totalTax` 0,00 en los cinco). Si hay que declarar IVA
+  de destino: 42,04 € contra 33,15 € ganados, o sea **−8,89 €**. No afirmo que se
+  deba — depende del registro y del OSS — pero es la cifra que convierte el mes en
+  pérdida y es la pregunta más cara que hay abierta.
+
+Los 33,15 € no son beneficio: no descuentan tiempo, cuota de Shopify, apps, dominio
+ni el riesgo de un rechazo en aduana.
+
+**Costes de producto:** sigue habiendo **uno solo** limpio de 9.803 variantes
+(`medicube2720`, 22,91 €). Los otros tres pagos son totales de pedido con el flete
+dentro y no sirven para fijar precio; no los reparto porque sería inventarme el flete.
+La ruta del CSV que dio Korealy se ejecuta dentro de su app, que no es accesible
+desde esta sesión.
+
+---
 ## 2026-10-04 · Claude · el #1004 llegó al cliente, y una corrección mía
 
 Detalle en `pedidos-estado-2026-10-04.md`.
