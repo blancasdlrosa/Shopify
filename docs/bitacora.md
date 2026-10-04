@@ -3,6 +3,38 @@
 Entradas nuevas arriba. Formato: fecha · agente · qué pasó.
 
 ---
+## 2026-10-04 · Claude · el #1004 llegó al cliente, y una corrección mía
+
+Detalle en `pedidos-estado-2026-10-04.md`.
+
+**Corrijo lo que dije ayer.** Afirmé que Korealy mentía al decir que había enviado el
+tracking por correo. Era mi error: lo manda a `my.mireaskin@gmail.com` y yo busqué en
+`blancasdlr@gmail.com`, que es la cuenta conectada aquí. El correo existía donde yo no
+miro. Lo que sí era cierto es que **el tracking no entra solo en Shopify**; Korealy lo
+dice explícitamente.
+
+**#1004 cerrado bien.** Cumplido el 04-10 a las 11:59 con los 3 artículos (3/3 SKUs y
+cantidades, que era la condición). El registro del pedido confirma que salió el correo
+de confirmación de envío a la clienta. Korea Post → Correos, `LI086596199KR`. Pago de
+84,22 € el 6 de octubre.
+
+**Estados reales que dio Korealy el 03-10 por la noche:** #1006 (`SMP-9062460`)
+preparando envío — así que el pago de 23 $ del 30-09 sí cubría el artículo que
+faltaba, duda que quedaba abierta. #1008 preparando envío. #1007 **en espera porque
+falta el teléfono del destinatario**, confirmado por ellos; el cliente no ha
+contestado a dos avisos.
+
+**La causa de fondo del problema de seguimiento**, para que no se repita: el tracking
+llega a la cuenta de negocio y Korealy no lo mete en Shopify, y Shopify solo manda el
+correo al cliente cuando existe un cumplimiento con número. Sin ese paso manual el
+cliente no sabe nada. Dos arreglos propuestos: un filtro de `korealy.co` hacia la
+cuenta personal, y crear el cumplimiento en cuanto haya número.
+
+**Costes de producto:** Korealy sigue sin dar lista, pero dio una ruta — importar con
+«set nothing» y exportar CSV. Sería el desbloqueo de los 9.803 variantes sin coste.
+No lo he hecho: una importación masiva toca el catálogo entero.
+
+---
 ## 2026-10-03 · Claude · Mis guías, las 14 guías a la venta y por qué no salía nada
 
 Detalle en `mis-guias-y-entrega-pdf-2026-10-03.md`.
