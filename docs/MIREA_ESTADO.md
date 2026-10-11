@@ -173,3 +173,14 @@ Estados: SIN AUDITAR · VERIFICADO · PENDIENTE · EN CURSO · IMPLEMENTADO · V
 ## 7. Restricciones vigentes
 
 Sin publicidad de pago, sin apps/suscripciones nuevas, sin cambios masivos de precio, sin publicar tema sin revisión móvil+escritorio, sin borrar productos, sin tocar Plaza Clara, sin presentar trámites fiscales (036 no presentado).
+
+## 8. Cambios 11-10-2026 (segunda parte)
+
+| Cambio | Antes | Después | Reversión |
+|---|---|---|---|
+| Envío España peninsular (Perfil general) | 0-0,3 kg 4,99 € · 0,3-0,6 kg 7,99 € · 0,6-1 kg 10,99 € · >1 kg 18,99 € | 0-0,2 kg **5,99 €** · 0,201-0,5 kg **10,49 €** · 0,501-1 kg 10,99 € · >1,001 kg 18,99 € | Restaurar tramos y precios anteriores en Configuración › Envíos |
+| Políticas (envíos, devoluciones, términos) | HTML visible y `{{ }}` sin rellenar; plazo 3-7 días | Textos corregidos en `docs/POLITICAS_MIREA.md` | **Pendiente de pegar por Blanca** (API sin permiso write_legal_policies) |
+
+Motivo del cambio de envío: tarifas Korealy Standard España = 6 $ (≤0,2 kg) y 11 $ (≤0,5 kg). Las tarifas anteriores perdían entre 0,59 € y 5,24 € por pedido solo en el envío.
+Pendiente: tarifas Korealy para >0,5 kg en España y para FR/DE/IT/PT (tramos 0,5-1 kg y >1 kg sin verificar).
+Decisión de Blanca: NO subir precios de producto (mercado más barato). El margen se protege cobrando el envío real.
