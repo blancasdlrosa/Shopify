@@ -184,3 +184,9 @@ Sin publicidad de pago, sin apps/suscripciones nuevas, sin cambios masivos de pr
 Motivo del cambio de envío: tarifas Korealy Standard España = 6 $ (≤0,2 kg) y 11 $ (≤0,5 kg). Las tarifas anteriores perdían entre 0,59 € y 5,24 € por pedido solo en el envío.
 Pendiente: tarifas Korealy para >0,5 kg en España y para FR/DE/IT/PT (tramos 0,5-1 kg y >1 kg sin verificar).
 Decisión de Blanca: NO subir precios de producto (mercado más barato). El margen se protege cobrando el envío real.
+
+## 9. 12-10-2026
+
+- Nuevo pedido **#1011** (11-10, España, direct → /en/collections/piel): Biodance Caviar PDRN Dual Gel Toner Pads 22,10 € + envío **10,49 €** (tarifa nueva aplicada) = 32,59 €. Pagado a Korealy 26 $ (≈24,18 €). Beneficio aprox. **+7,5 €** (con la tarifa antigua habría sido ~5 €). Pendiente de envío.
+- Coste registrado en Shopify (coste Korealy USD × 0,93) para: isoi Cleansing Milk 13,02 €, mise en scène Treatment 1150 ml 17,67 €, mise en scène Shampoo 1150 ml 17,67 €, O HUI Pact Set 37,20 €, Biodance Caviar Toner Pads 15,81 €, ETUDE Ginger Sugar Lip Serum (9 variantes) 7,44 €. Costes verificados con capturas de la app Korealy. Resto del lote 08-10: pendiente.
+- Revisión SEO colecciones de marca (medicube, COSRX, MISSHA, SKIN1004, Anua, Beauty of Joseon, MEDIHEAL, THE FACE SHOP, illiyoon): **ya tienen título y descripción SEO en español** (traducción "es"). El idioma principal de la tienda es inglés y España se sirve en español. No requieren cambio; sus posiciones 60-90 son de autoridad/enlaces, no de metadatos.
