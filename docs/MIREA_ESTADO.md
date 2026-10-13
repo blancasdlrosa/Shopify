@@ -193,3 +193,11 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - Coste registrado en **todo el lote Korealy 08-10** (40 productos más, 117 variantes; coste = precio ÷ 1,3 × 0,93). Sin cambios de precio. Shopify ya puede calcular el margen real de estos productos.
 - Tarjeta regalo: intento de crear el producto "Tarjeta regalo Mirea Skin" (10/25/50/100 €). Shopify lo rechaza: "Los productos de tarjeta de regalo solo se pueden crear después de que se hayan activado". **Pendiente de Blanca**: activar las tarjetas regalo en el admin; después se configura el producto.
 - Revisión de la home: 17 secciones activas, con el mensaje Guía/Journal repetido en 4 sitios. Propuesta estética (pendiente de aprobación): reducir a ~8 secciones en un tema copia sin publicar y revisarlo en vista previa antes de publicar.
+
+## 10. 13-10-2026 · Home limpia (borrador, sin publicar)
+
+- Tema copia creado: **"Mirea · Home limpia · BORRADOR 13-10"** (id 208281993553, UNPUBLISHED), duplicado del tema principal 207960965457. Vista previa: https://mireaskin.es/?preview_theme_id=208281993553
+- Solo se ha cambiado `templates/index.json`: secciones reordenadas y 5 secciones ocultas (`disabled`, no borradas): Guías LUXE, Método, Guía (beneficios), Marcas (tarjetas; queda la cinta de marcas) y Diario. En Cierre, `mostrar_journal` = false para no repetir la guía/journal.
+- Orden nuevo: Portada → Ventajas → Imprescindibles → Necesidades → Pasos → Novedades → Ofertas → Regalos (único sitio de guía/journal) → Origen Corea → Opiniones → Cinta de marcas → Cierre.
+- Pendiente de preguntar a Blanca antes de hacerlo: cambiar la tipografía (Inter), poner banners con fotos nuevas y añadir "Tarjeta regalo" al menú.
+- Comprobado: el "envío gratis España desde 69 €" que anuncia la web existe (descuento automático). Riesgo: en pedidos de más de 1 kg Korealy cobra más envío y el margen del lote ×1,3 puede quedarse en ~0. Pendiente de decidir.
