@@ -276,3 +276,10 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - 13-10: a borrador los 4 Maymoo sin foto que ya estaban activos (Conditioner Elevate, Regena Toner, Body wash nurture, Conditioner Nurture). Maymoo: 374 activos / 172 borrador (155 sin stock + internos/sin foto/sin beneficio). Emanar: 225 activos / 211 borrador, todos sin stock.
 - 13-10 · ERROR MÍO CORREGIDO: el menuUpdate de "Novedades" (menú mirea-catalogo-novedades-v11) se envió sin el 3er nivel y borró los hijos de "Por necesidad" (Granitos, Manchas, Poros, Calma, Barrera, Antiedad) y "Por tipo de piel" (seca, grasa, mixta, sensible). Restaurados con los mismos enlaces que main-menu. Lección: en menuUpdate enviar SIEMPRE el árbol completo de 3 niveles.
 - 13-10: Tarjeta regalo creada por Blanca (producto 11241470493009, 10/25/50/100/150 €, con foto y descripción). Añadida al menú de cabecera (Todo › Tarjeta regalo, árbol completo de 3 niveles conservado) y al pie (tras "Envíos y devoluciones").
+
+### 10.10 Proveedores nuevos y canales (13-10-2026, solo lectura)
+- Eternas: 21 en borrador, coste ≈39 % (margen ≈60 %). Con stock: Eye Glow Mask, 24K Gold Eye Perfector, MultiRelief band, LED Mask DNIR (3 ud), Knee Massager, 24K RF Lifting, Pro PDT Lamp (2.247 €), Multi-RF Wand, 4-in-1 Eye & Face Wand. Títulos en inglés y con promesas médicas ("pain therapy", "photodynamic therapy") → traducir y suavizar antes de publicar; no publicar PDT ni el masajeador de rodilla.
+- Natcare: 8 en borrador con stock, margen 20 % (≈17 % neto). Rentable.
+- hello-mims (6) y &GLOW (3): ya activos, margen 40 % y 35 %.
+- MOOD Earplugs (9): margen 15 % (≈2 € neto) y fuera de marca → dejar en borrador. Beauty-Privée (10): margen 10 % → no. Salluna: 0 importados.
+- Canales (productos incluidos): Tienda online 9.603, TikTok 5.957, Facebook/IG 2.062, Google 1.865, Shop 1.527. Activos totales 8.427.
