@@ -287,3 +287,4 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - Natcare → 8 publicados con títulos descriptivos en español (las descripciones ya estaban en español).
 - Los 15 con tipo "Dispositivo de belleza" para que entren en la colección automática dispositivos-faciales. Publicados en Tienda online + Shop.
 - Canal Shop: bulkOperationRunMutation bloqueado por la política de seguridad del conector. Publicar 8.442 productos uno a uno serían ~170 llamadas → se le pide a Blanca hacerlo desde el admin (Productos › seleccionar todos › Incluir en canales de ventas › Shop).
+- 13-10 (aprobado por Blanca): publicados también con texto solo cosmético/bienestar: "Eternas Pro · Panel LED profesional" (antes PDT Lamp, 2.247 €, tipo Dispositivo de belleza) y "Eternas · Masajeador de calor y vibración" (antes Knee Massager, 175 €, tipo Cuerpo). Sin menciones a dolor, enfermedades ni terapia; aviso de que no es producto sanitario.
