@@ -23,4 +23,8 @@
   product-card .text-block p{letter-spacing:.06em}
   product-card [class*="product-title"] *{font-size:12.5px;text-transform:uppercase;letter-spacing:.12em;line-height:1.5}
   #MainContent[data-template*="product"] h1{font-size:clamp(30px,3.4vw,46px)}
+  /* 13-10: la capa luxury-home pone serif con letras juntas a todo el bloque del título de "Mirea · Colección"; el texto pequeño y el enlace vuelven a la letra normal */
+  #MainContent .mirea-collection__description,#MainContent .mirea-collection__description *,
+  #MainContent .mirea-collection__view-all{font-family:var(--font-body--family,Inter,system-ui,sans-serif)!important;letter-spacing:normal!important;font-weight:400}
+  #MainContent .mirea-collection__view-all{font-size:13px!important;letter-spacing:.06em!important}
 </style>
