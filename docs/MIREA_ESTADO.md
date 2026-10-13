@@ -273,3 +273,4 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - EMANAR bajó su margen de 38 % a 30 % en algunos productos (correo 13-10 10:54). Siguen dejando beneficio, pero menos.
 - 13-10: enviado correo a Maymoo (admin@jessjoie.com, cc barcelona@jessjoie.com) preguntando tarifa de envío Collective. Su web: 3,95 € península, gratis ≥35 €.
 - Emanar: su web anuncia envío gratis España/Portugal ≥40 €. No hay email público; contactar por la app Collective.
+- 13-10: a borrador los 4 Maymoo sin foto que ya estaban activos (Conditioner Elevate, Regena Toner, Body wash nurture, Conditioner Nurture). Maymoo: 374 activos / 172 borrador (155 sin stock + internos/sin foto/sin beneficio). Emanar: 225 activos / 211 borrador, todos sin stock.
