@@ -271,3 +271,5 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - Imagen tarjeta regalo: docs/imagenes/tarjeta-regalo-mirea.png (logotipo escrito, el archivo del logo no se pudo descargar desde aquí).
 - Envíos Collective: no se pueden ver desde aquí (están en la app Collective de cada proveedor). Webs de Maymoo/Emanar no accesibles y en Gmail solo hay avisos automáticos de Shopify, sin correo del proveedor. Mirea cobra al cliente su "Perfil general" (5,99/10,49/10,99/18,99 €); envío gratis ≥69 € lo absorbe Mirea.
 - EMANAR bajó su margen de 38 % a 30 % en algunos productos (correo 13-10 10:54). Siguen dejando beneficio, pero menos.
+- 13-10: enviado correo a Maymoo (admin@jessjoie.com, cc barcelona@jessjoie.com) preguntando tarifa de envío Collective. Su web: 3,95 € península, gratis ≥35 €.
+- Emanar: su web anuncia envío gratis España/Portugal ≥40 €. No hay email público; contactar por la app Collective.
