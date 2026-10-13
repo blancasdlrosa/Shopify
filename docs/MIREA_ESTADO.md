@@ -256,3 +256,10 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 ### 10.7 Banner deslizable en todas las secciones (13-10-2026, borrador 208304472401)
 - `mirea-coleccion-slider`: diapositivas extra propias de cada familia (Perfumes: árabes/ella/él · Piel: solar/sérums/hidratantes · Cabello: cuero cabelludo/mascarillas · Maquillaje: labios/rostro · Cuerpo: manos/higiene · Tecnología: dispositivos/accesorios · Bebé y hombre: hombre/bebé · Salud: piel).
 - La 1ª diapositiva trae productos ya pintados desde el servidor, así el banner no desaparece si falla la carga.
+
+### 10.8 Repaso de pendientes (13-10-2026)
+- Política de privacidad (/pages/privacidad) actualizada: fila "Guardar tus listas" + Supabase (UE, París) como encargado. Fecha 13-10-2026.
+- XB Wishlist: ya desinstalada (no aparece en appInstallations).
+- Tarjeta regalo: aún no existe ningún producto tarjeta regalo.
+- Pedido #1010 (11-10, 176,84 €, IOPE x2) pagado y SIN preparar, asignado a "Rinconada 12". Avisar a la dueña.
+- Maymoo: 171 activos / 375 borradores. Activación de los 237 de MAYMOO_ACTIVAR.md sigue pendiente de la dueña.
