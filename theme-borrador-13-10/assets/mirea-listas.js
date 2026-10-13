@@ -1,5 +1,5 @@
 /* Mirea · Mis listas: favoritos, lista de deseos, mi armario, rutina de mañana/noche y listas propias.
-   Se guarda en este navegador (localStorage). Borrador 13-10-2026. Se quita borrando el render de
+   Se guarda en el navegador y, con sesión iniciada, en la cuenta (Supabase). Borrador 13-10-2026. Se quita borrando el render de
    'mirea-listas' en snippets/mirea-selector-idioma.liquid. */
 (function () {
   if (window.MireaListas) return;
@@ -17,25 +17,69 @@
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
   function baseIndex(id) { for (var i = 0; i < BASE.length; i++) if (BASE[i].id === id) return i; return 99; }
 
-  function read() {
-    var d = null;
-    try { d = JSON.parse(localStorage.getItem(KEY) || 'null'); } catch (e) {}
-    if (!d || !Array.isArray(d.lists)) d = { lists: [] };
+  function normalize(d) {
+    if (!d || !Array.isArray(d.lists)) d = { lists: [], owner: d && d.owner };
     BASE.forEach(function (b) {
-      var l = d.lists.filter(function (x) { return x.id === b.id; })[0];
-      if (!l) d.lists.push({ id: b.id, name: b.name, items: [] });
+      if (!d.lists.some(function (x) { return x && x.id === b.id; })) d.lists.push({ id: b.id, name: b.name, items: [] });
     });
+    d.lists = d.lists.filter(function (l) { return l && typeof l.id === 'string'; });
     d.lists.forEach(function (l) {
       var b = BASE[baseIndex(l.id)];
       if (b) { l.name = b.name; l.fixed = 1; l.rutina = b.rutina || 0; l.hint = b.hint || ''; }
+      else { l.name = String(l.name || 'Mi lista').slice(0, 40); delete l.fixed; delete l.rutina; }
       if (!Array.isArray(l.items)) l.items = [];
+      l.items = l.items.filter(function (i) { return i && typeof i.h === 'string'; });
     });
     d.lists.sort(function (a, b) { return baseIndex(a.id) - baseIndex(b.id); });
     return d;
   }
+  function read() {
+    var d = null;
+    try { d = JSON.parse(localStorage.getItem(KEY) || 'null'); } catch (e) {}
+    return normalize(d);
+  }
   var data = read();
 
-  function save() { try { localStorage.setItem(KEY, JSON.stringify(data)); } catch (e) {} refresh(); }
+  /* ---------- Cuenta del cliente ----------
+     Con sesión iniciada, el tema publica window.MireaListasCfg (id de cliente + firma hecha en el
+     servidor de Shopify). Las listas se descargan al entrar y se suben en cada cambio. Lo guardado
+     como invitado se suma la primera vez que inicia sesión en este equipo. */
+  var CFG = window.MireaListasCfg && window.MireaListasCfg.c ? window.MireaListasCfg : null;
+  var synced = false, pushT = 0;
+  function store() { try { localStorage.setItem(KEY, JSON.stringify(data)); } catch (e) {} }
+  if (!CFG && data.owner) { data = normalize(null); store(); } // sesión cerrada: no dejar sus listas en el equipo
+  function payload() { return { lists: data.lists.map(function (l) { return { id: l.id, name: l.name, items: l.items }; }) }; }
+  function push() {
+    if (!CFG || !synced) return;
+    clearTimeout(pushT);
+    pushT = setTimeout(function () {
+      try {
+        fetch(CFG.api, { method: 'POST', headers: { 'content-type': 'application/json' }, keepalive: true,
+          body: JSON.stringify({ c: CFG.c, t: CFG.t, s: CFG.s, data: payload() }) }).catch(function () {});
+      } catch (e) {}
+    }, 400);
+  }
+  function pull() {
+    if (!CFG) return;
+    var q = '?c=' + encodeURIComponent(CFG.c) + '&t=' + encodeURIComponent(CFG.t) + '&s=' + encodeURIComponent(CFG.s);
+    fetch(CFG.api + q).then(function (r) { return r.ok ? r.json() : null; }).then(function (j) {
+      if (!j) return;
+      var remote = j.data && Array.isArray(j.data.lists) ? normalize(j.data) : null;
+      if (data.owner === CFG.c) {
+        if (remote) data = remote;
+      } else if (remote) {
+        data.lists.forEach(function (gl) {
+          var rl = remote.lists.filter(function (x) { return x.id === gl.id; })[0];
+          if (!rl) { if (gl.items.length) remote.lists.push(gl); return; }
+          gl.items.forEach(function (i) { if (!rl.items.some(function (o) { return o.h === i.h; })) rl.items.push(i); });
+        });
+        data = normalize(remote);
+      }
+      data.owner = CFG.c; synced = true; store(); refresh(); push();
+    }).catch(function () {});
+  }
+
+  function save() { store(); refresh(); push(); }
   function list(id) { return data.lists.filter(function (l) { return l.id === id; })[0]; }
   function has(id, h) { var l = list(id); return !!(l && l.items.some(function (i) { return i.h === h; })); }
   function inAny(h) { return data.lists.some(function (l) { return l.items.some(function (i) { return i.h === h; }); }); }
@@ -236,6 +280,7 @@
   }
 
   function init() {
+    pull();
     headerLink();
     app = document.getElementById('mirea-listas-app');
     if (app) { var q = (location.hash || '').replace('#', ''); if (list(q)) view = q; bindPage(); paintPage(); }
