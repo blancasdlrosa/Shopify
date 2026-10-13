@@ -283,3 +283,6 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - hello-mims (6) y &GLOW (3): ya activos, margen 40 % y 35 %.
 - MOOD Earplugs (9): margen 15 % (≈2 € neto) y fuera de marca → dejar en borrador. Beauty-Privée (10): margen 10 % → no. Salluna: 0 importados.
 - Canales (productos incluidos): Tienda online 9.603, TikTok 5.957, Facebook/IG 2.062, Google 1.865, Shop 1.527. Activos totales 8.427.
+- 13-10 (aprobado por Blanca): Eternas → 7 publicados (Eye Glow, 24K Eye Perfector, MultiRelief, DNIR, 24K RF Lifting, Multi-RF Wand, 4 en 1). Títulos y descripciones traducidos al español, sin promesas médicas ("dolor", "terapia fotodinámica"), sin "FDA certified" ni la garantía de 365 días del proveedor (no es la política de Mirea). NO publicados: Pro PDT Lamp y Knee Massager (promesas médicas) ni los que no tienen stock.
+- Natcare → 8 publicados con títulos descriptivos en español (las descripciones ya estaban en español).
+- Los 15 con tipo "Dispositivo de belleza" para que entren en la colección automática dispositivos-faciales. Publicados en Tienda online + Shop.
