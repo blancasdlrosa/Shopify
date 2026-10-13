@@ -8,7 +8,7 @@
   assign hair_family = 'cabello,champus-1,acondicionadores,mascarillas-1,serums,tonicos-capilares,cuero-cabelludo,cuidado-capilar,champus,mascarillas-y-tratamientos-capilares,cuidados-sin-aclarado' | split: ','
   assign makeup_family = 'maquillaje,rostro,ojos,labios-1,preparacion-y-acabado,desmaquillante,accesorios-1' | split: ','
   assign body_family = 'cuidado-corporal,cuidado-de-manos,cuidado-de-pies,cuidado-intimo,higiene,higiene-bucal' | split: ','
-  assign tech_family = 'tecnologia,dispositivos-faciales,accesorios' | split: ','
+  assign tech_family = 'tecnologia,dispositivos-faciales,accesorios,aparatos-de-belleza,eternas,natcare' | split: ','
   assign guide_family = 'guias-mirea,mirea-guides-english' | split: ','
   assign perfume_family = 'perfumes,perfumes-arabes,perfumes-de-mujer,perfumes-de-hombre,perfumes-unisex' | split: ','
   assign skin_family = 'piel,limpiadores,tonicos-y-esencias-1,serums-y-ampollas,hidratantes,proteccion-solar,mascarillas,exfoliantes-y-pads,contorno-de-ojos,cuidado-de-labios,granitos,manchas,poros,piel-seca,piel-sensible,antiedad,barrera-cutanea,calma-y-rojeces,rutinas,limpiar,tratar,hidratar,proteger' | split: ','
@@ -20,7 +20,7 @@
   elsif body_family contains c.handle
     assign shortcut_text = 'cuidado-corporal:Corporal|cuidado-de-manos:Manos|cuidado-de-pies:Pies|cuidado-intimo:Cuidado íntimo|higiene:Higiene|higiene-bucal:Higiene bucal'
   elsif tech_family contains c.handle
-    assign shortcut_text = 'tecnologia:Tecnología|dispositivos-faciales:Dispositivos faciales|accesorios:Accesorios de belleza'
+    assign shortcut_text = 'aparatos-de-belleza:Aparatos LED y radiofrecuencia|eternas:Eternas|natcare:Natcare|dispositivos-faciales:Dispositivos faciales|accesorios:Accesorios de belleza|tecnologia:Toda la tecnología'
   elsif guide_family contains c.handle
     assign shortcut_text = 'guias-mirea:Guías en español|mirea-guides-english:Guides in English|rutinas:Rutinas'
   elsif perfume_family contains c.handle

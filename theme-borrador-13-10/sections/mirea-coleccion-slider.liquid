@@ -12,7 +12,7 @@
   assign hair_family = 'cabello,champus-1,acondicionadores,mascarillas-1,serums,tonicos-capilares,cuero-cabelludo,cuidado-capilar,champus,mascarillas-y-tratamientos-capilares,cuidados-sin-aclarado' | split: ','
   assign makeup_family = 'maquillaje,rostro,ojos,labios-1,labios,preparacion-y-acabado,desmaquillante,accesorios-1' | split: ','
   assign body_family = 'cuidado-corporal,cuerpo,cuidado-de-manos,cuidado-de-pies,cuidado-intimo,higiene,higiene-bucal' | split: ','
-  assign tech_family = 'tecnologia,dispositivos-faciales,accesorios' | split: ','
+  assign tech_family = 'tecnologia,dispositivos-faciales,accesorios,aparatos-de-belleza,eternas,natcare' | split: ','
   assign men_family = 'bebe-y-hombre,bebe,hombre,rutina-hombre' | split: ','
   assign skin_family = 'piel,skincare-coreano,limpiadores,tonicos-y-esencias-1,tonicos-y-esencias,serums-y-ampollas,hidratantes,proteccion-solar,mascarillas,mascarillas-y-exfoliantes,exfoliantes-y-pads,contorno-de-ojos,cuidado-de-labios,granitos,manchas,poros,piel-seca,piel-grasa,piel-mixta,piel-sensible,antiedad,barrera-cutanea,calma-y-rojeces,limpiar,tratar,hidratar,proteger' | split: ','
   assign extras = ''
@@ -25,7 +25,7 @@
   elsif body_family contains c.handle
     assign extras = 'cuidado-de-manos::Manos::Cremas que hidratan sin dejar rastro.||higiene::Higiene::Lo esencial de cada día, en versión coreana.'
   elsif tech_family contains c.handle
-    assign extras = 'dispositivos-faciales::Dispositivos faciales::La tecnología de las clínicas coreanas, en casa.||accesorios::Accesorios de belleza::Los pequeños gestos que cambian la rutina.'
+    assign extras = 'eternas::Eternas::Mascarillas LED y radiofrecuencia con oro de 24K.||natcare::Natcare::Aparatos faciales para potenciar tu rutina.||dispositivos-faciales::Dispositivos faciales::La tecnología de cabina, en casa.'
   elsif men_family contains c.handle
     assign extras = 'hombre::Para él::Rutinas sencillas que funcionan.||bebe::Bebé::Cuidado suave para la piel más delicada.'
   elsif c.handle == 'salud'
