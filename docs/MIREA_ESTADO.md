@@ -213,3 +213,14 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - Código fuente en `theme-borrador-13-10/`. Probado en jsdom: corazón, panel, listas, crear lista, pasos de rutina y página.
 - Archivos tocados en el borrador: assets/mirea-listas.js, snippets/mirea-listas.liquid, snippets/mirea-tipografia-lujo.liquid, snippets/mirea-selector-idioma.liquid (+2 renders), sections/mirea-mis-listas.liquid, sections/mirea-banner-lujo.liquid, sections/mirea-duo-lujo.liquid, templates/collection.mis-listas.json, templates/index.json.
 - **Tarjeta regalo**: Shopify vuelve a rechazar la creación ("solo se pueden crear después de que se hayan activado"). La activación solo se puede hacer en el admin.
+
+### 10.2 · 13-10-2026 · Nuevo borrador sobre el tema publicado actual
+
+- El tema publicado cambió hoy: ahora es **"Mirea · HOME ACTUAL · Collective lujo · 13-10"** (208270197073). El 207960965457 ya no está publicado.
+- Por petición de Blanca ("quiero todo lo que tengo"), nuevo borrador **208284647761 "Mirea · ACTUAL + mañana/noche + listas · BORRADOR 13-10"**, copia exacta del publicado más:
+  - sección "De la mañana a la noche" (foto 1, la que le gustó), después de "¿Qué necesita tu piel hoy?";
+  - Novedades: antetítulo "RECIÉN LLEGADO", título "Llegado nuevo esta semana.", etiqueta "Nuevo esta semana" (la colección son los productos del 08-10; cambiar el texto cuando deje de ser cierto);
+  - Mis listas (♡) y tipografía de lujo, igual que en el borrador anterior.
+  - No se ha quitado ni ocultado ninguna sección. El banner "El cuidado, sin prisa" NO está (no le gustó).
+- El borrador 208281993553 (home limpia) queda solo como referencia.
+- Supabase: proyecto gratuito **mirea-listas** (zbpyvogfreegrkhdzsbn, París). Tabla `listas` con RLS sin políticas y función `listas` con firma HMAC (código en supabase/functions/listas). El secreto está solo en la tabla privada `ajustes`, no en el repositorio. **Falta conectar el tema** a la función; está pendiente del permiso de Blanca porque envía el ID de cliente a Supabase.
