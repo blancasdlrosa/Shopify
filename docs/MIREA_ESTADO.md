@@ -247,3 +247,8 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - Blanca **publicó** el tema 208284647761 ("ACTUAL + mañana/noche + listas"). Desde ahí ya están en la tienda real: listas, letra, mañana/noche, arreglo de "Añadir rápido" y botones de colección.
 - Nuevo borrador **208304472401 "Mirea · PUBLICADO + banners deslizables"** (copia del publicado) con un banner grande deslizable en cada colección, entre la cabecera y la cuadrícula: "Lo más vendido en X", "En oferta ahora" (solo productos rebajados de esa colección), "Lo nuevo en X" y una diapositiva extra según la familia (Perfumes → Perfumes árabes; Cabello → Cuero cabelludo; Maquillaje → Labios). Los productos se cargan con la Section Rendering API (`?sort_by=…&section_id=mirea-slide-items` / `mirea-slide-ofertas`). Las diapositivas vacías se ocultan solas. Probado en jsdom.
 - Archivos: sections/mirea-coleccion-slider.liquid, sections/mirea-slide-items.liquid, sections/mirea-slide-ofertas.liquid, snippets/mirea-slide-card.liquid, templates/collection.json (+ "mirea_slider").
+
+### 10.6 Colecciones: cabecera quitada, chips bajo el banner (13-10-2026, borrador 208304472401)
+- Nueva sección `sections/mirea-coleccion-chips.liquid`: los mismos accesos rápidos por familia (Perfumes: Mujer/Hombre/Unisex/Árabes; Piel: Granitos/Manchas…), con el título H1 oculto para Google.
+- `templates/collection.json`: orden `mirea_slider` → `mirea_chips` → `main`. La cabecera `mirea_hero` NO se ha borrado: queda desactivada (`"disabled": true`), se recupera quitando esa línea.
+- Afecta a todas las colecciones (comparten plantilla). Sin verificación visual desde aquí; la dueña revisa y publica.
