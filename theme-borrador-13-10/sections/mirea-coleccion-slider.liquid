@@ -1,6 +1,7 @@
 {%- comment -%}
   Mirea · Banner grande deslizable en cada colección (13-10-2026).
-  Diapositivas: Lo más vendido · En oferta · Novedades de la colección (+ una extra según la familia).
+  Diapositivas: Lo más vendido · En oferta · Novedades de la colección (+ 1-3 extra según la familia).
+  La 1ª ya trae productos desde el servidor, así el banner nunca sale vacío.
   Cada una carga sus productos al verse, con la sección mirea-slide-items / mirea-slide-ofertas.
   Las diapositivas sin productos se ocultan solas.
 {%- endcomment -%}
@@ -8,25 +9,31 @@
 {%- if c and c.products_count > 3 -%}
 {%- liquid
   assign perfume_family = 'perfumes,perfumes-arabes,perfumes-de-mujer,perfumes-de-hombre,perfumes-unisex' | split: ','
-  assign hair_family = 'cabello,champus-1,acondicionadores,mascarillas-1,serums,tonicos-capilares,cuero-cabelludo' | split: ','
-  assign makeup_family = 'maquillaje,rostro,ojos,labios-1,preparacion-y-acabado,desmaquillante,accesorios-1' | split: ','
-  assign extra_handle = ''
+  assign hair_family = 'cabello,champus-1,acondicionadores,mascarillas-1,serums,tonicos-capilares,cuero-cabelludo,cuidado-capilar,champus,mascarillas-y-tratamientos-capilares,cuidados-sin-aclarado' | split: ','
+  assign makeup_family = 'maquillaje,rostro,ojos,labios-1,labios,preparacion-y-acabado,desmaquillante,accesorios-1' | split: ','
+  assign body_family = 'cuidado-corporal,cuerpo,cuidado-de-manos,cuidado-de-pies,cuidado-intimo,higiene,higiene-bucal' | split: ','
+  assign tech_family = 'tecnologia,dispositivos-faciales,accesorios' | split: ','
+  assign men_family = 'bebe-y-hombre,bebe,hombre,rutina-hombre' | split: ','
+  assign skin_family = 'piel,skincare-coreano,limpiadores,tonicos-y-esencias-1,tonicos-y-esencias,serums-y-ampollas,hidratantes,proteccion-solar,mascarillas,mascarillas-y-exfoliantes,exfoliantes-y-pads,contorno-de-ojos,cuidado-de-labios,granitos,manchas,poros,piel-seca,piel-grasa,piel-mixta,piel-sensible,antiedad,barrera-cutanea,calma-y-rojeces,limpiar,tratar,hidratar,proteger' | split: ','
+  assign extras = ''
   if perfume_family contains c.handle
-    assign extra_handle = 'perfumes-arabes'
-    assign extra_title = 'Perfumes árabes'
-    assign extra_text = 'Oud, ámbar y especias: fragancias intensas y duraderas.'
+    assign extras = 'perfumes-arabes::Perfumes árabes::Oud, ámbar y especias: fragancias intensas y duraderas.||perfumes-de-mujer::Para ella::Florales, dulces y elegantes para cada día.||perfumes-de-hombre::Para él::Amaderados y frescos que dejan huella.'
   elsif hair_family contains c.handle
-    assign extra_handle = 'cuero-cabelludo'
-    assign extra_title = 'Cuero cabelludo'
-    assign extra_text = 'El cabello bonito empieza en la raíz.'
+    assign extras = 'cuero-cabelludo::Cuero cabelludo::El cabello bonito empieza en la raíz.||mascarillas-1::Mascarillas capilares::Nutrición intensa en pocos minutos.'
   elsif makeup_family contains c.handle
-    assign extra_handle = 'labios-1'
-    assign extra_title = 'Labios'
-    assign extra_text = 'Tintes y bálsamos coreanos de efecto natural.'
+    assign extras = 'labios-1::Labios::Tintes y bálsamos coreanos de efecto natural.||rostro::Rostro::Cushions y bases para una piel de cristal.'
+  elsif body_family contains c.handle
+    assign extras = 'cuidado-de-manos::Manos::Cremas que hidratan sin dejar rastro.||higiene::Higiene::Lo esencial de cada día, en versión coreana.'
+  elsif tech_family contains c.handle
+    assign extras = 'dispositivos-faciales::Dispositivos faciales::La tecnología de las clínicas coreanas, en casa.||accesorios::Accesorios de belleza::Los pequeños gestos que cambian la rutina.'
+  elsif men_family contains c.handle
+    assign extras = 'hombre::Para él::Rutinas sencillas que funcionan.||bebe::Bebé::Cuidado suave para la piel más delicada.'
+  elsif c.handle == 'salud'
+    assign extras = 'piel::Cuida tu piel también por fuera::Completa tus suplementos con tu rutina facial.'
+  elsif skin_family contains c.handle
+    assign extras = 'proteccion-solar::Protección solar::Los solares coreanos ligeros que no dejan rastro blanco.||serums-y-ampollas::Sérums y ampollas::Tratamientos concentrados para cada necesidad.||hidratantes::Hidratantes::Cremas para una piel jugosa todo el día.'
   endif
-  if extra_handle == c.handle
-    assign extra_handle = ''
-  endif
+  assign extra_list = extras | split: '||'
   assign base = c.url
 -%}
 <section class="mcs" data-mcs>
@@ -45,7 +52,7 @@
         <p class="mcs__text">Lo que más eligen nuestras clientas, en un solo vistazo.</p>
         <a class="mcs__cta" href="{{ base }}?sort_by=best-selling">Ver todo</a>
       </div>
-      <div class="mcs__rail" data-mcs-rail><span class="mcs__loading">Cargando…</span></div>
+      <div class="mcs__rail" data-mcs-rail><div class="mcs-items">{%- for p in c.products limit: 12 -%}{%- render 'mirea-slide-card', p: p -%}{%- endfor -%}</div></div>
     </article>
     <article class="mcs__slide mcs__slide--rose" data-src="{{ base }}?section_id=mirea-slide-ofertas">
       <div class="mcs__copy">
@@ -65,18 +72,22 @@
       </div>
       <div class="mcs__rail" data-mcs-rail><span class="mcs__loading">Cargando…</span></div>
     </article>
-    {%- if extra_handle != blank and collections[extra_handle] != blank -%}
-      {%- assign ex = collections[extra_handle] -%}
-      <article class="mcs__slide mcs__slide--dark" data-src="{{ ex.url }}?sort_by=best-selling&section_id=mirea-slide-items">
+    {%- for e in extra_list -%}
+      {%- assign ep = e | split: '::' -%}
+      {%- if ep[0] == c.handle -%}{%- continue -%}{%- endif -%}
+      {%- assign ex = collections[ep[0]] -%}
+      {%- if ex == blank or ex.products_count == 0 -%}{%- continue -%}{%- endif -%}
+      {%- assign tone = forloop.index | modulo: 2 -%}
+      <article class="mcs__slide {% if tone == 1 %}mcs__slide--dark{% else %}mcs__slide--rose{% endif %}" data-src="{{ ex.url }}?sort_by=best-selling&section_id=mirea-slide-items">
         <div class="mcs__copy">
           <p class="mcs__kicker">Descubre</p>
-          <h2>{{ extra_title }}</h2>
-          <p class="mcs__text">{{ extra_text }}</p>
+          <h2>{{ ep[1] }}</h2>
+          <p class="mcs__text">{{ ep[2] }}</p>
           <a class="mcs__cta" href="{{ ex.url }}">Ver colección</a>
         </div>
         <div class="mcs__rail" data-mcs-rail><span class="mcs__loading">Cargando…</span></div>
       </article>
-    {%- endif -%}
+    {%- endfor -%}
   </div>
   <div class="mcs__dots" data-mcs-dots></div>
 </section>
@@ -137,9 +148,9 @@
     fetch(s.getAttribute('data-src')).then(function (r) { return r.ok ? r.text() : ''; }).then(function (html) {
       var tmp = document.createElement('div'); tmp.innerHTML = html;
       var items = tmp.querySelector('.mcs-items');
-      if (!items || !items.querySelector('.mcs-card')) { s.hidden = true; paintDots(); return; }
+      if (!items || !items.querySelector('.mcs-card')) { if (!s.querySelector('.mcs-card')) { s.hidden = true; paintDots(); } return; }
       s.querySelector('[data-mcs-rail]').replaceChildren(items);
-    }).catch(function () { s.hidden = true; paintDots(); });
+    }).catch(function () { if (!s.querySelector('.mcs-card')) { s.hidden = true; paintDots(); } });
   }
   function current() { var w = track.clientWidth || 1; return Math.round(track.scrollLeft / w); }
   function go(i) { var list = slides(); if (!list.length) return; i = (i + list.length) % list.length; track.scrollTo({ left: list[i].offsetLeft - track.offsetLeft, behavior: 'smooth' }); }

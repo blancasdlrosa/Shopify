@@ -252,3 +252,7 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - Nueva sección `sections/mirea-coleccion-chips.liquid`: los mismos accesos rápidos por familia (Perfumes: Mujer/Hombre/Unisex/Árabes; Piel: Granitos/Manchas…), con el título H1 oculto para Google.
 - `templates/collection.json`: orden `mirea_slider` → `mirea_chips` → `main`. La cabecera `mirea_hero` NO se ha borrado: queda desactivada (`"disabled": true`), se recupera quitando esa línea.
 - Afecta a todas las colecciones (comparten plantilla). Sin verificación visual desde aquí; la dueña revisa y publica.
+
+### 10.7 Banner deslizable en todas las secciones (13-10-2026, borrador 208304472401)
+- `mirea-coleccion-slider`: diapositivas extra propias de cada familia (Perfumes: árabes/ella/él · Piel: solar/sérums/hidratantes · Cabello: cuero cabelludo/mascarillas · Maquillaje: labios/rostro · Cuerpo: manos/higiene · Tecnología: dispositivos/accesorios · Bebé y hombre: hombre/bebé · Salud: piel).
+- La 1ª diapositiva trae productos ya pintados desde el servidor, así el banner no desaparece si falla la carga.
