@@ -1,0 +1,26 @@
+{%- comment -%}
+  Mirea · Tipografía lujo (borrador 13-10-2026).
+  Títulos en Cormorant Garamond en TODA la tienda (antes Inter); textos en Inter.
+  Antetítulos y botones en mayúsculas espaciadas. Nombres de producto en mayúsculas finas, como las
+  tiendas de lujo. Carga la fuente (con cursiva) en todas las plantillas. Se quita borrando su render.
+{%- endcomment -%}
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" media="print" onload="this.media='all'">
+<style id="mirea-tipografia-lujo">
+  :root{
+    --font-heading--family:"Cormorant Garamond","Iowan Old Style",Georgia,serif;
+    --font-heading--weight:500;
+    --font-accent--family:"Cormorant Garamond","Iowan Old Style",Georgia,serif;
+    --font-accent--weight:500;
+  }
+  h1,h2,h3,.h1,.h2,.h3{font-family:var(--font-heading--family);font-weight:500;letter-spacing:-.015em}
+  h1,.h1{line-height:1.02}
+  h2,.h2{line-height:1.06}
+  h4,h5,h6,.h4,.h5,.h6{letter-spacing:.04em}
+  body{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  product-card .product-card__content a:not(.button),
+  product-card [class*="product-title"],
+  product-card .text-block p{letter-spacing:.06em}
+  product-card [class*="product-title"] *{font-size:12.5px;text-transform:uppercase;letter-spacing:.12em;line-height:1.5}
+  #MainContent[data-template*="product"] h1{font-size:clamp(30px,3.4vw,46px)}
+</style>

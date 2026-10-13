@@ -201,3 +201,15 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - Orden nuevo: Portada → Ventajas → Imprescindibles → Necesidades → Pasos → Novedades → Ofertas → Regalos (único sitio de guía/journal) → Origen Corea → Opiniones → Cinta de marcas → Cierre.
 - Pendiente de preguntar a Blanca antes de hacerlo: cambiar la tipografía (Inter), poner banners con fotos nuevas y añadir "Tarjeta regalo" al menú.
 - Comprobado: el "envío gratis España desde 69 €" que anuncia la web existe (descuento automático). Riesgo: en pedidos de más de 1 kg Korealy cobra más envío y el margen del lote ×1,3 puede quedarse en ~0. Pendiente de decidir.
+
+### 10.1 · 13-10-2026 · Listas, tipografía y banners (todo en el borrador 208281993553)
+
+- **Mis listas** (nuevo): corazón ♡ en cada tarjeta de producto y botón "Guardar en mis listas" en la ficha. Panel para elegir lista: Favoritos, Lista de deseos, Mi armario, Rutina de mañana, Rutina de noche y listas propias (crear, renombrar, eliminar). Página `/collections/all?view=mis-listas` con pestañas y, en las rutinas, número de paso, tipo de paso (limpieza, tónico, sérum, crema, SPF…) y orden ↑↓. Corazón con contador en la cabecera.
+  - Límite actual: se guarda en el navegador del cliente (localStorage), no en su cuenta. Para sincronizarlo entre dispositivos haría falta una app (p. ej. Wishlist con cuenta) → requiere aprobación (posible coste).
+  - Las cuentas de cliente de Shopify (nuevas) no dejan añadir pestañas desde el tema: por eso es una página propia enlazada desde el corazón de la cabecera.
+- **Tipografía**: títulos en Cormorant Garamond en toda la tienda (antes Inter), textos en Inter, nombres de producto en mayúsculas espaciadas.
+- **Banners de lujo**: "El cuidado, sin prisa." (foto `mirea-portada-editorial-4k.png`) y el dúo "De la mañana a la noche" (fotos `ChatGPT_Image_20_sept_2026_15_00_31.png` y `..._15_15_32.png`). Las fotos se eligieron por nombre y tamaño, sin verlas, porque el proxy bloquea cdn.shopify.com. Se cambian en el editor con un clic.
+- La sección "Pasos" queda oculta (la sustituye el dúo mañana/noche).
+- Código fuente en `theme-borrador-13-10/`. Probado en jsdom: corazón, panel, listas, crear lista, pasos de rutina y página.
+- Archivos tocados en el borrador: assets/mirea-listas.js, snippets/mirea-listas.liquid, snippets/mirea-tipografia-lujo.liquid, snippets/mirea-selector-idioma.liquid (+2 renders), sections/mirea-mis-listas.liquid, sections/mirea-banner-lujo.liquid, sections/mirea-duo-lujo.liquid, templates/collection.mis-listas.json, templates/index.json.
+- **Tarjeta regalo**: Shopify vuelve a rechazar la creación ("solo se pueden crear después de que se hayan activado"). La activación solo se puede hacer en el admin.
