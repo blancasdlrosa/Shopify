@@ -263,3 +263,9 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - Tarjeta regalo: aún no existe ningún producto tarjeta regalo.
 - Pedido #1010 (11-10, 176,84 €, IOPE x2) pagado y SIN preparar, asignado a "Rinconada 12". Avisar a la dueña.
 - Maymoo: 171 activos / 375 borradores. Activación de los 237 de MAYMOO_ACTIVAR.md sigue pendiente de la dueña.
+
+### 10.9 Maymoo activados + tarjeta regalo (13-10-2026)
+- Activados los 237 de MAYMOO_ACTIVAR.md (autorizado por la dueña: "publícalo"). Ningún pedido durante el proceso.
+- Vueltos a BORRADOR al momento: 8 productos internos de Maymoo que no son para vender (Tarjeta regalo 50 €/100 €, Bolsa Maymoo, 3 "Maymoo Bonus | Recarga", Pago de señal 5 €, Vale de devolución) y 9 sin foto (Regena Foaming Wash, Elevate Shampoo, Regena Enriched Cream, Essential oil Rosa mosqueta, Body Oil Harmony/Revitalizing/Sculpture, Organic Aloe Vera Gel, Pippala Blemish Corrector).
+- Resultado: 220 nuevos activos. Siguen activos de antes, sin foto: Conditioner Elevate, Regena Toner, Body wash nurture, Conditioner Nurture (no los toqué).
+- Imagen tarjeta regalo: docs/imagenes/tarjeta-regalo-mirea.png (logotipo escrito, el archivo del logo no se pudo descargar desde aquí).
