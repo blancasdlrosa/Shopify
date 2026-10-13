@@ -224,3 +224,9 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
   - No se ha quitado ni ocultado ninguna sección. El banner "El cuidado, sin prisa" NO está (no le gustó).
 - El borrador 208281993553 (home limpia) queda solo como referencia.
 - Supabase: proyecto gratuito **mirea-listas** (zbpyvogfreegrkhdzsbn, París). Tabla `listas` con RLS sin políticas y función `listas` con firma HMAC (código en supabase/functions/listas). El secreto está solo en la tabla privada `ajustes`, no en el repositorio. **Falta conectar el tema** a la función; está pendiente del permiso de Blanca porque envía el ID de cliente a Supabase.
+
+### 10.3 · 13-10-2026 · "Añadir rápido" y página no encontrada (borrador 208284647761)
+
+- "Añadir rápido" (sección Mirea · Productos y cualquier botón `data-mp-add`): añadía con /cart/add.js sin avisar al carrito del tema Horizon (no se actualizaba el contador ni se abría el carrito, y los errores se ocultaban). Arreglo en el borrador: `snippets/mirea-quick-add-fix.liquid` usa `Shopify.actions.updateCart` + `openCart` y muestra "No disponible" si Shopify rechaza el producto. El tema publicado tiene el mismo fallo.
+- "Página no encontrada": los productos Maymoo importados el 12-10 a las 22:44 están en **BORRADOR** (Maymoo 546 productos; 443 borradores creados desde el 12-10). En la vista previa de administradora se ven en las colecciones, pero al abrirlos dan 404 y no se pueden añadir. Los clientes no los ven. Ejemplo: "Heartleaf Quercetinol Pore Deep Cleansing Foam" (Maymoo, 14,99 €, DRAFT). Los de EMANAR BEAUTY (189) están activos y publicados.
+- Pendiente: decidir qué productos Maymoo se activan, revisando el margen antes.
