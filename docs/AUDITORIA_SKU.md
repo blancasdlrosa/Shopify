@@ -64,3 +64,43 @@
 | peripera Ink The Jelloble Tint 3.7g (12colors) | 11152016114001 (13.95 €) · 11165722476881 (14.95 €) |
 | peripera Over Blur Tint 3.5g (12colors) | 11152016703825 (14.95 €) · 11165702291793 (13.95 €) |
 | rom&nd HAN ALL FIX MASCARA (2 types) | 11153815863633 (15.95 €) · 11165824188753 (14.95 €) |
+## Repetidos Maymoo/Korealy pasados a borrador (14-10-2026)
+Regla de Blanca: dejar visible la copia más barata para la clienta (si la diferencia es ≤1 €, se queda Maymoo: envía desde España). Se pasa a BORRADOR la otra (no se borra). 35 pares; se quedan 20 de Korealy y 15 de Maymoo.
+
+| Producto | Maymoo € | Korealy € | Se queda | Id en borrador |
+|---|---|---|---|---|
+| COSRX Advanced Snail Peptide Eye Cream 25ml | 29.99 | 25.95 | Korealy | 11240282227025 |
+| Anua PDRN Hyaluronic Acid Capsule 100 Serum 30ml | 33.98 | 21.95 | Korealy | 11240280719697 |
+| whamisa Organic Flowers Water Cream 50ml | 29.99 | 35.95 | Maymoo | 11163080917329 |
+| mixsoon Bean Cleansing Oil 195ml | 25.99 | 24.95 | Korealy | 11240273772881 |
+| ROUND LAB 1025 DOKDO Cream 80mL | 34.99 | 19.95 | Korealy | 11240217280849 |
+| Round Lab 1025 Dokdo Toner 200ml | 22.99 | 14.95 | Korealy | 11240215511377 |
+| Round Lab Pine Calming Cica Cream 50ml | 33.00 | 20.95 | Korealy | 11238891651409 |
+| COSRX Aloe Soothing Sun Cream SPF50+/ PA+++ 50ml | 21.99 | 12.95 | Korealy | 11238891520337 |
+| Dr.Althea 147 Barrier Cream 50ml | 32.99 | 30.95 | Korealy | 11238885425489 |
+| COSRX Advanced Snail 96 Mucin Power Essence · 100 ml | 24.99 | 31.90 | Maymoo | 11136378011985 |
+| celimax The Vita A Retinol Shot Tightening Serum 30ml | 24.99 | 26.95 | Maymoo | 11151827304785 |
+| [haruharu wonder] Black Rice Night Knight Retinol Serum | 29.99 | 29.95 | Maymoo | 11154439602513 |
+| medicube Triple Collagen Serum 4.0 · 55 ml | 29.00 | 40.90 | Maymoo | 11137735098705 |
+| [Pyunkang Yul] Black Tea Time Reverse Eye Cream 25ml | 34.99 | 30.95 | Korealy | 11238866846033 |
+| medicube PDRN Pink Peptide Serum · 30 ml | 23.99 | 21.95 | Korealy | 11238866747729 |
+| medicube PDRN Pink Glutathione Serum Mist · 100 ml | 28.99 | 36.90 | Maymoo | 11137735754065 |
+| medicube Zero Pore Cream 2.0 · 50 ml | 23.99 | 29.90 | Maymoo | 11137740570961 |
+| Dr.Ceuracle Vegan Kombucha Tea Essence 150ml | 34.99 | 35.95 | Maymoo | 11152738976081 |
+| Round Lab 1025 Dokdo Ampoule 45g | 27.99 | 17.95 | Korealy | 11238858621265 |
+| numbuzin No.3 Skin Softening Serum 50ml | 28.99 | 20.95 | Korealy | 11238858260817 |
+| K-SECRET SEOUL 1988 Eye Cream : Retinal Liposome 4% + F | 26.99 | 29.95 | Maymoo | 11149517128017 |
+| COSRX The Niacinamide 15 Serum 20ml | 23.99 | 19.95 | Korealy | 11238853476689 |
+| COSRX Low pH Good Morning Gel Cleanser 150ml | 13.99 | 12.95 | Korealy | 11238852952401 |
+| SKIN1004 Madagascar Centella Ampoule Foam 125ml | 15.99 | 14.95 | Korealy | 11238852755793 |
+| medicube Zero Pore Blackhead Deep Cleansing Oil · 205 m | 18.99 | 29.90 | Maymoo | 11137738408273 |
+| medicube One Day Exosome Shot Pore Ampoule · 30 ml | 27.99 | 23.12 | Korealy | 11238851871057 |
+| TOCOBO Lemon Sugar Scrub Lip Mask 20ml | 21.95 | 20.95 | Maymoo | 11151721726289 |
+| COSRX Full Fit Propolis Honey Overnight Mask 60ml | 28.99 | 15.95 | Korealy | 11238733545809 |
+| medicube Zero Pore Serum 2.0 37ml | 19.99 | 24.95 | Maymoo | 11151995240785 |
+| TIRTIR SOS Serum 50ml | 38.99 | 27.95 | Korealy | 11238733316433 |
+| [Pyunkang Yul] Black Tea Enriched Cream 60ml | 44.99 | 55.95 | Maymoo | 11153874780497 |
+| Dr.Ceuracle Vegan Kombucha Tea Gel Cream 75g | 35.99 | 29.95 | Korealy | 11238733250897 |
+| Dr.Althea Skin Relief Essence 30ml | 17.99 | 20.95 | Maymoo | 11151709077841 |
+| Dr.Althea Natural Radiance Essence 30ml | 17.99 | 20.95 | Maymoo | 11151709307217 |
+| COSRX The 6 Peptide Skin Booster Serum 150ml | 22.99 | 20.95 | Korealy | 11238732661073 |
