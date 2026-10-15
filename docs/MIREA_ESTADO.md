@@ -371,3 +371,8 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
     - "Novedades" y "Ofertas" se juntan en "Novedades y ofertas" (Novedades, Ofertas, Virales, Todos los packs).
     - Desde España: Ver todo + Cofres de perfume.
   - collection.json: portadas de perfumes árabes y de novedades/ofertas. En Desde España se recuperan las imágenes de antes y se quitan las fotos de Canva, a petición de Blanca.
+- 17 perfumes árabes de Lattafa vendidos por Perfumerías Padilla (Yara, Khamrah, Asad, Bade'e Al Oud…):
+  - Etiquetas: se quita "Perfumerias Padilla" y se añaden "Proveedor: Perfumerías Padilla" y "Perfume árabe". Así salen de Desde España.
+  - Se añaden a las colecciones Perfumes y Perfumes árabes.
+  - El carrito sigue contándolos como envío desde España (la etiqueta Proveedor está en la lista).
+- Menú del borrador: se quita "Novedades y ofertas" de la barra porque no cabía. Dentro de "Todo" van por separado Novedades, Ofertas, Virales y Todos los packs; se quita el duplicado "Perfumes".
