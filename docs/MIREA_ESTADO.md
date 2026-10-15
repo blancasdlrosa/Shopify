@@ -359,3 +359,15 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - Banner de colecciones (borrador): cada diapositiva lleva un tono pastel distinto (rosa, celeste, amarillo, menta, lila y melocotón).
 - Categorías de Desde España (borrador): ahora compactas, 8 en fila, cuadradas y con la etiqueta "🚚 Envío rápido desde España".
 - Carrito (borrador): el aviso de envío depende ahora del origen real de cada producto (snippet mirea-cart-envio, que se pinta desde mirea-cart-goal). Los productos de la colección Desde España muestran 🇪🇸 'Sale desde España'. Los de Collective que no son de España, 📦 'Lo envía su proveedor'. El resto, 🇰🇷 'Directo desde Corea del Sur'. Las guías PDF, 'Descarga digital'. En carritos mixtos sale una línea por origen con el número de productos y el aviso de paquetes separados. El texto fijo antiguo de Corea queda oculto con CSS (no se ha borrado).
+- 15-10 tarde (borrador + catálogo):
+  - Colecciones nuevas, publicadas en la tienda online:
+    - perfumes-arabes-elixir: automática; etiqueta EMANAR BEAUTY y "elixir" en el título.
+    - perfumes-arabes-cofres: manual, con 2 sets árabes.
+    - desde-espana-cofres-perfume: automática; Perfumerias Padilla y "cofre" en el título.
+  - Colección Desde España: se quita la regla EMANAR BEAUTY para que no salgan los perfumes árabes. A los 40 productos capilares de EMANAR (Salerm/Lendan) se les añade la etiqueta "Envío: España" para que sigan dentro.
+  - Carrito: el origen se detecta ahora por etiquetas de proveedor (EMANAR cuenta como España).
+  - Menú del borrador (mirea-catalogo-desde-espana-1510):
+    - "Perfumes" pasa a "Perfumes árabes", con Para mujer / Para hombre / Unisex / Elixir e intensos / Cofres y sets.
+    - "Novedades" y "Ofertas" se juntan en "Novedades y ofertas" (Novedades, Ofertas, Virales, Todos los packs).
+    - Desde España: Ver todo + Cofres de perfume.
+  - collection.json: portadas de perfumes árabes y de novedades/ofertas. En Desde España se recuperan las imágenes de antes y se quitan las fotos de Canva, a petición de Blanca.

@@ -1,12 +1,13 @@
 {%- comment -%}
   15-10 Mirea: aviso de envío del carrito según el origen REAL de cada producto.
-  - España: productos de la colección automática "Desde España" (misma regla que la colección).
+  - España: productos con etiqueta de proveedor español (Envío: España, Maymoo, EMANAR BEAUTY, Perfumerias Padilla, hello-mims, Natcare, Rulls, Dr.Mush, www.sallunabeauty.com). EMANAR (perfumes árabes) también sale de España aunque no se muestre en la colección Desde España.
   - Proveedor: productos de Shopify Collective que no están en "Desde España" (origen según proveedor).
   - Corea del Sur: resto de productos físicos (Korealy y dúos/packs Mirea).
   - Digital: productos que no requieren envío (guías PDF).
   @param {string} [estilo] - 'drawer' (compacto) o 'page'
 {%- endcomment -%}
 {%- liquid
+  assign tags_es = 'Envío: España|Maymoo|EMANAR BEAUTY|Perfumerias Padilla|hello-mims|Natcare|Rulls|Dr.Mush|www.sallunabeauty.com' | split: '|'
   assign n_es = 0
   assign n_kr = 0
   assign n_pr = 0
@@ -17,8 +18,8 @@
       continue
     endif
     assign es_es = false
-    for col in item.product.collections
-      if col.handle == 'desde-espana'
+    for t in tags_es
+      if item.product.tags contains t
         assign es_es = true
         break
       endif

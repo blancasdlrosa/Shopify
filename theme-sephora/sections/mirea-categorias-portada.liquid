@@ -9,7 +9,7 @@
   endif
 -%}
 {%- if mcp_show -%}
-<section class="mcp" id="mcp-{{ section.id }}">
+<section class="mcp" id="mcp-{{ section.id }}" style="--mcp-cols:{{ section.settings.columnas | default: 8 }}">
   <div class="mcp__wrap">
     <div class="mcp__head">
       {%- if section.settings.antetitulo != blank -%}<p class="mcp__ante">{{ section.settings.antetitulo }}</p>{%- endif -%}
@@ -48,7 +48,7 @@
 #mcp-{{ section.id }} .mcp__head{margin-bottom:14px;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
 #mcp-{{ section.id }} .mcp__ante{margin:0 0 8px;font-size:10.5px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:#8f5d6c}
 #mcp-{{ section.id }} h2{margin:0;font-family:"Cormorant Garamond","Iowan Old Style",Georgia,serif;font-weight:400;font-size:clamp(26px,2.6vw,36px);line-height:1}
-#mcp-{{ section.id }} .mcp__grid{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:12px}
+#mcp-{{ section.id }} .mcp__grid{display:grid;grid-template-columns:repeat(var(--mcp-cols,8),minmax(0,1fr));gap:12px}
 #mcp-{{ section.id }} .mcp__tile{display:flex;flex-direction:column;color:#1f191c;text-decoration:none}
 #mcp-{{ section.id }} .mcp__img{position:relative;display:block;aspect-ratio:1/1;overflow:hidden;background:#f6efec;border-radius:16px}
 #mcp-{{ section.id }} .mcp__img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s ease}
@@ -68,6 +68,7 @@
 {"type":"text","id":"antetitulo","label":"Antetítulo","default":"Compra por categoría"},
 {"type":"text","id":"titulo","label":"Título","default":"¿Qué buscas hoy?"},
 {"type":"text","id":"envio","label":"Etiqueta de envío","default":"Envío rápido desde España"},
+{"type":"range","id":"columnas","label":"Columnas en ordenador","min":3,"max":8,"step":1,"default":8},
 {"type":"text","id":"solo_en","label":"Solo en estas colecciones (separadas por coma; vacío = todas)","default":"desde-espana"}],
 "blocks":[{"type":"categoria","name":"Categoría","settings":[
 {"type":"image_picker","id":"imagen","label":"Foto de portada (opcional)"},
