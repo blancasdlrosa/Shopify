@@ -354,3 +354,7 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - Vista previa: https://mireaskin.es/?preview_theme_id=208505340241
 - Colección "Desde España" (en el borrador): el banner negro "Lo más vendido" deja de salir en esa colección (nuevo ajuste ocultar_en del banner deslizable). En su lugar va una sección nueva, "Mirea · Categorías" (mirea-categorias-portada), con 8 portadas: Perfumes, Cabello, Piel, Cuerpo, Maquillaje, Salud, Aparatos y Sets de regalo. La foto sale de la colección o, si no tiene, de su primer producto. Las portadas llevan a la colección general de cada categoría: "Desde España" no tiene subcategorías propias y los productos de Padilla no tienen tipo de producto.
 - Banner deslizable de las colecciones (en el borrador): deja de ser negro. Ahora usa degradados claros en rosa, melocotón y verde salvia, con botón oscuro, tarjetas redondeadas y etiquetas rosas.
+- Colección nueva "Todos los packs" (todos-los-packs), automática y publicada en la tienda online. Incluye los títulos con pack, dúo, kit o estuche y los productos de tipo Pack.
+- Portada partida (borrador): foto al 30 % y carrusel grande (3 tarjetas visibles) con TODOS los packs, flechas, marca y descuento. Ajuste nuevo "todos_los_packs", activado por defecto.
+- Banner de colecciones (borrador): cada diapositiva lleva un tono pastel distinto (rosa, celeste, amarillo, menta, lila y melocotón).
+- Categorías de Desde España (borrador): ahora compactas, 8 en fila, cuadradas y con la etiqueta "🚚 Envío rápido desde España".

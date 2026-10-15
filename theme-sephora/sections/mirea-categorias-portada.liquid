@@ -14,6 +14,7 @@
     <div class="mcp__head">
       {%- if section.settings.antetitulo != blank -%}<p class="mcp__ante">{{ section.settings.antetitulo }}</p>{%- endif -%}
       <h2>{{ section.settings.titulo }}</h2>
+      {%- if section.settings.envio != blank -%}<span class="mcp__envio">🚚 {{ section.settings.envio }}</span>{%- endif -%}
     </div>
     <div class="mcp__grid">
       {%- for block in section.blocks -%}
@@ -41,30 +42,32 @@
   </div>
 </section>
 <style>
-#mcp-{{ section.id }}{background:#fff;color:#1f191c;padding:28px 0 36px}
+#mcp-{{ section.id }}{background:#fff;color:#1f191c;padding:18px 0 22px}
 #mcp-{{ section.id }} *{box-sizing:border-box}
 #mcp-{{ section.id }} .mcp__wrap{width:min(calc(100% - 40px),1400px);margin:0 auto}
-#mcp-{{ section.id }} .mcp__head{margin-bottom:20px}
+#mcp-{{ section.id }} .mcp__head{margin-bottom:14px;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
 #mcp-{{ section.id }} .mcp__ante{margin:0 0 8px;font-size:10.5px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:#8f5d6c}
-#mcp-{{ section.id }} h2{margin:0;font-family:"Cormorant Garamond","Iowan Old Style",Georgia,serif;font-weight:300;font-size:clamp(34px,4vw,58px);line-height:1}
-#mcp-{{ section.id }} .mcp__grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+#mcp-{{ section.id }} h2{margin:0;font-family:"Cormorant Garamond","Iowan Old Style",Georgia,serif;font-weight:400;font-size:clamp(26px,2.6vw,36px);line-height:1}
+#mcp-{{ section.id }} .mcp__grid{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:12px}
 #mcp-{{ section.id }} .mcp__tile{display:flex;flex-direction:column;color:#1f191c;text-decoration:none}
-#mcp-{{ section.id }} .mcp__img{position:relative;display:block;aspect-ratio:4/5;overflow:hidden;background:#f6efec}
+#mcp-{{ section.id }} .mcp__img{position:relative;display:block;aspect-ratio:1/1;overflow:hidden;background:#f6efec;border-radius:16px}
 #mcp-{{ section.id }} .mcp__img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s ease}
 #mcp-{{ section.id }} .mcp__img img.mcp__prod{object-fit:contain;padding:12%;background:#fff}
 #mcp-{{ section.id }} .mcp__tile:hover .mcp__img img{transform:scale(1.04)}
-#mcp-{{ section.id }} .mcp__txt{display:flex;flex-direction:column;gap:4px;padding:12px 2px 0}
-#mcp-{{ section.id }} .mcp__txt strong{font-family:"Cormorant Garamond","Iowan Old Style",Georgia,serif;font-weight:400;font-size:26px;line-height:1.05}
-#mcp-{{ section.id }} .mcp__txt span{font-size:13.5px;line-height:1.45;color:#4d4045}
-#mcp-{{ section.id }} .mcp__txt em{font-style:normal;margin-top:4px;font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#8f5d6c}
-@media(max-width:989px){#mcp-{{ section.id }} .mcp__grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
-@media(max-width:749px){#mcp-{{ section.id }} .mcp__wrap{width:calc(100% - 24px)}#mcp-{{ section.id }} .mcp__grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}#mcp-{{ section.id }} .mcp__txt strong{font-size:21px}#mcp-{{ section.id }} .mcp__txt span{display:none}}
+#mcp-{{ section.id }} .mcp__txt{display:flex;flex-direction:column;gap:2px;padding:8px 2px 0;text-align:center}
+#mcp-{{ section.id }} .mcp__txt strong{font-size:14.5px;font-weight:600;line-height:1.2}
+#mcp-{{ section.id }} .mcp__txt span{display:none}
+#mcp-{{ section.id }} .mcp__txt em{display:none}
+#mcp-{{ section.id }} .mcp__envio{display:inline-flex;align-items:center;gap:6px;background:#eaf6ee;color:#2f6b45;border-radius:999px;padding:5px 12px;font-size:12px;font-weight:600}
+@media(max-width:989px){#mcp-{{ section.id }} .mcp__grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:749px){#mcp-{{ section.id }} .mcp__wrap{width:calc(100% - 24px)}#mcp-{{ section.id }} .mcp__grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}#mcp-{{ section.id }} .mcp__txt strong{font-size:12px}}
 </style>
 {%- endif -%}
 {% schema %}
 {"name":"Mirea · Categorías","tag":"section","settings":[
 {"type":"text","id":"antetitulo","label":"Antetítulo","default":"Compra por categoría"},
 {"type":"text","id":"titulo","label":"Título","default":"¿Qué buscas hoy?"},
+{"type":"text","id":"envio","label":"Etiqueta de envío","default":"Envío rápido desde España"},
 {"type":"text","id":"solo_en","label":"Solo en estas colecciones (separadas por coma; vacío = todas)","default":"desde-espana"}],
 "blocks":[{"type":"categoria","name":"Categoría","settings":[
 {"type":"image_picker","id":"imagen","label":"Foto de portada (opcional)"},
