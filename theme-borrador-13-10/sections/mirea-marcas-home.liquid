@@ -1,0 +1,125 @@
+{% liquid
+  assign featured_brands = 'Beauty of Joseon|medicube|LANEIGE|Round Lab|SKIN1004|Anua|COSRX|Torriden|VT|K-SECRET|numbuzin' | split: '|'
+  assign extra_count = shop.vendors.size | minus: featured_brands.size
+%}
+{%- comment -%} 15-10 Mirea: marcas con foto de producto (tipo MiiN). Si la marca tiene colección propia, sale la foto de su primer producto; si no, la tarjeta de texto de siempre. {%- endcomment -%}
+
+<section id="MireaBrandsHome-{{ section.id }}" class="mirea-brands-home">
+  <div class="mirea-brands-home__inner">
+    <div class="mirea-brands-home__head">
+      <div>
+        <p class="mirea-brands-home__eyebrow">{{ section.settings.eyebrow }}</p>
+        <h2>{{ section.settings.heading }}</h2>
+        <p class="mirea-brands-home__desc">{{ section.settings.description }}</p>
+      </div>
+      <a class="mirea-brands-home__all" href="/pages/marcas">
+        Descubre todas nuestras marcas <span aria-hidden="true">→</span>
+      </a>
+    </div>
+
+    <div class="mirea-brands-home__grid">
+      {% for brand in featured_brands %}
+        {%- assign mb_handle = brand | handleize -%}
+        {%- assign mb_col = collections[mb_handle] -%}
+        {%- assign mb_img = blank -%}
+        {%- if mb_col.image -%}
+          {%- assign mb_img = mb_col.image -%}
+        {%- elsif mb_col.products.first.featured_image -%}
+          {%- assign mb_img = mb_col.products.first.featured_image -%}
+        {%- endif -%}
+        {%- if mb_col.products_count > 0 -%}
+          {%- assign mb_url = mb_col.url -%}
+        {%- else -%}
+          {%- assign mb_url = brand | url_encode | prepend: '/collections/vendors?q=' -%}
+        {%- endif -%}
+        {%- if mb_img != blank -%}
+          <a class="mirea-brand-card" href="{{ mb_url }}">
+            <span class="mirea-brand-card__img">{{ mb_img | image_url: width: 500 | image_tag: loading: 'lazy', alt: brand }}</span>
+            <span class="mirea-brand-card__name"><span>{{ brand }}</span><span aria-hidden="true">↗</span></span>
+          </a>
+        {%- else -%}
+          <a class="mirea-brand-pill" href="/collections/vendors?q={{ brand | url_encode }}">
+            <span>{{ brand }}</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+        {%- endif -%}
+      {% endfor %}
+      {% if extra_count > 0 %}
+        <a class="mirea-brand-pill mirea-brand-pill--more" href="/pages/marcas">
+          <span>+ {{ extra_count }} marcas más</span>
+          <span aria-hidden="true">→</span>
+        </a>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<style>
+  #MireaBrandsHome-{{ section.id }}{
+    --mb-bg:{{ section.settings.background }};
+    --mb-card:{{ section.settings.card_background }};
+    --mb-text:{{ section.settings.text_color }};
+    --mb-soft:{{ section.settings.soft_color }};
+    --mb-accent:{{ section.settings.accent_color }};
+    --mb-line:{{ section.settings.line_color }};
+    background:var(--mb-bg);
+    color:var(--mb-text);
+    padding:{{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px;
+  }
+  #MireaBrandsHome-{{ section.id }} *{box-sizing:border-box}
+  .mirea-brands-home__inner{width:min(calc(100% - 40px),1180px);margin:0 auto}
+  .mirea-brands-home__head{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:28px;align-items:end;margin-bottom:28px}
+  .mirea-brands-home__eyebrow{margin:0 0 9px;color:var(--mb-accent);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+  .mirea-brands-home h2{margin:0;font-size:clamp(34px,4.4vw,58px);line-height:1.02;font-weight:500;letter-spacing:-.04em}
+  .mirea-brands-home__desc{max-width:660px;margin:14px 0 0;color:var(--mb-soft);font-size:15px;line-height:1.6}
+  .mirea-brands-home__all{display:inline-flex;gap:8px;align-items:center;color:var(--mb-text);font-size:12px;font-weight:650;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:3px;white-space:nowrap}
+  .mirea-brands-home__grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+  .mirea-brand-card{display:flex;flex-direction:column;border:1px solid var(--mb-line);border-radius:16px;overflow:hidden;background:var(--mb-card);color:var(--mb-text);text-decoration:none;transition:transform .22s ease,box-shadow .22s ease}
+  .mirea-brand-card:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(68,52,59,.08)}
+  .mirea-brand-card__img{display:block;aspect-ratio:1/1;background:#fff;overflow:hidden}
+  .mirea-brand-card__img img{width:100%;height:100%;object-fit:contain;padding:14px;transition:transform .5s ease}
+  .mirea-brand-card:hover .mirea-brand-card__img img{transform:scale(1.05)}
+  .mirea-brand-card__name{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:13px 16px;font-size:13px;font-weight:650;border-top:1px solid var(--mb-line)}
+  .mirea-brand-card__name span:last-child{color:var(--mb-accent);font-size:16px}
+  .mirea-brand-pill{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 18px;border:1px solid var(--mb-line);border-radius:16px;background:var(--mb-card);color:var(--mb-text);text-decoration:none;font-size:13px;font-weight:650;transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease}
+  .mirea-brand-pill:hover{transform:translateY(-2px);border-color:#c79eaa;box-shadow:0 14px 30px rgba(68,52,59,.07)}
+  .mirea-brand-pill>span:last-child{color:var(--mb-accent);font-size:16px}
+  .mirea-brand-pill--more{background:#f7eeec;color:var(--mb-accent)}
+  @media(max-width:989px){
+    .mirea-brands-home__grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  }
+  @media(max-width:749px){
+    #MireaBrandsHome-{{ section.id }}{padding:48px 0 54px}
+    .mirea-brands-home__inner{width:min(calc(100% - 28px),1180px)}
+    .mirea-brands-home__head{grid-template-columns:1fr;gap:16px;margin-bottom:22px}
+    .mirea-brands-home h2{font-size:clamp(32px,10vw,44px)}
+    .mirea-brands-home__desc{font-size:14px}
+    .mirea-brands-home__all{width:max-content}
+    .mirea-brands-home__grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+    .mirea-brand-pill{min-height:64px;padding:14px;font-size:12px;border-radius:14px}
+    .mirea-brand-card__name{padding:10px 12px;font-size:12px}
+    .mirea-brand-pill--more{grid-column:1/-1}
+  }
+</style>
+
+{% schema %}
+{
+  "name":"Mirea · Marcas home",
+  "tag":"section",
+  "class":"mirea-brands-home-section",
+  "settings":[
+    {"type":"text","id":"eyebrow","label":"Antetítulo","default":"MARCAS EN MIREA"},
+    {"type":"text","id":"heading","label":"Título","default":"Tus marcas favoritas, en un solo lugar."},
+    {"type":"textarea","id":"description","label":"Descripción","default":"Una selección de firmas de skincare y belleza que puedes explorar por marca, necesidad o rutina."},
+    {"type":"color","id":"background","label":"Fondo","default":"#FCF7F3"},
+    {"type":"color","id":"card_background","label":"Fondo tarjeta","default":"#FFFDFC"},
+    {"type":"color","id":"text_color","label":"Texto","default":"#352B30"},
+    {"type":"color","id":"soft_color","label":"Texto suave","default":"#715B63"},
+    {"type":"color","id":"accent_color","label":"Acento","default":"#925B6D"},
+    {"type":"color","id":"line_color","label":"Línea","default":"#E1CBC6"},
+    {"type":"range","id":"padding_top","label":"Espacio arriba","min":30,"max":120,"step":5,"unit":"px","default":65},
+    {"type":"range","id":"padding_bottom","label":"Espacio abajo","min":30,"max":120,"step":5,"unit":"px","default":70}
+  ],
+  "presets":[{"name":"Mirea · Marcas home"}]
+}
+{% endschema %}

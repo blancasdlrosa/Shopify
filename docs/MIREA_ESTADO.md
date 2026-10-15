@@ -303,3 +303,8 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 ### 15-10 · Ideas MiiN · fase 2 (inicio) — borrador 208469131601
 - templates/index.json: "¿Qué necesita tu piel hoy?" (mirea_necesidades_yRix6d) sube justo debajo del hero. Ninguna sección borrada; Selección K-Beauty sigue oculta como estaba. Subido y comprobado (MD5 62523eb7…, 20889 bytes). Tema NO publicado.
 - Prueba del email de novedades: llegó a blancasdlr@gmail.com el 15-10 a las 07:24 UTC, en la pestaña Promociones. La campaña 01M4Z69PKGYS6TPK6BJ809VC31 sigue en borrador hasta que Blanca diga "envíalo".
+
+### 15-10 · Ideas MiiN · fase 2 (secciones nuevas) — borrador 208469131601
+- blocks/_product-card-gallery.liquid: etiquetas "-X %" / "Nuevo" pasan arriba a la IZQUIERDA (antes chocaban con el corazón). Subido.
+- Subidas al borrador (aún NO colocadas en la portada): sections/mirea-portada-partida.liquid (foto grande + carrusel de packs de /collections/rutinas), mirea-rutina-banner.liquid (banner "Encuentra tu rutina"), mirea-por-que.liquid (3 tarjetas con icono), y mirea-marcas-home.liquid ahora con foto del primer producto de cada marca.
+- Colocar las 3 nuevas en la portada choca con el límite de Shopify de 25 secciones por página (hay 24). La subida que quitaba 2 secciones ocultas (hero antiguo y "Novedades seleccionadas") fue RECHAZADA por Blanca → pendiente de que decida.
