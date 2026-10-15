@@ -338,3 +338,7 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
   - Descuento de un 8-9 % frente a comprarlos sueltos. Los márgenes ya descuentan IVA y comisión de pago.
 - Colección automática "Dúos y packs" (/collections/duos-y-packs, tipo = Pack), publicada. Añadida al menú del borrador, en "Rutinas y packs".
 - Los virales (BoJ Relief Sun, LANEIGE, SKIN1004, Anua, medicube…) no tienen coste en Shopify, así que no se han usado en los dúos.
+
+### 15-10 · Dúos activos y email enviado (Blanca: "si")
+- Los 6 dúos pasan a ACTIVO y se publican en Tienda online y en Shop. La colección "Dúos y packs" ya los muestra.
+- La campaña de Klaviyo 01M4Z69PKGYS6TPK6BJ809VC31 ("Novedades octubre") se lanza a la lista VU7PcQ. El envío quedó en cola (status queued); no se ha comprobado que se completara.
