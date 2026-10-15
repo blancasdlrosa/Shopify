@@ -347,3 +347,8 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - El tema publicado ahora es 208469131601 ("ideas MiiN"). Lo publicó Blanca.
 - Nuevo borrador 208503996753 "Mirea · 15-10 sin marcos · BORRADOR", copia del publicado. Única diferencia: CSS en mirea-tipografia-lujo.liquid que quita bordes y sombras y pone fondo blanco en las fotos de producto de toda la tienda (perfumes árabes, colecciones, ofertas, packs, virales, portada partida).
 - Para verlo: https://mireaskin.es/?preview_theme_id=208503996753. Hay que publicarlo para que se vea en la tienda.
+
+## 15-10 · Borrador "ideas Sephora" (tema 208505340241, SIN publicar)
+- Duplicado del tema publicado "sin marcos". Secciones nuevas subidas: mirea-promo-tramos ("Tramos regalo": +35 € guía, +60 € guía+journal, +69 € envío gratis*), mirea-dos-tarjetas (Aparatos LED / Dúos que ahorran), mirea-experiencias-cards ("Mucho más que productos": Mirea AI, Test, Guías, Tarjeta regalo) y mirea-spa-casa (disponible en el editor, no añadida para no repetir los aparatos).
+- Portada (index.json): quitadas 7 secciones ocultas o del fondo (Desde España, Guía, Ventajas, Marquee, Pasos, Origen Corea, Regalos). Las secciones siguen existiendo en el tema, así que se pueden volver a añadir. Total: 21 secciones.
+- Vista previa: https://mireaskin.es/?preview_theme_id=208505340241
