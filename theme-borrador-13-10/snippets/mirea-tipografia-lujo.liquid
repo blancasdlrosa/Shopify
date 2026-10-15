@@ -35,4 +35,12 @@
   /* 15-10: tarjetas de producto de la portada en blanco, sin marco (más limpio) */
   .mirea-productos{background:#fff!important}
   .mirea-productos .mp-image{background:#fff!important;border:0!important;border-radius:0!important}
+  /* 15-10: fondo blanco (no rosa) detrás de los productos de la home. La capa mirea-luxury-home pinta .mp-section, .mirea-collection, .mn-section, .mirea-brands-home y el fondo de las fotos en piedra/marfil con !important; esto lo pasa a blanco */
+  html body #MainContent[data-template="index"]{background:#fff!important}
+  html body #MainContent[data-template="index"] .mp-section,
+  html body #MainContent[data-template="index"] .mirea-collection,
+  html body #MainContent[data-template="index"] .mn-section,
+  html body #MainContent[data-template="index"] .mirea-brands-home,
+  html body #MainContent[data-template="index"] .mp-image,
+  html body #MainContent[data-template="index"] .mirea-product-card__image-link{background:#fff!important}
 </style>

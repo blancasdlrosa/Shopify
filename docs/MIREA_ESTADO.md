@@ -323,3 +323,18 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
   - "Novedades" con un desplegable: Recién llegado y Virales en TikTok 🔥.
   - El menú v11 de la tienda publicada no se ha tocado.
 - header-group.json del borrador apunta a mirea-catalogo-miin. Se mantiene menu_style featured_products, así los desplegables enseñan fotos de producto.
+
+### 15-10 · Fondo blanco, marcas sin marco, fotos de guías y Dúos
+- Fondo blanco en el borrador 208469131601. El beige venía de snippets/mirea-luxury-home.liquid, que fuerza #MainContent #fbf8f5, .mp-section #f2ece8 y fotos #f8f4f1 con !important. Se anula con un bloque al final de mirea-tipografia-lujo.liquid; para deshacerlo basta borrar ese bloque. En index.json pasan a #ffffff el carrusel de novedades, las marcas y necesidades; en la portada partida, el CSS. settings_data ya tenía fondo #ffffff y no se tocó. Copias originales en scratchpad/bg/.
+- Marcas de la portada: sin marcos ni bordes, fondo blanco, solo foto + nombre.
+- Fotos nuevas de las 7 guías ES (Canva, estilo editorial hiperrealista; Higgsfield tenía 0 créditos). Subidas a cada producto y puestas como foto PRINCIPAL; la portada minimalista antigua sigue como 2.ª foto. Esto ya se ve en la tienda publicada. Diseño de Canva: DAHYEIludc4.
+- 6 Dúos creados en BORRADOR (no se venden hasta activarlos) como bundles nativos, igual que los packs (requiresComponents, 1+1 componentes):
+  - duo-labios: 32,95 €; margen ~39 %.
+  - duo-solar-limpiador: 28,95 €; margen ~35 %.
+  - duo-granitos: 33,90 €; margen ~33,5 %.
+  - duo-contorno-ojos: 32,95 €; margen ~35 %.
+  - duo-barrera: 72,95 €; margen ~37 %.
+  - duo-solar-doble-limpieza: 43,95 €; margen ~29 %.
+  - Descuento de un 8-9 % frente a comprarlos sueltos. Los márgenes ya descuentan IVA y comisión de pago.
+- Colección automática "Dúos y packs" (/collections/duos-y-packs, tipo = Pack), publicada. Añadida al menú del borrador, en "Rutinas y packs".
+- Los virales (BoJ Relief Sun, LANEIGE, SKIN1004, Anua, medicube…) no tienen coste en Shopify, así que no se han usado en los dúos.
