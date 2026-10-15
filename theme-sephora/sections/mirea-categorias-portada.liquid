@@ -1,0 +1,76 @@
+{%- comment -%} 15-10 Mirea: "Compra por categoría" con portada grande de cada cosa (perfumes, cabello, piel…). Foto propia o, si no hay, la de la colección o su primer producto. Sale solo en las colecciones indicadas (o en todas si se deja vacío). {%- endcomment -%}
+{%- liquid
+  assign mcp_show = true
+  if section.settings.solo_en != blank and collection
+    assign mcp_list = section.settings.solo_en | remove: ' ' | split: ','
+    unless mcp_list contains collection.handle
+      assign mcp_show = false
+    endunless
+  endif
+-%}
+{%- if mcp_show -%}
+<section class="mcp" id="mcp-{{ section.id }}">
+  <div class="mcp__wrap">
+    <div class="mcp__head">
+      {%- if section.settings.antetitulo != blank -%}<p class="mcp__ante">{{ section.settings.antetitulo }}</p>{%- endif -%}
+      <h2>{{ section.settings.titulo }}</h2>
+    </div>
+    <div class="mcp__grid">
+      {%- for block in section.blocks -%}
+        {%- assign mcp_col = block.settings.coleccion -%}
+        {%- assign mcp_url = block.settings.enlace | default: mcp_col.url | default: '/collections/all' -%}
+        {%- assign mcp_tit = block.settings.titulo | default: mcp_col.title -%}
+        <a class="mcp__tile" href="{{ mcp_url }}" {{ block.shopify_attributes }}>
+          <span class="mcp__img">
+            {%- if block.settings.imagen != blank -%}
+              {{ block.settings.imagen | image_url: width: 900 | image_tag: loading: 'lazy', sizes: '(min-width: 990px) 25vw, 50vw', alt: mcp_tit }}
+            {%- elsif mcp_col.image -%}
+              {{ mcp_col.image | image_url: width: 900 | image_tag: loading: 'lazy', sizes: '(min-width: 990px) 25vw, 50vw', alt: mcp_tit }}
+            {%- elsif mcp_col.products.first.featured_image -%}
+              {{ mcp_col.products.first.featured_image | image_url: width: 700 | image_tag: loading: 'lazy', alt: mcp_tit, class: 'mcp__prod' }}
+            {%- endif -%}
+          </span>
+          <span class="mcp__txt">
+            <strong>{{ mcp_tit }}</strong>
+            {%- if block.settings.texto != blank -%}<span>{{ block.settings.texto }}</span>{%- endif -%}
+            <em>Ver {{ mcp_tit | downcase }} →</em>
+          </span>
+        </a>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+<style>
+#mcp-{{ section.id }}{background:#fff;color:#1f191c;padding:28px 0 36px}
+#mcp-{{ section.id }} *{box-sizing:border-box}
+#mcp-{{ section.id }} .mcp__wrap{width:min(calc(100% - 40px),1400px);margin:0 auto}
+#mcp-{{ section.id }} .mcp__head{margin-bottom:20px}
+#mcp-{{ section.id }} .mcp__ante{margin:0 0 8px;font-size:10.5px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:#8f5d6c}
+#mcp-{{ section.id }} h2{margin:0;font-family:"Cormorant Garamond","Iowan Old Style",Georgia,serif;font-weight:300;font-size:clamp(34px,4vw,58px);line-height:1}
+#mcp-{{ section.id }} .mcp__grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+#mcp-{{ section.id }} .mcp__tile{display:flex;flex-direction:column;color:#1f191c;text-decoration:none}
+#mcp-{{ section.id }} .mcp__img{position:relative;display:block;aspect-ratio:4/5;overflow:hidden;background:#f6efec}
+#mcp-{{ section.id }} .mcp__img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s ease}
+#mcp-{{ section.id }} .mcp__img img.mcp__prod{object-fit:contain;padding:12%;background:#fff}
+#mcp-{{ section.id }} .mcp__tile:hover .mcp__img img{transform:scale(1.04)}
+#mcp-{{ section.id }} .mcp__txt{display:flex;flex-direction:column;gap:4px;padding:12px 2px 0}
+#mcp-{{ section.id }} .mcp__txt strong{font-family:"Cormorant Garamond","Iowan Old Style",Georgia,serif;font-weight:400;font-size:26px;line-height:1.05}
+#mcp-{{ section.id }} .mcp__txt span{font-size:13.5px;line-height:1.45;color:#4d4045}
+#mcp-{{ section.id }} .mcp__txt em{font-style:normal;margin-top:4px;font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#8f5d6c}
+@media(max-width:989px){#mcp-{{ section.id }} .mcp__grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:749px){#mcp-{{ section.id }} .mcp__wrap{width:calc(100% - 24px)}#mcp-{{ section.id }} .mcp__grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}#mcp-{{ section.id }} .mcp__txt strong{font-size:21px}#mcp-{{ section.id }} .mcp__txt span{display:none}}
+</style>
+{%- endif -%}
+{% schema %}
+{"name":"Mirea · Categorías","tag":"section","settings":[
+{"type":"text","id":"antetitulo","label":"Antetítulo","default":"Compra por categoría"},
+{"type":"text","id":"titulo","label":"Título","default":"¿Qué buscas hoy?"},
+{"type":"text","id":"solo_en","label":"Solo en estas colecciones (separadas por coma; vacío = todas)","default":"desde-espana"}],
+"blocks":[{"type":"categoria","name":"Categoría","settings":[
+{"type":"image_picker","id":"imagen","label":"Foto de portada (opcional)"},
+{"type":"collection","id":"coleccion","label":"Colección"},
+{"type":"text","id":"titulo","label":"Título (si no, el de la colección)"},
+{"type":"text","id":"texto","label":"Texto corto"},
+{"type":"url","id":"enlace","label":"Enlace (si no, la colección)"}]}],
+"presets":[{"name":"Mirea · Categorías"}]}
+{% endschema %}

@@ -1,0 +1,181 @@
+{%- comment -%}
+  Mirea · Banner grande deslizable en cada colección (13-10-2026).
+  Diapositivas: Lo más vendido · En oferta · Novedades de la colección (+ 1-3 extra según la familia).
+  La 1ª ya trae productos desde el servidor, así el banner nunca sale vacío.
+  Cada una carga sus productos al verse, con la sección mirea-slide-items / mirea-slide-ofertas.
+  Las diapositivas sin productos se ocultan solas.
+{%- endcomment -%}
+{%- assign c = collection -%}
+{%- assign mcs_ocultar = section.settings.ocultar_en | remove: ' ' | split: ',' -%}
+{%- assign mcs_skip = false -%}{%- if c and mcs_ocultar contains c.handle -%}{%- assign mcs_skip = true -%}{%- endif -%}
+{%- if c and c.products_count > 3 and mcs_skip == false -%}
+{%- liquid
+  assign perfume_family = 'perfumes,perfumes-arabes,perfumes-de-mujer,perfumes-de-hombre,perfumes-unisex' | split: ','
+  assign hair_family = 'cabello,champus-1,acondicionadores,mascarillas-1,serums,tonicos-capilares,cuero-cabelludo,cuidado-capilar,champus,mascarillas-y-tratamientos-capilares,cuidados-sin-aclarado' | split: ','
+  assign makeup_family = 'maquillaje,rostro,ojos,labios-1,labios,preparacion-y-acabado,desmaquillante,accesorios-1' | split: ','
+  assign body_family = 'cuidado-corporal,cuerpo,cuidado-de-manos,cuidado-de-pies,cuidado-intimo,higiene,higiene-bucal' | split: ','
+  assign tech_family = 'tecnologia,dispositivos-faciales,accesorios,aparatos-de-belleza,eternas,natcare' | split: ','
+  assign men_family = 'bebe-y-hombre,bebe,hombre,rutina-hombre' | split: ','
+  assign skin_family = 'piel,skincare-coreano,limpiadores,tonicos-y-esencias-1,tonicos-y-esencias,serums-y-ampollas,hidratantes,proteccion-solar,mascarillas,mascarillas-y-exfoliantes,exfoliantes-y-pads,contorno-de-ojos,cuidado-de-labios,granitos,manchas,poros,piel-seca,piel-grasa,piel-mixta,piel-sensible,antiedad,barrera-cutanea,calma-y-rojeces,limpiar,tratar,hidratar,proteger' | split: ','
+  assign extras = ''
+  if perfume_family contains c.handle
+    assign extras = 'perfumes-arabes::Perfumes árabes::Oud, ámbar y especias: fragancias intensas y duraderas.||perfumes-de-mujer::Para ella::Florales, dulces y elegantes para cada día.||perfumes-de-hombre::Para él::Amaderados y frescos que dejan huella.'
+  elsif hair_family contains c.handle
+    assign extras = 'cuero-cabelludo::Cuero cabelludo::El cabello bonito empieza en la raíz.||mascarillas-1::Mascarillas capilares::Nutrición intensa en pocos minutos.'
+  elsif makeup_family contains c.handle
+    assign extras = 'labios-1::Labios::Tintes y bálsamos coreanos de efecto natural.||rostro::Rostro::Cushions y bases para una piel de cristal.'
+  elsif body_family contains c.handle
+    assign extras = 'cuidado-de-manos::Manos::Cremas que hidratan sin dejar rastro.||higiene::Higiene::Lo esencial de cada día, en versión coreana.'
+  elsif tech_family contains c.handle
+    assign extras = 'eternas::Eternas::Mascarillas LED y radiofrecuencia con oro de 24K.||natcare::Natcare::Aparatos faciales para potenciar tu rutina.||dispositivos-faciales::Dispositivos faciales::La tecnología de cabina, en casa.'
+  elsif men_family contains c.handle
+    assign extras = 'hombre::Para él::Rutinas sencillas que funcionan.||bebe::Bebé::Cuidado suave para la piel más delicada.'
+  elsif c.handle == 'salud'
+    assign extras = 'piel::Cuida tu piel también por fuera::Completa tus suplementos con tu rutina facial.'
+  elsif skin_family contains c.handle
+    assign extras = 'proteccion-solar::Protección solar::Los solares coreanos ligeros que no dejan rastro blanco.||serums-y-ampollas::Sérums y ampollas::Tratamientos concentrados para cada necesidad.||hidratantes::Hidratantes::Cremas para una piel jugosa todo el día.'
+  endif
+  assign extra_list = extras | split: '||'
+  assign base = c.url
+-%}
+<section class="mcs" data-mcs>
+  <div class="mcs__head">
+    <p class="mcs__eyebrow">{{ c.title | escape }}</p>
+    <div class="mcs__nav">
+      <button type="button" class="mcs__arrow" data-mcs-prev aria-label="Anterior">←</button>
+      <button type="button" class="mcs__arrow" data-mcs-next aria-label="Siguiente">→</button>
+    </div>
+  </div>
+  <div class="mcs__track" data-mcs-track>
+    <article class="mcs__slide mcs__slide--dark" data-src="{{ base }}?sort_by=best-selling&section_id=mirea-slide-items">
+      <div class="mcs__copy">
+        <p class="mcs__kicker">Los favoritos</p>
+        <h2>Lo más vendido<br><em>en {{ c.title | escape }}</em></h2>
+        <p class="mcs__text">Lo que más eligen nuestras clientas, en un solo vistazo.</p>
+        <a class="mcs__cta" href="{{ base }}?sort_by=best-selling">Ver todo</a>
+      </div>
+      <div class="mcs__rail" data-mcs-rail><div class="mcs-items">{%- for p in c.products limit: 12 -%}{%- render 'mirea-slide-card', p: p -%}{%- endfor -%}</div></div>
+    </article>
+    <article class="mcs__slide mcs__slide--rose" data-src="{{ base }}?section_id=mirea-slide-ofertas">
+      <div class="mcs__copy">
+        <p class="mcs__kicker">Precio especial</p>
+        <h2>En oferta<br><em>ahora</em></h2>
+        <p class="mcs__text">Rebajas de {{ c.title | downcase | escape }} mientras haya existencias.</p>
+        <a class="mcs__cta" href="/collections/ofertas">Ver ofertas</a>
+      </div>
+      <div class="mcs__rail" data-mcs-rail><span class="mcs__loading">Cargando…</span></div>
+    </article>
+    <article class="mcs__slide mcs__slide--ivory" data-src="{{ base }}?sort_by=created-descending&section_id=mirea-slide-items">
+      <div class="mcs__copy">
+        <p class="mcs__kicker">Recién llegado</p>
+        <h2>Lo nuevo<br><em>en {{ c.title | escape }}</em></h2>
+        <p class="mcs__text">Las últimas incorporaciones, elegidas una a una.</p>
+        <a class="mcs__cta" href="{{ base }}?sort_by=created-descending">Ver novedades</a>
+      </div>
+      <div class="mcs__rail" data-mcs-rail><span class="mcs__loading">Cargando…</span></div>
+    </article>
+    {%- for e in extra_list -%}
+      {%- assign ep = e | split: '::' -%}
+      {%- if ep[0] == c.handle -%}{%- continue -%}{%- endif -%}
+      {%- assign ex = collections[ep[0]] -%}
+      {%- if ex == blank or ex.products_count == 0 -%}{%- continue -%}{%- endif -%}
+      {%- assign tone = forloop.index | modulo: 2 -%}
+      <article class="mcs__slide {% if tone == 1 %}mcs__slide--dark{% else %}mcs__slide--rose{% endif %}" data-src="{{ ex.url }}?sort_by=best-selling&section_id=mirea-slide-items">
+        <div class="mcs__copy">
+          <p class="mcs__kicker">Descubre</p>
+          <h2>{{ ep[1] }}</h2>
+          <p class="mcs__text">{{ ep[2] }}</p>
+          <a class="mcs__cta" href="{{ ex.url }}">Ver colección</a>
+        </div>
+        <div class="mcs__rail" data-mcs-rail><span class="mcs__loading">Cargando…</span></div>
+      </article>
+    {%- endfor -%}
+  </div>
+  <div class="mcs__dots" data-mcs-dots></div>
+</section>
+<style>
+  .mcs{width:min(calc(100% - 40px),1400px);margin:18px auto 28px}
+  .mcs__head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+  .mcs__eyebrow{margin:0;font-size:10.5px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:#8f5d6c}
+  .mcs__nav{display:flex;gap:8px}
+  .mcs__arrow{width:44px;height:44px;border:1px solid rgba(31,25,28,.2);border-radius:50%;background:#fff;color:#1f191c;font-size:18px;cursor:pointer;transition:background .25s,color .25s}
+  .mcs__arrow:hover{background:#1f191c;color:#fff}
+  .mcs__track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;border-radius:4px}
+  .mcs__track::-webkit-scrollbar{display:none}
+  .mcs__slide{flex:0 0 100%;scroll-snap-align:start;display:grid;grid-template-columns:minmax(260px,32%) 1fr;gap:clamp(20px,3vw,44px);align-items:center;min-height:clamp(440px,42vw,560px);padding:clamp(28px,4vw,56px);box-sizing:border-box}
+  .mcs__slide[hidden]{display:none}
+  .mcs__slide--dark{background:#1f191c;color:#f7f0ea}
+  .mcs__slide--rose{background:linear-gradient(120deg,#f6e3e2,#efd3d6);color:#1f191c}
+  .mcs__slide--ivory{background:#fbf8f5;color:#1f191c;border:1px solid rgba(31,25,28,.08)}
+  .mcs__kicker{margin:0 0 14px;font-size:10.5px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;opacity:.75}
+  .mcs h2{margin:0;font-family:"Cormorant Garamond","Iowan Old Style",Georgia,serif;font-weight:300;font-size:clamp(42px,5.2vw,82px);line-height:.95;letter-spacing:-.025em}
+  .mcs h2 em{font-style:italic;color:#c98f9f}
+  .mcs__slide--rose h2 em,.mcs__slide--ivory h2 em{color:#8f5d6c}
+  .mcs__text{margin:18px 0 0;max-width:340px;font-size:14.5px;line-height:1.65;opacity:.82}
+  .mcs__cta{display:inline-block;margin-top:26px;padding:15px 30px;border:1px solid currentColor;color:inherit;font-size:11px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;text-decoration:none;transition:background .3s,color .3s}
+  .mcs__slide--dark .mcs__cta:hover{background:#f7f0ea;color:#1f191c}
+  .mcs__slide--rose .mcs__cta:hover,.mcs__slide--ivory .mcs__cta:hover{background:#1f191c;color:#fff}
+  .mcs__rail{min-width:0}
+  .mcs-items{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x proximity;padding-bottom:6px;scrollbar-width:thin}
+  .mcs__loading{font-size:13px;opacity:.6}
+  .mcs-card{flex:0 0 clamp(170px,17vw,230px);scroll-snap-align:start;display:flex;flex-direction:column;gap:6px;color:inherit;text-decoration:none}
+  .mcs-card__img{position:relative;display:block;aspect-ratio:1;background:#fff;overflow:hidden}
+  .mcs-card__img img{width:100%;height:100%;object-fit:contain;padding:8%;box-sizing:border-box;transition:transform .6s}
+  .mcs-card:hover .mcs-card__img img{transform:scale(1.05)}
+  .mcs-card__badge{position:absolute;top:10px;left:10px;padding:4px 8px;background:#1f191c;color:#fff;font-size:10px;font-weight:600;letter-spacing:.08em}
+  .mcs-card__brand{margin-top:6px;font-size:9.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;opacity:.7}
+  .mcs-card__title{font-size:13px;line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .mcs-card__price{font-size:14px;font-weight:600}
+  .mcs-card__price s{font-weight:400;opacity:.55;font-size:12px;margin-left:4px}
+  .mcs__dots{display:flex;justify-content:center;gap:8px;margin-top:14px}
+  .mcs__dot{width:28px;height:3px;border:0;padding:0;background:rgba(31,25,28,.18);cursor:pointer}
+  .mcs__dot.is-on{background:#1f191c}
+  @media(max-width:749px){
+    .mcs{width:calc(100% - 24px)}
+    .mcs__slide{grid-template-columns:1fr;min-height:0;padding:28px 20px}
+    .mcs__text{display:none}
+    .mcs__arrow{width:38px;height:38px}
+  }
+</style>
+<script>
+(function () {
+  var root = document.currentScript.previousElementSibling.previousElementSibling;
+  if (!root || !root.hasAttribute('data-mcs')) root = document.querySelector('[data-mcs]');
+  if (!root || root.__mcs) return; root.__mcs = true;
+  var track = root.querySelector('[data-mcs-track]');
+  var dotsBox = root.querySelector('[data-mcs-dots]');
+  function slides() { return Array.prototype.filter.call(track.children, function (s) { return !s.hidden; }); }
+  function load(s) {
+    if (s.__loaded) return; s.__loaded = true;
+    fetch(s.getAttribute('data-src')).then(function (r) { return r.ok ? r.text() : ''; }).then(function (html) {
+      var tmp = document.createElement('div'); tmp.innerHTML = html;
+      var items = tmp.querySelector('.mcs-items');
+      if (!items || !items.querySelector('.mcs-card')) { if (!s.querySelector('.mcs-card')) { s.hidden = true; paintDots(); } return; }
+      s.querySelector('[data-mcs-rail]').replaceChildren(items);
+    }).catch(function () { if (!s.querySelector('.mcs-card')) { s.hidden = true; paintDots(); } });
+  }
+  function current() { var w = track.clientWidth || 1; return Math.round(track.scrollLeft / w); }
+  function go(i) { var list = slides(); if (!list.length) return; i = (i + list.length) % list.length; track.scrollTo({ left: list[i].offsetLeft - track.offsetLeft, behavior: 'smooth' }); }
+  function paintDots() {
+    var list = slides(); dotsBox.innerHTML = '';
+    list.forEach(function (s, i) {
+      var b = document.createElement('button'); b.type = 'button'; b.className = 'mcs__dot' + (i === current() ? ' is-on' : '');
+      b.setAttribute('aria-label', 'Ir a la diapositiva ' + (i + 1)); b.addEventListener('click', function () { go(i); }); dotsBox.appendChild(b);
+    });
+    if (!list.length) root.hidden = true;
+  }
+  root.querySelector('[data-mcs-prev]').addEventListener('click', function () { go(current() - 1); });
+  root.querySelector('[data-mcs-next]').addEventListener('click', function () { go(current() + 1); });
+  var t = 0;
+  track.addEventListener('scroll', function () { clearTimeout(t); t = setTimeout(function () {
+    var i = current(), list = slides(); if (list[i]) load(list[i]); if (list[i + 1]) load(list[i + 1]);
+    dotsBox.querySelectorAll('.mcs__dot').forEach(function (d, k) { d.classList.toggle('is-on', k === i); });
+  }, 80); });
+  Array.prototype.forEach.call(track.children, load);
+  paintDots();
+})();
+</script>
+{%- endif -%}
+{% schema %}
+{ "name": "Mirea · Banner deslizable", "settings": [{"type":"text","id":"ocultar_en","label":"No mostrar en estas colecciones (handles separados por coma)","default":"desde-espana"}] }
+{% endschema %}
