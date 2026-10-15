@@ -315,3 +315,11 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - Portada: "Imprescindibles" pasa a "Virales en TikTok 🔥", con etiqueta "🔥 Viral" en las fotos: COSRX Snail, BoJ Relief Sun Aqua-fresh, Anua 77, medicube PDRN cream, SKIN1004 Centella, BoJ Glow Serum, medicube Zero Pore Pad, LANEIGE Lip Mask. Antes salía pegado al borde porque faltaba el ancho; corregido.
 - Nueva colección "Virales en TikTok" (/collections/virales-en-tiktok, id 694143385937) con 9 productos, publicada en Tienda online.
 - Fondos de producto en blanco y sin marco: "Ahora en oferta" (fondo #fff, CSS en mirea-tipografia-lujo) y las tarjetas del carrusel de novedades.
+
+### 15-10 · Packs, foto y menú — borrador 208469131601
+- Portada partida: los packs muestran en la foto todos sus productos (snippet mirea-pack-stage, fondo blanco y sin marco). La foto grande cambia a Mirea_Minimal_Editorial.png porque a Blanca no le convencía la calidad de la anterior.
+- Menú nuevo SOLO para el borrador: "Mirea · Catálogo · MiiN borrador" (handle mirea-catalogo-miin, id 348021490001). Es copia exacta del menú v11 con todos sus submenús, más:
+  - "Rutinas y packs" en la cabecera: packs, test, Mirea AI, guías y todas las rutinas.
+  - "Novedades" con un desplegable: Recién llegado y Virales en TikTok 🔥.
+  - El menú v11 de la tienda publicada no se ha tocado.
+- header-group.json del borrador apunta a mirea-catalogo-miin. Se mantiene menu_style featured_products, así los desplegables enseñan fotos de producto.

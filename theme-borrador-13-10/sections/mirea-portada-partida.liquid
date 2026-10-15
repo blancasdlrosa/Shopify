@@ -22,7 +22,11 @@
           {%- if p.available -%}
           <a class="mpp__card" href="{{ p.url }}">
             <span class="mpp__img">
-              {%- if p.featured_image -%}{{ p.featured_image | image_url: width: 500 | image_tag: loading: 'lazy', alt: p.title }}{%- endif -%}
+              {%- assign mpp_es_pack = false -%}
+              {%- if p.handle contains 'pack-' and p.images.size >= 3 -%}{%- assign mpp_es_pack = true -%}{%- endif -%}
+              {%- if mpp_es_pack -%}
+                {% render 'mirea-pack-stage', product: p, link_product: false %}
+              {%- elsif p.featured_image -%}{{ p.featured_image | image_url: width: 500 | image_tag: loading: 'lazy', alt: p.title }}{%- endif -%}
               <span class="mpp__badges">
                 {%- if p.compare_at_price > p.price -%}
                   {%- assign mpp_pct = p.compare_at_price | minus: p.price | times: 100 | divided_by: p.compare_at_price -%}
@@ -57,9 +61,13 @@
 #mpp-{{ section.id }} .mpp__cab a{color:#925b6d;font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;white-space:nowrap;text-decoration:none;border-bottom:1px solid currentColor}
 #mpp-{{ section.id }} .mpp__rail{display:grid;grid-auto-flow:column;grid-auto-columns:calc(50% - 8px);grid-template-rows:auto auto;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px;scrollbar-width:thin}
 #mpp-{{ section.id }} .mpp__card{scroll-snap-align:start;display:flex;flex-direction:column;gap:6px;color:#352b30;text-decoration:none}
-#mpp-{{ section.id }} .mpp__img{position:relative;display:block;aspect-ratio:1/1;border-radius:16px;overflow:hidden;background:#fffdfc}
+#mpp-{{ section.id }} .mpp__img{position:relative;display:block;aspect-ratio:1/1;border-radius:16px;overflow:hidden;background:#fff}
 #mpp-{{ section.id }} .mpp__img img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
 #mpp-{{ section.id }} .mpp__card:hover .mpp__img img{transform:scale(1.05)}
+#mpp-{{ section.id }} .mpp__img .mirea-pack-stage{height:100%;border:0;border-radius:16px;background:#fff;padding:8px;gap:6px}
+#mpp-{{ section.id }} .mpp__img .mirea-pack-stage__tile{background:#fff}
+#mpp-{{ section.id }} .mpp__img .mirea-pack-stage img{object-fit:contain}
+#mpp-{{ section.id }} .mpp__card:hover .mpp__img .mirea-pack-stage img{transform:none}
 #mpp-{{ section.id }} .mpp__badges{position:absolute;top:10px;left:10px;display:flex;flex-direction:column;gap:5px;align-items:flex-start}
 #mpp-{{ section.id }} .mpp__pct,#mpp-{{ section.id }} .mpp__pack{font-size:11px;font-weight:600;padding:4px 9px;border-radius:4px;letter-spacing:.04em}
 #mpp-{{ section.id }} .mpp__pct{background:#925b6d;color:#fff}
