@@ -306,5 +306,5 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 
 ### 15-10 · Ideas MiiN · fase 2 (secciones nuevas) — borrador 208469131601
 - blocks/_product-card-gallery.liquid: etiquetas "-X %" / "Nuevo" pasan arriba a la IZQUIERDA (antes chocaban con el corazón). Subido.
-- Subidas al borrador (aún NO colocadas en la portada): sections/mirea-portada-partida.liquid (foto grande + carrusel de packs de /collections/rutinas), mirea-rutina-banner.liquid (banner "Encuentra tu rutina"), mirea-por-que.liquid (3 tarjetas con icono), y mirea-marcas-home.liquid ahora con foto del primer producto de cada marca.
-- Colocar las 3 nuevas en la portada choca con el límite de Shopify de 25 secciones por página (hay 24). La subida que quitaba 2 secciones ocultas (hero antiguo y "Novedades seleccionadas") fue RECHAZADA por Blanca → pendiente de que decida.
+- Subidas al borrador y colocadas en la portada: sections/mirea-portada-partida.liquid (foto grande + carrusel de packs de /collections/rutinas), mirea-rutina-banner.liquid (banner "Encuentra tu rutina"), mirea-por-que.liquid (3 tarjetas con icono), y mirea-marcas-home.liquid ahora con foto del primer producto de cada marca.
+- Colocar las 3 nuevas en la portada choca con el límite de Shopify de 25 secciones por página (hay 24). La subida que quitaba 2 secciones ocultas (hero antiguo y "Novedades seleccionadas") primero se rechazó; Blanca eligió después "Quitar 2 ocultas" → subido. Las 2 siguen guardadas en el tema publicado y en git (commit 0934814).
