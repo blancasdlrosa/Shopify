@@ -342,3 +342,8 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 ### 15-10 · Dúos activos y email enviado (Blanca: "si")
 - Los 6 dúos pasan a ACTIVO y se publican en Tienda online y en Shop. La colección "Dúos y packs" ya los muestra.
 - La campaña de Klaviyo 01M4Z69PKGYS6TPK6BJ809VC31 ("Novedades octubre") se lanza a la lista VU7PcQ. El envío quedó en cola (status queued); no se ha comprobado que se completara.
+
+### 15-10 · Tema MiiN publicado por Blanca; borrador nuevo "sin marcos"
+- El tema publicado ahora es 208469131601 ("ideas MiiN"). Lo publicó Blanca.
+- Nuevo borrador 208503996753 "Mirea · 15-10 sin marcos · BORRADOR", copia del publicado. Única diferencia: CSS en mirea-tipografia-lujo.liquid que quita bordes y sombras y pone fondo blanco en las fotos de producto de toda la tienda (perfumes árabes, colecciones, ofertas, packs, virales, portada partida).
+- Para verlo: https://mireaskin.es/?preview_theme_id=208503996753. Hay que publicarlo para que se vea en la tienda.
