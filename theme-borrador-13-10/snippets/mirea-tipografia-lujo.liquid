@@ -27,4 +27,9 @@
   #MainContent .mirea-collection__description,#MainContent .mirea-collection__description *,
   #MainContent .mirea-collection__view-all{font-family:var(--font-body--family,Inter,system-ui,sans-serif)!important;letter-spacing:normal!important;font-weight:400}
   #MainContent .mirea-collection__view-all{font-size:13px!important;letter-spacing:.06em!important}
+  /* 15-10: hero de la home: foto de fondo nítida; el difuminado queda solo detrás del título y el texto */
+  .hx-media img,.hx-media video{filter:none!important}
+  .hx-stage-copy{width:fit-content!important;max-width:min(calc(100% - 32px),760px)!important;margin-left:auto!important;margin-right:auto!important;padding:clamp(22px,3vw,40px) clamp(24px,4vw,56px)!important}
+  .hx-stage-copy::before,.hx-stage-copy::after{inset:0!important;border-radius:28px;-webkit-mask-image:radial-gradient(farthest-side at 50% 50%,#000 62%,transparent 100%)!important;mask-image:radial-gradient(farthest-side at 50% 50%,#000 62%,transparent 100%)!important}
+  .hx-stage-copy::before{backdrop-filter:blur(14px) saturate(110%)!important;-webkit-backdrop-filter:blur(14px) saturate(110%)!important}
 </style>
