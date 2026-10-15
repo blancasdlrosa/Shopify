@@ -1,0 +1,9 @@
+{%- comment -%}
+  Mirea v9 · antes era la barra 35/60. Ahora delega en la barra de 3 regalos (mirea-envio-gratis).
+  En la página /cart la barra ya se pinta arriba del resumen (blocks/_cart-summary), así que aquí no se repite.
+  15-10: también pinta el aviso de envío según el origen real de cada producto (mirea-cart-envio)
+  y oculta el antiguo aviso fijo "Directo desde Corea del Sur" de cart-summary.
+{%- endcomment -%}
+{%- unless template.name == 'cart' -%}{%- render 'mirea-envio-gratis' -%}{%- endunless -%}
+{%- if template.name == 'cart' -%}{%- render 'mirea-cart-envio', estilo: 'cartpage' -%}{%- else -%}{%- render 'mirea-cart-envio', estilo: 'drawer' -%}{%- endif -%}
+<style>.mirea-cart-shipping-note{display:none!important}</style>
