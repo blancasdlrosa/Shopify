@@ -98,8 +98,8 @@
               {%- endfor -%}
             {%- endif -%}
             {%- for l in parent_link.links -%}
-              {%- if kind == 'espana' and l.object.handle == 'desde-espana' -%}{%- continue -%}{%- endif -%}
-              {%- if kind == 'espana' and l.object.handle == 'desde-espana-cofres-perfume' -%}{%- continue -%}{%- endif -%}
+              {%- comment -%} 16-10: en Desde España, las secciones desde-espana-* ya salen arriba con su foto: no repetirlas {%- endcomment -%}
+              {%- if kind == 'espana' and l.object.handle contains 'desde-espana' -%}{%- continue -%}{%- endif -%}
               {%- liquid
                 assign img = blank
                 if l.type == 'product_link'
