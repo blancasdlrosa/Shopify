@@ -376,3 +376,10 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
   - Se añaden a las colecciones Perfumes y Perfumes árabes.
   - El carrito sigue contándolos como envío desde España (la etiqueta Proveedor está en la lista).
 - Menú del borrador: se quita "Novedades y ofertas" de la barra porque no cabía. Dentro de "Todo" van por separado Novedades, Ofertas, Virales y Todos los packs; se quita el duplicado "Perfumes".
+
+## 16-10 · Menú visual (Todo, Desde España y resto)
+- Blanca publicó "15-10 ideas Sephora" (208505340241, ahora MAIN). Desde aquí se trabaja en la copia "16-10 España y fichas · BORRADOR" (208546693457), idéntica a la web.
+- Subidos a 208546693457: snippets/mirea-mega-sephora.liquid (nuevos kind 'visual' y 'espana') y snippets/mega-menu-list.liquid.
+  - Todo y demás desplegables: tarjetas redondas con foto de la colección/producto o emoji si no hay foto, más tarjetas "Encuentra tu rutina" y "Ofertas".
+  - Desde España: secciones desde-espana-{perfumes,cofres-perfume,piel,cabello,cuerpo,maquillaje,salud,aparatos,sets} (se ocultan si están vacías), sello "🚚 Envío rápido desde España" y chips con todas las marcas de la colección desde-espana (sin Padilla/EMANAR/Mirea).
+- Subcolecciones DE: perfumes 1132, piel 956, maquillaje 246, cuerpo 170, sets 143, cabello 105, aparatos 19, salud 7 (desde-espana total 2771). Ningún perfume árabe en "DE · Perfumes". El etiquetado se cortó en el lote 10 de 12 por límite de uso: puede faltar algún producto.
