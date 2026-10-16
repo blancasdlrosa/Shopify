@@ -392,3 +392,4 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - sections/mirea-categorias-portada.liquid: dentro de una sección (p. ej. desde-espana-sets) sale su título grande, "← Ver todas las secciones" y la tarjeta marcada.
 - En marcha (subagentes): etiqueta "Envío: Corea" (~7.400 productos) + colección desde-corea; terminar etiquetas DE · *.
 - Pendiente de Blanca: ¿Eternas (Shopify Collective, incl. Pro PDT LED Lamp 1.460 €) envía desde España?
+- 16-10: subcolecciones DE terminadas (perfumes ~1.167, piel 946, maquillaje 253, cuerpo 177, cabello 100, sets 82→71, aparatos 19, salud 7). 20 perfumes árabes de Padilla (17 Lattafa + 3 Armaf Club de Nuit) sin "Envío: España"/"Perfumerias Padilla", con "Perfume árabe" y "Proveedor: Perfumerías Padilla" (carrito sigue diciendo España); Armaf añadidos a perfumes y perfumes-arabes. Quitado "DE · Sets" de 11 borradores Maymoo que no son productos (bonos, vales, bolsas, tarjetas).
