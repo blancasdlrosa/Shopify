@@ -383,3 +383,12 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
   - Todo y demás desplegables: tarjetas redondas con foto de la colección/producto o emoji si no hay foto, más tarjetas "Encuentra tu rutina" y "Ofertas".
   - Desde España: secciones desde-espana-{perfumes,cofres-perfume,piel,cabello,cuerpo,maquillaje,salud,aparatos,sets} (se ocultan si están vacías), sello "🚚 Envío rápido desde España" y chips con todas las marcas de la colección desde-espana (sin Padilla/EMANAR/Mirea).
 - Subcolecciones DE: perfumes 1132, piel 956, maquillaje 246, cuerpo 170, sets 143, cabello 105, aparatos 19, salud 7 (desde-espana total 2771). Ningún perfume árabe en "DE · Perfumes". El etiquetado se cortó en el lote 10 de 12 por límite de uso: puede faltar algún producto.
+
+## 16-10 (2) · Menú por grupos, Corea / España separados, título en colecciones
+- Borrador 208546693457 · menú "mirea-espana-sets-1610-borrador" (solo lo usa este borrador; la web usa mirea-catalogo-desde-espana-1510, sin tocar).
+  - Todo: + "Desde Corea" (/collections/desde-corea), + Encuentra tu rutina, Mirea AI, Guías Mirea (quitados de Rutinas y packs).
+- snippets/mirea-mega-tile.liquid (nuevo): tarjeta redonda siempre con foto (sin emojis).
+- snippets/mirea-mega-sephora.liquid: Todo agrupado (Comprar por / Por origen / Especial Mirea / Te ayudamos); categorías con fila "Desde Corea" (enlaces …/envio-corea) y fila "Desde España" (…/envio-espana + Ver todo desde España); Desde España igual.
+- sections/mirea-categorias-portada.liquid: dentro de una sección (p. ej. desde-espana-sets) sale su título grande, "← Ver todas las secciones" y la tarjeta marcada.
+- En marcha (subagentes): etiqueta "Envío: Corea" (~7.400 productos) + colección desde-corea; terminar etiquetas DE · *.
+- Pendiente de Blanca: ¿Eternas (Shopify Collective, incl. Pro PDT LED Lamp 1.460 €) envía desde España?

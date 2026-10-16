@@ -1,6 +1,6 @@
 {%- comment -%}
   Mirea v9 · Mega menú tipo Sephora (solo escritorio). Se usa para "Piel" y "Marcas" del menú principal.
-  15-10: añadido kind 'visual' (Todo y resto de categorías: tarjetas con foto/emoji) y 'espana' (Desde España: secciones + todas las marcas).
+  15-10: añadido kind 'visual' y 'espana'. 16-10: sin emojis (siempre foto, snippet mirea-mega-tile), Todo agrupado, Corea y España separados.
   Lee los enlaces del propio menú (Tienda online → Navegación), así que si Blanca cambia el menú, esto cambia solo.
   Fotos: usa SOLO la imagen existente de cada colección (o la del primer producto si la colección no tiene). No añade fotos nuevas.
   @param parent_link, id, kind ('piel' | 'marcas' | 'visual' | 'espana')
@@ -74,91 +74,163 @@
           <span class="msm__txt">En tu primer pedido desde 35 € · rutinas + journal desde 60 € · envío gratis en España desde 69 €.</span>
         </a>
       </div>
-    {%- elsif kind == 'visual' or kind == 'espana' -%}
-      {%- comment -%} 15-10: menú visual con fotos (como Piel) para Todo, Desde España y el resto de categorías. {%- endcomment -%}
+    {%- elsif kind == 'visual' -%}
+      {%- comment -%}
+        16-10: menú visual sin dibujos.
+        · "Todo": agrupado con títulos (Comprar por / Por origen / Especial Mirea / Te ayudamos).
+        · Categorías: lo de Corea y lo de España por separado (según la etiqueta "Envío: Corea" / "Envío: España" de los productos).
+        · Resto: rejilla simple.
+      {%- endcomment -%}
       {%- liquid
-        assign emo_t = 'Todos los productos|Más vendidos|Novedades|Ofertas|Virales|Tarjeta regalo|Packs|Rutinas|Encuentra tu rutina|Mirea AI|Guías|Desde España|Perfumes|Cofres|Bebé|Hombre|Suplementos' | split: '|'
-        assign emo_e = '🛍️|⭐|✨|🏷️|🔥|🎁|🎀|🧴|🧪|💬|📖|🇪🇸|🌸|🎁|👶|🧔|💊' | split: '|'
+        assign es_map = 'Cabello::desde-espana-cabello|Cuerpo::desde-espana-cuerpo|Maquillaje::desde-espana-maquillaje|Aparatos y tecnología::desde-espana-aparatos|Suplementos::desde-espana-salud|Piel::desde-espana-piel' | split: '|'
+        assign es_handle = ''
+        for m in es_map
+          assign mp = m | split: '::'
+          if parent_link.title == mp[0]
+            assign es_handle = mp[1]
+          endif
+        endfor
+        assign n_kr = 0
+        assign n_es = 0
+        assign n_ot = 0
+        for l in parent_link.links
+          if l.type == 'collection_link' and l.object.all_tags contains 'Envío: Corea'
+            assign n_kr = n_kr | plus: 1
+          endif
+          if l.type == 'collection_link' and l.object.all_tags contains 'Envío: España'
+            assign n_es = n_es | plus: 1
+          endif
+          unless l.object.all_tags contains 'Envío: Corea' or l.object.all_tags contains 'Envío: España'
+            assign n_ot = n_ot | plus: 1
+          endunless
+        endfor
       -%}
-      <div class="msm__vis{% if kind == 'espana' %} msm__vis--es{% endif %}">
+      <div class="msm__vis">
         <div class="msm__vmain">
-          <div class="msm__vhead">
-            <p class="msm__h">{% if kind == 'espana' %}Desde España · por categoría{% else %}{{ parent_link.title }}{% endif %}</p>
-            {%- if kind == 'espana' -%}<span class="msm__ship">🚚 Envío rápido desde España</span>{%- endif -%}
-          </div>
-          <ul class="list-unstyled msm__vgrid">
-            {%- if kind == 'espana' -%}
-              {%- assign es_list = 'desde-espana-perfumes::Perfumes|desde-espana-cofres-perfume::Cofres de perfume|desde-espana-piel::Piel|desde-espana-cabello::Cabello|desde-espana-cuerpo::Cuerpo|desde-espana-maquillaje::Maquillaje|desde-espana-salud::Salud y bienestar|desde-espana-aparatos::Aparatos|desde-espana-sets::Sets de regalo' | split: '|' -%}
-              {%- for e in es_list -%}
-                {%- assign ep = e | split: '::' -%}
-                {%- assign ec = collections[ep[0]] -%}
-                {%- if ec == blank or ec.products_count == 0 -%}{%- continue -%}{%- endif -%}
-                {%- assign img = ec.image | default: ec.products.first.featured_image -%}
-                <li><a class="msm__vtile" href="{{ ec.url }}"><span class="msm__vimg">{%- if img -%}{{ img | image_url: width: 200 | image_tag: loading: 'lazy', alt: ep[1] }}{%- endif -%}</span><span class="msm__vname">{{ ep[1] }}</span></a></li>
+          {%- if parent_link.title == 'Todo' -%}
+            {%- liquid
+              assign g_tit = 'Comprar por|Por origen|Especial Mirea|Te ayudamos' | split: '|'
+              assign g_key = 'Todos los productos,Novedades,Más vendidos,Ofertas,Virales,packs|Desde Corea,Desde España,Perfumes árabes|Rituales,Seda,Aparatos,Tarjeta|Encuentra,Mirea AI,Guía' | split: '|'
+            -%}
+            <div class="msm__groups">
+              {%- for gt in g_tit -%}
+                {%- assign keys = g_key[forloop.index0] | split: ',' -%}
+                <div class="msm__group">
+                  <p class="msm__h">{{ gt }}</p>
+                  <ul class="list-unstyled msm__vgrid msm__vgrid--sm">
+                    {%- for l in parent_link.links -%}
+                      {%- assign hit = false -%}
+                      {%- for k in keys -%}{%- if l.title contains k -%}{%- assign hit = true -%}{%- break -%}{%- endif -%}{%- endfor -%}
+                      {%- if hit -%}{%- render 'mirea-mega-tile', l: l -%}{%- endif -%}
+                    {%- endfor -%}
+                  </ul>
+                </div>
               {%- endfor -%}
+            </div>
+          {%- elsif n_kr > 0 or n_es > 0 -%}
+            {%- if n_kr > 0 -%}
+              <div class="msm__row">
+                <div class="msm__vhead"><p class="msm__h">{{ parent_link.title }} · Desde Corea</p><span class="msm__ship msm__ship--kr">🇰🇷 Original de Corea del Sur</span></div>
+                <ul class="list-unstyled msm__vgrid">
+                  {%- for l in parent_link.links -%}
+                    {%- if l.type == 'collection_link' and l.object.all_tags contains 'Envío: Corea' -%}
+                      {%- assign u = l.url | append: '/envio-corea' -%}
+                      {%- render 'mirea-mega-tile', l: l, url: u, origen: 'Envío: Corea' -%}
+                    {%- endif -%}
+                  {%- endfor -%}
+                </ul>
+              </div>
             {%- endif -%}
-            {%- for l in parent_link.links -%}
-              {%- comment -%} 16-10: en Desde España, las secciones desde-espana-* ya salen arriba con su foto: no repetirlas {%- endcomment -%}
-              {%- if kind == 'espana' and l.object.handle contains 'desde-espana' -%}{%- continue -%}{%- endif -%}
-              {%- liquid
-                assign img = blank
-                if l.type == 'product_link'
-                  assign img = l.object.featured_image
-                elsif l.object.image
-                  assign img = l.object.image
-                elsif l.object.products.first.featured_image
-                  assign img = l.object.products.first.featured_image
-                endif
-                assign emo = '✨'
-                for t in emo_t
-                  if l.title contains t
-                    assign emo = emo_e[forloop.index0]
-                    break
-                  endif
-                endfor
-              -%}
-              <li>
-                <a class="msm__vtile" href="{{ l.url }}">
-                  <span class="msm__vimg{% if img == blank %} msm__vimg--emo{% endif %}">{%- if img != blank -%}{{ img | image_url: width: 200 | image_tag: loading: 'lazy', alt: l.title }}{%- else -%}<span aria-hidden="true">{{ emo }}</span>{%- endif -%}</span>
-                  <span class="msm__vname">{{ l.title }}</span>
-                </a>
-              </li>
-            {%- endfor -%}
-          </ul>
+            {%- if n_es > 0 or es_handle != '' -%}
+              <div class="msm__row">
+                <div class="msm__vhead"><p class="msm__h">{{ parent_link.title }} · Desde España</p><span class="msm__ship">🚚 Envío rápido desde España</span></div>
+                <ul class="list-unstyled msm__vgrid">
+                  {%- for l in parent_link.links -%}
+                    {%- if l.type == 'collection_link' and l.object.all_tags contains 'Envío: España' -%}
+                      {%- assign u = l.url | append: '/envio-espana' -%}
+                      {%- render 'mirea-mega-tile', l: l, url: u, origen: 'Envío: España' -%}
+                    {%- endif -%}
+                  {%- endfor -%}
+                </ul>
+                {%- if es_handle != '' and collections[es_handle].products_count > 0 -%}
+                  <a class="msm__a msm__a--all" href="{{ collections[es_handle].url }}">Ver todo {{ parent_link.title | downcase }} desde España →</a>
+                {%- endif -%}
+              </div>
+            {%- endif -%}
+            {%- if n_ot > 0 -%}
+              <div class="msm__row">
+                <div class="msm__vhead"><p class="msm__h">Más en {{ parent_link.title | downcase }}</p></div>
+                <ul class="list-unstyled msm__vgrid">
+                  {%- for l in parent_link.links -%}
+                    {%- unless l.object.all_tags contains 'Envío: Corea' or l.object.all_tags contains 'Envío: España' -%}
+                      {%- render 'mirea-mega-tile', l: l -%}
+                    {%- endunless -%}
+                  {%- endfor -%}
+                </ul>
+              </div>
+            {%- endif -%}
+          {%- else -%}
+            <div class="msm__vhead"><p class="msm__h">{{ parent_link.title }}</p></div>
+            <ul class="list-unstyled msm__vgrid">
+              {%- for l in parent_link.links -%}{%- render 'mirea-mega-tile', l: l -%}{%- endfor -%}
+            </ul>
+          {%- endif -%}
           <a class="msm__a msm__a--all" href="{{ parent_link.url }}">Ver todo {{ parent_link.title | downcase }} →</a>
         </div>
-        {%- if kind == 'espana' -%}
-          {%- liquid
-            assign es_col = collections['desde-espana']
-            assign skip_v = 'Perfumerías Padilla|EMANAR BEAUTY|Mirea Skin|' | split: '|'
-          -%}
-          <div class="msm__vbrands">
-            <p class="msm__h">Marcas desde España</p>
-            <ul class="list-unstyled msm__chips">
-              {%- assign n_v = 0 -%}
-              {%- for v in es_col.all_vendors -%}
-                {%- if skip_v contains v or v == blank -%}{%- continue -%}{%- endif -%}
-                {%- assign n_v = n_v | plus: 1 -%}
-                {%- if n_v > 48 -%}{%- break -%}{%- endif -%}
-                <li><a class="msm__chip" href="{{ v | url_for_vendor }}">{{ v }}</a></li>
-              {%- endfor -%}
-            </ul>
-            <a class="msm__a msm__a--all" href="{{ es_col.url }}">Ver todo desde España →</a>
+        <div class="msm__promo">
+          <a class="msm__card msm__card--dark" href="/pages/encuentra-tu-rutina">
+            <span class="msm__eyebrow">Asesoría gratis</span>
+            <span class="msm__title msm__title--sm">Encuentra tu rutina</span>
+            <span class="msm__btn">Hacer el test</span>
+          </a>
+          <a class="msm__card" href="/collections/ofertas">
+            <span class="msm__eyebrow">Ofertas</span>
+            <span class="msm__title msm__title--sm">Precio especial</span>
+            <span class="msm__txt">Rebajas mientras haya existencias.</span>
+          </a>
+        </div>
+      </div>
+    {%- elsif kind == 'espana' -%}
+      <div class="msm__vis msm__vis--es">
+        <div class="msm__vmain">
+          <div class="msm__vhead">
+            <p class="msm__h">Desde España · por categoría</p>
+            <span class="msm__ship">🚚 Envío rápido desde España</span>
           </div>
-        {%- else -%}
-          <div class="msm__promo">
-            <a class="msm__card msm__card--dark" href="/pages/encuentra-tu-rutina">
-              <span class="msm__eyebrow">Asesoría gratis</span>
-              <span class="msm__title msm__title--sm">Encuentra tu rutina</span>
-              <span class="msm__btn">Hacer el test</span>
-            </a>
-            <a class="msm__card" href="/collections/ofertas">
-              <span class="msm__eyebrow">🏷️ Ofertas</span>
-              <span class="msm__title msm__title--sm">Precio especial</span>
-              <span class="msm__txt">Rebajas mientras haya existencias.</span>
-            </a>
-          </div>
-        {%- endif -%}
+          <ul class="list-unstyled msm__vgrid">
+            {%- assign es_list = 'desde-espana-perfumes::Perfumes|desde-espana-cofres-perfume::Cofres de perfume|desde-espana-piel::Piel|desde-espana-cabello::Cabello|desde-espana-cuerpo::Cuerpo|desde-espana-maquillaje::Maquillaje|desde-espana-salud::Salud y bienestar|desde-espana-aparatos::Aparatos|desde-espana-sets::Sets de regalo' | split: '|' -%}
+            {%- for e in es_list -%}
+              {%- assign ep = e | split: '::' -%}
+              {%- assign ec = collections[ep[0]] -%}
+              {%- if ec == blank or ec.products_count == 0 -%}{%- continue -%}{%- endif -%}
+              {%- assign img = ec.image | default: ec.products.first.featured_image -%}
+              <li><a class="msm__vtile" href="{{ ec.url }}"><span class="msm__vimg">{%- if img -%}{{ img | image_url: width: 200 | image_tag: loading: 'lazy', alt: ep[1] }}{%- endif -%}</span><span class="msm__vname">{{ ep[1] }}</span></a></li>
+            {%- endfor -%}
+            {%- for l in parent_link.links -%}
+              {%- comment -%} las secciones desde-espana-* ya salen arriba con su foto: no repetirlas {%- endcomment -%}
+              {%- if l.object.handle contains 'desde-espana' -%}{%- continue -%}{%- endif -%}
+              {%- render 'mirea-mega-tile', l: l -%}
+            {%- endfor -%}
+          </ul>
+          <a class="msm__a msm__a--all" href="{{ parent_link.url }}">Ver todo desde España →</a>
+        </div>
+        {%- liquid
+          assign es_col = collections['desde-espana']
+          assign skip_v = 'Perfumerías Padilla|EMANAR BEAUTY|Mirea Skin|' | split: '|'
+        -%}
+        <div class="msm__vbrands">
+          <p class="msm__h">Marcas desde España</p>
+          <ul class="list-unstyled msm__chips">
+            {%- assign n_v = 0 -%}
+            {%- for v in es_col.all_vendors -%}
+              {%- if skip_v contains v or v == blank -%}{%- continue -%}{%- endif -%}
+              {%- assign n_v = n_v | plus: 1 -%}
+              {%- if n_v > 48 -%}{%- break -%}{%- endif -%}
+              <li><a class="msm__chip" href="{{ v | url_for_vendor }}">{{ v }}</a></li>
+            {%- endfor -%}
+          </ul>
+          <a class="msm__a msm__a--all" href="{{ es_col.url }}">Ver todo desde España →</a>
+        </div>
       </div>
     {%- else -%}
       <div class="msm__brands">
@@ -248,5 +320,14 @@
   .msm__chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 10px;padding:0;max-height:320px;overflow:auto}
   .msm__chip{display:inline-block;padding:7px 12px;border:1px solid #eadcd8;border-radius:999px;background:#fff;color:#1f191c;font-size:12.5px;font-weight:600;text-decoration:none;transition:background .2s,color .2s}
   .msm__chip:hover{background:#1f191c;color:#fff;border-color:#1f191c}
+  /* 16-10 · grupos (Todo) y filas Corea / España */
+  .msm__groups{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 36px}
+  .msm__vgrid--sm{grid-template-columns:repeat(auto-fill,minmax(88px,1fr));gap:12px 10px}
+  .msm__vgrid--sm .msm__vimg{width:66px;height:66px}
+  .msm__vgrid--sm .msm__vname{font-size:12.5px}
+  .msm__row+.msm__row{margin-top:16px;padding-top:16px;border-top:1px solid #f0e6e3}
+  .msm__row .msm__vgrid{margin-bottom:4px}
+  .msm__ship--kr{background:#eef1fb;color:#33407a}
+  .msm__vimg{flex:0 0 auto}
   @media (max-width:1199px){.msm .msm__inner{grid-template-columns:repeat(4,minmax(0,1fr))}.msm__promo{grid-column:1/-1;flex-direction:row}.msm__promo .msm__card{flex:1}.msm__bgrid{grid-template-columns:repeat(5,1fr)}.msm__vis,.msm__vis--es{grid-template-columns:1fr}}
 </style>

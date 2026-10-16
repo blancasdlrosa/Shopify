@@ -11,9 +11,26 @@
 {%- if mcp_show -%}
 <section class="mcp" id="mcp-{{ section.id }}" style="--mcp-cols:{{ section.settings.columnas | default: 8 }}">
   <div class="mcp__wrap">
+    {%- comment -%} 16-10: si estás dentro de una de estas secciones, su título sale grande arriba y su tarjeta queda marcada {%- endcomment -%}
+    {%- liquid
+      assign mcp_act = ''
+      assign mcp_here = '/collections/' | append: collection.handle
+      for block in section.blocks
+        assign b_url = block.settings.enlace | default: block.settings.coleccion.url
+        if collection and b_url == mcp_here
+          assign mcp_act = block.settings.titulo | default: block.settings.coleccion.title
+        endif
+      endfor
+      assign mcp_parent = section.settings.solo_en | remove: ' ' | split: ',' | first
+    -%}
     <div class="mcp__head">
       {%- if section.settings.antetitulo != blank -%}<p class="mcp__ante">{{ section.settings.antetitulo }}</p>{%- endif -%}
-      <h2>{{ section.settings.titulo }}</h2>
+      {%- if mcp_act != '' -%}
+        <h2>{{ mcp_act }}</h2>
+        {%- if mcp_parent != blank and collection.handle != mcp_parent -%}<a class="mcp__back" href="/collections/{{ mcp_parent }}">← Ver todas las secciones</a>{%- endif -%}
+      {%- else -%}
+        <h2>{{ section.settings.titulo }}</h2>
+      {%- endif -%}
       {%- if section.settings.envio != blank -%}<span class="mcp__envio">🚚 {{ section.settings.envio }}</span>{%- endif -%}
     </div>
     <div class="mcp__grid">
@@ -21,7 +38,7 @@
         {%- assign mcp_col = block.settings.coleccion -%}
         {%- assign mcp_url = block.settings.enlace | default: mcp_col.url | default: '/collections/all' -%}
         {%- assign mcp_tit = block.settings.titulo | default: mcp_col.title -%}
-        <a class="mcp__tile" href="{{ mcp_url }}" {{ block.shopify_attributes }}>
+        <a class="mcp__tile{% if mcp_url == mcp_here %} is-active{% endif %}" href="{{ mcp_url }}"{% if mcp_url == mcp_here %} aria-current="page"{% endif %} {{ block.shopify_attributes }}>
           <span class="mcp__img">
             {%- if block.settings.imagen != blank -%}
               {{ block.settings.imagen | image_url: width: 900 | image_tag: loading: 'lazy', sizes: '(min-width: 990px) 25vw, 50vw', alt: mcp_tit }}
@@ -58,6 +75,10 @@
 #mcp-{{ section.id }} .mcp__txt strong{font-size:14.5px;font-weight:600;line-height:1.2}
 #mcp-{{ section.id }} .mcp__txt span{display:none}
 #mcp-{{ section.id }} .mcp__txt em{display:none}
+#mcp-{{ section.id }} .mcp__back{font-size:13px;font-weight:600;color:#8f5d6c;text-decoration:none}
+#mcp-{{ section.id }} .mcp__back:hover{text-decoration:underline}
+#mcp-{{ section.id }} .mcp__tile.is-active .mcp__img{box-shadow:0 0 0 3px #fff,0 0 0 5px #1f191c}
+#mcp-{{ section.id }} .mcp__tile.is-active .mcp__txt strong{text-decoration:underline;text-underline-offset:4px}
 #mcp-{{ section.id }} .mcp__envio{display:inline-flex;align-items:center;gap:6px;background:#eaf6ee;color:#2f6b45;border-radius:999px;padding:5px 12px;font-size:12px;font-weight:600}
 @media(max-width:989px){#mcp-{{ section.id }} .mcp__grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
 @media(max-width:749px){#mcp-{{ section.id }} .mcp__wrap{width:calc(100% - 24px)}#mcp-{{ section.id }} .mcp__grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}#mcp-{{ section.id }} .mcp__txt strong{font-size:12px}}
