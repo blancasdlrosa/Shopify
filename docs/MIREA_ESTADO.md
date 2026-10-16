@@ -398,3 +398,4 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - Blanca publicó 208546693457 (16-10 España y fichas). El menú del borrador nuevo sigue siendo mirea-espana-sets-1610-borrador = menú en vivo: no tocarlo sin copiarlo antes.
 - Creada y publicada colección desde-corea (694310961489, regla etiqueta "Envío: Corea"). 5 agentes etiquetando por rangos de id.
 - sections/mirea-origen-tienda.liquid (nuevo) + index.json del borrador: "Desde Corea" y "Desde España" tras Necesidades, con pestañas por sección y 10 productos disponibles por pestaña.
+- 17-10: etiquetado "Envío: Corea" terminado: 8.482 productos (desde-corea = 8.482). 0 con Envío: España, 0 sin clasificar. Excluidos los 22 "Origen: No coreano" (Symphonya: Wella, Goldwell, American Crew…).
