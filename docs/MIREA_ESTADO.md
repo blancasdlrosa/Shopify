@@ -393,3 +393,8 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - En marcha (subagentes): etiqueta "Envío: Corea" (~7.400 productos) + colección desde-corea; terminar etiquetas DE · *.
 - Pendiente de Blanca: ¿Eternas (Shopify Collective, incl. Pro PDT LED Lamp 1.460 €) envía desde España?
 - 16-10: subcolecciones DE terminadas (perfumes ~1.167, piel 946, maquillaje 253, cuerpo 177, cabello 100, sets 82→71, aparatos 19, salud 7). 20 perfumes árabes de Padilla (17 Lattafa + 3 Armaf Club de Nuit) sin "Envío: España"/"Perfumerias Padilla", con "Perfume árabe" y "Proveedor: Perfumerías Padilla" (carrito sigue diciendo España); Armaf añadidos a perfumes y perfumes-arabes. Quitado "DE · Sets" de 11 borradores Maymoo que no son productos (bonos, vales, bolsas, tarjetas).
+
+## 17-10 · Publicado 16-10; nuevo borrador 208579199313 "17-10 siguiente"
+- Blanca publicó 208546693457 (16-10 España y fichas). El menú del borrador nuevo sigue siendo mirea-espana-sets-1610-borrador = menú en vivo: no tocarlo sin copiarlo antes.
+- Creada y publicada colección desde-corea (694310961489, regla etiqueta "Envío: Corea"). 5 agentes etiquetando por rangos de id.
+- sections/mirea-origen-tienda.liquid (nuevo) + index.json del borrador: "Desde Corea" y "Desde España" tras Necesidades, con pestañas por sección y 10 productos disponibles por pestaña.
