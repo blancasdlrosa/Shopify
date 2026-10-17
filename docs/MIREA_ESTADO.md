@@ -406,3 +406,4 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - templates/product.json: bloque "Mirea · Origen y llegada" bajo el botón de compra + pastilla en "También te puede gustar".
 - templates/collection.json: pastilla en las tarjetas de producto de las colecciones.
 - Pendiente: agotados al final (ajuste de la app Search & Discovery, lo hace Blanca o lo reviso).
+- 17-10: collection.json (borrador 208635494737): sección "mirea_corea_cat" solo en desde-corea con 8 tarjetas (Piel, Protección solar, Maquillaje, Cabello, Cuerpo, Aparatos, Suplementos, Hombre) que enlazan a cada colección filtrada por etiqueta (/collections/x/envio-corea). Slider oscuro oculto también en desde-corea.
