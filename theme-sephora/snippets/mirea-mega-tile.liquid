@@ -1,5 +1,6 @@
 {%- comment -%}
   16-10 Mirea · una tarjeta redonda del menú desplegable (foto + nombre). Sin dibujos/emojis: siempre foto real.
+  17-10: foto de un producto CON STOCK (no la primera que salga) y lista de fotos elegidas a mano (fotos_fijas).
   @param l       enlace del menú
   @param url     (opcional) enlace a usar en vez de l.url (p. ej. filtrado por origen)
   @param titulo  (opcional) texto a mostrar en vez de l.title
@@ -8,11 +9,21 @@
 {%- liquid
   assign img = blank
   assign obj = l.object
-  if l.type == 'product_link'
+  assign fotos_fijas = 'desde-espana-sets::cofre-boss-bottled' | split: '|'
+  if l.type == 'collection_link'
+    for f in fotos_fijas
+      assign fp = f | split: '::'
+      if obj.handle == fp[0] and all_products[fp[1]].featured_image
+        assign img = all_products[fp[1]].featured_image
+      endif
+    endfor
+  endif
+  if img == blank and l.type == 'product_link'
     assign img = obj.featured_image
-  elsif origen != blank and l.type == 'collection_link'
+  endif
+  if img == blank and origen != blank and l.type == 'collection_link'
     for p in obj.products limit: 40
-      if p.tags contains origen and p.featured_image
+      if p.available and p.tags contains origen and p.featured_image
         assign img = p.featured_image
         break
       endif
@@ -21,8 +32,16 @@
   if img == blank and l.type == 'collection_link'
     if obj.image
       assign img = obj.image
-    elsif obj.products.first.featured_image
-      assign img = obj.products.first.featured_image
+    else
+      for p in obj.products limit: 30
+        if p.available and p.featured_image
+          assign img = p.featured_image
+          break
+        endif
+      endfor
+      if img == blank
+        assign img = obj.products.first.featured_image
+      endif
     endif
   endif
   if img == blank
@@ -48,7 +67,7 @@
 -%}
 <li>
   <a class="msm__vtile" href="{{ t_url }}">
-    <span class="msm__vimg">{%- if img != blank -%}{{ img | image_url: width: 200 | image_tag: loading: 'lazy', alt: t_tit }}{%- endif -%}</span>
+    <span class="msm__vimg">{%- if img != blank -%}{{ img | image_url: width: 240, height: 240, crop: 'center' | image_tag: loading: 'lazy', alt: t_tit }}{%- endif -%}</span>
     <span class="msm__vname">{{ t_tit }}</span>
   </a>
 </li>

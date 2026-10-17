@@ -416,3 +416,5 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - Carrito: si es de España y vale menos de 69 €, se sugieren 3 productos de España con botón "Añadir" (snippet `mirea-cart-sugerencias`).
 - "Completa tu rutina" en ficha (`mirea-rutina-pro`): pasos según etiquetas "Paso:"; botón "Añadir la rutina completa".
 - Nada publicado. Vista previa: https://mireaskin.es/?preview_theme_id=208635494737
+- 17-10 (tarde) · Menú escritorio: "Más" ahora es una rejilla simple (sin separar Corea/España). Fotos de las tarjetas: se usa un producto CON STOCK, recorte cuadrado centrado y algo de zoom para quitar el blanco. "Sets de regalo" usa la foto de "Cofre Boss Bottled" (lista `fotos_fijas` en mirea-mega-tile para fijar más a mano).
+- 17-10 · Menú móvil con fotos (agente): snippets/mirea-drawer-thumb.liquid + header-drawer.liquid (solo < 750 px).

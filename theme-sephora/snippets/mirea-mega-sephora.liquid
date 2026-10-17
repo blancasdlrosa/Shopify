@@ -127,6 +127,12 @@
                 </div>
               {%- endfor -%}
             </div>
+          {%- elsif parent_link.title == 'Más' -%}
+            {%- comment -%} 17-10: "Más" es un cajón variado: rejilla simple, sin separar por origen {%- endcomment -%}
+            <div class="msm__vhead"><p class="msm__h">Más secciones</p></div>
+            <ul class="list-unstyled msm__vgrid">
+              {%- for l in parent_link.links -%}{%- render 'mirea-mega-tile', l: l -%}{%- endfor -%}
+            </ul>
           {%- elsif n_kr > 0 or n_es > 0 -%}
             {%- if n_kr > 0 -%}
               <div class="msm__row">
@@ -175,7 +181,9 @@
               {%- for l in parent_link.links -%}{%- render 'mirea-mega-tile', l: l -%}{%- endfor -%}
             </ul>
           {%- endif -%}
+          {%- unless parent_link.title == 'Más' -%}
           <a class="msm__a msm__a--all" href="{{ parent_link.url }}">Ver todo {{ parent_link.title | downcase }} →</a>
+          {%- endunless -%}
         </div>
         <div class="msm__promo">
           <a class="msm__card msm__card--dark" href="/pages/encuentra-tu-rutina">
@@ -203,8 +211,11 @@
               {%- assign ep = e | split: '::' -%}
               {%- assign ec = collections[ep[0]] -%}
               {%- if ec == blank or ec.products_count == 0 -%}{%- continue -%}{%- endif -%}
-              {%- assign img = ec.image | default: ec.products.first.featured_image -%}
-              <li><a class="msm__vtile" href="{{ ec.url }}"><span class="msm__vimg">{%- if img -%}{{ img | image_url: width: 200 | image_tag: loading: 'lazy', alt: ep[1] }}{%- endif -%}</span><span class="msm__vname">{{ ep[1] }}</span></a></li>
+              {%- assign img = ec.image -%}
+              {%- if img == blank -%}{%- for p in ec.products limit: 30 -%}{%- if p.available and p.featured_image -%}{%- assign img = p.featured_image -%}{%- break -%}{%- endif -%}{%- endfor -%}{%- endif -%}
+              {%- if ep[0] == 'desde-espana-sets' and all_products['cofre-boss-bottled'].featured_image -%}{%- assign img = all_products['cofre-boss-bottled'].featured_image -%}{%- endif -%}
+              {%- assign img = img | default: ec.products.first.featured_image -%}
+              <li><a class="msm__vtile" href="{{ ec.url }}"><span class="msm__vimg">{%- if img -%}{{ img | image_url: width: 240, height: 240, crop: 'center' | image_tag: loading: 'lazy', alt: ep[1] }}{%- endif -%}</span><span class="msm__vname">{{ ep[1] }}</span></a></li>
             {%- endfor -%}
             {%- for l in parent_link.links -%}
               {%- comment -%} las secciones desde-espana-* ya salen arriba con su foto: no repetirlas {%- endcomment -%}
@@ -311,9 +322,9 @@
   .msm__vgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(104px,1fr));gap:16px 14px;margin:0 0 10px;padding:0}
   .msm__vtile{display:flex;flex-direction:column;align-items:center;gap:8px;color:#1f191c;text-decoration:none;text-align:center}
   .msm__vimg{width:84px;height:84px;border-radius:50%;overflow:hidden;background:#fff;border:1px solid #eadcd8;display:flex;align-items:center;justify-content:center}
-  .msm__vimg img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+  .msm__vimg img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;transform:scale(1.12);transition:transform .4s}
   .msm__vimg--emo{background:linear-gradient(135deg,#fff0f4,#f6e3ec);font-size:34px}
-  .msm__vtile:hover .msm__vimg img{transform:scale(1.08)}
+  .msm__vtile:hover .msm__vimg img{transform:scale(1.2)}
   .msm__vtile:hover .msm__vname{text-decoration:underline;text-underline-offset:3px}
   .msm__vname{font-size:13px;font-weight:600;line-height:1.25}
   .msm__vbrands{min-width:0}
