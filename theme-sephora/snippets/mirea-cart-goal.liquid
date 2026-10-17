@@ -3,7 +3,9 @@
   En la página /cart la barra ya se pinta arriba del resumen (blocks/_cart-summary), así que aquí no se repite.
   15-10: también pinta el aviso de envío según el origen real de cada producto (mirea-cart-envio)
   y oculta el antiguo aviso fijo "Directo desde Corea del Sur" de cart-summary.
+  17-10: debajo de la barra, sugerencias de productos desde España para llegar al envío gratis (mirea-cart-sugerencias).
 {%- endcomment -%}
 {%- unless template.name == 'cart' -%}{%- render 'mirea-envio-gratis' -%}{%- endunless -%}
+{%- if template.name == 'cart' -%}{%- render 'mirea-cart-sugerencias', estilo: 'cartpage' -%}{%- else -%}{%- render 'mirea-cart-sugerencias', estilo: 'drawer' -%}{%- endif -%}
 {%- if template.name == 'cart' -%}{%- render 'mirea-cart-envio', estilo: 'cartpage' -%}{%- else -%}{%- render 'mirea-cart-envio', estilo: 'drawer' -%}{%- endif -%}
 <style>.mirea-cart-shipping-note{display:none!important}</style>

@@ -407,3 +407,12 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - templates/collection.json: pastilla en las tarjetas de producto de las colecciones.
 - Pendiente: agotados al final (ajuste de la app Search & Discovery, lo hace Blanca o lo reviso).
 - 17-10: collection.json (borrador 208635494737): sección "mirea_corea_cat" solo en desde-corea con 8 tarjetas (Piel, Protección solar, Maquillaje, Cabello, Cuerpo, Aparatos, Suplementos, Hombre) que enlazan a cada colección filtrada por etiqueta (/collections/x/envio-corea). Slider oscuro oculto también en desde-corea.
+
+## 17-10 · Borrador 208635494737 (compartido con ChatGPT) — portada, menú, carrito, rutina
+- Nueva sección `mirea-portada-tienda` arriba del todo: franja de confianza, titular, 2 botones (Corea / España), buscador grande y accesos rápidos.
+- Hero más bajo (120 → 100). Productos Corea y España justo después.
+- Quitada la sección desactivada "Método" (límite de 25). Copia en docs/respaldos/index_mirea_metodo_desactivada.json.
+- Menú corto nuevo `mirea-menu-corto-1710-borrador` (8 opciones: Todo, Piel, Maquillaje, Cabello, Cuerpo, Desde España, Perfumes árabes, Más). Ya puesto en la cabecera del borrador. El menú del tema publicado NO se ha tocado.
+- Carrito: si es de España y vale menos de 69 €, se sugieren 3 productos de España con botón "Añadir" (snippet `mirea-cart-sugerencias`).
+- "Completa tu rutina" en ficha (`mirea-rutina-pro`): pasos según etiquetas "Paso:"; botón "Añadir la rutina completa".
+- Nada publicado. Vista previa: https://mireaskin.es/?preview_theme_id=208635494737
