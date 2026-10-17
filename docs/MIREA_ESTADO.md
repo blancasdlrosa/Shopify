@@ -399,3 +399,10 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - Creada y publicada colección desde-corea (694310961489, regla etiqueta "Envío: Corea"). 5 agentes etiquetando por rangos de id.
 - sections/mirea-origen-tienda.liquid (nuevo) + index.json del borrador: "Desde Corea" y "Desde España" tras Necesidades, con pestañas por sección y 10 productos disponibles por pestaña.
 - 17-10: etiquetado "Envío: Corea" terminado: 8.482 productos (desde-corea = 8.482). 0 con Envío: España, 0 sin clasificar. Excluidos los 22 "Origen: No coreano" (Symphonya: Wella, Goldwell, American Crew…).
+
+## 17-10 (2) · Origen y fecha de llegada (borrador de ChatGPT 208635494737 "17-10 perfumes doble + cremas")
+- Blanca publicó 208579199313. Trabajo en el borrador donde edita ChatGPT, por petición suya. (Creé 208678355281 "17-10 origen y fecha" antes de saberlo: está sin usar, se puede borrar desde el admin).
+- snippets/mirea-origen.liquid (nuevo): pastilla "🇪🇸 Envío rápido" / "🇰🇷 Desde Corea" y caja de llegada en la ficha (Corea: fecha aprox. hoy+14 a hoy+21 días; España: sin días, "plazo exacto en el pago"). Misma regla de origen que el carrito.
+- templates/product.json: bloque "Mirea · Origen y llegada" bajo el botón de compra + pastilla en "También te puede gustar".
+- templates/collection.json: pastilla en las tarjetas de producto de las colecciones.
+- Pendiente: agotados al final (ajuste de la app Search & Discovery, lo hace Blanca o lo reviso).
