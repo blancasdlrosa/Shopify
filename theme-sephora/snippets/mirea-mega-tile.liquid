@@ -9,7 +9,7 @@
 {%- liquid
   assign img = blank
   assign obj = l.object
-  assign fotos_fijas = 'desde-espana-sets::cofre-boss-bottled' | split: '|'
+  assign fotos_fijas = 'desde-espana-perfumes::good-girl|desde-espana-cofres-perfume::cofre-black-opium|desde-espana-piel::moisture-surge-100h-hidratante-autorrestaurador|desde-espana-cabello::rosemary-scalp-scaling-shampoo|desde-espana-cuerpo::eight-hour-intensive-moisture-body-treatment|desde-espana-maquillaje::almost-lipstick-black-honey|desde-espana-salud::mims-beauty|desde-espana-aparatos::medicube-age-r-booster-pro-pinklimited-version|desde-espana-sets::cofre-rutina-diaria-hydra-zen-lancome' | split: '|'
   if l.type == 'collection_link'
     for f in fotos_fijas
       assign fp = f | split: '::'

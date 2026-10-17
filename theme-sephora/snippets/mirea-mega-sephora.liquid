@@ -206,6 +206,7 @@
             <span class="msm__ship">🚚 Envío rápido desde España</span>
           </div>
           <ul class="list-unstyled msm__vgrid">
+            {%- assign fotos_es = 'desde-espana-perfumes::good-girl|desde-espana-cofres-perfume::cofre-black-opium|desde-espana-piel::moisture-surge-100h-hidratante-autorrestaurador|desde-espana-cabello::rosemary-scalp-scaling-shampoo|desde-espana-cuerpo::eight-hour-intensive-moisture-body-treatment|desde-espana-maquillaje::almost-lipstick-black-honey|desde-espana-salud::mims-beauty|desde-espana-aparatos::medicube-age-r-booster-pro-pinklimited-version|desde-espana-sets::cofre-rutina-diaria-hydra-zen-lancome' | split: '|' -%}
             {%- assign es_list = 'desde-espana-perfumes::Perfumes|desde-espana-cofres-perfume::Cofres de perfume|desde-espana-piel::Piel|desde-espana-cabello::Cabello|desde-espana-cuerpo::Cuerpo|desde-espana-maquillaje::Maquillaje|desde-espana-salud::Salud y bienestar|desde-espana-aparatos::Aparatos|desde-espana-sets::Sets de regalo' | split: '|' -%}
             {%- for e in es_list -%}
               {%- assign ep = e | split: '::' -%}
@@ -213,7 +214,8 @@
               {%- if ec == blank or ec.products_count == 0 -%}{%- continue -%}{%- endif -%}
               {%- assign img = ec.image -%}
               {%- if img == blank -%}{%- for p in ec.products limit: 30 -%}{%- if p.available and p.featured_image -%}{%- assign img = p.featured_image -%}{%- break -%}{%- endif -%}{%- endfor -%}{%- endif -%}
-              {%- if ep[0] == 'desde-espana-sets' and all_products['cofre-boss-bottled'].featured_image -%}{%- assign img = all_products['cofre-boss-bottled'].featured_image -%}{%- endif -%}
+              {%- comment -%} 17-10: foto de un producto famoso elegido a mano para cada sección {%- endcomment -%}
+              {%- for f in fotos_es -%}{%- assign fp = f | split: '::' -%}{%- if fp[0] == ep[0] and all_products[fp[1]].featured_image -%}{%- assign img = all_products[fp[1]].featured_image -%}{%- endif -%}{%- endfor -%}
               {%- assign img = img | default: ec.products.first.featured_image -%}
               <li><a class="msm__vtile" href="{{ ec.url }}"><span class="msm__vimg">{%- if img -%}{{ img | image_url: width: 240, height: 240, crop: 'center' | image_tag: loading: 'lazy', alt: ep[1] }}{%- endif -%}</span><span class="msm__vname">{{ ep[1] }}</span></a></li>
             {%- endfor -%}
