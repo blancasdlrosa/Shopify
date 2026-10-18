@@ -16,7 +16,8 @@
           "type": "acceso",
           "settings": {
             "texto": "Novedades",
-            "coleccion": "novedades"
+            "coleccion": "novedades",
+            "producto": "medicube-red-erasing-cream-2-0-50ml"
           }
         },
         "i3": {
@@ -31,7 +32,7 @@
           "settings": {
             "texto": "Virales",
             "coleccion": "virales-en-tiktok",
-            "producto": "beauty-of-joseon-glow-deep-serum-rice-alpha-arbutin-60ml"
+            "producto": "cosrx-advanced-snail-96-mucin-power-essence-100ml-1"
           }
         },
         "i5": {
@@ -46,7 +47,7 @@
           "settings": {
             "texto": "Sérums",
             "coleccion": "serums-y-ampollas",
-            "producto": "beauty-of-joseon-glow-serum-propolis-niacinamide-60ml"
+            "producto": "skin1004-madagascar-centella-ampoule-100ml"
           }
         },
         "i7": {
@@ -100,9 +101,34 @@
             "texto": "Hombre",
             "coleccion": "hombre"
           }
+        },
+        "ik": {
+          "type": "acceso",
+          "settings": {
+            "texto": "Desde Corea",
+            "coleccion": "desde-corea",
+            "producto": "beauty-of-joseon-relief-sun-aqua-fresh-rice-b5-spf50-pa-50ml"
+          }
+        },
+        "ie": {
+          "type": "acceso",
+          "settings": {
+            "texto": "Desde España",
+            "coleccion": "desde-espana",
+            "producto": "genifique"
+          }
+        },
+        "ib": {
+          "type": "acceso",
+          "settings": {
+            "texto": "Bebé",
+            "coleccion": "bebe"
+          }
         }
       },
       "block_order": [
+        "ik",
+        "ie",
         "i1",
         "i2",
         "i3",
@@ -115,7 +141,8 @@
         "i10",
         "i11",
         "i12",
-        "i13"
+        "i13",
+        "ib"
       ],
       "settings": {
         "confianza_1": "🇪🇸 Envío rápido desde España",

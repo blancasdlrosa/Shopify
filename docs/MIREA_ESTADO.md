@@ -426,3 +426,4 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
   - Portada: sin franja negra de confianza (ahora línea gris bajo los botones), botones con banderas (negro + borde), fila de 13 iconos redondos tipo Primor (bloques editables: colección + producto para la foto).
   - Desplegables: cada producto sale solo una vez por menú (antes se repetían fotos, p. ej. Higiene / Higiene bucal).
   - Copias de lo anterior en docs/respaldos/*_antes_1810.*
+- 18-10 · Iconos portada: Desde Corea y Desde España primero, Bebé al final; Novedades (medicube Red Erasing), Virales (COSRX Snail) y Sérums (SKIN1004 Centella) con fotos distintas; fila ya no se corta por la izquierda (se desliza).
