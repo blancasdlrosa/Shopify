@@ -18,6 +18,17 @@
       endif
     endfor
   endif
+  # 17-10: fotos fijas por nombre (enlaces que no son colección o que repetían la misma foto)
+  assign fotos_titulo = 'Todos los productos::beauty-of-joseon-glow-serum-propolis-niacinamide-60ml|Más vendidos::laneige-neo-cushion-the-glow-spf50-pa-15g-7colors|Desde Corea::medicube-age-r-booster-pro-x2-2colors-it-can-only-be-shipped-via-express-service|Virales::beauty-of-joseon-glow-deep-serum-rice-alpha-arbutin-60ml' | split: '|'
+  if img == blank
+    for f in fotos_titulo
+      assign fp = f | split: '::'
+      if l.title contains fp[0] and all_products[fp[1]].featured_image
+        assign img = all_products[fp[1]].featured_image
+        break
+      endif
+    endfor
+  endif
   if img == blank and l.type == 'product_link'
     assign img = obj.featured_image
   endif
