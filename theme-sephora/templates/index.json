@@ -105,7 +105,7 @@
         "ik": {
           "type": "acceso",
           "settings": {
-            "texto": "Desde Corea",
+            "texto": "Coreanos",
             "coleccion": "desde-corea",
             "producto": "beauty-of-joseon-relief-sun-aqua-fresh-rice-b5-spf50-pa-50ml"
           }
@@ -160,9 +160,9 @@
         "confianza_4": "Pago seguro",
         "antetitulo": "Mirea Skin",
         "titulo": "K-beauty original de Corea y perfumería desde España.",
-        "boton_1": "🇰🇷 Comprar desde Corea",
+        "boton_1": "🇰🇷 Productos coreanos",
         "enlace_1": "/collections/desde-corea",
-        "boton_2": "🇪🇸 Comprar desde España",
+        "boton_2": "🇪🇸 Envío rápido desde España",
         "enlace_2": "/collections/desde-espana",
         "buscador": "Busca productos, marcas o ingredientes…"
       }

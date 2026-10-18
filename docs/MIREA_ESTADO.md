@@ -451,3 +451,8 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - SEO: título y meta descripción en los 9. Tipo de producto rellenado donde faltaba (antifaz, cascos, accesorios).
 - Comprobado por API: los cambios están guardados. Copia del texto original en docs/respaldos/mood_descripciones_antes_1810.md.
 - Ojo: son productos de Shopify Collective. Si el proveedor vuelve a sincronizar, podría pisar el texto.
+
+## 18-10 · Botones de portada más claros (copia 208757555537, sin publicar)
+- Tema duplicado por API: "Mirea · 18-10 botones Productos coreanos · BORRADOR" (208757555537), copia exacta del tema en vivo.
+- index.json de la copia: boton_1 "🇰🇷 Productos coreanos", boton_2 "🇪🇸 Envío rápido desde España", icono "Desde Corea" → "Coreanos". Los enlaces no cambian.
+- Vista previa: https://mireaskin.es/?preview_theme_id=208757555537 . Para aplicarlo, Blanca publica la copia.
