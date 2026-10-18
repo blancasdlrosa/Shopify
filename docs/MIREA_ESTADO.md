@@ -428,3 +428,4 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
   - Copias de lo anterior en docs/respaldos/*_antes_1810.*
 - 18-10 · Iconos portada: Desde Corea y Desde España primero, Bebé al final; Novedades (medicube Red Erasing), Virales (COSRX Snail) y Sérums (SKIN1004 Centella) con fotos distintas; fila ya no se corta por la izquierda (se desliza).
 - 18-10 · Icono Suplementos (colección salud, foto Mims Beauty) añadido tras Aparatos.
+- 18-10 · MOOD Earplugs (Collective, 9 productos): pasados de Borrador a Activo y publicados en Tienda online (sin tocar precios). Colección automática "Tecnología" (690003804497): añadida regla Proveedor = "MOOD Earplugs". Margen Collective 15 %: de 0,89 € (almohadillas) a 4,49 € (Mood Pro) por unidad, antes de comisiones de pago.
