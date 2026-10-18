@@ -427,3 +427,4 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
   - Desplegables: cada producto sale solo una vez por menú (antes se repetían fotos, p. ej. Higiene / Higiene bucal).
   - Copias de lo anterior en docs/respaldos/*_antes_1810.*
 - 18-10 · Iconos portada: Desde Corea y Desde España primero, Bebé al final; Novedades (medicube Red Erasing), Virales (COSRX Snail) y Sérums (SKIN1004 Centella) con fotos distintas; fila ya no se corta por la izquierda (se desliza).
+- 18-10 · Icono Suplementos (colección salud, foto Mims Beauty) añadido tras Aparatos.

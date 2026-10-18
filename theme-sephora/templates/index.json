@@ -124,6 +124,14 @@
             "texto": "Bebé",
             "coleccion": "bebe"
           }
+        },
+        "is": {
+          "type": "acceso",
+          "settings": {
+            "texto": "Suplementos",
+            "coleccion": "salud",
+            "producto": "mims-beauty"
+          }
         }
       },
       "block_order": [
@@ -140,6 +148,7 @@
         "i9",
         "i10",
         "i11",
+        "is",
         "i12",
         "i13",
         "ib"
