@@ -1,25 +1,24 @@
 {%- comment -%}
   17-10 Mirea · arranque de la portada: deja claro qué vendemos nada más entrar.
-  Franja de confianza + buscador grande + titular + 2 botones (Desde Corea / Desde España) + accesos rápidos.
-  Va ENCIMA de la foto grande (no la sustituye).
+  Titular + 2 botones (Desde Corea / Desde España) + buscador grande + línea de confianza.
+  18-10: sin franja negra (la confianza va en una línea suave bajo los botones) y fila de iconos redondos
+  tipo Primor (bloque "acceso": foto del producto elegido, o del primer producto con stock de la colección).
 {%- endcomment -%}
 <section class="mpt" id="mpt-{{ section.id }}">
-  <div class="mpt__strip">
-    <ul class="list-unstyled">
-      {%- for i in (1..4) -%}
-        {%- assign k = 'confianza_' | append: i -%}
-        {%- if section.settings[k] != blank -%}<li>{{ section.settings[k] }}</li>{%- endif -%}
-      {%- endfor -%}
-    </ul>
-  </div>
   <div class="mpt__wrap">
     <div class="mpt__copy">
       {%- if section.settings.antetitulo != blank -%}<p class="mpt__ante">{{ section.settings.antetitulo }}</p>{%- endif -%}
       <h2 class="mpt__title">{{ section.settings.titulo }}</h2>
       <div class="mpt__btns">
         {%- if section.settings.boton_1 != blank -%}<a class="mpt__btn mpt__btn--dark" href="{{ section.settings.enlace_1 }}">{{ section.settings.boton_1 }}</a>{%- endif -%}
-        {%- if section.settings.boton_2 != blank -%}<a class="mpt__btn mpt__btn--light" href="{{ section.settings.enlace_2 }}">{{ section.settings.boton_2 }}</a>{%- endif -%}
+        {%- if section.settings.boton_2 != blank -%}<a class="mpt__btn mpt__btn--line" href="{{ section.settings.enlace_2 }}">{{ section.settings.boton_2 }}</a>{%- endif -%}
       </div>
+      <ul class="mpt__trust list-unstyled">
+        {%- for i in (1..4) -%}
+          {%- assign k = 'confianza_' | append: i -%}
+          {%- if section.settings[k] != blank -%}<li>{{ section.settings[k] }}</li>{%- endif -%}
+        {%- endfor -%}
+      </ul>
     </div>
     <div class="mpt__search">
       <form action="{{ routes.search_url }}" method="get" role="search" class="mpt__form">
@@ -30,44 +29,79 @@
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="m20 20-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
         </button>
       </form>
-      <ul class="mpt__chips list-unstyled">
+    </div>
+  </div>
+  {%- if section.blocks.size > 0 -%}
+    <div class="mpt__icons">
+      <ul class="list-unstyled">
         {%- for block in section.blocks -%}
-          <li {{ block.shopify_attributes }}><a href="{{ block.settings.enlace }}">{{ block.settings.texto }}</a></li>
+          {%- liquid
+            assign c = block.settings.coleccion
+            assign img = blank
+            if block.settings.producto != blank and block.settings.producto.featured_image
+              assign img = block.settings.producto.featured_image
+            elsif c != blank
+              for p in c.products limit: 20
+                if p.available and p.featured_image
+                  assign img = p.featured_image
+                  break
+                endif
+              endfor
+              if img == blank
+                assign img = c.image
+              endif
+            endif
+            assign href = block.settings.enlace | default: c.url
+          -%}
+          <li {{ block.shopify_attributes }}>
+            <a href="{{ href }}">
+              <span class="mpt__ic">{%- if img != blank -%}{{ img | image_url: width: 180, height: 180, crop: 'center' | image_tag: loading: 'lazy', alt: block.settings.texto }}{%- endif -%}</span>
+              <span class="mpt__il">{{ block.settings.texto }}</span>
+            </a>
+          </li>
         {%- endfor -%}
       </ul>
     </div>
-  </div>
+  {%- endif -%}
 </section>
 <style>
-#mpt-{{ section.id }}{background:#fffaf7;color:#1f191c}
+#mpt-{{ section.id }}{background:#fff;color:#1f191c}
 #mpt-{{ section.id }} *{box-sizing:border-box}
-#mpt-{{ section.id }} .mpt__strip{background:#1f191c;color:#fff}
-#mpt-{{ section.id }} .mpt__strip ul{display:flex;justify-content:center;gap:clamp(14px,3vw,44px);flex-wrap:wrap;margin:0 auto;padding:9px 16px;max-width:1280px}
-#mpt-{{ section.id }} .mpt__strip li{font-size:12.5px;font-weight:600;letter-spacing:.02em;white-space:nowrap}
-#mpt-{{ section.id }} .mpt__wrap{width:min(calc(100% - 40px),1280px);margin:0 auto;padding:clamp(22px,3vw,38px) 0;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(20px,4vw,56px);align-items:center}
+#mpt-{{ section.id }} .mpt__wrap{width:min(calc(100% - 40px),1280px);margin:0 auto;padding:clamp(22px,3vw,36px) 0 clamp(14px,2vw,22px);display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(20px,4vw,56px);align-items:center}
 #mpt-{{ section.id }} .mpt__ante{margin:0 0 8px;font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:#8f5d6c}
 #mpt-{{ section.id }} .mpt__title{margin:0;font-family:"Cormorant Garamond","Iowan Old Style",Georgia,serif;font-weight:400;font-size:clamp(30px,3.6vw,52px);line-height:1.02;letter-spacing:-.01em}
 #mpt-{{ section.id }} .mpt__btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
-#mpt-{{ section.id }} .mpt__btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 26px;border-radius:999px;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;transition:transform .2s,background .2s}
-#mpt-{{ section.id }} .mpt__btn:hover{transform:translateY(-1px)}
-#mpt-{{ section.id }} .mpt__btn--dark{background:#1f191c;color:#fff}
-#mpt-{{ section.id }} .mpt__btn--dark:hover{background:#8f5d6c}
-#mpt-{{ section.id }} .mpt__btn--light{background:#eaf6ee;color:#2f6b45;border:1px solid #cfe6d6}
-#mpt-{{ section.id }} .mpt__form{display:flex;align-items:center;background:#fff;border:1.5px solid #1f191c;border-radius:999px;padding:4px 4px 4px 22px;box-shadow:0 6px 24px rgba(31,25,28,.06)}
+#mpt-{{ section.id }} .mpt__btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:14px 26px;border-radius:999px;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;transition:background .2s,color .2s}
+#mpt-{{ section.id }} .mpt__btn--dark{background:#1f191c;color:#fff;border:1.5px solid #1f191c}
+#mpt-{{ section.id }} .mpt__btn--dark:hover{background:#8f5d6c;border-color:#8f5d6c}
+#mpt-{{ section.id }} .mpt__btn--line{background:#fff;color:#1f191c;border:1.5px solid #1f191c}
+#mpt-{{ section.id }} .mpt__btn--line:hover{background:#1f191c;color:#fff}
+#mpt-{{ section.id }} .mpt__trust{display:flex;flex-wrap:wrap;gap:6px 18px;margin:16px 0 0;padding:0}
+#mpt-{{ section.id }} .mpt__trust li{font-size:12.5px;color:#6f6468}
+#mpt-{{ section.id }} .mpt__trust li+li::before{content:"·";margin-right:18px;color:#c9b8bd}
+#mpt-{{ section.id }} .mpt__trust li+li{display:inline-flex}
+#mpt-{{ section.id }} .mpt__form{display:flex;align-items:center;background:#fff;border:1.5px solid #1f191c;border-radius:999px;padding:4px 4px 4px 22px}
 #mpt-{{ section.id }} .mpt__form input[type=search]{flex:1;min-width:0;border:0;outline:0;background:transparent;font:inherit;font-size:16px;padding:12px 0;color:#1f191c}
 #mpt-{{ section.id }} .mpt__form button{flex:0 0 46px;height:46px;border:0;border-radius:50%;background:#1f191c;color:#fff;display:grid;place-items:center;cursor:pointer}
-#mpt-{{ section.id }} .mpt__chips{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 0;padding:0}
-#mpt-{{ section.id }} .mpt__chips a{display:inline-block;padding:7px 13px;border:1px solid #eadcd8;border-radius:999px;background:#fff;color:#1f191c;font-size:12.5px;font-weight:600;text-decoration:none}
-#mpt-{{ section.id }} .mpt__chips a:hover{background:#1f191c;color:#fff;border-color:#1f191c}
+#mpt-{{ section.id }} .mpt__icons{border-top:1px solid #f0e6e3;border-bottom:1px solid #f0e6e3}
+#mpt-{{ section.id }} .mpt__icons ul{display:flex;gap:clamp(14px,2vw,26px);overflow-x:auto;scrollbar-width:none;margin:0 auto;padding:18px 20px 16px;max-width:1320px}
+#mpt-{{ section.id }} .mpt__icons ul::-webkit-scrollbar{display:none}
+#mpt-{{ section.id }} .mpt__icons li{flex:0 0 auto}
+#mpt-{{ section.id }} .mpt__icons a{display:flex;flex-direction:column;align-items:center;gap:8px;width:84px;color:#1f191c;text-decoration:none;text-align:center}
+#mpt-{{ section.id }} .mpt__ic{width:64px;height:64px;border-radius:50%;overflow:hidden;background:#fff;border:1px solid #e6dcdf;display:block;transition:border-color .2s}
+#mpt-{{ section.id }} .mpt__ic img{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.15);margin:0;max-width:none}
+#mpt-{{ section.id }} .mpt__icons a:hover .mpt__ic{border-color:#1f191c}
+#mpt-{{ section.id }} .mpt__il{font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;line-height:1.25}
+@media(min-width:1200px){#mpt-{{ section.id }} .mpt__icons ul{justify-content:center}}
 @media(max-width:899px){#mpt-{{ section.id }} .mpt__wrap{grid-template-columns:1fr}#mpt-{{ section.id }} .mpt__search{order:-1}}
-@media(max-width:749px){#mpt-{{ section.id }} .mpt__wrap{width:calc(100% - 24px)}#mpt-{{ section.id }} .mpt__strip ul{justify-content:flex-start;overflow-x:auto;flex-wrap:nowrap}#mpt-{{ section.id }} .mpt__btn{flex:1}}
+@media(max-width:749px){#mpt-{{ section.id }} .mpt__wrap{width:calc(100% - 24px)}#mpt-{{ section.id }} .mpt__btn{flex:1;padding:13px 14px}#mpt-{{ section.id }} .mpt__icons ul{padding:14px 12px}}
 </style>
 {% schema %}
 {"name":"Mirea · Arranque tienda","tag":"section","settings":[
-{"type":"text","id":"confianza_1","label":"Franja 1","default":"🇪🇸 Envío rápido desde España"},
-{"type":"text","id":"confianza_2","label":"Franja 2","default":"🇰🇷 K-beauty original de Corea"},
-{"type":"text","id":"confianza_3","label":"Franja 3","default":"🚚 Envío gratis en España desde 69 €"},
-{"type":"text","id":"confianza_4","label":"Franja 4","default":"🔒 Pago seguro"},
+{"type":"text","id":"confianza_1","label":"Confianza 1","default":"🇪🇸 Envío rápido desde España"},
+{"type":"text","id":"confianza_2","label":"Confianza 2","default":"🇰🇷 K-beauty original de Corea"},
+{"type":"text","id":"confianza_3","label":"Confianza 3","default":"Envío gratis en España desde 69 €"},
+{"type":"text","id":"confianza_4","label":"Confianza 4","default":"Pago seguro"},
 {"type":"text","id":"antetitulo","label":"Antetítulo","default":"Mirea Skin"},
 {"type":"text","id":"titulo","label":"Titular","default":"K-beauty original de Corea y perfumería desde España."},
 {"type":"text","id":"boton_1","label":"Botón 1","default":"🇰🇷 Comprar desde Corea"},
@@ -75,6 +109,10 @@
 {"type":"text","id":"boton_2","label":"Botón 2","default":"🇪🇸 Comprar desde España"},
 {"type":"url","id":"enlace_2","label":"Enlace 2"},
 {"type":"text","id":"buscador","label":"Texto del buscador","default":"Busca productos, marcas o ingredientes…"}],
-"blocks":[{"type":"acceso","name":"Acceso rápido","settings":[{"type":"text","id":"texto","label":"Texto"},{"type":"url","id":"enlace","label":"Enlace"}]}],
+"blocks":[{"type":"acceso","name":"Icono redondo","settings":[
+{"type":"text","id":"texto","label":"Texto"},
+{"type":"collection","id":"coleccion","label":"Colección"},
+{"type":"product","id":"producto","label":"Producto para la foto (opcional)"},
+{"type":"url","id":"enlace","label":"Enlace (opcional, si no usa la colección)"}]}],
 "presets":[{"name":"Mirea · Arranque tienda"}]}
 {% endschema %}

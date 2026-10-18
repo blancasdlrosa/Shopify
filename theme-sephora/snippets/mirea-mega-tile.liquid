@@ -4,13 +4,14 @@
   @param l       enlace del menú
   @param url     (opcional) enlace a usar en vez de l.url (p. ej. filtrado por origen)
   @param titulo  (opcional) texto a mostrar en vez de l.title
+  @param foto    (opcional) imagen ya elegida por el menú (para no repetir fotos)
   @param origen  (opcional) 'Envío: Corea' o 'Envío: España' → la foto sale de un producto de ese origen
 {%- endcomment -%}
 {%- liquid
-  assign img = blank
+  assign img = foto
   assign obj = l.object
   assign fotos_fijas = 'desde-espana-perfumes::good-girl|desde-espana-cofres-perfume::cofre-black-opium|desde-espana-piel::moisture-surge-100h-hidratante-autorrestaurador|desde-espana-cabello::rosemary-scalp-scaling-shampoo|desde-espana-cuerpo::eight-hour-intensive-moisture-body-treatment|desde-espana-maquillaje::almost-lipstick-black-honey|desde-espana-salud::mims-beauty|desde-espana-aparatos::medicube-age-r-booster-pro-pinklimited-version|desde-espana-sets::cofre-rutina-diaria-hydra-zen-lancome' | split: '|'
-  if l.type == 'collection_link'
+  if img == blank and l.type == 'collection_link'
     for f in fotos_fijas
       assign fp = f | split: '::'
       if obj.handle == fp[0] and all_products[fp[1]].featured_image

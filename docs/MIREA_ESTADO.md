@@ -420,3 +420,9 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - 17-10 · Menú móvil con fotos (agente): snippets/mirea-drawer-thumb.liquid + header-drawer.liquid (solo < 750 px).
 - 17-10 · Fotos fijas de "Desde España" (menú): Perfumes = Good Girl · Cofres = Black Opium · Piel = Clinique Moisture Surge 100H · Cabello = Aromatica Rosemary · Cuerpo = Elizabeth Arden Eight Hour · Maquillaje = Clinique Almost Lipstick Black Honey · Salud = Mims Beauty · Aparatos = Medicube AGE-R Booster Pro rosa · Sets = Cofre Hydra Zen Lancôme. Se cambian en `fotos_es` (mirea-mega-sephora) y `fotos_fijas` (mirea-mega-tile).
 - 18-10 · Menú Todo: fotos distintas para Todos los productos (BoJ Glow Serum), Más vendidos (Laneige Neo Cushion), Desde Corea (Medicube AGE-R Pro X2), Virales (BoJ Glow Deep Serum). Lista `fotos_titulo` en mirea-mega-tile.
+- 18-10 · Borrador 208635494737 · parte de arriba más limpia (como Primor):
+  - Quitada la barra beige (header-menu `navigation_bar: false`). Marcas pasa al menú principal; Foro a Todo › Te ayudamos; Ayuda y Seguimiento ya estaban en el pie.
+  - Quitada la franja rosa de la app (render comentado en layout/theme.liquid); ahora es un aviso más de la barra negra.
+  - Portada: sin franja negra de confianza (ahora línea gris bajo los botones), botones con banderas (negro + borde), fila de 13 iconos redondos tipo Primor (bloques editables: colección + producto para la foto).
+  - Desplegables: cada producto sale solo una vez por menú (antes se repetían fotos, p. ej. Higiene / Higiene bucal).
+  - Copias de lo anterior en docs/respaldos/*_antes_1810.*

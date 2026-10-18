@@ -105,12 +105,14 @@
           endunless
         endfor
       -%}
+      {%- comment -%} 18-10: cada producto sale una sola vez por desplegable (antes se repetía la misma foto) {%- endcomment -%}
+      {%- assign usados = '' -%}
       <div class="msm__vis">
         <div class="msm__vmain">
           {%- if parent_link.title == 'Todo' -%}
             {%- liquid
               assign g_tit = 'Comprar por|Por origen|Especial Mirea|Te ayudamos' | split: '|'
-              assign g_key = 'Todos los productos,Novedades,Más vendidos,Ofertas,Virales,packs|Desde Corea,Desde España,Perfumes árabes|Rituales,Seda,Aparatos,Tarjeta|Encuentra,Mirea AI,Guía' | split: '|'
+              assign g_key = 'Todos los productos,Novedades,Más vendidos,Ofertas,Virales,packs|Desde Corea,Desde España,Perfumes árabes|Rituales,Seda,Aparatos,Tarjeta|Encuentra,Mirea AI,Guía,Foro' | split: '|'
             -%}
             <div class="msm__groups">
               {%- for gt in g_tit -%}
@@ -141,7 +143,14 @@
                   {%- for l in parent_link.links -%}
                     {%- if l.type == 'collection_link' and l.object.all_tags contains 'Envío: Corea' -%}
                       {%- assign u = l.url | append: '/envio-corea' -%}
-                      {%- render 'mirea-mega-tile', l: l, url: u, origen: 'Envío: Corea' -%}
+                      {%- assign img_t = blank -%}
+                      {%- for p in l.object.products limit: 40 -%}
+                        {%- if p.available and p.featured_image and p.tags contains 'Envío: Corea' -%}
+                          {%- assign pid = p.id | prepend: '#' | append: '#' -%}
+                          {%- unless usados contains pid -%}{%- assign img_t = p.featured_image -%}{%- assign usados = usados | append: pid -%}{%- break -%}{%- endunless -%}
+                        {%- endif -%}
+                      {%- endfor -%}
+                      {%- render 'mirea-mega-tile', l: l, url: u, origen: 'Envío: Corea', foto: img_t -%}
                     {%- endif -%}
                   {%- endfor -%}
                 </ul>
@@ -154,7 +163,14 @@
                   {%- for l in parent_link.links -%}
                     {%- if l.type == 'collection_link' and l.object.all_tags contains 'Envío: España' -%}
                       {%- assign u = l.url | append: '/envio-espana' -%}
-                      {%- render 'mirea-mega-tile', l: l, url: u, origen: 'Envío: España' -%}
+                      {%- assign img_t = blank -%}
+                      {%- for p in l.object.products limit: 40 -%}
+                        {%- if p.available and p.featured_image and p.tags contains 'Envío: España' -%}
+                          {%- assign pid = p.id | prepend: '#' | append: '#' -%}
+                          {%- unless usados contains pid -%}{%- assign img_t = p.featured_image -%}{%- assign usados = usados | append: pid -%}{%- break -%}{%- endunless -%}
+                        {%- endif -%}
+                      {%- endfor -%}
+                      {%- render 'mirea-mega-tile', l: l, url: u, origen: 'Envío: España', foto: img_t -%}
                     {%- endif -%}
                   {%- endfor -%}
                 </ul>
@@ -169,7 +185,14 @@
                 <ul class="list-unstyled msm__vgrid">
                   {%- for l in parent_link.links -%}
                     {%- unless l.object.all_tags contains 'Envío: Corea' or l.object.all_tags contains 'Envío: España' -%}
-                      {%- render 'mirea-mega-tile', l: l -%}
+                      {%- assign img_t = blank -%}
+                      {%- for p in l.object.products limit: 40 -%}
+                        {%- if p.available and p.featured_image -%}
+                          {%- assign pid = p.id | prepend: '#' | append: '#' -%}
+                          {%- unless usados contains pid -%}{%- assign img_t = p.featured_image -%}{%- assign usados = usados | append: pid -%}{%- break -%}{%- endunless -%}
+                        {%- endif -%}
+                      {%- endfor -%}
+                      {%- render 'mirea-mega-tile', l: l, foto: img_t -%}
                     {%- endunless -%}
                   {%- endfor -%}
                 </ul>
