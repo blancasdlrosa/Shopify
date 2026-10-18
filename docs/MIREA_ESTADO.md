@@ -439,3 +439,8 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - `templates/index.json`: `mirea_collective_rituales` pasa a ser mitad y mitad: Seda (rituales-de-seda-y-autocuidado) | Descanso (mood). Mismo sitio, sigue en 25 secciones.
 - Antes de subir: checksum remoto 2e51a8f2… (solo cambió la cabecera automática de Shopify, contenido igual al local).
 - Tema NO publicado.
+
+## 18-10 · Blanca publicó el tema
+- Comprobado por API: el tema 208635494737 ("Mirea · 17-10 perfumes doble + cremas · BORRADOR") es ahora el PRINCIPAL (MAIN). Lo publicó Blanca.
+- Lleva la sección mitad y mitad (seda | MOOD) y el menú `mirea-menu-corto-1710-borrador`. Ese menú ya es el de la web en vivo: cualquier cambio en él se ve al momento.
+- Desde aquí ya no se pueden escribir archivos en el tema en vivo. Para más cambios de diseño hay que duplicar el tema en Shopify (Temas → … → Duplicar) y trabajar en la copia.
