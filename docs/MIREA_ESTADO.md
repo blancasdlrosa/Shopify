@@ -444,3 +444,10 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - Comprobado por API: el tema 208635494737 ("Mirea · 17-10 perfumes doble + cremas · BORRADOR") es ahora el PRINCIPAL (MAIN). Lo publicó Blanca.
 - Lleva la sección mitad y mitad (seda | MOOD) y el menú `mirea-menu-corto-1710-borrador`. Ese menú ya es el de la web en vivo: cualquier cambio en él se ve al momento.
 - Desde aquí ya no se pueden escribir archivos en el tema en vivo. Para más cambios de diseño hay que duplicar el tema en Shopify (Temas → … → Duplicar) y trabajar en la copia.
+
+## 18-10 · Descripciones MOOD reescritas (9 productos)
+- Nuevas descripciones con el mismo esquema: frase clave, "Ideal para", "Por qué te va a gustar", "Qué incluye"/colores. Fuera los colores azules en línea y las etiquetas <meta> sueltas.
+- Solo datos del proveedor (dB, tallas, contenido de la caja, medidas del estuche, colores de las variantes). Nada inventado.
+- SEO: título y meta descripción en los 9. Tipo de producto rellenado donde faltaba (antifaz, cascos, accesorios).
+- Comprobado por API: los cambios están guardados. Copia del texto original en docs/respaldos/mood_descripciones_antes_1810.md.
+- Ojo: son productos de Shopify Collective. Si el proveedor vuelve a sincronizar, podría pisar el texto.
