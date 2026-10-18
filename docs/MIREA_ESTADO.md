@@ -456,3 +456,9 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - Tema duplicado por API: "Mirea · 18-10 botones Productos coreanos · BORRADOR" (208757555537), copia exacta del tema en vivo.
 - index.json de la copia: boton_1 "🇰🇷 Productos coreanos", boton_2 "🇪🇸 Envío rápido desde España", icono "Desde Corea" → "Coreanos". Los enlaces no cambian.
 - Vista previa: https://mireaskin.es/?preview_theme_id=208757555537 . Para aplicarlo, Blanca publica la copia.
+
+## 18-10 · Desde España: portadas con productos españoles (copia 208757555537)
+- Sección `mirea-categorias-portada`: nuevo ajuste "Producto para la foto". Orden de la foto: foto propia > producto elegido (si hay stock) > foto de la colección > primer producto con stock.
+- collection.json (copia): las tarjetas de Desde España apuntan a las colecciones desde-espana-* y usan estas fotos: Sets → Cofre Idôle (Lancôme), Perfumes → Good Girl, Cabello → Sisley Masque Soin Régénérant, Piel → Clinique Moisture Surge, Cuerpo → Elizabeth Arden Eight Hour, Maquillaje → Clinique Almost Lipstick Black Honey, Aparatos → Natcare Jade. Salud se queda con la foto de su colección (mims).
+- Corea, perfumes árabes y novedades: sin cambios (no tienen producto elegido).
+- Copia local anterior en docs/respaldos/collection_local_antes_1810.json.

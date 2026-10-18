@@ -40,12 +40,29 @@
         {%- assign mcp_tit = block.settings.titulo | default: mcp_col.title -%}
         <a class="mcp__tile{% if mcp_url == mcp_here %} is-active{% endif %}" href="{{ mcp_url }}"{% if mcp_url == mcp_here %} aria-current="page"{% endif %} {{ block.shopify_attributes }}>
           <span class="mcp__img">
+            {%- comment -%} 18-10: foto propia > producto elegido (si está disponible) > foto de la colección > primer producto disponible {%- endcomment -%}
+            {%- liquid
+              assign mcp_p = block.settings.producto
+              if mcp_p != blank and mcp_p.available == false
+                assign mcp_p = nil
+              endif
+              if mcp_p == blank and mcp_col.image == blank
+                for cp in mcp_col.products limit: 12
+                  if cp.available and cp.featured_image
+                    assign mcp_p = cp
+                    break
+                  endif
+                endfor
+              endif
+            -%}
             {%- if block.settings.imagen != blank -%}
               {{ block.settings.imagen | image_url: width: 900 | image_tag: loading: 'lazy', sizes: '(min-width: 990px) 25vw, 50vw', alt: mcp_tit }}
+            {%- elsif block.settings.producto != blank and mcp_p != blank -%}
+              {{ mcp_p.featured_image | image_url: width: 700 | image_tag: loading: 'lazy', alt: mcp_tit, class: 'mcp__prod' }}
             {%- elsif mcp_col.image -%}
               {{ mcp_col.image | image_url: width: 900 | image_tag: loading: 'lazy', sizes: '(min-width: 990px) 25vw, 50vw', alt: mcp_tit }}
-            {%- elsif mcp_col.products.first.featured_image -%}
-              {{ mcp_col.products.first.featured_image | image_url: width: 700 | image_tag: loading: 'lazy', alt: mcp_tit, class: 'mcp__prod' }}
+            {%- elsif mcp_p != blank -%}
+              {{ mcp_p.featured_image | image_url: width: 700 | image_tag: loading: 'lazy', alt: mcp_tit, class: 'mcp__prod' }}
             {%- endif -%}
           </span>
           <span class="mcp__txt">
@@ -94,6 +111,7 @@
 "blocks":[{"type":"categoria","name":"Categoría","settings":[
 {"type":"image_picker","id":"imagen","label":"Foto de portada (opcional)"},
 {"type":"collection","id":"coleccion","label":"Colección"},
+{"type":"product","id":"producto","label":"Producto para la foto (opcional)"},
 {"type":"text","id":"titulo","label":"Título (si no, el de la colección)"},
 {"type":"text","id":"texto","label":"Texto corto"},
 {"type":"url","id":"enlace","label":"Enlace (si no, la colección)"}]}],
