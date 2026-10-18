@@ -429,3 +429,6 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - 18-10 · Iconos portada: Desde Corea y Desde España primero, Bebé al final; Novedades (medicube Red Erasing), Virales (COSRX Snail) y Sérums (SKIN1004 Centella) con fotos distintas; fila ya no se corta por la izquierda (se desliza).
 - 18-10 · Icono Suplementos (colección salud, foto Mims Beauty) añadido tras Aparatos.
 - 18-10 · MOOD Earplugs (Collective, 9 productos): pasados de Borrador a Activo y publicados en Tienda online (sin tocar precios). Colección automática "Tecnología" (690003804497): añadida regla Proveedor = "MOOD Earplugs". Margen Collective 15 %: de 0,89 € (almohadillas) a 4,49 € (Mood Pro) por unidad, antes de comisiones de pago.
+- 18-10 · Pestañas "Te llega en pocos días" (España) no abrían: Corea y España tenían los mismos ids de bloque (s1…s8). Arreglado en mirea-origen-tienda (ids con section.id).
+- 18-10 · Marcas portada sin foto: creadas colecciones automáticas por proveedor Torriden, VT y numbuzin (publicadas).
+- 18-10 · MOOD Earplugs: colección "MOOD · Descanso y protección auditiva" (/collections/mood), añadido proveedor a "Aparatos de belleza" (junto a Eternas y Natcare) y enlace en menú borrador Más › Aparatos y tecnología.

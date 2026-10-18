@@ -4,6 +4,7 @@
   - Cada pestaña = una colección. Si se pone "Solo productos con la etiqueta", solo salen los que la tienen
     (p. ej. "Envío: Corea") y el "Ver todo" lleva a la colección filtrada por esa etiqueta.
   - No muestra productos agotados.
+  18-10: ids de pestañas con section.id (Corea y España tenían los mismos y las pestañas de España no abrían).
 {%- endcomment -%}
 {%- liquid
   assign ot_tag = section.settings.etiqueta | strip
@@ -29,7 +30,7 @@
         {%- assign c = block.settings.coleccion -%}
         {%- if c == blank -%}{%- continue -%}{%- endif -%}
         {%- assign t_img = block.settings.imagen | default: c.image | default: c.products.first.featured_image -%}
-        <button type="button" class="mot__tab" role="tab" id="mot-tab-{{ block.id }}" aria-controls="mot-p-{{ block.id }}" aria-selected="{% if forloop.first %}true{% else %}false{% endif %}" {{ block.shopify_attributes }}>
+        <button type="button" class="mot__tab" role="tab" id="mot-tab-{{ section.id }}-{{ block.id }}" aria-controls="mot-p-{{ section.id }}-{{ block.id }}" aria-selected="{% if forloop.first %}true{% else %}false{% endif %}" {{ block.shopify_attributes }}>
           <span class="mot__timg">{%- if t_img -%}{{ t_img | image_url: width: 120 | image_tag: loading: 'lazy', alt: '' }}{%- endif -%}</span>
           <span>{{ block.settings.titulo | default: c.title }}</span>
         </button>
@@ -50,7 +51,7 @@
         endif
         assign shown = 0
       -%}
-      <div class="mot__panel" role="tabpanel" id="mot-p-{{ block.id }}" aria-labelledby="mot-tab-{{ block.id }}"{% unless forloop.first %} hidden{% endunless %}>
+      <div class="mot__panel" role="tabpanel" id="mot-p-{{ section.id }}-{{ block.id }}" aria-labelledby="mot-tab-{{ section.id }}-{{ block.id }}"{% unless forloop.first %} hidden{% endunless %}>
         <ul class="mot__grid list-unstyled">
           {%- for p in c.products -%}
             {%- if p.available == false -%}{%- continue -%}{%- endif -%}
@@ -82,7 +83,7 @@
 r.querySelectorAll('.mot__tab').forEach(function(t){t.addEventListener('click',function(){
 r.querySelectorAll('.mot__tab').forEach(function(x){x.setAttribute('aria-selected','false')});
 r.querySelectorAll('.mot__panel').forEach(function(p){p.hidden=true});
-t.setAttribute('aria-selected','true');var p=document.getElementById(t.getAttribute('aria-controls'));if(p)p.hidden=false;});});})();
+t.setAttribute('aria-selected','true');var p=r.querySelector('[id="'+t.getAttribute('aria-controls')+'"]');if(p)p.hidden=false;});});})();
 </script>
 <style>
 #mot-{{ section.id }}{background:var(--mot-bg,#fff);color:#1f191c;padding:{{ section.settings.espacio_arriba }}px 0 {{ section.settings.espacio_abajo }}px}
