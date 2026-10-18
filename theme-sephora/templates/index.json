@@ -702,32 +702,41 @@
       }
     },
     "mirea_collective_rituales": {
-      "type": "mirea-collection-showcase",
-      "name": "Mirea · Ritual de seda",
+      "type": "mirea-dos-mitades",
+      "name": "Mirea · Seda | Descanso",
+      "blocks": {
+        "seda": {
+          "type": "mitad",
+          "settings": {
+            "antetitulo": "Rituales de autocuidado",
+            "titulo": "La belleza de los pequeños gestos.",
+            "texto": "Seda de morera y accesorios delicados para tus rutinas de noche.",
+            "coleccion": "rituales-de-seda-y-autocuidado",
+            "cuantos": 3,
+            "etiqueta": "Ritual",
+            "texto_enlace": "Descubrir rituales"
+          }
+        },
+        "mood": {
+          "type": "mitad",
+          "settings": {
+            "antetitulo": "Salud y bienestar",
+            "titulo": "Descansa mejor.",
+            "texto": "Tapones MOOD y antifaz para dormir, estudiar o ir a conciertos sin ruido.",
+            "coleccion": "mood",
+            "cuantos": 3,
+            "etiqueta": "Descanso",
+            "texto_enlace": "Ver todo MOOD"
+          }
+        }
+      },
+      "block_order": [
+        "seda",
+        "mood"
+      ],
       "settings": {
-        "eyebrow": "RITUALES DE AUTOCUIDADO",
-        "heading": "La belleza de los pequeños gestos.",
-        "description": "<p>Seda de morera y accesorios delicados para acompañar tus rutinas de noche.</p>",
-        "collection": "rituales-de-seda-y-autocuidado",
-        "products_to_show": 3,
-        "columns_desktop": 4,
-        "columns_mobile": "2",
-        "mobile_scroll": false,
-        "show_vendor": false,
-        "show_price": true,
-        "badge_text": "Ritual",
-        "show_button": false,
-        "button_text": "Ver producto",
-        "show_view_all": true,
-        "view_all_text": "Descubrir rituales",
-        "background_color": "#fffdfc",
-        "text_color": "#352b30",
-        "accent_color": "#925b6d",
-        "image_radius": 14,
-        "padding_top": 20,
-        "padding_bottom": 12,
-        "padding_top_mobile": 28,
-        "padding_bottom_mobile": 20
+        "espacio_arriba": 30,
+        "espacio_abajo": 30
       }
     },
     "mirea_perfumes_arabes": {

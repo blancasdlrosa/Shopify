@@ -432,3 +432,10 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - 18-10 · Pestañas "Te llega en pocos días" (España) no abrían: Corea y España tenían los mismos ids de bloque (s1…s8). Arreglado en mirea-origen-tienda (ids con section.id).
 - 18-10 · Marcas portada sin foto: creadas colecciones automáticas por proveedor Torriden, VT y numbuzin (publicadas).
 - 18-10 · MOOD Earplugs: colección "MOOD · Descanso y protección auditiva" (/collections/mood), añadido proveedor a "Aparatos de belleza" (junto a Eternas y Natcare) y enlace en menú borrador Más › Aparatos y tecnología.
+
+## 18-10 · MOOD a Salud y bienestar + sección mitad y mitad (borrador 208635494737)
+- Menú borrador `mirea-menu-corto-1710-borrador`: MOOD sale de Aparatos. Nuevo grupo Más › Salud y bienestar (Suplementos + MOOD · Tapones y descanso). menuUpdate sin errores.
+- Nueva sección `sections/mirea-dos-mitades.liquid` (2 bloques "mitad": colección + 3 productos disponibles; en móvil se apilan).
+- `templates/index.json`: `mirea_collective_rituales` pasa a ser mitad y mitad: Seda (rituales-de-seda-y-autocuidado) | Descanso (mood). Mismo sitio, sigue en 25 secciones.
+- Antes de subir: checksum remoto 2e51a8f2… (solo cambió la cabecera automática de Shopify, contenido igual al local).
+- Tema NO publicado.
