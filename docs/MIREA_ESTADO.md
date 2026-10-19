@@ -481,3 +481,9 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - Privacidad ya estaba bien (15:12).
 - Información de contacto (17:15) y Aviso legal (17:20) creados y comprobados por API. El Aviso legal lleva titular y NIF que puso Blanca (no se copian aquí). Sin código raro ni textos "ESCRIBE AQUÍ".
 - 19-10: Diagnóstico ventas: pocas visitas (119 en oct.), 23% añade al carrito, se van en el pago por el envío. Blanca elige solo el punto 4 (más visitas). Borrador de contenido semana 1 en docs/CONTENIDO_SEMANA_1.md (sin publicar).
+- 19-10 (noche): Blanca autoriza publicar automáticamente en Instagram (mireaskin_) y TikTok (mireaskin) vía Metricool (brand 6949847). Programados con autoPublish:
+  - 20-10 20:00 medicube Scalp Serum (id 400470296)
+  - 21-10 20:00 Rutina retinol IOPE + AESTURA (id 400470568)
+  - 22-10 20:00 Protector whamisa (id 400470735)
+  - 24-10 12:00 Mascarillas Anua + Biodance (id 400470804)
+  Fotos reales del producto (fondo blanco). Marcados como contenido de marca propia en TikTok. Se pueden borrar en el planificador de Metricool antes de la hora.
