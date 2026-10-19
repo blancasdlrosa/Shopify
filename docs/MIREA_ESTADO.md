@@ -467,7 +467,7 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - Tema publicado por Blanca: 208757555537 ("18-10 botones Productos coreanos") es ahora el MAIN (comprobado por API).
 - Eternas: su almacén en Shopify Collective está en España → los 9 productos activos llevan ahora las etiquetas "Envío: España" y "DE · Aparatos" (salen en Desde España y en DE · Aparatos). Para quitarlo, basta con borrar esas dos etiquetas.
 - Maymoo: ya hay 344 activos. De los 49 borradores con stock, la mayoría se dejaron así a propósito: son repetidos (AUDITORIA_SKU.md) o productos internos sin foto. Activados (y publicados en la tienda online) solo 2 que no tenían repetido activo: APLB Bakuchiol Propolis Cream y COSRX The Retinol 0.1 Cream.
-- Política de privacidad: el conector no tiene permiso `write_legal_policies`. Texto listo en docs/PRIVACIDAD_MIS_LISTAS.md para que Blanca lo pegue.
+- Política de privacidad: el conector no tiene permiso `write_legal_policies`. Blanca pegó el texto de docs/PRIVACIDAD_MIS_LISTAS.md (antes de "Third Party Websites and Links") y lo guardó; comprobado por API el 19-10 a las 15:12.
 - Etiquetado Desde España: 0 productos activos sin etiqueta "DE · …" (comprobado para todas las fuentes: Envío: España, Maymoo, Padilla, mims, Natcare, Rulls, Dr.Mush, Salluna).
 - Visto de paso: las políticas de reembolso, envío y términos muestran etiquetas HTML como texto (&lt;div&gt;…) y marcadores sin rellenar ({{ email }}, {{ last_updated }}). Hay que arreglarlas desde el admin (no hay permiso por API).
 - No se pueden hacer por API: política de devoluciones en Merchant Center, desinstalar XB Wishlist, "agotados al final" (Search & Discovery).
