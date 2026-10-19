@@ -473,3 +473,9 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - No se pueden hacer por API: política de devoluciones en Merchant Center, desinstalar XB Wishlist, "agotados al final" (Search & Discovery).
 - 19-10: Merchant 5857344812 ya tiene política de devoluciones: 14 días, la paga el cliente, Verificada, 108 países (visto en captura de Blanca). Hecho.
 - 19-10: Blanca puso "agotados al final" en Search & Discovery. XB Wishlist ya NO está instalada (comprobado en la lista de apps por API, 52 apps, ninguna wishlist).
+
+## 19-10 · Políticas legales limpias (comprobado por API)
+- Reembolso (15:59), Envío (17:10) y Términos (17:11): Blanca pegó el texto limpio. Ya no aparece código `<div>` ni `{{ email }}` / `{{ shop_name }}` / `{{ last_updated }}`.
+- Email de contacto en las tres: my.mireaskin@gmail.com. Fecha: 19 de octubre de 2026.
+- Términos: los enlaces a Envíos y Devoluciones apuntan a mireaskin.es/policies/...
+- Privacidad ya estaba bien (15:12).
