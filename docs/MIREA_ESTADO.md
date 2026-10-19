@@ -480,3 +480,4 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - Términos: los enlaces a Envíos y Devoluciones apuntan a mireaskin.es/policies/...
 - Privacidad ya estaba bien (15:12).
 - Información de contacto (17:15) y Aviso legal (17:20) creados y comprobados por API. El Aviso legal lleva titular y NIF que puso Blanca (no se copian aquí). Sin código raro ni textos "ESCRIBE AQUÍ".
+- 19-10: Diagnóstico ventas: pocas visitas (119 en oct.), 23% añade al carrito, se van en el pago por el envío. Blanca elige solo el punto 4 (más visitas). Borrador de contenido semana 1 en docs/CONTENIDO_SEMANA_1.md (sin publicar).
