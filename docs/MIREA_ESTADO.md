@@ -471,3 +471,4 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - Etiquetado Desde España: 0 productos activos sin etiqueta "DE · …" (comprobado para todas las fuentes: Envío: España, Maymoo, Padilla, mims, Natcare, Rulls, Dr.Mush, Salluna).
 - Visto de paso: las políticas de reembolso, envío y términos muestran etiquetas HTML como texto (&lt;div&gt;…) y marcadores sin rellenar ({{ email }}, {{ last_updated }}). Hay que arreglarlas desde el admin (no hay permiso por API).
 - No se pueden hacer por API: política de devoluciones en Merchant Center, desinstalar XB Wishlist, "agotados al final" (Search & Discovery).
+- 19-10: Blanca puso "agotados al final" en Search & Discovery. XB Wishlist ya NO está instalada (comprobado en la lista de apps por API, 52 apps, ninguna wishlist).
