@@ -479,3 +479,4 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - Email de contacto en las tres: my.mireaskin@gmail.com. Fecha: 19 de octubre de 2026.
 - Términos: los enlaces a Envíos y Devoluciones apuntan a mireaskin.es/policies/...
 - Privacidad ya estaba bien (15:12).
+- Información de contacto (17:15) y Aviso legal (17:20) creados y comprobados por API. El Aviso legal lleva titular y NIF que puso Blanca (no se copian aquí). Sin código raro ni textos "ESCRIBE AQUÍ".
