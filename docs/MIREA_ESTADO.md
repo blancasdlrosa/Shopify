@@ -462,3 +462,12 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - collection.json (copia): las tarjetas de Desde España apuntan a las colecciones desde-espana-* y usan estas fotos: Sets → Cofre Idôle (Lancôme), Perfumes → Good Girl, Cabello → Sisley Masque Soin Régénérant, Piel → Clinique Moisture Surge, Cuerpo → Elizabeth Arden Eight Hour, Maquillaje → Clinique Almost Lipstick Black Honey, Aparatos → Natcare Jade. Salud se queda con la foto de su colección (mims).
 - Corea, perfumes árabes y novedades: sin cambios (no tienen producto elegido).
 - Copia local anterior en docs/respaldos/collection_local_antes_1810.json.
+
+## 19-10 · Pendientes repasados
+- Tema publicado por Blanca: 208757555537 ("18-10 botones Productos coreanos") es ahora el MAIN (comprobado por API).
+- Eternas: su almacén en Shopify Collective está en España → los 9 productos activos llevan ahora las etiquetas "Envío: España" y "DE · Aparatos" (salen en Desde España y en DE · Aparatos). Para quitarlo, basta con borrar esas dos etiquetas.
+- Maymoo: ya hay 344 activos. De los 49 borradores con stock, la mayoría se dejaron así a propósito: son repetidos (AUDITORIA_SKU.md) o productos internos sin foto. Activados (y publicados en la tienda online) solo 2 que no tenían repetido activo: APLB Bakuchiol Propolis Cream y COSRX The Retinol 0.1 Cream.
+- Política de privacidad: el conector no tiene permiso `write_legal_policies`. Texto listo en docs/PRIVACIDAD_MIS_LISTAS.md para que Blanca lo pegue.
+- Etiquetado Desde España: 0 productos activos sin etiqueta "DE · …" (comprobado para todas las fuentes: Envío: España, Maymoo, Padilla, mims, Natcare, Rulls, Dr.Mush, Salluna).
+- Visto de paso: las políticas de reembolso, envío y términos muestran etiquetas HTML como texto (&lt;div&gt;…) y marcadores sin rellenar ({{ email }}, {{ last_updated }}). Hay que arreglarlas desde el admin (no hay permiso por API).
+- No se pueden hacer por API: política de devoluciones en Merchant Center, desinstalar XB Wishlist, "agotados al final" (Search & Discovery).
