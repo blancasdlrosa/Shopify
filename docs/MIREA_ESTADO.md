@@ -523,3 +523,24 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
    - 30 días: 659 impresiones gratis, 0 clics.
    - No se ha tocado nada.
 5. **Judge.me**: no hay acceso por API. Hay que comprobar en la app que el email "Review request" está activado.
+
+## 2026-10-20 (tarde) · Blog, menú "Más" y Pinterest
+
+- **Blog publicado** (Blanca autorizó publicar directamente). 11 artículos nuevos:
+  - protector-solar-coreano-piel-grasa
+  - vitamina-c-coreana-cual-elegir
+  - cosmetica-coreana-original-espana
+  - ingredientes-que-no-mezclar-skincare
+  - aha-bha-pha-diferencias
+  - acido-hialuronico-como-usarlo
+  - rutina-piel-grasa-poros-abiertos
+  - rutina-piel-seca-otono-invierno
+  - granitos-errores-que-los-empeoran
+  - contorno-de-ojos-hace-falta
+  - mascarillas-coreanas-cual-usar
+- **Menú "Más"**: es el menú de navegación `mirea-menu-corto-1710-borrador` (348314370385), que es el que usa el tema en vivo.
+  - Se han añadido 4 enlaces: Todas las rutinas, Guías Mirea, Blog · Consejos y Foro Mirea.
+  - No se ha tocado el tema; el resto de enlaces se mantiene igual (115 → 119 enlaces).
+- **Pinterest** (cuenta mireaskin, tablero 374713700186176077): 7 pines programados entre el 21 y el 27 de octubre a las 13:00, cada uno enlazando a un artículo.
+  - Metricool IDs: 401024780, 401025062, 401025554, 401025669, 401025719, 401026939, 401035774.
+- **Remitente Klaviyo**: Blanca solo tiene my.mireaskin@gmail.com, no tiene correo con dominio propio. Se queda como está.
