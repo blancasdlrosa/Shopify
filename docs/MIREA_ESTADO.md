@@ -503,3 +503,4 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
   - 31-10 19:00 Halloween: lo que da miedo a tu piel · 400798219
   - 01-11 12:00 Frase "Menos productos. Mejores hábitos." · 400798274
   Pendiente: contestar comentarios (sobre todo test A-E) recomendando producto.
+- 20-10: Mensajes para creadoras preparados en docs/MENSAJE_CREADORAS.md (sin enviar; Blanca decide a quién y presupuesto).
