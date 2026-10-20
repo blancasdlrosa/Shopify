@@ -495,3 +495,11 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
   - 23-10 20:00 Carrusel "El orden correcto de tu rutina" (4, sin producto) · id 400777977
   - 24-10 12:00 Carrusel "Plan de sábado 🍋 o 🖤" (3) · id 400777941
   - 25-10 12:00 Frase "Tu piel no necesita 12 pasos" (1) · id 400778025
+- 20-10: Semana 2 programada en Metricool (IG + TikTok, autoPublish), plantillas p7-p12 en /tmp/mirea_posts del Mac:
+  - 26-10 20:00 Doble limpieza (SKIN1004 + Anua) · 400798016
+  - 27-10 20:00 4 señales de piel con sed (illiyoon) · 400798058
+  - 28-10 20:00 3 errores con la vitamina C (Anua Vita 10) · 400798140
+  - 29-10 20:00 Test tipo de piel A-E (sin producto) · 400798181
+  - 31-10 19:00 Halloween: lo que da miedo a tu piel · 400798219
+  - 01-11 12:00 Frase "Menos productos. Mejores hábitos." · 400798274
+  Pendiente: contestar comentarios (sobre todo test A-E) recomendando producto.
