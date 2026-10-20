@@ -1,71 +1,56 @@
-# Mirea Skin · Mensajes para creadoras (micro-influencers)
+# Mirea Skin · Mensajes para creadoras (solo comisión, sin regalar producto)
 
-Para que lo envíe Blanca por mensaje privado de Instagram o TikTok.
-Nada de esto se ha enviado. Blanca decide a quién y cuántas.
+Blanca no regala producto. La creadora solo cobra una comisión **cuando alguien compra con su enlace o su código**. Si no hay venta, Mirea no paga nada.
+Herramienta: **UpPromote Affiliate**, que ya está instalada en Shopify. Da a cada creadora su enlace, cuenta las ventas y calcula la comisión.
+Nada de esto se ha enviado. Blanca decide el % de comisión y a quién se lo manda.
 
 ---
 
-## 1. A quién escribir (5 minutos de búsqueda)
+## 1. A quién escribir
 
 Busca en Instagram y TikTok: #kbeauty #skincarecoreano #rutinafacial #skincarespain #cosmeticacoreana
 
 Elige cuentas que cumplan esto:
-- **Entre 1.000 y 15.000 seguidores.** Las pequeñas responden más y la gente confía más en ellas.
-- **Hablan en español y viven en España** (el envío es más barato y rápido).
-- **Publican a menudo** (al menos una vez por semana) y **sus seguidores comentan**.
-- Su estética encaja con Mirea (tonos suaves, natural, cuidado).
-- Que no estén haciendo publicidad de 20 marcas distintas.
+- Entre 1.000 y 15.000 seguidores.
+- Hablan en español y viven en España.
+- Publican al menos una vez por semana y sus seguidores comentan.
+- Ya usan cosmética coreana (así pueden recomendar algo que ya conocen).
 
-Empieza por **5 creadoras**. Con que 2 digan que sí, ya es un buen comienzo.
+Escribe a unas 10. Con este tipo de acuerdo contestan menos que si les regalas algo, así que hace falta escribir a más.
 
 ---
 
-## 2. Mensaje para enviar (cópialo y cambia el nombre)
+## 2. Mensaje para enviar (cópialo y cambia el nombre y el %)
 
 Hola [nombre] 🤍
 
 Soy Blanca, de Mirea Skin (@mireaskin_), una tienda online de cosmética coreana en España.
 
-Me encanta cómo explicas tus rutinas y creo que tu estilo encaja muchísimo con nuestra marca.
+Me encanta cómo hablas de skincare y creo que tu estilo encaja muchísimo con nuestra marca.
 
-¿Te gustaría probar gratis uno de nuestros productos? Tú eliges el que más te guste de mireaskin.es (por ejemplo, un sérum o una crema) y te lo enviamos a casa sin coste.
+Estamos creando un pequeño grupo de creadoras afiliadas: te damos tu propio enlace y un código de descuento para tus seguidores, y tú ganas un [X] % de cada compra que hagan con él. Sin mínimos, sin exclusividad y sin compromiso. Puedes recomendar los productos que ya uses o te gusten de mireaskin.es.
 
-Si te gusta, solo te pediríamos que lo enseñes en una historia o un vídeo con tu opinión sincera y que nos etiquetes. Sin guion y sin compromiso.
-
-¿Te apetece? 😊
+¿Te apetece que te cuente más? 😊
 
 ---
 
 ## 3. Si dice que sí
 
-Hola [nombre], ¡qué ilusión! 🥰
+¡Genial, [nombre]! 🥰 Te paso el enlace para darte de alta como afiliada: [enlace de registro de UpPromote]
 
-Pásame por aquí:
-1. El producto que quieres de mireaskin.es
-2. Tu nombre completo y tu dirección de envío
-
-En cuanto lo tengas, cuéntame qué tal te va. Y si lo publicas, recuerda etiquetarnos en @mireaskin_ 🤍
-
-> Nota para Blanca: guarda sus datos solo para el envío y no los compartas con nadie.
+En cuanto te registres, te llega tu enlace y tu código. Cuando lo compartas, etiquétanos en @mireaskin_ y te reposteamos 🤍
 
 ---
 
 ## 4. Si no contesta en 4-5 días (solo una vez)
 
-Hola [nombre] 😊 Te escribí hace unos días por si te apetecía probar algo de Mirea Skin. Si no es buen momento, ¡ningún problema! Un abrazo 🤍
+Hola [nombre] 😊 Te escribí hace unos días por si te interesaba ser afiliada de Mirea Skin. Si no es buen momento, ¡ningún problema! Un abrazo 🤍
 
 ---
 
-## 5. Cuando publique
+## Cuánto cuesta
 
-- Comparte su historia o vídeo en tu cuenta.
-- Dale las gracias por privado.
-- Si le ha ido bien y su público ha respondido, más adelante se le puede ofrecer un código de descuento para sus seguidores. Antes de dar ningún código o comisión, lo decidimos juntas mirando el margen.
-
----
-
-## Coste estimado
-
-Solo el producto que elija cada creadora más su envío.
-Con 5 creadoras y productos de 15-30 €, el gasto máximo sería de unos 100-150 € más envíos, y solo si las 5 dicen que sí.
-**Blanca decide el presupuesto antes de enviar nada.**
+- **0 € si no venden nada.**
+- Solo pagas un % de las ventas que ellas traen. Por ejemplo, con un 10 %, una venta de 30 € te cuesta 3 €.
+- Antes de fijar el % hay que mirar el margen (el coste de cada producto no está guardado en Shopify).
+- El código de descuento para sus seguidores es opcional. Si se da, también resta margen.
