@@ -544,3 +544,16 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - **Pinterest** (cuenta mireaskin, tablero 374713700186176077): 7 pines programados entre el 21 y el 27 de octubre a las 13:00, cada uno enlazando a un artículo.
   - Metricool IDs: 401024780, 401025062, 401025554, 401025669, 401025719, 401026939, 401035774.
 - **Remitente Klaviyo**: Blanca solo tiene my.mireaskin@gmail.com, no tiene correo con dominio propio. Se queda como está.
+
+## 2026-10-20 (noche) · Portadas, blog + foro juntos, imagen "?" en el menú
+
+- Los 11 artículos nuevos ya tienen portada: la foto real de un producto del propio artículo.
+- **Foro dentro del blog**: los 3 temas del foro se han movido al blog Consejos (con portada).
+  - El blog "Foro Mirea" (vacío) se ha eliminado y la página foro-mirea está oculta.
+  - Redirecciones creadas: /pages/foro-mirea y /blogs/foro-mirea → /blogs/consejos.
+- **Menú en vivo** (348314370385): el enlace "Foro Mirea" se ha quitado de "Más" y de "Todo". En su lugar hay un único enlace, "Blog y foro" (/blogs/consejos).
+- **Imagen "?"**: subida a Archivos como mirea-blog-pregunta.png (MediaImage 71960814616913).
+  - Tema copia **"Mirea · 20-10 menú blog con ? · BORRADOR"** (208921887057): en snippets/mirea-mega-tile.liquid, los enlaces al blog usan images['mirea-blog-pregunta.png'].
+  - **Pendiente de que Blanca lo revise y lo publique.**
+- **Pinterest**: 7 pines más, del 28-10 al 3-11 a las 13:00.
+  - Metricool IDs: 401319398, 401319836, 401319891, 401319978, 401320168, 401320449, 401320674.
