@@ -487,3 +487,11 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
   - 22-10 20:00 Protector whamisa (id 400470735)
   - 24-10 12:00 Mascarillas Anua + Biodance (id 400470804)
   Fotos reales del producto (fondo blanco). Marcados como contenido de marca propia en TikTok. Se pueden borrar en el planificador de Metricool antes de la hora.
+- 20-10: Estilo propio de Mirea para redes (crema #F8F2EE, rosa #EBDAD4, ciruela #925B6D, tinta #352B30; Cormorant Garamond + Inter; 1080x1350). Plantillas HTML en el Mac: /tmp/mirea_posts (base.css, p1..p6.html, render.sh con Chrome headless). 23 imágenes subidas a Shopify Files (mirea-ig-p*.png).
+  Metricool (autoPublish, IG + TikTok):
+  - 20-10 20:00 Carrusel "¿Se te cae el pelo en otoño?" (5) · id 400776022
+  - 21-10 20:00 Carrusel "Retinol para principiantes" (6) · id 400776043
+  - 22-10 20:00 Carrusel "Mito o realidad: protector en otoño" (4) · id 400776065
+  - 23-10 20:00 Carrusel "El orden correcto de tu rutina" (4, sin producto) · id 400777977
+  - 24-10 12:00 Carrusel "Plan de sábado 🍋 o 🖤" (3) · id 400777941
+  - 25-10 12:00 Frase "Tu piel no necesita 12 pasos" (1) · id 400778025
