@@ -505,3 +505,21 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
   Pendiente: contestar comentarios (sobre todo test A-E) recomendando producto.
 - 20-10: Mensajes para creadoras preparados en docs/MENSAJE_CREADORAS.md (sin enviar; Blanca decide a quién y presupuesto).
 - 20-10: Blanca NO regala producto. Mensajes cambiados a modelo solo comisión (UpPromote, ya instalada). % sin decidir.
+
+## 2026-10-20 · Planes gratis de crecimiento ("perfecto todos")
+
+1. **Emails Klaviyo**: ya existían y están activos (carrito TX2NFZ, checkout RZzUtE, Welcome 10% Vnwwa7, Welcome PRO VNKYNs, postcompra, cross-sell, reposición, win-back, VIP). No se ha duplicado nada.
+   - Últimos 30 días: carrito 54 envíos, 15 % aperturas, 0 clics. Checkout 14 envíos, 0 clics.
+   - Causa probable: el remitente es una dirección @gmail.com, y Gmail manda esos correos a spam o a Promociones. Recomendado: remitente con dominio propio (p. ej. hola@mireaskin.es) y verificar el dominio en Klaviyo. Lo tiene que decidir Blanca.
+2. **Blog** (Consejos de skincare): 3 artículos nuevos en **borrador (ocultos)**, pendientes de que Blanca los apruebe:
+   - protector-solar-coreano-piel-grasa (Article 645415731537)
+   - vitamina-c-coreana-cual-elegir (Article 645415764305)
+   - cosmetica-coreana-original-espana (Article 645415829841)
+   - Todos enlazan a productos activos y con stock.
+3. **Pinterest**: no está conectado en Metricool (solo Instagram y TikTok). Blanca tiene que conectarlo.
+4. **Merchant 5857344812** (solo lectura):
+   - No hay problemas a nivel de cuenta.
+   - En España los productos aparecen como "elegible limitado". Los rechazos son de otros países (moneda/envío) o de anuncios, que no aplican.
+   - 30 días: 659 impresiones gratis, 0 clics.
+   - No se ha tocado nada.
+5. **Judge.me**: no hay acceso por API. Hay que comprobar en la app que el email "Review request" está activado.
