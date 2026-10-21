@@ -557,3 +557,14 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
   - **Pendiente de que Blanca lo revise y lo publique.**
 - **Pinterest**: 7 pines más, del 28-10 al 3-11 a las 13:00.
   - Metricool IDs: 401319398, 401319836, 401319891, 401319978, 401320168, 401320449, 401320674.
+
+## 2026-10-21 · TikTok rechazaba PNG → todo pasado a JPG
+
+- Error de TikTok en el post del 20-10 (pelo otoño): "image/png not allowed". En Instagram sí se publicó.
+- **Arreglo**: las imágenes se pasan como `https://cdn.shopify.com/.../mirea-ig-pX-N.png?format=jpg&quality=92`. Shopify las convierte y Metricool las guarda como .jpeg.
+- Las 11 publicaciones programadas de Instagram + TikTok (del 21-10 al 1-11) ya tienen las imágenes en JPG. Nuevos IDs:
+  - 401835861, 401835942, 401835979, 401836019, 401836104, 401836186
+  - 401836350, 401836436, 401836550, 401836630, 401836680
+- **Pelo otoño** reprogramado solo para TikTok: hoy 21-10 a las 14:00 (401836735).
+- Queda un borrador de prueba en Metricool (30-12, solo TikTok, privado, sin publicación automática, id 401835172). No se publica; Blanca lo puede borrar.
+- **Regla a partir de ahora**: para TikTok, usar siempre imágenes JPG.
