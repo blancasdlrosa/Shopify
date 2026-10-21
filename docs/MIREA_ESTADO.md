@@ -590,3 +590,28 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 
 - Menú en vivo (348314370385): "Hombre" añadido arriba, después de Cuerpo. Enlaza a /collections/hombre, que tiene 199 productos.
 - En "Más", "Bebé y hombre" pasa a ser solo "Bebé" (/collections/bebe).
+
+## 2026-10-21 · Cabello por necesidad + "Ver todo desde Corea"
+
+- **Etiquetas**: 592 de los 737 productos de cabello activos tienen ahora una o más etiquetas "Necesidad cabello: …" (máximo 3 por producto).
+  - Solo se han añadido etiquetas; no se ha quitado ni cambiado nada de los productos.
+  - Los 145 sin etiqueta son sobre todo herramientas, ceras y brumas.
+- **14 colecciones automáticas** (por etiqueta), publicadas en la tienda:
+
+| Necesidad | cabello-… | desde-espana-cabello-… |
+|---|---|---|
+| Caída y crecimiento | caida (187) | caida (16) |
+| Decolorado y teñido | decolorado (68) | decolorado (11) |
+| Seco y dañado | seco-danado (343) | seco-danado (56) |
+| Graso | graso (77) | graso (3) |
+| Caspa y picor | caspa (94) | caspa (4) |
+| Rizado y encrespado | encrespado (68) | encrespado (13) |
+| Fino y sin volumen | volumen (81) | volumen (8) |
+
+  - Las colecciones "desde España" exigen además la etiqueta "Envío: España".
+- **Cambios en el tema copia 208921887057**:
+  - sections/mirea-coleccion-chips.liquid: fila "Por necesidad" con botones en Cabello, en sus subcolecciones y en Cabello desde España. El botón de la necesidad que se está viendo sale marcado.
+  - snippets/mirea-mega-sephora.liquid:
+    - Debajo de la fila de Corea: "Ver todo X desde Corea →" (enlaza a /collections/X/envio-corea).
+    - En el desplegable "Todo", el grupo "Te ayudamos" usa ahora la palabra clave "Blog" en vez de "Foro".
+- Scripts de clasificación: en la carpeta temporal de trabajo (scratchpad/hair). La clasificación es por palabras clave, así que puede haber algún producto mal colocado.
