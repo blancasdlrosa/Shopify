@@ -615,3 +615,16 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
     - Debajo de la fila de Corea: "Ver todo X desde Corea →" (enlaza a /collections/X/envio-corea).
     - En el desplegable "Todo", el grupo "Te ayudamos" usa ahora la palabra clave "Blog" en vez de "Foro".
 - Scripts de clasificación: en la carpeta temporal de trabajo (scratchpad/hair). La clasificación es por palabras clave, así que puede haber algún producto mal colocado.
+
+## 2026-10-21 · Desplegables de Hombre y Peluquería (Valquer + Barbería HairFluencer)
+
+- **Menú en vivo** (348314370385). Orden de arriba: Todo, Piel, Maquillaje, Cabello, Cuerpo, Hombre, Peluquería, Desde España, Perfumes árabes, Marcas, Más.
+- **Hombre** (colecciones automáticas por etiqueta "Hombre: …"):
+  - cuidado-facial 136, cabello-barba 14, afeitado 23, maquillaje 16, sets 16
+  - Perfumes enlaza a la colección que ya existía, perfumes-de-hombre (23).
+- **Peluquería**: la colección "peluqueria" (290 productos) antes solo incluía la marca Valquer. Ahora incluye cualquier producto con una etiqueta "Peluquería: …".
+  - Apartados: tintes 33, champús 95, champú formato grande 72, acondicionadores 30, tratamientos 97, styling 17, utensilios 4, barbería 17, estética facial 50, estética corporal 26, mascotas 4.
+  - Los 213 productos de Valquer tienen al menos una etiqueta. Los de HairFluencer (16) están en Barbería, Styling y Utensilios.
+  - No se ha creado "Aparatos" porque no había productos.
+- Solo se han añadido etiquetas: no se han quitado, ni se han cambiado precios, ni se ha borrado nada.
+- **Pendiente de decidir con Blanca**: si Estética facial, Estética corporal y Mascotas (de Valquer) deben salir dentro de Peluquería.
