@@ -585,3 +585,8 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
   - blocks/_blog-post-image.liquid: ahora object-fit: contain, fondo crema #F8F2EE y padding 12px.
 - Los 3 temas que venían del foro usaban la plantilla "foro" (sin imagen). Se les ha quitado esa plantilla para que usen la normal.
 - Todo está en el tema copia "Mirea · 20-10 menú blog con ? · BORRADOR". Pendiente de que Blanca lo publique.
+
+## 2026-10-21 · "Hombre" en la barra de arriba
+
+- Menú en vivo (348314370385): "Hombre" añadido arriba, después de Cuerpo. Enlaza a /collections/hombre, que tiene 199 productos.
+- En "Más", "Bebé y hombre" pasa a ser solo "Bebé" (/collections/bebe).
