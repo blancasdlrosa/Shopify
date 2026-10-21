@@ -668,3 +668,12 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
   - unos 105 son champús, tónicos, sérums y ampollas anticaída.
 - Colección hombre-cabello-barba: pasa de 14 a 143 productos, 69 de ellos champús (antes había 1).
 - A la colección "hombre" se le han añadido 5 reglas por etiqueta "Hombre: …" y se mantienen las 20 que ya tenía. Pasa de 199 a 330 productos.
+
+## 2026-10-21 · 10 productos de Collective (Beauty-Privée) activados
+
+- Blanca lo ha aprobado con un margen del 10 %. Los productos pasan a ACTIVO y se publican solo en la Tienda online. No se han cambiado ni precios ni stock.
+- 8 productos JRL (máquinas, trimmers, afeitadora y secador) llevan ahora las etiquetas Peluquería: Aparatos + Peluquería: Barbería + Hombre: Cabello y barba. La afeitadora además lleva Hombre: Afeitado.
+- Colección nueva **peluqueria-aparatos** (8 productos). En el menú, "Aparatos" va dentro de Peluquería, después de Utensilios. Barbería pasa a 25 productos.
+- Colágeno Beauty Focus: etiqueta "Mirea · Salud" y regla nueva por esa etiqueta en la colección salud.
+- Máscara Nu Skin: etiqueta "Mirea · Ojos" y regla nueva por esa etiqueta en la colección ojos.
+- Ojo: 6 productos no tienen el inventario controlado.
