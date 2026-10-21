@@ -654,3 +654,9 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
   - Revisa hasta 50 productos por colección.
   - Motivo: Valquer usa la misma foto de garrafa en varios productos, y por eso salía repetida.
 - Pendiente de que Blanca lo revise y lo publique.
+
+## 2026-10-21 · Champús y Champú formato grande separados
+
+- Los 72 champús de formato grande también tenían la etiqueta "Peluquería: Champús", así que salían en los dos apartados.
+- Se ha quitado "Peluquería: Champús" de esos 72 (es una etiqueta que pusimos nosotros hoy).
+- Resultado: "Champús" queda con 25 productos (formatos normales) y "Champú formato grande" con 72. Shopify tarda unos minutos en actualizar las colecciones automáticas.
