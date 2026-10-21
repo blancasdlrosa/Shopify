@@ -568,3 +568,11 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - **Pelo otoño** reprogramado solo para TikTok: hoy 21-10 a las 14:00 (401836735).
 - Queda un borrador de prueba en Metricool (30-12, solo TikTok, privado, sin publicación automática, id 401835172). No se publica; Blanca lo puede borrar.
 - **Regla a partir de ahora**: para TikTok, usar siempre imágenes JPG.
+
+## 2026-10-21 · Productos recomendados en el blog
+
+- Las 28 entradas del blog Consejos tienen ahora al final un bloque "Productos recomendados" entre las marcas `<!-- mirea-recos:start/end -->`.
+- Cada bloque muestra 4 productos, cada uno con foto, marca, nombre, precio y un botón "Ver producto".
+- Todos los productos se comprobaron uno a uno: están activos y tienen stock.
+- Solo se ha cambiado el texto de los artículos (body). Títulos, portadas y estado de publicación quedan igual.
+- Si un producto se queda sin stock, hay que volver a generar el bloque de ese artículo.
