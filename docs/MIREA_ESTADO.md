@@ -701,3 +701,11 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
   2. Keratina Pura y Kit Permanente, que están en Acondicionadores.
   3. Acondicionadores Kerasys de 1 L dentro de Peluquería.
   4. Hombre → Sets solo tiene sets coreanos.
+
+## 21-10 · Peluquería: formato grande solo champús grandes + Packs
+- 22 packs (Pack …) sacados de "Champú formato grande" → etiqueta `Peluquería: Packs`.
+- Nueva colección `peluqueria-packs` (694946627921, regla TAG "Peluquería: Packs"), publicada en Tienda online y Shop. Siguen también en "Todos los packs".
+- 3 champús de 500 ml (The Bey, Salerm Keratin Shot, Placenta) movidos a `Peluquería: Champús`.
+- Formato grande: 72 → 47 (solo 1 L / 1,2 L / 5 L o con variante de 1 L). Packs: 22. Champús: 89.
+- Menú: Peluquería → Packs añadido tras "Champú formato grande".
+- Acondicionadores Kerasys 1 L se quedan en Peluquería → Acondicionadores (Blanca: "3 si").
