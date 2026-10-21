@@ -642,3 +642,15 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
   - Cuerpo ahora incluye "Estética corporal".
   - Más ahora incluye "Mascotas".
   - Peluquería queda con 8 apartados: tintes, champús, formato grande, acondicionadores, tratamientos, styling, utensilios y barbería.
+
+## 2026-10-21 · Fotos sin repetir en los desplegables (tema copia 209021272401)
+
+- Blanca ya publicó "Mirea · 20-10 menú blog con ? · BORRADOR" (208921887057), que ahora es el tema en vivo.
+- Nueva copia: **"Mirea · 21-10 fotos sin repetir · BORRADOR"** (209021272401).
+  - snippets/mirea-mega-sephora.liquid: cada tarjeta del desplegable elige la foto en 3 pasos:
+    1. un producto del mismo origen y de una marca que aún no se haya usado;
+    2. un producto de cualquier origen y de una marca aún no usada;
+    3. cualquier producto que aún no se haya usado.
+  - Revisa hasta 50 productos por colección.
+  - Motivo: Valquer usa la misma foto de garrafa en varios productos, y por eso salía repetida.
+- Pendiente de que Blanca lo revise y lo publique.
