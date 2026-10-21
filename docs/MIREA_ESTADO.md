@@ -628,3 +628,17 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
   - No se ha creado "Aparatos" porque no había productos.
 - Solo se han añadido etiquetas: no se han quitado, ni se han cambiado precios, ni se ha borrado nada.
 - **Pendiente de decidir con Blanca**: si Estética facial, Estética corporal y Mascotas (de Valquer) deben salir dentro de Peluquería.
+
+## 2026-10-21 · Estética y mascotas de Valquer fuera de Peluquería
+
+- Colección "peluqueria": se quitan la regla de marca (Valquer®) y las reglas de estética facial, estética corporal y mascotas. Quedan 9 reglas por etiqueta y la colección pasa de 290 a 215 productos.
+  - Todo el producto de pelo de Valquer sigue dentro gracias a sus etiquetas.
+- Colecciones renombradas (mismo handle):
+  - peluqueria-estetica-facial → "Estética profesional facial" (50)
+  - peluqueria-estetica-corporal → "Estética profesional corporal" (26)
+  - peluqueria-mascotas → "Mascotas" (4)
+- Menú en vivo:
+  - Piel ahora incluye "Estética profesional".
+  - Cuerpo ahora incluye "Estética corporal".
+  - Más ahora incluye "Mascotas".
+  - Peluquería queda con 8 apartados: tintes, champús, formato grande, acondicionadores, tratamientos, styling, utensilios y barbería.
