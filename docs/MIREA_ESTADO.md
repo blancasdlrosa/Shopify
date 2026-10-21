@@ -677,3 +677,12 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - Colágeno Beauty Focus: etiqueta "Mirea · Salud" y regla nueva por esa etiqueta en la colección salud.
 - Máscara Nu Skin: etiqueta "Mirea · Ojos" y regla nueva por esa etiqueta en la colección ojos.
 - Ojo: 6 productos no tienen el inventario controlado.
+
+## 2026-10-21 · Fotos y marca de los productos de Beauty-Privée
+
+- Máscara Nu Skin: se ha borrado el collage de 300 px con el ojo. Queda solo la foto limpia del producto (500 px).
+- Pack JRL Ghost 1: se ha borrado la foto de 202×250 px. La de 1170 px pasa a ser la principal.
+- La marca que se ve en la ficha era "Beauty-Privée", que es el nombre del proveedor de Collective. Ahora es:
+  - JRL para los 8 productos de máquinas y secador;
+  - Nu Skin para la máscara y el colágeno.
+- Aviso: si Collective vuelve a sincronizar con el proveedor, puede volver a poner la marca y las fotos originales.
