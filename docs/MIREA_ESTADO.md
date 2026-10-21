@@ -686,3 +686,18 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
   - JRL para los 8 productos de máquinas y secador;
   - Nu Skin para la máscara y el colágeno.
 - Aviso: si Collective vuelve a sincronizar con el proveedor, puede volver a poner la marca y las fotos originales.
+
+## 2026-10-21 · Revisión de categorías y Barbería
+
+- **Barbería**: pasa de 25 a 135 productos, 69 de ellos champús de hombre. Incluye ceras, pomadas, productos de barba, 24 de afeitado y herramientas. Se dejan fuera tónicos, sérums y complementos.
+- **Cabello por necesidad**, se quitan productos mal clasificados:
+  - caída 187→177, decolorado 68→48, seco 343→317, graso 77→72, volumen 81→77, caspa 94→93, encrespado 68→67;
+  - en las de "desde España" pasa lo mismo, a menor escala.
+- **Champú formato grande**: tiene 72 productos y ninguno se repite en Champús.
+  - Mientras se revisaba, algo externo añadió champús coreanos a Champús (23→86) y ceras de hombre a Styling (17→35). Se ha dejado, pero hay que vigilar que no vuelvan a entrar champús de 1 L en Champús.
+- Las 37 colecciones nuevas están publicadas y tienen descripción. Se ha añadido descripción a "hombre" y se ha cambiado la de "peluqueria".
+- **Dudas para Blanca**:
+  1. Packs de champú + mascarilla (500–720 ml) que están en "Formato grande".
+  2. Keratina Pura y Kit Permanente, que están en Acondicionadores.
+  3. Acondicionadores Kerasys de 1 L dentro de Peluquería.
+  4. Hombre → Sets solo tiene sets coreanos.
