@@ -660,3 +660,11 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - Los 72 champús de formato grande también tenían la etiqueta "Peluquería: Champús", así que salían en los dos apartados.
 - Se ha quitado "Peluquería: Champús" de esos 72 (es una etiqueta que pusimos nosotros hoy).
 - Resultado: "Champús" queda con 25 productos (formatos normales) y "Champú formato grande" con 72. Shopify tarda unos minutos en actualizar las colecciones automáticas.
+
+## 2026-10-21 · Hombre → Cabello y barba ampliado
+
+- Etiqueta "Hombre: Cabello y barba" añadida a 130 productos más:
+  - unos 25 son de pelo o barba "for men" (BARBER501, DASHU For Men, Ryo For Men, aceites de barba…);
+  - unos 105 son champús, tónicos, sérums y ampollas anticaída.
+- Colección hombre-cabello-barba: pasa de 14 a 143 productos, 69 de ellos champús (antes había 1).
+- A la colección "hombre" se le han añadido 5 reglas por etiqueta "Hombre: …" y se mantienen las 20 que ya tenía. Pasa de 199 a 330 productos.
