@@ -576,3 +576,12 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - Todos los productos se comprobaron uno a uno: están activos y tienen stock.
 - Solo se ha cambiado el texto de los artículos (body). Títulos, portadas y estado de publicación quedan igual.
 - Si un producto se queda sin stock, hay que volver a generar el bloque de ese artículo.
+
+## 2026-10-21 · Portadas del blog (tema copia 208921887057)
+
+- **Fallo 1**: templates/article.json tenía un bloque "image" con una foto fija (crema Centellian), así que todos los artículos mostraban esa imagen.
+  - Cambiado por el bloque `_blog-post-featured-image`, que muestra la portada de cada artículo: cuadrada, 42 % del ancho en ordenador, ancho completo en móvil, esquinas redondeadas.
+- **Fallo 2**: en el listado del blog, las fotos de producto se recortaban y ampliaban (object-fit: cover), por eso se veían borrosas.
+  - blocks/_blog-post-image.liquid: ahora object-fit: contain, fondo crema #F8F2EE y padding 12px.
+- Los 3 temas que venían del foro usaban la plantilla "foro" (sin imagen). Se les ha quitado esa plantilla para que usen la normal.
+- Todo está en el tema copia "Mirea · 20-10 menú blog con ? · BORRADOR". Pendiente de que Blanca lo publique.
