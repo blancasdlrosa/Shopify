@@ -765,3 +765,23 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - Primera compra, postcompra, reposición, win-back, VIP y cross-sell: plantillas sin rediseñar (pendiente si se quiere).
 - Pruebas por email a my.mireaskin@gmail.com: NO enviadas; Klaviyo pide la aprobación expresa de Blanca para enviarlas.
 - 22-10: enviadas a my.mireaskin@gmail.com las 5 pruebas (carrito 2h/20h, checkout 1h/20h, bienvenida). Sin cliente de muestra: los datos del carrito pueden salir vacíos en la prueba.
+
+## 22-10 · Calendario de newsletters Klaviyo (6 campañas)
+- Público: todas las listas de suscritos por email (confirmado por Blanca "a todos los suscritos"): VU7PcQ "Lista de email" (22, doble opt-in) + RtYDX3 "Shopify suscritos" (20) + Uf2Bws (3, subconjunto). Klaviyo quita duplicados y bajas. No se ha añadido ni importado a nadie.
+- Remitente hola@mireaskin.es · "Mirea Skin" · respuesta a my.mireaskin@gmail.com. Smart Sending activado. Enlaces con utm_source=klaviyo&utm_medium=email&utm_campaign=<nombre>.
+- Diseño: HTML propio (600 px, tablas, CSS en línea), colores ciruela #925b6d / #4a2a36 / crema #F8F2EE, cabecera MIREA SKIN, 6 tarjetas con foto real de Shopify, precio real y botón, franja "Pago seguro · Devolución 14 días · Envíos a toda España", "Envío gratis desde 69 € en España", baja {% unsubscribe %} y dirección de la organización. Copias en docs/newsletters/*.html.
+- Sin "original/auténtico", sin urgencias ni stock falsos. Precio tachado solo en Ofertas (compareAtPrice real del 22-10).
+
+| # | Fecha (10:00 Madrid = 09:00 UTC) | Asunto | Campaña | Plantilla |
+|---|---|---|---|---|
+| 1 | mar 28-10 | Lo nuevo de Corea ya está en Mirea ✨ | 01M5HM5ESGC8VVYN45ZE74S2YY | WZWkPT (asignada WNEPYA) |
+| 2 | jue 06-11 | Los favoritos coreanos que todo el mundo repite | 01M5HMG55CRWXQZVX4BHMXC2VH | TVGRUz (UiQ9v2) |
+| 3 | mar 11-11 | ¿Piel tirante con el frío? Tu rutina de invierno | 01M5HMJVR2SWCKJ5JNYKK00J55 | T4yNej (Yz5Xi3) |
+| 4 | jue 20-11 | Bajamos precios en cremas y protectores coreanos | 01M5HMN4VEE9CMKPKDA37KP7WX | VQTKUr (T4UNfe) |
+| 5 | mar 25-11 | Ideas de regalo para esta Navidad 🎁 | 01M5HMQK513B5Z6DE6XA9QD9WM | RN4cWb (QV9phn) |
+| 6 | jue 04-12 | Ingredientes que NO debes mezclar (y cuáles sí) | 01M5HMSYRXHDE4717345XMZC5W | WA6yY5 (Xkm88X) |
+
+- Estado: las 6 están en BORRADOR con fecha y hora ya puestas. NO están programadas: Klaviyo pide confirmación expresa para programar (send_campaign) y para la prueba a my.mireaskin@gmail.com. Falta: Blanca revisa y pulsa "Programar" en cada una (o confirma y lo hago yo).
+- Más vendidos: solo 8 pedidos desde 21-09, así que la nº 2 usa "Virales en TikTok" como favoritos (sin decir "más vendidos").
+- Antes de cada envío revisar precios/stock: Ofertas (20-11) y cofres de regalo (25-11; Génifique 11 uds, Boss 12) pueden cambiar.
+- Aviso: en Novedades varios Beauty of Joseon/d'Alba/HATHERINE tienen compareAtPrice MENOR que el precio (sincronización de Collective). En el email no se muestra tachado.
