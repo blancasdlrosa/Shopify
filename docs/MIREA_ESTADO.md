@@ -785,3 +785,8 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - Más vendidos: solo 8 pedidos desde 21-09, así que la nº 2 usa "Virales en TikTok" como favoritos (sin decir "más vendidos").
 - Antes de cada envío revisar precios/stock: Ofertas (20-11) y cofres de regalo (25-11; Génifique 11 uds, Boss 12) pueden cambiar.
 - Aviso: en Novedades varios Beauty of Joseon/d'Alba/HATHERINE tienen compareAtPrice MENOR que el precio (sincronización de Collective). En el email no se muestra tachado.
+
+### 22-10 · Newsletters programadas (aprobado por Blanca: "siii")
+- Prueba de la nº 1 (Novedades) enviada a my.mireaskin@gmail.com (job 1cc17ae5f06040e8a5b1906c9caac692, en cola 11:14 UTC).
+- Las 6 campañas programadas con send_campaign a su fecha y hora (09:00 UTC = 10:00 Madrid): 28-10, 06-11, 11-11, 20-11, 25-11 y 04-12. Público: VU7PcQ + RtYDX3 + Uf2Bws. Klaviyo calcula los destinatarios justo antes del envío.
+- Para cancelar una: Klaviyo › Campañas › la campaña › "Cancelar programación" (vuelve a borrador).
