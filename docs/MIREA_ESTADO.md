@@ -730,3 +730,13 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - Google Merchant 5857344812: SÍ existe feed España (es/EUR, label EUR_119540744529) y está APROBADO en ES en fichas gratuitas; feeds internacionales por mercado (AED, GBP, USD…) también. Corregido mi primer diagnóstico (había mirado solo un producto del feed AED). Impresiones 866 en 2 semanas, 0 clics. Errores "item_limit_reached" solo afectan a anuncios de pago.
 - Envíos: por peso; perfiles de proveedores caros (WEYE 50 €, Lifebay, Syncee, VuVatech…) solo tienen productos en BORRADOR → no afectan. Envíos altos en carritos abandonados vienen de peso (p.ej. Kerasys 1 L x2 a PT = 40,99 €) y de Internacional.
 - Redes: Metricool tiene IG+TikTok programados a diario hasta 01-11 y Pinterest hasta 03-11.
+
+## 22-10 · Campaña Google Ads (PAUSADA, pendiente de aprobar presupuesto)
+- Cuenta Google Ads 1865267943 (EUR). OJO: la cuenta también está vinculada al Merchant 5847806959 (Plaza Clara, PROHIBIDO) — no usar ni tocar ese vínculo.
+- Campaña nueva: "Mirea · Search · Marcas K-beauty · España" id 24377406933 · Search · CPC manual · 7 €/día · España · español · PAUSADA.
+- Grupos (CPC máx.): Medicube 0,40 · Beauty of Joseon 0,45 · Anua 0,40 · SKIN1004 0,40 · Biodance 0,35 · Cosmética coreana tienda 0,55. 41 palabras clave (frase/exacta) por volumen ES (Keyword Planner). 20 negativas (gratis, trabajo, amazon, primor…).
+- 6 anuncios RSA (sin reclamos falsos: nada de envío gratis ni "original"), 4 enlaces (Ofertas, Protectores solares, Encuentra tu rutina, Más vendidos), 4 frases destacadas, fragmento de marcas.
+- Conversión: "Google Shopping App Purchase" ya activa (primaria).
+- Campaña antigua "Mirea · Search · Medicube · España" (24286732474) sigue PAUSADA; sus anuncios dicen "Envío Gratis desde 35 €" (falso) → no reactivar.
+- Envío España: NO bajado. Sin dato del coste real por envío no se puede garantizar ganancia (Blanca: "si pierdo dinero no").
+- Email carrito abandonado: Klaviyo pide reconectar la autorización.
