@@ -764,3 +764,4 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - Bienvenida (XqqACx, VV5Ypt, REAUyZ): ya eran diseños "Premium v2" con productos reales y MIREA10 → solo cambio de remitente.
 - Primera compra, postcompra, reposición, win-back, VIP y cross-sell: plantillas sin rediseñar (pendiente si se quiere).
 - Pruebas por email a my.mireaskin@gmail.com: NO enviadas; Klaviyo pide la aprobación expresa de Blanca para enviarlas.
+- 22-10: enviadas a my.mireaskin@gmail.com las 5 pruebas (carrito 2h/20h, checkout 1h/20h, bienvenida). Sin cliente de muestra: los datos del carrito pueden salir vacíos en la prueba.
