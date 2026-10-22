@@ -28,3 +28,6 @@
 | 10 | Medición: conectar GA4 + Search Console (HYPD o Windsor con 1 cuenta) y revisar semanalmente consultas, CTR y conversiones; seguir campaña Google Ads 3 €/día. | Hoy no hay datos de búsqueda orgánica para decidir. | Blanca conecta / yo informo | Ninguno |
 
 Nota: la web carga bien para clientes (200, título y descripción de home correctos en español, señales de confianza presentes). El freno principal es visibilidad (indexación, reseñas, títulos en inglés), no el diseño.
+
+## Corrección 22-10 (comprobado después)
+- Punto 1 era una FALSA ALARMA: el `<meta name="robots" content="none">` que vio el rastreador está dentro del iframe de inicio de sesión de Shop Pay ("Iniciar sesión en Shop"), no en la cabecera de la tienda. El tema (layout/theme.liquid y snippets/meta-tags.liquid) no pone ningún robots, y robots.txt permite todo lo público y declara el sitemap. Google SÍ puede indexar la web.
