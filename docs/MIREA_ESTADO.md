@@ -723,3 +723,10 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - No tocados: 174 sin coste registrado, 27 donde bajar dejaría <30% margen, 23 con referencia sospechosa (otro tamaño).
 - Las 81 bajadas marcadas como oferta: compareAtPrice = precio anterior (precio tachado). Entran solas en la colección "Ofertas" (regla IS_PRICE_REDUCED; ahora 1.020 productos).
 - 13 borradores con "vender sin stock": cambiados a DENY (no se venden a 0), activados y publicados en Tienda + Google.
+
+## 22-10 · Diagnóstico ventas
+- Ventas: 8 pedidos desde el 21-09 (último pedido semana 05-10). Sesiones: ~90/semana, 26 esta semana; 30 días: direct 538, Instagram 42, Google 19, Bing 6. 50% EEUU (probables bots).
+- Embudo últimas semanas: 18-20 carritos/semana → 7-9 checkouts → 0-2 pagos.
+- Google Merchant 5857344812: SÍ existe feed España (es/EUR, label EUR_119540744529) y está APROBADO en ES en fichas gratuitas; feeds internacionales por mercado (AED, GBP, USD…) también. Corregido mi primer diagnóstico (había mirado solo un producto del feed AED). Impresiones 866 en 2 semanas, 0 clics. Errores "item_limit_reached" solo afectan a anuncios de pago.
+- Envíos: por peso; perfiles de proveedores caros (WEYE 50 €, Lifebay, Syncee, VuVatech…) solo tienen productos en BORRADOR → no afectan. Envíos altos en carritos abandonados vienen de peso (p.ej. Kerasys 1 L x2 a PT = 40,99 €) y de Internacional.
+- Redes: Metricool tiene IG+TikTok programados a diario hasta 01-11 y Pinterest hasta 03-11.
