@@ -740,3 +740,4 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - Campaña antigua "Mirea · Search · Medicube · España" (24286732474) sigue PAUSADA; sus anuncios dicen "Envío Gratis desde 35 €" (falso) → no reactivar.
 - Envío España: NO bajado. Sin dato del coste real por envío no se puede garantizar ganancia (Blanca: "si pierdo dinero no").
 - Email carrito abandonado: Klaviyo pide reconectar la autorización.
+- Blanca: 7 €/día es mucho → presupuesto bajado a 3 €/día (sigue PAUSADA). Con poco presupuesto se concentra: pausados grupos Beauty of Joseon y SKIN1004 (CPC más caro); activos Medicube, Anua, Biodance, Cosmética coreana.
