@@ -709,3 +709,9 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - Formato grande: 72 → 47 (solo 1 L / 1,2 L / 5 L o con variante de 1 L). Packs: 22. Champús: 89.
 - Menú: Peluquería → Packs añadido tras "Champú formato grande".
 - Acondicionadores Kerasys 1 L se quedan en Peluquería → Acondicionadores (Blanca: "3 si").
+
+## 22-10 · Tratamientos + borradores España + Google
+- Keratina Pura y Kit Permanente Nº0: quitada etiqueta Acondicionadores (siguen en Mascarillas y tratamientos).
+- Google: los 2.568 productos activos de España ya están en Google & YouTube y Tienda online (comprobado con publication_ids).
+- 235 borradores de España revisados (sin tocar nada antes): activados y publicados (Tienda + Google) solo 4 aptos: Soybean Milk Pad, SALERM Ice Gel 03, Lendan Terra Curly Gel, Decorte Lift Dimension Serum.
+- No activados: 142 sin stock, 34 duplicados de activos, 25 margen bajo (Salluna, coste 90% del precio; SKIN1004 set 4und pierde dinero), 16 sin foto, 11 internos (tarjetas, bonos, bolsas), 2 precio 0, 1 posible duplicado. Detalle en scratchpad/spain_drafts.json.
