@@ -741,3 +741,4 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - Envío España: NO bajado. Sin dato del coste real por envío no se puede garantizar ganancia (Blanca: "si pierdo dinero no").
 - Email carrito abandonado: Klaviyo pide reconectar la autorización.
 - Blanca: 7 €/día es mucho → presupuesto bajado a 3 €/día (sigue PAUSADA). Con poco presupuesto se concentra: pausados grupos Beauty of Joseon y SKIN1004 (CPC más caro); activos Medicube, Anua, Biodance, Cosmética coreana.
+- 22-10: Blanca aprueba 3 €/día ("Perfecto está así") → campaña 24377406933 ACTIVADA, estado SERVING; anuncios en revisión de Google. Revisión programada 25-10 09:00 UTC.
