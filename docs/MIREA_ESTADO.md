@@ -715,3 +715,9 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - Google: los 2.568 productos activos de España ya están en Google & YouTube y Tienda online (comprobado con publication_ids).
 - 235 borradores de España revisados (sin tocar nada antes): activados y publicados (Tienda + Google) solo 4 aptos: Soybean Milk Pad, SALERM Ice Gel 03, Lendan Terra Curly Gel, Decorte Lift Dimension Serum.
 - No activados: 142 sin stock, 34 duplicados de activos, 25 margen bajo (Salluna, coste 90% del precio; SKIN1004 set 4und pierde dinero), 16 sin foto, 11 internos (tarjetas, bonos, bolsas), 2 precio 0, 1 posible duplicado. Detalle en scratchpad/spain_drafts.json.
+
+## 22-10 · Activación borradores España + ajuste de precios
+- Aviso "SKIN1004 set pierde dinero" era un error de cálculo: variante pack 4 uds = 89 € (coste 80,10), resto 18,50–25 €; todas con ~10% margen (Collective/Salluna).
+- Borradores España: 84 activados y publicados en Tienda + Google (casi todos "agotado", política DENY → sin sobreventa). No activados: 69 duplicados de activos, 13 con "vender sin stock" a 0 (riesgo de sobreventa), 1 sin margen (Cofre Devotion Male). Detalle: scratchpad/spain_activation.json.
+- Precios: comparados con precio de mercado de Google Shopping (referencias UE). 81 variantes bajadas al precio de mercado, siempre con ≥30% de margen sobre coste; ninguna subida. Verificadas las 81 en Shopify. Precios antiguos en docs/precios/auditoria_precios_2210.csv (columna price) para poder deshacer.
+- No tocados: 174 sin coste registrado, 27 donde bajar dejaría <30% margen, 23 con referencia sospechosa (otro tamaño).

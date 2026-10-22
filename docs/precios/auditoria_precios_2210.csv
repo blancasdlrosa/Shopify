@@ -1,0 +1,306 @@
+productId,variantId,title,vendor,collective,cost,price,benchmark,proposed,margin_after_%,status,benchmark_country
+11240280883537,55285169979729,"Anua - Peach 70 Niacin Brightening Collagen Mask - Brightening Sheet mask with Collagen - 38g, Peach",,yes,5.99,7.99,4.46,,25.0,floor_blocks,AT
+11240280392017,55285167587665,Aqua Chamaecyparis Obtusa Leaf Mask,,yes,2.96,3.95,2.55,,25.1,floor_blocks,ES
+11240280457553,55285167685969,Aromatica - Ritual Hair Oil Jasmine & Vetiver - Nourishing Hair Oil - 50ml,,yes,26.99,35.99,23.16,,25.0,floor_blocks,BE
+11240224129361,55285013283153,Better than Cheek W02 Strawberry milk,,yes,11.99,15.99,10.88,,25.0,floor_blocks,AT
+11238867140945,55277720306001,Biodance Pore Tightening Collagen Ampoule | Mirea,,yes,48.75,65.0,42.5,,25.0,floor_blocks,AT
+11240274395473,55285131346257,Birch Moisture Mask,,yes,5.24,6.99,4.55,,25.0,floor_blocks,AT
+11238870712657,55277723943249,DECORTE LIFT DIMENSION REPLENISH + FIRM LOTION,,yes,57.75,77.0,56.02,,25.0,floor_blocks,ES
+11238891094353,55277752713553,DECORTE LIFT DIMENSION REPLENISH + FIRM LOTION ER,,yes,57.75,77.0,58.0,,25.0,floor_blocks,ES
+11238853640529,55277706477905,DECORTÉ Moisture Liposome Eye Cream,,yes,50.24,66.99,51.18,,25.0,floor_blocks,DE
+11238875136337,55277729186129,DETANGLING PERFUME HAIR MIST 01 RGDP01,,yes,24.74,32.99,20.75,,25.0,floor_blocks,DE
+11238875201873,55277729251665,DETANGLING PERFUME HAIR MIST 03,,yes,24.74,32.99,20.56,,25.0,floor_blocks,DE
+11238859997521,55277713064273,Dr. Althea - Pro Lab Marine Anti-Blemish Mask - Anti-Acne Sheet Mask - 1pc/27g,,yes,3.74,4.99,3.46,,25.1,floor_blocks,AT
+11238741246289,55277563511121,Essential Oil Argan,,yes,18.0,24.0,20.47,,25.0,floor_blocks,ES
+11240364245329,55285764325713,Fragrance World Eclair Affair Eau De Parfum 100ml,,yes,23.52,33.6,27.16,,30.0,floor_blocks,ES
+11240274690385,55285131673937,Heartleaf 70% DAILY LOTION,,yes,25.49,33.99,22.75,,25.0,floor_blocks,AT
+11240312308049,55285534097745,LENDAN TERRA DOMINICAN SPIRIT CHAMPU REPARADOR 300ml,,yes,11.89,16.99,14.63,,30.0,floor_blocks,ES
+11240312144209,55285531869521,LENDAN TERRA REPAIR MASK MASCARILLA REPARADORA DOMINICAN SPIRIT 500ML,,yes,28.03,40.04,34.24,,30.0,floor_blocks,ES
+11240310538577,55285522989393,Lendan Recovery Ultra Antiox 3 x 20 ml BOOSTER CONCENTRADO SÚPER REPARADOR,,yes,30.03,42.9,36.12,,30.0,floor_blocks,ES
+11238866813265,55277719945553,Madagascar Centella Probio-Cica Intensive Ampoule,,yes,29.99,39.99,24.7,,25.0,floor_blocks,AT
+11238867042641,55277720207697,"Missha - Airy Fit Sheet Mask - Rice - Brightening and Smoothing Sheet Mask - 19g, Rice",,yes,2.99,3.99,1.74,,25.1,floor_blocks,AT
+11238870417745,55277723648337,"Mixsoon Collagen Powder Stick(0,1.g *10 ea)",,yes,12.38,16.5,12.23,,25.0,floor_blocks,BE
+11238869139793,55277722370385,Mixsoon Vitamin C Powder Stick,,yes,14.99,19.99,12.27,,25.0,floor_blocks,AT
+11240223867217,55285013053777,Mugwort Calming Serum,,yes,23.99,31.99,13.64,,25.0,floor_blocks,AT
+11240274952529,55285131936081,Organic fruits body butter,,yes,29.24,38.99,28.87,,25.0,floor_blocks,FR
+11240375779665,55285779595601,Paris Corner Papillon des Vents Eau de Parfum para Mujer 100 Ml,,yes,26.95,38.5,30.5,,30.0,floor_blocks,AT
+11240216887633,55284993196369,Romand Dewyful Water Tint 04 Chilli up,,yes,17.24,22.99,9.29,,25.0,floor_blocks,AT
+11238871073105,55277724303697,Round Lab - Birch Juice Moisturizing Cleanser - Moisturizing Face Wash Gel with Birch Juice - 150ml,,yes,14.63,19.5,13.47,,25.0,floor_blocks,AT
+11153719492945,54988212633937,A'pieu Juicy Pang Glossy Jelly Highlighter 3.8g (2 Colors) #02 Moonlight,A'pieu,no,,14.95,6.55,,,no_cost,AT
+11166702764369,55023830335825,A'pieu Juicy Pang Pastel Blusher 3.7g (9colors) PK11 Ribbon Cotton,,no,,12.95,10.69,,,no_cost,AT
+11165782049105,55020516409681,A'pieu Juicy Pang Tint 3.5g (8 Colors) #CR03 Jujube,A'pieu,no,,12.95,10.74,,,no_cost,AT
+11166703288657,55023834857809,A'pieu Juicy Pang Water Blusher 9g #PK03 Guava,,no,,12.95,8.3,,,no_cost,AT
+11163760296273,55010740863313,A'pieu Madecassoside Cleansing Foam 130ml,A'pieu,no,,10.95,6.85,,,no_cost,AT
+11165778575697,55020509331793,AMUSE Tint Balm Keyring 6g (5 Colors) 01 Rice,AMUSE,no,,17.95,10.16,,,no_cost,AT
+11154425020753,54989963657553,APLB Daily Solution Hair Mask 150ml,APLB,no,,19.95,8.94,,,no_cost,FR
+11154425250129,54989963723089,APLB Daily Solution Hair Treatment 150ml,APLB,no,,19.95,8.94,,,no_cost,FR
+11154423775569,54989961691473,APLB Intensive Booster Hair Conditioner 300ml,APLB,no,,19.95,8.61,,,no_cost,ES
+11154423284049,54989960675665,APLB Intensive Booster Hair Oil 80 ml,APLB,no,,19.95,8.61,,,no_cost,FR
+11154424070481,54989962314065,APLB Intensive Booster Hair Shampoo 300ml,APLB,no,,19.95,8.61,,,no_cost,ES
+11154422825297,54989959594321,APLB Intensive Booster Hair Treatment 150ml,APLB,no,,19.95,8.53,,,no_cost,FR
+11154423578961,54989961494865,APLB Intensive Booster Scalp Tonic 105ml,APLB,no,,19.95,8.71,,,no_cost,FR
+11153715298641,54988201394513,APRILSKIN Calendula Low pH Foam Cleanser 200ml,APRILSKIN,no,,23.95,15.63,,,no_cost,DE
+11153716805969,54988208669009,APRILSKIN TXA Niacinamide Toning Shot 99 Serum 30ml,APRILSKIN,no,,30.95,18.0,,,no_cost,AT
+11148180783441,54976944865617,Anua 3 Ceramide Panthenol Moisture Barrier Cream · 100 ml,Anua,no,,30.0,22.35,,,no_cost,AT
+11148107546961,54976611058001,BANILA CO Clean It Zero Brightening Peeling Gel 120ml,BANILA CO,no,,29.95,15.35,,,no_cost,AT
+11148067766609,54976316670289,BBIA Essential Eye Palette 8.5g 01 Your Mauve,BBIA,no,,39.95,17.79,,,no_cost,AT
+11148067766609,54976316703057,BBIA Essential Eye Palette 8.5g 02 Your Peach,BBIA,no,,39.95,16.18,,,no_cost,IT
+11148067766609,54976316735825,BBIA Essential Eye Palette 8.5g 03 Your Hearting,,no,,39.95,17.49,,,no_cost,DE
+11165723263313,55020425675089,BBIA Glow Tint 3.2g #19 Choco Bottle,BBIA,no,,14.95,7.26,,,no_cost,FR
+11166704894289,55023842722129,BBIA Last Blush 4g #15 Cinnamon Rose,,no,,12.95,10.44,,,no_cost,DE
+11153823662417,54988679905617,BBIA Never Die Mascara 7ml (2 color) 02 Power Brown,BBIA,no,,15.95,9.02,,,no_cost,DE
+11153823203665,54988678267217,BBIA Ready To Wear Water Lipstick 3g 02 Wet Rose,BBIA,no,,15.95,7.52,,,no_cost,DE
+11165849583953,55020681855313,BBIA Ready to Wear Eye Palette 5g 05 Apricot Blush,BBIA,no,,23.95,14.09,,,no_cost,DE
+11153687740753,54988055576913,Benton Aloe BHA Skin Toner 200ml,Benton,no,,19.95,17.29,,,no_cost,AT
+11153688002897,54988056002897,Benton Pore Clear Brush,Benton,no,,18.95,14.28,,,no_cost,AT
+11153688756561,54988059967825,Benton Scalp Brush Massager,Benton,no,,14.95,12.6,,,no_cost,AT
+11153686036817,54988048892241,Biodance First Synergy Toner 150ml,Biodance,no,,30.95,21.61,,,no_cost,AT
+11153686135121,54988049088849,Biodance Hydro Cera-Nol Real Deep Mask Sheet 4P,Biodance,no,,24.95,20.4,,,no_cost,AT
+11153687478609,54988055085393,Biodance Radiant Pure Essence Cushion 14g (2colors) 23N,Biodance,no,,37.95,32.81,,,no_cost,FR
+11153094410577,54986920853841,CLIO Crystal Glam Tint 3.4g (#13-#28) 25 Dark Cherry,CLIO,no,,14.95,10.93,,,no_cost,IT
+11144850407761,54966121431377,CLIO Extreme Gelpresso Pencil Liner 0.35g (10colors) 10 Glam Brown,CLIO,no,,11.95,6.26,,,no_cost,FR
+11165831004497,55020639158609,CLIO Extreme Gelpresso Pencil Liner 0.35g 1 Black Brown,,no,,13.95,6.31,,,no_cost,FR
+11166708728145,55023863365969,CLIO Glass & Highlighter 5g (4colors) 03 Peach Pearl,,no,,17.95,13.35,,,no_cost,ES
+11153085464913,54986907386193,CLIO Kill Cover Airy-Fit Concealer 3g (7 Colors) 4 Ginger,CLIO,no,,14.95,6.95,,,no_cost,DE
+11165685350737,55020337693009,CLIO VELVET LIP PENCIL SET 006 VANILLA CORAL,CLIO,no,,14.95,8.51,,,no_cost,IT
+11165797286225,55020572606801,COSNORI Dynamic Setting Mascara Washable 7ml #Volume & Curl,COSNORI,no,,17.95,14.63,,,no_cost,DE
+11153070391633,54986893492561,COSRX One Step Original Tone Clarifying Moisture Pad...,COSRX,no,,21.95,16.53,,,no_cost,AT
+11153071112529,54986894475601,COSRX Red Rice Inositol Exfoliating Care Pore Peel...,COSRX,no,,24.95,21.6,,,no_cost,AT
+11163761639761,55010744303953,DERMALINE Bio Moisture Rose Ampoule 75ml,DERMALINE,no,,52.95,41.99,,,no_cost,IT
+11152975790417,54986745315665,DERMATORY Hypoallergenic Cica Rescue Gauze Pad 200ml (80ea),DERMATORY,no,,21.95,15.73,,,no_cost,DE
+11152978280785,54986750591313,DERMATORY Retinal Shot Firming & Repair Cream 30ml,DERMATORY,no,,25.95,11.51,,,no_cost,DE
+11166630216017,55023366799697,Dinto All That Moments Blur-Finish Blusher 4.5g #508 Little Alcott,,no,,18.95,15.75,,,no_cost,DE
+11166630412625,55023367487825,Dinto All That Moments Blur-Finish Blusher 4.5g 508 LITTLE ALCOTT,,no,,18.95,15.75,,,no_cost,DE
+11152729473361,54986330210641,Dr.Ceuracle Pro Balance Biotics Moisturizer 100ml,Dr.Ceuracle,no,,25.95,17.86,,,no_cost,AT
+11152731504977,54986337780049,Dr.Ceuracle Pro Balance Pure deep Cleansing Oil 155ml,Dr.Ceuracle,no,,24.95,17.61,,,no_cost,AT
+11152738320721,54986346856785,Dr.Ceuracle Vegan Aquarizing Hand Cream 50ml,Dr.Ceuracle,no,,20.95,9.98,,,no_cost,DE
+11163759509841,55010737488209,ETUDE Bling Bling Eye Stick 1.4g (6colors) #08 Ivory Baby Star,ETUDE,no,,10.95,6.06,,,no_cost,DE
+11165665526097,55020303548753,ETUDE HOUSE Fixing Tint 4g #04 Ginger Milktea,ETUDE HOUSE,no,,13.95,10.81,,,no_cost,AT
+11165682041169,55020330352977,ETUDE Whipping Fruity Dewy Tint 4.5g 05 Melon Spread,,no,,14.95,6.46,,,no_cost,ES
+11165825106257,55020618383697,ETUDE Whipping Play Color Eyes 11.75g #Summer Whipping Cream,ETUDE,no,,21.95,17.29,,,no_cost,FR
+11152692085073,54986267558225,FULLY RICE CERAMIDE MOISTURE SUN CREAM 50ml,FULLY,no,,20.95,16.66,,,no_cost,AT
+11152683467089,54986253173073,Genabelle Melacare Intensive Cream 50ml,Genabelle,no,,35.95,30.39,,,no_cost,AT
+11165698490705,55020363678033,HERA Sensual Powder Matte Liquid 5g 145 FOREVER YOUNG,HERA,no,,38.95,22.53,,,no_cost,DE
+11152677732689,54986247930193,Huxley Sun Essence Stay Sun Safe SPF50+ PA++++ 50ml,Huxley,no,,30.95,20.54,,,no_cost,BE
+11163075346769,55008810795345,Isntree Yam Root Vegan Barrier Cream 80ml,Isntree,no,,27.95,17.44,,,no_cost,AT
+11165700686161,55020368822609,JUNGSAEMMOOL New Classic Shine Lipstick Red Way,JUNGSAEMMOOL,no,,27.95,17.16,,,no_cost,FR
+11152635724113,54986196681041,KAINE Kombu Hydrating Daily Cleanser 155g,KAINE,no,,20.95,14.04,,,no_cost,AT
+11152636150097,54986197500241,KAINE Kombu Jelly Oil Cleanser 145ml,KAINE,no,,24.95,16.39,,,no_cost,AT
+11152637100369,54986198122833,KAINE Rosemary Relief Gel Cleanser 150ml,KAINE,no,,17.95,12.4,,,no_cost,AT
+11152638935377,54986199269713,KAINE Vita Drop Serum 30ml,KAINE,no,,26.95,17.37,,,no_cost,AT
+11152627302737,54986190258513,KLAVUU Nourishing Care Lip Sleeping Pack 20g (4colors) #02 Berry,KLAVUU,no,,17.95,8.47,,,no_cost,AT
+11154360238417,54989864567121,KUNDAL HONEY & MACADAΜΙΑ Protein Hair Treatment (Refill) 400ml #CHERRY BLOSSOM,KUNDAL,no,,14.95,12.52,,,no_cost,AT
+11154431181137,54989967786321,LADOR Ash Silver Shampoo 300ml,LADOR,no,,24.95,15.79,,,no_cost,AT
+11154435113297,54989969588561,LADOR Perfumed Hair Treatment 380ml (3types) La pitta,LADOR,no,,32.95,26.06,,,no_cost,AT
+11154430427473,54989967458641,LADOR Root Re-Boot Shampoo 350ml #Activating,LADOR,no,,23.95,12.62,,,no_cost,AT
+11154426429777,54989964149073,LADOR Snail Sleeping Hair Ampoule 20ml,LADOR,no,,8.95,3.71,,,no_cost,AT
+11154433147217,54989968572753,LADOR Triple X3 Natural Shampoo 530ml,LADOR,no,,29.95,17.27,,,no_cost,AT
+11154432229713,54989968179537,LADOR Volumising Curl Cream 80ml,LADOR,no,,21.95,14.26,,,no_cost,AT
+11154434097489,54989969031505,LADOR Volumising Curl Shampoo 530ml,LADOR,no,,26.95,11.49,,,no_cost,AT
+11165706912081,55020385567057,Laka Bonding Glow Lipstick 203 Mark,Laka,no,,24.95,20.53,,,no_cost,BE
+11165706912081,55020385632593,Laka Bonding Glow Lipstick 205 Mulled,Laka,no,,24.95,21.1,,,no_cost,BE
+11165706912081,55020385763665,Laka Bonding Glow Lipstick 211 EVE,Laka,no,,24.95,13.4,,,no_cost,BE
+11152617275729,54986179739985,Laka Love Silk Blush 705 Angel,,no,,21.95,15.61,,,no_cost,DE
+11152619045201,54986181673297,Laka Wild Brow Shaper BALANCE,Laka,no,,19.95,8.05,,,no_cost,ES
+11152613835089,54986175250769,Luvum Witch Hazel Hyaluronic Toner Pad 130ml (60pcs),Luvum,no,,24.95,17.33,,,no_cost,FR
+11153920950609,54988961349969,MEDIHEAL Derma Modeling Pack Hyaluronate Moisture,MEDIHEAL,no,,8.95,6.55,,,no_cost,AT
+11152458711377,54985920414033,MEDIPEEL Hyaluronic Acid Layer Mooltox Mild Tone Up Sun Cream SPF 50+PA++++ 50g,MEDIPEEL,no,,27.95,18.65,,,no_cost,AT
+11152459399505,54985921134929,MEDIPEEL Hyaluronic Acid Layer Mooltox Wrapping Mask 70ml,MEDIPEEL,no,,25.95,20.4,,,no_cost,AT
+11152560193873,54986024059217,MEDIPEEL Premium Peptide Naite 1000 Shot Neck Stick 20g,MEDIPEEL,no,,25.95,15.41,,,no_cost,AT
+11152573170001,54986096148817,MEDIPEEL Red Lacto Collagen Tightenig Ampoule 70ml,MEDIPEEL,no,,21.95,18.89,,,no_cost,DE
+11152563962193,54986042835281,MEDIPEEL Retinol Collagen Lifting Ampoule 50ml,MEDIPEEL,no,,23.95,18.68,,,no_cost,AT
+11152446882129,54985909109073,MEDITHERAPY Blue Layer Double Water Cream 50g,MEDITHERAPY,no,,33.95,19.07,,,no_cost,AT
+11165796008273,55020570902865,MERZY THE FIRST GEL EYELINER 0.5g (10 Colors) G2. DUTCH BROWN,MERZY,no,,12.95,5.34,,,no_cost,DE
+11165795746129,55020570476881,MERZY THE FIRST PEN EYELINER 0.5g (3 Colos) P2. BROWNIE,MERZY,no,,13.95,6.07,,,no_cost,IT
+11152437870929,54985898557777,MIGUHARA Refining Pore Clear Pack 150ml,MIGUHARA,no,,26.95,17.91,,,no_cost,ES
+11152440590673,54985905701201,MIGUHARA Vita Intensive Melatoning Cream 50ml,MIGUHARA,no,,39.95,23.43,,,no_cost,IT
+11152441016657,54985905897809,MIGUHARA Vital Shine Glow Ampoule Pad 70 pads 150ml,MIGUHARA,no,,32.95,21.62,,,no_cost,ES
+11152422273361,54985888170321,MISSHA CHOGONGJIN SOSAENG JIN EMULSION 120ml,MISSHA,no,,33.95,25.4,,,no_cost,DE
+11152423715153,54985889186129,MISSHA M Signature Real Complete BB Cream EX 45g (2... #21 Light Beige,MISSHA,no,,17.95,15.47,,,no_cost,AT
+11165654909265,55020283461969,MISSHA Perfect Lip & Eye Makeup Remover Waterproof 100ml,MISSHA,no,,11.95,10.02,,,no_cost,ES
+11152418046289,54985885679953,MISSHA TIME REVOLUTION PRIMESTEM 100 Eye Cream 25ml,MISSHA,no,,25.95,22.23,,,no_cost,AT
+11152412410193,54985878733137,MIZON Cicaluronic Low pH Cleanser 120ml,MIZON,no,,17.95,14.11,,,no_cost,AT
+11152413557073,54985879486801,MIZON Collagen Power Lifting Toner 120ml,MIZON,no,,23.95,20.81,,,no_cost,AT
+11152399991121,54985859400017,MUZIGAE MANSION Icy Glow 5ml 05 BREEZY,MUZIGAE MANSION,no,,23.95,12.07,,,no_cost,DE
+11152400875857,54985862414673,MUZIGAE MANSION Rainbow Mansion Objet Liquid Tint 6ml 006 Notable,MUZIGAE MANSION,no,,20.95,14.67,,,no_cost,DE
+11152400875857,54985862512977,MUZIGAE MANSION Rainbow Mansion Objet Liquid Tint 6ml 009 Perception,MUZIGAE MANSION,no,,20.95,16.4,,,no_cost,AT
+11152400875857,54985862906193,MUZIGAE MANSION Rainbow Mansion Objet Liquid Tint 6ml 021 Melted,MUZIGAE MANSION,no,,20.95,14.46,,,no_cost,BE
+11152396386641,54985854255441,Mamonde Calming Shot Azulene Suncream SPF50+ PA++++ 35ml,Mamonde,no,,13.95,10.25,,,no_cost,AT
+11163082719569,55008829800785,NIDA Invisible Fit Sun Serum 40ml,NIDA,no,,26.95,15.31,,,no_cost,AT
+11165840539985,55020656787793,Oddtype Mute Sleek Eye Palette M386 Bare in Tense,Oddtype,no,,29.95,21.79,,,no_cost,FR
+11152326525265,54985669607761,ROOTON Manantio Body Mist 105ml,ROOTON,no,,30.95,15.23,,,no_cost,ES
+11152322330961,54985656697169,Round Lab Pine Cica Deep Pore Cleansing Oil 200ml,Round Lab,no,,21.95,14.46,,,no_cost,AT
+11153897914705,54988908298577,SKINFOOD Pantothenic Water Parsley Pad 135g/30pads (Refill),SKINFOOD,no,,11.95,9.43,,,no_cost,ES
+11163784544593,55010848768337,THE WHOO Cheongidan Pro-Radiance Emulsion · 110 ml,THE WHOO,no,,116.56,86.53,,,no_cost,ES
+11163773960529,55010799026513,THE WHOO Hwanyu Imperial Youth Balancer 125ml,THE WHOO,no,,169.95,118.73,,,no_cost,DE
+11166709809489,55023870083409,TIRTIR Mask Fit Red Foundation MINI SPF40 PA++ 10g (30colors) 13N Fair Ivory,,no,,18.95,11.23,,,no_cost,DE
+11153856102737,54988798329169,TIRTIR Prism Highlighter Duo 7g (3colors) #01 Champagne Halo,TIRTIR,no,,25.95,20.6,,,no_cost,AT
+11153856102737,54988798394705,TIRTIR Prism Highlighter Duo 7g (3colors) #03 Purple Meteor,TIRTIR,no,,25.95,20.41,,,no_cost,AT
+11153814421841,54988634423633,TOCOBO Powder Cream Lip Balm 3.5g #032 Rose Petal,TOCOBO,no,,15.95,8.68,,,no_cost,AT
+11163762819409,55010748268881,TROIAREUKE ACSEN TOC Toner 100ml,TROIAREUKE,no,,55.95,33.52,,,no_cost,IT
+11152270557521,54985305391441,Torriden DIVE IN Hydra-Glow Eye Patch 97g/60ea,Torriden,no,,27.95,19.68,,,no_cost,AT
+11144792211793,54965979677009,VT Pro Cica Reedle Shot 700 30ml,VT,no,,52.95,43.19,,,no_cost,AT
+11153872978257,54988848202065,VT Reedle Shot 1000 15ml,VT,no,,54.95,37.63,,,no_cost,AT
+11144780022097,54965949759825,VT Retinal Peptide Capsule Cream 50ml,VT,no,,30.95,18.91,,,no_cost,AT
+11165826089297,55020623823185,WAKEMAKE Soft Blurring Eye Palette 14g (#01~#12) 03 Sunset Blurring,WAKEMAKE,no,,31.95,21.96,,,no_cost,AT
+11153713463633,54988193071441,[BIO HEAL BOH] Probioderm Collagen Volume Lip Plumper 10ml,BIO HEAL BOH,no,,18.95,11.06,,,no_cost,AT
+11153879433553,54988862980433,[BIO HEAL BOH] Probioderm Melting Collagen 99.9 Eye Film 28 Sheets (+Collagen Water Mist 30ml) Set,BIO HEAL BOH,no,,71.95,31.84,,,no_cost,ES
+11153685807441,54988048138577,[By Wishtrend] Blue Oasis Aloe Hydrating Serum 30ml,By Wishtrend,no,,30.95,19.52,,,no_cost,AT
+11153685512529,54988047647057,[By Wishtrend] Mandelic Acid Dark Spot Correcting Serum 30ml,By Wishtrend,no,,26.95,21.24,,,no_cost,AT
+11153685283153,54988045812049,[By Wishtrend] Propolis Energy Boosting Essence 100ml,By Wishtrend,no,,29.95,17.36,,,no_cost,AT
+11165790732625,55020543672657,[DEAR DAHLIA] Paradise Dual Palette 4g #09 Sunset Romance,DEAR DAHLIA,no,,27.95,23.91,,,no_cost,DE
+11166609965393,55023320236369,[DEAR DAHLIA] Paradise Dual Palette 4g Sunset Romance,,no,,28.95,24.25,,,no_cost,DE
+11165858562385,55020702564689,[JAVIN DE SEOUL] Wink Eye Shade Primer 5.5g 05 Pale Rose,JAVIN DE SEOUL,no,,19.95,10.83,,,no_cost,AT
+11166620221777,55023344779601,[MACQUEEN New York] Micro Fit Cover Powder 9g,,no,,12.95,5.56,,,no_cost,ES
+11166620057937,55023344582993,[MACQUEEN New York] Micro Fit Finish Powder 9g,,no,,12.95,5.56,,,no_cost,ES
+11165710418257,55020393922897,[MACQUEEN New York] Powder Matte Lipstick 3.5g (5color) 03 Mauve Sauna,MACQUEEN New York,no,,12.95,6.87,,,no_cost,FR
+11152370565457,54985825190225,[MANYO FACTORY] Lotus Pore Tightening Serum 55ml,Manyo Factory,no,,33.95,22.38,,,no_cost,AT
+11152370467153,54985824928081,[MANYO FACTORY] Pure Cleansing Oil Deep Clean 200ml,Manyo Factory,no,,31.95,22.51,,,no_cost,AT
+11152587358545,54986142810449,[MARY & MAY] Vegan Blackberry Complex Glow Washoff Pack 125g,MARY & MAY,no,,21.95,17.18,,,no_cost,AT
+11152587686225,54986144645457,[MARY & MAY] Vegan CICA TeaTree Soothing Wash off Pack 125g,MARY & MAY,no,,18.95,14.47,,,no_cost,AT
+11163760132433,55010740535633,[MARY & MAY] Vegan Lemon Niacinamide Glow Wash off Pack 30g,MARY & MAY,no,,10.95,6.04,,,no_cost,DE
+11166704009553,55023838658897,[NATURE REPUBLIC] By Flower Contouring 5g (3colors) Vanilla Latte,,no,,10.95,5.73,,,no_cost,IT
+11166611210577,55023322235217,[NATURE REPUBLIC] Daily Basic Palette 2.4~2.7g (6colors) COOL PINK,,no,,13.95,9.94,,,no_cost,AT
+11166611210577,55023322300753,[NATURE REPUBLIC] Daily Basic Palette 2.4~2.7g (6colors) PEACH PINK,,no,,13.95,9.45,,,no_cost,FR
+11152350478673,54985767649617,[ONE THING] Niacinamide 10% Toner 300ml,ONE THING,no,,29.95,13.87,,,no_cost,IT
+11153898668369,54988911116625,[Real Barrier] Extreme Moisture Lip Balm 3.3g,Real Barrier,no,,11.95,6.13,,,no_cost,AT
+11154523586897,54990106919249,[SOME BY MI] Cica Peptide Anti Hair Loss Derma Scalp...,SOME BY MI,no,,18.95,14.18,,,no_cost,AT
+11153813930321,54988633833809,[SOME BY MI] Retinol Intense Reactivating Mask 22g X 5ea,SOME BY MI,no,,15.95,8.61,,,no_cost,ES
+11153858527569,54988804981073,[SOME BY MI] Retinol Retinal Firming Body Cream 200ml,SOME BY MI,no,,20.95,15.92,,,no_cost,AT
+11152305488209,54985531425105,[THANK YOU FARMER] Sun Project Glow Sun Essence SPF30 PA++ 40ml,,no,,26.95,20.05,,,no_cost,FR
+11166633427281,55023375221073,[TOO COOL FOR SCHOOL] Artclass By Rodin Blusher 9.5g #De Peche,,no,,18.95,14.57,,,no_cost,DE
+11152279044433,54985340780881,[TOO COOL FOR SCHOOL] Pleur Tint 4g (8 Colors) #05 Plash,TOO COOL FOR SCHOOL,no,,11.95,6.27,,,no_cost,ES
+11144796176721,54965997797713,[haruharu wonder] Black Bamboo Mist 80ml,haruharu wonder,no,,19.95,8.53,,,no_cost,ES
+11166701191505,55023821062481,belif Stress Shooter Cica Bomb Cushion SPF50+/PA+++ 15g+15g(Refill) Pink Beige,,no,,42.95,31.41,,,no_cost,ES
+11152076833105,54984766849361,colorgram Juicy Jam Blur Tint 5g (8colors) 03 Pink Peach,,no,,13.95,5.91,,,no_cost,DE
+11152076833105,54984766947665,colorgram Juicy Jam Blur Tint 5g (8colors) 06 Cool Raspberry,,no,,13.95,6.27,,,no_cost,ES
+11166620844369,55023345762641,colorgram Milk Bling Heartlighter 2g 07 Buttercup Ivory,,no,,13.95,10.9,,,no_cost,DE
+11165713138001,55020400017745,colorgram Nude Blur Tint 5g #13 BURNT MARRON,colorgram,no,,14.95,12.67,,,no_cost,DE
+11152075096401,54984761737553,colorgram Tintin Dory Blur Jam 3.5g 02 Warmmond,colorgram,no,,14.95,11.31,,,no_cost,IT
+11152075096401,54984761770321,colorgram Tintin Dory Blur Jam 3.5g 03 Hazelping,colorgram,no,,14.95,11.71,,,no_cost,AT
+11152071328081,54984749252945,dasique Melting Candy Balm 1.5g 04 Nudy Fig,dasique,no,,14.95,7.52,,,no_cost,AT
+11152064348497,54984718713169,fwee Lip & Cheek Blurry Pudding Pot #Cold-hearted Moment #MV01 Chill’n,,no,,21.95,16.56,,,no_cost,AT
+11152064348497,54984718811473,fwee Lip & Cheek Blurry Pudding Pot #Cold-hearted Moment #MV04 Slayyy,fwee,no,,21.95,16.63,,,no_cost,AT
+11152066249041,54984728707409,fwee Lip & Cheek Blurry Pudding Pot #Reddish Moment #RD01 D-Day,fwee,no,,21.95,11.04,,,no_cost,AT
+11152060678481,54984710193489,heimish Moringa Ceramide Hyaluronic Hydrating Watery Sunscreen SPF50+ PA++++ 50ml,heimish,no,,27.95,16.19,,,no_cost,AT
+11165800137041,55020576637265,hince New Depth Eyeshadow Palette 9.8g #Like A Scene,hince,no,,41.95,23.6,,,no_cost,ES
+11136382992721,54938552140113,illiyoon Ceramide Ato Concentrate Cream,ILLIYOON,no,,21.9,14.35,,,no_cost,AT
+11166619402577,55023343796561,innisfree Sculpting Powder Shading #02 Gray Brown,,no,,14.95,9.18,,,no_cost,AT
+11153851941201,54988785549649,lilybyred Luv Beam Cheek Mousse 3.8g (6colors) #04 Taro Mousse,lilybyred,no,,15.95,8.86,,,no_cost,DE
+11153851941201,54988785615185,lilybyred Luv Beam Cheek Mousse 3.8g (6colors) #06 Pomegranate Mousse,lilybyred,no,,15.95,8.3,,,no_cost,ES
+11166615535953,55023333376337,lilybyred Starry Eyes Am9 to Pm9 Gel Eyeliner 0.5g (11colors) #07 Matt Brown,,no,,12.95,6.39,,,no_cost,ES
+11166710301009,55023872901457,mude Face Fill Volumer Highlighter 3.8g (4colors) #P05 Ballerina,,no,,23.95,19.65,,,no_cost,DE
+11153809342801,54988622496081,peripera Ink Airy Velvet 4g (NEW #21~#25) 23 IN THE PEACHLIGHT,peripera,no,,14.95,12.53,,,no_cost,BE
+11153818747217,54988657197393,peripera Ink Airy Velvet 4g (NEW #26~#30) 27 INSIDE PEACH,peripera,no,,15.95,9.07,,,no_cost,DE
+11153818747217,54988657230161,peripera Ink Airy Velvet 4g (NEW #26~#30) 28 BERRY GOOD PINK,,no,,15.95,8.28,,,no_cost,DE
+11165822943569,55020612223313,rom&nd BETTER THAN PALETTE SPRING FEVER (2 colors) 6g 13 ODD BREEZE GARDEN,rom&nd,no,,28.95,22.55,,,no_cost,AT
+11153896178001,54988904104273,rom&nd HAN ALL BROW FIXER 9g,rom&nd,no,,12.95,10.71,,,no_cost,AT
+11166707777873,55023856386385,tfit Cotton Veil Makeup Base 30g (2colors) 02 LIVELY PURPLE,,no,,17.95,11.66,,,no_cost,DE
+11166707974481,55023857271121,tfit Layering Fit Cover Cushion EX SPF50+ PA++++ 12g (5colors) C01 PORCELAIN,,no,,21.95,17.46,,,no_cost,DE
+11166708072785,55023859401041,tfit Layering Fit Glow Cushion EX SPF50+ PA++++ 12g (5colors) W04 BUFF,,no,,19.95,16.87,,,no_cost,FR
+11166707548497,55023854485841,tfit Radiance Fit Serum Foundation 30g (29colors) N00 CREAM,,no,,14.95,12.9,,,no_cost,AT
+11166707319121,55023852749137,tfit Sleek Fit Cover Foundation 30g (9colors) W01 VANILLA,,no,,19.95,16.62,,,no_cost,DE
+11167582093649,55028064420177,A'pieu Waterlock Tone Up Sun Cushion Lavender SPF50+ PA++++ 15g,,no,18.0,32.95,13.36,25.95,30.6,propose,IT
+11168398541137,55033154634065,AESTURA Atobarrier 365 Gentle Foaming Cleanser 150ml,,no,13.0,23.95,18.37,18.95,31.4,propose,AT
+11168405946705,55033179996497,AMUSE Hair Perfume Mist 30ml (3 Types) After Shower,,no,23.0,41.95,22.29,32.95,30.2,propose,AT
+11168487637329,55033615909201,ATOPALM Soothing Gel Lotion 120ml,,no,13.0,23.95,18.34,18.95,31.4,propose,AT
+11168363053393,55033030082897,Benton Deep Green Tea Cleansing Foam 120g,,no,7.0,12.95,9.81,10.95,36.1,propose,AT
+11167748096337,55029201568081,Cos De BAHA AL Alpha Arbutin 5% Licorice Serum 30ml,,no,10.0,18.95,8.61,14.95,33.1,propose,AT
+11167750291793,55029207826769,Cos De BAHA EGF Peptide 5ppm Cica Serum 30ml,,no,14.0,25.95,18.31,20.95,33.2,propose,AT
+11167750488401,55029208383825,Cos De BAHA L2 Bakuchiol 2% + Retinol 0.5% Serum 30ml,,no,13.0,23.95,16.26,18.95,31.4,propose,AT
+11167745671505,55029195506001,Cos De BAHA LH Low Molecular Hyaluronic Acid Serum 30ml,,no,8.0,14.95,7.64,11.95,33.1,propose,FR
+11167748424017,55029202583889,Cos De BAHA NT Niacinamide 5% Facial Toner 200ml,,no,12.0,21.95,14.9,17.95,33.1,propose,AT
+11167749407057,55029205729617,Cos De BAHA PT M.A Peptide Facial Toner (Peptide Complex Facial Toner with Matrixyl 3000 & Argireline) 200ml,,no,12.0,21.95,11.12,17.95,33.1,propose,AT
+11167747801425,55029200912721,Cos De BAHA SH 83% Snail Repair Intensive Facial Serum 120ml,,no,10.0,18.95,9.66,14.95,33.1,propose,AT
+11167761531217,55029254095185,DERMALINE Bio Cell Boosting Ampoule 75ml,,no,33.0,59.95,45.88,47.95,31.2,propose,DE
+11167629246801,55028214792529,DEWYTREE Miracle Hyaluron Serum 40ml,,no,10.0,18.95,13.57,14.95,33.1,propose,FR
+11168359317841,55033019466065,Donggubat Shampoo Bar for Dry Scalp 120g,,no,8.0,14.95,10.74,11.95,33.1,propose,IT
+11168381403473,55033121145169,Dr.Ceuracle 5α Control Clearing Cleansing Foam 200ml,,no,14.0,25.95,20.05,20.95,33.2,propose,AT
+11167613682001,55028159873361,Dr.Ceuracle Hyal Reyouth Hydrogel Eye Mask 60ea/90g,,no,12.0,21.95,18.24,17.99,33.3,propose,AT
+11167579046225,55028053377361,Dr.Ceuracle Hyal Reyouth Moist Sun SPF50+ PA++++ 50ml,,no,17.0,30.95,16.59,24.95,31.9,propose,AT
+11167836733777,55029486059857,Dr.Ceuracle Royal Vita Propolis Anti-Oxidant Mask 30ml*10ea,,no,11.0,19.95,17.09,16.99,35.3,propose,ES
+11168289947985,55032623333713,Dr.G Green Deep Cleansing Oil 210ml,,no,13.0,23.95,16.42,18.95,31.4,propose,AT
+11168363348305,55033031459153,ETUDE Baking Powder Crunch Pore Scrub 200g,,no,6.0,10.95,9.46,8.99,33.3,propose,AT
+11168375341393,55033111642449,Elizavecca Secret Pure Skinship Peeling Touch Gel 500ml,,no,16.0,28.95,23.2,22.99,30.4,propose,FR
+11167730336081,55029129347409,Elizavecca Witch Piggy Hell-Pore AC-guard Spot Patch (12mm X 36ea),,no,5.0,9.95,4.95,7.95,37.1,propose,FR
+11167584780625,55028072776017,HEVEBLUE Black Yuja Bean Water Sun 50ml,,no,20.0,36.95,24.18,28.95,30.9,propose,AT
+11167623872849,55028186480977,Huxley BioSIS 360 Cream 30ml,,no,29.0,52.95,27.4,41.95,30.9,propose,ES
+11167587336529,55028079755601,Huxley Body Oil ; Moroccan Gardener 100ml,,no,30.0,54.95,22.46,42.95,30.2,propose,ES
+11167600181585,55028115243345,Huxley Hand Refresher 55ml #Blue Medina Tangerine,,no,11.0,19.95,9.52,15.95,31.0,propose,IT
+11167623643473,55028185891153,Huxley Oil ; Light and More 30ml,,no,28.0,50.95,24.12,40.95,31.6,propose,BE
+11167620333905,55028177469777,JUNGSAEMMOOL Essential Mool Cream Light 50ml,,no,26.0,46.95,28.92,37.95,31.5,propose,AT
+11168356794705,55033012322641,Jumiso Pore-Purifying Salicylic Acid Foaming Cleanser 120g,,no,11.0,19.95,15.09,15.95,31.0,propose,DE
+11167577801041,55028050526545,KAINE Green Fit Pro Sun 55ml,,no,14.0,25.95,15.01,20.95,33.2,propose,AT
+11167604605265,55028131594577,KLAIRS Fundamental Eye Awakening Gel 35ml,,no,21.0,37.95,22.29,30.95,32.1,propose,FR
+11167598444881,55028110360913,KUNDAL Shea Butter & Macadamia Pure Hand Cream 50ml #CHERRY BLOSSOM,,no,6.0,10.95,8.37,8.95,33.0,propose,AT
+11167598641489,55028111442257,KUNDAL Shea Butter & Macadamia Pure Hand Cream 50ml #YLANG YLANG,,no,6.0,10.95,5.75,8.95,33.0,propose,AT
+11168416923985,55033197986129,LADOR Herbalism Shampoo 150ml,,no,8.0,14.95,10.7,11.95,33.1,propose,AT
+11168272482641,55032556814673,MEDIHEAL Hyaluronate Wrapping Serum Mask 25ml X 10ea,,no,15.0,27.95,20.64,21.95,31.7,propose,AT
+11167771066705,55029289714001,MEDIHEAL Tea Tree Essential Mask Sheet 10P,,no,10.0,18.95,16.42,15.99,37.5,propose,AT
+11168272515409,55032556945745,MEDIHEAL Teatree Wrapping Serum Mask 25ml X 10ea,,no,15.0,27.95,22.76,21.99,31.8,propose,AT
+11168268222801,55032547180881,MEDIHEAL The N.M.F Ampoule Mask Original 27ml X 10ea,,no,13.0,23.95,18.25,18.95,31.4,propose,AT
+11167802720593,55029400043857,MEDIHEAL The N.M.F Ampoule Mask Sheet 10P,,no,14.0,25.95,18.39,20.95,33.2,propose,AT
+11168263143761,55032533746001,MEDITHERAPY Blue Layer Water Dome Mask 34g X 4ea,,no,18.0,32.95,19.02,25.95,30.6,propose,AT
+11167585206609,55028073890129,MENOKIN 30 Seconds Glow & Clear Gel Sunscreen SPF50+ PA++++ 50ml #BRIGHT,,no,18.0,32.95,19.22,25.95,30.6,propose,AT
+11167624364369,55028188873041,MIGUHARA Hyalucollagen Moisturizer Origin 50ml,,no,29.0,52.95,23.85,41.95,30.9,propose,ES
+11167622398289,55028182122833,MISSHA CHOGONGJIN GEUMSUL JIN BOOSTING ESSENCE 90ml,,no,27.0,48.95,38.51,38.95,30.7,propose,AT
+11167757238609,55029237809489,MIZON Black Snail All In One Cream 75ml,,no,33.0,59.95,23.99,47.95,31.2,propose,AT
+11168357056849,55033013764433,MIZON Pore Fresh Mild Acid Gel Cleanser 150ml,,no,11.0,19.95,14.32,15.95,31.0,propose,DE
+11167767462225,55029269496145,NEOGEN Probiotics Relief Mask 25g X 5ea,,no,12.0,21.95,10.41,17.95,33.1,propose,AT
+11167544312145,55027167887697,O HUI Day Shield Perfect Sun Black SPF50+ / PA++++ 50ml,,no,24.0,43.95,25.9,34.95,31.3,propose,DE
+11167870419281,55029527675217,O HUI Prime Advancer De-Aging PDRN Collagen Gelfting Mask Sheet 28g X 4ea,,no,21.0,37.95,31.9,30.99,32.2,propose,AT
+11167609946449,55028153090385,PETITFEE Artichoke Soothing Hydrogel Eye Mask 80g (60 Patches),,no,12.0,21.95,10.43,17.95,33.1,propose,ES
+11167610437969,55028153811281,PETITFEE Aura Quartz Eye Mask Pure Opal 80g (40 Patches),,no,20.0,36.95,23.44,28.95,30.9,propose,AT
+11167611126097,55028154859857,PETITFEE Cacao Energizing Hydrogel Eye Mask 80g (60 Patches),,no,12.0,21.95,12.59,17.95,33.1,propose,AT
+11168265044305,55032539906385,PETITFEE GOLD & SNAIL Hydrogel Mask Pack 30g X 5ea,,no,12.0,21.95,12.0,17.95,33.1,propose,AT
+11168264683857,55032539087185,PETITFEE Gold Hydrogel Mask Pack 32g X 5ea,,no,10.0,18.95,8.52,14.95,33.1,propose,ES
+11167548735825,55027189678417,ROVECTIN INTENSE MOISTURE SUN CREAM SPF50+ PA++++ 50ml,,no,15.0,27.95,17.78,21.95,31.7,propose,AT
+11167584026961,55028069695825,ROVECTIN Vita Tone Up Sun Cream SPF50+ PA++++ 50ml,,no,17.0,30.95,17.22,24.95,31.9,propose,DE
+11167868715345,55029524627793,SKIN 1004 Madagascar Centella Probio-Cica Nourishing Mask 22ml X 5ea,,no,14.0,25.95,10.57,20.95,33.2,propose,AT
+11167861145937,55029513584977,SKINFOOD Sous Vide Mask Sheet 18ml x 10ea [Smoothening] PUMPKIN 10P,,no,6.0,10.95,6.39,8.95,33.0,propose,FR
+11167501156689,55027021414737,SUNGBOON EDITOR Shea Butter Baby Foot Stick 20g,,no,8.0,14.95,12.63,11.99,33.3,propose,BE
+11167762350417,55029256323409,TIAM AC Fighting AHA BHA PHA Toner 180ml,,no,11.0,19.95,13.56,15.95,31.0,propose,AT
+11167763398993,55029261566289,TIAM Vitamin C 24 Surprise Serum 30ml,,no,13.0,23.95,18.21,18.95,31.4,propose,DE
+11167585698129,55028075823441,ZEROID Daily Sun Cream SPF50+ PA++++ 50ml,,no,23.0,41.95,21.09,32.95,30.2,propose,AT
+11168403849553,55033169412433,[Daeng Gi Meo Ri] Premium Black Garlic & Curcumin Shampoo 500ml,,no,17.0,30.95,14.17,24.95,31.9,propose,AT
+11168407355729,55033183797585,[NATURE REPUBLIC] Black Bean Anti-Hair Loss Shampoo 300ml,,no,13.0,23.95,11.58,18.95,31.4,propose,DE
+11167825953105,55029465514321,[Pyunkang Yul] Calming Mask Pack 25ml*10 Sheets,,no,12.0,21.95,18.25,17.99,33.3,propose,AT
+11167826706769,55029466366289,[Pyunkang Yul] Calming Relief Gel Wash Off Pack 100g,,no,13.0,23.95,14.44,18.95,31.4,propose,AT
+11168376979793,55033114100049,[Pyunkang Yul] Peeling Gel 100ml,,no,8.0,14.95,11.69,11.95,33.1,propose,AT
+11168498581841,55033659687249,[SOME BY MI] Lacto Soy Enzyme Deep Cleansing Foam 100ml,,no,13.0,23.95,14.74,18.95,31.4,propose,AT
+11168355582289,55033009537361,[THANK YOU FARMER] Back to Pure Daily Foaming Gel Cleanser 200ml,,no,20.0,36.95,31.66,30.99,35.5,propose,DE
+11168292045137,55032626708817,[THANK YOU FARMER] Pollufree 5.5 pH-Balancing Cleansing Foam 120ml,,no,15.0,27.95,22.6,21.99,31.8,propose,DE
+11168295780689,55032637096273,[THANK YOU FARMER] Pollufree Makeup Melting Cleansing Balm 90ml,,no,17.0,30.95,21.2,24.95,31.9,propose,DE
+11167628951889,55028213449041,belif The True Cream Aqua Bomb tube 75ml,,no,33.0,59.95,44.87,47.95,31.2,propose,DE
+11168357089617,55033013829969,iUNIK Centella Bubble Cleansing Foam 150ml,,no,11.0,19.95,13.5,15.95,31.0,propose,AT
+11167605981521,55028146471249,iUNIK Propolis Vitamin Eye Cream For Eye&Face 30ml,,no,17.0,30.95,14.08,24.95,31.9,propose,AT
+11167598969169,55028112326993,innisfree My Perfumed Hand Cream 30ml #06 Blush Rose,,no,5.0,9.95,4.19,7.95,37.1,propose,ES
+11167622496593,55028182450513,isoi Bulgarian Rose Whitening Laser Spot 20ml,,no,27.0,48.95,25.18,38.95,30.7,propose,FR
+11167557714257,55027226509649,make p:rem UV Defense Me. Calming Sun Cream SPF 50+ PA++++ 50ml,,no,13.0,23.95,18.33,18.95,31.4,propose,AT
+11167585141073,55028073824593,nutseline Cica Nut Waterfull Calming Sun Stick SPF50+ PA++++ 20g,,no,12.0,21.95,12.94,17.95,33.1,propose,DE
+11168395493713,55033147687249,ongredients Deep Foaming Cleanser 120ml,,no,13.0,23.95,16.27,18.95,31.4,propose,AT
+11168263504209,55032535318865,ongredients Skin Barrier Calming Mask 27ml X 6ea,,no,14.0,25.95,17.58,20.95,33.2,propose,AT
+11168395559249,55033147851089,ongredients Skin Barrier Moisture Deep Cleanser 120ml,,no,11.0,19.95,15.48,15.95,31.0,propose,AT
+11153716379985,54988208046417,APRILSKIN Pink Aloe Vitamin C Soothing & Brightening Toner 250ml,APRILSKIN,no,,27.95,10.1,,,suspect,AT
+11166621598033,55023347204433,BBIA Ready to Wear Downy Cheek 3.5g #01 Downy Pink,,no,,12.95,4.91,,,suspect,AT
+11166621598033,55023347302737,BBIA Ready to Wear Downy Cheek 3.5g #04 Downy Lavender,,no,,12.95,4.52,,,suspect,AT
+11166621598033,55023347401041,BBIA Ready to Wear Downy Cheek 3.5g #07 Downy Angel,,no,,12.95,4.37,,,suspect,AT
+11152737993041,54986346463569,Dr.Ceuracle Vegan Active Berry Lip Oil 4.5ml,Dr.Ceuracle,no,,21.95,8.01,,,suspect,AT
+11163078721873,55008819183953,MAXCLINIC Melatonin Shot Tone-Up Sunscreen RX SPF50+ PA++++ 50ml,MAXCLINIC,no,,36.95,14.57,,,suspect,NL
+11144838414673,54966096691537,MAXCLINIC Synergy Effect BTX Mask 80g,MAXCLINIC,no,,36.95,14.57,,,suspect,FR
+11153874649425,54988851380561,MEDITHERAPY Filligio Pink Retinol Volume Cream 50ml + EMS Device Set,MEDITHERAPY,no,,55.95,20.19,,,suspect,ES
+11167793938769,55029379793233,MIGUHARA 2 Step Whitening Mask Pack Origin 1.7ml + 25ml,,no,5.0,9.95,3.69,,,suspect,ES
+11167601983825,55028120518993,One-day's you Cica:ming Lip Balm 10ml,,no,7.0,12.95,4.75,,,suspect,ES
+11168264487249,55032538300753,PETITFEE Aura Quartz Hydrogel Face Mask Crystal Rose 30g X 5ea,,no,16.0,28.95,10.68,,,suspect,IT
+11144856043857,54966134374737,PETITFEE Centella Clearing Spot Patch (23patches),,no,,8.95,3.49,,,suspect,AT
+11153863410001,54988824674641,Sulwhasoo PERFECTING CUSHION 15g SPF50+/PA+++ 21N1,Sulwhasoo,no,,49.95,19.64,,,suspect,PT
+11153888379217,54988887261521,Sulwhasoo The Ultimate S Cream 60 ml,Sulwhasoo,no,,462.95,155.9,,,suspect,AT
+11165710942545,55020395299153,[MACQUEEN New York] Loving You Tint Glow Lip Balm 3.5g (7 Colors) Clear Red,,no,,12.95,5.02,,,suspect,FR
+11167774310737,55029299609937,[MARY & MAY] Vegan Rose Hyaluronic Hydra Wash off Pack 30g,,no,8.0,14.95,5.15,,,suspect,AT
+11165829562705,55020634374481,espoir The Brow Balance Pencil 0.1g - 6 Colors #01 Classic Brown,espoir,no,,17.95,6.22,,,suspect,AT
+11166701093201,55023820472657,hince Second Skin Foundation 40ml (5 colors) #22 Beige,,no,,42.95,14.6,,,suspect,ES
+11166701093201,55023820505425,hince Second Skin Foundation 40ml (5 colors) #23 Sand,,no,,42.95,14.6,,,suspect,IT
+11167595266385,55028102431057,nutseline Super Nut Nourishing Balm 110ml,,no,29.0,52.95,19.79,,,suspect,FR
+11168395919697,55033148375377,ongredients Perfect Melting Cleansing Balm 100ml,,no,20.0,36.95,13.29,,,suspect,AT
+11165675913553,55020319179089,rom&nd Glasting Color Gloss 4g (6 Colors) #05 Dim Mauve,,no,,19.95,7.78,,,suspect,AT
+11165671129425,55020311707985,rom&nd ZERO MATTE LIPSTICK (20 Colors) #08 ADORABLE,rom&nd,no,,14.95,5.09,,,suspect,AT
