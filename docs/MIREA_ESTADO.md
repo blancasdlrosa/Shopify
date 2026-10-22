@@ -746,3 +746,21 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - 22-10 Klaviyo (reconectado): flujos activos "Checkout abandonado · definitivo" (RZzUtE) y "Carrito abandonado · Shopify Added to Cart · estable" (TX2NFZ) SÍ envían (30 días: 15 y 54 emails) pero apertura ~14 % y 0 clics. Causa probable: remitente @gmail.com enviado desde Klaviyo → falla DMARC de Gmail → spam. El dominio send.mireaskin.es ya está verificado y activo en Klaviyo.
   - Cambiado remitente de los 4 emails (1 h y 20 h checkout; 2 h y 20 h carrito) a hola@mireaskin.es; respuestas siguen llegando a my.mireaskin@gmail.com (reply-to). Textos y plantillas sin tocar.
   - Pendiente: resto de flujos activos (bienvenida, postcompra, reposición, win-back, VIP…) siguen con remitente gmail.
+
+## 22-10 · Klaviyo: remitente propio en todos los flujos + rediseño carrito/checkout
+- Remitente hola@mireaskin.es en TODOS los flujos activos (nombre "Mirea Skin", respuestas a my.mireaskin@gmail.com). Asuntos, textos y estado sin tocar.
+  - Cambiados ahora: Bienvenida Vnwwa7 (117738616) · Welcome PRO VNKYNs (118023470, 118023477) · Primera compra SAjKhA (118023919) · Postcompra ShA32T (117741423) · Cross-sell post-entrega RxWXvG (117747584) · Reposición VTmbc5 (117845887) · Win-back VvW277 (117747594) · VIP WRuveC (117845927) · Cross-sell XCwF2L (117747027).
+  - Ya lo tenían: RUA2Fx, TUtFNF, VXcjCk; carrito/checkout cambiados antes (commit 8e08043).
+- Plantillas nuevas "Mirea v2" (diseño marca: ciruela #925b6d, #4a2a36, crema #F8F2EE; barra "Pago seguro · Devolución 14 días · Envíos a toda España"; envío gratis solo "desde 69 € en España"; sin urgencia falsa). Plantillas antiguas NO borradas.
+
+| Flujo | Acción | Plantilla antigua | Maestra v2 | Copia en el flujo |
+|---|---|---|---|---|
+| Carrito TX2NFZ · 2 h | 118539724 | V8rDzR | Vb2uqu | SsXfLn |
+| Carrito TX2NFZ · 20 h | 118539726 | WhQutH | YxaYtY | TsazRE |
+| Checkout RZzUtE · 1 h | 118540695 | XnRyZ7 | UtJbtn | WYZkJ7 |
+| Checkout RZzUtE · 20 h | 118540697 | YygpSX | XkVDwj | TafNEX |
+
+- Revertir: asignar la plantilla antigua en la acción (update_flow_action con template_id antiguo).
+- Bienvenida (XqqACx, VV5Ypt, REAUyZ): ya eran diseños "Premium v2" con productos reales y MIREA10 → solo cambio de remitente.
+- Primera compra, postcompra, reposición, win-back, VIP y cross-sell: plantillas sin rediseñar (pendiente si se quiere).
+- Pruebas por email a my.mireaskin@gmail.com: NO enviadas; Klaviyo pide la aprobación expresa de Blanca para enviarlas.
