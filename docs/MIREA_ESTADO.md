@@ -721,3 +721,5 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - Borradores España: 84 activados y publicados en Tienda + Google (casi todos "agotado", política DENY → sin sobreventa). No activados: 69 duplicados de activos, 13 con "vender sin stock" a 0 (riesgo de sobreventa), 1 sin margen (Cofre Devotion Male). Detalle: scratchpad/spain_activation.json.
 - Precios: comparados con precio de mercado de Google Shopping (referencias UE). 81 variantes bajadas al precio de mercado, siempre con ≥30% de margen sobre coste; ninguna subida. Verificadas las 81 en Shopify. Precios antiguos en docs/precios/auditoria_precios_2210.csv (columna price) para poder deshacer.
 - No tocados: 174 sin coste registrado, 27 donde bajar dejaría <30% margen, 23 con referencia sospechosa (otro tamaño).
+- Las 81 bajadas marcadas como oferta: compareAtPrice = precio anterior (precio tachado). Entran solas en la colección "Ofertas" (regla IS_PRICE_REDUCED; ahora 1.020 productos).
+- 13 borradores con "vender sin stock": cambiados a DENY (no se venden a 0), activados y publicados en Tienda + Google.
