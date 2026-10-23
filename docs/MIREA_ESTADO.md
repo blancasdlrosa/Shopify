@@ -790,3 +790,15 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - Prueba de la nº 1 (Novedades) enviada a my.mireaskin@gmail.com (job 1cc17ae5f06040e8a5b1906c9caac692, en cola 11:14 UTC).
 - Las 6 campañas programadas con send_campaign a su fecha y hora (09:00 UTC = 10:00 Madrid): 28-10, 06-11, 11-11, 20-11, 25-11 y 04-12. Público: VU7PcQ + RtYDX3 + Uf2Bws. Klaviyo calcula los destinatarios justo antes del envío.
 - Para cancelar una: Klaviyo › Campañas › la campaña › "Cancelar programación" (vuelve a borrador).
+
+## 23-10 · Títulos de página (C) y revisión de reseñas
+
+- **Tema borrador nuevo:** "Mirea · títulos ES · BORRADOR" (209154441553), copia del tema publicado 209021272401.
+  - En `snippets/meta-tags.liquid` el título ya no dice `– tagged "…"` (ahora solo `– etiqueta`) y `Page N` pasa a `Página N`.
+  - Comprobado leyendo el archivo. **No publicado**: lo publica Blanca tras revisarlo.
+  - Ojo: si Blanca cambia algo en el tema publicado antes de publicar este, ese cambio no estará en la copia.
+- **Reseñas:** revisado Judge.me.
+  - Tiene 7 reseñas, todas de mireaskin.es (shop NgZYZoXW) y de productos del catálogo de Mirea. No hay reseñas de otras tiendas en Judge.me ni en los metacampos `reviews.*`.
+  - Las descripciones de producto revisadas (muestra de 50) no traen reseñas copiadas.
+  - Apps activas en el tema: Judge.me, Klaviyo, Google & YouTube (widget de tienda), Consentmo.
+  - Sin borrar nada. Pendiente: captura o enlace de Blanca para ver dónde las ve. Posibles orígenes: el widget de Google & YouTube, Google Shopping (allí Google junta valoraciones de todos los vendedores del mismo producto) o la app Shop.
