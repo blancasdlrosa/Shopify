@@ -802,3 +802,11 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
   - Las descripciones de producto revisadas (muestra de 50) no traen reseñas copiadas.
   - Apps activas en el tema: Judge.me, Klaviyo, Google & YouTube (widget de tienda), Consentmo.
   - Sin borrar nada. Pendiente: captura o enlace de Blanca para ver dónde las ve. Posibles orígenes: el widget de Google & YouTube, Google Shopping (allí Google junta valoraciones de todos los vendedores del mismo producto) o la app Shop.
+
+## 23-10 · Precio anterior "invertido" corregido (compareAtPrice ≤ precio)
+- Quitado el precio anterior (compareAtPrice → vacío) a **496 variantes / 377 productos** (156 activas, 340 en borrador; 137 tenían precio anterior = precio). No se ha tocado ningún precio. Las ofertas reales (precio anterior > precio, incluidas las 81 del 22-10) siguen igual: ahora hay 1.250 variantes con descuento real.
+- Por proveedor: Valquer® 131, TM 21, French Avenue 20, Solgar 18, Kuker Shop 18, EMANAR BEAUTY 14, OBA 13, Weye Line 10, Bharara 10, Paris Corner 10.
+- **158 son de Shopify Collective**, así que la sincronización del proveedor puede volver a ponerlo. Ya ha pasado: a las pocas horas, 10 variantes activas (MOOD Earplugs Mood Pro ×4 y 6 de Valquer®) tenían otra vez el precio anterior. Se han vuelto a limpiar, pero lo normal es que vuelva a pasar. Habría que pedírselo al proveedor o revisarlo cada semana.
+- Comprobado con una exportación completa (18.736 variantes): después de esa segunda limpieza no queda ninguna variante con precio anterior ≤ precio.
+- Aviso aparte: desde la copia del 22-10, 79 de estas variantes han cambiado de precio unos céntimos (TM, Kuker Shop, OBA, Lustrao…). No lo hemos cambiado nosotros; viene de la sincronización del proveedor.
+- Copia para deshacer: `docs/precios/compare_at_invertido_2210.csv` (valores antiguos).
