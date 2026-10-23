@@ -1,0 +1,66 @@
+{%- comment -%}
+  Mirea · Banner de aparatos de belleza en la home (13-10-2026).
+  Saca los productos de la colección elegida (por defecto aparatos-de-belleza = Eternas + Natcare).
+{%- endcomment -%}
+{%- assign c = collections[section.settings.coleccion] -%}
+{%- if c != blank and c.products_count > 0 -%}
+<section class="mha">
+  <div class="mha__box">
+    <div class="mha__copy">
+      <p class="mha__kicker">{{ section.settings.antetitulo }}</p>
+      <h2>{{ section.settings.titulo }}</h2>
+      <p class="mha__text">{{ section.settings.texto }}</p>
+      <div class="mha__ctas">
+        <a class="mha__cta" href="{{ c.url }}">{{ section.settings.boton }}</a>
+        {%- if collections['eternas'] != blank -%}<a class="mha__link" href="{{ collections['eternas'].url }}">Eternas</a>{%- endif -%}
+        {%- if collections['natcare'] != blank -%}<a class="mha__link" href="{{ collections['natcare'].url }}">Natcare</a>{%- endif -%}
+      </div>
+    </div>
+    <div class="mha__rail">
+      <div class="mcs-items">
+        {%- for p in c.products limit: section.settings.cuantos -%}
+          {%- render 'mirea-slide-card', p: p -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .mha{width:min(calc(100% - 40px),1400px);margin:28px auto 36px}
+  .mha__box{display:grid;grid-template-columns:minmax(260px,32%) 1fr;gap:clamp(20px,3vw,44px);align-items:center;min-height:clamp(440px,40vw,560px);padding:clamp(28px,4vw,56px);background:radial-gradient(circle at 85% 10%,rgba(201,143,159,.32),transparent 55%),#1f191c;color:#f7f0ea;border-radius:4px;box-sizing:border-box}
+  .mha__kicker{margin:0 0 14px;font-size:10.5px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:#d6b68c}
+  .mha h2{margin:0;font-family:"Cormorant Garamond","Iowan Old Style",Georgia,serif;font-weight:300;font-size:clamp(40px,5vw,78px);line-height:.95;letter-spacing:-.025em}
+  .mha h2 em{font-style:italic;color:#c98f9f}
+  .mha__text{margin:18px 0 0;max-width:360px;font-size:14.5px;line-height:1.65;opacity:.85}
+  .mha__ctas{display:flex;flex-wrap:wrap;align-items:center;gap:18px;margin-top:26px}
+  .mha__cta{display:inline-block;padding:15px 30px;border:1px solid #f7f0ea;color:#f7f0ea;font-size:11px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;text-decoration:none;transition:background .3s,color .3s}
+  .mha__cta:hover{background:#f7f0ea;color:#1f191c}
+  .mha__link{color:#f7f0ea;font-size:12px;letter-spacing:.14em;text-transform:uppercase;text-decoration:underline;text-underline-offset:4px;opacity:.85}
+  .mha__rail{min-width:0}
+  .mha .mcs-items{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x proximity;padding-bottom:6px;scrollbar-width:thin}
+  .mha .mcs-card{flex:0 0 clamp(170px,17vw,230px);scroll-snap-align:start;display:flex;flex-direction:column;gap:6px;color:inherit;text-decoration:none}
+  .mha .mcs-card__img{position:relative;display:block;aspect-ratio:1;background:#fff;overflow:hidden}
+  .mha .mcs-card__img img{width:100%;height:100%;object-fit:contain;padding:8%;box-sizing:border-box;transition:transform .6s}
+  .mha .mcs-card:hover .mcs-card__img img{transform:scale(1.05)}
+  .mha .mcs-card__badge{position:absolute;top:10px;left:10px;padding:4px 8px;background:#1f191c;color:#fff;font-size:10px;font-weight:600}
+  .mha .mcs-card__brand{margin-top:6px;font-size:9.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;opacity:.7}
+  .mha .mcs-card__title{font-size:13px;line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .mha .mcs-card__price{font-size:14px;font-weight:600}
+  .mha .mcs-card__price s{font-weight:400;opacity:.55;font-size:12px;margin-left:4px}
+  @media(max-width:749px){.mha{width:calc(100% - 24px)}.mha__box{grid-template-columns:1fr;min-height:0;padding:28px 20px}.mha__text{font-size:13.5px}}
+</style>
+{%- endif -%}
+{% schema %}
+{
+  "name": "Mirea · Aparatos (home)",
+  "settings": [
+    { "type": "text", "id": "antetitulo", "label": "Antetítulo", "default": "Tecnología de cabina, en casa" },
+    { "type": "text", "id": "titulo", "label": "Título", "default": "Aparatos LED y <em>radiofrecuencia</em>" },
+    { "type": "textarea", "id": "texto", "label": "Texto", "default": "Mascarillas LED, varitas con oro de 24K y aparatos faciales de Eternas y Natcare para cuidar tu piel en casa como en cabina." },
+    { "type": "text", "id": "boton", "label": "Botón", "default": "Ver todos los aparatos" },
+    { "type": "text", "id": "coleccion", "label": "Colección (handle)", "default": "aparatos-de-belleza" },
+    { "type": "range", "id": "cuantos", "label": "Productos", "min": 4, "max": 16, "step": 1, "default": 12 }
+  ],
+  "presets": [{ "name": "Mirea · Aparatos (home)" }]
+}
+{% endschema %}

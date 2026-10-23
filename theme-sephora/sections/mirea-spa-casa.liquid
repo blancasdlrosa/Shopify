@@ -1,0 +1,87 @@
+{%- comment -%} 15-10 Mirea: "Tu spa en casa" (idea Sephora): foto grande a la izquierda + carrusel de productos con etiqueta, botón Descubrir y barra de progreso. {%- endcomment -%}
+{%- assign msc_col = section.settings.coleccion -%}
+<section class="msc" id="msc-{{ section.id }}">
+  <div class="msc__wrap">
+    <div class="msc__head">
+      <div>
+        <h2>{{ section.settings.titulo }}</h2>
+        {%- if section.settings.texto != blank -%}<p>{{ section.settings.texto }}</p>{%- endif -%}
+      </div>
+      <a class="msc__all" href="{{ msc_col.url | default: '/collections/all' }}">Ver todo</a>
+    </div>
+    <div class="msc__grid{% if section.settings.imagen == blank %} msc__grid--solo{% endif %}">
+      {%- if section.settings.imagen != blank -%}
+        <a class="msc__foto" href="{{ msc_col.url | default: '/collections/all' }}">{{ section.settings.imagen | image_url: width: 1400 | image_tag: loading: 'lazy', sizes: '(min-width: 990px) 50vw, 100vw', alt: section.settings.titulo }}</a>
+      {%- endif -%}
+      <div class="msc__side">
+        <div class="msc__rail" data-msc-rail>
+          {%- for p in msc_col.products limit: section.settings.cuantos -%}
+            {%- if p.available -%}
+            <article class="msc__card">
+              <a class="msc__img" href="{{ p.url }}">
+                {%- if p.featured_image -%}{{ p.featured_image | image_url: width: 500 | image_tag: loading: 'lazy', alt: p.title }}{%- endif -%}
+                {%- if p.compare_at_price > p.price -%}
+                  {%- assign msc_pct = p.compare_at_price | minus: p.price | times: 100 | divided_by: p.compare_at_price -%}
+                  {%- if msc_pct >= 5 -%}<span class="msc__tag msc__tag--sale">-{{ msc_pct }} %</span>{%- endif -%}
+                {%- elsif section.settings.etiqueta != blank -%}<span class="msc__tag">{{ section.settings.etiqueta }}</span>{%- endif -%}
+              </a>
+              <p class="msc__brand">{{ p.vendor }}</p>
+              <a class="msc__name" href="{{ p.url }}">{{ p.title }}</a>
+              <p class="msc__price">{{ p.price | money }}{% if p.compare_at_price > p.price %} <s>{{ p.compare_at_price | money }}</s>{% endif %}</p>
+              <a class="msc__btn" href="{{ p.url }}">Descubrir</a>
+            </article>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+        <div class="msc__bar"><span data-msc-bar></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+#msc-{{ section.id }}{background:#fff;color:#1f191c;padding:48px 0}
+#msc-{{ section.id }} *{box-sizing:border-box}
+#msc-{{ section.id }} .msc__wrap{width:min(calc(100% - 32px),1280px);margin:0 auto}
+#msc-{{ section.id }} .msc__head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:22px}
+#msc-{{ section.id }} h2{margin:0;font-size:clamp(32px,3.6vw,50px);line-height:1.02}
+#msc-{{ section.id }} .msc__head p{margin:8px 0 0;font-size:16px;color:#4d4045}
+#msc-{{ section.id }} .msc__all{border:1.5px solid #1f191c;border-radius:6px;padding:9px 16px;color:#1f191c;font-weight:700;font-size:14px;text-decoration:none;white-space:nowrap}
+#msc-{{ section.id }} .msc__grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:24px;align-items:stretch}
+#msc-{{ section.id }} .msc__grid--solo{grid-template-columns:1fr}
+#msc-{{ section.id }} .msc__foto{position:relative;display:block;min-height:460px;border-radius:6px;overflow:hidden;background:#f4ece8}
+#msc-{{ section.id }} .msc__foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+#msc-{{ section.id }} .msc__side{min-width:0;display:flex;flex-direction:column;justify-content:space-between}
+#msc-{{ section.id }} .msc__rail{display:grid;grid-auto-flow:column;grid-auto-columns:calc(50% - 8px);gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:4px}
+#msc-{{ section.id }} .msc__grid--solo .msc__rail{grid-auto-columns:calc(25% - 12px)}
+#msc-{{ section.id }} .msc__rail::-webkit-scrollbar{display:none}
+#msc-{{ section.id }} .msc__card{scroll-snap-align:start;display:flex;flex-direction:column;gap:5px;border:1px solid #ece3df;border-radius:6px;padding:12px}
+#msc-{{ section.id }} .msc__img{position:relative;display:block;aspect-ratio:1/1;background:#fff;overflow:hidden}
+#msc-{{ section.id }} .msc__img img{width:100%;height:100%;object-fit:contain}
+#msc-{{ section.id }} .msc__tag{position:absolute;top:0;left:0;background:#1f191c;color:#fff;font-size:11px;font-weight:700;padding:4px 9px;border-radius:4px}
+#msc-{{ section.id }} .msc__tag--sale{background:#925b6d}
+#msc-{{ section.id }} .msc__brand{margin:6px 0 0;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+#msc-{{ section.id }} .msc__name{color:#1f191c;text-decoration:none;font-size:14px;line-height:1.35;min-height:2.7em;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+#msc-{{ section.id }} .msc__price{margin:0;font-weight:800;font-size:16px}
+#msc-{{ section.id }} .msc__price s{font-weight:400;color:#715b63;font-size:13px;margin-left:4px}
+#msc-{{ section.id }} .msc__btn{margin-top:auto;display:block;text-align:center;border:2px solid #1f191c;border-radius:6px;padding:10px;color:#1f191c;font-weight:700;text-decoration:none}
+#msc-{{ section.id }} .msc__btn:hover{background:#1f191c;color:#fff}
+#msc-{{ section.id }} .msc__bar{height:4px;background:#ece3df;border-radius:4px;margin-top:16px;overflow:hidden}
+#msc-{{ section.id }} .msc__bar span{display:block;height:100%;width:20%;background:#1f191c;border-radius:4px;transition:transform .15s linear}
+@media(max-width:989px){#msc-{{ section.id }} .msc__grid{grid-template-columns:1fr}#msc-{{ section.id }} .msc__foto{min-height:300px}#msc-{{ section.id }} .msc__grid--solo .msc__rail{grid-auto-columns:calc(45% - 8px)}}
+@media(max-width:560px){#msc-{{ section.id }} .msc__rail,#msc-{{ section.id }} .msc__grid--solo .msc__rail{grid-auto-columns:70%}#msc-{{ section.id }} .msc__head{flex-direction:column;align-items:flex-start}}
+</style>
+<script>
+(function(){var r=document.querySelector('#msc-{{ section.id }} [data-msc-rail]'),b=document.querySelector('#msc-{{ section.id }} [data-msc-bar]');if(!r||!b)return;
+function u(){var w=r.scrollWidth-r.clientWidth,f=r.clientWidth/r.scrollWidth;b.style.width=Math.max(f*100,12)+'%';var p=w>0?r.scrollLeft/w:0;b.style.transform='translateX('+(p*(100/Math.max(f,.12)-100))+'%)';}
+r.addEventListener('scroll',u,{passive:true});window.addEventListener('resize',u);u();})();
+</script>
+{% schema %}
+{"name":"Mirea · Foto + carrusel","tag":"section","settings":[
+{"type":"text","id":"titulo","label":"Título","default":"Tu spa en casa"},
+{"type":"text","id":"texto","label":"Texto","default":"Haz una pausa y cuida tu piel con aparatos y tratamientos de cabina."},
+{"type":"image_picker","id":"imagen","label":"Foto grande (opcional)"},
+{"type":"collection","id":"coleccion","label":"Colección"},
+{"type":"text","id":"etiqueta","label":"Etiqueta en los productos","default":"Novedad"},
+{"type":"range","id":"cuantos","label":"Cuántos productos","min":4,"max":20,"step":1,"default":12}],
+"presets":[{"name":"Mirea · Foto + carrusel"}]}
+{% endschema %}

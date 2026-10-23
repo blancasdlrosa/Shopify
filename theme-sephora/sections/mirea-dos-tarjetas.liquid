@@ -1,0 +1,56 @@
+{%- comment -%} 15-10 Mirea: dos tarjetas de novedad (idea Sephora "Novedad Dior / rhode"): foto a la izquierda, título, texto y botón. Si no hay foto, usa la del primer producto de la colección. {%- endcomment -%}
+<section class="mdt" id="mdt-{{ section.id }}">
+  <div class="mdt__wrap">
+    {%- for block in section.blocks -%}
+      {%- assign mdt_col = block.settings.coleccion -%}
+      {%- assign mdt_url = block.settings.enlace | default: mdt_col.url | default: '/collections/all' -%}
+      <article class="mdt__card" {{ block.shopify_attributes }}>
+        <a class="mdt__img" href="{{ mdt_url }}">
+          {%- if block.settings.imagen != blank -%}
+            {{ block.settings.imagen | image_url: width: 800 | image_tag: loading: 'lazy', alt: block.settings.titulo }}
+          {%- elsif mdt_col.products.first.featured_image -%}
+            {{ mdt_col.products.first.featured_image | image_url: width: 800 | image_tag: loading: 'lazy', alt: block.settings.titulo, class: 'mdt__prod' }}
+          {%- endif -%}
+          {%- if block.settings.etiqueta != blank -%}<span class="mdt__tag">{{ block.settings.etiqueta }}</span>{%- endif -%}
+        </a>
+        <div class="mdt__body">
+          <h3>{{ block.settings.titulo }}</h3>
+          <p>{{ block.settings.texto }}</p>
+          <a class="mdt__btn" href="{{ mdt_url }}">{{ block.settings.boton }}</a>
+          {%- if block.settings.nota != blank -%}<small>{{ block.settings.nota }}</small>{%- endif -%}
+        </div>
+      </article>
+    {%- endfor -%}
+  </div>
+</section>
+<style>
+#mdt-{{ section.id }}{background:#fff;padding:28px 0}
+#mdt-{{ section.id }} *{box-sizing:border-box}
+#mdt-{{ section.id }} .mdt__wrap{width:min(calc(100% - 32px),1280px);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:24px}
+#mdt-{{ section.id }} .mdt__card{display:grid;grid-template-columns:46% 1fr;border:1px solid #e8dcd8;border-radius:6px;overflow:hidden;background:#fff;min-height:260px}
+#mdt-{{ section.id }} .mdt__img{position:relative;display:block;background:#faf6f4;overflow:hidden}
+#mdt-{{ section.id }} .mdt__img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+#mdt-{{ section.id }} .mdt__img img.mdt__prod{object-fit:contain;padding:18px;background:#fff}
+#mdt-{{ section.id }} .mdt__tag{position:absolute;top:12px;left:12px;background:#925b6d;color:#fff;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:5px 10px;border-radius:999px}
+#mdt-{{ section.id }} .mdt__body{display:flex;flex-direction:column;justify-content:center;gap:10px;padding:24px}
+#mdt-{{ section.id }} h3{margin:0;font-size:26px;line-height:1.1;color:#1f191c}
+#mdt-{{ section.id }} p{margin:0;font-size:15px;line-height:1.5;color:#4d4045}
+#mdt-{{ section.id }} .mdt__btn{margin-top:8px;display:block;text-align:center;border:2px solid #1f191c;border-radius:6px;padding:12px;color:#1f191c;font-weight:700;text-decoration:none}
+#mdt-{{ section.id }} .mdt__btn:hover{background:#1f191c;color:#fff}
+#mdt-{{ section.id }} small{font-size:11.5px;color:#715b63}
+@media(max-width:989px){#mdt-{{ section.id }} .mdt__wrap{grid-template-columns:1fr}}
+@media(max-width:560px){#mdt-{{ section.id }} .mdt__card{grid-template-columns:1fr}#mdt-{{ section.id }} .mdt__img{height:240px}}
+</style>
+{% schema %}
+{"name":"Mirea · Dos tarjetas","tag":"section","settings":[],
+"blocks":[{"type":"tarjeta","name":"Tarjeta","limit":4,"settings":[
+{"type":"image_picker","id":"imagen","label":"Foto (opcional)"},
+{"type":"collection","id":"coleccion","label":"Colección"},
+{"type":"text","id":"etiqueta","label":"Etiqueta","default":"Nuevo"},
+{"type":"text","id":"titulo","label":"Título","default":"Novedad"},
+{"type":"textarea","id":"texto","label":"Texto"},
+{"type":"text","id":"boton","label":"Botón","default":"Descubrir"},
+{"type":"url","id":"enlace","label":"Enlace (si no, la colección)"},
+{"type":"text","id":"nota","label":"Nota pequeña"}]}],
+"presets":[{"name":"Mirea · Dos tarjetas"}]}
+{% endschema %}

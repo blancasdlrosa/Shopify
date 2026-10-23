@@ -1,0 +1,50 @@
+{%- comment -%} Mirea · Banner editorial de lujo (borrador 13-10-2026). Foto a todo ancho con titular serif. {%- endcomment -%}
+{%- assign img = section.settings.image -%}
+{%- assign img_alt = section.settings.title | strip_html -%}
+<section class="mbl mbl--{{ section.settings.align }}" style="--mbl-h:{{ section.settings.height }}vh">
+  <div class="mbl__media">
+    {%- if img != blank -%}
+      {{ img | image_url: width: 2400 | image_tag: loading: 'lazy', sizes: '100vw', widths: '750,1100,1500,2000,2400', alt: img_alt, style: section.settings.focal }}
+    {%- endif -%}
+  </div>
+  <div class="mbl__veil" aria-hidden="true"></div>
+  <div class="mbl__text">
+    {%- if section.settings.eyebrow != blank -%}<p class="mbl__eyebrow">{{ section.settings.eyebrow | escape }}</p>{%- endif -%}
+    <h2 class="mbl__title">{{ section.settings.title }}</h2>
+    {%- if section.settings.text != blank -%}<p class="mbl__copy">{{ section.settings.text | escape }}</p>{%- endif -%}
+    {%- if section.settings.button != blank -%}<a class="mbl__btn" href="{{ section.settings.link | default: '/collections/piel' }}">{{ section.settings.button | escape }}</a>{%- endif -%}
+  </div>
+</section>
+<style>
+  .mbl{position:relative;min-height:max(460px,var(--mbl-h));display:flex;align-items:flex-end;overflow:hidden;background:#2a2124;color:#fff;isolation:isolate}
+  .mbl__media{position:absolute;inset:0;z-index:-2}
+  .mbl__media img{width:100%;height:100%;object-fit:cover;transform:scale(1.04);transition:transform 2.4s cubic-bezier(.2,.7,.2,1)}
+  .mbl:hover .mbl__media img{transform:scale(1)}
+  .mbl__veil{position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(20,15,17,0) 35%,rgba(20,15,17,.62) 100%)}
+  .mbl__text{width:min(calc(100% - 40px),1240px);margin:0 auto;padding:clamp(40px,7vw,96px) 0}
+  .mbl--center .mbl__text{text-align:center;display:flex;flex-direction:column;align-items:center}
+  .mbl__eyebrow{margin:0 0 16px;font-size:10.5px;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:rgba(255,255,255,.82)}
+  .mbl__title{margin:0;max-width:16ch;font-family:"Cormorant Garamond","Iowan Old Style",Georgia,serif;font-weight:300;font-size:clamp(46px,7.4vw,112px);line-height:.94;letter-spacing:-.025em;color:#fff}
+  .mbl__title em{font-style:italic;font-weight:300;color:#f1d6dd}
+  .mbl__copy{max-width:460px;margin:22px 0 0;font-size:15px;line-height:1.7;color:rgba(255,255,255,.86)}
+  .mbl__btn{display:inline-block;margin-top:30px;padding:17px 34px;border:1px solid rgba(255,255,255,.9);color:#fff;font-size:11px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;text-decoration:none;transition:background .35s,color .35s}
+  .mbl__btn:hover{background:#fff;color:#1f191c}
+  @media(max-width:749px){.mbl{min-height:78vh}.mbl__text{width:calc(100% - 32px)}}
+  @media(prefers-reduced-motion:reduce){.mbl__media img{transition:none;transform:none}}
+</style>
+{% schema %}
+{
+  "name": "Mirea · Banner lujo",
+  "settings": [
+    { "type": "image_picker", "id": "image", "label": "Foto" },
+    { "type": "text", "id": "focal", "label": "Encuadre (CSS)", "default": "object-position:center" },
+    { "type": "text", "id": "eyebrow", "label": "Antetítulo", "default": "COLECCIÓN MIREA" },
+    { "type": "text", "id": "title", "label": "Titular (admite <em>)", "default": "El cuidado, <em>sin prisa.</em>" },
+    { "type": "text", "id": "text", "label": "Texto" },
+    { "type": "text", "id": "button", "label": "Botón", "default": "Descubrir" },
+    { "type": "url", "id": "link", "label": "Enlace" },
+    { "type": "select", "id": "align", "label": "Alineación", "default": "left", "options": [ { "value": "left", "label": "Izquierda" }, { "value": "center", "label": "Centro" } ] },
+    { "type": "range", "id": "height", "label": "Alto (% pantalla)", "min": 50, "max": 100, "step": 5, "unit": "vh", "default": 85 }
+  ]
+}
+{% endschema %}

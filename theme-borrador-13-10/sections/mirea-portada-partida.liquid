@@ -1,0 +1,106 @@
+{%- comment -%} 15-10 Mirea: portada partida tipo MiiN: foto grande a la izquierda + carrusel de packs con etiqueta de descuento real. {%- endcomment -%}
+{%- assign mpp_col = collections[section.settings.coleccion] -%}
+<section class="mpp" id="mpp-{{ section.id }}">
+  <div class="mpp__wrap">
+    <a class="mpp__foto" href="{{ section.settings.enlace }}">
+      {%- if section.settings.imagen != blank -%}
+        {{ section.settings.imagen | image_url: width: 1400 | image_tag: loading: 'lazy', sizes: '(min-width: 990px) 50vw, 100vw', alt: section.settings.titulo }}
+      {%- endif -%}
+      <span class="mpp__txt">
+        <span class="mpp__ante">{{ section.settings.antetitulo }}</span>
+        <span class="mpp__tit">{{ section.settings.titulo }}</span>
+        <span class="mpp__btn">{{ section.settings.boton }} →</span>
+      </span>
+    </a>
+    <div class="mpp__lado">
+      <div class="mpp__cab">
+        <h2>{{ section.settings.titulo_packs }}</h2>
+        <a href="{{ mpp_col.url | default: section.settings.enlace }}">Ver todos</a>
+      </div>
+      <div class="mpp__rail">
+        {%- for p in mpp_col.products limit: section.settings.cuantos -%}
+          {%- if p.available -%}
+          <a class="mpp__card" href="{{ p.url }}">
+            <span class="mpp__img">
+              {%- assign mpp_es_pack = false -%}
+              {%- if p.handle contains 'pack-' and p.images.size >= 3 -%}{%- assign mpp_es_pack = true -%}{%- endif -%}
+              {%- if mpp_es_pack -%}
+                {% render 'mirea-pack-stage', product: p, link_product: false %}
+              {%- elsif p.featured_image -%}{{ p.featured_image | image_url: width: 500 | image_tag: loading: 'lazy', alt: p.title }}{%- endif -%}
+              <span class="mpp__badges">
+                {%- if p.compare_at_price > p.price -%}
+                  {%- assign mpp_pct = p.compare_at_price | minus: p.price | times: 100 | divided_by: p.compare_at_price -%}
+                  {%- if mpp_pct >= 5 -%}<span class="mpp__pct">-{{ mpp_pct }} %</span>{%- endif -%}
+                {%- endif -%}
+                <span class="mpp__pack">Pack</span>
+              </span>
+            </span>
+            <span class="mpp__nom">{{ p.title }}</span>
+            <span class="mpp__pre">{{ p.price | money }}{% if p.compare_at_price > p.price %} <s>{{ p.compare_at_price | money }}</s>{% endif %}</span>
+          </a>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+#mpp-{{ section.id }}{background:#fff;color:#352b30;padding:56px 0}
+#mpp-{{ section.id }} *{box-sizing:border-box}
+#mpp-{{ section.id }} .mpp__wrap{width:min(calc(100% - 32px),1280px);margin:0 auto;display:grid;grid-template-columns:1.05fr 1fr;gap:28px;align-items:stretch}
+#mpp-{{ section.id }} .mpp__foto{position:relative;display:block;border-radius:22px;overflow:hidden;min-height:520px;background:#f4e5e2;color:#fff;text-decoration:none}
+#mpp-{{ section.id }} .mpp__foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s ease}
+#mpp-{{ section.id }} .mpp__foto:hover img{transform:scale(1.03)}
+#mpp-{{ section.id }} .mpp__txt{position:absolute;left:0;right:0;bottom:0;padding:34px;background:linear-gradient(transparent,rgba(31,25,28,.55));display:flex;flex-direction:column;gap:10px}
+#mpp-{{ section.id }} .mpp__ante{font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:600}
+#mpp-{{ section.id }} .mpp__tit{font-family:var(--font-heading--family);font-size:clamp(32px,3.6vw,52px);line-height:1.02}
+#mpp-{{ section.id }} .mpp__btn{align-self:flex-start;margin-top:6px;background:#fff;color:#352b30;border-radius:999px;padding:12px 22px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:600}
+#mpp-{{ section.id }} .mpp__lado{display:flex;flex-direction:column;min-width:0}
+#mpp-{{ section.id }} .mpp__cab{display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:18px}
+#mpp-{{ section.id }} .mpp__cab h2{margin:0;font-size:clamp(28px,3vw,42px);line-height:1.05}
+#mpp-{{ section.id }} .mpp__cab a{color:#925b6d;font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;white-space:nowrap;text-decoration:none;border-bottom:1px solid currentColor}
+#mpp-{{ section.id }} .mpp__rail{display:grid;grid-auto-flow:column;grid-auto-columns:calc(50% - 8px);grid-template-rows:auto auto;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px;scrollbar-width:thin}
+#mpp-{{ section.id }} .mpp__card{scroll-snap-align:start;display:flex;flex-direction:column;gap:6px;color:#352b30;text-decoration:none}
+#mpp-{{ section.id }} .mpp__img{position:relative;display:block;aspect-ratio:1/1;border-radius:16px;overflow:hidden;background:#fff}
+#mpp-{{ section.id }} .mpp__img img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+#mpp-{{ section.id }} .mpp__card:hover .mpp__img img{transform:scale(1.05)}
+#mpp-{{ section.id }} .mpp__img .mirea-pack-stage{height:100%;border:0;border-radius:16px;background:#fff;padding:8px;gap:6px}
+#mpp-{{ section.id }} .mpp__img .mirea-pack-stage__tile{background:#fff}
+#mpp-{{ section.id }} .mpp__img .mirea-pack-stage img{object-fit:contain}
+#mpp-{{ section.id }} .mpp__card:hover .mpp__img .mirea-pack-stage img{transform:none}
+#mpp-{{ section.id }} .mpp__badges{position:absolute;top:10px;left:10px;display:flex;flex-direction:column;gap:5px;align-items:flex-start}
+#mpp-{{ section.id }} .mpp__pct,#mpp-{{ section.id }} .mpp__pack{font-size:11px;font-weight:600;padding:4px 9px;border-radius:4px;letter-spacing:.04em}
+#mpp-{{ section.id }} .mpp__pct{background:#925b6d;color:#fff}
+#mpp-{{ section.id }} .mpp__pack{background:#f4e5e2;color:#352b30;text-transform:uppercase}
+#mpp-{{ section.id }} .mpp__nom{font-size:13px;line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+#mpp-{{ section.id }} .mpp__pre{font-size:13.5px;font-weight:600}
+#mpp-{{ section.id }} .mpp__pre s{color:#715b63;font-weight:400;margin-left:4px}
+@media(max-width:989px){
+  #mpp-{{ section.id }}{padding:36px 0}
+  #mpp-{{ section.id }} .mpp__wrap{grid-template-columns:1fr;gap:22px}
+  #mpp-{{ section.id }} .mpp__foto{min-height:420px}
+  #mpp-{{ section.id }} .mpp__rail{grid-template-rows:auto;grid-auto-columns:44%}
+}
+@media(max-width:560px){
+  #mpp-{{ section.id }} .mpp__foto{min-height:360px}
+  #mpp-{{ section.id }} .mpp__txt{padding:22px}
+  #mpp-{{ section.id }} .mpp__rail{grid-auto-columns:64%}
+}
+</style>
+{% schema %}
+{
+  "name": "Mirea · Portada partida",
+  "tag": "section",
+  "settings": [
+    {"type":"image_picker","id":"imagen","label":"Foto grande"},
+    {"type":"text","id":"antetitulo","label":"Antetítulo","default":"Rutinas completas"},
+    {"type":"text","id":"titulo","label":"Título sobre la foto","default":"Tu rutina, ya pensada."},
+    {"type":"text","id":"boton","label":"Botón","default":"Encuentra la tuya"},
+    {"type":"url","id":"enlace","label":"Enlace de la foto","default":"/collections/all"},
+    {"type":"text","id":"titulo_packs","label":"Título del carrusel","default":"Packs que ahorran"},
+    {"type":"collection","id":"coleccion","label":"Colección del carrusel"},
+    {"type":"range","id":"cuantos","label":"Cuántos productos","min":4,"max":16,"step":1,"default":10}
+  ],
+  "presets": [{"name":"Mirea · Portada partida"}]
+}
+{% endschema %}

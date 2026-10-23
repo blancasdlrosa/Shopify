@@ -1,0 +1,119 @@
+{%- comment -%} 15-10 Mirea: "Compra por categoría" con portada grande de cada cosa (perfumes, cabello, piel…). Foto propia o, si no hay, la de la colección o su primer producto. Sale solo en las colecciones indicadas (o en todas si se deja vacío). {%- endcomment -%}
+{%- liquid
+  assign mcp_show = true
+  if section.settings.solo_en != blank and collection
+    assign mcp_list = section.settings.solo_en | remove: ' ' | split: ','
+    unless mcp_list contains collection.handle
+      assign mcp_show = false
+    endunless
+  endif
+-%}
+{%- if mcp_show -%}
+<section class="mcp" id="mcp-{{ section.id }}" style="--mcp-cols:{{ section.settings.columnas | default: 8 }}">
+  <div class="mcp__wrap">
+    {%- comment -%} 16-10: si estás dentro de una de estas secciones, su título sale grande arriba y su tarjeta queda marcada {%- endcomment -%}
+    {%- liquid
+      assign mcp_act = ''
+      assign mcp_here = '/collections/' | append: collection.handle
+      for block in section.blocks
+        assign b_url = block.settings.enlace | default: block.settings.coleccion.url
+        if collection and b_url == mcp_here
+          assign mcp_act = block.settings.titulo | default: block.settings.coleccion.title
+        endif
+      endfor
+      assign mcp_parent = section.settings.solo_en | remove: ' ' | split: ',' | first
+    -%}
+    <div class="mcp__head">
+      {%- if section.settings.antetitulo != blank -%}<p class="mcp__ante">{{ section.settings.antetitulo }}</p>{%- endif -%}
+      {%- if mcp_act != '' -%}
+        <h2>{{ mcp_act }}</h2>
+        {%- if mcp_parent != blank and collection.handle != mcp_parent -%}<a class="mcp__back" href="/collections/{{ mcp_parent }}">← Ver todas las secciones</a>{%- endif -%}
+      {%- else -%}
+        <h2>{{ section.settings.titulo }}</h2>
+      {%- endif -%}
+      {%- if section.settings.envio != blank -%}<span class="mcp__envio">🚚 {{ section.settings.envio }}</span>{%- endif -%}
+    </div>
+    <div class="mcp__grid">
+      {%- for block in section.blocks -%}
+        {%- assign mcp_col = block.settings.coleccion -%}
+        {%- assign mcp_url = block.settings.enlace | default: mcp_col.url | default: '/collections/all' -%}
+        {%- assign mcp_tit = block.settings.titulo | default: mcp_col.title -%}
+        <a class="mcp__tile{% if mcp_url == mcp_here %} is-active{% endif %}" href="{{ mcp_url }}"{% if mcp_url == mcp_here %} aria-current="page"{% endif %} {{ block.shopify_attributes }}>
+          <span class="mcp__img">
+            {%- comment -%} 18-10: foto propia > producto elegido (si está disponible) > foto de la colección > primer producto disponible {%- endcomment -%}
+            {%- liquid
+              assign mcp_p = block.settings.producto
+              if mcp_p != blank and mcp_p.available == false
+                assign mcp_p = nil
+              endif
+              if mcp_p == blank and mcp_col.image == blank
+                for cp in mcp_col.products limit: 12
+                  if cp.available and cp.featured_image
+                    assign mcp_p = cp
+                    break
+                  endif
+                endfor
+              endif
+            -%}
+            {%- if block.settings.imagen != blank -%}
+              {{ block.settings.imagen | image_url: width: 900 | image_tag: loading: 'lazy', sizes: '(min-width: 990px) 25vw, 50vw', alt: mcp_tit }}
+            {%- elsif block.settings.producto != blank and mcp_p != blank -%}
+              {{ mcp_p.featured_image | image_url: width: 700 | image_tag: loading: 'lazy', alt: mcp_tit, class: 'mcp__prod' }}
+            {%- elsif mcp_col.image -%}
+              {{ mcp_col.image | image_url: width: 900 | image_tag: loading: 'lazy', sizes: '(min-width: 990px) 25vw, 50vw', alt: mcp_tit }}
+            {%- elsif mcp_p != blank -%}
+              {{ mcp_p.featured_image | image_url: width: 700 | image_tag: loading: 'lazy', alt: mcp_tit, class: 'mcp__prod' }}
+            {%- endif -%}
+          </span>
+          <span class="mcp__txt">
+            <strong>{{ mcp_tit }}</strong>
+            {%- if block.settings.texto != blank -%}<span>{{ block.settings.texto }}</span>{%- endif -%}
+            <em>Ver {{ mcp_tit | downcase }} →</em>
+          </span>
+        </a>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+<style>
+#mcp-{{ section.id }}{background:#fff;color:#1f191c;padding:18px 0 22px}
+#mcp-{{ section.id }} *{box-sizing:border-box}
+#mcp-{{ section.id }} .mcp__wrap{width:min(calc(100% - 40px),1400px);margin:0 auto}
+#mcp-{{ section.id }} .mcp__head{margin-bottom:14px;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+#mcp-{{ section.id }} .mcp__ante{margin:0 0 8px;font-size:10.5px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:#8f5d6c}
+#mcp-{{ section.id }} h2{margin:0;font-family:"Cormorant Garamond","Iowan Old Style",Georgia,serif;font-weight:400;font-size:clamp(26px,2.6vw,36px);line-height:1}
+#mcp-{{ section.id }} .mcp__grid{display:grid;grid-template-columns:repeat(var(--mcp-cols,8),minmax(0,1fr));gap:12px}
+#mcp-{{ section.id }} .mcp__tile{display:flex;flex-direction:column;color:#1f191c;text-decoration:none}
+#mcp-{{ section.id }} .mcp__img{position:relative;display:block;aspect-ratio:1/1;overflow:hidden;background:#f6efec;border-radius:16px}
+#mcp-{{ section.id }} .mcp__img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s ease}
+#mcp-{{ section.id }} .mcp__img img.mcp__prod{object-fit:contain;padding:12%;background:#fff}
+#mcp-{{ section.id }} .mcp__tile:hover .mcp__img img{transform:scale(1.04)}
+#mcp-{{ section.id }} .mcp__txt{display:flex;flex-direction:column;gap:2px;padding:8px 2px 0;text-align:center}
+#mcp-{{ section.id }} .mcp__txt strong{font-size:14.5px;font-weight:600;line-height:1.2}
+#mcp-{{ section.id }} .mcp__txt span{display:none}
+#mcp-{{ section.id }} .mcp__txt em{display:none}
+#mcp-{{ section.id }} .mcp__back{font-size:13px;font-weight:600;color:#8f5d6c;text-decoration:none}
+#mcp-{{ section.id }} .mcp__back:hover{text-decoration:underline}
+#mcp-{{ section.id }} .mcp__tile.is-active .mcp__img{box-shadow:0 0 0 3px #fff,0 0 0 5px #1f191c}
+#mcp-{{ section.id }} .mcp__tile.is-active .mcp__txt strong{text-decoration:underline;text-underline-offset:4px}
+#mcp-{{ section.id }} .mcp__envio{display:inline-flex;align-items:center;gap:6px;background:#eaf6ee;color:#2f6b45;border-radius:999px;padding:5px 12px;font-size:12px;font-weight:600}
+@media(max-width:989px){#mcp-{{ section.id }} .mcp__grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:749px){#mcp-{{ section.id }} .mcp__wrap{width:calc(100% - 24px)}#mcp-{{ section.id }} .mcp__grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}#mcp-{{ section.id }} .mcp__txt strong{font-size:12px}}
+</style>
+{%- endif -%}
+{% schema %}
+{"name":"Mirea · Categorías","tag":"section","settings":[
+{"type":"text","id":"antetitulo","label":"Antetítulo","default":"Compra por categoría"},
+{"type":"text","id":"titulo","label":"Título","default":"¿Qué buscas hoy?"},
+{"type":"text","id":"envio","label":"Etiqueta de envío","default":"Envío rápido desde España"},
+{"type":"range","id":"columnas","label":"Columnas en ordenador","min":3,"max":8,"step":1,"default":8},
+{"type":"text","id":"solo_en","label":"Solo en estas colecciones (separadas por coma; vacío = todas)","default":"desde-espana"}],
+"blocks":[{"type":"categoria","name":"Categoría","settings":[
+{"type":"image_picker","id":"imagen","label":"Foto de portada (opcional)"},
+{"type":"collection","id":"coleccion","label":"Colección"},
+{"type":"product","id":"producto","label":"Producto para la foto (opcional)"},
+{"type":"text","id":"titulo","label":"Título (si no, el de la colección)"},
+{"type":"text","id":"texto","label":"Texto corto"},
+{"type":"url","id":"enlace","label":"Enlace (si no, la colección)"}]}],
+"presets":[{"name":"Mirea · Categorías"}]}
+{% endschema %}

@@ -1,0 +1,143 @@
+{%- comment -%}
+  17-10 Mirea · "Tienda por origen" para la portada: un bloque "Desde Corea" y otro "Desde España".
+  Pestañas por sección (Piel, Maquillaje, Cabello…) con productos a la vista y "Ver todo".
+  - Cada pestaña = una colección. Si se pone "Solo productos con la etiqueta", solo salen los que la tienen
+    (p. ej. "Envío: Corea") y el "Ver todo" lleva a la colección filtrada por esa etiqueta.
+  - No muestra productos agotados.
+  18-10: ids de pestañas con section.id (Corea y España tenían los mismos y las pestañas de España no abrían).
+{%- endcomment -%}
+{%- liquid
+  assign ot_tag = section.settings.etiqueta | strip
+  assign ot_tag_handle = ot_tag | handleize
+  assign ot_n = section.settings.cuantos | default: 10
+-%}
+<section class="mot" id="mot-{{ section.id }}" style="--mot-bg:{{ section.settings.fondo }};--mot-acc:{{ section.settings.acento }}">
+  <div class="mot__wrap">
+    <div class="mot__head">
+      <div>
+        {%- if section.settings.antetitulo != blank -%}<p class="mot__ante">{{ section.settings.antetitulo }}</p>{%- endif -%}
+        <h2 class="mot__title">{{ section.settings.titulo }}</h2>
+        {%- if section.settings.texto != blank -%}<p class="mot__txt">{{ section.settings.texto }}</p>{%- endif -%}
+      </div>
+      <div class="mot__headr">
+        {%- if section.settings.sello != blank -%}<span class="mot__sello">{{ section.settings.sello }}</span>{%- endif -%}
+        {%- if section.settings.enlace != blank -%}<a class="mot__all" href="{{ section.settings.enlace }}">{{ section.settings.texto_enlace | default: 'Ver todo' }} →</a>{%- endif -%}
+      </div>
+    </div>
+
+    <div class="mot__tabs" role="tablist" aria-label="{{ section.settings.titulo | escape }}">
+      {%- for block in section.blocks -%}
+        {%- assign c = block.settings.coleccion -%}
+        {%- if c == blank -%}{%- continue -%}{%- endif -%}
+        {%- assign t_img = block.settings.imagen | default: c.image | default: c.products.first.featured_image -%}
+        <button type="button" class="mot__tab" role="tab" id="mot-tab-{{ section.id }}-{{ block.id }}" aria-controls="mot-p-{{ section.id }}-{{ block.id }}" aria-selected="{% if forloop.first %}true{% else %}false{% endif %}" {{ block.shopify_attributes }}>
+          <span class="mot__timg">{%- if t_img -%}{{ t_img | image_url: width: 120 | image_tag: loading: 'lazy', alt: '' }}{%- endif -%}</span>
+          <span>{{ block.settings.titulo | default: c.title }}</span>
+        </button>
+      {%- endfor -%}
+    </div>
+
+    {%- for block in section.blocks -%}
+      {%- assign c = block.settings.coleccion -%}
+      {%- if c == blank -%}{%- continue -%}{%- endif -%}
+      {%- liquid
+        assign b_tit = block.settings.titulo | default: c.title
+        assign b_url = c.url
+        if ot_tag != blank
+          assign b_url = c.url | append: '/' | append: ot_tag_handle
+        endif
+        if block.settings.enlace != blank
+          assign b_url = block.settings.enlace
+        endif
+        assign shown = 0
+      -%}
+      <div class="mot__panel" role="tabpanel" id="mot-p-{{ section.id }}-{{ block.id }}" aria-labelledby="mot-tab-{{ section.id }}-{{ block.id }}"{% unless forloop.first %} hidden{% endunless %}>
+        <ul class="mot__grid list-unstyled">
+          {%- for p in c.products -%}
+            {%- if p.available == false -%}{%- continue -%}{%- endif -%}
+            {%- if ot_tag != blank -%}{%- unless p.tags contains ot_tag -%}{%- continue -%}{%- endunless -%}{%- endif -%}
+            {%- if section.settings.excluir != blank and p.tags contains section.settings.excluir -%}{%- continue -%}{%- endif -%}
+            {%- assign shown = shown | plus: 1 -%}
+            <li class="mot__card">
+              <a href="{{ p.url }}" class="mot__plink">
+                <span class="mot__pimg">
+                  {%- if p.featured_image -%}{{ p.featured_image | image_url: width: 480 | image_tag: loading: 'lazy', alt: p.title, sizes: '(min-width: 990px) 18vw, 45vw' }}{%- endif -%}
+                  {%- if p.compare_at_price > p.price -%}<span class="mot__off">-{{ p.compare_at_price | minus: p.price | times: 100 | divided_by: p.compare_at_price }}%</span>{%- endif -%}
+                </span>
+                <span class="mot__vendor">{{ p.vendor }}</span>
+                <span class="mot__ptit">{{ p.title }}</span>
+                <span class="mot__price">{{ p.price | money }}{%- if p.compare_at_price > p.price -%} <s>{{ p.compare_at_price | money }}</s>{%- endif -%}</span>
+              </a>
+            </li>
+            {%- if shown >= ot_n -%}{%- break -%}{%- endif -%}
+          {%- endfor -%}
+        </ul>
+        {%- if shown == 0 -%}<p class="mot__empty">Estamos preparando esta sección. <a href="{{ b_url }}">Ver {{ b_tit | downcase }}</a></p>{%- endif -%}
+        <div class="mot__more"><a class="mot__btn" href="{{ b_url }}">Ver todo {{ b_tit | downcase }}</a></div>
+      </div>
+    {%- endfor -%}
+  </div>
+</section>
+<script>
+(function(){var r=document.getElementById('mot-{{ section.id }}');if(!r)return;
+r.querySelectorAll('.mot__tab').forEach(function(t){t.addEventListener('click',function(){
+r.querySelectorAll('.mot__tab').forEach(function(x){x.setAttribute('aria-selected','false')});
+r.querySelectorAll('.mot__panel').forEach(function(p){p.hidden=true});
+t.setAttribute('aria-selected','true');var p=r.querySelector('[id="'+t.getAttribute('aria-controls')+'"]');if(p)p.hidden=false;});});})();
+</script>
+<style>
+#mot-{{ section.id }}{background:var(--mot-bg,#fff);color:#1f191c;padding:{{ section.settings.espacio_arriba }}px 0 {{ section.settings.espacio_abajo }}px}
+#mot-{{ section.id }} *{box-sizing:border-box}
+#mot-{{ section.id }} .mot__wrap{width:min(calc(100% - 40px),1280px);margin:0 auto}
+#mot-{{ section.id }} .mot__head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:18px}
+#mot-{{ section.id }} .mot__ante{margin:0 0 8px;font-size:10.5px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--mot-acc,#8f5d6c)}
+#mot-{{ section.id }} .mot__title{margin:0;font-family:"Cormorant Garamond","Iowan Old Style",Georgia,serif;font-weight:400;font-size:clamp(30px,3.2vw,46px);line-height:1}
+#mot-{{ section.id }} .mot__txt{margin:8px 0 0;font-size:14px;color:#715b63;max-width:560px}
+#mot-{{ section.id }} .mot__headr{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+#mot-{{ section.id }} .mot__sello{font-size:12.5px;font-weight:600;border-radius:999px;padding:6px 12px;background:#fff;border:1px solid #eadcd8}
+#mot-{{ section.id }} .mot__all{font-size:13.5px;font-weight:600;color:#1f191c;text-decoration:underline;text-underline-offset:4px}
+#mot-{{ section.id }} .mot__tabs{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 14px;scrollbar-width:none}
+#mot-{{ section.id }} .mot__tabs::-webkit-scrollbar{display:none}
+#mot-{{ section.id }} .mot__tab{flex:0 0 auto;display:inline-flex;align-items:center;gap:8px;padding:5px 14px 5px 5px;border:1px solid #eadcd8;border-radius:999px;background:#fff;color:#1f191c;font:inherit;font-size:13.5px;font-weight:600;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+#mot-{{ section.id }} .mot__tab[aria-selected="true"]{background:#1f191c;color:#fff;border-color:#1f191c}
+#mot-{{ section.id }} .mot__timg{width:32px;height:32px;border-radius:50%;overflow:hidden;background:#f6efec;display:block;flex:0 0 32px}
+#mot-{{ section.id }} .mot__timg img{width:100%;height:100%;object-fit:cover;display:block}
+#mot-{{ section.id }} .mot__grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px 14px;margin:0;padding:0}
+#mot-{{ section.id }} .mot__plink{display:flex;flex-direction:column;gap:4px;color:#1f191c;text-decoration:none}
+#mot-{{ section.id }} .mot__pimg{position:relative;display:block;aspect-ratio:1/1;background:#fff;border:1px solid #f0e6e3;border-radius:14px;overflow:hidden;margin-bottom:6px}
+#mot-{{ section.id }} .mot__pimg img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:8%;transition:transform .5s}
+#mot-{{ section.id }} .mot__plink:hover .mot__pimg img{transform:scale(1.05)}
+#mot-{{ section.id }} .mot__off{position:absolute;top:8px;left:8px;background:#b5455f;color:#fff;font-size:11px;font-weight:700;border-radius:999px;padding:3px 8px}
+#mot-{{ section.id }} .mot__vendor{font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#715b63}
+#mot-{{ section.id }} .mot__ptit{font-size:13.5px;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.6em}
+#mot-{{ section.id }} .mot__price{font-size:14px;font-weight:600}
+#mot-{{ section.id }} .mot__price s{font-weight:400;color:#9b8a90;font-size:12.5px;margin-left:4px}
+#mot-{{ section.id }} .mot__empty{font-size:14px;color:#715b63}
+#mot-{{ section.id }} .mot__more{display:flex;justify-content:center;margin-top:20px}
+#mot-{{ section.id }} .mot__btn{display:inline-block;padding:12px 26px;border-radius:999px;background:#1f191c;color:#fff;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;text-decoration:none}
+#mot-{{ section.id }} .mot__btn:hover{background:var(--mot-acc,#8f5d6c)}
+@media(max-width:989px){#mot-{{ section.id }} .mot__grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:749px){#mot-{{ section.id }} .mot__wrap{width:calc(100% - 24px)}#mot-{{ section.id }} .mot__grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;padding-bottom:6px}#mot-{{ section.id }} .mot__card{flex:0 0 44%;scroll-snap-align:start}}
+</style>
+{% schema %}
+{"name":"Mirea · Tienda por origen","tag":"section","settings":[
+{"type":"text","id":"antetitulo","label":"Antetítulo","default":"Desde Corea"},
+{"type":"text","id":"titulo","label":"Título","default":"K-beauty original de Corea"},
+{"type":"text","id":"texto","label":"Texto"},
+{"type":"text","id":"sello","label":"Sello (p. ej. Envío rápido desde España)"},
+{"type":"url","id":"enlace","label":"Enlace Ver todo"},
+{"type":"text","id":"texto_enlace","label":"Texto del enlace","default":"Ver todo"},
+{"type":"text","id":"etiqueta","label":"Solo productos con la etiqueta (opcional)"},
+{"type":"text","id":"excluir","label":"Ocultar productos con la etiqueta (opcional)"},
+{"type":"range","id":"cuantos","label":"Productos por pestaña","min":5,"max":20,"step":5,"default":10},
+{"type":"color","id":"fondo","label":"Fondo","default":"#ffffff"},
+{"type":"color","id":"acento","label":"Acento","default":"#8f5d6c"},
+{"type":"range","id":"espacio_arriba","label":"Espacio arriba","min":0,"max":100,"step":5,"default":45},
+{"type":"range","id":"espacio_abajo","label":"Espacio abajo","min":0,"max":100,"step":5,"default":45}],
+"blocks":[{"type":"seccion","name":"Pestaña","settings":[
+{"type":"collection","id":"coleccion","label":"Colección"},
+{"type":"text","id":"titulo","label":"Nombre (si no, el de la colección)"},
+{"type":"image_picker","id":"imagen","label":"Foto pequeña (opcional)"},
+{"type":"url","id":"enlace","label":"Enlace Ver todo (opcional)"}]}],
+"presets":[{"name":"Mirea · Tienda por origen"}]}
+{% endschema %}

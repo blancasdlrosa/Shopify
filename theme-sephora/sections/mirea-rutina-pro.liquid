@@ -1,0 +1,407 @@
+{%- comment -%}
+  17-10 Mirea: Completa tu rutina
+  Sustituye a la v9 (imprescindibles fijos). Ahora es dinámica:
+  1) Paso del producto actual SOLO por etiquetas:
+     "Paso: Limpiar" (1) · "Paso: Tratar" (2) · "Paso: Hidratar" (3) · "Paso: Proteger" (4).
+     Si no tiene "Paso: …", se miran las etiquetas de categoría: limpieza (1) · serums / tonicos-y-esencias (2)
+     · hidratantes (3) · proteccion-solar / solar (4). Si tiene otro "Paso: …" (Cuerpo, Maquillaje, Labios,
+     Tecnología…) o no se detecta nada, la sección NO se muestra.
+  2) Sugiere un producto por cada paso que falta (máx. 3), en este orden de preferencia:
+     a) misma marca (colección de la marca, por handle del vendor) y mismo origen de envío
+     b) más vendidos del paso (limpiadores · serums-y-ampollas · hidratantes · proteccion-solar), mismo origen
+     c) si el producto sale de España: más vendidos de desde-espana-piel, mismo origen
+     d) si no se marca "Solo mismo origen": misma marca y luego más vendidos, cualquier origen
+     Paso de cada candidato: etiqueta "Paso: …" > etiqueta de categoría > tipo de producto
+     (mismos tipos que las colecciones automáticas de la tienda). En las colecciones de paso basta con estar dentro,
+     salvo que el producto tenga un "Paso: …" distinto.
+  3) Solo disponibles, nunca el producto actual, sin duplicados.
+  Origen: misma regla que snippets/mirea-origen (es · kr · pr = proveedor Collective fuera de España).
+{%- endcomment -%}
+{%- liquid
+  assign p = product
+  assign mio = 0
+  if p != blank and p.selected_or_first_available_variant.requires_shipping
+    assign ptj = p.tags | join: '|'
+    if p.tags contains 'Paso: Limpiar'
+      assign mio = 1
+    elsif p.tags contains 'Paso: Tratar'
+      assign mio = 2
+    elsif p.tags contains 'Paso: Hidratar'
+      assign mio = 3
+    elsif p.tags contains 'Paso: Proteger'
+      assign mio = 4
+    elsif ptj contains 'Paso: '
+      assign mio = 0
+    elsif p.tags contains 'limpieza'
+      assign mio = 1
+    elsif p.tags contains 'serums' or p.tags contains 'tonicos-y-esencias'
+      assign mio = 2
+    elsif p.tags contains 'hidratantes'
+      assign mio = 3
+    elsif p.tags contains 'proteccion-solar' or p.tags contains 'solar'
+      assign mio = 4
+    endif
+  endif
+-%}
+{%- if mio > 0 -%}
+  {%- liquid
+    assign nombres = 'Limpiar,Tratar,Hidratar,Proteger' | split: ','
+    assign pools = 'limpiadores,serums-y-ampollas,hidratantes,proteccion-solar' | split: ','
+    assign ty1 = '|cleanser|cleansers|cleanser for men|facial cleansers|limpiador|limpiador en polvo|limpiador exfoliante|limpiar|cleansing foam|cleansing foam for men|cleansing gel|cleansing balm|cleansing oil|cleansing pad|cleansing powder|powder wash|cleansing water|cleasing water|makeup remover|desmaquillante|'
+    assign ty2 = '|serum|sérum|ampoule|ampule|ampoule pad|eye serum|tratar|toner|tónico|facial toner|toner for men|toner pad|essence|esencia|essence for men|essence pad|'
+    assign ty3 = '|cream|crema|cream for men|moisturizer|moisturizer cream|moisturizer for men|lotion|lotion & moisturizer|lotion for men|emulsion|emulsión|emulsion for men|hidratante|hidratar|soothing cream|soothing gel|calming gel|'
+    assign ty4 = '|sunscreen|sunscreen for men|sun cream|sun cushion|sun serum|sun stick|protector solar en stick|proteger|protector solar|'
+    assign tags_es = 'Envío: España|Maymoo|EMANAR BEAUTY|Perfumerias Padilla|Proveedor: Perfumerías Padilla|hello-mims|Natcare|Rulls|Dr.Mush|www.sallunabeauty.com' | split: '|'
+
+    # Origen del producto actual (misma regla que snippets/mirea-origen)
+    assign o_mio = 'kr'
+    for t in tags_es
+      if p.tags contains t
+        assign o_mio = 'es'
+        break
+      endif
+    endfor
+    if o_mio == 'kr' and p.tags contains 'Shopify Collective'
+      assign o_mio = 'pr'
+    endif
+
+    assign vh = p.vendor | handleize
+    assign estricto = section.settings.solo_mismo_origen
+    assign k1 = nil
+    assign k2 = nil
+    assign k3 = nil
+    assign k4 = nil
+    assign faltan = 3
+    assign mezcla = false
+    assign used = '|' | append: p.id | append: '|'
+
+    for pass in (1..5)
+      if faltan <= 0
+        break
+      endif
+      if pass >= 4 and estricto
+        break
+      endif
+      assign mismo_origen = true
+      if pass >= 4
+        assign mismo_origen = false
+      endif
+      assign tipo = 'mix'
+      assign solo_marca = false
+      assign pool = nil
+      case pass
+        when 1, 4
+          assign solo_marca = true
+          if vh != blank
+            assign pool = collections[vh].products
+          endif
+        when 2, 5
+          assign tipo = 'step'
+        when 3
+          if o_mio == 'es'
+            assign pool = collections['desde-espana-piel'].products
+          endif
+      endcase
+      if tipo == 'mix' and pool == nil
+        continue
+      endif
+
+      for s_obj in (1..4)
+        if tipo == 'mix' and s_obj > 1
+          break
+        endif
+        if tipo == 'step'
+          if s_obj == mio
+            continue
+          endif
+          assign ocupado = false
+          if s_obj == 1 and k1 != nil
+            assign ocupado = true
+          elsif s_obj == 2 and k2 != nil
+            assign ocupado = true
+          elsif s_obj == 3 and k3 != nil
+            assign ocupado = true
+          elsif s_obj == 4 and k4 != nil
+            assign ocupado = true
+          endif
+          if ocupado
+            continue
+          endif
+          assign pidx = s_obj | minus: 1
+          assign pool = collections[pools[pidx]].products
+        endif
+
+        for q in pool
+          if q.available == false or q.id == p.id
+            continue
+          endif
+          assign qid = '|' | append: q.id | append: '|'
+          if used contains qid
+            continue
+          endif
+          if solo_marca and q.vendor != p.vendor
+            continue
+          endif
+          if q.selected_or_first_available_variant.requires_shipping == false
+            continue
+          endif
+          if mismo_origen
+            assign o_q = 'kr'
+            for t in tags_es
+              if q.tags contains t
+                assign o_q = 'es'
+                break
+              endif
+            endfor
+            if o_q == 'kr' and q.tags contains 'Shopify Collective'
+              assign o_q = 'pr'
+            endif
+            if o_q != o_mio
+              continue
+            endif
+          endif
+
+          assign q_paso = 0
+          assign qtj = q.tags | join: '|'
+          if q.tags contains 'Paso: Limpiar'
+            assign q_paso = 1
+          elsif q.tags contains 'Paso: Tratar'
+            assign q_paso = 2
+          elsif q.tags contains 'Paso: Hidratar'
+            assign q_paso = 3
+          elsif q.tags contains 'Paso: Proteger'
+            assign q_paso = 4
+          elsif qtj contains 'Paso: '
+            assign q_paso = 9
+          endif
+
+          if tipo == 'step'
+            if q_paso != 0 and q_paso != s_obj
+              continue
+            endif
+            assign s = s_obj
+          else
+            if q_paso == 9
+              continue
+            endif
+            assign s = q_paso
+            if s == 0
+              if q.tags contains 'limpieza'
+                assign s = 1
+              elsif q.tags contains 'serums' or q.tags contains 'tonicos-y-esencias'
+                assign s = 2
+              elsif q.tags contains 'hidratantes'
+                assign s = 3
+              elsif q.tags contains 'proteccion-solar' or q.tags contains 'solar'
+                assign s = 4
+              endif
+            endif
+            if s == 0
+              assign qt = q.type | downcase | prepend: '|' | append: '|'
+              if qt != '||'
+                if ty1 contains qt
+                  assign s = 1
+                elsif ty4 contains qt
+                  assign s = 4
+                elsif ty2 contains qt
+                  assign s = 2
+                elsif ty3 contains qt
+                  assign s = 3
+                endif
+              endif
+            endif
+            if s == 0 or s == mio
+              continue
+            endif
+          endif
+
+          assign libre = false
+          if s == 1 and k1 == nil
+            assign k1 = q
+            assign libre = true
+          elsif s == 2 and k2 == nil
+            assign k2 = q
+            assign libre = true
+          elsif s == 3 and k3 == nil
+            assign k3 = q
+            assign libre = true
+          elsif s == 4 and k4 == nil
+            assign k4 = q
+            assign libre = true
+          endif
+          if libre
+            assign used = used | append: q.id | append: '|'
+            assign faltan = faltan | minus: 1
+            if pass >= 4
+              assign mezcla = true
+            endif
+            if tipo == 'step' or faltan <= 0
+              break
+            endif
+          endif
+        endfor
+      endfor
+    endfor
+
+    assign mostrados = 3 | minus: faltan
+    assign mio_idx = mio | minus: 1
+  -%}
+  {%- if mostrados > 0 -%}
+  <section class="mcr" aria-labelledby="mcr-h-{{ section.id }}" data-mcr="{{ section.id }}">
+    <div class="mp-wrap mcr__wrap">
+      <div class="mcr__head">
+        <p class="mcr__eyebrow">Tu rutina paso a paso</p>
+        <h2 id="mcr-h-{{ section.id }}" class="mcr__h">{{ section.settings.heading | default: 'Completa tu rutina' }}</h2>
+        <p class="mcr__sub">Este producto es tu paso <strong>{{ mio }} · {{ nombres[mio_idx] }}</strong>. Te proponemos {% if mostrados == 1 %}el paso que le acompaña{% else %}los pasos que le acompañan{% endif %}{% if mezcla %}{% elsif o_mio == 'es' %}, también con envío desde España{% elsif o_mio == 'kr' %}, también con envío desde Corea{% endif %}.</p>
+      </div>
+      <ol class="mcr__steps" aria-hidden="true">
+        {%- for n in nombres -%}<li class="{% if forloop.index == mio %}is-me{% endif %}"><span>{{ forloop.index }}</span>{{ n }}</li>{%- endfor -%}
+      </ol>
+      <div class="mcr__grid">
+        {%- assign total = 0 -%}
+        {%- for s in (1..4) -%}
+          {%- liquid
+            case s
+              when 1
+                assign q = k1
+              when 2
+                assign q = k2
+              when 3
+                assign q = k3
+              when 4
+                assign q = k4
+            endcase
+          -%}
+          {%- if s == mio or q == nil -%}{%- continue -%}{%- endif -%}
+          {%- assign v = q.selected_or_first_available_variant -%}
+          {%- assign total = total | plus: v.price -%}
+          {%- assign sidx = s | minus: 1 -%}
+          <article class="mcr__card">
+            <p class="mcr__step">{{ s }} · {{ nombres[sidx] }}</p>
+            <a class="mcr__img" href="{{ q.url }}" tabindex="-1" aria-hidden="true">
+              {%- if q.featured_image -%}{{ q.featured_image | image_url: width: 400 | image_tag: loading: 'lazy', alt: q.title, sizes: '(min-width: 750px) 140px, 30vw' }}{%- endif -%}
+            </a>
+            <div class="mcr__info">
+              <p class="mcr__brand">{{ q.vendor }}</p>
+              {%- if mezcla -%}{%- render 'mirea-origen', product: q, estilo: 'pill' -%}{%- endif -%}
+              <a class="mcr__title" href="{{ q.url }}">{{ q.title }}</a>
+              {%- unless q.has_only_default_variant -%}<p class="mcr__var">{{ v.title }}</p>{%- endunless -%}
+              <p class="mcr__price">
+                {{ v.price | money }}
+                {%- if v.compare_at_price > v.price -%} <s>{{ v.compare_at_price | money }}</s>{%- endif -%}
+              </p>
+              {%- form 'product', q, class: 'mcr__form' -%}
+                <input type="hidden" name="id" value="{{ v.id }}">
+                <input type="hidden" name="quantity" value="1">
+                <button type="submit" class="mcr__btn">+ Añadir</button>
+              {%- endform -%}
+            </div>
+          </article>
+        {%- endfor -%}
+      </div>
+      {%- if section.settings.mostrar_rutina_completa and mostrados > 1 -%}
+        <div class="mcr__all">
+          <button type="button" class="mcr__btn mcr__btn--all" data-mcr-all>Añadir la rutina completa · {{ total | money }}</button>
+          <p class="mcr__note">Añade al carrito los {{ mostrados }} productos sugeridos (1 unidad de cada uno).</p>
+        </div>
+      {%- endif -%}
+    </div>
+  </section>
+  <script>
+    (function () {
+      var root = document.querySelector('[data-mcr="{{ section.id }}"]');
+      if (!root || root.dataset.ready) return;
+      root.dataset.ready = '1';
+      var addUrl = '{{ routes.cart_add_url }}.js', cartUrl = '{{ routes.cart_url }}';
+      function bubble() {
+        fetch(cartUrl + '.js').then(function (r) { return r.json(); }).then(function (c) {
+          document.querySelectorAll('.cart-bubble__text-count').forEach(function (el) { el.textContent = c.item_count; });
+        }).catch(function () {});
+      }
+      function add(items) {
+        return fetch(addUrl, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify({ items: items }) }).then(function (r) { if (!r.ok) throw r; return r.json(); });
+      }
+      function ok(b, txt) {
+        var a = document.createElement('a');
+        a.className = b.className + ' mcr__btn--ok';
+        a.href = cartUrl;
+        a.textContent = txt;
+        b.replaceWith(a);
+      }
+      root.querySelectorAll('.mcr__form').forEach(function (f) {
+        f.addEventListener('submit', function (e) {
+          e.preventDefault();
+          var b = f.querySelector('button');
+          b.disabled = true; b.textContent = 'Añadiendo…';
+          add([{ id: Number(f.querySelector('input[name="id"]').value), quantity: 1 }])
+            .then(function () { ok(b, '✓ Añadido · Ver carrito'); bubble(); })
+            .catch(function () { b.disabled = false; b.textContent = 'No se pudo añadir · reintentar'; });
+        });
+      });
+      var all = root.querySelector('[data-mcr-all]');
+      if (all) all.addEventListener('click', function () {
+        var items = [];
+        root.querySelectorAll('.mcr__form').forEach(function (f) {
+          if (f.querySelector('button')) items.push({ id: Number(f.querySelector('input[name="id"]').value), quantity: 1 });
+        });
+        if (!items.length) { window.location.href = cartUrl; return; }
+        all.disabled = true; all.textContent = 'Añadiendo tu rutina…';
+        add(items).then(function () {
+          root.querySelectorAll('.mcr__form button').forEach(function (b) { ok(b, '✓ Añadido'); });
+          ok(all, '✓ Rutina añadida · Ver carrito'); bubble();
+        }).catch(function () { all.disabled = false; all.textContent = 'No se pudo añadir · reintentar'; });
+      });
+    })();
+  </script>
+  <style>
+    .mcr{background:#faf6f4;padding:64px 0;color:#352b30}
+    .mcr__head{max-width:640px;margin-bottom:22px}
+    .mcr__eyebrow{margin:0;font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#8f5d6c}
+    .mcr__h{margin:4px 0 8px;font-family:"Cormorant Garamond",var(--mp-serif,Georgia),serif;font-weight:500;font-size:clamp(32px,4vw,48px);line-height:1.02;letter-spacing:-.01em;color:#1f191c}
+    .mcr__sub{margin:0;color:#352b30;font-size:14px;line-height:1.55}
+    .mcr__sub strong{color:#1f191c}
+    .mcr__steps{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin:0 0 26px;padding:0}
+    .mcr__steps li{display:flex;align-items:center;gap:8px;padding:6px 14px 6px 6px;border:1px solid #eadcd8;border-radius:999px;background:#fff;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#352b30}
+    .mcr__steps span{width:22px;height:22px;border-radius:50%;background:#f3e7e4;display:flex;align-items:center;justify-content:center;font-size:11px;color:#1f191c}
+    .mcr__steps li.is-me{background:#1f191c;border-color:#1f191c;color:#fff}
+    .mcr__steps li.is-me span{background:#fff}
+    .mcr__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+    .mcr__card{display:grid;grid-template-columns:120px 1fr;grid-template-rows:auto 1fr;gap:6px 16px;padding:16px;background:#fff;border:1px solid #eadcd8;border-radius:14px}
+    .mcr__step{grid-column:1/-1;margin:0 0 4px;font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#8f5d6c}
+    .mcr__img{aspect-ratio:4/5;background:#fff;border-radius:10px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+    .mcr__img img{width:100%;height:100%;object-fit:contain}
+    .mcr__info{display:flex;flex-direction:column;min-width:0}
+    .mcr__brand{margin:0;font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#8f5d6c}
+    .mcr__title{margin:2px 0 4px;color:#1f191c;font-size:13.5px;line-height:1.35;text-decoration:none;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+    .mcr__title:hover{text-decoration:underline}
+    .mcr__var{margin:0 0 4px;font-size:12px;color:#352b30}
+    .mcr__price{margin:0 0 10px;font-weight:600;font-size:14px;color:#1f191c}
+    .mcr__price s{margin-left:6px;font-weight:400;color:#8a7b82}
+    .mcr__form{margin-top:auto}
+    .mcr__btn{display:inline-block;padding:10px 16px;background:#1f191c;color:#fff;border:1px solid #1f191c;border-radius:999px;font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;text-decoration:none;transition:background .2s,color .2s}
+    .mcr__btn:hover{background:#fff;color:#1f191c}
+    .mcr__btn[disabled]{opacity:.6;cursor:wait}
+    .mcr__btn--ok{background:#fff;color:#1f191c}
+    .mcr__all{margin-top:22px;display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px}
+    .mcr__btn--all{padding:14px 26px;font-size:11.5px;background:#8f5d6c;border-color:#8f5d6c}
+    .mcr__btn--all:hover{background:#fff;color:#8f5d6c}
+    .mcr__btn--all.mcr__btn--ok{background:#fff;color:#8f5d6c}
+    .mcr__note{margin:0;font-size:12px;color:#352b30}
+    @media(max-width:989px){.mcr__grid{grid-template-columns:1fr}}
+    @media(max-width:560px){.mcr{padding:48px 0}.mcr__card{grid-template-columns:96px 1fr}.mcr__btn--all{width:100%;text-align:center}}
+  </style>
+  {%- endif -%}
+{%- endif -%}
+{% schema %}
+{
+  "name": "Mirea · Completa rutina",
+  "settings": [
+    { "type": "paragraph", "content": "Detecta el paso del producto por sus etiquetas (Paso: Limpiar / Tratar / Hidratar / Proteger) y sugiere los pasos que faltan: primero de la misma marca, si no los más vendidos de ese paso. Si no hay paso, no se muestra." },
+    { "type": "text", "id": "heading", "label": "Título", "default": "Completa tu rutina" },
+    { "type": "checkbox", "id": "solo_mismo_origen", "label": "Solo mismo origen de envío", "info": "Si está activo, nunca mezcla productos de Corea y de España (puede mostrar menos sugerencias).", "default": false },
+    { "type": "checkbox", "id": "mostrar_rutina_completa", "label": "Botón «Añadir la rutina completa»", "default": true }
+  ],
+  "enabled_on": { "templates": ["product"] }
+}
+{% endschema %}
