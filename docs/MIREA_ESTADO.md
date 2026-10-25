@@ -844,3 +844,4 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - **Errores: 0.** No se tocaron título, handle, descripción, precio, SKU ni etiquetas.
 - **Copia para deshacer:** `docs/seo/seo_top300_2210.csv` guarda los valores anteriores y los nuevos de cada producto, junto con los ids de las imágenes.
 - **Nota:** el idioma principal de la tienda es inglés y no hay traducción "es" de meta_title/meta_description. España ve estos campos principales tal cual, así que ahora salen en español.
+- **25-10, flujo de reseñas S6M6wD:** el retraso pasa de 14 a **35 días** después del envío, a petición de Blanca ("a los 14 no les ha llegado el pedido"). Comprobado en la respuesta de la API (time-delay 122176055 = 35 días). El flujo sigue en borrador.
