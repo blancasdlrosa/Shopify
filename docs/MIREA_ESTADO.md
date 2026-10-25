@@ -820,3 +820,17 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - **Cambios:** no he tocado nada, porque no hay gasto ni términos de búsqueda que revisar.
 - **Shopify:** 2 pedidos desde el 22-10, ninguno puede venir de Ads.
 - **25-10, decisión de Blanca:** "de momento no quiero gastos extras". La campaña 24377406933 queda **PAUSADA** (vía Windsor pause_campaign; se reactiva con enable_campaign). Ahora mismo no se paga publicidad. Se sigue solo con canales gratis.
+
+## 25-10 · Flow "Mirea · Pide tu reseña" (BORRADOR)
+- **Flow:** S6M6wD, estado **draft** (no envía nada). Editar: https://www.klaviyo.com/flow/S6M6wD/edit
+- **Disparador:** Shopify "Fulfilled Order" (métrica QRmc4X).
+- **Espera:** 14 días después de marcar el pedido como enviado. Luego, 1 email.
+- **Filtros del flow:** no ha estado en este flow en los últimos 30 días; sin "Refunded Order" ni "Cancelled Order" desde que entra.
+- **Email:** de hola@mireaskin.es ("Mirea Skin"), respuestas a my.mireaskin@gmail.com. Smart Sending activado.
+  - Asunto: "¿Qué tal tu piel con {primer producto}?" (si no hay producto: "tu pedido"). Preheader: "Son 30 segundos y ayudan mucho a quien duda si probarlo."
+  - Botón "Dejar mi opinión": página del primer producto del pedido con el ancla `#judgeme_product_reviews`. Si no hay handle, va a /pages/experiencias-reales.
+  - Sin descuentos ni promesas. Dice que también valen las opiniones menos positivas.
+- **Plantilla:** RHDNWc ("Mirea v2 · Pide tu reseña · Fulfilled +14d"), mismo estilo v2 que SsXfLn. Klaviyo la ha copiado dentro del flow como V4BNUY: los cambios del email se hacen en V4BNUY desde el flow.
+- **Prueba a my.mireaskin@gmail.com:** NO enviada. Klaviyo pide la confirmación de Blanca en la propia conversación.
+- **Para activarlo:** Blanca revisa el email en el flow → pone el email en "Live" → flow en "Live".
+  - Antes, mirar en Judge.me si su email "Review request" está activo. Si lo está, apagar uno de los dos para no pedir la reseña dos veces.
