@@ -870,3 +870,9 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 
 - Ids de Metricool: 405629425, 405629554, 405629991, 405630023, 405630055, 405630340, 405630722, 405630835, 405630903, 405631105, 405631399, 405631453.
 - No se inventa ningún descuento. Solo se dice "está en la sección Ofertas" (precio anterior real a 25-10) y "envío gratis en España desde 69 €". **Antes del 10-11 y del 14-11, comprobar** que el Peptide Serum y la Triple Collagen 4.0 (Maymoo, 27 uds) siguen rebajados y con stock.
+
+## 25-10 · Auditoría de lo hecho y nuevo borrador de títulos
+
+- **Auditoría** (solo lectura) en `docs/AUDITORIA_HECHO_2510.md`.
+- **Tema publicado:** ahora es 209155588433 "Mirea · España necesidades · 23-10 · PRUEBA". El borrador 209154441553 es antiguo y no debe publicarse.
+- **Nuevo borrador:** 209375854929 "Mirea · 25-10 títulos ES · BORRADOR", copia del tema publicado con `snippets/meta-tags.liquid` corregido (sin "tagged", "Página" en vez de "Page"). Comprobado: md5 441ea5c40d396cf0e3edab5d33435e9f, igual que la versión revisada. No publicado; lo publica Blanca.
