@@ -819,3 +819,4 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - **Lo que tiene que hacer Blanca:** Google Ads → Facturación → añadir tarjeta (o reactivar el método de pago). Esto no se puede hacer por API.
 - **Cambios:** no he tocado nada, porque no hay gasto ni términos de búsqueda que revisar.
 - **Shopify:** 2 pedidos desde el 22-10, ninguno puede venir de Ads.
+- **25-10, decisión de Blanca:** "de momento no quiero gastos extras". La campaña 24377406933 queda **PAUSADA** (vía Windsor pause_campaign; se reactiva con enable_campaign). Ahora mismo no se paga publicidad. Se sigue solo con canales gratis.
