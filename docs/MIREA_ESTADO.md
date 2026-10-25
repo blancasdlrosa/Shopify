@@ -810,3 +810,12 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - Comprobado con una exportación completa (18.736 variantes): después de esa segunda limpieza no queda ninguna variante con precio anterior ≤ precio.
 - Aviso aparte: desde la copia del 22-10, 79 de estas variantes han cambiado de precio unos céntimos (TM, Kuker Shop, OBA, Lustrao…). No lo hemos cambiado nosotros; viene de la sincronización del proveedor.
 - Copia para deshacer: `docs/precios/compare_at_invertido_2210.csv` (valores antiguos).
+
+## 25-10 · Revisión Google Ads (campaña 24377406933)
+
+- **Campaña:** activa, ENABLED / SERVING / ELIGIBLE. Los 4 anuncios de los grupos activos están APPROVED. Las 27 palabras clave están ELIGIBLE.
+- **Resultados:** 0 impresiones, 0 clics y 0 € de gasto en los últimos 7 días. En toda la cuenta tampoco hay impresiones en los últimos 30 días.
+- **Causa encontrada:** la facturación de la cuenta 1865267943 está **CANCELLED** (billing_setup 8565580804). Sin un método de pago, Google no muestra ningún anuncio.
+- **Lo que tiene que hacer Blanca:** Google Ads → Facturación → añadir tarjeta (o reactivar el método de pago). Esto no se puede hacer por API.
+- **Cambios:** no he tocado nada, porque no hay gasto ni términos de búsqueda que revisar.
+- **Shopify:** 2 pedidos desde el 22-10, ninguno puede venir de Ads.
