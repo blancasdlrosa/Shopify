@@ -845,3 +845,28 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - **Copia para deshacer:** `docs/seo/seo_top300_2210.csv` guarda los valores anteriores y los nuevos de cada producto, junto con los ids de las imágenes.
 - **Nota:** el idioma principal de la tienda es inglés y no hay traducción "es" de meta_title/meta_description. España ve estos campos principales tal cual, así que ahora salen en español.
 - **25-10, flujo de reseñas S6M6wD:** el retraso pasa de 14 a **35 días** después del envío, a petición de Blanca ("a los 14 no les ha llegado el pedido"). Comprobado en la respuesta de la API (time-delay 122176055 = 35 días). El flujo sigue en borrador.
+
+## 25-10 · Metricool: posts orgánicos de IG + TikTok del 03-11 al 15-11
+- Antes había: IG y TikTok hasta el 02-11, más el 04-11 (meme Green Plum, 10:00). Pinterest hasta el 03-11. El 02-11 y el 04-11 no se tocan, así que no hay posts nuevos esos días.
+- Nuevos: **12 posts**, cada uno a la vez en Instagram y TikTok (1 al día por red). Total: 12 en IG y 12 en TikTok. Todos programados y con publicación automática. Ninguno es inmediato ni de pago.
+- Horas, las mismas que hasta ahora: entre semana a las 20:00 y el fin de semana a las 12:00 (Madrid).
+- Imagen: la foto real del producto en Shopify, sin editar. Shopify la sirve en JPG de 1080 px como máximo, porque TikTok rechaza PNG y fotos de más de 1080 px.
+- Pinterest **no se ha ampliado**: sus pines son de artículos del blog, no repiten los posts de IG/TikTok.
+
+| Fecha | Tema | Producto | Envío |
+|---|---|---|---|
+| mar 03-11 20:00 | Cuidar la barrera | Anua Heartleaf 77% Soothing Toner 250 ml | Corea |
+| jue 05-11 20:00 | Orden de los pasos | VT PDRN Reedle Shot Essence 30 ml | Corea |
+| vie 06-11 20:00 | Rutina de invierno | Anua Birch 70 Moisture Boosting Cream 50 ml | Corea |
+| sáb 07-11 12:00 | Mascarilla de finde | Medicube PDRN Pink Collagen Jelly Gel Mask | España (3–7 días) |
+| dom 08-11 12:00 | Granitos | COSRX Acne Pimple Master Patch 24 uds | Corea |
+| lun 09-11 20:00 | Exfoliar en invierno | Medicube Zero Pore Pad 2.0 70 discos | Corea |
+| mar 10-11 20:00 | Black Friday: haz tu lista | Medicube PDRN Pink Peptide Serum 30 ml (en Ofertas) | Corea (2–4 sem.) |
+| mié 11-11 20:00 | Orden de los pasos (mañana) | COSRX Low pH Good Morning Gel Cleanser 150 ml | Corea |
+| jue 12-11 20:00 | Barrera / ceramidas | Anua Rice Ceramide 7 Hydrating Barrier Serum 50 ml | Corea |
+| vie 13-11 20:00 | Producto destacado | MEDIHEAL PDRN Capsule Patch 60 uds | Corea |
+| sáb 14-11 12:00 | Black Friday: Ofertas | Medicube Triple Collagen Cream 4.0 50 ml (en Ofertas) | España (3–7 días) |
+| dom 15-11 12:00 | Protector en invierno | SKIN1004 Centella Air-Fit Suncream Plus SPF50+ 50 ml | Corea |
+
+- Ids de Metricool: 405629425, 405629554, 405629991, 405630023, 405630055, 405630340, 405630722, 405630835, 405630903, 405631105, 405631399, 405631453.
+- No se inventa ningún descuento. Solo se dice "está en la sección Ofertas" (precio anterior real a 25-10) y "envío gratis en España desde 69 €". **Antes del 10-11 y del 14-11, comprobar** que el Peptide Serum y la Triple Collagen 4.0 (Maymoo, 27 uds) siguen rebajados y con stock.
