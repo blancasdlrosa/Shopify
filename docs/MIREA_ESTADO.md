@@ -834,3 +834,13 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - **Prueba a my.mireaskin@gmail.com:** NO enviada. Klaviyo pide la confirmación de Blanca en la propia conversación.
 - **Para activarlo:** Blanca revisa el email en el flow → pone el email en "Live" → flow en "Live".
   - Antes, mirar en Judge.me si su email "Review request" está activo. Si lo está, apagar uno de los dos para no pedir la reseña dos veces.
+
+## SEO top 300 productos: título, meta descripción y alt en español (23–25 oct)
+- **Selección:** 300 productos activos, publicados y con stock. Orden: marcas de Google Ads (medicube 45, Anua 40, Biodance 30, Beauty of Joseon 35, SKIN1004 35), luego Virales en TikTok, Ofertas y Desde España, y el resto por stock.
+- **SEO aplicado: 254 productos.** Título de ≤60 caracteres con el formato "Marca producto tamaño | Mirea Skin" y descripción de 140–155 caracteres, todo en español y basado solo en la ficha (sin "original", sin "envío gratis" y sin claims médicos).
+  - No había ningún campo SEO vacío "de verdad" en los que ya estaban bien. Se sustituyeron los que estaban vacíos (116), los de título de más de 60 (68), los truncados con "…" (50), los que estaban en inglés (13) y los muy cortos (7).
+- **SEO no tocado: 46 productos.** Ya estaban en español y bien.
+- **Alt de imagen: 842 imágenes** (hasta 3 por producto, en los 300). Solo se cambiaron las que estaban vacías o tenían el texto genérico "Product image". Formato: "Marca producto – tamaño".
+- **Errores: 0.** No se tocaron título, handle, descripción, precio, SKU ni etiquetas.
+- **Copia para deshacer:** `docs/seo/seo_top300_2210.csv` guarda los valores anteriores y los nuevos de cada producto, junto con los ids de las imágenes.
+- **Nota:** el idioma principal de la tienda es inglés y no hay traducción "es" de meta_title/meta_description. España ve estos campos principales tal cual, así que ahora salen en español.
