@@ -876,3 +876,39 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - **Auditoría** (solo lectura) en `docs/AUDITORIA_HECHO_2510.md`.
 - **Tema publicado:** ahora es 209155588433 "Mirea · España necesidades · 23-10 · PRUEBA". El borrador 209154441553 es antiguo y no debe publicarse.
 - **Nuevo borrador:** 209375854929 "Mirea · 25-10 títulos ES · BORRADOR", copia del tema publicado con `snippets/meta-tags.liquid` corregido (sin "tagged", "Página" en vez de "Page"). Comprobado: md5 441ea5c40d396cf0e3edab5d33435e9f, igual que la versión revisada. No publicado; lo publica Blanca.
+
+## 26-10 · Metricool: PNG de TikTok cambiados a JPG y Pinterest ampliado hasta el 15-12
+- **PNG → JPG (mismo diseño, solo cambia la imagen):** se usan las mismas láminas que ya estaban en Shopify Files (`mirea-duo-noche-01/02/03.png`, `mirea-humor-limpiador.png`), servidas por el CDN de Shopify con `&format=jpg&width=1080&height=1080` (como máximo 864×1080). Metricool las guarda ahora como `.jpeg`. Texto, fecha, hora, alt y ajustes de TikTok/IG, sin cambios.
+  - 02-11 18:00 (TikTok, carrusel de 3): id antiguo 404444089 → **nuevo id 406100607** (uuid 433084271684239573).
+  - 04-11 10:00 (IG + TikTok): id antiguo 404444120 → **nuevo id 406100699** (uuid -3989681464953648748). Instagram sigue en el post, con la marca de IA.
+  - El post de IG del 02-11 10:00 (404444067) sigue con PNG; no se ha tocado porque Instagram sí acepta PNG.
+- **Pinterest:** **21 pines nuevos**, uno cada 2 días del **05-11 al 15-12**, a las 13:00 (Madrid), en el mismo tablero (374713700186176077) y con el mismo formato que los anteriores. Publicación automática; ninguno inmediato.
+  - Imagen: la foto del artículo o una foto real del producto del catálogo (CDN de Shopify con `format=jpg`). Dos imágenes con fondo transparente se han quedado en PNG en Metricool (06-11 niacinamida y 05-12 Beauty of Joseon). Pinterest acepta PNG: los pines anteriores también eran PNG.
+  - Ningún descuento inventado. Solo se dice "sección Ofertas" y "envío gratis en España desde 69 €".
+
+| Fecha | Id | Enlace |
+|---|---|---|
+| 05-11 | 406101717 | blog: piel-grasa-mas-limpias-mas-grasa |
+| 07-11 | 406101914 | blog: niacinamida-para-que-sirve |
+| 09-11 | 406101956 | blog: barrera-cutanea-danada |
+| 11-11 | 406102024 | blog: centella-asiatica-piel |
+| 13-11 | 406102065 | blog: protector-solar-todos-los-dias |
+| 15-11 | 406102096 | blog: pdrn-skincare-que-es |
+| 17-11 | 406102174 | blog: medicube-pdrn-pink-peptide-serum-… |
+| 19-11 | 406102305 | blog: rutina-manchas-piel |
+| 21-11 | 406102354 | blog: medicube-zero-pore-pad-2-0-… |
+| 23-11 | 406102436 | blog: rutina-coreana-sencilla |
+| 25-11 | 406102472 | blog: cosmetica-coreana-original-espana |
+| 27-11 (Black Friday) | 406102514 | /collections/ofertas |
+| 29-11 | 406102540 | blog: retinol-retinal-primeras-experiencias |
+| 01-12 | 406102833 | /collections/desde-espana (imagen: Rénergie UVMUNE Cream, que sale desde España) |
+| 03-12 | 406102928 | blog: dudas-sobre-tu-rutina-facial |
+| 05-12 | 406102987 | /collections/beauty-of-joseon |
+| 07-12 | 406103072 | blog: comparar-productos-skincare-coreano |
+| 09-12 | 406103216 | /collections/anua |
+| 11-12 | 406103273 | /collections/medicube |
+| 13-12 | 406103331 | /collections/skin1004 |
+| 15-12 | 406103429 | /collections/round-lab |
+
+- Con esto ya están usados en Pinterest los 28 artículos publicados del blog "Consejos de skincare". A partir del 17-12 solo quedan colecciones o artículos nuevos.
+- Antes del 27-11, comprobar que la colección Ofertas sigue teniendo productos rebajados.
