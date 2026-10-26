@@ -934,3 +934,27 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - **No hecho:** renombrar el flow VTmbc5 ("Reposición · 45 días" → "· 80 días"). La API de Klaviyo solo permite cambiar el estado de un flow, no su nombre (registrado como falta de Klaviyo). Se hace a mano: Klaviyo › Flows › VTmbc5 › nombre.
 - **Pruebas por email:** no enviadas (piden la confirmación de Blanca).
 - **Volver atrás:** en cada acción, update_flow_action con el template_id antiguo de la tabla (o en la web: email del flow › cambiar plantilla). XCwF2L: poner el email 117747027 otra vez en "live". Bienvenida: volver a cambiar "2–4" por "2–3" en XqqACx.
+
+## 26-10 · Blog: 5 artículos nuevos (huecos de la auditoría)
+- Blog "Consejos de skincare" (131349479761): de 28 a **33 artículos**. Autor "Mirea Skin", con portada (foto real del producto), SEO propio (título ≤60, descripción 140–155), FAQ de 3 preguntas y bloque "Productos recomendados" con el mismo formato que los demás.
+- Ningún tema estaba cubierto antes. Lo más cercano: "Granitos: 8 errores" (habla de parches de pasada) y "Barrera cutánea dañada"; los nuevos enlazan a ellos.
+- Publicación escalonada: el primero publicado hoy; los otros 4 **programados** (isPublished=false + publishDate futura; Shopify no deja isPublished=true con fecha futura). Hora: 09:00 UTC (10:00 Madrid).
+
+| Fecha | Título | Handle | Id |
+|---|---|---|---|
+| 26-10 (publicado) | Regalos de Navidad K-beauty: ideas por presupuesto | regalos-navidad-k-beauty-por-presupuesto | 645530779985 |
+| 28-10 | Parches para granos: cómo usarlos y cuál elegir | parches-para-granos-como-usarlos | 645542183249 |
+| 30-10 | Ceramidas: qué son y por qué tu piel las necesita en invierno | ceramidas-que-son-invierno | 645558206801 |
+| 01-11 | Mucina de caracol: para qué sirve de verdad (y para qué no) | mucina-de-caracol-para-que-sirve | 645558239569 |
+| 03-11 | Rutina para piel sensible paso a paso: mañana y noche | rutina-piel-sensible-paso-a-paso | 645558370641 |
+
+- Productos enlazados (todos activos y con stock el 26-10):
+  - Regalos: medicube PDRN Pink Collagen Jelly Gel Mask 9,99 € (España), Anua PDRN Lip Serum Dúo 13,95 €, SKIN1004 Centella Travel Kit 27,95 €, medicube Triple Collagen Cream 4.0 28,99 € (España, 27 uds), Beauty of Joseon Dynasty Cream Double Set 43,95 €, IOPE Super Vital Cream Gift Set 95,95 €. Dice "Precios a 26-10; los precios pueden cambiar" y plazos España 3–7 días laborables / Corea 2–4 semanas (pedir antes de finales de noviembre).
+  - Parches: COSRX Acne Pimple Master Patch, PETITFEE Centella, Abib Heartleaf Spot Patch, SKIN1004 Tea-Trica, Anua Triple Acid Microdart.
+  - Ceramidas: beplain Milk Ceramide Toner, Anua Rice Ceramide 7 Serum, Torriden SOLID IN Ceramide Cream, Anua 3 Ceramide Panthenol Cream, illiyoon Ceramide Ato 150 ml, Torriden Ceramide Lip Essence.
+  - Mucina: K-SECRET Snail Mucin 97% Essence, Benton Snail Bee Essence, Beauty of Joseon Revive Serum, COSRX Advanced Snail 92 Cream, COSRX Snail Mucin Hydrogel Mask.
+  - Piel sensible: Round Lab 1025 Dokdo Cleanser 150 ml, Anua Heartleaf 77% Toner, SKIN1004 Centella Ampoule 100 ml, illiyoon Ceramide Ato 150 ml, SKIN1004 Air-Fit Suncream Plus.
+- Colecciones enlazadas: desde-espana, sets-de-regalo, granitos, barrera-cutanea, rutina-invierno, serums-y-ampollas, hidratantes, rutina-piel-sensible, calma-y-rojeces.
+- **Revisar antes del 14-11**: la Triple Collagen 4.0 (27 uds, en oferta) y los precios del artículo de regalos. Si un producto se queda sin stock, regenerar el bloque de recomendados.
+- No se ha tocado ningún artículo existente.
+- Pendiente de la auditoría: artículos de cabello y protector solar en invierno.
