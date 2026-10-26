@@ -912,3 +912,25 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 
 - Con esto ya están usados en Pinterest los 28 artículos publicados del blog "Consejos de skincare". A partir del 17-12 solo quedan colecciones o artículos nuevos.
 - Antes del 27-11, comprobar que la colección Ofertas sigue teniendo productos rebajados.
+
+## 26-10 · Klaviyo: 7 flows antiguos rediseñados en Mirea v2 + correcciones de texto
+- Diseño "Mirea v2", igual que el carrito (SsXfLn/TsazRE): crema #F8F2EE, ciruela #925b6d / #4a2a36, Georgia + Helvetica, marca "MIREA SKIN", barra "Pago seguro · Devolución 14 días · Envíos a toda España", fila de confianza, pie con Instagram, Envíos/Devoluciones/Blog, `{{ organization.name }} · {{ organization.full_address }}` y `{% unsubscribe %}`.
+- Todas las plantillas nuevas son de tipo CODE. Al asignarlas, Klaviyo hace una copia dentro del flow (columna "Copia en el flow"); los cambios futuros se hacen en esa copia.
+- Plantillas antiguas **no borradas**. Enlaces comprobados en Shopify: páginas rutinas, encuentra-tu-rutina, marcas, mis-beneficios-mirea; colecciones all, novedades, limpiadores, serums, hidratantes, proteccion-solar, rutina-piel-seca, rutina-piel-grasa-con-granitos, rutina-piel-sensible, rutina-manchas-y-tono, rutina-invierno.
+- Sin envío gratis por debajo de 69 €, sin "original", sin claims médicos, sin códigos de descuento nuevos. Asuntos, remitente, esperas y Smart Sending sin cambios, salvo lo que se indica en la tabla.
+
+| Flow | Acción | Plantilla antigua | Nueva (maestra → copia en el flow) | Cambios de texto |
+|---|---|---|---|---|
+| Postcompra ShA32T · día 25 | 117741423 | VSrN3R | VPPzJf → Rn4Z4u | Mismo texto, los 3 consejos en una caja. Añadido "dale unas semanas a cada producto" y el enlace al test. |
+| Reposición VTmbc5 · día 80 | 117845887 | X4L25V | TqXTDv → XQHuaK | "Han pasado unas semanas" → "unos meses" (la espera es de 80 días). Botón "Ver mis pedidos" (Mi Mirea) y enlaces por paso. |
+| Win-back VvW277 · día 60 | 117747594 | YtLJvs | We9mpq → Ws28h5 | Mismo texto. Botón principal a Novedades y "Volver a Mirea" como enlace secundario. Atajos a marcas, rutinas y test. |
+| VIP WRuveC · 3.ª compra | 117845927 | TP2wuT | V9X2Ti → VJX5mq | Quitado "acceso prioritario a novedades y ventajas especiales" y "entras en nuestro grupo". Ahora es un agradecimiento con una invitación a responder al correo para recibir una recomendación personal, más rutinas por necesidad. Sin código (el original no tenía). **Asunto** "Tu tercera compra cambia las cosas ✦" → "Gracias por tu tercera compra ✦". **Preheader** → "Gracias por volver a confiar en Mirea. Si quieres, te ayudamos con tu rutina." |
+| Cross-sell XCwF2L · pedido +50 d | 117747027 | TqDRpb | VEV54n → WAs8U4 | "Más de 4.600 referencias" → "Más de 8.000 productos". **Estado del email: live → manual** (ya no envía solo, porque se solapaba con RxWXvG). El flow sigue live. |
+| Cross-sell post-entrega RxWXvG · enviado +32 d | 117747584 | WVeC39 | WQjTWe → YAJMic | Mismo texto, con los 4 pasos (limpiar, tratar, hidratar, proteger). Sigue **live**. |
+| Primera compra SAjKhA · día 1 | 118023919 | RGfFju | VFwj6J → SixiXr | Corea "2–3 semanas" → "2–4 semanas". El resto, igual. |
+| Bienvenida Vnwwa7 (solo texto) | 117738616 | XqqACx (misma) | — | En el pie: "entrega estimada 2–3 semanas" → "2–4 semanas". Nada más. |
+| (antigua) RGfFju | — | — | — | También corregido "2–3" → "2–4" para que una vuelta atrás no recupere el dato erróneo. |
+
+- **No hecho:** renombrar el flow VTmbc5 ("Reposición · 45 días" → "· 80 días"). La API de Klaviyo solo permite cambiar el estado de un flow, no su nombre (registrado como falta de Klaviyo). Se hace a mano: Klaviyo › Flows › VTmbc5 › nombre.
+- **Pruebas por email:** no enviadas (piden la confirmación de Blanca).
+- **Volver atrás:** en cada acción, update_flow_action con el template_id antiguo de la tabla (o en la web: email del flow › cambiar plantilla). XCwF2L: poner el email 117747027 otra vez en "live". Bienvenida: volver a cambiar "2–4" por "2–3" en XqqACx.
