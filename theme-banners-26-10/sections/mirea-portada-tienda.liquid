@@ -73,6 +73,7 @@
                 antetitulo: block.settings.antetitulo, titulo: block.settings.titulo, texto: block.settings.texto,
                 boton: block.settings.boton, enlace: block.settings.enlace,
                 fondo: block.settings.fondo, color: block.settings.color_texto,
+                tema: block.settings.tema,
                 atributos: block.shopify_attributes
               -%}
               {%- assign n = n | plus: 1 -%}
@@ -94,21 +95,46 @@
             fondo: '#fcf7f3', color: '#352b30' -%}
         {%- endif -%}
       </div>
-      {%- if total > 1 -%}
-        <div class="mps__nav">
+      {%- comment -%}
+        28-10 · Vista previa de temporada: los banners con "tema" que hoy NO tocan van guardados en <template>
+        (no se ven ni se leen). Con ?mirea_tema=black_friday (o halloween, navidad, rebajas) en la URL,
+        el JavaScript pone ese banner el primero. Solo cambia lo que se ve en ese navegador.
+      {%- endcomment -%}
+      {%- for block in section.blocks -%}
+        {%- if block.type != 'promo' or block.settings.tema == blank or block.settings.tema == 'ninguno' -%}{%- continue -%}{%- endif -%}
+        {%- liquid
+          assign ini = block.settings.inicio | strip | remove: '-' | plus: 0
+          assign fin = block.settings.fin | strip | remove: '-' | plus: 0
+          if fin == 0
+            assign fin = 99999999
+          endif
+          assign ver = false
+          if block.settings.siempre or hoy >= ini and hoy <= fin
+            assign ver = true
+          endif
+        -%}
+        {%- unless ver -%}
+          <template class="mps__tpl" data-tema="{{ block.settings.tema }}">
+            {%- render 'mirea-promo-slide',
+              indice: 99, total: total,
+              imagen: block.settings.imagen, imagen_movil: block.settings.imagen_movil,
+              antetitulo: block.settings.antetitulo, titulo: block.settings.titulo, texto: block.settings.texto,
+              boton: block.settings.boton, enlace: block.settings.enlace,
+              fondo: block.settings.fondo, color: block.settings.color_texto,
+              tema: block.settings.tema
+            -%}
+          </template>
+        {%- endunless -%}
+      {%- endfor -%}
+      <div class="mps__nav"{% if total < 2 %} hidden{% endif %}>
           <button type="button" class="mps__arrow mps__prev" aria-label="Banner anterior"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m15 6-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-          <div class="mps__dots">
-            {%- for i in (1..total) -%}
-              <button type="button" class="mps__dot{% if forloop.first %} is-active{% endif %}" aria-label="Ver banner {{ i }} de {{ total }}"{% if forloop.first %} aria-current="true"{% endif %}><span></span></button>
-            {%- endfor -%}
-          </div>
+          <div class="mps__dots"></div>
           <button type="button" class="mps__arrow mps__next" aria-label="Banner siguiente"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m9 6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
           <button type="button" class="mps__arrow mps__play" aria-label="Pausar el carrusel" aria-pressed="false">
             <svg class="mps__i-pause" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3v14H7zM14 5h3v14h-3z" fill="currentColor"/></svg>
             <svg class="mps__i-play" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
           </button>
         </div>
-      {%- endif -%}
     </div>
   </div>
 
@@ -225,7 +251,74 @@
 #mps-{{ section.id }}.is-paused .mps__i-pause{display:none}
 #mps-{{ section.id }} button:focus-visible,#mps-{{ section.id }} a:focus-visible,#mpt-{{ section.id }} .mpt__form button:focus-visible{outline:2px solid #925b6d;outline-offset:2px}
 #mps-{{ section.id }} .mps__btn:focus-visible{outline-color:var(--c)}
+/* 28-10 · Decoración por temporada (solo adorno: aria-hidden, sin clics, no tapa el texto) */
+#mps-{{ section.id }} .mps__copy{z-index:2}
+#mps-{{ section.id }} .mps__deco{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+#mps-{{ section.id }} .mps__deco *{pointer-events:none}
+#mps-{{ section.id }} .mps__slide:not(.is-active) .mps__deco *{animation-play-state:paused}
+#mps-{{ section.id }} .mps__glow{position:absolute;inset:0}
+#mps-{{ section.id }} .mps__tag{position:absolute;top:18px;left:18px;display:inline-flex;align-items:center;gap:6px;padding:7px 14px;font-size:11px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;line-height:1}
+/* Halloween */
+#mps-{{ section.id }} .mps__slide--halloween .mps__ante{color:#ff9a3c;opacity:1}
+#mps-{{ section.id }} .mps__slide--halloween .mps__btn{background:#f28c28;color:#1a1215}
+#mps-{{ section.id }} .mps__slide--halloween .mps__btn:focus-visible{outline-color:#f28c28}
+#mps-{{ section.id }} .mps__deco--halloween .mps__glow{background:radial-gradient(ellipse at 88% 4%,rgba(255,128,30,.34),transparent 46%),radial-gradient(ellipse at 6% 0%,rgba(128,60,180,.38),transparent 52%),radial-gradient(ellipse at 50% 120%,rgba(90,30,120,.35),transparent 60%);animation:mpsGlow-{{ section.id }} 6s ease-in-out infinite alternate}
+@keyframes mpsGlow-{{ section.id }}{from{opacity:.75}to{opacity:1}}
+#mps-{{ section.id }} .mps__web{position:absolute;top:0;width:clamp(84px,13vw,128px);height:auto;color:rgba(255,244,235,.42)}
+#mps-{{ section.id }} .mps__web--l{left:0}
+#mps-{{ section.id }} .mps__web--r{right:0;transform:scaleX(-1)}
+#mps-{{ section.id }} .mps__spider{position:absolute;top:0;right:clamp(54px,8vw,86px);display:block;animation:mpsSpider-{{ section.id }} 7s ease-in-out infinite alternate;transform-origin:50% 0}
+#mps-{{ section.id }} .mps__spider::before{content:"";position:absolute;left:50%;bottom:20px;width:1px;height:260px;background:rgba(255,244,235,.45)}
+#mps-{{ section.id }} .mps__spider svg{display:block;position:relative}
+@keyframes mpsSpider-{{ section.id }}{from{transform:translateY(18px) rotate(-2deg)}to{transform:translateY(70px) rotate(2deg)}}
+#mps-{{ section.id }} .mps__bat{position:absolute;left:0;width:100%;display:block;animation:mpsBat-{{ section.id }} var(--bd,18s) linear infinite;animation-delay:var(--bdl,0s)}
+#mps-{{ section.id }} .mps__bat svg{display:block;filter:drop-shadow(0 0 6px rgba(255,140,40,.35));animation:mpsFlap-{{ section.id }} .9s ease-in-out infinite alternate}
+#mps-{{ section.id }} .mps__bat--1{top:16%;--bd:17s;--bdl:-3s}
+#mps-{{ section.id }} .mps__bat--2{top:27%;--bd:23s;--bdl:-12s}
+#mps-{{ section.id }} .mps__bat--2 svg{width:24px;height:11px}
+#mps-{{ section.id }} .mps__bat--3{top:9%;--bd:28s;--bdl:-19s}
+#mps-{{ section.id }} .mps__bat--3 svg{width:20px;height:9px;opacity:.85}
+@keyframes mpsBat-{{ section.id }}{0%{transform:translate3d(-12%,0,0)}50%{transform:translate3d(48%,-14px,0)}100%{transform:translate3d(108%,6px,0)}}
+@keyframes mpsFlap-{{ section.id }}{from{transform:scaleY(1)}to{transform:scaleY(.55) translateY(2px)}}
+/* Black Friday */
+#mps-{{ section.id }} .mps__slide--black_friday .mps__ante{color:#e6c766;opacity:1}
+#mps-{{ section.id }} .mps__slide--black_friday .mps__title{color:#f5e3ad;position:relative;display:inline-block;overflow:hidden;padding-right:4px}
+#mps-{{ section.id }} .mps__slide--black_friday .mps__title::after{content:"";position:absolute;top:-20%;bottom:-20%;left:0;width:35%;background:linear-gradient(100deg,transparent,rgba(255,240,200,.55),transparent);transform:translateX(-120%) skewX(-18deg);animation:mpsShine-{{ section.id }} 4.5s ease-in-out infinite}
+@keyframes mpsShine-{{ section.id }}{0%,55%{transform:translateX(-120%) skewX(-18deg)}100%{transform:translateX(320%) skewX(-18deg)}}
+#mps-{{ section.id }} .mps__slide--black_friday .mps__btn{background:linear-gradient(135deg,#f1d77e,#c99a2e);color:#141113}
+#mps-{{ section.id }} .mps__slide--black_friday .mps__btn:focus-visible{outline-color:#e6c766}
+#mps-{{ section.id }} .mps__frame{position:absolute;inset:10px;border:1px solid rgba(214,177,80,.6);border-radius:14px}
+#mps-{{ section.id }} .mps__tag--bf{background:linear-gradient(135deg,#f1d77e,#c99a2e);color:#141113;border-radius:2px;box-shadow:0 6px 18px rgba(0,0,0,.35)}
+#mps-{{ section.id }} .mps__deco--bf .mps__glow{background:radial-gradient(ellipse at 85% 0%,rgba(214,177,80,.22),transparent 50%)}
+/* Navidad */
+#mps-{{ section.id }} .mps__slide--navidad .mps__ante{color:#f1d27a;opacity:1}
+#mps-{{ section.id }} .mps__slide--navidad .mps__btn{background:#f1d27a;color:#3a1620}
+#mps-{{ section.id }} .mps__slide--navidad .mps__btn:focus-visible{outline-color:#f1d27a}
+#mps-{{ section.id }} .mps__deco--navidad .mps__glow{background:radial-gradient(ellipse at 0% 0%,rgba(28,92,62,.45),transparent 50%),radial-gradient(ellipse at 100% 10%,rgba(241,210,122,.22),transparent 45%)}
+#mps-{{ section.id }} .mps__snow{position:absolute;inset:0;-webkit-mask-image:linear-gradient(#000 0,#000 40%,transparent 68%);mask-image:linear-gradient(#000 0,#000 40%,transparent 68%)}
+#mps-{{ section.id }} .mps__snow i{position:absolute;top:-8px;border-radius:50%;background:rgba(255,255,255,.88);box-shadow:0 0 4px rgba(255,255,255,.6);animation:mpsSnow-{{ section.id }} var(--d) linear infinite;animation-delay:var(--dl)}
+@keyframes mpsSnow-{{ section.id }}{from{transform:translate3d(0,0,0)}to{transform:translate3d(var(--dx),640px,0)}}
+#mps-{{ section.id }} .mps__spark{position:absolute;animation:mpsTwinkle-{{ section.id }} 2.8s ease-in-out infinite}
+#mps-{{ section.id }} .mps__spark--1{top:12%;left:58%}
+#mps-{{ section.id }} .mps__spark--2{top:22%;left:82%;animation-delay:-.9s;width:10px;height:10px}
+#mps-{{ section.id }} .mps__spark--3{top:8%;left:30%;animation-delay:-1.6s;width:9px;height:9px}
+#mps-{{ section.id }} .mps__spark--4{top:34%;left:68%;animation-delay:-2.2s;width:11px;height:11px}
+#mps-{{ section.id }} .mps__spark--5{top:16%;left:8%;animation-delay:-.4s;width:8px;height:8px}
+@keyframes mpsTwinkle-{{ section.id }}{0%,100%{opacity:.15;transform:scale(.6) rotate(0)}50%{opacity:1;transform:scale(1) rotate(20deg)}}
+/* Rebajas */
+#mps-{{ section.id }} .mps__slide--rebajas .mps__ante{color:#925b6d;opacity:1}
+#mps-{{ section.id }} .mps__slide--rebajas .mps__btn{background:#925b6d;color:#fff}
+#mps-{{ section.id }} .mps__tag--rebajas{background:#925b6d;color:#fff;border-radius:3px 999px 999px 3px;padding-right:18px;transform:rotate(-3deg);box-shadow:0 6px 16px rgba(53,43,48,.22)}
+#mps-{{ section.id }} .mps__confetti{position:absolute;inset:0;-webkit-mask-image:linear-gradient(#000 0,#000 38%,transparent 64%);mask-image:linear-gradient(#000 0,#000 38%,transparent 64%)}
+#mps-{{ section.id }} .mps__confetti i{position:absolute;top:-12px;width:7px;height:11px;border-radius:1px;animation:mpsConf-{{ section.id }} var(--d) linear infinite;animation-delay:var(--dl)}
+#mps-{{ section.id }} .mps__confetti i.t0{background:#925b6d}
+#mps-{{ section.id }} .mps__confetti i.t1{background:#d4af6a}
+#mps-{{ section.id }} .mps__confetti i.t2{background:#e7b9c3}
+@keyframes mpsConf-{{ section.id }}{from{transform:translate3d(0,0,0) rotate(var(--r))}to{transform:translate3d(14px,560px,0) rotate(calc(var(--r) + 540deg))}}
 @media(prefers-reduced-motion:reduce){
+  #mps-{{ section.id }} .mps__deco *,#mps-{{ section.id }} .mps__deco *::before,#mps-{{ section.id }} .mps__slide--black_friday .mps__title::after{animation:none!important}
+  #mps-{{ section.id }} .mps__bat,#mps-{{ section.id }} .mps__snow,#mps-{{ section.id }} .mps__confetti,#mps-{{ section.id }} .mps__slide--black_friday .mps__title::after{display:none}
+  #mps-{{ section.id }} .mps__spider{transform:translateY(40px)}
   #mps-{{ section.id }} .mps__slide,#mps-{{ section.id }} .mps__slide.is-active{transition:none}
   #mps-{{ section.id }} .mps__slide.is-active .mps__img,#mps-{{ section.id }} .mps__slide.is-active .mps__copy>*{animation:none}
 }
@@ -240,26 +333,40 @@
   #mps-{{ section.id }} .mps__copy{padding:20px 20px 62px}
   #mps-{{ section.id }} .mps__text{font-size:14px}
   #mps-{{ section.id }} .mps__nav{left:50%;right:auto;transform:translateX(-50%);bottom:12px}
+  #mps-{{ section.id }} .mps__tag{top:14px;left:14px;font-size:10px;padding:6px 11px}
+  #mps-{{ section.id }} .mps__web{width:84px}
 }
 </style>
-{%- if total > 1 -%}
 <script>
 (function(){
   var root=document.getElementById('mps-{{ section.id }}');
   if(!root||root.dataset.ready)return;root.dataset.ready='1';
-  var slides=root.querySelectorAll('.mps__slide'),dots=root.querySelectorAll('.mps__dot'),
-      play=root.querySelector('.mps__play'),n=slides.length,i=0,timer=null,
+  var track=root.querySelector('.mps__track'),dotsBox=root.querySelector('.mps__dots'),nav=root.querySelector('.mps__nav'),
+      play=root.querySelector('.mps__play'),i=0,timer=null,slides,dots=[],n,
       ms=parseInt(root.dataset.intervalo,10)||5500,
       reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches,
-      userPaused=reduce,hover=false,focus=false;
-  if(n<2)return;
+      userPaused=reduce,hover=false,focus=false,start=0;
+  /* Vista previa de temporada: ?mirea_tema=halloween|black_friday|navidad|rebajas (solo cambia lo que se ve) */
+  var tema=null;try{tema=new URLSearchParams(location.search).get('mirea_tema');}catch(e){}
+  if(tema&&/^[a-z_]{3,20}$/.test(tema)){
+    var tpl=root.querySelector('template.mps__tpl[data-tema="'+tema+'"]');
+    if(tpl){track.insertBefore(tpl.content.cloneNode(true),track.firstChild);}
+    else{var ya=track.querySelectorAll('.mps__slide');for(var q=0;q<ya.length;q++){if(ya[q].dataset.tema===tema){start=q;break;}}}
+  }
+  slides=track.querySelectorAll('.mps__slide');n=slides.length;
+  for(var j=0;j<n;j++){slides[j].dataset.i=j;slides[j].setAttribute('aria-label',(j+1)+' de '+n);}
+  if(n<2){if(nav)nav.hidden=true;if(slides[0]){slides[0].classList.add('is-active');slides[0].removeAttribute('inert');}return;}
+  nav.hidden=false;
+  for(var d=0;d<n;d++){(function(k){var b=document.createElement('button');b.type='button';b.className='mps__dot';
+    b.setAttribute('aria-label','Ver banner '+(k+1)+' de '+n);b.appendChild(document.createElement('span'));
+    b.addEventListener('click',function(){show(k);sync();});dotsBox.appendChild(b);dots.push(b);})(d);}
   function show(k){
     i=(k+n)%n;
     for(var j=0;j<n;j++){
       var on=j===i;
       slides[j].classList.toggle('is-active',on);
       if(on){slides[j].removeAttribute('inert');}else{slides[j].setAttribute('inert','');}
-      if(dots[j]){dots[j].classList.toggle('is-active',on);if(on){dots[j].setAttribute('aria-current','true');}else{dots[j].removeAttribute('aria-current');}}
+      dots[j].classList.toggle('is-active',on);if(on){dots[j].setAttribute('aria-current','true');}else{dots[j].removeAttribute('aria-current');}
       if(on){var img=slides[j].querySelector('img[loading="lazy"]');if(img)img.loading='eager';}
     }
     var nx=slides[(i+1)%n].querySelector('img[loading="lazy"]');if(nx)nx.loading='eager';
@@ -270,7 +377,6 @@
     if(play){play.setAttribute('aria-pressed',userPaused?'true':'false');play.setAttribute('aria-label',userPaused?'Reanudar el carrusel':'Pausar el carrusel');}}
   root.querySelector('.mps__prev').addEventListener('click',function(){show(i-1);sync();});
   root.querySelector('.mps__next').addEventListener('click',function(){show(i+1);sync();});
-  for(var d=0;d<dots.length;d++){(function(k){dots[k].addEventListener('click',function(){show(k);sync();});})(d);}
   if(play)play.addEventListener('click',function(){userPaused=!userPaused;sync();});
   root.addEventListener('mouseenter',function(){hover=true;sync();});
   root.addEventListener('mouseleave',function(){hover=false;sync();});
@@ -283,10 +389,9 @@
   root.addEventListener('touchend',function(e){if(x0===null)return;var t=e.changedTouches[0],dx=t.clientX-x0,dy=t.clientY-y0;x0=null;
     if(Math.abs(dx)>40&&Math.abs(dx)>Math.abs(dy)){show(dx<0?i+1:i-1);sync();}},{passive:true});
   if(window.Shopify&&Shopify.designMode){document.addEventListener('shopify:block:select',function(e){var s=e.target.closest&&e.target.closest('.mps__slide');if(s&&root.contains(s)){show(parseInt(s.dataset.i,10));hover=true;sync();}});}
-  sync();
+  show(start);sync();
 })();
 </script>
-{%- endif -%}
 {% schema %}
 {"name":"Mirea · Arranque tienda","tag":"section","max_blocks":50,"settings":[
 {"type":"text","id":"confianza_1","label":"Confianza 1","default":"🇪🇸 Envío rápido desde España"},
@@ -316,6 +421,7 @@
 {"type":"url","id":"enlace","label":"Enlace del botón"},
 {"type":"color","id":"fondo","label":"Color de fondo (también del degradado)","default":"#352b30"},
 {"type":"color","id":"color_texto","label":"Color del texto","default":"#fcf7f3"},
+{"type":"select","id":"tema","label":"Decoración de temporada","default":"ninguno","options":[{"value":"ninguno","label":"Ninguna"},{"value":"halloween","label":"Halloween (telarañas, araña, murciélagos)"},{"value":"black_friday","label":"Black Friday (negro y dorado)"},{"value":"navidad","label":"Navidad (nieve y destellos)"},{"value":"rebajas","label":"Rebajas (confeti y etiqueta)"}],"info":"Para verlo antes de su fecha: añade ?mirea_tema=black_friday (o halloween, navidad, rebajas) a la URL de la vista previa."},
 {"type":"header","content":"Cuándo se ve"},
 {"type":"text","id":"inicio","label":"Fecha de inicio (AAAA-MM-DD)","info":"Vacío = desde ya."},
 {"type":"text","id":"fin","label":"Fecha de fin (AAAA-MM-DD)","info":"Vacío = sin fin. El banner se ve también el día de fin."},
