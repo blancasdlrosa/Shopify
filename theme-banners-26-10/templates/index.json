@@ -251,6 +251,74 @@
             "siempre": true,
             "tema": "ninguno"
           }
+        },
+        "promo_marca_anua": {
+          "type": "promo",
+          "settings": {
+            "imagen": "shopify://shop_images/0014-3384973250943254996.jpg",
+            "antetitulo": "Marca · Anua",
+            "titulo": "Anua · Heartleaf para pieles sensibles.",
+            "texto": "Su tónico Heartleaf 77% y la línea de heartleaf, originales de Corea.",
+            "boton": "Ver Anua",
+            "enlace": "/collections/anua",
+            "fondo": "#eef1ea",
+            "color_texto": "#352b30",
+            "inicio": "",
+            "fin": "",
+            "siempre": true,
+            "tema": "ninguno"
+          }
+        },
+        "promo_marca_medicube": {
+          "type": "promo",
+          "settings": {
+            "imagen": "shopify://shop_images/0020-3384973250943254996.jpg",
+            "antetitulo": "Marca · medicube",
+            "titulo": "medicube · la marca viral de Corea.",
+            "texto": "PDRN Pink, Zero Pore y otros favoritos de la marca.",
+            "boton": "Ver medicube",
+            "enlace": "/collections/medicube",
+            "fondo": "#f8eaee",
+            "color_texto": "#352b30",
+            "inicio": "",
+            "fin": "",
+            "siempre": true,
+            "tema": "ninguno"
+          }
+        },
+        "promo_marca_boj": {
+          "type": "promo",
+          "settings": {
+            "imagen": "shopify://shop_images/0018-3384973250943254996.jpg",
+            "antetitulo": "Marca · Beauty of Joseon",
+            "titulo": "Beauty of Joseon · tradición coreana, fórmulas actuales.",
+            "texto": "Glow Serum, Relief Sun y más, con arroz, ginseng o propóleo.",
+            "boton": "Ver Beauty of Joseon",
+            "enlace": "/collections/beauty-of-joseon",
+            "fondo": "#f5eee4",
+            "color_texto": "#352b30",
+            "inicio": "",
+            "fin": "",
+            "siempre": true,
+            "tema": "ninguno"
+          }
+        },
+        "promo_marca_skin1004": {
+          "type": "promo",
+          "settings": {
+            "imagen": "shopify://shop_images/0016-3384973250943254996.jpg",
+            "antetitulo": "Marca · SKIN1004",
+            "titulo": "SKIN1004 · centella de Madagascar.",
+            "texto": "La Centella Ampoule y toda su línea con centella asiática.",
+            "boton": "Ver SKIN1004",
+            "enlace": "/collections/skin1004",
+            "fondo": "#edf1ec",
+            "color_texto": "#352b30",
+            "inicio": "",
+            "fin": "",
+            "siempre": true,
+            "tema": "ninguno"
+          }
         }
       },
       "block_order": [
@@ -258,6 +326,10 @@
         "promo_black_friday",
         "promo_navidad",
         "promo_rebajas",
+        "promo_marca_anua",
+        "promo_marca_medicube",
+        "promo_marca_boj",
+        "promo_marca_skin1004",
         "promo_envio_gratis",
         "promo_corea",
         "promo_espana",
@@ -746,7 +818,8 @@
         "c3",
         "c4"
       ],
-      "settings": {}
+      "settings": {},
+      "disabled": true
     },
     "mirea_portada_partida": {
       "type": "mirea-portada-partida",
@@ -760,7 +833,8 @@
         "todos_los_packs": true,
         "coleccion": "rutinas",
         "cuantos": 13
-      }
+      },
+      "disabled": true
     },
     "mirea_home_aparatos": {
       "type": "mirea-home-aparatos",
@@ -772,7 +846,8 @@
         "boton": "Ver todos los aparatos",
         "coleccion": "aparatos-de-belleza",
         "cuantos": 12
-      }
+      },
+      "disabled": true
     },
     "mirea_imprescindibles": {
       "type": "mirea-home-imprescindibles",
@@ -804,7 +879,8 @@
         "boton": "Hacer el test",
         "enlace": "/pages/encuentra-tu-rutina",
         "coleccion": "rutinas"
-      }
+      },
+      "disabled": true
     },
     "mirea_carrusel_novedades": {
       "type": "mirea-carrusel-luxe",
@@ -866,7 +942,8 @@
       "settings": {
         "espacio_arriba": 30,
         "espacio_abajo": 30
-      }
+      },
+      "disabled": true
     },
     "mirea_perfumes_arabes": {
       "type": "mirea-perfumes-duo",
@@ -899,7 +976,8 @@
         "button_2": "Descubrir",
         "link_2": "/collections/tratar",
         "note": "Guarda tus productos en Mis rutinas con el ♡ y ordénalos paso a paso."
-      }
+      },
+      "disabled": true
     },
     "mirea_guias_luxe": {
       "type": "mirea-guias-luxe",
@@ -922,7 +1000,8 @@
         "ancho": 1080,
         "espacio_arriba": 0,
         "espacio_abajo": 15
-      }
+      },
+      "disabled": true
     },
     "mirea_productos_WFkrxe": {
       "type": "mirea-productos",
@@ -1047,7 +1126,8 @@
         "titulo_3": "Compra tranquila",
         "texto_3": "Pago seguro, envío con seguimiento y atención por personas reales.",
         "enlace_3": ""
-      }
+      },
+      "disabled": true
     },
     "mirea_experiencias_cards": {
       "type": "mirea-experiencias-cards",
@@ -1099,7 +1179,8 @@
       ],
       "settings": {
         "titulo": "Mucho más que productos"
-      }
+      },
+      "disabled": true
     },
     "mirea_experiencias_mkikaq": {
       "type": "mirea-experiencias",
@@ -1119,7 +1200,8 @@
         "ancho": 1180,
         "espacio_arriba": 70,
         "espacio_abajo": 80
-      }
+      },
+      "disabled": true
     },
     "mirea_cierre_ggB8tq": {
       "type": "mirea-cierre",
@@ -1174,7 +1256,8 @@
         "padding_bottom": 12,
         "padding_top_mobile": 28,
         "padding_bottom_mobile": 20
-      }
+      },
+      "disabled": true
     },
     "mirea_base_finder": {
       "type": "mirea-base-finder",
@@ -1215,34 +1298,35 @@
           "erborian-cc-red-correct-15ml",
           "clio-kill-cover-high-glow-foundation-38g"
         ]
-      }
+      },
+      "disabled": true
     }
   },
   "order": [
     "mirea_portada_tienda",
-    "mirea_hero_lux_proto",
     "mirea_tienda_corea",
     "mirea_tienda_espana",
     "mirea_necesidades_yRix6d",
+    "mirea_imprescindibles",
+    "mirea_carrusel_novedades",
+    "mirea_productos_WFkrxe",
+    "mirea_perfumes_arabes",
+    "mirea_marcas_home",
+    "mirea_promo_tramos",
+    "mirea_diario_UTeqeD",
+    "mirea_cierre_ggB8tq",
+    "mirea_hero_lux_proto",
     "mirea_dos_tarjetas",
     "mirea_base_finder",
     "mirea_portada_partida",
     "mirea_home_aparatos",
-    "mirea_imprescindibles",
     "mirea_rutina_banner",
-    "mirea_carrusel_novedades",
     "mirea_collective_rituales",
-    "mirea_perfumes_arabes",
     "mirea_home_cremas_espana",
     "mirea_duo_lujo",
     "mirea_guias_luxe",
-    "mirea_productos_WFkrxe",
-    "mirea_marcas_home",
-    "mirea_promo_tramos",
-    "mirea_diario_UTeqeD",
     "mirea_por_que",
     "mirea_experiencias_cards",
-    "mirea_experiencias_mkikaq",
-    "mirea_cierre_ggB8tq"
+    "mirea_experiencias_mkikaq"
   ]
 }
