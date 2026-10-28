@@ -146,7 +146,8 @@
             "color_texto": "#f7f0ea",
             "inicio": "2026-10-20",
             "fin": "2026-10-31",
-            "siempre": false
+            "siempre": false,
+            "tema": "halloween"
           }
         },
         "promo_black_friday": {
@@ -162,7 +163,8 @@
             "color_texto": "#ffffff",
             "inicio": "2026-11-20",
             "fin": "2026-11-30",
-            "siempre": false
+            "siempre": false,
+            "tema": "black_friday"
           }
         },
         "promo_navidad": {
@@ -178,7 +180,8 @@
             "color_texto": "#f7efe6",
             "inicio": "2026-12-01",
             "fin": "2026-12-24",
-            "siempre": false
+            "siempre": false,
+            "tema": "navidad"
           }
         },
         "promo_rebajas": {
@@ -194,7 +197,8 @@
             "color_texto": "#352b30",
             "inicio": "2027-01-07",
             "fin": "2027-02-28",
-            "siempre": false
+            "siempre": false,
+            "tema": "rebajas"
           }
         },
         "promo_envio_gratis": {
@@ -210,7 +214,8 @@
             "color_texto": "#352b30",
             "inicio": "",
             "fin": "",
-            "siempre": true
+            "siempre": true,
+            "tema": "ninguno"
           }
         },
         "promo_corea": {
@@ -226,7 +231,8 @@
             "color_texto": "#fcf7f3",
             "inicio": "",
             "fin": "",
-            "siempre": true
+            "siempre": true,
+            "tema": "ninguno"
           }
         },
         "promo_espana": {
@@ -242,7 +248,8 @@
             "color_texto": "#352b30",
             "inicio": "",
             "fin": "",
-            "siempre": true
+            "siempre": true,
+            "tema": "ninguno"
           }
         }
       },
