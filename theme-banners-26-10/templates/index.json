@@ -349,7 +349,8 @@
         "color_acento": "#925b6d",
         "color_linea": "#e1cbc6",
         "ancho": 900
-      }
+      },
+      "disabled": true
     },
     "mirea_necesidades_yRix6d": {
       "type": "mirea-necesidades",
