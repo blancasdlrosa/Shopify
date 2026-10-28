@@ -999,3 +999,11 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - **Para activarlo (Blanca):** Klaviyo › Flows › Browse Abandonment (WG9Nr7) › revisar el email › ponerlo en "Live" › arriba, flow en "Live".
   - Opcional, a mano (la API no deja cambiar filtros): añadir al filtro del flow "Added to Cart = 0 desde que entra", para que quien añade al carrito reciba solo el email de carrito (TX2NFZ). Smart Sending ya evita dos emails en menos de 16 h.
   - Volver atrás: en la acción 118024658 poner otra vez la plantilla UgGShZ.
+
+## 28-10 · Piloto: 20 títulos de producto traducidos al español
+- Aprobado por Blanca. Solo se cambia el `title` (productUpdate). Handles/URLs, SKUs, precios, descripciones, etiquetas, variantes y SEO meta **sin tocar**. Formato: "Marca + nombre real + descripción en español · tamaño" (coma decimal, "tonos" en vez de "shades/colors"). Ningún claim nuevo.
+- Selección: activos y con stock; por ventas (analytics 365 d), sesiones de entrada (90 d), colección virales-en-tiktok y marcas top.
+- Origen detectado por la ubicación de inventario: "Rinconada 12" = **Korealy** (17); "Maymoo via Shopify Collective" + etiqueta "Shopify Collective" = **Collective** (3, a propósito para ver si el proveedor los pisa: COSRX Advanced Snail 96, BoJ Relief Sun Rice + Probiotics, medicube Collagen Lifting Mask).
+- Copia para volver atrás: `docs/seo/titulos_piloto_2810.csv` (id, handle, vendor, origen, título antiguo y nuevo). Para revertir: productUpdate con `title = titulo_antiguo` de cada fila.
+- Comprobado al releer los 20: título nuevo guardado, handle igual, todos ACTIVE. Sin errores.
+- **Recheck programado el 30-10 (16:30 UTC)** (tarea trig_01WZvp2d64BNqRcRWsHQETYN): ¿algún título ha vuelto al inglés por la sincronización de Korealy/Collective? Si los Collective se revierten, no traducir más Collective y pedírselo al proveedor.
