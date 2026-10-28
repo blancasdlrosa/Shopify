@@ -1,0 +1,39 @@
+{%- comment -%}
+  26-10 Mirea · una diapositiva del carrusel de banners (lo usa sections/mirea-portada-tienda.liquid).
+  Parámetros: indice (0 = primera, se carga sin lazy), total, imagen, imagen_movil, antetitulo, titulo, texto,
+  boton, enlace, fondo, color, atributos (block.shopify_attributes), sid (id de la sección).
+{%- endcomment -%}
+{%- liquid
+  assign fondo = fondo | default: '#352b30'
+  assign color = color | default: '#fcf7f3'
+  assign f0 = fondo | color_modify: 'alpha', 0
+  assign f55 = fondo | color_modify: 'alpha', 0.55
+  assign f92 = fondo | color_modify: 'alpha', 0.92
+  if indice == 0
+    assign carga = 'eager'
+    assign prioridad = 'high'
+  else
+    assign carga = 'lazy'
+    assign prioridad = 'auto'
+  endif
+  assign num = indice | plus: 1
+-%}
+<div class="mps__slide{% if indice == 0 %} is-active{% endif %}" role="group" aria-roledescription="diapositiva" aria-label="{{ num }} de {{ total }}" data-i="{{ indice }}" style="--f:{{ fondo }};--c:{{ color }};--f0:{{ f0 }};--f55:{{ f55 }};--f92:{{ f92 }}" {{ atributos }}{% if indice != 0 %} inert{% endif %}>
+  {%- if imagen != blank -%}
+    <picture class="mps__media">
+      {%- if imagen_movil != blank -%}
+        <source media="(max-width: 749px)" srcset="{{ imagen_movil | image_url: width: 600 }} 600w, {{ imagen_movil | image_url: width: 900 }} 900w" sizes="100vw">
+      {%- endif -%}
+      {{ imagen | image_url: width: 1400 | image_tag: widths: '500, 700, 900, 1200, 1400', sizes: '(min-width: 900px) 46vw, 100vw', loading: carga, fetchpriority: prioridad, alt: '', class: 'mps__img' }}
+    </picture>
+  {%- endif -%}
+  <div class="mps__shade" aria-hidden="true"></div>
+  <div class="mps__copy">
+    {%- if antetitulo != blank -%}<p class="mps__ante">{{ antetitulo }}</p>{%- endif -%}
+    {%- if titulo != blank -%}<p class="mps__title">{{ titulo }}</p>{%- endif -%}
+    {%- if texto != blank -%}<p class="mps__text">{{ texto }}</p>{%- endif -%}
+    {%- if boton != blank and enlace != blank -%}
+      <a class="mps__btn" href="{{ enlace }}">{{ boton }}<svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    {%- endif -%}
+  </div>
+</div>

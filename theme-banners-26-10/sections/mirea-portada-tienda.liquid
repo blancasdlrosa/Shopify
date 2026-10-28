@@ -1,0 +1,329 @@
+{%- comment -%}
+  17-10 Mirea · arranque de la portada: deja claro qué vendemos nada más entrar.
+  Titular + 2 botones (Desde Corea / Desde España) + línea de confianza.
+  18-10: sin franja negra (la confianza va en una línea suave bajo los botones) y fila de iconos redondos
+  tipo Primor (bloque "acceso": foto del producto elegido, o del primer producto con stock de la colección).
+  26-10: el buscador grande sale de la columna derecha → barra fina encima de los iconos.
+  En su sitio: carrusel de banners por temporada (bloque "Banner promo"), con fechas de inicio/fin
+  (AAAA-MM-DD) y opción "Mostrar siempre". Si ningún banner está activo, salen 2 banners de reserva.
+  Ojo: Shopify guarda las páginas en caché, así que un cambio de fecha puede tardar un rato en verse.
+{%- endcomment -%}
+{%- liquid
+  assign hoy = 'now' | date: '%Y%m%d' | plus: 0
+  assign activos = 0
+  assign hay_accesos = false
+  for block in section.blocks
+    if block.type == 'acceso'
+      assign hay_accesos = true
+    elsif block.type == 'promo'
+      assign ini = block.settings.inicio | strip | remove: '-' | plus: 0
+      assign fin = block.settings.fin | strip | remove: '-' | plus: 0
+      if fin == 0
+        assign fin = 99999999
+      endif
+      if block.settings.siempre or hoy >= ini and hoy <= fin
+        assign activos = activos | plus: 1
+      endif
+    endif
+  endfor
+  if activos == 0
+    assign total = 2
+  else
+    assign total = activos
+  endif
+-%}
+<section class="mpt" id="mpt-{{ section.id }}">
+  <div class="mpt__wrap">
+    <div class="mpt__copy">
+      {%- if section.settings.antetitulo != blank -%}<p class="mpt__ante">{{ section.settings.antetitulo }}</p>{%- endif -%}
+      <h2 class="mpt__title">{{ section.settings.titulo }}</h2>
+      <div class="mpt__btns">
+        {%- if section.settings.boton_1 != blank -%}<a class="mpt__btn mpt__btn--dark" href="{{ section.settings.enlace_1 }}">{{ section.settings.boton_1 }}</a>{%- endif -%}
+        {%- if section.settings.boton_2 != blank -%}<a class="mpt__btn mpt__btn--line" href="{{ section.settings.enlace_2 }}">{{ section.settings.boton_2 }}</a>{%- endif -%}
+      </div>
+      <ul class="mpt__trust list-unstyled">
+        {%- for i in (1..4) -%}
+          {%- assign k = 'confianza_' | append: i -%}
+          {%- if section.settings[k] != blank -%}<li>{{ section.settings[k] }}</li>{%- endif -%}
+        {%- endfor -%}
+      </ul>
+    </div>
+
+    <div class="mps" id="mps-{{ section.id }}" role="region" aria-roledescription="carrusel" aria-label="Novedades y promociones Mirea" data-intervalo="{{ section.settings.intervalo | times: 1000 }}">
+      <div class="mps__track">
+        {%- if activos > 0 -%}
+          {%- assign n = 0 -%}
+          {%- for block in section.blocks -%}
+            {%- if block.type != 'promo' -%}{%- continue -%}{%- endif -%}
+            {%- liquid
+              assign ini = block.settings.inicio | strip | remove: '-' | plus: 0
+              assign fin = block.settings.fin | strip | remove: '-' | plus: 0
+              if fin == 0
+                assign fin = 99999999
+              endif
+              assign ver = false
+              if block.settings.siempre or hoy >= ini and hoy <= fin
+                assign ver = true
+              endif
+            -%}
+            {%- if ver -%}
+              {%- render 'mirea-promo-slide',
+                indice: n, total: total,
+                imagen: block.settings.imagen, imagen_movil: block.settings.imagen_movil,
+                antetitulo: block.settings.antetitulo, titulo: block.settings.titulo, texto: block.settings.texto,
+                boton: block.settings.boton, enlace: block.settings.enlace,
+                fondo: block.settings.fondo, color: block.settings.color_texto,
+                atributos: block.shopify_attributes
+              -%}
+              {%- assign n = n | plus: 1 -%}
+            {%- endif -%}
+          {%- endfor -%}
+        {%- else -%}
+          {%- comment -%} Reserva: banners fijos si no hay ninguno activo. {%- endcomment -%}
+          {%- render 'mirea-promo-slide', indice: 0, total: 2,
+            imagen: images['Imagen_de_ChatGPT_28_sept_2026_12_53_18.png'],
+            antetitulo: '🇰🇷 Desde Corea', titulo: 'K-beauty original de Corea.',
+            texto: 'Las marcas que buscas, directas de Corea del Sur.',
+            boton: 'Productos coreanos', enlace: '/collections/desde-corea',
+            fondo: '#352b30', color: '#fcf7f3' -%}
+          {%- render 'mirea-promo-slide', indice: 1, total: 2,
+            imagen: images['ChatGPT_Image_20_sept_2026_15_00_31.png'],
+            antetitulo: 'Envío gratis', titulo: 'Envío gratis en España desde 69 €.',
+            texto: 'En tarifas elegibles. Pago seguro y seguimiento de tu pedido.',
+            boton: 'Ver envíos', enlace: '/pages/envios-y-devoluciones',
+            fondo: '#fcf7f3', color: '#352b30' -%}
+        {%- endif -%}
+      </div>
+      {%- if total > 1 -%}
+        <div class="mps__nav">
+          <button type="button" class="mps__arrow mps__prev" aria-label="Banner anterior"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m15 6-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="mps__dots">
+            {%- for i in (1..total) -%}
+              <button type="button" class="mps__dot{% if forloop.first %} is-active{% endif %}" aria-label="Ver banner {{ i }} de {{ total }}"{% if forloop.first %} aria-current="true"{% endif %}><span></span></button>
+            {%- endfor -%}
+          </div>
+          <button type="button" class="mps__arrow mps__next" aria-label="Banner siguiente"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m9 6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button type="button" class="mps__arrow mps__play" aria-label="Pausar el carrusel" aria-pressed="false">
+            <svg class="mps__i-pause" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3v14H7zM14 5h3v14h-3z" fill="currentColor"/></svg>
+            <svg class="mps__i-play" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
+          </button>
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+
+  {%- if section.settings.mostrar_buscador -%}
+    <div class="mpt__searchbar">
+      <form action="{{ routes.search_url }}" method="get" role="search" class="mpt__form">
+        <input type="hidden" name="options[prefix]" value="last">
+        <label class="visually-hidden" for="mpt-q-{{ section.id }}">Buscar productos, marcas o ingredientes</label>
+        <svg class="mpt__lupa" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.8"/><path d="m20 20-3.5-3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <input id="mpt-q-{{ section.id }}" type="search" name="q" placeholder="{{ section.settings.buscador | escape }}" autocomplete="off">
+        <button type="submit">Buscar</button>
+      </form>
+    </div>
+  {%- endif -%}
+
+  {%- if hay_accesos -%}
+    <div class="mpt__icons">
+      <ul class="list-unstyled">
+        {%- for block in section.blocks -%}
+          {%- if block.type != 'acceso' -%}{%- continue -%}{%- endif -%}
+          {%- liquid
+            assign c = block.settings.coleccion
+            assign img = blank
+            if block.settings.producto != blank and block.settings.producto.featured_image
+              assign img = block.settings.producto.featured_image
+            elsif c != blank
+              for p in c.products limit: 20
+                if p.available and p.featured_image
+                  assign img = p.featured_image
+                  break
+                endif
+              endfor
+              if img == blank
+                assign img = c.image
+              endif
+            endif
+            assign href = block.settings.enlace | default: c.url
+          -%}
+          <li {{ block.shopify_attributes }}>
+            <a href="{{ href }}">
+              <span class="mpt__ic">{%- if img != blank -%}{{ img | image_url: width: 180, height: 180, crop: 'center' | image_tag: loading: 'lazy', alt: block.settings.texto }}{%- endif -%}</span>
+              <span class="mpt__il">{{ block.settings.texto }}</span>
+            </a>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </div>
+  {%- endif -%}
+</section>
+<style>
+#mpt-{{ section.id }}{background:#fff;color:#1f191c}
+#mpt-{{ section.id }} *{box-sizing:border-box}
+#mpt-{{ section.id }} .mpt__wrap{width:min(calc(100% - 40px),1280px);margin:0 auto;padding:clamp(22px,3vw,36px) 0 clamp(14px,2vw,22px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(20px,4vw,56px);align-items:center}
+#mpt-{{ section.id }} .mpt__ante{margin:0 0 8px;font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:#8f5d6c}
+#mpt-{{ section.id }} .mpt__title{margin:0;font-family:"Cormorant Garamond","Iowan Old Style",Georgia,serif;font-weight:400;font-size:clamp(30px,3.6vw,52px);line-height:1.02;letter-spacing:-.01em}
+#mpt-{{ section.id }} .mpt__btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+#mpt-{{ section.id }} .mpt__btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:14px 26px;border-radius:999px;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;transition:background .2s,color .2s}
+#mpt-{{ section.id }} .mpt__btn--dark{background:#1f191c;color:#fff;border:1.5px solid #1f191c}
+#mpt-{{ section.id }} .mpt__btn--dark:hover{background:#8f5d6c;border-color:#8f5d6c}
+#mpt-{{ section.id }} .mpt__btn--line{background:#fff;color:#1f191c;border:1.5px solid #1f191c}
+#mpt-{{ section.id }} .mpt__btn--line:hover{background:#1f191c;color:#fff}
+#mpt-{{ section.id }} .mpt__trust{display:flex;flex-wrap:wrap;gap:6px 18px;margin:16px 0 0;padding:0}
+#mpt-{{ section.id }} .mpt__trust li{font-size:12.5px;color:#6f6468}
+#mpt-{{ section.id }} .mpt__trust li+li::before{content:"·";margin-right:18px;color:#c9b8bd}
+#mpt-{{ section.id }} .mpt__trust li+li{display:inline-flex}
+/* Buscador fino encima de los iconos */
+#mpt-{{ section.id }} .mpt__searchbar{width:min(calc(100% - 40px),640px);margin:4px auto 16px}
+#mpt-{{ section.id }} .mpt__form{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid #e1cbc6;border-radius:999px;padding:3px 3px 3px 16px;transition:border-color .2s,box-shadow .2s}
+#mpt-{{ section.id }} .mpt__form:focus-within{border-color:#925b6d;box-shadow:0 0 0 3px rgba(146,91,109,.15)}
+#mpt-{{ section.id }} .mpt__lupa{flex:0 0 auto;color:#715b63}
+#mpt-{{ section.id }} .mpt__form input[type=search]{flex:1;min-width:0;border:0;outline:0;background:transparent;font:inherit;font-size:16px;padding:9px 0;color:#352b30}
+#mpt-{{ section.id }} .mpt__form input[type=search]::placeholder{color:#7a6870;opacity:1}
+#mpt-{{ section.id }} .mpt__form button{flex:0 0 auto;height:38px;padding:0 18px;border:0;border-radius:999px;background:#352b30;color:#fff;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;transition:background .2s}
+#mpt-{{ section.id }} .mpt__form button:hover,#mpt-{{ section.id }} .mpt__form button:focus-visible{background:#925b6d}
+#mpt-{{ section.id }} .mpt__icons{border-top:1px solid #f0e6e3;border-bottom:1px solid #f0e6e3}
+#mpt-{{ section.id }} .mpt__icons ul{display:flex;gap:clamp(14px,2vw,26px);overflow-x:auto;scrollbar-width:none;margin:0 auto;padding:18px 20px 16px;width:max-content;max-width:100%}
+#mpt-{{ section.id }} .mpt__icons ul::-webkit-scrollbar{display:none}
+#mpt-{{ section.id }} .mpt__icons li{flex:0 0 auto}
+#mpt-{{ section.id }} .mpt__icons a{display:flex;flex-direction:column;align-items:center;gap:8px;width:84px;color:#1f191c;text-decoration:none;text-align:center}
+#mpt-{{ section.id }} .mpt__ic{width:64px;height:64px;border-radius:50%;overflow:hidden;background:#fff;border:1px solid #e6dcdf;display:block;transition:border-color .2s}
+#mpt-{{ section.id }} .mpt__ic img{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.15);margin:0;max-width:none}
+#mpt-{{ section.id }} .mpt__icons a:hover .mpt__ic{border-color:#1f191c}
+#mpt-{{ section.id }} .mpt__il{font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;line-height:1.25}
+/* Carrusel de banners */
+#mps-{{ section.id }}{position:relative;border-radius:22px;overflow:hidden;background:#352b30;isolation:isolate}
+#mps-{{ section.id }} .mps__track{position:relative;aspect-ratio:16/11}
+#mps-{{ section.id }} .mps__slide{position:absolute;inset:0;background:var(--f);color:var(--c);opacity:0;visibility:hidden;transition:opacity .9s ease,visibility 0s linear .9s;display:flex;align-items:flex-end}
+#mps-{{ section.id }} .mps__slide.is-active{opacity:1;visibility:visible;transition:opacity .9s ease,visibility 0s;z-index:1}
+#mps-{{ section.id }} .mps__media,#mps-{{ section.id }} .mps__img{position:absolute;inset:0;width:100%;height:100%;display:block}
+#mps-{{ section.id }} .mps__img{object-fit:cover;object-position:center;transform:scale(1.02);will-change:transform}
+#mps-{{ section.id }} .mps__slide.is-active .mps__img{animation:mpsKen-{{ section.id }} 9s ease-out forwards}
+@keyframes mpsKen-{{ section.id }}{from{transform:scale(1.02)}to{transform:scale(1.1)}}
+#mps-{{ section.id }} .mps__shade{position:absolute;inset:0;background:linear-gradient(to top,var(--f92) 0%,var(--f92) 30%,var(--f55) 58%,var(--f0) 82%)}
+#mps-{{ section.id }} .mps__copy{position:relative;z-index:1;padding:clamp(20px,3vw,34px) clamp(20px,3vw,34px) 64px;max-width:34em}
+#mps-{{ section.id }} .mps__ante{margin:0 0 8px;font-size:11px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;opacity:.92}
+#mps-{{ section.id }} .mps__title{margin:0;font-family:"Cormorant Garamond","Iowan Old Style",Georgia,serif;font-weight:400;font-size:clamp(26px,2.6vw,40px);line-height:1.05;letter-spacing:-.01em}
+#mps-{{ section.id }} .mps__text{margin:10px 0 0;font-size:14.5px;line-height:1.5}
+#mps-{{ section.id }} .mps__btn{display:inline-flex;align-items:center;gap:8px;margin-top:16px;padding:12px 22px;border-radius:999px;background:var(--c);color:var(--f);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;transition:transform .2s,opacity .2s}
+#mps-{{ section.id }} .mps__btn:hover{transform:translateY(-1px);opacity:.92}
+#mps-{{ section.id }} .mps__slide.is-active .mps__copy>*{animation:mpsUp-{{ section.id }} .8s cubic-bezier(.2,.7,.2,1) both}
+#mps-{{ section.id }} .mps__slide.is-active .mps__copy>*:nth-child(2){animation-delay:.08s}
+#mps-{{ section.id }} .mps__slide.is-active .mps__copy>*:nth-child(3){animation-delay:.16s}
+#mps-{{ section.id }} .mps__slide.is-active .mps__copy>*:nth-child(4){animation-delay:.24s}
+@keyframes mpsUp-{{ section.id }}{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+#mps-{{ section.id }} .mps__nav{position:absolute;z-index:3;right:14px;bottom:14px;display:flex;align-items:center;gap:6px;padding:5px;border-radius:999px;background:rgba(255,255,255,.88);color:#352b30;backdrop-filter:blur(6px)}
+#mps-{{ section.id }} .mps__arrow{width:30px;height:30px;border:0;border-radius:50%;background:transparent;color:inherit;display:grid;place-items:center;cursor:pointer;padding:0}
+#mps-{{ section.id }} .mps__arrow:hover{background:#f3e9e6}
+#mps-{{ section.id }} .mps__dots{display:flex;align-items:center}
+#mps-{{ section.id }} .mps__dot{width:22px;height:30px;border:0;background:transparent;padding:0;display:grid;place-items:center;cursor:pointer}
+#mps-{{ section.id }} .mps__dot span{display:block;width:7px;height:7px;border-radius:999px;background:#c9b3ba;transition:width .3s,background .3s}
+#mps-{{ section.id }} .mps__dot.is-active span{width:18px;background:#925b6d}
+#mps-{{ section.id }} .mps__i-play{display:none}
+#mps-{{ section.id }}.is-paused .mps__i-play{display:block}
+#mps-{{ section.id }}.is-paused .mps__i-pause{display:none}
+#mps-{{ section.id }} button:focus-visible,#mps-{{ section.id }} a:focus-visible,#mpt-{{ section.id }} .mpt__form button:focus-visible{outline:2px solid #925b6d;outline-offset:2px}
+#mps-{{ section.id }} .mps__btn:focus-visible{outline-color:var(--c)}
+@media(prefers-reduced-motion:reduce){
+  #mps-{{ section.id }} .mps__slide,#mps-{{ section.id }} .mps__slide.is-active{transition:none}
+  #mps-{{ section.id }} .mps__slide.is-active .mps__img,#mps-{{ section.id }} .mps__slide.is-active .mps__copy>*{animation:none}
+}
+@media(max-width:899px){#mpt-{{ section.id }} .mpt__wrap{grid-template-columns:1fr}}
+@media(max-width:749px){
+  #mpt-{{ section.id }} .mpt__wrap{width:calc(100% - 24px);gap:18px}
+  #mpt-{{ section.id }} .mpt__btn{flex:1;padding:13px 14px}
+  #mpt-{{ section.id }} .mpt__icons ul{padding:14px 12px}
+  #mpt-{{ section.id }} .mpt__searchbar{width:calc(100% - 24px);margin:2px auto 12px}
+  #mps-{{ section.id }}{border-radius:18px}
+  #mps-{{ section.id }} .mps__track{aspect-ratio:4/5}
+  #mps-{{ section.id }} .mps__copy{padding:20px 20px 62px}
+  #mps-{{ section.id }} .mps__text{font-size:14px}
+  #mps-{{ section.id }} .mps__nav{left:50%;right:auto;transform:translateX(-50%);bottom:12px}
+}
+</style>
+{%- if total > 1 -%}
+<script>
+(function(){
+  var root=document.getElementById('mps-{{ section.id }}');
+  if(!root||root.dataset.ready)return;root.dataset.ready='1';
+  var slides=root.querySelectorAll('.mps__slide'),dots=root.querySelectorAll('.mps__dot'),
+      play=root.querySelector('.mps__play'),n=slides.length,i=0,timer=null,
+      ms=parseInt(root.dataset.intervalo,10)||5500,
+      reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+      userPaused=reduce,hover=false,focus=false;
+  if(n<2)return;
+  function show(k){
+    i=(k+n)%n;
+    for(var j=0;j<n;j++){
+      var on=j===i;
+      slides[j].classList.toggle('is-active',on);
+      if(on){slides[j].removeAttribute('inert');}else{slides[j].setAttribute('inert','');}
+      if(dots[j]){dots[j].classList.toggle('is-active',on);if(on){dots[j].setAttribute('aria-current','true');}else{dots[j].removeAttribute('aria-current');}}
+      if(on){var img=slides[j].querySelector('img[loading="lazy"]');if(img)img.loading='eager';}
+    }
+    var nx=slides[(i+1)%n].querySelector('img[loading="lazy"]');if(nx)nx.loading='eager';
+  }
+  function stop(){if(timer){clearInterval(timer);timer=null;}}
+  function sync(){stop();if(!userPaused&&!hover&&!focus&&!document.hidden){timer=setInterval(function(){show(i+1);},ms);}
+    root.classList.toggle('is-paused',userPaused);
+    if(play){play.setAttribute('aria-pressed',userPaused?'true':'false');play.setAttribute('aria-label',userPaused?'Reanudar el carrusel':'Pausar el carrusel');}}
+  root.querySelector('.mps__prev').addEventListener('click',function(){show(i-1);sync();});
+  root.querySelector('.mps__next').addEventListener('click',function(){show(i+1);sync();});
+  for(var d=0;d<dots.length;d++){(function(k){dots[k].addEventListener('click',function(){show(k);sync();});})(d);}
+  if(play)play.addEventListener('click',function(){userPaused=!userPaused;sync();});
+  root.addEventListener('mouseenter',function(){hover=true;sync();});
+  root.addEventListener('mouseleave',function(){hover=false;sync();});
+  root.addEventListener('focusin',function(){focus=true;sync();});
+  root.addEventListener('focusout',function(e){if(!root.contains(e.relatedTarget)){focus=false;sync();}});
+  root.addEventListener('keydown',function(e){if(e.key==='ArrowLeft'){show(i-1);sync();}else if(e.key==='ArrowRight'){show(i+1);sync();}});
+  document.addEventListener('visibilitychange',sync);
+  var x0=null,y0=0;
+  root.addEventListener('touchstart',function(e){var t=e.touches[0];x0=t.clientX;y0=t.clientY;},{passive:true});
+  root.addEventListener('touchend',function(e){if(x0===null)return;var t=e.changedTouches[0],dx=t.clientX-x0,dy=t.clientY-y0;x0=null;
+    if(Math.abs(dx)>40&&Math.abs(dx)>Math.abs(dy)){show(dx<0?i+1:i-1);sync();}},{passive:true});
+  if(window.Shopify&&Shopify.designMode){document.addEventListener('shopify:block:select',function(e){var s=e.target.closest&&e.target.closest('.mps__slide');if(s&&root.contains(s)){show(parseInt(s.dataset.i,10));hover=true;sync();}});}
+  sync();
+})();
+</script>
+{%- endif -%}
+{% schema %}
+{"name":"Mirea · Arranque tienda","tag":"section","max_blocks":50,"settings":[
+{"type":"text","id":"confianza_1","label":"Confianza 1","default":"🇪🇸 Envío rápido desde España"},
+{"type":"text","id":"confianza_2","label":"Confianza 2","default":"🇰🇷 K-beauty original de Corea"},
+{"type":"text","id":"confianza_3","label":"Confianza 3","default":"Envío gratis en España desde 69 €"},
+{"type":"text","id":"confianza_4","label":"Confianza 4","default":"Pago seguro"},
+{"type":"text","id":"antetitulo","label":"Antetítulo","default":"Mirea Skin"},
+{"type":"text","id":"titulo","label":"Titular","default":"K-beauty original de Corea y perfumería desde España."},
+{"type":"text","id":"boton_1","label":"Botón 1","default":"🇰🇷 Comprar desde Corea"},
+{"type":"url","id":"enlace_1","label":"Enlace 1"},
+{"type":"text","id":"boton_2","label":"Botón 2","default":"🇪🇸 Comprar desde España"},
+{"type":"url","id":"enlace_2","label":"Enlace 2"},
+{"type":"header","content":"Buscador (barra fina encima de los iconos)"},
+{"type":"checkbox","id":"mostrar_buscador","label":"Mostrar buscador","default":true},
+{"type":"text","id":"buscador","label":"Texto del buscador","default":"Busca productos, marcas o ingredientes…"},
+{"type":"header","content":"Carrusel de banners"},
+{"type":"paragraph","content":"Añade bloques \"Banner promo\". Cada banner sale solo entre su fecha de inicio y fin (AAAA-MM-DD), o siempre si marcas \"Mostrar siempre\". Puede tardar un rato en verse por la caché de Shopify."},
+{"type":"range","id":"intervalo","label":"Segundos por banner","min":3,"max":10,"step":1,"unit":"s","default":5}],
+"blocks":[
+{"type":"promo","name":"Banner promo","settings":[
+{"type":"image_picker","id":"imagen","label":"Imagen"},
+{"type":"image_picker","id":"imagen_movil","label":"Imagen para móvil (opcional, vertical 4:5)"},
+{"type":"text","id":"antetitulo","label":"Antetítulo","default":"Mirea Skin"},
+{"type":"text","id":"titulo","label":"Título","default":"Tu banner de temporada."},
+{"type":"textarea","id":"texto","label":"Texto"},
+{"type":"text","id":"boton","label":"Texto del botón","default":"Descubrir"},
+{"type":"url","id":"enlace","label":"Enlace del botón"},
+{"type":"color","id":"fondo","label":"Color de fondo (también del degradado)","default":"#352b30"},
+{"type":"color","id":"color_texto","label":"Color del texto","default":"#fcf7f3"},
+{"type":"header","content":"Cuándo se ve"},
+{"type":"text","id":"inicio","label":"Fecha de inicio (AAAA-MM-DD)","info":"Vacío = desde ya."},
+{"type":"text","id":"fin","label":"Fecha de fin (AAAA-MM-DD)","info":"Vacío = sin fin. El banner se ve también el día de fin."},
+{"type":"checkbox","id":"siempre","label":"Mostrar siempre (ignora las fechas)","default":false}]},
+{"type":"acceso","name":"Icono redondo","settings":[
+{"type":"text","id":"texto","label":"Texto"},
+{"type":"collection","id":"coleccion","label":"Colección"},
+{"type":"product","id":"producto","label":"Producto para la foto (opcional)"},
+{"type":"url","id":"enlace","label":"Enlace (opcional, si no usa la colección)"}]}],
+"presets":[{"name":"Mirea · Arranque tienda"}]}
+{% endschema %}
