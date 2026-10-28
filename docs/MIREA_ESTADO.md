@@ -1007,3 +1007,17 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - Copia para volver atrás: `docs/seo/titulos_piloto_2810.csv` (id, handle, vendor, origen, título antiguo y nuevo). Para revertir: productUpdate con `title = titulo_antiguo` de cada fila.
 - Comprobado al releer los 20: título nuevo guardado, handle igual, todos ACTIVE. Sin errores.
 - **Recheck programado el 30-10 (16:30 UTC)** (tarea trig_01WZvp2d64BNqRcRWsHQETYN): ¿algún título ha vuelto al inglés por la sincronización de Korealy/Collective? Si los Collective se revierten, no traducir más Collective y pedírselo al proveedor.
+
+## 28-10 · Banners con decoración de temporada + marcas + portada más ligera (BORRADOR 209432969553, sin publicar)
+- **Decoración por temporada** (nuevo ajuste "Decoración de temporada" en cada Banner promo; todo SVG/CSS en línea, decorativo, sin clics y quieto con "reducir movimiento"):
+  - **Halloween:** telarañas finas en las dos esquinas de arriba, araña colgando de su hilo, 3 murciélagos cruzando, brillo naranja/morado, 🎃 en el antetítulo, antetítulo y botón en naranja.
+  - **Black Friday:** negro y dorado, marco fino dorado, etiqueta "BLACK FRIDAY" y brillo dorado que cruza el título.
+  - **Navidad:** 30 copos de nieve cayendo (solo en la parte de arriba, no tapan el texto), 5 destellos dorados, toque verde y dorado.
+  - **Rebajas:** confeti suave (burdeos, dorado, rosa) y etiqueta "REBAJAS".
+- **Ver una temporada antes de su fecha:** añadir `&mirea_tema=black_friday` (o `halloween`, `navidad`, `rebajas`) a la URL de la vista previa. Solo cambia lo que se ve en ese navegador.
+- **4 banners de marca, siempre visibles** (foto real del producto estrella): Anua (Heartleaf 77%) → /collections/anua · medicube (PDRN Pink Collagen Capsule Cream) → /collections/medicube · Beauty of Joseon (Glow Serum) → /collections/beauty-of-joseon · SKIN1004 (Centella Ampoule) → /collections/skin1004. Sin descuentos ni promesas médicas.
+- **Orden del carrusel:** temporada (Halloween, Black Friday, Navidad, Rebajas; cada uno solo en sus fechas) → 4 marcas → envío gratis 69 € → Desde Corea → Desde España.
+- **Portada más ligera:** 12 secciones activas, en este orden: Arranque tienda (carrusel + iconos), Desde Corea, Desde España, Necesidades, Virales, Novedades, Ofertas, Perfumes 50/50, Marcas, Regalos por tramos, Diario, Cierre. **Ocultas, no borradas** ("disabled"; se reactivan en Personalizar con el ojo): Hero LUXE, Dos tarjetas, Encuentra tu base, Portada partida (packs), Aparatos, Banner rutina, Seda | Descanso, Cremas desde España, Dúo lujo, Guías LUXE, Por qué Mirea, Experiencias (tarjetas), Experiencias (opiniones).
+  - HTML de la portada: de unos 2,5 MB a unos 1,95 MB (−22 %). Los enlaces de las secciones ocultas (test de rutina, Mirea AI, guías, opiniones, tarjeta regalo) siguen en menú/pie o en otras secciones.
+- **Vista previa:** el 28-10 a veces cargaba bien y a veces daba error 500 genérico de Shopify, con el mismo tema sin cambios; las cargas buenas no tenían "Liquid error".
+- Archivos: `theme-banners-26-10/` (sección, snippet e index.json, mismos checksums que el tema).
