@@ -958,3 +958,26 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - **Revisar antes del 14-11**: la Triple Collagen 4.0 (27 uds, en oferta) y los precios del artículo de regalos. Si un producto se queda sin stock, regenerar el bloque de recomendados.
 - No se ha tocado ningún artículo existente.
 - Pendiente de la auditoría: artículos de cabello y protector solar en invierno.
+
+## 26/28-10 · Portada: buscador más fino + banners de temporada (tema BORRADOR 209432969553)
+- **Tema:** "Mirea · 26-10 banners promos · BORRADOR" (209432969553), copia del publicado 209375854929. **NO está publicado**; lo publica Blanca tras revisarlo. El tema publicado no se ha tocado.
+- **Archivos cambiados** (copia en `theme-banners-26-10/`, checksums iguales a los del tema):
+  - `sections/mirea-portada-tienda.liquid`: el buscador grande de la derecha se quita; ahora es una **barra fina encima de la fila de iconos redondos** (mismo texto y misma búsqueda `/search`, con etiqueta accesible). En la columna derecha va el **carrusel de banners**.
+  - `snippets/mirea-promo-slide.liquid` (nuevo): una diapositiva del carrusel.
+  - `templates/index.json`: 7 bloques "Banner promo" precargados en la sección "Mirea · Arranque tienda".
+- **Banners precargados** (fechas inclusivas, AAAA-MM-DD):
+  | Banner | Fechas | Botón → enlace | Imagen |
+  |---|---|---|---|
+  | Halloween "Rutina de noche, sin sustos." | 2026-10-20 → 2026-10-31 | Ver tratamientos → /collections/tratar | ChatGPT_Image_20_sept_2026_15_15_32.png (la de "Rutina de noche") |
+  | "Black Friday en Mirea." | 2026-11-20 → 2026-11-30 | Ver ofertas → /collections/ofertas | Mirea_Minimal_Editorial.png |
+  | Navidad "Regalos que se usan de verdad." (avisa: Corea 2–4 semanas) | 2026-12-01 → 2026-12-24 | Ver ideas de regalo → /blogs/consejos/regalos-navidad-k-beauty-por-presupuesto | mirea-medicube-pink-hero.png |
+  | "Rebajas en Mirea." | 2027-01-07 → 2027-02-28 | Ver rebajas → /collections/ofertas | mirea-portada-editorial-4k.png |
+  | Envío gratis en España desde 69 € | siempre | Ver envíos → /pages/envios-y-devoluciones | ChatGPT_Image_20_sept_2026_15_00_31.png |
+  | K-beauty original de Corea | siempre | Productos coreanos → /collections/desde-corea | Imagen_de_ChatGPT_28_sept_2026_12_53_18.png |
+  | Envío rápido desde España | siempre | Comprar desde España → /collections/desde-espana | mirea-cat-maquillaje.jpg |
+  - Sin porcentajes ni descuentos inventados. Todos los enlaces comprobados por API el 26-10. Imágenes: solo archivos reales de Shopify Files.
+  - Si ningún banner está activo, salen 2 de reserva (Corea + envío gratis) escritos en el código.
+- **Cómo funciona:** cambia cada 5 s con fundido y zoom suave; flechas, puntos, botón de pausa, deslizar en el móvil, se para con el ratón encima o con el teclado (flechas ← →); con "reducir movimiento" no se mueve solo. Solo la primera imagen carga al momento; el resto, en diferido. Caja con proporción fija (16:11 en ordenador, 4:5 en móvil), así que no hay saltos de diseño. Degradado del color de fondo detrás del texto para que se lea.
+- **Caché:** Shopify guarda las páginas en caché; un banner puede tardar un rato en aparecer o desaparecer al cambiar de fecha.
+- **Cómo añadir un banner nuevo (Blanca):** Tienda online › Temas › este tema › Personalizar › Página de inicio › sección "Mirea · Arranque tienda" › "Añadir bloque" › **Banner promo**. Rellenar imagen (y si quieres, imagen de móvil vertical), antetítulo, título, texto, botón y enlace, colores de fondo y de texto, y **Fecha de inicio / Fecha de fin** (formato 2026-12-01). "Mostrar siempre" = sin fechas. Arrastrar el bloque para ordenarlo (los de temporada, arriba). Guardar. Nota: en el editor solo se ven los banners activos hoy.
+- **Comprobación:** el 26-10 la vista previa `?preview_theme_id=209432969553` cargaba sin "Liquid error", con 4 banners activos (Halloween + 3 fijos), Black Friday oculto (correcto), el carrusel avanzando y el buscador fino encima de los iconos. La captura salió tapada por la ventana de newsletter y el aviso de cookies. El 28-10 la vista previa daba error 500 genérico de Shopify; el tema no se había tocado desde el 26-10 (ver informe).
