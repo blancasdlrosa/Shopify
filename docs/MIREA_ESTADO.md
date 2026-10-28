@@ -982,3 +982,20 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - **Cómo añadir un banner nuevo (Blanca):** Tienda online › Temas › este tema › Personalizar › Página de inicio › sección "Mirea · Arranque tienda" › "Añadir bloque" › **Banner promo**. Rellenar imagen (y si quieres, imagen de móvil vertical), antetítulo, título, texto, botón y enlace, colores de fondo y de texto, y **Fecha de inicio / Fecha de fin** (formato 2026-12-01). "Mostrar siempre" = sin fechas. Arrastrar el bloque para ordenarlo (los de temporada, arriba). Guardar. Nota: en el editor solo se ven los banners activos hoy.
 - **Comprobación:** el 26-10 la vista previa `?preview_theme_id=209432969553` cargaba sin "Liquid error", con 4 banners activos (Halloween + 3 fijos), Black Friday oculto (correcto), el carrusel avanzando y el buscador fino encima de los iconos. La captura salió tapada por la ventana de newsletter y el aviso de cookies. El 28-10 la vista previa daba error 500 genérico de Shopify; el tema no se había tocado desde el 26-10 (ver informe).
 - **28-10, borrador 209432969553:** a petición de Blanca se oculta la sección grande "Mirea · Hero LUXE (prototipo)" (mirea_hero_lux_proto, `disabled: true` en templates/index.json). No se ha borrado: se reactiva desde Personalizar. Comprobado en la vista previa: ese bloque ya no sale, el carrusel sí y no hay errores de Liquid.
+
+## 28-10 · Klaviyo: prueba del email de reseñas + flow "Producto visto" (browse) rediseñado
+- **Prueba del email de reseñas (S6M6wD, plantilla V4BNUY) a my.mireaskin@gmail.com: NO enviada.** La herramienta de Klaviyo (create_template_preview_send_job) pide una confirmación que tiene que dar Blanca directamente en la conversación principal; el subagente no puede darla. Falta que la conversación principal la confirme y la reenvíe (solo a my.mireaskin@gmail.com). El flow S6M6wD sigue en **draft**.
+- **Flow Browse Abandonment WG9Nr7: se reutiliza (buena base).** Estado: **draft**, sin tocar.
+  - Disparador: "Viewed Product" W9ZAf2 (el que recibe eventos: 41 en octubre; el "Viewed Product" de Shopify RpJYkc tiene 0).
+  - Filtros (sin cambios): sin "Checkout Started" desde que entra · sin "Placed Order" desde que entra · no ha estado en este flow en los últimos 30 días (reentrada cada 30 días). Klaviyo ya salta solo los perfiles suprimidos o dados de baja.
+  - Espera: 2 h (acción 118024657) → 1 email (acción 118024658, mensaje SugYMw).
+- **Email (acción 118024658), estado draft:**
+  - Antes: plantilla UgGShZ en inglés, asunto "Did you see something you liked?", remitente My.mireaskin@gmail.com.
+  - Ahora: plantilla nueva **R9SLjj** "Mirea v2 · Producto visto (browse) · 2h" (CODE); Klaviyo la ha copiado en el flow como **YdxhTG** (los cambios futuros se hacen en YdxhTG).
+  - Remitente hola@mireaskin.es · "Mirea Skin" · respuestas a my.mireaskin@gmail.com. Smart Sending activado.
+  - Asunto: "¿Le echamos otro vistazo a {producto}?" (sin producto: "¿Le echamos otro vistazo?"). Preheader: "Te lo dejamos a mano por si quieres volver a mirarlo con calma."
+  - Contenido: producto visto dinámico (foto, marca, nombre, precio y enlace del evento), botón "Volver a verlo", enlace al test de rutina, y caja con: España 3–7 días laborables / Corea 2–4 semanas, envío gratis en España desde 69 €, pago seguro y 14 días de devolución. Mismo diseño v2 que SsXfLn/TsazRE (barra superior, MIREA SKIN, fila de confianza, pie con Instagram, dirección y baja). Sin descuentos ni urgencias.
+  - Comprobado con render de muestra: nombre, precio ("€29,90", como lo manda el evento), enlace e imagen salen bien.
+- **Para activarlo (Blanca):** Klaviyo › Flows › Browse Abandonment (WG9Nr7) › revisar el email › ponerlo en "Live" › arriba, flow en "Live".
+  - Opcional, a mano (la API no deja cambiar filtros): añadir al filtro del flow "Added to Cart = 0 desde que entra", para que quien añade al carrito reciba solo el email de carrito (TX2NFZ). Smart Sending ya evita dos emails en menos de 16 h.
+  - Volver atrás: en la acción 118024658 poner otra vez la plantilla UgGShZ.
