@@ -1059,3 +1059,23 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 | Kerasys Damage Repair Propolis Treatment 1 L (visitas; 97 uds) | 10,95 | 6,00 | ×1,83 (45,2 %) | 15 % | 9,31 | +55,2 % (35,6 %) |
 
   - Muchos productos con visitas (TIRTIR, rom&nd, Round Lab, Anua…) **no tienen coste** en Shopify; no se pueden valorar. Los 81 rebajados el 22-10 ya están cerca del suelo (×1,43–1,45) y no admiten más descuento.
+
+## 30/31-10 · Metricool: posts orgánicos de IG + TikTok del 16-11 al 15-12 (EN CURSO)
+| Fecha | Tema | Producto | Envío | Id |
+|---|---|---|---|---|
+| lun 16-11 20:00 | Piel tirante | Anua Heartleaf 77 Hyaluron Soothing Lotion 200 ml | Corea | 411781977 |
+| mar 17-11 20:00 | Capas finas | Torriden Dive-In Serum 50 ml | Corea | 411782090 |
+| mié 18-11 20:00 | Crema de noche | Beauty of Joseon Dynasty Cream 50 ml | Corea | 411782344 |
+| jue 19-11 20:00 | Agua tibia | SKIN1004 Madagascar Centella Ampolla 100 ml | Corea | 411782397 |
+| vie 20-11 20:00 | Black Friday | Anua Peach 77 Niacin Enriched Cream 50 ml (Ofertas) | Corea | 411782782 |
+| sáb 21-11 12:00 | Mascarilla | MEDIHEAL Madecassoside Derma Ampoule Mask x10 | Corea | 411782915 |
+| dom 22-11 12:00 | Black Friday | medicube PDRN Booster Gel 300 ml (Ofertas) | Corea | 411783588 |
+| lun 23-11 20:00 | Labios | Torriden SOLID IN Ceramide Lip Essence 11 ml | Corea | 411783030 |
+| mar 24-11 20:00 | Limpiador suave | Round Lab 1025 Dokdo Limpiador 150 ml | Corea | 411783687 |
+| mié 25-11 20:00 | Black Friday | SKIN1004 Probio-Cica Nourishing Mask x5 (Ofertas) | Corea | 411783772 |
+| jue 26-11 20:00 | Un producto nuevo cada vez | VT PDRN Reedle Shot Cream 50 ml | Corea | 411783941 |
+| vie 27-11 20:00 | Black Friday | medicube Triple Collagen Toner 4.0 140 ml (Ofertas) | Corea | 411784056 |
+| sáb 28-11 12:00 | Calefacción | Round Lab 1025 Dokdo Cream 80 ml | Corea | 411784485 |
+| dom 29-11 12:00 | Mascarilla de noche | medicube Collagen Night Wrapping Mask 75 ml | Corea | 411784562 |
+| lun 30-11 20:00 | Black Friday (último día) | MEDIHEAL The N.M.F Ampoule Mask Sheet x10 (Ofertas) | Corea | 411784646 |
+| mar 01-12 20:00 | Regalos + blog | Beauty of Joseon Glow Serum 60 ml | Corea | 411784731 |
