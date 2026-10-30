@@ -1119,3 +1119,9 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - Canales: venían publicados en Tienda online y Google & YouTube, pero **no en Shop**. Publicados en Shop. Ahora están en Tienda + Google + Shop.
 - Diferencia con el producto de referencia 11149773013329 (Korealy antiguo): ese está en Tienda, Shop, TikTok, Pinterest y "Collective: Supplier", y **no** en Google & YouTube. Los 9 nuevos no están en TikTok, Pinterest ni Collective: Supplier (no se ha tocado, decide Blanca).
 - Precios sin cambiar. No tienen coste unitario en Shopify, así que no se puede calcular el margen.
+
+## 30-10 · Korealy nuevos → TikTok + Pinterest
+- Blanca: "3 si". publishablePublish de los 9 productos nuevos (desde-corea) en TikTok (361982099793) y Pinterest (362373742929): 0 errores.
+- Verificado con publishedOnPublication: 9/9 true en ambos canales.
+- Orden de la colección Ofertas: se deja como está (Blanca: "si están en oferta me da igual").
+- 5 descuentos extra BF (medicube Scalp Serum, AESTURA Eye Serum, AESTURA Capsule Cream, whamisa Sunscreen, Kerasys Propolis 1 L): solo propuesta, NO aplicados. Pendiente de "sí" de Blanca.
