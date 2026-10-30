@@ -1029,3 +1029,8 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
   - Los 17 de Korealy: el proveedor los tocó el 29-10 a las 04:20 UTC (sincronización) y mantienen el título nuevo.
   - Los 3 de Shopify Collective (Maymoo): 11238873989457 (actualizado el 29-10), 11240214921553 (29-10 19:53) y 11240225276241 (30-10 17:26). Pese a esas sincronizaciones, los tres siguen en español.
 - Conclusión: la sincronización de proveedores no pisa el título. Se puede ampliar la traducción a más productos, con Blanca de acuerdo.
+
+## 30-10 · Banner de Halloween → Ofertas (BORRADOR 209432969553, sin publicar)
+- A petición de Blanca, el banner de Halloween ahora lleva a las ofertas: antetítulo "Halloween · Ofertas", título "Ofertas de Halloween.", texto "Productos con precio reducido para tu rutina de noche, hasta el 31 de octubre.", botón "Ver ofertas" → /collections/ofertas. Sin porcentajes.
+- Se mantienen la decoración de Halloween, la imagen y las fechas (2026-10-20 → 2026-10-31). Solo se cambió ese bloque.
+- Comprobado en la vista previa el 30-10: sin "Liquid error", con el texto y el enlace nuevos.
