@@ -1034,3 +1034,28 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - A petición de Blanca, el banner de Halloween ahora lleva a las ofertas: antetítulo "Halloween · Ofertas", título "Ofertas de Halloween.", texto "Productos con precio reducido para tu rutina de noche, hasta el 31 de octubre.", botón "Ver ofertas" → /collections/ofertas. Sin porcentajes.
 - Se mantienen la decoración de Halloween, la imagen y las fechas (2026-10-20 → 2026-10-31). Solo se cambió ese bloque.
 - Comprobado en la vista previa el 30-10: sin "Liquid error", con el texto y el enlace nuevos.
+
+## 30-10 · Black Friday (20–30 nov): revisión de Ofertas, newsletters y propuesta de descuentos
+- **Colección Ofertas** (690467963217, regla "precio rebajado", orden "más vendidos"). Antes del arreglo: 1125 productos → **994 activos con stock**, **105 activos agotados**, **26 borradores**.
+- **Precio comparado ≤ precio: 112 variantes en 87 productos, todas de Shopify Collective**: 106 Valquer® (comparado = precio), 4 MOOD Earplugs (comparado 0,00 €), 1 Elizabeth Arden Midnight Fantasy (comparado 19,95 € < precio 25,51 €) y 1 EMANAR Lattafa Pride (borrador, 16,99 € < 34,95 €).
+  - Copia para volver atrás: `docs/precios/compare_at_bf_3010.csv` (product_id, variant_id, precio y comparado antiguo).
+  - Arreglo: `compareAtPrice = null` en las 112 (productVariantsBulkUpdate), 0 errores. **Precios sin tocar.** Ofertas pasa a **1065** productos.
+  - Volver atrás: productVariantsBulkUpdate con `compareAtPrice = compare_at_old` de cada fila del CSV.
+  - Los proveedores Collective los vuelven a meter: repetir esta revisión antes del 20-11.
+- **Los 20 primeros de Ofertas** (orden por defecto): 1 medicube AGE-R Booster Pro Pink y **19 de Valquer®** (champús de color, ampollas, cera y **champús para mascotas**). Todos con fotos reales del proveedor (4–8 imágenes). 19 con stock; **agotado: "Champú Premium para Mascotas de Todas las Razas"**. Para Black Friday la cabecera de Ofertas no enseña K-beauty: se recomienda (Blanca decide) poner la colección en orden manual con los productos coreanos rebajados arriba, o quitar Valquer/mascotas de Ofertas.
+- **Newsletter 04 · Ofertas · 20-11** (mensaje 01M5HMN4VEE9CMKPKDA37KP7WX, plantilla T4UNfe): sigue **programada el 2026-11-20 09:00 UTC** a las listas VU7PcQ, RtYDX3 y Uf2Bws. Los 6 productos (belif Aqua Bomb, MIZON Black Snail, ZEROID Sun, Huxley Body Oil, KLAIRS Eye Gel, PETITFEE Aura Quartz) están activos, con stock, en Ofertas y con el **mismo precio y precio tachado** que en Shopify. **Sin cambios** (no se ha hecho copia porque no se tocó la plantilla).
+- **Newsletter 05 · Regalos · 25-11** (mensaje 01M5HMQK513B5Z6DE6XA9QD9WM, plantilla QV9phn): **programada el 2026-11-25 09:00 UTC**, mismas 3 listas. Los 6 productos activos, con stock y con el precio igual al de Shopify (el email no enseña precio tachado). **Sin cambios.** Avisos para Blanca:
+  - Poco stock: Hydra Zen Lancôme 15, Génifique Yeux 11, Boss Bottled 12, Rochas Man 17. Revisar el 24-11.
+  - **Margen 0 %**: Hydra Zen (39,00 = coste 39,00), Boss Bottled (74,00 = coste 74,00) y Rochas Man (44,90 = coste 44,90). Génifique Yeux: 64,90 € con coste 51,59 € (+26 %). No se han tocado (no se suben precios); conviene revisar el coste con el proveedor.
+  - LANEIGE Lip Sleeping Mask sin coste en Shopify.
+- **Propuesta de descuento Black Friday (sin aplicar)**: con stock, con ventas o visitas, precio ≥ coste × 1,6 y que siguen por encima de coste + 30 % (y margen bruto ≥ 30 %) con el descuento:
+
+| Producto | Precio | Coste | Margen hoy | Descuento | Precio BF | Margen con BF |
+|---|---|---|---|---|---|---|
+| medicube Deoxyribose Sérum Cuero Cabelludo 20 ml (3 vendidos, 10 visitas) | 36,95 | 23,00 | ×1,61 (37,8 %) | 10 % | 33,26 | +44,6 % sobre coste (30,8 %) |
+| AESTURA Regederm 365 Retinoid Eye Serum 15 ml (1 vendido) | 37,95 | 21,00 | ×1,81 (44,7 %) | 15 % | 32,26 | +53,6 % (34,9 %) |
+| AESTURA Regederm 365 Lifting Capsule Cream 50 ml (1 vendido) | 41,95 | 25,00 | ×1,68 (40,4 %) | 10 % | 37,76 | +51,0 % (33,8 %) |
+| whamisa Organic Pear Blossom Sunscreen SPF50+ 50 ml (1 vendido) | 26,95 | 15,65 | ×1,72 (41,9 %) | 15 % | 22,91 | +46,4 % (31,7 %) |
+| Kerasys Damage Repair Propolis Treatment 1 L (visitas; 97 uds) | 10,95 | 6,00 | ×1,83 (45,2 %) | 15 % | 9,31 | +55,2 % (35,6 %) |
+
+  - Muchos productos con visitas (TIRTIR, rom&nd, Round Lab, Anua…) **no tienen coste** en Shopify; no se pueden valorar. Los 81 rebajados el 22-10 ya están cerca del suelo (×1,43–1,45) y no admiten más descuento.
