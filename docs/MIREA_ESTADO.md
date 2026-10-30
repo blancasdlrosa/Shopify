@@ -1079,3 +1079,10 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 | dom 29-11 12:00 | Mascarilla de noche | medicube Collagen Night Wrapping Mask 75 ml | Corea | 411784562 |
 | lun 30-11 20:00 | Black Friday (último día) | MEDIHEAL The N.M.F Ampoule Mask Sheet x10 (Ofertas) | Corea | 411784646 |
 | mar 01-12 20:00 | Regalos + blog | Beauty of Joseon Glow Serum 60 ml | Corea | 411784731 |
+| mié 02-12 20:00 | Regalo para principiantes | COSRX Advanced Snail Radiance Dual Essence 80 ml | Corea | 411785027 |
+| jue 03-12 20:00 | Regalo piel sensible + blog | MEDIHEAL Derma Serum Madecassoside Moisture 50 ml | Corea | 411785081 |
+| vie 04-12 20:00 | Amigo invisible | Anua Heartleaf Cream Mask Night Solution x10 | Corea | 411785138 |
+| sáb 05-12 12:00 | Regalo para compartir | Beauty of Joseon Relief Sun Rice + Probiotics 2 × 50 ml | Corea | 411785258 |
+
+## 30/31-10 · Lote 2: 200 títulos de producto al español (EN CURSO)
+- Copia de reversión: `docs/seo/titulos_lote2_3010.csv`. Progreso: filas 1-100 aplicadas (productUpdate, solo `title`), sin errores. Pendientes filas 101-200.
