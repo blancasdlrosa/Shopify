@@ -1021,3 +1021,11 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
   - HTML de la portada: de unos 2,5 MB a unos 1,95 MB (−22 %). Los enlaces de las secciones ocultas (test de rutina, Mirea AI, guías, opiniones, tarjeta regalo) siguen en menú/pie o en otras secciones.
 - **Vista previa:** el 28-10 a veces cargaba bien y a veces daba error 500 genérico de Shopify, con el mismo tema sin cambios; las cargas buenas no tenían "Liquid error".
 - Archivos: `theme-banners-26-10/` (sección, snippet e index.json, mismos checksums que el tema).
+
+## 30-10 · Recheck del piloto de títulos en español
+
+- Leídos de nuevo los 20 productos del piloto (docs/seo/titulos_piloto_2810.csv).
+- **Los 20 siguen en español. Ninguno ha vuelto al inglés.**
+  - Los 17 de Korealy: el proveedor los tocó el 29-10 a las 04:20 UTC (sincronización) y mantienen el título nuevo.
+  - Los 3 de Shopify Collective (Maymoo): 11238873989457 (actualizado el 29-10), 11240214921553 (29-10 19:53) y 11240225276241 (30-10 17:26). Pese a esas sincronizaciones, los tres siguen en español.
+- Conclusión: la sincronización de proveedores no pisa el título. Se puede ampliar la traducción a más productos, con Blanca de acuerdo.
