@@ -1091,9 +1091,6 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 | jue 03-12 20:00 | Regalo piel sensible + blog | MEDIHEAL Derma Serum Madecassoside Moisture 50 ml | Corea | 411785081 |
 | vie 04-12 20:00 | Amigo invisible | Anua Heartleaf Cream Mask Night Solution x10 | Corea | 411785138 |
 | sáb 05-12 12:00 | Regalo para compartir | Beauty of Joseon Relief Sun Rice + Probiotics 2 × 50 ml | Corea | 411785258 |
-
-## 30/31-10 · Lote 2: 200 títulos de producto al español (EN CURSO)
-- Copia de reversión: `docs/seo/titulos_lote2_3010.csv`. Progreso: filas 1-100 aplicadas (productUpdate, solo `title`), sin errores. Pendientes filas 101-200.
 | dom 06-12 12:00 | Regalo para él + blog | Round Lab For Men 1025 Dokdo All In One Gel Lotion 200 ml | Corea | 411785598 |
 | lun 07-12 20:00 | Regalo piel seca | SKIN1004 Centella Teca Cream 75 ml | Corea | 411785635 |
 | mar 08-12 20:00 | Puente + blog | COSRX The Blue Peptide Bakuchiol Plump Bounce Cream 50 g | Corea | 411785693 |
@@ -1106,3 +1103,19 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 | mar 15-12 20:00 | Doble limpieza en fiestas + blog | Anua Heartleaf Pore Control Cleansing Oil 200 ml | España | 411786442 |
 
 - Nota: el pin de Pinterest del 30-10 (401319891) dio el error de Metricool "You have reached your Metricool account limit". Hay que revisar el plan de Metricool para que no fallen más publicaciones.
+
+## 30/31-10 · Lote 2: 200 títulos de producto al español
+- Aprobado por Blanca tras el piloto (los 20 no se revirtieron). Solo se cambia `title` con productUpdate. Handles, SKUs, precios, descripciones, etiquetas, variantes y SEO **sin tocar**.
+- Selección: activos, con stock, título en inglés y fuera del piloto, por orden del top 300 SEO (`seo_top300_2210.csv`). 191 Korealy + 9 Shopify Collective (Maymoo). Bastó con el top 300; no hizo falta tirar de colecciones.
+- Excluidos: 5 dispositivos medicube que ya tenían título en español ("· dispositivo facial", cabezal), productos ya en español, suplementos/bebidas, y los 16 últimos candidatos de maquillaje (para quedarse en 200).
+- Formato del piloto: marca + línea de producto + palabra genérica en español + tamaño ("Toner" → Tónico, "Cream" → Crema, "Pad" → Discos, "Mask" → Mascarilla, "Sunscreen" → Protector Solar, "colors/shades" → tonos), coma decimal, "ml"/"g" con espacio. SPF/PA igual. Sin claims nuevos.
+- Copia para volver atrás: `docs/seo/titulos_lote2_3010.csv` (id, handle, vendor, origen, título antiguo y nuevo). Para revertir: productUpdate con `title = titulo_antiguo` de cada fila.
+- Resultado: **200 aplicados, 0 errores**. Releída una muestra de 20: título nuevo guardado, mismo handle, todos ACTIVE.
+- Pendiente: recheck en 1-2 días de que la sincronización no los pisa (sobre todo los 9 de Collective).
+
+## 31-10 · 9 productos nuevos de Korealy: títulos en español + "Envío: Corea"
+- Copia previa: `docs/seo/titulos_korealy_nuevos_3110.csv`. Aplicados los 9 títulos y añadida la etiqueta "Envío: Corea" con tagsAdd (sin quitar etiquetas).
+- Comprobado: los 9 ya aparecen en /collections/desde-corea, inventoryPolicy = DENY en todas las variantes, siguen ACTIVE.
+- Canales: venían publicados en Tienda online y Google & YouTube, pero **no en Shop**. Publicados en Shop. Ahora están en Tienda + Google + Shop.
+- Diferencia con el producto de referencia 11149773013329 (Korealy antiguo): ese está en Tienda, Shop, TikTok, Pinterest y "Collective: Supplier", y **no** en Google & YouTube. Los 9 nuevos no están en TikTok, Pinterest ni Collective: Supplier (no se ha tocado, decide Blanca).
+- Precios sin cambiar. No tienen coste unitario en Shopify, así que no se puede calcular el margen.
