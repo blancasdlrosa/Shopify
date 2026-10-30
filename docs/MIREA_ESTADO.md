@@ -1125,3 +1125,11 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - Verificado con publishedOnPublication: 9/9 true en ambos canales.
 - Orden de la colección Ofertas: se deja como está (Blanca: "si están en oferta me da igual").
 - 5 descuentos extra BF (medicube Scalp Serum, AESTURA Eye Serum, AESTURA Capsule Cream, whamisa Sunscreen, Kerasys Propolis 1 L): solo propuesta, NO aplicados. Pendiente de "sí" de Blanca.
+
+## 30-10 · Descuentos extra Black Friday (aprobados: "si es sin pérdida, sí")
+- Costes revisados en Shopify antes de aplicar. Precio final sin IVA > coste en los 5 (sin pérdida).
+- Descuento automático PROGRAMADO 1846955409745: 10% medicube Deoxyribose Scalp (coste 23) + AESTURA Capsule Cream (coste 25).
+- Descuento automático PROGRAMADO 1846955442513: 15% AESTURA Eye Serum (coste 21) + whamisa Pear Blossom SPF 50 ml activo (coste 15,65) + Kerasys Propolis Treatment 1 L (coste 6).
+- Vigencia: 20-11 00:00 → 30-11 23:59 (hora de Madrid). Se apagan solos.
+- No se acumulan con otros descuentos de producto/pedido (código bienvenida, influencers), así nunca baja de coste. Sí se combinan con el envío gratis desde 69 €.
+- Precios de producto NO tocados. Para deshacer: borrar o desactivar esos dos descuentos.
