@@ -1060,7 +1060,15 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 
   - Muchos productos con visitas (TIRTIR, rom&nd, Round Lab, Anua…) **no tienen coste** en Shopify; no se pueden valorar. Los 81 rebajados el 22-10 ya están cerca del suelo (×1,43–1,45) y no admiten más descuento.
 
-## 30/31-10 · Metricool: posts orgánicos de IG + TikTok del 16-11 al 15-12 (EN CURSO)
+## 30/31-10 · Metricool: posts orgánicos de IG + TikTok del 16-11 al 15-12
+- Antes: no había ningún post de IG/TikTok entre el 16-11 y el 15-12 (solo pines de Pinterest, que no se han tocado). Ningún producto repite los ya usados en IG/TikTok del 31-10 al 15-11.
+- Nuevos: **30 posts**, cada uno a la vez en Instagram y TikTok (1 al día por red): **30 en IG y 30 en TikTok**. Programados con publicación automática; ninguno inmediato, ninguno de pago.
+- Horas: entre semana a las 20:00 y el fin de semana a las 12:00 (Madrid).
+- Imagen: la foto real del producto en Shopify (CDN con `&format=jpg&width=1080`). Las 30 se han guardado en Metricool como `.jpeg`. **Ojo:** las fotos PNG con fondo transparente se quedan en PNG aunque se pida `format=jpg`. Pasó el 22-11 (medicube Collagen Jelly Cream: solo tiene fotos PNG, así que se cambió por el PDRN Booster Gel, también en Ofertas) y el 13-12 (se usó otra foto JPG del mismo producto). Por la misma razón no se usaron el cojín TIRTIR Mask Fit Red ni el SKIN1004 Quick Calming Pad.
+- Black Friday (20, 22, 25, 27 y 30-11): 5 productos en Ofertas, con precio anterior mayor que el actual y stock comprobado el 31-10. Solo se dice "en la sección Ofertas", sin porcentajes. **Antes del 20-11, volver a comprobar** que siguen rebajados.
+- Navidad (01–15-12): enlace al blog regalos-navidad-k-beauty-por-presupuesto en 01, 03, 06, 08, 10, 13 y 15-12. Del 01 al 09-12 son productos que salen de Corea, con el aviso de pedir pronto (2–4 semanas; desde el 06-12 se habla de Reyes). Del 10 al 15-12, productos de la colección Desde España (3–7 días laborables). Tienen poco stock (TIRTIR eye cream 21, SKIN1004 Probio-Cica toner 13, medicube Triple Collagen Serum 10): **revisar el stock unos días antes**.
+- La única promesa de envío gratis es "Envío gratis en España desde 69 €". Sin afirmaciones médicas.
+
 | Fecha | Tema | Producto | Envío | Id |
 |---|---|---|---|---|
 | lun 16-11 20:00 | Piel tirante | Anua Heartleaf 77 Hyaluron Soothing Lotion 200 ml | Corea | 411781977 |
@@ -1086,3 +1094,15 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 
 ## 30/31-10 · Lote 2: 200 títulos de producto al español (EN CURSO)
 - Copia de reversión: `docs/seo/titulos_lote2_3010.csv`. Progreso: filas 1-100 aplicadas (productUpdate, solo `title`), sin errores. Pendientes filas 101-200.
+| dom 06-12 12:00 | Regalo para él + blog | Round Lab For Men 1025 Dokdo All In One Gel Lotion 200 ml | Corea | 411785598 |
+| lun 07-12 20:00 | Regalo piel seca | SKIN1004 Centella Teca Cream 75 ml | Corea | 411785635 |
+| mar 08-12 20:00 | Puente + blog | COSRX The Blue Peptide Bakuchiol Plump Bounce Cream 50 g | Corea | 411785693 |
+| mié 09-12 20:00 | Último aviso Corea (Reyes) | VT Hydrop Reedle Shot 300hL 2 Step Mask x5 | Corea | 411785747 |
+| jue 10-12 20:00 | Última hora desde España + blog | COSRX Advanced Snail 96 Mucin Esencia 100 ml | España | 411786040 |
+| vie 11-12 20:00 | Regalo tono de piel | Anua Niacinamide 10% + TXA 4% Serum | España | 411786070 |
+| sáb 12-12 12:00 | Detalle pequeño | TIRTIR Collagen Lifting Eye Cream 15 ml | España | 411786104 |
+| dom 13-12 12:00 | Envolver regalos + blog | SKIN1004 Madagascar Centella Probio-Cica Essence Toner 210 ml | España | 411786273 |
+| lun 14-12 20:00 | 10 días para Nochebuena | medicube Triple Collagen Serum 55 ml | España | 411786367 |
+| mar 15-12 20:00 | Doble limpieza en fiestas + blog | Anua Heartleaf Pore Control Cleansing Oil 200 ml | España | 411786442 |
+
+- Nota: el pin de Pinterest del 30-10 (401319891) dio el error de Metricool "You have reached your Metricool account limit". Hay que revisar el plan de Metricool para que no fallen más publicaciones.
