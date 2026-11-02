@@ -1133,3 +1133,18 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - Vigencia: 20-11 00:00 → 30-11 23:59 (hora de Madrid). Se apagan solos.
 - No se acumulan con otros descuentos de producto/pedido (código bienvenida, influencers), así nunca baja de coste. Sí se combinan con el envío gratis desde 69 €.
 - Precios de producto NO tocados. Para deshacer: borrar o desactivar esos dos descuentos.
+
+## 31-10 / 02-11 · "todo" (Blanca)
+- Kerasys Propolis Treatment 1 L pasa del descuento BF 15% al 10% (descuento 1846955409745 ahora: medicube Scalp, AESTURA Capsule, Kerasys; 1846955442513: AESTURA Eye, whamisa SPF). Sin errores.
+- Prueba del email de reseñas (plantilla V4BNUY) enviada a my.mireaskin@gmail.com: job 4733a98281734ef4a0f058dab0f3b26a, en cola 31-10 12:44 UTC.
+- Klaviyo: flows S6M6wD "Mirea · Pide tu reseña" (35 días) y WG9Nr7 "Browse Abandonment" → LIVE (comprobado en la respuesta de la API).
+- Coste = precio en Shopify (margen 0, probablemente coste no real): Rochas Man (39,61/39,95), Boss Bottled (64,20/63,00), Bottled (58,21/52,00), Neroli Azur 48,90, Cofre Rochas Man 44,90. Hydra Zen 45,90 con coste 36 → ~1,9 € sin IVA. NO se ha tocado nada: Blanca tiene que confirmar coste real con su factura.
+- Temas viejos: la herramienta no permite borrar temas; lo tiene que hacer Blanca.
+
+## 02-11 · 7 productos nuevos de Korealy (Ryo ×6, Atomy ×1) + banner Novedades
+- Títulos en español (copia: docs/seo/titulos_korealy_nuevos_0211.csv) + etiqueta "Envío: Corea". 0 errores.
+- Publicados además en Shop, TikTok y Pinterest (ya estaban en Tienda online y Google). 0 errores.
+- Colección Novedades (690380407121): añadidos los 7 + los 9 del 30-10 → 96 productos (orden: más nuevos primero).
+- Precios de Korealy sin coste en Shopify (p. ej. Ryo tratamiento 9,92 €): no se puede comprobar margen. No se han tocado precios.
+- Tema BORRADOR 210047336785 "Mirea · 02-11 banner Novedades" (copia del publicado 209432969553). Único cambio: bloque promo_novedades en el carrusel de portada ("Lo nuevo de Corea ya está aquí.", foto real Manyo Factory, botón /collections/novedades, siempre visible), después de los banners con fecha y antes de las marcas. Resto de index.json comprobado idéntico al publicado.
+- Vista previa comprobada (2.º intento; el 1.º dio 500, típico de la primera carga): el banner sale con su botón. PENDIENTE: que Blanca lo publique.
