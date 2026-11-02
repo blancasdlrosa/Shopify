@@ -1148,3 +1148,4 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - Precios de Korealy sin coste en Shopify (p. ej. Ryo tratamiento 9,92 €): no se puede comprobar margen. No se han tocado precios.
 - Tema BORRADOR 210047336785 "Mirea · 02-11 banner Novedades" (copia del publicado 209432969553). Único cambio: bloque promo_novedades en el carrusel de portada ("Lo nuevo de Corea ya está aquí.", foto real Manyo Factory, botón /collections/novedades, siempre visible), después de los banners con fecha y antes de las marcas. Resto de index.json comprobado idéntico al publicado.
 - Vista previa comprobada (2.º intento; el 1.º dio 500, típico de la primera carga): el banner sale con su botón. PENDIENTE: que Blanca lo publique.
+- 02-11: Blanca publicó 210047336785 (ahora MAIN). Temas viejos aún sin borrar.
