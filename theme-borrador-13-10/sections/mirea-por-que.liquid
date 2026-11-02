@@ -1,0 +1,66 @@
+{%- comment -%} 15-10 Mirea: "¿Por qué Mirea?" con 3 tarjetas con icono, tipo MiiN. {%- endcomment -%}
+<section class="mpq" id="mpq-{{ section.id }}">
+  <div class="mpq__wrap">
+    <p class="mpq__ante">{{ section.settings.antetitulo }}</p>
+    <h2 class="mpq__tit">{{ section.settings.titulo }}</h2>
+    <div class="mpq__grid">
+      <a class="mpq__card" href="{{ section.settings.enlace_1 | default: '/pages/por-que-cosmetica-coreana' }}">
+        <span class="mpq__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8L3.5 9.2l5.9-.9z"/></svg></span>
+        <strong>{{ section.settings.titulo_1 }}</strong>
+        <span>{{ section.settings.texto_1 }}</span>
+      </a>
+      <a class="mpq__card" href="{{ section.settings.enlace_2 | default: '/pages/encuentra-tu-rutina' }}">
+        <span class="mpq__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h11a3 3 0 0 1 3 3v11H7a3 3 0 0 1-3-3z"/><path d="M8 9h6M8 12.5h6M8 16h3"/></svg></span>
+        <strong>{{ section.settings.titulo_2 }}</strong>
+        <span>{{ section.settings.texto_2 }}</span>
+      </a>
+      <a class="mpq__card" href="{{ section.settings.enlace_3 | default: '/pages/envios-y-devoluciones' }}">
+        <span class="mpq__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg></span>
+        <strong>{{ section.settings.titulo_3 }}</strong>
+        <span>{{ section.settings.texto_3 }}</span>
+      </a>
+    </div>
+  </div>
+</section>
+<style>
+#mpq-{{ section.id }}{background:#f7eeec;color:#352b30;padding:64px 0}
+#mpq-{{ section.id }} *{box-sizing:border-box}
+#mpq-{{ section.id }} .mpq__wrap{width:min(calc(100% - 32px),1180px);margin:0 auto;text-align:center}
+#mpq-{{ section.id }} .mpq__ante{margin:0 0 10px;color:#925b6d;font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:600}
+#mpq-{{ section.id }} .mpq__tit{margin:0 0 34px;font-size:clamp(32px,3.8vw,52px);line-height:1.04}
+#mpq-{{ section.id }} .mpq__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+#mpq-{{ section.id }} .mpq__card{display:flex;flex-direction:column;align-items:center;gap:10px;padding:34px 26px;background:#fffdfc;border:1px solid #e1cbc6;border-radius:20px;color:#352b30;text-decoration:none;transition:transform .25s ease,box-shadow .25s ease}
+#mpq-{{ section.id }} .mpq__card:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(68,52,59,.08)}
+#mpq-{{ section.id }} .mpq__ico{display:grid;place-items:center;width:64px;height:64px;border-radius:50%;background:#f4e5e2;color:#925b6d;margin-bottom:6px}
+#mpq-{{ section.id }} .mpq__ico svg{width:30px;height:30px}
+#mpq-{{ section.id }} .mpq__card strong{font-family:var(--font-heading--family);font-size:24px;font-weight:500;line-height:1.15}
+#mpq-{{ section.id }} .mpq__card span:last-child{color:#715b63;font-size:14px;line-height:1.55}
+@media(max-width:749px){
+  #mpq-{{ section.id }}{padding:44px 0}
+  #mpq-{{ section.id }} .mpq__grid{grid-template-columns:1fr;gap:12px}
+  #mpq-{{ section.id }} .mpq__card{flex-direction:row;text-align:left;align-items:flex-start;padding:20px;gap:14px;flex-wrap:wrap}
+  #mpq-{{ section.id }} .mpq__ico{width:48px;height:48px;margin:0}
+  #mpq-{{ section.id }} .mpq__card strong{flex:1;align-self:center;font-size:21px}
+  #mpq-{{ section.id }} .mpq__card span:last-child{flex-basis:100%}
+}
+</style>
+{% schema %}
+{
+  "name": "Mirea · Por qué Mirea",
+  "tag": "section",
+  "settings": [
+    {"type":"text","id":"antetitulo","label":"Antetítulo","default":"Por qué Mirea"},
+    {"type":"text","id":"titulo","label":"Título","default":"¿Por qué comprar en Mirea?"},
+    {"type":"text","id":"titulo_1","label":"Tarjeta 1 · título","default":"Elegido con criterio"},
+    {"type":"textarea","id":"texto_1","label":"Tarjeta 1 · texto","default":"K-beauty original de marcas que conocemos. Solo lo que de verdad funciona, sin relleno."},
+    {"type":"url","id":"enlace_1","label":"Tarjeta 1 · enlace"},
+    {"type":"text","id":"titulo_2","label":"Tarjeta 2 · título","default":"Te guiamos paso a paso"},
+    {"type":"textarea","id":"texto_2","label":"Tarjeta 2 · texto","default":"Test de piel gratis y Guía Mirea PRO en tu primer pedido de más de 35 €."},
+    {"type":"url","id":"enlace_2","label":"Tarjeta 2 · enlace"},
+    {"type":"text","id":"titulo_3","label":"Tarjeta 3 · título","default":"Compra tranquila"},
+    {"type":"textarea","id":"texto_3","label":"Tarjeta 3 · texto","default":"Pago seguro, envío con seguimiento y atención por personas reales."},
+    {"type":"url","id":"enlace_3","label":"Tarjeta 3 · enlace"}
+  ],
+  "presets": [{"name":"Mirea · Por qué Mirea"}]
+}
+{% endschema %}

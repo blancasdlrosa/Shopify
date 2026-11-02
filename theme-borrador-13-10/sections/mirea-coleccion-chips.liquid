@@ -1,0 +1,66 @@
+{%- comment -%}
+  Mirea · Chips bajo el banner (13-10-2026). Sustituye a la cabecera grande:
+  el título queda oculto (para Google) y los accesos rápidos van debajo del banner deslizable.
+  La sección mirea-collection-hero sigue existiendo; solo se ha quitado del orden de la plantilla.
+{%- endcomment -%}
+{%- assign c = collection -%}
+{%- liquid
+  assign hair_family = 'cabello,champus-1,acondicionadores,mascarillas-1,serums,tonicos-capilares,cuero-cabelludo,cuidado-capilar,champus,mascarillas-y-tratamientos-capilares,cuidados-sin-aclarado' | split: ','
+  assign makeup_family = 'maquillaje,rostro,ojos,labios-1,preparacion-y-acabado,desmaquillante,accesorios-1' | split: ','
+  assign body_family = 'cuidado-corporal,cuidado-de-manos,cuidado-de-pies,cuidado-intimo,higiene,higiene-bucal' | split: ','
+  assign tech_family = 'tecnologia,dispositivos-faciales,accesorios,aparatos-de-belleza,eternas,natcare' | split: ','
+  assign guide_family = 'guias-mirea,mirea-guides-english' | split: ','
+  assign perfume_family = 'perfumes,perfumes-arabes,perfumes-de-mujer,perfumes-de-hombre,perfumes-unisex' | split: ','
+  assign skin_family = 'piel,limpiadores,tonicos-y-esencias-1,serums-y-ampollas,hidratantes,proteccion-solar,mascarillas,exfoliantes-y-pads,contorno-de-ojos,cuidado-de-labios,granitos,manchas,poros,piel-seca,piel-sensible,antiedad,barrera-cutanea,calma-y-rojeces,rutinas,limpiar,tratar,hidratar,proteger' | split: ','
+  assign shortcut_text = ''
+  if hair_family contains c.handle
+    assign shortcut_text = 'cabello:Todo cabello|champus-1:Champús|acondicionadores:Acondicionadores|mascarillas-1:Mascarillas|serums:Sérums y aceites|tonicos-capilares:Tónicos capilares|cuero-cabelludo:Cuero cabelludo'
+  elsif makeup_family contains c.handle
+    assign shortcut_text = 'maquillaje:Todo maquillaje|rostro:Rostro|ojos:Ojos|labios-1:Labios|preparacion-y-acabado:Preparación y acabado|desmaquillante:Desmaquillante'
+  elsif body_family contains c.handle
+    assign shortcut_text = 'cuidado-corporal:Corporal|cuidado-de-manos:Manos|cuidado-de-pies:Pies|cuidado-intimo:Cuidado íntimo|higiene:Higiene|higiene-bucal:Higiene bucal'
+  elsif tech_family contains c.handle
+    assign shortcut_text = 'aparatos-de-belleza:Aparatos LED y radiofrecuencia|eternas:Eternas|natcare:Natcare|dispositivos-faciales:Dispositivos faciales|accesorios:Accesorios de belleza|tecnologia:Toda la tecnología'
+  elsif guide_family contains c.handle
+    assign shortcut_text = 'guias-mirea:Guías en español|mirea-guides-english:Guides in English|rutinas:Rutinas'
+  elsif perfume_family contains c.handle
+    assign shortcut_text = 'perfumes:Todos los perfumes|perfumes-de-mujer:Mujer|perfumes-de-hombre:Hombre|perfumes-unisex:Unisex|perfumes-arabes:Perfumes árabes'
+  elsif c.handle == 'novedades' or c.handle == 'ofertas'
+    assign shortcut_text = 'novedades:Novedades|ofertas:Ofertas|menos-de-20:Menos de 20 €|piel:Piel|cabello:Cabello|maquillaje:Maquillaje'
+  elsif skin_family contains c.handle
+    assign shortcut_text = 'piel:Todo facial|limpiadores:Limpiadores|serums-y-ampollas:Sérums|hidratantes:Hidratantes|proteccion-solar:Protección solar|granitos:Granitos|manchas:Manchas|poros:Poros|rutinas:Rutinas'
+  endif
+  assign shortcuts = shortcut_text | split: '|'
+-%}
+{%- capture chips -%}
+  {%- for item in shortcuts -%}
+    {%- assign parts = item | split: ':' -%}
+    {%- if parts[0] != c.handle -%}
+      {%- assign destination = collections[parts[0]] -%}
+      {%- if destination != blank -%}
+        <a class="mcc__chip" href="{{ destination.url }}">{{ parts[1] | escape }}</a>
+      {%- endif -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endcapture -%}
+<section class="mcc">
+  <div class="mp-wrap">
+    <h1 class="mcc__sr">{{ c.title }}</h1>
+    {%- if chips != blank -%}
+      <nav class="mcc__chips" aria-label="Explorar categorías relacionadas">{{ chips }}</nav>
+    {%- endif -%}
+  </div>
+</section>
+<style>
+.mcc{background:#fff;padding:4px 0 6px}
+.mcc__sr{position:absolute!important;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.mcc__chips{display:flex;gap:10px;overflow-x:auto;padding:18px 0 6px;scrollbar-width:thin}
+.mcc__chip{flex:0 0 auto;padding:10px 16px;background:#f4f1f0;border-radius:6px;color:#1f191c;font-size:13.5px;font-weight:600;text-decoration:none;white-space:nowrap;transition:background .15s}
+.mcc__chip:hover{background:#ead9d5}
+.mcc__chip:focus-visible{outline:2px solid #925b6d;outline-offset:2px}
+@media(hover:none){.mcc__chip{min-height:44px;display:inline-flex;align-items:center}}
+#MainContent[data-template="collection"]>.shopify-section:first-child{border-bottom:0!important;background:#fff!important}
+</style>
+{% schema %}
+{"name":"Mirea · Chips colección","settings":[]}
+{% endschema %}
