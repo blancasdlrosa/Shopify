@@ -1,0 +1,15 @@
+{%- comment -%}
+  Mirea · Ofertas de la colección para el banner deslizable (13-10-2026).
+  Solo productos con precio rebajado (precio anterior mayor que el actual). Máx. 12.
+{%- endcomment -%}
+<div class="mcs-items">
+  {%- assign shown = 0 -%}
+  {%- paginate collection.products by 250 -%}
+    {%- for p in collection.products -%}
+      {%- if shown < 12 and p.compare_at_price > p.price and p.available -%}
+        {%- render 'mirea-slide-card', p: p -%}
+        {%- assign shown = shown | plus: 1 -%}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endpaginate -%}
+</div>

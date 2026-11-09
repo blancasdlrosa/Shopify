@@ -1,0 +1,93 @@
+{%- comment -%} 18-10 Mirea: sección mitad y mitad. Dos colecciones una al lado de la otra (p. ej. Rituales de seda | MOOD descanso). En móvil van una debajo de otra. Solo muestra productos disponibles. {%- endcomment -%}
+<section class="mdm" id="mdm-{{ section.id }}">
+  <div class="mdm__wrap">
+    {%- for block in section.blocks -%}
+      {%- assign col = block.settings.coleccion -%}
+      {%- assign cuantos = block.settings.cuantos | default: 3 -%}
+      <div class="mdm__half" {{ block.shopify_attributes }}>
+        <div class="mdm__head">
+          <div>
+            {%- if block.settings.antetitulo != blank -%}<p class="mdm__eyebrow">{{ block.settings.antetitulo }}</p>{%- endif -%}
+            <h2>{{ block.settings.titulo }}</h2>
+            {%- if block.settings.texto != blank -%}<p class="mdm__text">{{ block.settings.texto }}</p>{%- endif -%}
+          </div>
+          {%- if col != blank and block.settings.texto_enlace != blank -%}
+            <a class="mdm__all" href="{{ col.url }}">{{ block.settings.texto_enlace }} →</a>
+          {%- endif -%}
+        </div>
+        <ul class="mdm__grid">
+          {%- assign n = 0 -%}
+          {%- for p in col.products -%}
+            {%- if p.available == false -%}{%- continue -%}{%- endif -%}
+            {%- if n >= cuantos -%}{%- break -%}{%- endif -%}
+            {%- assign n = n | plus: 1 -%}
+            <li class="mdm__card">
+              <a href="{{ p.url }}">
+                <span class="mdm__img">
+                  {%- if p.featured_image -%}{{ p.featured_image | image_url: width: 480 | image_tag: loading: 'lazy', alt: p.title }}{%- endif -%}
+                  {%- if block.settings.etiqueta != blank -%}<span class="mdm__tag">{{ block.settings.etiqueta }}</span>{%- endif -%}
+                </span>
+                <span class="mdm__name">{{ p.title }}</span>
+                <span class="mdm__price">{{ p.price | money }}{%- if p.compare_at_price > p.price -%} <s>{{ p.compare_at_price | money }}</s>{%- endif -%}</span>
+              </a>
+            </li>
+          {%- endfor -%}
+        </ul>
+      </div>
+    {%- endfor -%}
+  </div>
+</section>
+<style>
+#mdm-{{ section.id }}{background:#fffdfc;color:#352b30;padding:{{ section.settings.espacio_arriba }}px 0 {{ section.settings.espacio_abajo }}px}
+#mdm-{{ section.id }} *{box-sizing:border-box}
+#mdm-{{ section.id }} .mdm__wrap{width:min(calc(100% - 32px),1280px);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:40px}
+#mdm-{{ section.id }} .mdm__half{display:flex;flex-direction:column;min-width:0}
+#mdm-{{ section.id }} .mdm__half + .mdm__half{border-left:1px solid #eee2de;padding-left:40px}
+#mdm-{{ section.id }} .mdm__head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:20px;min-height:150px}
+#mdm-{{ section.id }} .mdm__eyebrow{margin:0 0 8px;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#925b6d}
+#mdm-{{ section.id }} h2{margin:0;font-family:var(--font-heading-family,serif);font-weight:400;font-size:clamp(26px,2.6vw,38px);line-height:1.1}
+#mdm-{{ section.id }} .mdm__text{margin:10px 0 0;color:#715b63;font-size:15px;line-height:1.5}
+#mdm-{{ section.id }} .mdm__all{flex:none;color:#352b30;font-size:14px;letter-spacing:.04em;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px;white-space:nowrap}
+#mdm-{{ section.id }} .mdm__grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+#mdm-{{ section.id }} .mdm__card a{display:flex;flex-direction:column;gap:6px;color:inherit;text-decoration:none}
+#mdm-{{ section.id }} .mdm__img{position:relative;display:block;aspect-ratio:1/1;background:#fff;border-radius:12px;overflow:hidden}
+#mdm-{{ section.id }} .mdm__img img{width:100%;height:100%;object-fit:contain;padding:10px;transition:transform .3s}
+#mdm-{{ section.id }} .mdm__card a:hover img{transform:scale(1.04)}
+#mdm-{{ section.id }} .mdm__tag{position:absolute;top:8px;left:8px;border:1px solid #d9c4c9;background:#fff;color:#925b6d;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 8px}
+#mdm-{{ section.id }} .mdm__name{font-size:14px;line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.7em}
+#mdm-{{ section.id }} .mdm__price{font-size:15px;font-weight:600}
+#mdm-{{ section.id }} .mdm__price s{font-weight:400;color:#9a8a8f;font-size:13px;margin-left:4px}
+@media (max-width:899px){
+  #mdm-{{ section.id }} .mdm__wrap{grid-template-columns:1fr;gap:36px}
+  #mdm-{{ section.id }} .mdm__half + .mdm__half{border-left:0;padding-left:0;border-top:1px solid #eee2de;padding-top:32px}
+  #mdm-{{ section.id }} .mdm__head{min-height:0;flex-direction:column;align-items:flex-start}
+  #mdm-{{ section.id }} .mdm__grid{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:44%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}
+  #mdm-{{ section.id }} .mdm__card{scroll-snap-align:start}
+}
+</style>
+{% schema %}
+{
+  "name": "Mirea · Mitad y mitad",
+  "settings": [
+    { "type": "range", "id": "espacio_arriba", "label": "Espacio arriba", "min": 0, "max": 100, "step": 5, "default": 30 },
+    { "type": "range", "id": "espacio_abajo", "label": "Espacio abajo", "min": 0, "max": 100, "step": 5, "default": 30 }
+  ],
+  "blocks": [
+    {
+      "type": "mitad",
+      "name": "Mitad",
+      "settings": [
+        { "type": "text", "id": "antetitulo", "label": "Antetítulo" },
+        { "type": "text", "id": "titulo", "label": "Título", "default": "Título" },
+        { "type": "text", "id": "texto", "label": "Texto" },
+        { "type": "collection", "id": "coleccion", "label": "Colección" },
+        { "type": "range", "id": "cuantos", "label": "Productos", "min": 2, "max": 6, "step": 1, "default": 3 },
+        { "type": "text", "id": "etiqueta", "label": "Etiqueta en la foto" },
+        { "type": "text", "id": "texto_enlace", "label": "Texto del enlace", "default": "Ver todo" }
+      ]
+    }
+  ],
+  "max_blocks": 2,
+  "presets": [{ "name": "Mirea · Mitad y mitad" }]
+}
+{% endschema %}

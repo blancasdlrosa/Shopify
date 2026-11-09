@@ -1,0 +1,137 @@
+{%- comment -%}
+  17-10 Mirea: sugerencias para llegar al envío gratis
+  - Solo se muestra en España y mientras el total del carrito esté por debajo del umbral de envío gratis.
+  - Umbral: el mismo que la barra (snippets/mirea-envio-gratis, t3 = 6900 céntimos = 69 €). Si cambia allí, cambia aquí.
+  - Productos de la colección "desde-espana": disponibles, no presentes en el carrito, sin etiqueta "Perfume árabe" y con precio > 0.
+  - Prioridad: precio entre lo que falta y lo que falta + 15 €; si no hay 3, se completa con los más baratos por encima de lo que falta.
+  - Botón "Añadir": formulario estándar de producto (/cart/add), funciona sin JS. Solo muestra datos; no cambia precios ni envíos.
+  @param {string} [estilo] - 'drawer' (compacto) o 'cartpage'
+{%- endcomment -%}
+{%- liquid
+  assign umbral = 6900
+  assign pais = localization.country.iso_code | default: 'ES'
+  assign total = cart.total_price
+  assign mostrar = false
+  if cart.item_count > 0 and pais == 'ES' and total < umbral
+    assign mostrar = true
+  endif
+-%}
+{%- if mostrar -%}
+  {%- liquid
+    assign falta = umbral | minus: total
+    assign tope = falta | plus: 1500
+    assign col = collections['desde-espana']
+    assign en_carrito = cart.items | map: 'product_id' | join: ','
+    assign en_carrito = ',' | append: en_carrito | append: ','
+    assign elegidos = ','
+    assign n = 0
+    assign lista = col.products | sort: 'price'
+
+    # Pasada 1: precio entre lo que falta y lo que falta + 15 €
+    for p in lista
+      if n >= 3
+        break
+      endif
+      if p.available != true or p.gift_card?
+        continue
+      endif
+      if p.tags contains 'Perfume árabe'
+        continue
+      endif
+      assign pid = ',' | append: p.id | append: ','
+      if en_carrito contains pid
+        continue
+      endif
+      assign v = p.first_available_variant
+      if v == blank or v.price <= 0
+        continue
+      endif
+      if v.price >= falta and v.price <= tope
+        assign elegidos = elegidos | append: p.id | append: ','
+        assign n = n | plus: 1
+      endif
+    endfor
+
+    # Pasada 2: completar con los más baratos por encima de lo que falta
+    if n < 3
+      for p in lista
+        if n >= 3
+          break
+        endif
+        if p.available != true or p.gift_card?
+          continue
+        endif
+        if p.tags contains 'Perfume árabe'
+          continue
+        endif
+        assign pid = ',' | append: p.id | append: ','
+        if en_carrito contains pid or elegidos contains pid
+          continue
+        endif
+        assign v = p.first_available_variant
+        if v == blank or v.price <= 0
+          continue
+        endif
+        if v.price > falta
+          assign elegidos = elegidos | append: p.id | append: ','
+          assign n = n | plus: 1
+        endif
+      endfor
+    endif
+  -%}
+  {%- if n > 0 -%}
+    <div class="mcs mcs--{{ estilo | default: 'drawer' }}">
+      <p class="mcs__falta">Te faltan <strong>{{ falta | money }}</strong> para el envío gratis</p>
+      <p class="mcs__head">Añade y llévatelo gratis <span aria-hidden="true">🇪🇸</span> <span class="mcs__sub">Envío rápido desde España</span></p>
+      <ul class="mcs__list" role="list">
+        {%- for p in lista -%}
+          {%- assign pid = ',' | append: p.id | append: ',' -%}
+          {%- unless elegidos contains pid -%}{%- continue -%}{%- endunless -%}
+          {%- assign v = p.first_available_variant -%}
+          {%- assign img = v.featured_image | default: p.featured_image -%}
+          <li class="mcs__item">
+            <a class="mcs__img" href="{{ p.url }}" tabindex="-1" aria-hidden="true">
+              {%- if img != blank -%}
+                {{ img | image_url: width: 160 | image_tag: loading: 'lazy', alt: p.title, width: 80, height: 80 }}
+              {%- endif -%}
+            </a>
+            <div class="mcs__info">
+              {%- if p.vendor != blank -%}<span class="mcs__brand">{{ p.vendor }}</span>{%- endif -%}
+              <a class="mcs__title" href="{{ p.url }}">{{ p.title }}</a>
+              <span class="mcs__price">{{ v.price | money }}</span>
+            </div>
+            {%- form 'product', p, class: 'mcs__form' -%}
+              <input type="hidden" name="id" value="{{ v.id }}">
+              <input type="hidden" name="quantity" value="1">
+              <button type="submit" name="add" class="mcs__btn" aria-label="Añadir {{ p.title | escape }} al carrito">Añadir</button>
+            {%- endform -%}
+          </li>
+        {%- endfor -%}
+      </ul>
+    </div>
+    <style>
+      .mcs{margin:0 0 16px;padding:12px 14px;border:1px solid #e5d4d0;border-radius:12px;background:#fffaf8;color:#352b30;width:100%;box-sizing:border-box}
+      .mcs__falta{margin:0 0 4px;font-size:12px;line-height:1.35}
+      .mcs__falta strong{color:#925b6d}
+      .mcs__head{margin:0 0 10px;font-size:11px;line-height:1.35;font-weight:700;color:#2f6b45}
+      .mcs__sub{font-weight:400;color:#715b63}
+      .mcs__list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+      .mcs__item{display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:10px;align-items:center}
+      .mcs__img{display:block;width:44px;height:44px;border-radius:8px;overflow:hidden;background:#fff;border:1px solid #efe3e0}
+      .mcs__img img{display:block;width:100%;height:100%;object-fit:cover}
+      .mcs__info{display:flex;flex-direction:column;min-width:0}
+      .mcs__brand{font-size:9.5px;letter-spacing:.04em;text-transform:uppercase;color:#715b63;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+      .mcs__title{font-size:11.5px;line-height:1.3;color:#352b30;text-decoration:none;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+      .mcs__price{font-size:11.5px;font-weight:700;color:#352b30;margin-top:1px}
+      .mcs__form{margin:0}
+      .mcs__btn{appearance:none;cursor:pointer;padding:7px 12px;border:1px solid #925b6d;border-radius:999px;background:#925b6d;color:#fff;font-size:11px;font-weight:700;line-height:1;white-space:nowrap}
+      .mcs__btn:hover{background:#fff;color:#925b6d}
+      .mcs--cartpage{padding:14px 16px}
+      .mcs--cartpage .mcs__falta{font-size:13px}
+      .mcs--cartpage .mcs__head{font-size:12px}
+      .mcs--cartpage .mcs__item{grid-template-columns:56px minmax(0,1fr) auto}
+      .mcs--cartpage .mcs__img{width:56px;height:56px}
+      .mcs--cartpage .mcs__title,.mcs--cartpage .mcs__price{font-size:12.5px}
+    </style>
+  {%- endif -%}
+{%- endif -%}

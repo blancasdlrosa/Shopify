@@ -1,0 +1,16 @@
+{%- comment -%} Tarjeta de producto del banner deslizable. Parámetro: p (producto). {%- endcomment -%}
+{%- assign v = p.selected_or_first_available_variant -%}
+<a class="mcs-card" href="{{ p.url }}">
+  <span class="mcs-card__img">
+    {%- if p.featured_image -%}
+      {{ p.featured_image | image_url: width: 500 | image_tag: loading: 'lazy', alt: p.title, widths: '250,400,500', sizes: '(min-width: 990px) 220px, 46vw' }}
+    {%- endif -%}
+    {%- if v.compare_at_price > v.price -%}
+      {%- assign dto = v.compare_at_price | minus: v.price | times: 100 | divided_by: v.compare_at_price -%}
+      <span class="mcs-card__badge">-{{ dto }}%</span>
+    {%- endif -%}
+  </span>
+  {%- if p.vendor != blank -%}<span class="mcs-card__brand">{{ p.vendor | escape }}</span>{%- endif -%}
+  <span class="mcs-card__title">{{ p.title | escape }}</span>
+  <span class="mcs-card__price">{{ v.price | money }}{% if v.compare_at_price > v.price %} <s>{{ v.compare_at_price | money }}</s>{% endif %}</span>
+</a>

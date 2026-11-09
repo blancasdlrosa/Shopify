@@ -1,0 +1,98 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "blocks": {
+        "heading": {
+          "type": "text",
+          "name": "t:names.title",
+          "settings": {
+            "text": "<h1>{{ closest.page.title }}</h1>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "h2",
+            "font": "var(--font-body--family)",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "page-content": {
+          "type": "page-content",
+          "settings": {},
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading",
+        "page-content"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "gap": 32,
+        "background_color": "{{ settings.color_palette.background }}",
+        "padding-block-start": 40,
+        "padding-block-end": 40
+      }
+    },
+    "guias_es": {
+      "type": "mirea-guias-luxe",
+      "settings": {
+        "antetitulo": "BIBLIOTECA DIGITAL MIREA",
+        "titulo": "Guías en español",
+        "descripcion": "PDF descargables para consultar en móvil, tablet u ordenador.",
+        "coleccion": "guias-mirea",
+        "cuantas": 8,
+        "formato": "PDF · Español",
+        "texto_boton": "Ver la guía",
+        "texto_ver_todo": "Ver todas las guías",
+        "nota": "Descarga inmediata después de la compra. Contenido educativo de cuidado cosmético: no sustituye el diagnóstico ni el consejo de un profesional médico.",
+        "fondo": "#f2ece8",
+        "texto": "#352b30",
+        "texto_suave": "#715b63",
+        "acento": "#925b6d",
+        "linea": "#e1cbc6",
+        "ancho": 1120,
+        "espacio_arriba": 60,
+        "espacio_abajo": 60
+      }
+    },
+    "guias_en": {
+      "type": "mirea-guias-luxe",
+      "settings": {
+        "antetitulo": "MIREA DIGITAL LIBRARY",
+        "titulo": "Guides in English",
+        "descripcion": "Explore the seven English editions and choose your topic.",
+        "coleccion": "mirea-guides-english",
+        "cuantas": 8,
+        "formato": "PDF · English",
+        "texto_boton": "View guide",
+        "texto_ver_todo": "See all guides",
+        "nota": "",
+        "fondo": "#fcf7f3",
+        "texto": "#352b30",
+        "texto_suave": "#715b63",
+        "acento": "#925b6d",
+        "linea": "#e1cbc6",
+        "ancho": 1120,
+        "espacio_arriba": 40,
+        "espacio_abajo": 80
+      }
+    }
+  },
+  "order": [
+    "main",
+    "guias_es",
+    "guias_en"
+  ]
+}
