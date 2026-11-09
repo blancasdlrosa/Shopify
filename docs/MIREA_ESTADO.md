@@ -1149,3 +1149,10 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - Tema BORRADOR 210047336785 "Mirea · 02-11 banner Novedades" (copia del publicado 209432969553). Único cambio: bloque promo_novedades en el carrusel de portada ("Lo nuevo de Corea ya está aquí.", foto real Manyo Factory, botón /collections/novedades, siempre visible), después de los banners con fecha y antes de las marcas. Resto de index.json comprobado idéntico al publicado.
 - Vista previa comprobada (2.º intento; el 1.º dio 500, típico de la primera carga): el banner sale con su botón. PENDIENTE: que Blanca lo publique.
 - 02-11: Blanca publicó 210047336785 (ahora MAIN). Temas viejos aún sin borrar.
+
+## 09-11 · Renovar listas + Korealy (24 de hoy + 12 del 05-11)
+- Ventas reales 90 días (ShopifyQL): ~25 unidades / ~20 pedidos. Top: medicube Deoxyribose (3), Melaxin wrapping (2), medicube PDRN balm (2), resto 1.
+- "Más vendidos" (690384175441): tenía 26 productos que NO se habían vendido (BBIA, BANILA, BARBER501, Anua PDRN…). Ahora: 19 productos vendidos de verdad en 90 días y con stock, orden BEST_SELLING. Borrada la 2.ª fuente (BBIA/BANILA). Sin vendidos sin stock (whamisa hair).
+- "Virales en TikTok" (694143385937): 9 → 17. Añadidos según Olive Young nov-2026 (hannaru.com 03-11; Black Friday Olive Young): Torriden Dive-In Serum, COSRX Good Morning, rom&nd Juicy Lasting Tint, Round Lab Birch Juice Sun Cream, S.NATURE Aqua Squalane Mist 100, REJURAN Healer Turnover Ampoule, d'Alba First Spray Serum 100, BoJ Relief Sun Probiotics pack.
+- Korealy: 36 productos (24 del 09-11: AHC, CENTELLIAN24; 12 del 05-11: IOPE, REJUDEX, VT, CENTELLIAN24) → títulos ES + "Envío: Corea". Copia: docs/seo/titulos_korealy_nuevos_0911.csv. 0 errores.
+- AVISO PRECIOS: precio = coste × 1,24 exacto (p. ej. 7,44 = 6 × 1,24) y la tienda tiene IVA incluido (taxesIncluded=true). Sin IVA queda ~2,5 % de margen, menos comisión de pago → pérdida en los baratos. NO se han publicado en más canales ni metido en Novedades hasta que Blanca decida precio. NO se han tocado precios.
