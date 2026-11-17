@@ -810,3 +810,12 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - Comprobado con una exportación completa (18.736 variantes): después de esa segunda limpieza no queda ninguna variante con precio anterior ≤ precio.
 - Aviso aparte: desde la copia del 22-10, 79 de estas variantes han cambiado de precio unos céntimos (TM, Kuker Shop, OBA, Lustrao…). No lo hemos cambiado nosotros; viene de la sincronización del proveedor.
 - Copia para deshacer: `docs/precios/compare_at_invertido_2210.csv` (valores antiguos).
+
+## 23-10 · SEO top 300 aplicado
+- Archivo: `docs/seo/seo_top300_2210.csv` (300 filas). Solo se ha tocado el título SEO, la descripción SEO y el texto alternativo (alt) de las imágenes indicadas. Nada de títulos de producto, precios, SKU, estado, etiquetas ni stock. No se ha borrado nada.
+- **Resultado:** 207 aplicados tal cual, 47 aplicados con texto corregido, 46 sin cambios (ya estaban bien), 0 errores.
+- **Textos corregidos (47):** antes de publicar se comparó cada descripción nueva con la ficha del producto. Se reescribieron las que afirmaban algo que la ficha no dice, por ejemplo "microagujas" en parches que en realidad se funden, "agua micelar", "menta", "savia de abedul" en una crema cuya ficha habla de heartleaf, "para adultos", "con dosificador", "una al día" (la ficha dice una o dos por semana) o "fragancia clásica para hombre" en un perfume sin descripción. También se mantuvieron algunos títulos y alts que ya se habían retocado en la tienda (Rice Milk, Reparación Total, Soybean Milk y dos dispositivos Eternas).
+- **Comprobado:** se volvió a consultar en Shopify cada producto: los 254 títulos y descripciones SEO y los alts coinciden con el CSV.
+- **Aviso:** en ELIXIVA Colágeno Essential (2 de 3) y ELIXIVA Colágeno Premium (1 de 3) hay imágenes de la lista que ya no existen en el producto, así que no se les pudo poner alt. Las demás imágenes de esos dos productos sí lo tienen.
+- **Aviso:** las descripciones de producto de Beauty of Joseon Centella Calming Mask (lleva el texto de la mascarilla de arroz y miel) y de SKIN1004 Hyalu-Cica Hydrating Mask (lleva el de la Probio-Cica) son de otro producto. Para estas dos, el texto SEO solo dice lo que pone en el título.
+- **Para deshacer:** los valores anteriores están en las columnas `seo_title_antes`, `seo_desc_antes` y `alt_antes` del CSV, y los que se han puesto en `seo_title_nuevo`, `seo_desc_nuevo` y `alt_nuevo`.
