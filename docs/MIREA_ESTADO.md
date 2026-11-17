@@ -1163,7 +1163,8 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 ## 17-11 Precios Collective y OH! beauty (en curso)
 - La herramienta bloquea las subidas masivas (bulk), así que se actualiza en tandas de 50 productos.
 - Collective (resto de proveedores): regla coste ×1,45 redondeado a ,95, sin pasar del PVP recomendado (tachado) y sin bajar nunca un precio. Hecho: unos 560 productos de los 1.200 primeros. Quedan unos 4.000 por revisar.
-- OH! beauty (1.908 productos, 527 publicados, el resto en borrador): precio actual +25 %, redondeado a ,95. Si supera el PVP tachado, se quita el tachado. Hecho: 150 publicados.
+- OH! beauty (1.908 productos, 527 publicados, el resto en borrador): precio actual +25 %, redondeado a ,95. Si supera el PVP tachado, se quita el tachado. Hecho: los 527 publicados + 23 borradores. Faltan unos 1.358 borradores.
 - OH! beauty sin foto: 207 productos (115 publicados). Fotos pendientes.
 - Reversión: docs/precios/collective_x145_rollback.csv y docs/precios/ohbeauty_x125_rollback.csv.
 - Importante: si en Collective está activado "Sincronizar precio de venta", el proveedor pisará estos precios.
+- Blanca confirma que 'Sincronizar precio de venta' estaba activado; se le pide desactivarlo.
