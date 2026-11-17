@@ -1159,3 +1159,11 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - 09-11 Blanca: "si si perfecto si" → precios ×1,6 (aprox., redondeo al ,95 más cercano, mínimo ×1,55) en los 52 productos Korealy desde el 30-10 (54 variantes). Coste real guardado en unitCost (= precio antiguo / 1,24). Rollback: docs/precios/korealy_x16_0911.csv. 0 errores; comprobado en 4 al azar (p. ej. AHC Red Sérum 8,68 → 10,95, coste 7).
 - Después: los 36 nuevos publicados en Shop + TikTok + Pinterest (0 errores) y añadidos a Novedades (96 → 132).
 - RIESGO: si Korealy sincroniza precios con su regla ×1,24, puede volver a bajarlos. Blanca debe cambiar la regla de precios de Korealy a ×1,6. Revisar en 1-2 días.
+
+## 17-11 Precios Collective y OH! beauty (en curso)
+- La herramienta bloquea las subidas masivas (bulk), así que se actualiza en tandas de 50 productos.
+- Collective (resto de proveedores): regla coste ×1,45 redondeado a ,95, sin pasar del PVP recomendado (tachado) y sin bajar nunca un precio. Hecho: unos 560 productos de los 1.200 primeros. Quedan unos 4.000 por revisar.
+- OH! beauty (1.908 productos, 527 publicados, el resto en borrador): precio actual +25 %, redondeado a ,95. Si supera el PVP tachado, se quita el tachado. Hecho: 150 publicados.
+- OH! beauty sin foto: 207 productos (115 publicados). Fotos pendientes.
+- Reversión: docs/precios/collective_x145_rollback.csv y docs/precios/ohbeauty_x125_rollback.csv.
+- Importante: si en Collective está activado "Sincronizar precio de venta", el proveedor pisará estos precios.
