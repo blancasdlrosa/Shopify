@@ -1,0 +1,93 @@
+{%- comment -%}
+  26-10 Mirea · una diapositiva del carrusel de banners (lo usa sections/mirea-portada-tienda.liquid).
+  Parámetros: indice (0 = primera, se carga sin lazy), total, imagen, imagen_movil, antetitulo, titulo, texto,
+  boton, enlace, fondo, color, atributos (block.shopify_attributes), tema (ninguno/halloween/black_friday/navidad/rebajas).
+  28-10: decoración por temporada (SVG/CSS en línea, sin archivos externos). Todo decorativo: aria-hidden y sin clics.
+{%- endcomment -%}
+{%- liquid
+  assign fondo = fondo | default: '#352b30'
+  assign color = color | default: '#fcf7f3'
+  assign tema = tema | default: 'ninguno'
+  assign f0 = fondo | color_modify: 'alpha', 0
+  assign f55 = fondo | color_modify: 'alpha', 0.55
+  assign f92 = fondo | color_modify: 'alpha', 0.92
+  if indice == 0
+    assign carga = 'eager'
+    assign prioridad = 'high'
+  else
+    assign carga = 'lazy'
+    assign prioridad = 'auto'
+  endif
+  assign num = indice | plus: 1
+-%}
+<div class="mps__slide mps__slide--{{ tema }}{% if indice == 0 %} is-active{% endif %}" role="group" aria-roledescription="diapositiva" aria-label="{{ num }} de {{ total }}" data-i="{{ indice }}" data-tema="{{ tema }}" style="--f:{{ fondo }};--c:{{ color }};--f0:{{ f0 }};--f55:{{ f55 }};--f92:{{ f92 }}" {{ atributos }}{% if indice != 0 %} inert{% endif %}>
+  {%- if imagen != blank -%}
+    <picture class="mps__media">
+      {%- if imagen_movil != blank -%}
+        <source media="(max-width: 749px)" srcset="{{ imagen_movil | image_url: width: 600 }} 600w, {{ imagen_movil | image_url: width: 900 }} 900w" sizes="100vw">
+      {%- endif -%}
+      {{ imagen | image_url: width: 1400 | image_tag: widths: '500, 700, 900, 1200, 1400', sizes: '(min-width: 900px) 46vw, 100vw', loading: carga, fetchpriority: prioridad, alt: '', class: 'mps__img' }}
+    </picture>
+  {%- endif -%}
+  <div class="mps__shade" aria-hidden="true"></div>
+  {%- case tema -%}
+    {%- when 'halloween' -%}
+      <div class="mps__deco mps__deco--halloween" aria-hidden="true">
+        <svg class="mps__web mps__web--l" viewBox="0 0 120 120" width="120" height="120"><path d="M0 0L118 0M0 0L114 31M0 0L100 63M0 0L76 90M0 0L44 109M0 0L0 118M26 0Q22 3 25 7Q21 9 22 14Q17 15 17 20Q12 19 10 24Q4 22 0 26M48 0Q41 5 46 12Q38 16 41 25Q31 27 31 37Q21 35 18 45Q8 41 0 48M72 0Q61 8 70 19Q57 25 61 38Q47 41 46 55Q32 53 27 67Q12 61 0 72M98 0Q84 11 95 25Q77 34 83 52Q64 55 63 75Q43 72 37 91Q16 83 0 98" fill="none" stroke="currentColor" stroke-width=".7" stroke-linecap="round"/></svg>
+        <svg class="mps__web mps__web--r" viewBox="0 0 120 120" width="120" height="120"><path d="M0 0L118 0M0 0L114 31M0 0L100 63M0 0L76 90M0 0L44 109M0 0L0 118M26 0Q22 3 25 7Q21 9 22 14Q17 15 17 20Q12 19 10 24Q4 22 0 26M48 0Q41 5 46 12Q38 16 41 25Q31 27 31 37Q21 35 18 45Q8 41 0 48M72 0Q61 8 70 19Q57 25 61 38Q47 41 46 55Q32 53 27 67Q12 61 0 72M98 0Q84 11 95 25Q77 34 83 52Q64 55 63 75Q43 72 37 91Q16 83 0 98" fill="none" stroke="currentColor" stroke-width=".7" stroke-linecap="round"/></svg>
+        <span class="mps__spider"><svg viewBox="0 0 40 40" width="26" height="26"><g fill="none" stroke="#120d10" stroke-width="1.6" stroke-linecap="round"><path d="M16 18 8 12 4 15M16 21 6 20 2 24M16 24 8 28 5 34M17 26 12 33 11 38M24 18 32 12 36 15M24 21 34 20 38 24M24 24 32 28 35 34M23 26 28 33 29 38"/></g><ellipse cx="20" cy="22" rx="6" ry="7" fill="#120d10"/><circle cx="20" cy="14" r="4" fill="#120d10"/><circle cx="18.6" cy="13.4" r=".9" fill="#ff8a2a"/><circle cx="21.4" cy="13.4" r=".9" fill="#ff8a2a"/></svg></span>
+        {%- for b in (1..3) -%}
+          <span class="mps__bat mps__bat--{{ b }}"><svg viewBox="0 0 64 28" width="34" height="15"><path d="M32 10c2-4 5-4 6 0 3-5 10-7 18-4-4 2-5 6-4 10-4-3-9-2-11 2-3-3-6-2-9 4-3-6-6-7-9-4-2-4-7-5-11-2 1-4 0-8-4-10 8-3 15-1 18 4 1-4 4-4 6 0z" fill="#0e0a0c"/></svg></span>
+        {%- endfor -%}
+        <span class="mps__glow"></span>
+      </div>
+    {%- when 'black_friday' -%}
+      <div class="mps__deco mps__deco--bf" aria-hidden="true">
+        <span class="mps__frame"></span>
+        <span class="mps__tag mps__tag--bf">Black Friday</span>
+        <span class="mps__glow"></span>
+      </div>
+    {%- when 'navidad' -%}
+      <div class="mps__deco mps__deco--navidad" aria-hidden="true">
+        <span class="mps__glow"></span>
+        <span class="mps__snow">
+          {%- for s in (1..30) -%}
+            {%- liquid
+              assign x = s | times: 37 | modulo: 100
+              assign sz = s | modulo: 4 | plus: 2
+              assign dur = s | modulo: 7 | plus: 9
+              assign del = s | times: 13 | modulo: 17
+              assign dx = s | modulo: 5 | minus: 2 | times: 9
+            -%}
+            <i style="left:{{ x }}%;width:{{ sz }}px;height:{{ sz }}px;--d:{{ dur }}s;--dl:-{{ del }}s;--dx:{{ dx }}px"></i>
+          {%- endfor -%}
+        </span>
+        {%- for k in (1..5) -%}
+          <svg class="mps__spark mps__spark--{{ k }}" viewBox="0 0 20 20" width="14" height="14"><path d="M10 0c.8 5.2 4.8 9.2 10 10-5.2.8-9.2 4.8-10 10-.8-5.2-4.8-9.2-10-10 5.2-.8 9.2-4.8 10-10z" fill="#f1d27a"/></svg>
+        {%- endfor -%}
+      </div>
+    {%- when 'rebajas' -%}
+      <div class="mps__deco mps__deco--rebajas" aria-hidden="true">
+        <span class="mps__confetti">
+          {%- for s in (1..16) -%}
+            {%- liquid
+              assign x = s | times: 29 | modulo: 100
+              assign dur = s | modulo: 5 | plus: 8
+              assign del = s | times: 7 | modulo: 13
+              assign tono = s | modulo: 3
+            -%}
+            <i class="t{{ tono }}" style="left:{{ x }}%;--d:{{ dur }}s;--dl:-{{ del }}s;--r:{{ s | times: 47 | modulo: 360 }}deg"></i>
+          {%- endfor -%}
+        </span>
+        <span class="mps__tag mps__tag--rebajas"><svg viewBox="0 0 24 24" width="14" height="14"><path d="M3 12V4a1 1 0 0 1 1-1h8l9 9-9 9-9-9z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="8" cy="8" r="1.6" fill="currentColor"/></svg>Rebajas</span>
+      </div>
+  {%- endcase -%}
+  <div class="mps__copy">
+    {%- if antetitulo != blank -%}<p class="mps__ante">{{ antetitulo }}{% if tema == 'halloween' %} <span aria-hidden="true">🎃</span>{% endif %}</p>{%- endif -%}
+    {%- if titulo != blank -%}<p class="mps__title">{{ titulo }}</p>{%- endif -%}
+    {%- if texto != blank -%}<p class="mps__text">{{ texto }}</p>{%- endif -%}
+    {%- if boton != blank and enlace != blank -%}
+      <a class="mps__btn" href="{{ enlace }}">{{ boton }}<svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    {%- endif -%}
+  </div>
+</div>

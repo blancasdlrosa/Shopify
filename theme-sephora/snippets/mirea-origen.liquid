@@ -1,0 +1,48 @@
+{%- comment -%}
+  17-10 Mirea · origen del envío de un producto (misma regla que el carrito, snippets/mirea-cart-envio).
+  - España: etiquetas de proveedor español (Envío: España, Maymoo, EMANAR BEAUTY, Perfumerias Padilla…).
+  - Proveedor: Shopify Collective fuera de España → no se muestra nada (plazo según proveedor).
+  - Corea: el resto de productos físicos.
+  @param product
+  @param estilo  'pill' (tarjetas de producto) | 'ficha' (página de producto, con fecha estimada)
+{%- endcomment -%}
+{%- if product != blank -%}
+{%- liquid
+  assign tags_es = 'Envío: España|Maymoo|EMANAR BEAUTY|Perfumerias Padilla|Proveedor: Perfumerías Padilla|hello-mims|Natcare|Rulls|Dr.Mush|www.sallunabeauty.com' | split: '|'
+  assign mo_origen = 'kr'
+  for t in tags_es
+    if product.tags contains t
+      assign mo_origen = 'es'
+      break
+    endif
+  endfor
+  if mo_origen == 'kr' and product.tags contains 'Shopify Collective'
+    assign mo_origen = 'pr'
+  endif
+  if product.selected_or_first_available_variant.requires_shipping == false
+    assign mo_origen = 'dg'
+  endif
+-%}
+{%- if estilo == 'ficha' -%}
+  {%- liquid
+    assign meses = 'ene,feb,mar,abr,may,jun,jul,ago,sep,oct,nov,dic' | split: ','
+    assign hoy = 'now' | date: '%s' | plus: 0
+    if mo_origen == 'kr'
+      assign d1 = hoy | plus: 1209600
+      assign d2 = hoy | plus: 1814400
+    endif
+  -%}
+  {%- if mo_origen == 'es' -%}
+    <div class="mo-ficha mo-ficha--es"><span class="mo-ficha__f" aria-hidden="true">🇪🇸</span><div><strong>Sale desde España · envío rápido</strong><span>Con seguimiento por email. Plazo y coste exactos en el pago.</span></div></div>
+  {%- elsif mo_origen == 'kr' -%}
+    {%- assign m1 = d1 | date: '%m' | plus: 0 | minus: 1 -%}{%- assign m2 = d2 | date: '%m' | plus: 0 | minus: 1 -%}
+    <div class="mo-ficha mo-ficha--kr"><span class="mo-ficha__f" aria-hidden="true">🇰🇷</span><div><strong>Directo desde Corea del Sur · llega aprox. entre el {{ d1 | date: '%-d' }} {{ meses[m1] }} y el {{ d2 | date: '%-d' }} {{ meses[m2] }}</strong><span>Preparación 3–5 días laborables · entrega estimada 2–3 semanas · seguimiento por email.</span></div></div>
+  {%- elsif mo_origen == 'pr' -%}
+    <div class="mo-ficha"><span class="mo-ficha__f" aria-hidden="true">📦</span><div><strong>Lo envía su proveedor</strong><span>Plazo y coste según el proveedor; los verás antes de pagar.</span></div></div>
+  {%- endif -%}
+  <style>.mo-ficha{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;border:1px solid #eadcd8;border-radius:12px;background:#fffaf8;color:#352b30;margin:2px 0}.mo-ficha__f{font-size:18px;line-height:1.2}.mo-ficha strong{display:block;font-size:13px;line-height:1.35}.mo-ficha span span,.mo-ficha div span{display:block;margin-top:2px;font-size:11.5px;color:#715b63;line-height:1.4}.mo-ficha--es strong{color:#2f6b45}.mo-ficha--kr strong{color:#33407a}</style>
+{%- else -%}
+  {%- if mo_origen == 'es' -%}<span class="mo-pill mo-pill--es">🇪🇸 Envío rápido</span>{%- elsif mo_origen == 'kr' -%}<span class="mo-pill mo-pill--kr">🇰🇷 Desde Corea</span>{%- endif -%}
+  <style>.mo-pill{display:inline-block;margin:4px 0 0;padding:2px 8px;border-radius:999px;font-size:10.5px;font-weight:700;line-height:1.5;letter-spacing:.02em}.mo-pill--es{background:#eaf6ee;color:#2f6b45}.mo-pill--kr{background:#eef1fb;color:#33407a}</style>
+{%- endif -%}
+{%- endif -%}

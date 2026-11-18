@@ -1,0 +1,6 @@
+{
+  "sections": {
+    "main": { "type": "mirea-mis-listas", "settings": {} }
+  },
+  "order": ["main"]
+}

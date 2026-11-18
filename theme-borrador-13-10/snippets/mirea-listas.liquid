@@ -1,0 +1,61 @@
+{%- comment -%}
+  Mirea · Mis listas (borrador 13-10-2026). Corazón en tarjetas y ficha, panel "Guardar en" y la
+  página /collections/all?view=mis-listas. Se guarda en el navegador y, con sesión iniciada, en la cuenta del cliente. Se quita borrando
+  su render en snippets/mirea-selector-idioma.liquid.
+{%- endcomment -%}
+{%- if template.name == 'product' and product -%}
+  {%- assign mfav_img = '' -%}
+  {%- if product.featured_image -%}{%- assign mfav_img = product.featured_image | image_url: width: 400 -%}{%- endif -%}
+  <script type="application/json" id="mirea-product-data">
+    {
+      "h": {{ product.handle | json }},
+      "u": {{ '/products/' | append: product.handle | json }},
+      "t": {{ product.title | json }},
+      "i": {{ mfav_img | json }},
+      "p": {{ product.price | money | strip_html | json }}
+    }
+  </script>
+{%- endif -%}
+<style id="mirea-listas">
+  :root{--mfav-ink:#1f191c;--mfav-rose:#8f5d6c;--mfav-line:rgba(31,25,28,.12);--mfav-ivory:#fbf8f5;--mfav-serif:"Cormorant Garamond","Iowan Old Style",Georgia,serif}
+  .mfav{position:absolute;top:10px;right:10px;z-index:3;display:grid;place-items:center;width:36px;height:36px;border:0;border-radius:50%;background:rgba(255,255,255,.92);color:var(--mfav-ink);cursor:pointer;box-shadow:0 1px 6px rgba(31,25,28,.08);transition:transform .25s,color .25s}
+  .mfav:hover{transform:scale(1.08);color:var(--mfav-rose)}
+  .mfav.is-on,.mfav-wide.is-on{--mfav-fill:currentColor;color:var(--mfav-rose)}
+  .mfav-wide{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;margin-top:10px;padding:14px 18px;border:1px solid var(--mfav-ink);background:transparent;color:var(--mfav-ink);font-size:11.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;transition:background .25s,color .25s}
+  .mfav-wide:hover{background:var(--mfav-ink);color:#fff}
+  .mfav-wide.is-on span::after{content:" ✓"}
+  .mfav-head{position:relative;display:inline-grid;place-items:center;min-width:44px;height:44px;color:var(--color-account-icon,currentColor)}
+  .mfav-head__n{position:absolute;top:6px;right:4px;min-width:16px;height:16px;padding:0 4px;border-radius:8px;background:var(--mfav-rose);color:#fff;font-size:10px;line-height:16px;text-align:center}
+  html.mfs-open{overflow:hidden}
+  .mfs{position:fixed;inset:0;z-index:2147483000}
+  .mfs[hidden]{display:none}
+  .mfs__bg{position:absolute;inset:0;background:rgba(31,25,28,.42);backdrop-filter:blur(2px)}
+  .mfs__panel{position:absolute;top:0;right:0;bottom:0;width:min(420px,100%);overflow:auto;padding:34px 30px;background:var(--mfav-ivory);color:var(--mfav-ink);box-shadow:-20px 0 60px rgba(31,25,28,.18);animation:mfsIn .35s cubic-bezier(.2,.7,.2,1)}
+  @keyframes mfsIn{from{transform:translateX(30px);opacity:0}}
+  .mfs__x{position:absolute;top:14px;right:16px;border:0;background:none;font-size:28px;line-height:1;cursor:pointer;color:var(--mfav-ink)}
+  .mfs__prod{display:flex;gap:16px;align-items:center;padding-bottom:22px;border-bottom:1px solid var(--mfav-line)}
+  .mfs__prod img{width:72px;height:72px;object-fit:contain;background:#fff}
+  .mfs__eyebrow{margin:0 0 4px;font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--mfav-rose)}
+  .mfs__title{margin:0;font-family:var(--mfav-serif);font-size:22px;line-height:1.15}
+  .mfs__lists{list-style:none;margin:10px 0 0;padding:0}
+  .mfs__lists label{display:flex;align-items:center;gap:14px;padding:15px 0;border-bottom:1px solid var(--mfav-line);cursor:pointer}
+  .mfs__lists input{position:absolute;opacity:0;pointer-events:none}
+  .mfs__box{width:18px;height:18px;border:1px solid var(--mfav-ink);flex:none;display:grid;place-items:center}
+  .mfs__lists input:checked+.mfs__box{background:var(--mfav-ink)}
+  .mfs__lists input:checked+.mfs__box::after{content:"";width:5px;height:9px;border:solid #fff;border-width:0 1.5px 1.5px 0;transform:rotate(45deg) translate(-1px,-1px)}
+  .mfs__lists input:focus-visible+.mfs__box{outline:2px solid var(--mfav-rose);outline-offset:2px}
+  .mfs__name{flex:1;font-size:15px}
+  .mfs__n{font-size:12px;color:#6f6168}
+  .mfs__new,.mla__new{display:flex;gap:8px;margin-top:20px}
+  .mfs__new input,.mla__new input{flex:1;min-width:0;padding:12px 14px;border:1px solid var(--mfav-line);background:#fff;font-size:14px}
+  .mfs__new button,.mla__new button{padding:0 18px;border:0;background:var(--mfav-ink);color:#fff;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;cursor:pointer}
+  .mfs__go{display:block;margin-top:26px;padding:16px;text-align:center;background:var(--mfav-ink);color:#fff;font-size:11.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;text-decoration:none}
+  @media(max-width:600px){.mfs__panel{top:auto;width:100%;max-height:86vh;padding:28px 20px;animation-name:mfsUp}@keyframes mfsUp{from{transform:translateY(40px);opacity:0}}}
+</style>
+{%- if customer -%}
+  {%- comment -%} Firma del cliente para guardar sus listas en su cuenta (Supabase · mirea-listas). La clave solo vive en el tema. {%- endcomment -%}
+  {%- assign mfav_t = 'now' | date: '%s' -%}
+  {%- assign mfav_msg = customer.id | append: ':' | append: mfav_t -%}
+  <script>window.MireaListasCfg = { api: "https://zbpyvogfreegrkhdzsbn.supabase.co/functions/v1/listas", c: "{{ customer.id }}", t: {{ mfav_t }}, s: "{{ mfav_msg | hmac_sha256: '__MIREA_LISTAS_SECRET__' }}" };</script>
+{%- endif -%}
+<script src="{{ 'mirea-listas.js' | asset_url }}" defer></script>

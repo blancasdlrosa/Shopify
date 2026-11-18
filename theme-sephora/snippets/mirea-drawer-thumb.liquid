@@ -1,0 +1,46 @@
+{%- comment -%}
+  17-10 Mirea: fotos en el menú del móvil.
+  Miniatura redonda (40px) que se muestra junto a cada subenlace del menú del móvil (header-drawer).
+  Misma lógica de imagen que snippets/mirea-mega-tile.liquid (sin dibujos/emojis: siempre foto real):
+  producto → su foto; colección → imagen de la colección o foto de su primer producto;
+  páginas y otros → foto de una colección de respaldo (rutinas / piel / novedades...).
+  @param l  enlace del menú
+{%- endcomment -%}
+{%- liquid
+  assign img = blank
+  assign obj = l.object
+  if l.type == 'product_link'
+    assign img = obj.featured_image
+  elsif l.type == 'collection_link'
+    if obj.image
+      assign img = obj.image
+    elsif obj.products.first.featured_image
+      assign img = obj.products.first.featured_image
+    endif
+  endif
+  if img == blank
+    assign fb = 'novedades'
+    if l.title contains 'rutina' or l.title contains 'Rutina'
+      assign fb = 'rutinas'
+    elsif l.title contains 'Mirea AI' or l.title contains 'piel' or l.title contains 'Piel'
+      assign fb = 'piel'
+    elsif l.title contains 'Guía'
+      assign fb = 'duos-y-packs'
+    elsif l.title contains 'Todos los productos' or l.title contains 'Corea'
+      assign fb = 'skincare-coreano'
+    elsif l.title contains 'Más vendidos'
+      assign fb = 'virales-en-tiktok'
+    endif
+    assign fbc = collections[fb]
+    assign img = fbc.image | default: fbc.products.first.featured_image
+    if img == blank
+      assign fbc = collections['novedades']
+      assign img = fbc.image | default: fbc.products.first.featured_image
+    endif
+  endif
+-%}
+<span class="mirea-dthumb" aria-hidden="true">
+  {%- if img != blank -%}
+    {{- img | image_url: width: 96, height: 96, crop: 'center' | image_tag: loading: 'lazy', alt: '', width: 40, height: 40 -}}
+  {%- endif -%}
+</span>

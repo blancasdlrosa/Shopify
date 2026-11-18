@@ -1,0 +1,1028 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "mirea_portada_tienda": {
+      "type": "mirea-portada-tienda",
+      "blocks": {
+        "a1": {
+          "type": "acceso",
+          "settings": {
+            "texto": "⭐ Más vendidos",
+            "enlace": "/collections/all?sort_by=best-selling"
+          }
+        },
+        "a2": {
+          "type": "acceso",
+          "settings": {
+            "texto": "✨ Novedades",
+            "enlace": "/collections/novedades"
+          }
+        },
+        "a3": {
+          "type": "acceso",
+          "settings": {
+            "texto": "🏷️ Ofertas",
+            "enlace": "/collections/ofertas"
+          }
+        },
+        "a4": {
+          "type": "acceso",
+          "settings": {
+            "texto": "🔥 Virales",
+            "enlace": "/collections/virales-en-tiktok"
+          }
+        },
+        "a5": {
+          "type": "acceso",
+          "settings": {
+            "texto": "Protector solar",
+            "enlace": "/collections/proteccion-solar"
+          }
+        },
+        "a6": {
+          "type": "acceso",
+          "settings": {
+            "texto": "Perfumes",
+            "enlace": "/collections/desde-espana-perfumes"
+          }
+        },
+        "a7": {
+          "type": "acceso",
+          "settings": {
+            "texto": "Sets de regalo",
+            "enlace": "/collections/desde-espana-sets"
+          }
+        }
+      },
+      "block_order": [
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6",
+        "a7"
+      ],
+      "settings": {
+        "confianza_1": "🇪🇸 Envío rápido desde España",
+        "confianza_2": "🇰🇷 K-beauty original de Corea",
+        "confianza_3": "🚚 Envío gratis en España desde 69 €",
+        "confianza_4": "🔒 Pago seguro",
+        "antetitulo": "Mirea Skin",
+        "titulo": "K-beauty original de Corea y perfumería desde España.",
+        "boton_1": "🇰🇷 Comprar desde Corea",
+        "enlace_1": "/collections/desde-corea",
+        "boton_2": "🇪🇸 Comprar desde España",
+        "enlace_2": "/collections/desde-espana",
+        "buscador": "Busca productos, marcas o ingredientes…"
+      }
+    },
+    "mirea_hero_lux_proto": {
+      "type": "mirea-hero-lux",
+      "blocks": {
+        "textura_1": {
+          "type": "textura",
+          "settings": {
+            "titulo": "Sérum"
+          }
+        },
+        "textura_2": {
+          "type": "textura",
+          "settings": {
+            "titulo": "Crema"
+          }
+        },
+        "textura_3": {
+          "type": "textura",
+          "settings": {
+            "titulo": "Gel"
+          }
+        },
+        "textura_4": {
+          "type": "textura",
+          "settings": {
+            "titulo": "Agua"
+          }
+        }
+      },
+      "block_order": [
+        "textura_1",
+        "textura_2",
+        "textura_3",
+        "textura_4"
+      ],
+      "name": "Mirea · Hero LUXE (prototipo)",
+      "settings": {
+        "imagen": "shopify://shop_images/Imagen_de_ChatGPT_28_sept_2026_12_53_18.png",
+        "video_url": "",
+        "video_scroll": true,
+        "encuadre": "bottom",
+        "altura_escena": 100,
+        "recorte_vertical": 12,
+        "zoom_scroll": 3,
+        "kicker": "K-BEAUTY, BIEN ENTENDIDA",
+        "titulo": "Mirea Skin",
+        "claim": "Menos pasos, más criterio.",
+        "fase_1": "Tu piel no necesita diez productos. Necesita los que le hacen falta.",
+        "fase_2": "Seleccionamos por función: limpiar, tratar, hidratar, proteger.",
+        "fase_3": "Y te explicamos por qué, paso a paso.",
+        "alineacion": "center",
+        "cta_texto": "Encuentra tu rutina",
+        "cta_enlace": "/pages/encuentra-tu-rutina",
+        "titulo_texturas": "Texturas que reconoces al tacto",
+        "coleccion": "",
+        "numero_productos": 4,
+        "color_fondo": "#fcf7f3",
+        "color_texto": "#352b30",
+        "color_suave": "#715b63",
+        "color_acento": "#925b6d",
+        "color_linea": "#e1cbc6",
+        "ancho": 900
+      }
+    },
+    "mirea_necesidades_yRix6d": {
+      "type": "mirea-necesidades",
+      "blocks": {
+        "need_6HGfga": {
+          "type": "need",
+          "settings": {
+            "image": "shopify://shop_images/13f2adb1-1a84-4938-99f8-0c124664e081.png",
+            "image_hover": "shopify://shop_images/product_images_1766046392.AXIS-Y_Spot_The_Difference_Blemish_Treatment1789573181_d793b307-c12d-4a50-ab6a-65735c21ed66.jpg",
+            "badge": "",
+            "title": "Granitos",
+            "text": "Equilibra, calma y cuida las imperfecciones.",
+            "link": "shopify://collections/granitos",
+            "link_label": "Descubrir"
+          }
+        },
+        "need_9fLY3n": {
+          "type": "need",
+          "settings": {
+            "image": "shopify://shop_images/49af8c71-9973-49a6-8435-ec475f138a39.png",
+            "image_hover": "shopify://shop_images/product_images_1785381830.product-image-2_9c7c7ca4-9430-4c05-8e94-d472542b877c1789407572.jpg",
+            "badge": "",
+            "title": "Manchas",
+            "text": "Ayuda a mejorar el tono y recuperar luminosidad.",
+            "link": "shopify://collections/manchas",
+            "link_label": "Descubrir"
+          }
+        },
+        "need_rojeces_mirea": {
+          "type": "need",
+          "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_20_sept_2026_15_23_43.png",
+            "image_hover": "shopify://shop_images/mirea-necesidad-rojeces.jpg",
+            "badge": "",
+            "title": "Rojeces",
+            "text": "Calma y suaviza tu rutina cuando la piel se siente reactiva o con rojeces.",
+            "link": "shopify://collections/calma-y-rojeces",
+            "link_label": "Descubrir"
+          }
+        },
+        "need_j3fabJ": {
+          "type": "need",
+          "settings": {
+            "image": "shopify://shop_images/3288597b-c312-4fff-b6f9-3aa04d8e6aa0.png",
+            "image_hover": "shopify://shop_images/product_images_1743773726.10150461419226489_17254143751789573395.jpg",
+            "badge": "",
+            "title": "Poros y textura",
+            "text": "Suaviza visualmente la textura y afina tu rutina.",
+            "link": "shopify://collections/poros",
+            "link_label": "Descubrir"
+          }
+        },
+        "need_j3AH7A": {
+          "type": "need",
+          "settings": {
+            "image": "shopify://shop_images/83f37a32-7092-4697-a0c2-5846ff41f4d9.png",
+            "image_hover": "shopify://shop_images/product_images_1755155525.23520376377254440_19925424101789572752.jpg",
+            "badge": "",
+            "title": "Piel seca",
+            "text": "Hidratación, confort y apoyo a la barrera cutánea.",
+            "link": "shopify://collections/piel-seca",
+            "link_label": "Descubrir"
+          }
+        },
+        "need_barrera_mirea": {
+          "type": "need",
+          "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_20_sept_2026_15_20_12.png",
+            "image_hover": "shopify://shop_images/mirea-necesidad-barrera.png",
+            "badge": "",
+            "title": "Barrera cutánea",
+            "text": "Hidratación y confort para una barrera cutánea debilitada.",
+            "link": "shopify://collections/barrera-cutanea",
+            "link_label": "Descubrir"
+          }
+        },
+        "need_FhkDt7": {
+          "type": "need",
+          "settings": {
+            "image": "shopify://shop_images/a5703e5c-3a29-4fc2-bc30-bc59bd106ad1.png",
+            "image_hover": "shopify://shop_images/product_images_1725425181.646710592303255_2262883741789586612.jpg",
+            "badge": "",
+            "title": "Piel sensible",
+            "text": "Una selección más suave para piel reactiva o delicada.",
+            "link": "shopify://collections/piel-sensible",
+            "link_label": "Descubrir"
+          }
+        },
+        "need_luminosidad_mirea": {
+          "type": "need",
+          "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_20_sept_2026_15_11_53_db12ca3b-9a3f-46d9-9c6e-f156b614b1c3.png",
+            "image_hover": "shopify://shop_images/mirea-necesidad-luminosidad.png",
+            "badge": "",
+            "title": "Luminosidad",
+            "text": "Devuelve luz al rostro y mejora el aspecto apagado de la piel.",
+            "link": "shopify://collections/manchas",
+            "link_label": "Descubrir"
+          }
+        },
+        "need_UQi3mD": {
+          "type": "need",
+          "settings": {
+            "image": "shopify://shop_images/205cfefd-94a7-41b6-b8a2-40d17172eb0e.png",
+            "image_hover": "shopify://shop_images/product_images_1726109464.07_6161609f-1276-494d-b5fd-c0a9766372fe1789586416.jpg",
+            "badge": "",
+            "title": "Primeras arrugas",
+            "text": "Rutinas enfocadas en firmeza, hidratación y cuidado preventivo.",
+            "link": "shopify://collections/antiedad",
+            "link_label": "Descubrir"
+          }
+        }
+      },
+      "block_order": [
+        "need_6HGfga",
+        "need_9fLY3n",
+        "need_rojeces_mirea",
+        "need_j3fabJ",
+        "need_j3AH7A",
+        "need_barrera_mirea",
+        "need_FhkDt7",
+        "need_luminosidad_mirea",
+        "need_UQi3mD"
+      ],
+      "name": "Mirea · Necesidades",
+      "settings": {
+        "show_product_lists": false,
+        "eyebrow": "Encuentra lo que necesitas",
+        "heading": "¿Qué necesita tu piel hoy?",
+        "description": "Empieza por lo que más te preocupa y encuentra productos y rutinas pensados para ese objetivo.",
+        "header_link_label": "Ver todas las rutinas",
+        "header_link": "/pages/rutinas",
+        "background": "#ffffff",
+        "card_background": "#fffdfc",
+        "text_color": "#352b30",
+        "soft_color": "#715b63",
+        "accent_color": "#925b6d",
+        "max_width": 1180,
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "mirea_tienda_corea": {
+      "type": "mirea-origen-tienda",
+      "blocks": {
+        "s1": {
+          "type": "seccion",
+          "settings": {
+            "coleccion": "piel",
+            "titulo": "Piel",
+            "enlace": ""
+          }
+        },
+        "s2": {
+          "type": "seccion",
+          "settings": {
+            "coleccion": "proteccion-solar",
+            "titulo": "Protección solar",
+            "enlace": ""
+          }
+        },
+        "s3": {
+          "type": "seccion",
+          "settings": {
+            "coleccion": "maquillaje",
+            "titulo": "Maquillaje",
+            "enlace": ""
+          }
+        },
+        "s4": {
+          "type": "seccion",
+          "settings": {
+            "coleccion": "cabello",
+            "titulo": "Cabello",
+            "enlace": ""
+          }
+        },
+        "s5": {
+          "type": "seccion",
+          "settings": {
+            "coleccion": "cuidado-corporal",
+            "titulo": "Cuerpo",
+            "enlace": ""
+          }
+        },
+        "s6": {
+          "type": "seccion",
+          "settings": {
+            "coleccion": "dispositivos-faciales",
+            "titulo": "Aparatos",
+            "enlace": ""
+          }
+        },
+        "s7": {
+          "type": "seccion",
+          "settings": {
+            "coleccion": "salud",
+            "titulo": "Suplementos",
+            "enlace": ""
+          }
+        },
+        "s8": {
+          "type": "seccion",
+          "settings": {
+            "coleccion": "hombre",
+            "titulo": "Hombre",
+            "enlace": ""
+          }
+        }
+      },
+      "block_order": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6",
+        "s7",
+        "s8"
+      ],
+      "settings": {
+        "antetitulo": "🇰🇷 Desde Corea",
+        "titulo": "K-beauty original de Corea.",
+        "texto": "Lo más buscado de Corea del Sur, por secciones.",
+        "sello": "🇰🇷 Envío directo desde Corea",
+        "enlace": "/collections/desde-corea",
+        "texto_enlace": "Ver todo desde Corea",
+        "etiqueta": "Envío: Corea",
+        "excluir": "",
+        "cuantos": 10,
+        "fondo": "#ffffff",
+        "acento": "#8f5d6c",
+        "espacio_arriba": 50,
+        "espacio_abajo": 30
+      }
+    },
+    "mirea_tienda_espana": {
+      "type": "mirea-origen-tienda",
+      "blocks": {
+        "s1": {
+          "type": "seccion",
+          "settings": {
+            "coleccion": "desde-espana-perfumes",
+            "titulo": "Perfumes",
+            "enlace": ""
+          }
+        },
+        "s2": {
+          "type": "seccion",
+          "settings": {
+            "coleccion": "desde-espana-piel",
+            "titulo": "Piel",
+            "enlace": ""
+          }
+        },
+        "s3": {
+          "type": "seccion",
+          "settings": {
+            "coleccion": "desde-espana-maquillaje",
+            "titulo": "Maquillaje",
+            "enlace": ""
+          }
+        },
+        "s4": {
+          "type": "seccion",
+          "settings": {
+            "coleccion": "desde-espana-cabello",
+            "titulo": "Cabello",
+            "enlace": ""
+          }
+        },
+        "s5": {
+          "type": "seccion",
+          "settings": {
+            "coleccion": "desde-espana-cuerpo",
+            "titulo": "Cuerpo",
+            "enlace": ""
+          }
+        },
+        "s6": {
+          "type": "seccion",
+          "settings": {
+            "coleccion": "desde-espana-sets",
+            "titulo": "Sets de regalo",
+            "enlace": ""
+          }
+        },
+        "s7": {
+          "type": "seccion",
+          "settings": {
+            "coleccion": "desde-espana-aparatos",
+            "titulo": "Aparatos",
+            "enlace": ""
+          }
+        },
+        "s8": {
+          "type": "seccion",
+          "settings": {
+            "coleccion": "desde-espana-salud",
+            "titulo": "Salud",
+            "enlace": ""
+          }
+        }
+      },
+      "block_order": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6",
+        "s7",
+        "s8"
+      ],
+      "settings": {
+        "antetitulo": "🇪🇸 Desde España",
+        "titulo": "Te llega en pocos días.",
+        "texto": "Perfumería y cosmética que enviamos desde España, por secciones.",
+        "sello": "🚚 Envío rápido desde España",
+        "enlace": "/collections/desde-espana",
+        "texto_enlace": "Ver todo desde España",
+        "etiqueta": "",
+        "excluir": "Perfume árabe",
+        "cuantos": 10,
+        "fondo": "#faf6f3",
+        "acento": "#8f5d6c",
+        "espacio_arriba": 40,
+        "espacio_abajo": 50
+      }
+    },
+    "mirea_dos_tarjetas": {
+      "type": "mirea-dos-tarjetas",
+      "blocks": {
+        "c1": {
+          "type": "tarjeta",
+          "settings": {
+            "coleccion": "aparatos-de-belleza",
+            "etiqueta": "Nuevo",
+            "titulo": "Aparatos LED en casa",
+            "texto": "Mascarillas LED y aparatos faciales de Eternas y Natcare, para cuidar tu piel como en cabina.",
+            "boton": "Descubrir",
+            "enlace": "",
+            "nota": ""
+          }
+        },
+        "c2": {
+          "type": "tarjeta",
+          "settings": {
+            "coleccion": "duos-y-packs",
+            "etiqueta": "Precio especial",
+            "titulo": "Dúos que ahorran",
+            "texto": "Dos productos que funcionan juntos, a mejor precio que por separado.",
+            "boton": "Ver los dúos",
+            "enlace": "",
+            "nota": ""
+          }
+        },
+        "c3": {
+          "type": "tarjeta",
+          "settings": {
+            "imagen": "shopify://shop_images/mirea-cat-maquillaje.jpg",
+            "etiqueta": "Tu maquillaje",
+            "titulo": "Encuentra tu base ideal",
+            "texto": "Como en un beauty finder: explora bases según tu tipo de piel, acabado y cobertura, con datos verificados.",
+            "boton": "Encontrar mi base",
+            "enlace": "#MireaBaseFinder-mirea_base_finder",
+            "nota": "Recomendaciones basadas en atributos documentados."
+          }
+        },
+        "c4": {
+          "type": "tarjeta",
+          "settings": {
+            "imagen": "shopify://shop_images/guia-primera-vez.png",
+            "etiqueta": "Guías Mirea",
+            "titulo": "Aprende a usar tu skincare",
+            "texto": "¿En qué orden van tus productos? Aprende a combinar activos y crear tu rutina con nuestras guías PDF.",
+            "boton": "Ver las guías PDF",
+            "enlace": "/collections/guias-mirea",
+            "nota": "Guías digitales · consulta cada ficha."
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3",
+        "c4"
+      ],
+      "settings": {}
+    },
+    "mirea_portada_partida": {
+      "type": "mirea-portada-partida",
+      "settings": {
+        "imagen": "shopify://shop_images/Mirea_Minimal_Editorial.png",
+        "antetitulo": "Rutinas completas",
+        "titulo": "Tu rutina, ya pensada.",
+        "boton": "Ver los packs",
+        "enlace": "/collections/rutinas",
+        "titulo_packs": "Packs que ahorran",
+        "todos_los_packs": true,
+        "coleccion": "rutinas",
+        "cuantos": 13
+      }
+    },
+    "mirea_home_aparatos": {
+      "type": "mirea-home-aparatos",
+      "name": "Mirea · Aparatos (home)",
+      "settings": {
+        "antetitulo": "Tecnología de cabina, en casa",
+        "titulo": "Aparatos LED y <em>radiofrecuencia</em>",
+        "texto": "Mascarillas LED, varitas con oro de 24K y aparatos faciales de Eternas y Natcare para cuidar tu piel en casa como en cabina.",
+        "boton": "Ver todos los aparatos",
+        "coleccion": "aparatos-de-belleza",
+        "cuantos": 12
+      }
+    },
+    "mirea_imprescindibles": {
+      "type": "mirea-home-imprescindibles",
+      "settings": {
+        "eyebrow": "Virales en TikTok 🔥",
+        "heading": "Los más famosos de la K-beauty.",
+        "etiqueta": "🔥 Viral",
+        "productos": [
+          "cosrx-advanced-snail-96-mucin-power-essence-100ml-1",
+          "beauty-of-joseon-relief-sun-aqua-fresh-rice-b5-spf50-pa-50ml",
+          "anua-heartleaf-77-hyaluron-soothing-toner-250ml",
+          "medicube-pdrn-pink-collagen-capsule-cream-55ml",
+          "skin1004-madagascar-centella-ampoule-100ml",
+          "beauty-of-joseon-glow-serum-propolis-niacinamide-30ml",
+          "medicube-zero-pore-pad-2-0-70ea",
+          "laneige-lip-sleeping-mask-apple-lime-20g"
+        ],
+        "link_text": "Ver todos los virales",
+        "link": "/collections/virales-en-tiktok"
+      }
+    },
+    "mirea_rutina_banner": {
+      "type": "mirea-rutina-banner",
+      "settings": {
+        "imagen": "shopify://shop_images/ChatGPT_Image_20_sept_2026_15_00_31.png",
+        "antetitulo": "Test gratuito · 1 minuto",
+        "titulo": "Encuentra tu rutina",
+        "texto": "Responde 3 preguntas y te decimos qué productos usar y en qué orden. Sin complicaciones.",
+        "boton": "Hacer el test",
+        "enlace": "/pages/encuentra-tu-rutina",
+        "coleccion": "rutinas"
+      }
+    },
+    "mirea_carrusel_novedades": {
+      "type": "mirea-carrusel-luxe",
+      "name": "Mirea · Carrusel LUXE",
+      "settings": {
+        "antetitulo": "RECIÉN LLEGADO · K-BEAUTY",
+        "titulo": "Llegado nuevo esta semana.",
+        "descripcion": "Las últimas incorporaciones de Corea, elegidas de una en una.",
+        "coleccion": "novedades",
+        "cuantos": 14,
+        "etiqueta": "Nuevo esta semana",
+        "mostrar_marca": true,
+        "mostrar_precio": true,
+        "texto_ver_todo": "Ver todas las novedades",
+        "fondo": "#ffffff",
+        "fondo_tarjeta": "#ffffff",
+        "texto": "#352b30",
+        "texto_suave": "#715b63",
+        "acento": "#925b6d",
+        "linea": "#e1cbc6",
+        "ancho": 1120,
+        "espacio_arriba": 15,
+        "espacio_abajo": 0
+      }
+    },
+    "mirea_collective_rituales": {
+      "type": "mirea-collection-showcase",
+      "name": "Mirea · Ritual de seda",
+      "settings": {
+        "eyebrow": "RITUALES DE AUTOCUIDADO",
+        "heading": "La belleza de los pequeños gestos.",
+        "description": "<p>Seda de morera y accesorios delicados para acompañar tus rutinas de noche.</p>",
+        "collection": "rituales-de-seda-y-autocuidado",
+        "products_to_show": 3,
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "mobile_scroll": false,
+        "show_vendor": false,
+        "show_price": true,
+        "badge_text": "Ritual",
+        "show_button": false,
+        "button_text": "Ver producto",
+        "show_view_all": true,
+        "view_all_text": "Descubrir rituales",
+        "background_color": "#fffdfc",
+        "text_color": "#352b30",
+        "accent_color": "#925b6d",
+        "image_radius": 14,
+        "padding_top": 20,
+        "padding_bottom": 12,
+        "padding_top_mobile": 28,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "mirea_perfumes_arabes": {
+      "type": "mirea-perfumes-duo",
+      "name": "Mirea · Perfumes 50/50",
+      "settings": {
+        "eyebrow": "DESCUBRE TU PERFUME",
+        "heading": "El arte de dejar huella.",
+        "description": "De los grandes clásicos a las esencias árabes. Dos universos, una sola selección.",
+        "spain_collection": "desde-espana-perfumes",
+        "arab_collection": "perfumes-arabes",
+        "products_per_side": 4
+      }
+    },
+    "mirea_duo_lujo": {
+      "type": "mirea-duo-lujo",
+      "name": "Mirea · Dúo lujo",
+      "settings": {
+        "eyebrow": "TU RITUAL",
+        "title": "De la mañana a la noche.",
+        "image_1": "shopify://shop_images/ChatGPT_Image_20_sept_2026_15_00_31.png",
+        "tag_1": "AM",
+        "title_1": "Rutina de mañana",
+        "text_1": "Limpieza suave, hidratación ligera y protector solar para salir de casa con la piel lista.",
+        "button_1": "Descubrir",
+        "link_1": "/collections/proteger",
+        "image_2": "shopify://shop_images/ChatGPT_Image_20_sept_2026_15_15_32.png",
+        "tag_2": "PM",
+        "title_2": "Rutina de noche",
+        "text_2": "Doble limpieza, tratamiento y una crema que repara mientras duermes.",
+        "button_2": "Descubrir",
+        "link_2": "/collections/tratar",
+        "note": "Guarda tus productos en Mis rutinas con el ♡ y ordénalos paso a paso."
+      }
+    },
+    "mirea_guias_luxe": {
+      "type": "mirea-guias-luxe",
+      "name": "Mirea · Guías LUXE",
+      "settings": {
+        "antetitulo": "GUÍAS MIREA",
+        "titulo": "Saber usarlo es la mitad del resultado.",
+        "descripcion": "Guías digitales escritas con criterio: qué hace cada activo, en qué orden va y cuándo conviene simplificar. PDF descargable, para leer en el móvil o imprimir.",
+        "coleccion": "guias-mirea",
+        "cuantas": 8,
+        "formato": "PDF · Español",
+        "texto_boton": "Ver la guía",
+        "texto_ver_todo": "Ver todas las guías",
+        "nota": "Descarga inmediata después de la compra. Contenido educativo de cuidado cosmético: no sustituye el diagnóstico ni el consejo de un profesional médico.",
+        "fondo": "#f2ece8",
+        "texto": "#352b30",
+        "texto_suave": "#715b63",
+        "acento": "#925b6d",
+        "linea": "#e1cbc6",
+        "ancho": 1080,
+        "espacio_arriba": 0,
+        "espacio_abajo": 15
+      }
+    },
+    "mirea_productos_WFkrxe": {
+      "type": "mirea-productos",
+      "name": "Mirea · Productos",
+      "settings": {
+        "antetitulo": "OFERTAS MIREA",
+        "titulo": "Ahora en oferta.",
+        "descripcion": "Una selección de productos con precio reducido para descubrir algo nuevo sin repetir las categorías que ya tienes arriba.",
+        "coleccion": "ofertas",
+        "cuantos": 8,
+        "enlace_superior": "Ver ofertas",
+        "mostrar_ver_todos": true,
+        "texto_ver_todos": "Ver todas las ofertas",
+        "segunda_imagen": true,
+        "mostrar_descripcion": false,
+        "fondo": "#ffffff",
+        "fondo_tarjeta": "#ffffff",
+        "texto": "#352b30",
+        "texto_suave": "#715b63",
+        "acento": "#925b6d",
+        "linea": "#e1cbc6",
+        "ancho": 1140,
+        "espacio_arriba": 35,
+        "espacio_abajo": 40
+      }
+    },
+    "mirea_marcas_home": {
+      "type": "mirea-marcas-home",
+      "name": "Mirea · Marcas",
+      "settings": {
+        "eyebrow": "MARCAS EN MIREA",
+        "heading": "Tus marcas favoritas, en un solo lugar.",
+        "description": "Beauty of Joseon, medicube, Round Lab, SKIN1004, Anua, COSRX y muchas más. Explora el catálogo por marca y encuentra más fácilmente lo que buscas.",
+        "background": "#ffffff",
+        "card_background": "#ffffff",
+        "text_color": "#352b30",
+        "soft_color": "#715b63",
+        "accent_color": "#925b6d",
+        "line_color": "#e1cbc6",
+        "padding_top": 45,
+        "padding_bottom": 35
+      }
+    },
+    "mirea_promo_tramos": {
+      "type": "mirea-promo-tramos",
+      "blocks": {
+        "t1": {
+          "type": "tramo",
+          "settings": {
+            "grande": "+35 €",
+            "texto": "Guía Mirea PRO de regalo",
+            "pie": "Primer pedido",
+            "enlace": "/pages/la-guia"
+          }
+        },
+        "t2": {
+          "type": "tramo",
+          "settings": {
+            "grande": "+60 €",
+            "texto": "Guía + Journal de 4 semanas",
+            "pie": "Primer pedido",
+            "enlace": "/pages/la-guia"
+          }
+        },
+        "t3": {
+          "type": "tramo",
+          "settings": {
+            "grande": "+69 €",
+            "texto": "Envío gratis en España*",
+            "pie": "Tarifas elegibles",
+            "enlace": "/pages/envios-y-devoluciones"
+          }
+        }
+      },
+      "block_order": [
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "settings": {
+        "imagen": "shopify://shop_images/ChatGPT_Image_20_sept_2026_15_15_32.png",
+        "antetitulo": "Regalos Mirea",
+        "titulo": "Cuanto más cuidas tu piel, más te llevas.",
+        "texto": "Sin códigos: se aplica solo en tu pedido.",
+        "boton": "Comprar",
+        "enlace": "/collections/all",
+        "nota": "*Envío gratis en España en tarifas elegibles. Guía y journal digitales, en tu primer pedido."
+      }
+    },
+    "mirea_diario_UTeqeD": {
+      "type": "mirea-diario",
+      "name": "Mirea · Diario",
+      "settings": {
+        "antetitulo": "CONSEJOS MIREA",
+        "titulo": "Aprende antes de comprar.",
+        "descripcion": "Guías claras para entender ingredientes, ordenar tu rutina y elegir productos con criterio.",
+        "blog": "consejos",
+        "cuantos": 6,
+        "texto_enlace": "Ver todos los consejos",
+        "fondo": "#fcf7f3",
+        "fondo_tarjeta": "#fffdfc",
+        "texto": "#352b30",
+        "texto_suave": "#715b63",
+        "acento": "#925b6d",
+        "linea": "#e1cbc6",
+        "ancho": 1180,
+        "espacio_arriba": 30,
+        "espacio_abajo": 30
+      }
+    },
+    "mirea_por_que": {
+      "type": "mirea-por-que",
+      "settings": {
+        "antetitulo": "Por qué Mirea",
+        "titulo": "¿Por qué comprar en Mirea?",
+        "titulo_1": "Elegido con criterio",
+        "texto_1": "K-beauty original de marcas que conocemos. Solo lo que de verdad funciona, sin relleno.",
+        "enlace_1": "",
+        "titulo_2": "Te guiamos paso a paso",
+        "texto_2": "Test de piel gratis y Guía Mirea PRO en tu primer pedido de más de 35 €.",
+        "enlace_2": "",
+        "titulo_3": "Compra tranquila",
+        "texto_3": "Pago seguro, envío con seguimiento y atención por personas reales.",
+        "enlace_3": ""
+      }
+    },
+    "mirea_experiencias_cards": {
+      "type": "mirea-experiencias-cards",
+      "blocks": {
+        "e1": {
+          "type": "tarjeta",
+          "settings": {
+            "imagen": "shopify://shop_images/Imagen_de_ChatGPT_28_sept_2026_12_53_18.png",
+            "producto": "",
+            "titulo": "Mirea AI",
+            "texto": "Pregunta lo que quieras sobre tu piel y tu rutina.",
+            "enlace": "/pages/mirea-ai"
+          }
+        },
+        "e2": {
+          "type": "tarjeta",
+          "settings": {
+            "imagen": "shopify://shop_images/ChatGPT_Image_20_sept_2026_15_00_31.png",
+            "producto": "",
+            "titulo": "Test de rutina",
+            "texto": "3 preguntas y te decimos qué usar y en qué orden.",
+            "enlace": "/pages/encuentra-tu-rutina"
+          }
+        },
+        "e3": {
+          "type": "tarjeta",
+          "settings": {
+            "producto": "guia-mirea-recuperar-la-barrera-cutanea",
+            "titulo": "Guías Mirea",
+            "texto": "Aprende a usar cada activo con criterio.",
+            "enlace": "/pages/la-guia"
+          }
+        },
+        "e4": {
+          "type": "tarjeta",
+          "settings": {
+            "producto": "tarjeta-de-regalo-de-mirea-skin",
+            "titulo": "Tarjeta regalo",
+            "texto": "Regala cuidado: ella elige lo que necesita.",
+            "enlace": "/products/tarjeta-de-regalo-de-mirea-skin"
+          }
+        }
+      },
+      "block_order": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "settings": {
+        "titulo": "Mucho más que productos"
+      }
+    },
+    "mirea_experiencias_mkikaq": {
+      "type": "mirea-experiencias",
+      "name": "Mirea · Experiencias",
+      "settings": {
+        "antetitulo": "OPINIONES REALES",
+        "titulo": "Resultados sin filtros. Opiniones con contexto.",
+        "descripcion": "No buscamos testimonios perfectos: mostramos tipo de piel, rutina, tiempo de uso y experiencia real para que puedas comparar con criterio.",
+        "texto_enlace": "Ver todas las experiencias",
+        "enlace": "/pages/experiencias-reales",
+        "fondo": "#f7eeec",
+        "fondo_tarjeta": "#fffdfc",
+        "texto": "#352b30",
+        "texto_suave": "#715b63",
+        "acento": "#925b6d",
+        "linea": "#e1cbc6",
+        "ancho": 1180,
+        "espacio_arriba": 70,
+        "espacio_abajo": 80
+      }
+    },
+    "mirea_cierre_ggB8tq": {
+      "type": "mirea-cierre",
+      "name": "Mirea · Cierre",
+      "settings": {
+        "antetitulo": "MIREA SKIN",
+        "titulo": "No necesitas más productos.<br><em>Necesitas una rutina que entiendas.</em>",
+        "descripcion": "Descubre una forma más sencilla de elegir, entender y mantener tu rutina de cuidado.",
+        "boton_1": "Encuentra tu rutina",
+        "enlace_1": "/pages/encuentra-tu-rutina",
+        "boton_2": "Explorar productos",
+        "enlace_2": "/collections/piel",
+        "mostrar_journal": true,
+        "journal_titulo": "Guía Mirea + Journal · 4 Weeks",
+        "journal_texto": "Guía digital en tu primer pedido superior a 35 €. Checklist/Journal de 4 semanas en pedidos desde 60 €.",
+        "journal_pill": "GUÍA >35 € · JOURNAL >60 €",
+        "pie": "Skincare con intención. Rutinas que tienen sentido.",
+        "fondo": "#44343b",
+        "texto": "#f7f0ea",
+        "texto_suave": "#b9a9a1",
+        "acento": "#b56d86",
+        "fondo_beneficio": "#4e3b43",
+        "ancho": 1180,
+        "espacio_arriba": 90,
+        "espacio_abajo": 70
+      }
+    },
+    "mirea_home_cremas_espana": {
+      "type": "mirea-collection-showcase",
+      "name": "Mirea · Cremas desde España",
+      "settings": {
+        "eyebrow": "CUIDADO FACIAL · DESDE ESPAÑA",
+        "heading": "Cremas para cada ritual.",
+        "description": "<p>Selección de cremas faciales con envío desde España. Encuentra tu próxima favorita.</p>",
+        "collection": "desde-espana-cremas-faciales",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "mobile_scroll": false,
+        "show_vendor": true,
+        "show_price": true,
+        "badge_text": "",
+        "show_button": false,
+        "button_text": "Ver producto",
+        "show_view_all": true,
+        "view_all_text": "Ver todas las cremas",
+        "background_color": "#ffffff",
+        "text_color": "#352b30",
+        "accent_color": "#925b6d",
+        "image_radius": 0,
+        "padding_top": 20,
+        "padding_bottom": 12,
+        "padding_top_mobile": 28,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "mirea_base_finder": {
+      "type": "mirea-base-finder",
+      "name": "Mirea · Encuentra tu base",
+      "settings": {
+        "initial_sensitive": true,
+        "initial_glow": true,
+        "initial_medium": true,
+        "products": [
+          "tfit-skin-cover-bb-cream-spf50-pa-30g-5colors",
+          "phyto-teint-ultra-eclat",
+          "purito-cica-clearing-bb-cream-30ml",
+          "the-whoo-gongjinhyang-mi-essential-foundation-spf30-pa-40ml",
+          "miguhara-love-vegan-skinware-foundation-spf30-pa-30ml-21",
+          "wakemake-seamless-wear-foundation-spf30-pa-30ml-5colors",
+          "purito-seoul-wonder-releaf-centella-bb-cushion-15g-x-2ea",
+          "cell-fusion-c-skin-blemish-balm-intensive-30ml-3colors",
+          "brtc-jasmine-water-bb-cream-60g-spf-30-pa",
+          "goodal-heartleaf-soothing-blemish-cover-sun-bb-spf-50-pa-50ml-neutral-beige",
+          "troiareuke-aesthetic-bb-cream-15ml-2types",
+          "troiareuke-healing-cushion-a-15g-spf50-pa-2colors",
+          "tirtir-mask-fit-red-cushion-23n",
+          "tfit-sleek-fit-cover-foundation-30g-9colors",
+          "wakemake-water-velvet-cover-foundation-spf30-pa-30ml",
+          "banila-co-covericious-power-fit-foundation-30ml",
+          "espoir-be-glow-foundation-spf27-pa-30g-10colors",
+          "tirtir-mask-fit-red-foundation-30ml-23color",
+          "amuse-dew-wear-foundation-35ml-spf50-pa-4-colors",
+          "amuse-ceramic-skin-perfector-foundation-spf40-pa-30ml-4-colors",
+          "clio-kill-cover-founwear-foundation-the-original-35ml-5colors",
+          "parnell-high-glow-serum-foundation-sfp50-pa-30ml-2colors",
+          "sulwhasoo-perfecting-foundation-spf17-pa-35ml",
+          "yunjac-long-wear-porcelain-cushion-foundation-spf50-pa-15g-x-2ea",
+          "tfit-radiance-fit-serum-foundation-30g-29colors",
+          "banila-co-it-radiant-vegan-cc-cream-spf17-pa-30ml",
+          "thank-you-farmer-be-beautiful-luminous-cc-cream-40ml",
+          "erborian-cc-red-correct-45ml",
+          "erborian-cc-red-correct-15ml",
+          "clio-kill-cover-high-glow-foundation-38g"
+        ]
+      }
+    }
+  },
+  "order": [
+    "mirea_portada_tienda",
+    "mirea_hero_lux_proto",
+    "mirea_tienda_corea",
+    "mirea_tienda_espana",
+    "mirea_necesidades_yRix6d",
+    "mirea_dos_tarjetas",
+    "mirea_base_finder",
+    "mirea_portada_partida",
+    "mirea_home_aparatos",
+    "mirea_imprescindibles",
+    "mirea_rutina_banner",
+    "mirea_carrusel_novedades",
+    "mirea_collective_rituales",
+    "mirea_perfumes_arabes",
+    "mirea_home_cremas_espana",
+    "mirea_duo_lujo",
+    "mirea_guias_luxe",
+    "mirea_productos_WFkrxe",
+    "mirea_marcas_home",
+    "mirea_promo_tramos",
+    "mirea_diario_UTeqeD",
+    "mirea_por_que",
+    "mirea_experiencias_cards",
+    "mirea_experiencias_mkikaq",
+    "mirea_cierre_ggB8tq"
+  ]
+}

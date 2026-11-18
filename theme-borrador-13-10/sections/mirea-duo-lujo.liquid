@@ -1,0 +1,86 @@
+{%- comment -%} Mirea · Dúo editorial de lujo (borrador 13-10-2026). Dos fotos verticales grandes: mañana y noche. {%- endcomment -%}
+<section class="mdl">
+  <div class="mdl__wrap">
+    <header class="mdl__head">
+      <p class="mdl__eyebrow">{{ section.settings.eyebrow | escape }}</p>
+      <h2>{{ section.settings.title }}</h2>
+    </header>
+    <div class="mdl__grid">
+      {%- for i in (1..2) -%}
+        {%- liquid
+          assign k_img = 'image_' | append: i
+          assign k_tag = 'tag_' | append: i
+          assign k_title = 'title_' | append: i
+          assign k_text = 'text_' | append: i
+          assign k_link = 'link_' | append: i
+          assign k_btn = 'button_' | append: i
+          assign img = section.settings[k_img]
+          assign img_alt = section.settings[k_title] | strip_html
+        -%}
+        <a class="mdl__tile" href="{{ section.settings[k_link] | default: '/collections/piel' }}">
+          <div class="mdl__media">
+            {%- if img != blank -%}
+              {{ img | image_url: width: 1400 | image_tag: loading: 'lazy', sizes: '(min-width: 750px) 50vw, 100vw', widths: '600,900,1200,1400', alt: img_alt }}
+            {%- endif -%}
+          </div>
+          <div class="mdl__veil" aria-hidden="true"></div>
+          <div class="mdl__text">
+            <p class="mdl__tag">{{ section.settings[k_tag] | escape }}</p>
+            <h3>{{ section.settings[k_title] }}</h3>
+            <p class="mdl__copy">{{ section.settings[k_text] | escape }}</p>
+            <span class="mdl__btn">{{ section.settings[k_btn] | escape }}</span>
+          </div>
+        </a>
+      {%- endfor -%}
+    </div>
+    {%- if section.settings.note != blank -%}<p class="mdl__note">{{ section.settings.note }}</p>{%- endif -%}
+  </div>
+</section>
+<style>
+  .mdl{background:#fbf8f5;color:#1f191c;padding:clamp(56px,8vw,112px) 0}
+  .mdl__wrap{width:min(calc(100% - 40px),1320px);margin:auto}
+  .mdl__head{text-align:center;margin-bottom:clamp(30px,4vw,52px)}
+  .mdl__eyebrow{margin:0 0 12px;font-size:10.5px;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:#8f5d6c}
+  .mdl h2{margin:0;font-family:"Cormorant Garamond","Iowan Old Style",Georgia,serif;font-weight:300;font-size:clamp(40px,5.4vw,78px);line-height:.98;letter-spacing:-.025em}
+  .mdl h2 em{font-style:italic;color:#8f5d6c}
+  .mdl__grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(12px,1.6vw,22px)}
+  .mdl__tile{position:relative;display:flex;align-items:flex-end;aspect-ratio:4/5;overflow:hidden;background:#2a2124;color:#fff;text-decoration:none;isolation:isolate}
+  .mdl__media{position:absolute;inset:0;z-index:-2}
+  .mdl__media img{width:100%;height:100%;object-fit:cover;transform:scale(1.03);transition:transform 1.8s cubic-bezier(.2,.7,.2,1)}
+  .mdl__tile:hover .mdl__media img{transform:scale(1.08)}
+  .mdl__veil{position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(20,15,17,0) 45%,rgba(20,15,17,.66) 100%)}
+  .mdl__text{padding:clamp(24px,3.4vw,46px)}
+  .mdl__tag{margin:0 0 10px;font-size:10px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.8)}
+  .mdl h3{margin:0;font-family:"Cormorant Garamond","Iowan Old Style",Georgia,serif;font-weight:300;font-size:clamp(38px,4.4vw,64px);line-height:.95;letter-spacing:-.02em;color:#fff}
+  .mdl h3 em{font-style:italic;color:#f1d6dd}
+  .mdl__copy{max-width:360px;margin:14px 0 0;font-size:14px;line-height:1.65;color:rgba(255,255,255,.86)}
+  .mdl__btn{display:inline-block;margin-top:22px;padding-bottom:4px;border-bottom:1px solid rgba(255,255,255,.8);font-size:11px;font-weight:600;letter-spacing:.24em;text-transform:uppercase}
+  .mdl__note{margin:26px 0 0;text-align:center;font-size:13px;color:#6f6168}
+  .mdl__note a{color:#1f191c}
+  @media(max-width:749px){.mdl__grid{grid-template-columns:1fr}.mdl__wrap{width:calc(100% - 32px)}}
+  @media(prefers-reduced-motion:reduce){.mdl__media img{transition:none;transform:none}}
+</style>
+{% schema %}
+{
+  "name": "Mirea · Dúo lujo",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Antetítulo", "default": "TU RITUAL" },
+    { "type": "text", "id": "title", "label": "Titular (admite <em>)", "default": "De la mañana <em>a la noche.</em>" },
+    { "type": "header", "content": "Foto 1" },
+    { "type": "image_picker", "id": "image_1", "label": "Foto" },
+    { "type": "text", "id": "tag_1", "label": "Etiqueta", "default": "AM" },
+    { "type": "text", "id": "title_1", "label": "Título", "default": "Rutina de <em>mañana</em>" },
+    { "type": "text", "id": "text_1", "label": "Texto", "default": "Limpieza suave, hidratación ligera y protector solar." },
+    { "type": "text", "id": "button_1", "label": "Botón", "default": "Descubrir" },
+    { "type": "url", "id": "link_1", "label": "Enlace" },
+    { "type": "header", "content": "Foto 2" },
+    { "type": "image_picker", "id": "image_2", "label": "Foto" },
+    { "type": "text", "id": "tag_2", "label": "Etiqueta", "default": "PM" },
+    { "type": "text", "id": "title_2", "label": "Título", "default": "Rutina de <em>noche</em>" },
+    { "type": "text", "id": "text_2", "label": "Texto", "default": "Doble limpieza, tratamiento y una crema que repara mientras duermes." },
+    { "type": "text", "id": "button_2", "label": "Botón", "default": "Descubrir" },
+    { "type": "url", "id": "link_2", "label": "Enlace" },
+    { "type": "text", "id": "note", "label": "Nota inferior (admite enlaces)" }
+  ]
+}
+{% endschema %}

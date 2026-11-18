@@ -1,0 +1,11 @@
+{%- comment -%}
+  Mirea · Productos para el banner deslizable de colección (13-10-2026).
+  No va en ninguna plantilla: lo pide mirea-coleccion-slider con
+  /collections/<handle>?sort_by=...&section_id=mirea-slide-items
+  y devuelve las 12 primeras tarjetas en ese orden (más vendidos, novedades…).
+{%- endcomment -%}
+<div class="mcs-items">
+  {%- for p in collection.products limit: 12 -%}
+    {%- render 'mirea-slide-card', p: p -%}
+  {%- endfor -%}
+</div>

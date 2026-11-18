@@ -1,0 +1,379 @@
+{
+ "sections": {
+  "mirea_hero": {
+   "type": "mirea-collection-hero",
+   "disabled": true,
+   "settings": {}
+  },
+  "mirea_slider": {
+   "type": "mirea-coleccion-slider",
+   "settings": {
+    "ocultar_en": "desde-espana"
+   }
+  },
+  "mirea_categorias": {
+   "type": "mirea-categorias-portada",
+   "blocks": {
+    "cat1": {
+     "type": "categoria",
+     "settings": {
+      "coleccion": "perfumes",
+      "titulo": "Perfumes",
+      "texto": "Perfumes y cofres de marca.",
+      "enlace": ""
+     }
+    },
+    "cat2": {
+     "type": "categoria",
+     "settings": {
+      "coleccion": "cabello",
+      "titulo": "Cabello",
+      "texto": "Champús, mascarillas y aceites.",
+      "enlace": ""
+     }
+    },
+    "cat3": {
+     "type": "categoria",
+     "settings": {
+      "coleccion": "piel",
+      "titulo": "Piel",
+      "texto": "Limpieza, sérums, cremas y solar.",
+      "enlace": ""
+     }
+    },
+    "cat4": {
+     "type": "categoria",
+     "settings": {
+      "coleccion": "cuidado-corporal",
+      "titulo": "Cuerpo",
+      "texto": "Lociones, aceites y geles.",
+      "enlace": ""
+     }
+    },
+    "cat5": {
+     "type": "categoria",
+     "settings": {
+      "coleccion": "maquillaje",
+      "titulo": "Maquillaje",
+      "texto": "Bases, coloretes y labios.",
+      "enlace": ""
+     }
+    },
+    "cat6": {
+     "type": "categoria",
+     "settings": {
+      "coleccion": "salud",
+      "titulo": "Salud y bienestar",
+      "texto": "Suplementos y parafarmacia.",
+      "enlace": ""
+     }
+    },
+    "cat7": {
+     "type": "categoria",
+     "settings": {
+      "coleccion": "aparatos-de-belleza",
+      "titulo": "Aparatos",
+      "texto": "LED y radiofrecuencia en casa.",
+      "enlace": ""
+     }
+    },
+    "cat8": {
+     "type": "categoria",
+     "settings": {
+      "coleccion": "sets-de-regalo",
+      "titulo": "Sets de regalo",
+      "texto": "Para regalar (o regalarte).",
+      "enlace": ""
+     }
+    }
+   },
+   "block_order": [
+    "cat1",
+    "cat2",
+    "cat3",
+    "cat4",
+    "cat5",
+    "cat6",
+    "cat7",
+    "cat8"
+   ],
+   "settings": {
+    "antetitulo": "Compra por categoría",
+    "titulo": "¿Qué buscas hoy?",
+    "solo_en": "desde-espana",
+    "columnas": 8
+   }
+  },
+  "mirea_chips": {
+   "type": "mirea-coleccion-chips",
+   "settings": {}
+  },
+  "main": {
+   "type": "main-collection",
+   "blocks": {
+    "filters": {
+     "type": "filters",
+     "static": true,
+     "settings": {
+      "enable_filtering": true,
+      "filter_style": "vertical",
+      "filter_width": "centered",
+      "text_label_case": "default",
+      "show_swatch_label": false,
+      "show_filter_label": true,
+      "enable_sorting": true,
+      "enable_grid_density": true,
+      "background_color": "",
+      "text_color": "",
+      "padding-block-start": 8,
+      "padding-block-end": 8,
+      "padding-inline-start": 0,
+      "padding-inline-end": 0,
+      "facets_margin_bottom": 8,
+      "facets_margin_right": 20
+     },
+     "blocks": {}
+    },
+    "product-card": {
+     "type": "_product-card",
+     "static": true,
+     "settings": {
+      "product_card_gap": 4,
+      "background_color": "",
+      "border": "none",
+      "border_width": 1,
+      "border_opacity": 100,
+      "border_color": "",
+      "border_radius": 0,
+      "padding-block-start": 0,
+      "padding-block-end": 0,
+      "padding-inline-start": 0,
+      "padding-inline-end": 0
+     },
+     "blocks": {
+      "card-gallery": {
+       "type": "_product-card-gallery",
+       "settings": {
+        "image_ratio": "adapt",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_color": "",
+        "border_radius": 0,
+        "padding-block-start": 0,
+        "padding-block-end": 0,
+        "padding-inline-start": 0,
+        "padding-inline-end": 0
+       },
+       "blocks": {}
+      },
+      "mirea_card_meta": {
+       "type": "custom-liquid",
+       "name": "Mirea · Marca y opciones",
+       "settings": {
+        "custom_liquid": "{% assign mp = closest.product %}{% if mp != blank %}<div class=\"mirea-card-facts\">{% if mp.vendor != blank %}<span class=\"mirea-card-facts__brand\">{{ mp.vendor | escape }}</span>{% endif %}{% if mp.variants.size > 1 %}<span class=\"mirea-card-facts__variants\">{{ mp.variants.size }} opciones</span>{% endif %}</div>{% endif %}"
+       },
+       "blocks": {}
+      },
+      "product_title_4nY4eT": {
+       "type": "product-title",
+       "name": "t:names.product_title",
+       "settings": {
+        "width": "100%",
+        "max_width": "normal",
+        "alignment": "left",
+        "type_preset": "rte",
+        "font": "var(--font-body--family)",
+        "font_size": "1rem",
+        "line_height": "normal",
+        "letter_spacing": "normal",
+        "case": "none",
+        "wrap": "pretty",
+        "text_color": "",
+        "background": false,
+        "background_color": "#00000026",
+        "corner_radius": 0,
+        "padding-block-start": 2,
+        "padding-block-end": 0,
+        "padding-inline-start": 0,
+        "padding-inline-end": 0
+       },
+       "blocks": {}
+      },
+      "price_EzJzMm": {
+       "type": "price",
+       "settings": {
+        "show_sale_price_first": true,
+        "show_installments": false,
+        "show_tax_info": false,
+        "type_preset": "h6",
+        "width": "100%",
+        "alignment": "left",
+        "font": "var(--font-body--family)",
+        "font_size": "1rem",
+        "line_height": "normal",
+        "letter_spacing": "normal",
+        "case": "none",
+        "text_color": "",
+        "padding-block-start": 0,
+        "padding-block-end": 0,
+        "padding-inline-start": 0,
+        "padding-inline-end": 0
+       },
+       "blocks": {}
+      }
+     },
+     "block_order": [
+      "card-gallery",
+      "mirea_card_meta",
+      "product_title_4nY4eT",
+      "price_EzJzMm"
+     ]
+    }
+   },
+   "settings": {
+    "layout_type": "grid",
+    "product_card_size": "medium",
+    "mobile_product_card_size": "small",
+    "enable_infinite_scroll": true,
+    "products_per_page": 24,
+    "product_grid_width": "centered",
+    "full_width_on_mobile": true,
+    "columns_gap_horizontal": 16,
+    "columns_gap_vertical": 28,
+    "padding-inline-start": 0,
+    "padding-inline-end": 0,
+    "background_color": "{{ settings.color_palette.background }}",
+    "padding-block-start": 0,
+    "padding-block-end": 32
+   }
+  },
+  "mirea_perfumes_arabes_cat": {
+   "type": "mirea-categorias-portada",
+   "blocks": {
+    "pa1": {
+     "type": "categoria",
+     "settings": {
+      "coleccion": "perfumes-de-mujer",
+      "titulo": "Para mujer",
+      "texto": "",
+      "enlace": ""
+     }
+    },
+    "pa2": {
+     "type": "categoria",
+     "settings": {
+      "coleccion": "perfumes-de-hombre",
+      "titulo": "Para hombre",
+      "texto": "",
+      "enlace": ""
+     }
+    },
+    "pa3": {
+     "type": "categoria",
+     "settings": {
+      "coleccion": "perfumes-unisex",
+      "titulo": "Unisex",
+      "texto": "",
+      "enlace": ""
+     }
+    },
+    "pa4": {
+     "type": "categoria",
+     "settings": {
+      "coleccion": "perfumes-arabes-elixir",
+      "titulo": "Elixir e intensos",
+      "texto": "",
+      "enlace": ""
+     }
+    },
+    "pa5": {
+     "type": "categoria",
+     "settings": {
+      "coleccion": "perfumes-arabes-cofres",
+      "titulo": "Cofres y sets",
+      "texto": "",
+      "enlace": ""
+     }
+    }
+   },
+   "block_order": [
+    "pa1",
+    "pa2",
+    "pa3",
+    "pa4",
+    "pa5"
+   ],
+   "settings": {
+    "antetitulo": "Perfumes árabes",
+    "titulo": "Elige tu estilo",
+    "envio": "",
+    "columnas": 5,
+    "solo_en": "perfumes,perfumes-arabes,perfumes-de-mujer,perfumes-de-hombre,perfumes-unisex,perfumes-arabes-elixir,perfumes-arabes-cofres"
+   }
+  },
+  "mirea_novedades_cat": {
+   "type": "mirea-categorias-portada",
+   "blocks": {
+    "no1": {
+     "type": "categoria",
+     "settings": {
+      "coleccion": "novedades",
+      "titulo": "Novedades",
+      "texto": "",
+      "enlace": ""
+     }
+    },
+    "no2": {
+     "type": "categoria",
+     "settings": {
+      "coleccion": "ofertas",
+      "titulo": "Ofertas",
+      "texto": "",
+      "enlace": ""
+     }
+    },
+    "no3": {
+     "type": "categoria",
+     "settings": {
+      "coleccion": "virales-en-tiktok",
+      "titulo": "Virales 🔥",
+      "texto": "",
+      "enlace": ""
+     }
+    },
+    "no4": {
+     "type": "categoria",
+     "settings": {
+      "coleccion": "todos-los-packs",
+      "titulo": "Packs y dúos",
+      "texto": "",
+      "enlace": ""
+     }
+    }
+   },
+   "block_order": [
+    "no1",
+    "no2",
+    "no3",
+    "no4"
+   ],
+   "settings": {
+    "antetitulo": "Novedades y ofertas",
+    "titulo": "Lo último y lo más rebajado",
+    "envio": "",
+    "columnas": 4,
+    "solo_en": "novedades,ofertas,virales-en-tiktok,todos-los-packs"
+   }
+  }
+ },
+ "order": [
+  "mirea_hero",
+  "mirea_novedades_cat",
+  "mirea_perfumes_arabes_cat",
+  "mirea_slider",
+  "mirea_categorias",
+  "mirea_chips",
+  "main"
+ ]
+}

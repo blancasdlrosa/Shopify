@@ -1,0 +1,76 @@
+{%- comment -%} Mirea · Página "Mis listas" (borrador 13-10-2026). El contenido lo pinta assets/mirea-listas.js. {%- endcomment -%}
+<section class="mla">
+  <div class="mla__wrap">
+    <header class="mla__top">
+      <p class="mla__eyebrow">{{ section.settings.eyebrow | escape }}</p>
+      <h1>{% if customer and customer.first_name != blank %}{{ customer.first_name | escape }}, {{ section.settings.title | downcase | escape }}{% else %}{{ section.settings.title | escape }}{% endif %}</h1>
+      <p class="mla__lead">{{ section.settings.text | escape }}</p>
+    </header>
+    <div id="mirea-listas-app" class="mla__app" aria-live="polite">
+      <p class="mla__loading">Cargando tus listas…</p>
+    </div>
+    <p class="mla__note">{{ section.settings.note | escape }}</p>
+  </div>
+</section>
+<style>
+  .mla{background:#fbf8f5;color:#1f191c;padding:clamp(48px,7vw,96px) 0}
+  .mla__wrap{width:min(calc(100% - 40px),1240px);margin:auto}
+  .mla__top{max-width:720px;margin-bottom:clamp(30px,5vw,56px)}
+  .mla__eyebrow{margin:0 0 10px;font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#8f5d6c}
+  .mla h1,.mla h2{font-family:"Cormorant Garamond","Iowan Old Style",Georgia,serif;font-weight:400;letter-spacing:-.02em;margin:0}
+  .mla h1{font-size:clamp(40px,6vw,76px);line-height:.98}
+  .mla h2{font-size:clamp(30px,3.6vw,46px);line-height:1}
+  .mla__lead{margin:16px 0 0;font-size:15px;line-height:1.7;color:#6f6168}
+  .mla__app{display:grid;grid-template-columns:260px 1fr;gap:clamp(24px,4vw,56px);align-items:start}
+  .mla__nav ul{list-style:none;margin:0;padding:0;border-top:1px solid rgba(31,25,28,.12)}
+  .mla__nav button{display:flex;width:100%;justify-content:space-between;align-items:center;padding:15px 2px;border:0;border-bottom:1px solid rgba(31,25,28,.12);background:none;color:#1f191c;font-size:14px;text-align:left;cursor:pointer}
+  .mla__nav button em{font-style:normal;font-size:12px;color:#6f6168}
+  .mla__nav button.is-on{font-weight:600}
+  .mla__nav button.is-on span{border-bottom:1px solid #1f191c}
+  .mla__head{display:flex;justify-content:space-between;gap:20px;align-items:end;padding-bottom:22px;margin-bottom:26px;border-bottom:1px solid rgba(31,25,28,.12)}
+  .mla__hint{margin:8px 0 0;color:#6f6168;font-size:14px}
+  .mla__own{display:flex;gap:14px}
+  .mla__own button,.mla__rm{border:0;background:none;padding:0;color:#6f6168;font-size:12px;letter-spacing:.08em;text-transform:uppercase;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+  .mla__grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:28px 22px}
+  .mla__grid--rutina{grid-template-columns:1fr;gap:0}
+  .mla__item{display:flex;flex-direction:column;gap:14px}
+  .mla__grid--rutina .mla__item{display:grid;grid-template-columns:200px 110px 1fr;align-items:center;gap:22px;padding:20px 0;border-bottom:1px solid rgba(31,25,28,.12)}
+  .mla__img{display:block;aspect-ratio:1;background:#fff}
+  .mla__img img{width:100%;height:100%;object-fit:contain;padding:8%}
+  .mla__t{color:#1f191c;text-decoration:none;font-size:14px;line-height:1.4}
+  .mla__p{margin:6px 0 0;font-weight:600;font-size:14px}
+  .mla__acts{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;margin-top:12px}
+  .mla__acts select,.mla__step select{padding:8px 10px;border:1px solid rgba(31,25,28,.18);background:#fff;font-size:12px;color:#1f191c}
+  .mla__btn{display:inline-block;padding:10px 16px;border:1px solid #1f191c;color:#1f191c;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;text-decoration:none}
+  .mla__btn--dark{background:#1f191c;color:#fff}
+  .mla__step{display:flex;flex-direction:column;gap:10px}
+  .mla__num{font-family:"Cormorant Garamond",Georgia,serif;font-size:46px;line-height:1;color:#c9a4ae}
+  .mla__order{display:flex;gap:6px}
+  .mla__order button{width:32px;height:32px;border:1px solid rgba(31,25,28,.18);background:#fff;cursor:pointer}
+  .mla__empty{padding:56px 0;text-align:center;color:#6f6168}
+  .mla__empty p:first-child{font-family:"Cormorant Garamond",Georgia,serif;font-size:30px;color:#1f191c;margin:0 0 8px}
+  .mla__empty .mla__btn{margin-top:18px}
+  .mla__note{margin:48px 0 0;font-size:12px;color:#6f6168}
+  @media(max-width:860px){
+    .mla__app{grid-template-columns:1fr}
+    .mla__nav ul{display:flex;overflow-x:auto;gap:8px;border:0;padding-bottom:4px}
+    .mla__nav button{white-space:nowrap;border:1px solid rgba(31,25,28,.15);padding:10px 14px;gap:10px}
+    .mla__nav button.is-on{background:#1f191c;color:#fff}.mla__nav button.is-on em{color:#d9c7cc}.mla__nav button.is-on span{border:0}
+    .mla__grid{grid-template-columns:1fr 1fr}
+    .mla__grid--rutina .mla__item{grid-template-columns:96px 1fr;grid-template-areas:"img info" "step step"}
+    .mla__grid--rutina .mla__img{grid-area:img}.mla__grid--rutina .mla__info{grid-area:info}
+    .mla__grid--rutina .mla__step{grid-area:step;flex-direction:row;align-items:center}
+    .mla__num{font-size:32px}
+  }
+</style>
+{% schema %}
+{
+  "name": "Mirea · Mis listas",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Antetítulo", "default": "Tu espacio Mirea" },
+    { "type": "text", "id": "title", "label": "Título", "default": "Tus listas." },
+    { "type": "text", "id": "text", "label": "Texto", "default": "Favoritos, lista de deseos, lo que ya tienes en casa y tus rutinas de mañana y de noche, ordenadas paso a paso." },
+    { "type": "text", "id": "note", "label": "Nota", "default": "Con tu cuenta iniciada, tus listas se guardan en tu cuenta y las ves en cualquier dispositivo." }
+  ]
+}
+{% endschema %}

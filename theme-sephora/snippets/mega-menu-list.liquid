@@ -1,0 +1,30 @@
+{%- comment -%}
+  Mirea v9 · envoltorio del mega menú. "Piel" y "Marcas" usan el diseño tipo Sephora (mirea-mega-sephora).
+  15-10: "Desde España" usa kind 'espana' (secciones + marcas) y el resto de desplegables usan kind 'visual' (tarjetas con foto o emoji).
+  El original de Horizon sigue copiado tal cual en mega-menu-list-base, por si se quiere volver.
+{%- endcomment -%}
+{%- liquid
+  assign mirea_kind = 'visual'
+  if parent_link.title == 'Piel'
+    assign mirea_kind = 'piel'
+  elsif parent_link.title == 'Marcas'
+    assign mirea_kind = 'marcas'
+  elsif parent_link.title == 'Desde España'
+    assign mirea_kind = 'espana'
+  endif
+-%}
+{%- if mirea_kind != '' -%}
+  {%- render 'mirea-mega-sephora', parent_link: parent_link, id: id, kind: mirea_kind -%}
+{%- else -%}
+  {%- render 'mega-menu-list-base',
+    parent_link: parent_link,
+    id: id,
+    grid_columns_count: grid_columns_count,
+    grid_columns_count_tablet: grid_columns_count_tablet,
+    grid_columns_count_collection_images: grid_columns_count_collection_images,
+    menu_content_type: menu_content_type,
+    content_aspect_ratio: content_aspect_ratio,
+    image_border_radius: image_border_radius,
+    section: section
+  -%}
+{%- endif -%}

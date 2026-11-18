@@ -1,0 +1,85 @@
+{%- comment -%}
+  16-10 Mirea · una tarjeta redonda del menú desplegable (foto + nombre). Sin dibujos/emojis: siempre foto real.
+  17-10: foto de un producto CON STOCK (no la primera que salga) y lista de fotos elegidas a mano (fotos_fijas).
+  @param l       enlace del menú
+  @param url     (opcional) enlace a usar en vez de l.url (p. ej. filtrado por origen)
+  @param titulo  (opcional) texto a mostrar en vez de l.title
+  @param foto    (opcional) imagen ya elegida por el menú (para no repetir fotos)
+  @param origen  (opcional) 'Envío: Corea' o 'Envío: España' → la foto sale de un producto de ese origen
+{%- endcomment -%}
+{%- liquid
+  assign img = foto
+  assign obj = l.object
+  assign fotos_fijas = 'desde-espana-perfumes::good-girl|desde-espana-cofres-perfume::cofre-black-opium|desde-espana-piel::moisture-surge-100h-hidratante-autorrestaurador|desde-espana-cabello::rosemary-scalp-scaling-shampoo|desde-espana-cuerpo::eight-hour-intensive-moisture-body-treatment|desde-espana-maquillaje::almost-lipstick-black-honey|desde-espana-salud::mims-beauty|desde-espana-aparatos::medicube-age-r-booster-pro-pinklimited-version|desde-espana-sets::cofre-rutina-diaria-hydra-zen-lancome' | split: '|'
+  if img == blank and l.type == 'collection_link'
+    for f in fotos_fijas
+      assign fp = f | split: '::'
+      if obj.handle == fp[0] and all_products[fp[1]].featured_image
+        assign img = all_products[fp[1]].featured_image
+      endif
+    endfor
+  endif
+  # 17-10: fotos fijas por nombre (enlaces que no son colección o que repetían la misma foto)
+  assign fotos_titulo = 'Todos los productos::beauty-of-joseon-glow-serum-propolis-niacinamide-60ml|Más vendidos::laneige-neo-cushion-the-glow-spf50-pa-15g-7colors|Desde Corea::medicube-age-r-booster-pro-x2-2colors-it-can-only-be-shipped-via-express-service|Virales::beauty-of-joseon-glow-deep-serum-rice-alpha-arbutin-60ml' | split: '|'
+  if img == blank
+    for f in fotos_titulo
+      assign fp = f | split: '::'
+      if l.title contains fp[0] and all_products[fp[1]].featured_image
+        assign img = all_products[fp[1]].featured_image
+        break
+      endif
+    endfor
+  endif
+  if img == blank and l.type == 'product_link'
+    assign img = obj.featured_image
+  endif
+  if img == blank and origen != blank and l.type == 'collection_link'
+    for p in obj.products limit: 40
+      if p.available and p.tags contains origen and p.featured_image
+        assign img = p.featured_image
+        break
+      endif
+    endfor
+  endif
+  if img == blank and l.type == 'collection_link'
+    if obj.image
+      assign img = obj.image
+    else
+      for p in obj.products limit: 30
+        if p.available and p.featured_image
+          assign img = p.featured_image
+          break
+        endif
+      endfor
+      if img == blank
+        assign img = obj.products.first.featured_image
+      endif
+    endif
+  endif
+  if img == blank
+    assign fb = 'novedades'
+    if l.title contains 'rutina' or l.title contains 'Rutina'
+      assign fb = 'rutinas'
+    elsif l.title contains 'Mirea AI'
+      assign fb = 'piel'
+    elsif l.title contains 'Guía'
+      assign fb = 'duos-y-packs'
+    elsif l.title contains 'Todos los productos'
+      assign fb = 'skincare-coreano'
+    elsif l.title contains 'Más vendidos'
+      assign fb = 'virales-en-tiktok'
+    elsif l.title contains 'Corea'
+      assign fb = 'skincare-coreano'
+    endif
+    assign fbc = collections[fb]
+    assign img = fbc.image | default: fbc.products.first.featured_image
+  endif
+  assign t_url = url | default: l.url
+  assign t_tit = titulo | default: l.title
+-%}
+<li>
+  <a class="msm__vtile" href="{{ t_url }}">
+    <span class="msm__vimg">{%- if img != blank -%}{{ img | image_url: width: 240, height: 240, crop: 'center' | image_tag: loading: 'lazy', alt: t_tit }}{%- endif -%}</span>
+    <span class="msm__vname">{{ t_tit }}</span>
+  </a>
+</li>

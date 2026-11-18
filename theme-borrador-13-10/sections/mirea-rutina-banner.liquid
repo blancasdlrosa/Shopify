@@ -1,0 +1,69 @@
+{%- comment -%} 15-10 Mirea: banner grande "Encuentra tu rutina" tipo MiiN: foto con persona + productos + botón al test. {%- endcomment -%}
+<section class="mrb" id="mrb-{{ section.id }}">
+  <div class="mrb__wrap">
+    <div class="mrb__foto">
+      {%- if section.settings.imagen != blank -%}
+        {{ section.settings.imagen | image_url: width: 1800 | image_tag: loading: 'lazy', sizes: '100vw', alt: section.settings.titulo }}
+      {%- endif -%}
+    </div>
+    <div class="mrb__caja">
+      <p class="mrb__ante">{{ section.settings.antetitulo }}</p>
+      <h2 class="mrb__tit">{{ section.settings.titulo }}</h2>
+      <p class="mrb__txt">{{ section.settings.texto }}</p>
+      <div class="mrb__pasos">
+        <span><b>1</b> Tu tipo de piel</span>
+        <span><b>2</b> Lo que te preocupa</span>
+        <span><b>3</b> Tu rutina paso a paso</span>
+      </div>
+      <a class="mrb__btn" href="{{ section.settings.enlace | default: '/pages/encuentra-tu-rutina' }}">{{ section.settings.boton }} →</a>
+      {%- if section.settings.coleccion != blank -%}
+        <div class="mrb__prods">
+          {%- for p in collections[section.settings.coleccion].products limit: 3 -%}
+            <a href="{{ p.url }}" title="{{ p.title | escape }}">{%- if p.featured_image -%}{{ p.featured_image | image_url: width: 200 | image_tag: loading: 'lazy', alt: p.title }}{%- endif -%}</a>
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+<style>
+#mrb-{{ section.id }}{background:#fcf7f3;padding:40px 0}
+#mrb-{{ section.id }} *{box-sizing:border-box}
+#mrb-{{ section.id }} .mrb__wrap{position:relative;width:min(calc(100% - 32px),1280px);margin:0 auto;border-radius:24px;overflow:hidden;min-height:560px;display:flex;align-items:center;background:#f4e5e2}
+#mrb-{{ section.id }} .mrb__foto{position:absolute;inset:0}
+#mrb-{{ section.id }} .mrb__foto img{width:100%;height:100%;object-fit:cover}
+#mrb-{{ section.id }} .mrb__caja{position:relative;margin:40px;max-width:480px;background:rgba(252,247,243,.92);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-radius:20px;padding:34px;color:#352b30}
+#mrb-{{ section.id }} .mrb__ante{margin:0 0 10px;color:#925b6d;font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:600}
+#mrb-{{ section.id }} .mrb__tit{margin:0;font-size:clamp(32px,3.6vw,50px);line-height:1.02}
+#mrb-{{ section.id }} .mrb__txt{margin:14px 0 0;color:#715b63;font-size:15px;line-height:1.6}
+#mrb-{{ section.id }} .mrb__pasos{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 22px}
+#mrb-{{ section.id }} .mrb__pasos span{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;background:#fffdfc;border:1px solid #e1cbc6;border-radius:999px;padding:6px 12px}
+#mrb-{{ section.id }} .mrb__pasos b{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;background:#925b6d;color:#fff;font-size:11px}
+#mrb-{{ section.id }} .mrb__btn{display:inline-block;background:#1f191c;color:#fff;border-radius:999px;padding:14px 26px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;text-decoration:none}
+#mrb-{{ section.id }} .mrb__btn:hover{background:#925b6d}
+#mrb-{{ section.id }} .mrb__prods{display:flex;gap:10px;margin-top:22px}
+#mrb-{{ section.id }} .mrb__prods a{width:64px;height:64px;border-radius:12px;overflow:hidden;background:#fffdfc;border:1px solid #e1cbc6}
+#mrb-{{ section.id }} .mrb__prods img{width:100%;height:100%;object-fit:cover}
+@media(max-width:749px){
+  #mrb-{{ section.id }}{padding:28px 0}
+  #mrb-{{ section.id }} .mrb__wrap{flex-direction:column;align-items:stretch;min-height:0}
+  #mrb-{{ section.id }} .mrb__foto{position:relative;height:340px}
+  #mrb-{{ section.id }} .mrb__caja{margin:-60px 14px 14px;padding:24px}
+}
+</style>
+{% schema %}
+{
+  "name": "Mirea · Banner rutina",
+  "tag": "section",
+  "settings": [
+    {"type":"image_picker","id":"imagen","label":"Foto (persona + productos)"},
+    {"type":"text","id":"antetitulo","label":"Antetítulo","default":"Test gratuito · 1 minuto"},
+    {"type":"text","id":"titulo","label":"Título","default":"Encuentra tu rutina"},
+    {"type":"textarea","id":"texto","label":"Texto","default":"Responde 3 preguntas y te decimos qué productos usar y en qué orden. Sin complicaciones."},
+    {"type":"text","id":"boton","label":"Botón","default":"Hacer el test"},
+    {"type":"url","id":"enlace","label":"Enlace"},
+    {"type":"collection","id":"coleccion","label":"Productos pequeños (3)"}
+  ],
+  "presets": [{"name":"Mirea · Banner rutina"}]
+}
+{% endschema %}
