@@ -1168,3 +1168,4 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - Reversión: docs/precios/collective_x145_rollback.csv y docs/precios/ohbeauty_x125_rollback.csv.
 - Importante: si en Collective está activado "Sincronizar precio de venta", el proveedor pisará estos precios.
 - Blanca confirma que 'Sincronizar precio de venta' estaba activado; se le pide desactivarlo.
+- 18-11 Fotos OH! beauty publicados: de 115 sin foto, el proveedor ha subido fotos a unos 46 y yo he puesto fotos reales (web oficial o tiendas) a 35 (Kérastase, Olaplex, Wella, Tahe, Redken, Thuya). Quedan 45 sin foto: tintes REF Soft Colour, accesorios Bifull/Perfect Beauty, Remember, Voltage, bolsas Kérastase. Las fotos que fallaron al cargar se borraron.
