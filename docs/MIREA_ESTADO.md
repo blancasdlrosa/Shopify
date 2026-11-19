@@ -819,3 +819,10 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - **Aviso:** en ELIXIVA Colágeno Essential (2 de 3) y ELIXIVA Colágeno Premium (1 de 3) hay imágenes de la lista que ya no existen en el producto, así que no se les pudo poner alt. Las demás imágenes de esos dos productos sí lo tienen.
 - **Aviso:** las descripciones de producto de Beauty of Joseon Centella Calming Mask (lleva el texto de la mascarilla de arroz y miel) y de SKIN1004 Hyalu-Cica Hydrating Mask (lleva el de la Probio-Cica) son de otro producto. Para estas dos, el texto SEO solo dice lo que pone en el título.
 - **Para deshacer:** los valores anteriores están en las columnas `seo_title_antes`, `seo_desc_antes` y `alt_antes` del CSV, y los que se han puesto en `seo_title_nuevo`, `seo_desc_nuevo` y `alt_nuevo`.
+
+## 19-11 · Descripciones corregidas (6 productos)
+- Reescritas en español con datos de la marca: BoJ Centella Calming Mask y SKIN1004 Hyalu-Cica (tenían texto de otro producto), COSRX Snail 96, Dr. Althea Aqua Blue, Hugo Boss Bottled y Anua Rice 70 38 g (estaban vacías). Copia de lo anterior en docs/descripciones/backup_1911.md.
+- Judge.me: importar reseñas solo del mismo producto, todas, sin editar, marcadas como importadas y sin enviarlas a Google (lo hace Blanca en la app).
+- App iOS: Blanca permite cambios poco a poco.
+- Emails de hola@mireaskin.es llegan a Gmail (pestaña Promociones).
+- Apps de Shopify recomendadas: Shopcodes y Launch Check (Launchpad solo si deja instalarla).
