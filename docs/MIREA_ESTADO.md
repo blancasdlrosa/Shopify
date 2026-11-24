@@ -826,3 +826,43 @@ Decisión de Blanca: NO subir precios de producto (mercado más barato). El marg
 - App iOS: Blanca permite cambios poco a poco.
 - Emails de hola@mireaskin.es llegan a Gmail (pestaña Promociones).
 - Apps de Shopify recomendadas: Shopcodes y Launch Check (Launchpad solo si deja instalarla).
+
+## 24-11 · Auditoría y activación de productos importados
+
+Archivo: `docs/auditoria_importados_2411.csv` (636 filas, una por producto auditado; columna `decision`).
+
+**Qué se revisó** (productos creados desde el 10-11):
+- **Grupo A**: borradores con stock = **636** (todos del proveedor "OH! beauty": peluquería profesional).
+- **Grupo B**: activos no publicados en la Tienda online. El recuento previo de 178 salía del filtro de búsqueda `published_status:online_store:visible`, que no es fiable. Se comprobó uno a uno (`publishedOnPublication`) que esos 178 **sí están publicados**, y todos los activos desde el 10-11 tienen fecha de publicación en la Tienda online. **Grupo B real = 0**, no había nada que publicar.
+- **Grupo C**: borradores sin stock = **311**. No se han tocado.
+
+**Reglas** (un producto solo se activa si las cumple todas): precio > 0 y > coste en todas las variantes; margen ≥ 10 %; al menos 1 imagen; título no repetido (ni dentro del lote ni con un producto activo); precio tachado mayor que el precio si existe; política de inventario DENY; nada de Plaza Clara.
+
+**Resultado:**
+| Decisión | Productos |
+|---|---|
+| Activados (ACTIVE + visibles en Tienda online) | **496** |
+| No tocados (siguen en borrador) | **140** |
+| Grupo B publicados | 0 (no había ninguno sin publicar) |
+
+No tocados, por motivo:
+- `margen_bajo` (margen < 10 %): 88. Casi todos están entre 9,9 % y 9,99 %, justo por debajo del límite.
+- `sin_imagen`: 37 (Voltage, Tahe, REF, Bifull, Olaplex, Remember…).
+- `duplicado`: 9. Ocho tienen el mismo título que un producto ya activo (Sebastian ×6, Wella EIMI Nutricurls, Session Label The Serum). El noveno es "Wella - EIMI Mistify Light - 75 ml", que estaba dos veces en el lote: se activó solo el más antiguo.
+- `revisar_manual`: 6. No son productos de venta o tienen un precio dudoso: "Listado PVP Retail", Báscula/Batidor/Bol de Remember a 78 € (el mismo precio que los tintes), Kérastase Shopping Bag y Redken Bolsa de regalo.
+- `perdida`: 1 (Olaplex Nº3+ Back Bar, 15,95 € con coste 35,55 €).
+- Plaza Clara: 0. `precio_tachado_raro`: 0. Variantes CONTINUE: 0 (las 636 ya eran DENY, así que no hubo que cambiar ninguna).
+
+**Avisos:**
+- 132 de los activados tienen al menos una variante con un margen de **exactamente 10 %** (el proveedor pone coste = 90 % del precio: Davines, Goldwell, Tahe, Remember, Sebastian…). Cumplen la regla, pero tras comisiones y envío el margen es casi nulo.
+- Los borradores ya tenían marcados los 8 canales (Tienda online, Shop, Google & YouTube, Facebook & Instagram, TikTok, Pinterest, POS y Headless). Al pasarlos a ACTIVE se ven en todos, no solo en la Tienda online. No se ha añadido ningún canal: venían así de la importación, igual que los 2.988 activos anteriores.
+- Duplicados: se buscó por título exacto entre los activos. Títulos que solo cambian en espacios o en mayúsculas dentro de palabras ("200ML" frente a "200 ml") podrían no detectarse.
+
+**Comprobado después (API):**
+- Borradores con stock desde el 10-11: 636 → **140**.
+- Activos desde el 10-11: 2.988 → **3.484**, todos con fecha de publicación en la Tienda online.
+- Los 496 activados: `publishedOnPublication` = true en la Tienda online (359921287505).
+- Revisión de 5 productos (Kérastase Gloss Absolu, ghd Duet Style, Davines OI All In One Milk, Goldwell Dualsenses Bond Pro, Nioxin Age Defense Acond. 475 ml): ACTIVE, publicados, todas las variantes DENY, `onlineStoreUrl` con valor, precio y coste sin cambios.
+- No se han cambiado precios, precios tachados, SKU, códigos de barras, títulos ni descripciones. No se ha borrado nada. No se han tocado pedidos, Merchant Center ni temas.
+
+**Para deshacer:** las filas con `decision = activar` del CSV son los 496 productos activados. Hay que volver a ponerlos en DRAFT con `productUpdate(product:{id, status:DRAFT})`, con lo que dejan de verse en todos los canales. No hace falta despublicarlos.

@@ -1,0 +1,637 @@
+product_id,titulo,vendor,grupo,variantes,precio_min,coste_min,margen_min_pct,imagenes,inventory_policy,flags,decision,motivo
+gid://shopify/Product/11352155390289,Kérastase - Gloss Absolu - Bain Crème Hydra-Glaze Recargable - 500 ml,OH! beauty,A,1,49.58,34.7,30.01,4,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11352163975505,ghd - Duet Style Cashmere Edición Limitada - Gift set plancha de aire caliente 2 en 1,OH! beauty,A,1,372.95,273.83,26.58,2,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11352164073809,ghd - Speed Cashmere Edición Limitada - Secador de pelo profesional,OH! beauty,A,1,349.95,255.11,27.10,2,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11352199233873,Voltage - Producto capilar profesional - 1 ud.,OH! beauty,A,1,28.95,16.01,44.70,0,DENY,sin_imagen,no_tocar,sin imágenes
+gid://shopify/Product/11352199692625,Wahl - Super Close 3616-0470 Afeitadora Profesional,OH! beauty,A,1,51.95,28.75,44.66,6,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11352199856465,Tahe - Espuma Bronceadora SPF 30 con Filtros UVA/UVB - 200 ml,OH! beauty,A,1,38.95,21.51,44.78,0,DENY,sin_imagen,no_tocar,sin imágenes
+gid://shopify/Product/11352200282449,Voltage - Producto capilar profesional - 500 ml,OH! beauty,A,1,26.95,14.82,45.01,0,DENY,sin_imagen,no_tocar,sin imágenes
+gid://shopify/Product/11352202903889,Wahl Professional - Vapor Cortapelos,OH! beauty,A,1,228.95,127.88,44.15,6,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11352203297105,Tahe - O.C. Coloración Permanente 101 - 100 ml,OH! beauty,A,1,35.95,19.7,45.20,0,DENY,sin_imagen,no_tocar,sin imágenes
+gid://shopify/Product/11352206836049,Shine Fashion Hair Care - Tratamiento 11 en 1 sin aclarado,OH! beauty,A,1,23.95,13.41,44.01,0,DENY,sin_imagen,no_tocar,sin imágenes
+gid://shopify/Product/11352206868817,Remember Ecosostenible - Mix Ayurvedic Plants R - 1 ud.,OH! beauty,A,1,159.95,89.1,44.30,0,DENY,sin_imagen,no_tocar,sin imágenes
+gid://shopify/Product/11352207032657,Shine Deluxe - Life Infusion Tratamiento capilar sin aclarado,OH! beauty,A,1,23.95,13.41,44.01,0,DENY,sin_imagen,no_tocar,sin imágenes
+gid://shopify/Product/11352207884625,REF Stockholm - SC 8.11 Light Cool Ash 2x - 75 ml,OH! beauty,A,1,19.95,10.78,45.96,0,DENY,sin_imagen,no_tocar,sin imágenes
+gid://shopify/Product/11352208114001,REF Stockholm - SC 7.3 Golden Blonde 2x - 75 ml,OH! beauty,A,1,19.95,10.78,45.96,0,DENY,sin_imagen,no_tocar,sin imágenes
+gid://shopify/Product/11352208179537,REF Stockholm - SC 9.3 Very Lt Golden Blonde 2x - 75 ml,OH! beauty,A,1,19.95,10.78,45.96,0,DENY,sin_imagen,no_tocar,sin imágenes
+gid://shopify/Product/11352208277841,REF Stockholm - SC 10.0 Extra Light Blonde 2x - 75 ml,OH! beauty,A,1,19.95,10.78,45.96,0,DENY,sin_imagen,no_tocar,sin imágenes
+gid://shopify/Product/11352208376145,REF Stockholm - SC 7.53 Mah Gd Blonde 2x - 75 ml,OH! beauty,A,1,19.95,10.78,45.96,0,DENY,sin_imagen,no_tocar,sin imágenes
+gid://shopify/Product/11352208572753,REF Stockholm - SC 5.55 Intense Mahogany 2x - 75 ml,OH! beauty,A,1,19.95,10.78,45.96,0,DENY,sin_imagen,no_tocar,sin imágenes
+gid://shopify/Product/11352208867665,REF Stockholm - SC 6.11 Medium Cool Ash 2x - 75 ml,OH! beauty,A,1,19.95,10.78,45.96,0,DENY,sin_imagen,no_tocar,sin imágenes
+gid://shopify/Product/11352208900433,REF Stockholm - SC 4.0 Brown 2x - 75 ml,OH! beauty,A,1,19.95,10.78,45.96,0,DENY,sin_imagen,no_tocar,sin imágenes
+gid://shopify/Product/11352210473297,Olaplex - Pack Nº4P 1 l. + Nº5P 1 l. (Muestra Nº6 + Nº7 + Nº8 de regalo),OH! beauty,A,1,230.95,129.15,44.08,0,DENY,sin_imagen,no_tocar,sin imágenes
+gid://shopify/Product/11352210702673,Olivia Garden - FingerBrush Trinity Display - 8 Cepillos,OH! beauty,A,1,160.95,89.64,44.31,0,DENY,sin_imagen,no_tocar,sin imágenes
+gid://shopify/Product/11352210866513,Bifull - Cepillo para Crepar Negro,OH! beauty,A,1,2.95,1.38,53.22,0,DENY,sin_imagen,no_tocar,sin imágenes
+gid://shopify/Product/11352211030353,Bifull - Cepillo Térmico Blanco,OH! beauty,A,1,9.95,5.45,45.23,0,DENY,sin_imagen,no_tocar,sin imágenes
+gid://shopify/Product/11352211161425,Perfect Beauty - Quartz Ipsum Climazón de Cuarzo Móvil - 1300 W,OH! beauty,A,1,727.95,407.56,44.01,0,DENY,sin_imagen,no_tocar,sin imágenes
+gid://shopify/Product/11352211358033,Bifull - Carbon Line Peine Púa Metálica Nº 002,OH! beauty,A,1,3.95,1.96,50.38,0,DENY,sin_imagen,no_tocar,sin imágenes
+gid://shopify/Product/11352211390801,Bifull - Clips Planos Negros - 59 mm - 24 uds.,OH! beauty,A,1,1.95,0.78,60.00,0,DENY,sin_imagen,no_tocar,sin imágenes
+gid://shopify/Product/11352212144465,Remember Ecosostenible - Mix Cream Activator - 1 ud.,OH! beauty,A,1,28.95,16.2,44.04,0,DENY,sin_imagen,no_tocar,sin imágenes
+gid://shopify/Product/11352212210001,REF Stockholm - SC 9.035 Caffelatte 2x - 75 ml,OH! beauty,A,1,19.95,10.78,45.96,0,DENY,sin_imagen,no_tocar,sin imágenes
+gid://shopify/Product/11352212308305,REF Stockholm - SC 0.00 Clear 2x - 75 ml,OH! beauty,A,1,19.95,10.78,45.96,0,DENY,sin_imagen,no_tocar,sin imágenes
+gid://shopify/Product/11352212439377,Remember Ecosostenible - Main Cream Activator - 1 ud.,OH! beauty,A,1,28.95,16.2,44.04,0,DENY,sin_imagen,no_tocar,sin imágenes
+gid://shopify/Product/11352212472145,REF Stockholm - SC 6.23 Jacaranda 2x - 75 ml,OH! beauty,A,1,19.95,10.78,45.96,0,DENY,sin_imagen,no_tocar,sin imágenes
+gid://shopify/Product/11352212504913,REF Stockholm - SC 10.21 Ex Lt Pe Ash Blonde 2x - 75 ml,OH! beauty,A,1,19.95,10.78,45.96,0,DENY,sin_imagen,no_tocar,sin imágenes
+gid://shopify/Product/11352212603217,REF Stockholm - SC 1.0 Black 2x - 75 ml,OH! beauty,A,1,19.95,10.78,45.96,0,DENY,sin_imagen,no_tocar,sin imágenes
+gid://shopify/Product/11352212635985,Bifull - Horquillas Invisibles Negras - 62 mm - 150 uds.,OH! beauty,A,1,8.95,4.81,46.26,0,DENY,sin_imagen,no_tocar,sin imágenes
+gid://shopify/Product/11352212668753,Design Look - Champú Garrafa Caramelo - 5 L,OH! beauty,A,1,25.95,14.16,45.43,0,DENY,sin_imagen,no_tocar,sin imágenes
+gid://shopify/Product/11352216142161,Perfect Beauty - Gel Fijación Extra Fuerte - 150 ml,OH! beauty,A,1,13.95,7.7,44.80,0,DENY,sin_imagen,no_tocar,sin imágenes
+gid://shopify/Product/11352216273233,Bifull - Clips Planos Bronce - 59 mm - 400 uds.,OH! beauty,A,1,16.95,9.41,44.48,0,DENY,sin_imagen,no_tocar,sin imágenes
+gid://shopify/Product/11352216666449,Perfect Beauty - Spray Anti-Frizz Brillante - 150 ml,OH! beauty,A,1,11.95,6.7,43.93,0,DENY,sin_imagen,no_tocar,sin imágenes
+gid://shopify/Product/11352216699217,Bifull - Clips Planos Bronce - 59 mm - 24 uds.,OH! beauty,A,1,1.95,0.78,60.00,0,DENY,sin_imagen,no_tocar,sin imágenes
+gid://shopify/Product/11364828545361,Kérastase - Accessories - Shopping Bag 2021,OH! beauty,A,1,15.95,8.57,46.27,0,DENY,sin_imagen;revisar_manual,no_tocar,"bolsa de compra, no es producto de venta; sin imágenes"
+gid://shopify/Product/11364872388945,Redken - Bolsa de regalo,OH! beauty,A,1,7.95,4.5,43.40,1,DENY,revisar_manual,no_tocar,"bolsa de regalo, no es producto de venta"
+gid://shopify/Product/11364874584401,Redken - Brew - Mint Shampoo V805,OH! beauty,A,1,13.95,7.65,45.16,0,DENY,sin_imagen,no_tocar,sin imágenes
+gid://shopify/Product/11365561237841,Olaplex - Nº3+ Tratamiento Complete Repair Back Bar - 370 ml,OH! beauty,A,1,15.95,35.55,-122.88,2,DENY,perdida,no_tocar,precio <= coste
+gid://shopify/Product/11377271013713,Heller Styler One 150ML,OH! beauty,A,1,24.00,21.6,10.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377271046481,Heller Color Protect Shp 500ml- Reformulado,OH! beauty,A,1,17.90,16.11,10.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377271406929,REF Stockholm - Dry Shampoo Nº204 - 200 ml,OH! beauty,A,1,13.79,9.93,27.99,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377271439697,REF Stockholm - Rough Paste Nº40425 ml,OH! beauty,A,2,12.38,8.91,28.02,4,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377271472465,Heller Glaze Pure 200ML,OH! beauty,A,1,23.00,20.7,10.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377271505233,Heller - Color Protect Shampoo - 500ml,OH! beauty,A,1,22.38,16.11,28.02,2,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377271538001,REF Stockholm - Firm Hold Spray Nº545 - 300 ml,OH! beauty,A,1,12.24,11.02,9.97,2,DENY,margen_bajo,no_tocar,margen mínimo 9.97% < 10%
+gid://shopify/Product/11377271570769,REF Stockholm - Fiber Mousse Nº345,OH! beauty,A,1,15.33,11.03,28.05,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377271603537,REF Stockholm - Colour Corrector - 100 ml,OH! beauty,A,9,12.13,8.73,28.03,10,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377271636305,REF Stockholm - Illuminate Colour Shampoo,OH! beauty,A,2,11.85,8.53,28.02,4,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377271669073,REF Stockholm - Blush,OH! beauty,A,8,12.13,8.73,28.03,9,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377271701841,Chic&Love - Capilar - Tónico Capilar Alogénico - 20 días,OH! beauty,A,1,42.42,30.54,28.01,2,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377275928913,Tahe - Magic Rizos Curly Activador de Rizo,OH! beauty,A,2,14.70,13.23,10.00,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377275961681,Tahe - B.A.-GOLD Peptide Keratin Champú,OH! beauty,A,1,25.05,22.55,9.98,2,DENY,margen_bajo,no_tocar,margen mínimo 9.98% < 10%
+gid://shopify/Product/11377275994449,Salerm - Salerm 21 Express,OH! beauty,A,2,4.10,3.69,10.00,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377276027217,Salerm - Salerm 21 Bote - 250 ml,OH! beauty,A,1,18.65,13.43,27.99,5,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377276059985,REF Stockholm - Thickening Spray Nº215 - 175 ml,OH! beauty,A,1,10.69,9.62,10.01,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377276092753,REF Stockholm - Mousse Nº435 - 300 ml,OH! beauty,A,1,14.59,10.5,28.03,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377276125521,REF Stockholm - Permanent Hair Colour 6.00 Intense Natural Dark Blonde - 100 ml,OH! beauty,A,1,12.13,8.73,28.03,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377276158289,Tahe - Kerafusion Keratina Pura Post Shampoo - 500 ml,OH! beauty,A,1,13.15,11.84,9.96,1,DENY,margen_bajo,no_tocar,margen mínimo 9.96% < 10%
+gid://shopify/Product/11377276191057,Alfaparf Milano - SDL Sublime Cellula Madre - Beauty Genesis - 12x13 ml,OH! beauty,A,1,29.82,21.47,28.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377276223825,REF Stockholm - Permanent Hair Colour 7.0 Blonde - 100 ml,OH! beauty,A,1,12.13,8.73,28.03,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377276256593,REF Stockholm - Permanent Hair Colour 6.036 Dark Chocolate - 100 ml,OH! beauty,A,1,13.13,9.45,28.03,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377276289361,Davines - OI All In One Milk,OH! beauty,A,2,14.43,10.39,10.00,5,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377276322129,Alfaparf Milano - SDL Reparative Mascarilla,OH! beauty,A,2,23.65,17.03,27.99,4,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377276354897,REF Stockholm - Permanent Hair Colour 8.11 Light Smoky Ash - 100 ml,OH! beauty,A,1,13.13,9.45,28.03,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377276387665,REF Stockholm - Permanent Hair Colour 7.00 Intense Natural Blonde - 100 ml,OH! beauty,A,1,12.13,8.73,28.03,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377276420433,Davines - OI Oil,OH! beauty,A,2,17.65,12.71,9.99,5,DENY,margen_bajo,no_tocar,margen mínimo 9.99% < 10%
+gid://shopify/Product/11377276453201,Goldwell - Elumen Champú Cabello Coloreado,OH! beauty,A,2,12.25,8.82,10.00,5,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377276485969,REF Stockholm - Direct Colour Crystal Clear,OH! beauty,A,7,17.79,12.81,27.99,8,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377276518737,Goldwell - Dualsenses Bond Pro Champú,OH! beauty,A,2,12.87,9.26,10.02,8,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377276551505,REF Stockholm - Balayage Bleach - 500 g,OH! beauty,A,1,60.73,43.72,28.01,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377276584273,REF Stockholm - Hand Wash Amber & Rhubarb - 500 ml,OH! beauty,A,1,8.35,7.52,9.94,1,DENY,margen_bajo,no_tocar,margen mínimo 9.94% < 10%
+gid://shopify/Product/11377276617041,REF Stockholm - Permanent Hair Colour 12.11 Light Khaki Blonde - 100 ml,OH! beauty,A,1,13.13,9.45,28.03,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377276649809,Termix - Profesional Cepillo Redondo Ø12,OH! beauty,A,8,6.97,5.01,27.97,9,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377276682577,Kerasilk - Volumizing Champú,OH! beauty,A,3,11.65,8.39,27.98,8,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377276715345,REF Stockholm - Permanent Hair Colour 12.1 Special Highlight Ash Blonde - 100 ml,OH! beauty,A,1,12.13,8.73,28.03,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377276748113,REF Stockholm - Permanent Hair Colour 9.11 Lightest Smoky Ash - 100 ml,OH! beauty,A,1,12.13,8.73,28.03,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377276780881,REF Stockholm - Permanent Hair Colour 8.00 Intense Natural Light Blonde - 100 ml,OH! beauty,A,1,13.13,9.45,28.03,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377276813649,REF Stockholm - Root to Top Nº335 - 150 ml,OH! beauty,A,1,14.13,10.17,28.03,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377276846417,Eolux - Secador EX01 - Negro - Bronce,OH! beauty,A,1,123.69,89.06,28.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377276879185,Davines - More Inside Curl Building Serum,OH! beauty,A,2,17.50,15.75,9.98,4,DENY,margen_bajo,no_tocar,margen mínimo 9.98% < 10%
+gid://shopify/Product/11377277141329,BKT - Silk Touch Oil - 1 ud.,OH! beauty,A,1,44.43,39.99,9.99,1,DENY,margen_bajo,no_tocar,margen mínimo 9.99% < 10%
+gid://shopify/Product/11377277174097,REF Stockholm - Semi Colour 7.036 Milk Chocolate (2 x 75 ml),OH! beauty,A,1,11.90,8.57,27.98,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377277206865,Heller Pure Clarifying Shp 1000ml,OH! beauty,A,1,27.90,25.11,10.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377277567313,REF Stockholm - ProPlex 01 Bonder,OH! beauty,A,2,11.90,8.57,27.98,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377277632849,Heller - Pure Clarify Shampoo - 1000ml,OH! beauty,A,1,34.88,25.11,28.01,2,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377277763921,REF Stockholm - Heat Protection Nº230,OH! beauty,A,2,9.78,7.04,28.02,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377277829457,Tahe - B.A. Gold Mascarilla - 1000 ml,OH! beauty,A,1,30.30,27.27,10.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377277862225,BKT - Leave-in moisturizimg cream Coconut infused - 200 ml,OH! beauty,A,1,38.96,35.06,10.01,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377277894993,REF Stockholm - Ocean Mist Nº303,OH! beauty,A,2,14.00,10.08,10.00,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377318461777,Goldwell - StyleSign Lagoom Jam Gel Voluminizador - 150 ml,OH! beauty,A,1,10.54,9.49,9.96,2,DENY,margen_bajo,no_tocar,margen mínimo 9.96% < 10%
+gid://shopify/Product/11377318494545,Davines - Heart of Glass Sheer Glaze - 150 ml,OH! beauty,A,1,22.19,15.98,27.99,2,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377318527313,Alfaparf Milano - SDL Blonde - Anti-Yellow Champú - 250 ml,OH! beauty,A,1,14.15,12.74,9.96,5,DENY,margen_bajo,no_tocar,margen mínimo 9.96% < 10%
+gid://shopify/Product/11377318560081,Termix - Profesional Paddle Cepillo para Desenredar - Profesional,OH! beauty,A,1,7.50,6.75,10.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377318592849,Alfaparf Milano - SDL Brunette - Anti-Orange Acondicionador - 200 ml,OH! beauty,A,1,8.74,6.29,28.03,5,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377318625617,Schwarzkopf - Bonacure - Repair Rescue Champú - 1000 ml,OH! beauty,A,1,20.95,15.08,28.02,6,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377318658385,Alfaparf Milano - SDL Diamond Leave-In Fluido All in 1 - 125 ml,OH! beauty,A,1,18.81,16.93,9.99,1,DENY,margen_bajo,no_tocar,margen mínimo 9.99% < 10%
+gid://shopify/Product/11377318691153,Alfaparf Milano - SDL Reparative - Crema - 125 ml,OH! beauty,A,1,18.02,12.97,28.02,2,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377318723921,Alfaparf Milano - SDL Sublime - Essential Oil - 12x13 ml,OH! beauty,A,1,29.88,21.51,28.01,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377318756689,Alfaparf Milano - SDL Style & Care - Flexible Mousse - 250 ml,OH! beauty,A,1,9.74,7.01,28.03,6,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377318789457,Schwarzkopf - OSiS+ - Flexwax - 85 ml,OH! beauty,A,1,9.89,7.12,28.01,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377318822225,BaBylissPRO - Cortapelos 4Artists Lo-Pro Black,OH! beauty,A,1,189.87,136.7,28.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377318854993,Alfaparf Milano - SDL Volumizing - Mousse Acondicionador - 200 ml,OH! beauty,A,1,8.74,6.29,28.03,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377318887761,Kin Cosmetics - Kinactif Nº7 Control Curl Enhancing Leave-In - 150ml,OH! beauty,A,1,16.51,14.86,9.99,1,DENY,margen_bajo,no_tocar,margen mínimo 9.99% < 10%
+gid://shopify/Product/11377318920529,Alfaparf Milano - SDL Sublime Cellula Madre - Thickening Multiplier - 150 ml,OH! beauty,A,1,18.02,12.97,28.02,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377318953297,Alfaparf Milano - SDL Sublime - Cristalli Spray - 125 ml,OH! beauty,A,1,10.64,7.66,28.01,4,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377318986065,Alfaparf Milano - SDL Sunshine - After Sun Tratamiento - 200 ml,OH! beauty,A,1,8.84,6.36,28.05,5,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377319018833,Termix - Profesional Cepillo Plano Térmico Barber Pequeño,OH! beauty,A,1,11.35,10.22,9.96,2,DENY,margen_bajo,no_tocar,margen mínimo 9.96% < 10%
+gid://shopify/Product/11377319051601,Kin Cosmetics - Kinmen Hair Matte Clay - 100ml,OH! beauty,A,1,13.72,12.35,9.99,1,DENY,margen_bajo,no_tocar,margen mínimo 9.99% < 10%
+gid://shopify/Product/11377319117137,Salerm - Keratin Shot Champú - 500 ml,OH! beauty,A,1,25.38,18.27,28.01,5,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377319149905,Goldwell - StyleSign Defining Wax Cera Definidora - 75 ml,OH! beauty,A,1,12.28,8.84,28.01,2,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377319182673,Tahe - Magic BX Gold Tratamiento Mantenimiento - 5 x 10 ml,OH! beauty,A,1,14.70,13.23,10.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377319215441,Alcántara Cosmética - L’Uomo Urban - Matt Wax - 100 ml,OH! beauty,A,1,16.28,11.72,28.01,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377319248209,Kin Cosmetics - Kinessences Nourish Oil - 30ml,OH! beauty,A,1,8.54,7.69,9.95,1,DENY,margen_bajo,no_tocar,margen mínimo 9.95% < 10%
+gid://shopify/Product/11377319280977,Kin Cosmetics - Kinstyle Mat Gum - 100ml,OH! beauty,A,1,11.23,8.08,28.05,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377319313745,Termix - Pack Cepillos Redondos Profesionales Evolution Basic Ø17/Ø23/Ø28/Ø32/Ø43,OH! beauty,A,1,57.50,51.75,10.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377319346513,Davines - OI Body Wash - 280 ml,OH! beauty,A,1,25.00,22.5,10.00,2,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377319379281,Kmax - Hairline,OH! beauty,A,1,8.38,6.03,28.04,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377319412049,Schwarzkopf - Bonacure - Time Restore Champú - 250 ml,OH! beauty,A,1,9.63,6.93,28.04,5,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377319444817,Alfaparf Milano - SDL Reparative SOS Emergency Aceite - 6x13 ml,OH! beauty,A,1,26.20,23.58,10.00,5,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377319477585,Salerm - Biokera Arganology - 60 ml,OH! beauty,A,1,21.07,15.17,28.00,5,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377319510353,REF Stockholm - Pomade - 85 ml,OH! beauty,A,1,13.23,11.91,9.98,1,DENY,margen_bajo,no_tocar,margen mínimo 9.98% < 10%
+gid://shopify/Product/11377319543121,Schwarzkopf - OSiS+ - Texture Craft - 300 ml,OH! beauty,A,1,10.57,7.61,28.00,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377319575889,Davines - SU Tan Maximizer - 150 ml,OH! beauty,A,1,45.15,40.64,9.99,2,DENY,margen_bajo,no_tocar,margen mínimo 9.99% < 10%
+gid://shopify/Product/11377319641425,REF Stockholm - Extreme Hold Spray Nº525,OH! beauty,A,1,13.00,11.7,10.00,2,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377319674193,Termix - Profesional Cepillo de Cerdas Naturales para Recogidos,OH! beauty,A,1,13.74,12.37,9.97,1,DENY,margen_bajo,no_tocar,margen mínimo 9.97% < 10%
+gid://shopify/Product/11377319706961,Alfaparf Milano - Color Wear Gloss Activator - 9.5 Vol. - 1000 ml,OH! beauty,A,1,6.59,4.74,28.07,2,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377319739729,Alfaparf Milano - SDL Curls - Multi-Benefit Oil - 100 ml,OH! beauty,A,1,32.19,23.18,27.99,4,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377319772497,Davines - Energizing Gel - 150 ml,OH! beauty,A,1,38.50,34.65,10.00,2,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377319805265,Alfaparf Milano - SDL Reparative Loción - 6x13 ml,OH! beauty,A,1,26.00,23.4,10.00,2,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377319838033,Alfaparf Milano - SDL Sunshine - After Sun Low Champú - 250 ml,OH! beauty,A,1,7.49,5.39,28.04,5,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377319903569,Schwarzkopf - Bonacure - Repair Rescue Champú - 250 ml,OH! beauty,A,1,9.50,8.55,10.00,5,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377319936337,Alfaparf Milano - SDL Sublime Cellula Madre - Restructuring Multiplier - 150 ml,OH! beauty,A,1,18.02,12.97,28.02,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377319969105,Alfaparf Milano - SDL Diamond Illuminating Acondicionador - 200 ml,OH! beauty,A,1,15.97,11.49,28.05,5,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377320001873,Alfaparf Milano - SDL Reparative Anti-Breakage Fluido - 125 ml,OH! beauty,A,1,19.70,17.73,10.00,2,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377320034641,Alfaparf Milano - SDL Nutritive Acondicionador sin aclarado - 1000 ml,OH! beauty,A,1,28.63,20.61,28.01,2,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377320100177,Schwarzkopf - OSiS+ - Tipsy Twirl - 300 ml,OH! beauty,A,1,16.89,12.16,28.00,2,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377320132945,Alfaparf Milano - SDL Style & Care - Texturizing Dry Champú - 300 ml,OH! beauty,A,1,11.93,8.59,28.00,5,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377320165713,Kin Cosmetics - Kinessences Antiox Nectar - 150ml,OH! beauty,A,1,19.35,13.93,28.01,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377320231249,Schwarzkopf - Bonacure - Frizz Away Acondicionador - 1000 ml,OH! beauty,A,1,24.69,17.78,27.99,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377321279825,Termix - Peine Profesional de Carbono para Corte y Tratamiento de Rizos,OH! beauty,A,1,15.47,11.13,28.05,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377321312593,Schwarzkopf - Bonacure - R-TWO Champú - 1000 ml,OH! beauty,A,1,24.14,17.38,28.00,4,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377321345361,Schwarzkopf - OSiS+ - Rock-Hard - 150 ml,OH! beauty,A,1,10.57,7.61,28.00,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377321378129,Kin Cosmetics - Kinactif Nº3 Volume Expanding Root Foam - 150ml,OH! beauty,A,1,18.27,13.15,28.02,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377321410897,Salerm - Salerm 21 Biphase - 200 ml,OH! beauty,A,1,15.99,11.51,28.02,4,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377321443665,Schwarzkopf - Bonacure - Repair Rescue Acondicionador - 200 ml,OH! beauty,A,1,9.85,7.09,28.02,4,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377321476433,Salerm - Salerm 21 Finish - 100 ml,OH! beauty,A,1,27.12,19.52,28.02,5,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377321541969,Schwarzkopf - Natural Styling - Neutralizante - 1000 ml,OH! beauty,A,1,18.55,13.36,27.98,2,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377321574737,Kin Cosmetics - Kinactif Nº1 Nutrition Moisturizing Conditioning Spray - 200ml,OH! beauty,A,1,17.05,12.28,27.98,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377321771345,Davines - Replumping Hair Filler - 100 ml,OH! beauty,A,1,45.00,40.5,10.00,2,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377321804113,Kin Cosmetics - Kinactif Nº1 Nutrition Nourishing Melting Extract - 150ml,OH! beauty,A,1,18.74,13.49,28.01,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377321836881,Wella Professionals - EIMI Extra-Volume Mousse de Volumen - 300 ml,OH! beauty,A,1,17.20,12.38,28.02,4,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377321869649,Schwarzkopf - Bonacure - Clean Performance Repair Rescue Spray Acondicionador - 200 ml,OH! beauty,A,1,9.85,7.09,28.02,4,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377321902417,Schwarzkopf - OSiS+ - Super Shield - 300 ml,OH! beauty,A,1,9.89,7.12,28.01,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377321935185,Kin Cosmetics - Kinstyle Potion Cream - 150ml,OH! beauty,A,1,16.50,11.88,28.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377321967953,BaBylissPRO - Recortadora 4Artists,OH! beauty,A,1,188.59,169.73,10.00,8,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377322000721,Kin Cosmetics - Kinactif Nº2 Repair Intensive Reconstructing Shot - 100ml,OH! beauty,A,1,18.95,13.64,28.02,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377322033489,Goldwell - Dualsenses Rich Repair Restoring Champú - 250 ml,OH! beauty,A,1,12.87,9.26,28.05,2,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377322066257,Goldwell - Dualsenses Just Smooth 6 Effects Sérum - 100 ml,OH! beauty,A,1,15.85,11.41,28.01,2,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377322099025,Schwarzkopf - OSiS+ - Refresh Dust - 300 ml,OH! beauty,A,1,9.89,7.12,28.01,4,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377322131793,Schwarzkopf - Stain Remover - 250 ml,OH! beauty,A,1,8.20,5.9,28.05,2,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377322164561,Schwarzkopf - OSiS+ - Volume Up - 300 ml,OH! beauty,A,1,17.04,12.27,27.99,5,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377322197329,Davines - More Inside Curl Moisturizing Mousse - 250 ml,OH! beauty,A,1,30.00,27.0,10.00,6,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377322230097,Davines - Nourishing Keratin Sealer - 100 ml,OH! beauty,A,1,37.50,33.75,10.00,2,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377322459473,Tahe - Peptide T98 Pack Programa Anticaída 3 Meses Tratamiento 200 ml + Champú 300 ml,OH! beauty,A,1,99.00,89.1,10.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377322492241,Schwarzkopf - Bonacure - R-TWO Essence - 400 ml,OH! beauty,A,1,15.79,11.37,27.99,2,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377322525009,Schwarzkopf - Bonacure - Color Freeze Silver Champú - 1000 ml,OH! beauty,A,1,18.60,16.74,10.00,5,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377322557777,Termix - Pack Cepillos Redondos Profesionales Evolution Soft Ø17/Ø23/Ø28/Ø32/Ø43,OH! beauty,A,1,121.88,87.75,28.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377322688849,Tahe - Peptide T98 Tratamiento Anticaída - 6 x 10 ml,OH! beauty,A,1,37.65,33.89,9.99,1,DENY,margen_bajo,no_tocar,margen mínimo 9.99% < 10%
+gid://shopify/Product/11377322721617,Schwarzkopf - Bonacure - Frizz Away Champú - 250 ml,OH! beauty,A,1,7.99,5.75,28.04,5,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377322918225,Schwarzkopf - Bonacure - Repair Rescue Acondicionador - 1000 ml,OH! beauty,A,1,24.69,17.78,27.99,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377323311441,Wella Professionals - EIMI Shape Shift - 150 ml,OH! beauty,A,1,14.64,10.54,28.01,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377323344209,Tahe - B.T. Fitoxil Tratamiento Anticaída Forte Plus - 6 x 10 ml,OH! beauty,A,1,22.05,19.85,9.98,3,DENY,margen_bajo,no_tocar,margen mínimo 9.98% < 10%
+gid://shopify/Product/11377323376977,Schwarzkopf - Bonacure - Color Freeze Silver Champú - 250 ml,OH! beauty,A,1,7.99,5.75,28.04,5,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377323442513,Schwarzkopf - BlondMe - Bond Repair Purple Spray Acondicionador - 150 ml,OH! beauty,A,1,14.45,10.4,28.03,4,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377323573585,Sachajuan - Volume Cream - 125 ml,OH! beauty,A,1,19.38,13.95,28.02,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377323606353,Wella Professionals - EIMI Shape Control Mousse Control de Forma - 500 ml,OH! beauty,A,1,23.58,16.97,28.03,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377323671889,Kin Cosmetics - Kinactif Nº2 Repair Reconstructing Melting Extract - 150ml,OH! beauty,A,1,20.58,14.81,28.04,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377323704657,Kin Cosmetics - Kinmen Power Gel - 150ml,OH! beauty,A,1,12.37,8.9,28.05,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377323770193,Schwarzkopf - OSiS+ - Sparkler - 500 ml,OH! beauty,A,1,16.90,12.17,27.99,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377323835729,Schwarzkopf - Bonacure - Clean Performance Color Freeze Champú - 250 ml,OH! beauty,A,1,7.99,5.75,28.04,5,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377323901265,Schwarzkopf - Bonacure - Volume Boost Champú - 1000 ml,OH! beauty,A,1,20.95,15.08,28.02,5,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377323934033,Goldwell - Dualsenses Just Smooth Aceite Anti-Encrespamiento - 100 ml,OH! beauty,A,1,16.04,11.55,27.99,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377323966801,Davines - SU Hair Mask - 150 ml,OH! beauty,A,1,26.03,23.43,9.99,2,DENY,margen_bajo,no_tocar,margen mínimo 9.99% < 10%
+gid://shopify/Product/11377323999569,Schwarzkopf - Bonacure - Color Freeze Acondicionador - 1000 ml,OH! beauty,A,1,24.69,17.78,27.99,5,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377324228945,Kin Cosmetics - Kinstyle Fiber Paste - 100ml,OH! beauty,A,1,14.28,10.28,28.01,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377324327249,Schwarzkopf - OSiS+ - Dust It - 10 g,OH! beauty,A,1,9.29,8.36,10.01,5,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377324392785,Kin Cosmetics - Kinstyle Crystal Jelly - 250ml,OH! beauty,A,1,15.87,11.42,28.04,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377324425553,Kin Cosmetics - Kinactif Nº4 Color Color Protecting Melting Extract - 150ml,OH! beauty,A,1,12.28,8.84,28.01,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377325506897,Alfaparf Milano - SDL Scalp Comfort - Calming Champú,OH! beauty,A,2,14.10,12.51,10.00,6,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377325539665,Davines - Renewing Shampoo,OH! beauty,A,3,17.50,15.75,10.00,7,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377325572433,Alfaparf Milano - SDL Curls Enhancing - Acondicionador,OH! beauty,A,1,22.13,15.93,28.02,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377325867345,Schwarzkopf - OSiS+ - Flatliner - 200 ml,OH! beauty,A,1,13.89,12.5,10.01,4,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377325932881,Schwarzkopf - Bonacure - Frizz Away Acondicionador - 200 ml,OH! beauty,A,1,9.85,7.09,28.02,5,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377325965649,Schwarzkopf - OSiS+ - Soft Dust - 10 g,OH! beauty,A,1,9.29,8.36,10.01,4,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377325998417,Salerm - Pro.Line Pro Laca - 300 ml,OH! beauty,A,1,16.40,14.76,10.00,5,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377326031185,Tahe - B.A. Gold Espuma Satin Fijación 3 - 200 ml,OH! beauty,A,1,12.10,10.89,10.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377326063953,Schwarzkopf - Bonacure - Time Restore Champú - 1000 ml,OH! beauty,A,1,35.24,25.37,28.01,5,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377326096721,Wella Professionals - EIMI Texture Pearl Styler - 100 ml,OH! beauty,A,1,13.67,9.84,28.02,5,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377326129489,Wella - EIMI Nutricurls Twirl - 200 ml,OH! beauty,A,1,12.69,9.14,27.97,4,DENY,duplicado,no_tocar,mismo título que producto activo 11366678135121
+gid://shopify/Product/11377326162257,Salerm - Biokera Grapeology - 60 ml,OH! beauty,A,1,23.62,17.0,28.03,5,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377326195025,Sachajuan - Dark Volume Powder - 200 ml,OH! beauty,A,1,27.39,19.72,28.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377326227793,Sachajuan - Curl Treatment - 220 ml,OH! beauty,A,1,29.48,21.22,28.02,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377326260561,Schwarzkopf - BlondMe - Bondfinity Deep Repair Aceite - 50 ml,OH! beauty,A,1,13.28,9.56,28.01,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377326358865,Davines - Renewing Conditioner Treatment,OH! beauty,A,3,17.50,15.75,9.99,7,DENY,margen_bajo,no_tocar,margen mínimo 9.99% < 10%
+gid://shopify/Product/11377326424401,Wella Professionals - Brilliance Mascarilla Cabello Fino - 150 ml,OH! beauty,A,1,15.69,11.3,27.98,4,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377326457169,Wella Professionals - Brilliance Conditioner Cabello Fino - 1000 ml,OH! beauty,A,1,36.99,26.63,28.01,4,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377326522705,Wella Professionals - Brilliance Conditioner Cabello Grueso - 1000 ml,OH! beauty,A,1,36.99,26.63,28.01,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377326555473,Wella Professionals - Brilliance Mascarilla Cabello Grueso - 150 ml,OH! beauty,A,1,15.69,11.3,27.98,4,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377326588241,Termix - Profesional Cepillo de Cerdas Naturales Degradadas,OH! beauty,A,1,24.20,17.42,28.02,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377326621009,Davines - Calming Shampoo,OH! beauty,A,3,17.50,15.75,10.00,7,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377326653777,Schwarzkopf - BlondMe - Bond Repair Purple Acondicionador - 250 ml,OH! beauty,A,1,12.50,11.25,10.00,5,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377326686545,Wella Professionals - Brilliance Champú Cabello Grueso - 500 ml,OH! beauty,A,1,16.67,12.0,28.01,4,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377326784849,Schwarzkopf - Igora Vario Blond - Decoloración Plus - 450 g,OH! beauty,A,1,27.18,19.57,28.00,4,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377326817617,Davines - Rebalancing Shampoo,OH! beauty,A,3,17.50,15.75,10.00,7,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377326850385,Wella Professionals - Blondor Recharge Champú - 300ml,OH! beauty,A,1,11.95,8.6,28.03,5,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377326883153,REF Stockholm - Flexible Spray Nº333,OH! beauty,A,1,23.13,16.65,28.02,2,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377326915921,Wella - EIMI Thermal Image - 150 ml,OH! beauty,A,1,14.15,10.19,27.99,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377326948689,Alfaparf Milano - SDL Scalp Renew Energizing - Champú,OH! beauty,A,2,13.91,12.52,9.99,8,DENY,margen_bajo,no_tocar,margen mínimo 9.99% < 10%
+gid://shopify/Product/11377327014225,Wella Professionals - EIMI Fixing Flexible Finish - 250 ml,OH! beauty,A,1,14.32,10.31,28.00,5,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377327046993,Wella Professionals - EIMI Extra-Volume Mousse de Volumen - 500 ml,OH! beauty,A,1,26.53,19.1,28.01,4,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377327112529,Davines - Energizing Shampoo,OH! beauty,A,2,28.50,25.65,10.00,5,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377327145297,Wella - EIMI Glam Mist - 200 ml,OH! beauty,A,1,14.32,10.31,28.00,5,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377327178065,REF Stockholm - Styling Wax - 85 ml,OH! beauty,A,1,15.67,11.28,28.02,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377327243601,Sebastian Professional - No.Breaker - Pre-Shampoo - 1000 ml,OH! beauty,A,1,53.50,48.15,10.00,2,DENY,duplicado,no_tocar,mismo título que producto activo 11366173213009
+gid://shopify/Product/11377327276369,Davines - Nourishing Vegetarian Miracle Conditioner,OH! beauty,A,3,17.50,15.75,9.99,7,DENY,margen_bajo,no_tocar,margen mínimo 9.99% < 10%
+gid://shopify/Product/11377327309137,Tahe - Bio-Fluid Kids Protect Champú - 300 ml,OH! beauty,A,1,10.00,9.0,10.00,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377327341905,Tahe - K-Glicolic Sérum Iluminador - 100 ml,OH! beauty,A,1,19.95,17.96,9.97,1,DENY,margen_bajo,no_tocar,margen mínimo 9.97% < 10%
+gid://shopify/Product/11377327374673,Sachajuan - Scalp Conditioner - 250 ml,OH! beauty,A,1,28.93,20.83,28.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377327407441,Wella - EIMI Bold Move - 150 ml,OH! beauty,A,1,14.64,10.54,28.01,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377327440209,Schwarzkopf - Chroma ID - Mascarilla de Color Azul - 300 ml,OH! beauty,A,1,16.48,11.86,28.03,4,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377327472977,Wella Professionals - EIMI Natural Volume Espuma de Volumen Natural - 500 ml,OH! beauty,A,1,23.58,16.97,28.03,4,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377327505745,Schwarzkopf - OSiS+ - Glow - 50 ml,OH! beauty,A,1,16.95,12.2,28.02,4,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377327604049,REF Stockholm - Weightless Volume Refreshing Mousse,OH! beauty,A,1,16.88,12.15,28.02,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377327735121,Schwarzkopf - OSiS+ - Hairbody - 200 ml,OH! beauty,A,1,17.19,12.38,27.98,6,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377327767889,Salerm - Mascarilla Multiproteínas - 250 ml,OH! beauty,A,1,17.60,15.84,10.00,5,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377327866193,Wella Professionals - EIMI Perfect Setting Laca Fijación Perfecta - 150 ml,OH! beauty,A,1,13.34,9.6,28.04,4,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377327898961,Schwarzkopf - OSiS+ - Air Whip - 200 ml,OH! beauty,A,1,15.28,11.0,28.01,5,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377328816465,Kin Cosmetics - Kinactif Nº2 Repair Rich Reconstructing Champú,OH! beauty,A,2,16.64,11.98,28.00,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377328849233,Kin Cosmetics - Kinactif Nº7 Control Intense Softening Champú,OH! beauty,A,2,10.49,7.55,28.01,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377328882001,Kin Cosmetics - Kinessences Nourish Gentle Champú,OH! beauty,A,2,18.17,13.08,28.01,5,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377328914769,Kin Cosmetics - Kinactif Nº1 Nutrition Nourishing 2-in-1 Mascarilla,OH! beauty,A,2,18.60,13.39,28.01,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377328947537,Kin Cosmetics - Kinactif Nº8 Scalp Anti-Hair Loss Revitalizing Champú,OH! beauty,A,2,15.81,14.23,9.99,3,DENY,margen_bajo,no_tocar,margen mínimo 9.99% < 10%
+gid://shopify/Product/11377328980305,Kin Cosmetics - Kinactif Nº4 Color Color Protecting Champú,OH! beauty,A,2,10.49,7.55,28.01,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377329013073,Kin Cosmetics - Kinactif Nº7 Control Curl Enhancing 2-in-1 Mascarilla,OH! beauty,A,2,21.58,15.53,28.00,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377329045841,Kin Cosmetics - Kinactif Nº3 Volume Mild Expanding Champú,OH! beauty,A,2,17.05,12.28,27.98,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377329078609,Davines - Nourishing Shampoo,OH! beauty,A,3,17.50,15.75,10.00,7,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377329111377,Davines - Nourishing Vegetarian Miracle Mask,OH! beauty,A,3,17.50,15.75,10.00,7,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377329144145,Davines - OI Shampoo,OH! beauty,A,3,17.50,15.75,10.00,7,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377329176913,Davines - OI Conditioner,OH! beauty,A,3,17.50,15.75,9.99,7,DENY,margen_bajo,no_tocar,margen mínimo 9.99% < 10%
+gid://shopify/Product/11377329209681,Davines - Energizing Seasonal Superactive (12 amp x 6 ml),OH! beauty,A,2,102.75,92.48,10.00,5,DENY,margen_bajo,no_tocar,margen mínimo 10.00% < 10%
+gid://shopify/Product/11377329242449,Davines - Replumping Shampoo,OH! beauty,A,3,17.50,15.75,10.00,7,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377329275217,Davines - Purifying Shampoo,OH! beauty,A,3,17.50,15.75,10.00,7,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377329307985,Davines - Replumping Conditioner,OH! beauty,A,3,17.50,15.75,9.98,7,DENY,margen_bajo,no_tocar,margen mínimo 9.98% < 10%
+gid://shopify/Product/11377329340753,Davines - Heart of Glass Silkening Shampoo,OH! beauty,A,3,17.50,15.75,10.00,7,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377329373521,Goldwell - Soft Color Matizador - 125 ml,OH! beauty,A,3,9.69,6.98,27.97,4,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377329406289,Davines - OI Liquid Luster,OH! beauty,A,2,17.50,15.75,10.00,5,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377329439057,Goldwell - StyleSign Working Hairspray Laca de Trabajo,OH! beauty,A,2,11.22,8.07,28.01,4,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377329471825,Davines - OI Soufflé,OH! beauty,A,2,17.50,15.75,10.00,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377329504593,Goldwell - Dualsenses Blondes & Highlights Anti-Yellow Champú,OH! beauty,A,2,12.87,9.26,10.00,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377329537361,Goldwell - Dualsenses Just Smooth Tratamiento 60 Sec,OH! beauty,A,2,15.85,11.41,10.00,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377329570129,Salerm - Salerm 21 Champú,OH! beauty,A,3,4.94,3.56,27.94,4,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377329602897,Kin Cosmetics - Kinessences Antiox Intense Mascarilla,OH! beauty,A,2,18.69,13.46,27.98,5,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377329635665,Kin Cosmetics - Kinessences Restore Gentle Champú,OH! beauty,A,2,12.73,9.16,28.02,5,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377329701201,Schwarzkopf - Goodbye Yellow - Champú,OH! beauty,A,2,9.86,8.87,10.04,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377329733969,Kin Cosmetics - Kinessences Nourish Intense Mascarilla,OH! beauty,A,2,18.89,13.6,28.00,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377329766737,REF Stockholm - Weightless Volume Masque,OH! beauty,A,2,15.63,11.25,28.01,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377329799505,REF Stockholm - Illuminate Colour Masque,OH! beauty,A,2,25.63,18.45,28.01,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377329832273,REF Stockholm - Ultimate Repair Shampoo,OH! beauty,A,2,15.79,11.37,27.99,4,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377329865041,Schwarzkopf - BlondMe - Bond Repair Brightening Champú,OH! beauty,A,2,11.10,7.99,27.99,2,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377329930577,Schwarzkopf - BlondMe - Bond Repair Nourishing Champú,OH! beauty,A,2,10.70,9.63,10.00,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377329963345,Schwarzkopf - BlondMe - Bondfinity Deep Repair Mascarilla,OH! beauty,A,2,14.10,12.69,10.00,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377329996113,Schwarzkopf - Bonacure - R-TWO Tratamiento,OH! beauty,A,2,12.60,9.07,27.99,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377330028881,Schwarzkopf - BlondMe - Bond Repair Nourishing Acondicionador,OH! beauty,A,2,12.50,11.25,10.00,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377330061649,Schwarzkopf - Bonacure - Soothing Champú,OH! beauty,A,2,8.33,5.99,28.03,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377330094417,Kin Cosmetics - Kinactif Nº4 Color Color Protecting 2-in-1 Mascarilla,OH! beauty,A,2,13.12,9.44,28.01,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377330127185,Kin Cosmetics - Kinactif Nº2 Repair Reconstructing 2-in-1 Mascarilla,OH! beauty,A,2,18.60,13.39,28.01,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377330159953,Lendan - LD Curly Co-Wash,OH! beauty,A,2,14.74,13.27,9.97,3,DENY,margen_bajo,no_tocar,margen mínimo 9.97% < 10%
+gid://shopify/Product/11377330192721,Schwarzkopf - BlondMe - Bond Repair Purple Champú,OH! beauty,A,2,10.70,9.63,10.00,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377330225489,Kin Cosmetics - Kinessences Antiox Gentle Champú,OH! beauty,A,2,18.23,13.12,28.00,5,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377330258257,Davines - OI Hair Butter,OH! beauty,A,3,17.50,15.75,10.00,7,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377330323793,Goldwell - Men ReShade Coloración para Hombre - 4 x 20 ml,OH! beauty,A,4,24.38,17.55,28.01,9,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377330389329,Kin Cosmetics - Kinactif Nº1 Nutrition Rich Nourishing Champú,OH! beauty,A,2,16.43,11.83,28.00,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377330422097,Kin Cosmetics - Kinactif Nº7 Control Curl Enhancing Champú,OH! beauty,A,2,10.49,7.55,28.01,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377330454865,Goldwell - @Pure Pigments Aditivo de Color - 50 ml,OH! beauty,A,8,37.50,27.0,28.00,9,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377330487633,Davines - More Inside Sea Salt Spray,OH! beauty,A,2,14.43,10.39,10.00,5,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377330520401,Kin Cosmetics - Kinactif Nº1 Nutrition Daily Moisturizing Champú,OH! beauty,A,2,10.49,7.55,28.01,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377330553169,Kin Cosmetics - Kinactif Nº7 Control Softening 2-in-1 Mascarilla,OH! beauty,A,2,13.12,9.44,27.99,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377331110225,Schwarzkopf - OSiS+ - Session,OH! beauty,A,2,16.50,12.15,10.00,5,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377331142993,Schwarzkopf - OSiS+ - Freeze,OH! beauty,A,2,15.23,10.96,28.02,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377331175761,Schwarzkopf - BlondMe - Bond Repair Nourishing Mascarilla,OH! beauty,A,2,14.10,12.69,10.00,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377331208529,Schwarzkopf - Bonacure - Color Freeze Champú,OH! beauty,A,2,13.88,9.99,28.02,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377331241297,Tahe - Bonder Plex Defender Champú,OH! beauty,A,2,13.65,12.29,9.96,3,DENY,margen_bajo,no_tocar,margen mínimo 9.96% < 10%
+gid://shopify/Product/11377331274065,Schwarzkopf - Bonacure - Color Freeze Silver Tratamiento,OH! beauty,A,2,11.24,10.12,9.96,8,DENY,margen_bajo,no_tocar,margen mínimo 9.96% < 10%
+gid://shopify/Product/11377331306833,Davines - Alchemic Creative Conditioner - Coral,OH! beauty,A,4,34.75,31.28,9.99,3,DENY,margen_bajo,no_tocar,margen mínimo 9.99% < 10%
+gid://shopify/Product/11377331339601,Davines - Alchemic Acondicionador Pigmentado - 250 ml,OH! beauty,A,6,34.75,31.28,9.99,4,DENY,margen_bajo,no_tocar,margen mínimo 9.99% < 10%
+gid://shopify/Product/11377331372369,Schwarzkopf - Silhouette - Laca Fijación Extra Fuerte,OH! beauty,A,3,6.81,6.13,9.99,4,DENY,margen_bajo,no_tocar,margen mínimo 9.99% < 10%
+gid://shopify/Product/11377331405137,Davines - Well-Being Conditioner,OH! beauty,A,3,17.50,15.75,9.98,7,DENY,margen_bajo,no_tocar,margen mínimo 9.98% < 10%
+gid://shopify/Product/11377331437905,Termix - Profesional Cepillo Esqueleto Grande,OH! beauty,A,2,8.13,5.85,28.03,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377331470673,Schwarzkopf - BlondMe - Bond Repair Purple Mascarilla,OH! beauty,A,2,14.62,10.52,28.00,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377331503441,Termix - Evolution Plus Cepillo Redondo Ø12,OH! beauty,A,3,13.13,9.45,9.97,4,DENY,margen_bajo,no_tocar,margen mínimo 9.97% < 10%
+gid://shopify/Product/11377331536209,Davines - Nourishing Hair Building Pak,OH! beauty,A,2,17.50,15.75,9.99,5,DENY,margen_bajo,no_tocar,margen mínimo 9.99% < 10%
+gid://shopify/Product/11377331568977,Davines - Rebalancing Cleansing Treatment,OH! beauty,A,2,33.00,29.7,10.00,5,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377331601745,Salerm - Pro.Line Brushing Spray - 250 ml,OH! beauty,A,1,12.30,11.07,10.00,5,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377331667281,Schwarzkopf - OSiS+ - Freeze Pump - 200 ml,OH! beauty,A,1,7.30,6.57,10.00,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377331700049,Schwarzkopf - Bonacure - Moisture Kick Spray Acondicionador - 200 ml,OH! beauty,A,1,9.85,7.09,28.02,5,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377331732817,Lendan - LD Neutral Champú Algas Glycerin - 1000 ml,OH! beauty,A,1,13.50,9.72,28.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377331765585,Schwarzkopf - Bonacure - Anti-Dandruff Sérum - 100 ml,OH! beauty,A,1,17.79,12.81,27.99,4,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377331863889,REF Stockholm - Semi Colour Booster Violet (1 x 50 ml),OH! beauty,A,1,19.40,13.97,27.99,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377331896657,Wella Professionals - EIMI Texture Ocean Spritz - 150 ml,OH! beauty,A,1,13.34,9.6,28.04,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377331994961,Tahe - Magic BX Gold Pack Mantenimiento 3 Productos,OH! beauty,A,1,26.95,24.26,9.98,1,DENY,margen_bajo,no_tocar,margen mínimo 9.98% < 10%
+gid://shopify/Product/11377332027729,Davines - SU Aftersun - 150 ml,OH! beauty,A,1,31.37,28.23,10.01,2,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377332060497,REF Stockholm - Illuminate Colour Instant Shine - 125 ml,OH! beauty,A,1,21.05,18.95,9.98,1,DENY,margen_bajo,no_tocar,margen mínimo 9.98% < 10%
+gid://shopify/Product/11377332093265,REF Stockholm - Balayage Brush,OH! beauty,A,1,10.19,7.34,27.97,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377332158801,Panasonic - Cortapelos ER-GP84,OH! beauty,A,1,188.80,169.92,10.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377332191569,Wella Professionals - EIMI Body Crafter - 150 ml,OH! beauty,A,1,13.34,9.6,28.04,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377332289873,REF Stockholm - Semi Colour Booster Red (1 x 50 ml),OH! beauty,A,1,19.40,13.97,27.99,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377332322641,Davines - Liquid Spell Reinforcing Bodifying Fluid,OH! beauty,A,2,15.93,11.47,10.00,4,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377332355409,Philip Martin’s - Everyday Rinse - 1000 ml,OH! beauty,A,1,77.61,69.85,10.00,1,DENY,margen_bajo,no_tocar,margen mínimo 10.00% < 10%
+gid://shopify/Product/11377332388177,Thuya - Brow Intensifier Soft,OH! beauty,A,1,14.63,10.53,28.02,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377332420945,Eolux - Boquilla de Alisado - EX01,OH! beauty,A,1,12.07,8.69,28.00,2,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377332453713,Wella Professionals - EIMI Sculpt Force - 125ml,OH! beauty,A,1,14.39,10.36,28.01,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377332486481,"Schwarzkopf - Chroma ID - Mascarilla de Color 9,5-4 Beige Arena - 300 ml",OH! beauty,A,1,20.63,14.85,28.02,4,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377332519249,Wella - EIMI Mistify Light - 75 ml,OH! beauty,A,1,4.48,3.22,28.12,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377332552017,Salerm - Mega Acondicionador Intensivo - 12 x 5 ml,OH! beauty,A,1,29.40,26.46,10.00,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377332584785,Schwarzkopf - OSiS+ - G.Force - 150 ml,OH! beauty,A,1,10.57,7.61,28.00,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377332650321,Alfaparf Milano - SDL Style & Care - Glossy Pomade - 90 ml,OH! beauty,A,1,8.74,6.29,28.03,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377332683089,Termix - Profesional Cepillo Redondo Barber Ø12,OH! beauty,A,3,6.50,5.85,9.94,4,DENY,margen_bajo,no_tocar,margen mínimo 9.94% < 10%
+gid://shopify/Product/11377332715857,Termix - Evolution Gold Rose Cepillo Redondo Ø17,OH! beauty,A,5,11.89,10.7,10.00,6,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377332748625,Termix - Profesional Cepillo Plano Térmico Grande,OH! beauty,A,2,11.00,9.9,10.00,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377332781393,Termix - Profesional Cepillo Esqueleto Barber Grande,OH! beauty,A,1,13.48,9.7,28.04,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377332814161,Schwarzkopf - Bonacure - Root Activating Sérum - 8 x 7 ml,OH! beauty,A,1,18.54,13.35,27.99,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377332846929,Tahe - Millenium Protect Anti-Frizz - 100 ml,OH! beauty,A,1,13.65,12.29,9.96,1,DENY,margen_bajo,no_tocar,margen mínimo 9.96% < 10%
+gid://shopify/Product/11377332945233,Schwarzkopf - Bonacure - Sun Protect 10-in-1 Summer Fluid - 100 ml,OH! beauty,A,1,9.53,8.58,9.97,3,DENY,margen_bajo,no_tocar,margen mínimo 9.97% < 10%
+gid://shopify/Product/11377332978001,Salerm - Protector de Piel - 60 ml,OH! beauty,A,1,9.20,8.28,10.00,5,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377333010769,Eolux - Boquilla de Peinado - EX01,OH! beauty,A,1,12.07,8.69,28.00,2,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377333043537,Davines - More Inside Invisible No Gas Spray - 250 ml,OH! beauty,A,1,31.00,27.9,10.00,2,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377333076305,Schwarzkopf - OSiS+ - Upload - 200 ml,OH! beauty,A,1,17.19,12.38,27.98,4,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377334026577,J Beverly Hills - Dry - Champú en Seco - 95ml,OH! beauty,A,1,11.75,8.46,28.00,2,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377334059345,J Beverly Hills - Blonde - Acondicionador - 1000ml,OH! beauty,A,1,24.88,17.91,28.01,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377334092113,J Beverly Hills - Sauvage - 71g,OH! beauty,A,1,11.75,8.46,28.00,6,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377334354257,REF Stockholm - Fiber Mousse Nº345 - 250 ml,OH! beauty,A,1,8.83,7.95,9.97,1,DENY,margen_bajo,no_tocar,margen mínimo 9.97% < 10%
+gid://shopify/Product/11377334387025,Schwarzkopf - OSiS+ - Thrill - 100 ml,OH! beauty,A,1,9.03,8.13,9.97,4,DENY,margen_bajo,no_tocar,margen mínimo 9.97% < 10%
+gid://shopify/Product/11377334419793,Schwarzkopf - Bonacure - Moisture Kick Champú con Aloe Vera - 250 ml,OH! beauty,A,1,7.10,6.39,10.00,4,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377334452561,Schwarzkopf - Bonacure - Repair Rescue Tratamiento - 500 ml,OH! beauty,A,1,19.12,13.76,28.03,4,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377334485329,Schwarzkopf - Bonacure - Moisture Kick Acondicionador con Aloe Vera - 1000 ml,OH! beauty,A,1,25.44,18.32,27.99,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377334518097,Wella Professionals - Blondor Expert Cool Blonde - 150g,OH! beauty,A,1,24.18,17.41,28.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377334550865,Schwarzkopf - Bonacure - Repair Rescue Spray Acondicionador - 400 ml,OH! beauty,A,1,12.74,11.47,9.97,4,DENY,margen_bajo,no_tocar,margen mínimo 9.97% < 10%
+gid://shopify/Product/11377334583633,Thuya - Brow Intensifier Medium,OH! beauty,A,1,14.63,10.53,28.02,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377334616401,BaBylissPRO - Recortadora Lo-ProFX Gold Edition FX726,OH! beauty,A,1,125.50,112.95,10.00,5,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377334649169,Schwarzkopf - OSiS+ - Curl Jam - 300 ml,OH! beauty,A,1,8.68,7.81,10.02,4,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377334681937,Schwarzkopf - Bonacure - Color Freeze Tratamiento - 500 ml,OH! beauty,A,1,16.97,15.27,10.02,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377334714705,Schwarzkopf - OSiS+ - Elastic,OH! beauty,A,2,8.05,7.25,9.94,5,DENY,margen_bajo,no_tocar,margen mínimo 9.94% < 10%
+gid://shopify/Product/11377334747473,J Beverly Hills - Finissage - 71g,OH! beauty,A,1,11.75,8.46,28.00,5,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377334780241,J Beverly Hills - AddBody - Acondicionador - 350ml,OH! beauty,A,1,11.88,8.55,28.03,2,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377334813009,REF Stockholm - Whisk,OH! beauty,A,1,10.19,7.34,27.97,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377334878545,J Beverly Hills - Hold Me Firm - 225 ml,OH! beauty,A,1,14.99,10.79,28.02,2,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377335042385,J Beverly Hills - Lift Up - 264 ml,OH! beauty,A,1,11.75,8.46,28.00,5,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377335075153,J Beverly Hills - Rescue - Acondicionador - 90ml,OH! beauty,A,1,8.50,7.65,10.00,2,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377335107921,Alleven - Ultra Cleanser - 100 ml,OH! beauty,A,1,30.74,22.13,28.01,2,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377335140689,J Beverly Hills - Glaze Me - 200 ml,OH! beauty,A,1,10.63,7.65,28.03,6,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377335173457,J Beverly Hills - Fragile - Champú - 1000ml,OH! beauty,A,1,16.42,11.82,28.01,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377335206225,J Beverly Hills - Clarifier - Champú - 1000 ml,OH! beauty,A,1,24.88,17.91,28.01,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377335238993,J Beverly Hills - Masque Treatment - 88ml,OH! beauty,A,1,10.63,7.65,28.03,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377335271761,J Beverly Hills - AddBody - Acondicionador - 90ml,OH! beauty,A,1,9.40,8.46,10.00,2,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377335304529,Salerm - PR Ice Gel0 ml,OH! beauty,A,3,1.05,0.95,9.52,4,DENY,margen_bajo,no_tocar,margen mínimo 9.52% < 10%
+gid://shopify/Product/11377335337297,Bed Head by Tigi - Recovery Champú Hidratante - 400 ml,OH! beauty,A,1,7.49,5.39,28.04,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377335402833,REF Stockholm - Weightless Volume Conditioner,OH! beauty,A,3,13.35,9.61,28.01,5,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377335435601,J Beverly Hills - Masque Treatment - 350ml,OH! beauty,A,1,11.90,8.57,27.98,4,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377335468369,J Beverly Hills - Bodifier - 236 ml,OH! beauty,A,1,11.25,8.1,28.00,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377335501137,J Beverly Hills - Clarifier - Champú - 350 ml,OH! beauty,A,1,10.63,7.65,28.03,2,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377335566673,J Beverly Hills - Solutions - Champú - 350 ml,OH! beauty,A,1,11.88,8.55,28.03,2,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377335599441,Alcántara Cosmética - Mousse de Peinado - Caoba,OH! beauty,A,4,7.59,5.46,28.04,6,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377335632209,J Beverly Hills - Fragile - Champú - 350ml,OH! beauty,A,1,10.63,7.65,28.03,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377335664977,Schwarzkopf - Session Label - The Jelly - 150 ml,OH! beauty,A,1,25.29,18.21,28.00,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377335697745,"Schwarzkopf - Bonacure - Color Freeze Champú pH 4,5 - 500 ml",OH! beauty,A,1,10.20,9.18,10.00,2,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377335763281,J Beverly Hills - Mousse Up - 260 ml,OH! beauty,A,1,10.63,7.65,28.03,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377335796049,REF Stockholm - Semi Colour Booster Blue (1 x 50 ml),OH! beauty,A,1,19.40,13.97,27.99,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377335828817,Schwarzkopf - OSiS+ - Session - 100 ml,OH! beauty,A,1,6.34,4.56,28.08,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377335861585,Alleven - Total Face Serum - 50 ml,OH! beauty,A,1,166.45,119.84,28.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377335894353,Schwarzkopf - Chroma ID - Mascarilla de Color Morado - 300 ml,OH! beauty,A,1,16.48,11.86,28.03,4,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377335927121,REF Stockholm - Semi Colour Booster Gold (1 x 50 ml),OH! beauty,A,1,19.40,13.97,27.99,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377335959889,Philip Martin’s - Sea Salt Spray - 100 ml,OH! beauty,A,1,29.50,26.55,10.00,2,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377335992657,REF Stockholm - Semi Colour Booster Green (1 x 50 ml),OH! beauty,A,1,19.40,13.97,27.99,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377336123729,REF Stockholm - Cutting Gown,OH! beauty,A,1,27.28,19.64,28.01,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377336156497,J Beverly Hills - Crazy Straight - 236 ml,OH! beauty,A,1,11.88,8.55,28.03,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377336189265,Davines - Alchemic Champú Pigmentado - 280 ml,OH! beauty,A,5,26.00,23.4,10.00,5,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377336222033,Schwarzkopf - Bonacure - Moisture Kick Tratamiento - 500 ml,OH! beauty,A,1,19.70,14.18,28.02,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377336713553,Tahe - Pack Cebolla Roja - (Champú 1000 ml + Mascarilla 700ml),OH! beauty,A,1,21.47,19.32,10.01,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377336746321,Lendan - Terra Acondicionador Volumen,OH! beauty,A,2,20.58,14.81,28.00,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377336779089,Wahl - Cordless Super Taper 5V EU,OH! beauty,A,1,112.30,80.86,28.00,8,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377336811857,J Beverly Hills - Rescue - Acondicionador - 350ml,OH! beauty,A,1,11.75,8.46,28.00,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377336877393,J Beverly Hills - Crazy Curl - 236 ml,OH! beauty,A,1,11.75,8.46,28.00,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377336910161,J Beverly Hills - AddBody - Champú - 350ml,OH! beauty,A,1,11.75,8.46,28.00,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377336942929,J Beverly Hills - Fragile - Champú - 90ml,OH! beauty,A,1,9.40,8.46,10.00,2,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377336975697,J Beverly Hills - EveryDay - Champú - 90ml,OH! beauty,A,1,9.40,8.46,10.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377337008465,J Beverly Hills - Dry - Champú en Seco - 262ml,OH! beauty,A,1,11.75,8.46,28.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377337041233,J Beverly Hills - Clear Wax - 71g,OH! beauty,A,1,11.75,8.46,28.00,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377337074001,J Beverly Hills - Rescue - Champú - 350ml,OH! beauty,A,1,11.75,8.46,28.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377337106769,J Beverly Hills - Gel Me - 200 ml,OH! beauty,A,1,11.75,8.46,28.00,6,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377337139537,L’Oréal Professionnel - SteamPod Concentrado 3-en-1 50 ml,OH! beauty,A,1,32.08,23.09,28.02,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377337172305,L’Oréal Professionnel - Infinium Laca Extra Fuerte (Comprimido) - 300 ml,OH! beauty,A,1,16.72,12.03,28.05,5,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377337205073,J Beverly Hills - Blonde - Acondicionador - 350ml,OH! beauty,A,1,11.75,8.46,28.00,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377337237841,J Beverly Hills - EveryDay - Acondicionador - 1 L,OH! beauty,A,1,24.88,17.91,28.01,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377337270609,J Beverly Hills - Hold Me Lite - Spray de Fijación - 331 ml,OH! beauty,A,1,11.75,8.46,28.00,4,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377337303377,J Beverly Hills - Blonde Gloss - 30 ml,OH! beauty,A,1,11.88,8.55,28.03,5,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377337336145,J Beverly Hills - EveryDay - Champú - 350ml,OH! beauty,A,1,11.75,8.46,28.00,2,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377337368913,Tahe - Pack Botanic para Cabellos Secos y Teñidos (Champú 1000 ml + Mascarilla XXL 700ml),OH! beauty,A,1,26.55,23.9,9.98,1,DENY,margen_bajo,no_tocar,margen mínimo 9.98% < 10%
+gid://shopify/Product/11377337401681,Kin Cosmetics - Kinactif Nº7 Control Intensive Anti-Frizz Shot - 100ml,OH! beauty,A,1,15.16,13.64,10.03,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377337434449,REF Stockholm - Shaper Wax,OH! beauty,A,1,16.88,12.15,28.02,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377337499985,Schwarzkopf - Skin Protect - 100 ml,OH! beauty,A,1,7.38,5.31,28.05,2,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377337532753,REF Stockholm - Fiber Cream,OH! beauty,A,1,14.32,10.31,28.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377337565521,Salerm - Keratin Shot Deep Impact Plus - 200 ml (Pack 2),OH! beauty,A,1,39.05,35.15,9.99,1,DENY,margen_bajo,no_tocar,margen mínimo 9.99% < 10%
+gid://shopify/Product/11377337598289,"Schwarzkopf - Bonacure - Sun Protect 3-in-1 Scalp, Hair & Body Cleanse - 200 ml",OH! beauty,A,1,8.33,5.99,28.09,2,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377337631057,Lendan - Terra Champú Color,OH! beauty,A,2,14.74,13.27,9.97,2,DENY,margen_bajo,no_tocar,margen mínimo 9.97% < 10%
+gid://shopify/Product/11377337663825,Shu Uemura - Soin Réparation Extrême,OH! beauty,A,2,50.35,36.25,28.00,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377337696593,Kin Cosmetics - Kinmen Silver Champú - 300ml,OH! beauty,A,1,15.48,11.14,28.04,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377337729361,Salerm - Salerm 21 Acondicionador Proteína de Seda Sin Aclarado - 200 ml (Pack 2),OH! beauty,A,1,37.00,33.3,10.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377337762129,J Beverly Hills - Hydrate EveryDay - Acondicionador - 85ml,OH! beauty,A,1,6.37,4.58,28.10,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377337794897,J Beverly Hills - Fragile - Acondicionador - 90ml,OH! beauty,A,1,9.40,8.46,10.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377337827665,Schwarzkopf - Bonacure - Sun Protect 2-in-1 Tratamiento - 150 ml,OH! beauty,A,1,12.13,8.73,28.03,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377337860433,Salerm - Salerm 21 Acondicionador Proteína de Seda Sin Aclarado - 50 ml (Pack 3),OH! beauty,A,1,31.07,27.96,10.01,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377337893201,REF Stockholm - Rough Wax,OH! beauty,A,1,17.24,12.41,28.02,2,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377337925969,J Beverly Hills - EveryDay - Spray - 236 ml,OH! beauty,A,1,11.75,8.46,28.00,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377337958737,Sachajuan - Hair In The Sun,OH! beauty,A,1,23.53,21.18,9.99,1,DENY,margen_bajo,no_tocar,margen mínimo 9.99% < 10%
+gid://shopify/Product/11377338057041,J Beverly Hills - Blonde - Champú - 1000 ml,OH! beauty,A,1,24.88,17.91,28.01,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377338122577,Kmax - Scalp Topical Shader - Castaño Auburn - Nº5,OH! beauty,A,7,37.30,26.86,27.99,14,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377338155345,REF Stockholm - Weightless Volume Shampoo,OH! beauty,A,2,11.30,10.17,10.00,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377338188113,Salerm - Homme Pack Caída - Unidad,OH! beauty,A,1,63.80,57.42,10.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377338220881,J Beverly Hills - Beach Spray - 236 ml,OH! beauty,A,1,11.75,8.46,28.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377338253649,J Beverly Hills - Rescue - Champú - 90ml,OH! beauty,A,1,9.40,8.46,10.00,2,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377338319185,REF Stockholm - Detangling Spray,OH! beauty,A,1,13.74,9.89,28.02,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377338351953,Schwarzkopf - Chroma ID - Mascarilla de Color 6-88 Rojo Rubí - 300 ml,OH! beauty,A,1,20.63,14.85,28.02,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377338384721,J Beverly Hills - AddBody - Champú - 90ml,OH! beauty,A,1,9.40,8.46,10.00,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377338417489,J Beverly Hills - Blonde - Champú - 350 ml,OH! beauty,A,1,11.75,8.46,28.00,4,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377338450257,Schwarzkopf - Bonacure - Sun Protect Beach Waves Spray - 150 ml,OH! beauty,A,1,10.15,7.31,27.98,2,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377338515793,J Beverly Hills - Hold Me Firm - 100 ml,OH! beauty,A,1,11.75,8.46,28.00,4,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377338548561,J Beverly Hills - Fragile - Acondicionador - 350ml,OH! beauty,A,1,11.75,8.46,28.00,2,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377338941777,L3VEL3 - Hair Spray Secado Rápido Fijación Fuerte - 383g,OH! beauty,A,1,6.68,4.81,27.99,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377339138385,Davines - More Inside Primer - 100 ml,OH! beauty,A,1,17.50,15.75,10.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377339171153,Remember Ecosostenible - Báscula Creative Colour,OH! beauty,A,1,78.00,70.2,10.00,1,DENY,revisar_manual,no_tocar,accesorio con precio placeholder 78 € igual que los tintes
+gid://shopify/Product/11377339203921,Kin Cosmetics - Kinactif Nº8 Scalp Anti-Dandruff Purifying Champú - 300ml,OH! beauty,A,1,15.81,14.23,9.99,1,DENY,margen_bajo,no_tocar,margen mínimo 9.99% < 10%
+gid://shopify/Product/11377339236689,Remember Ecosostenible - Batidor para Herbal Color,OH! beauty,A,1,78.00,70.2,10.00,1,DENY,revisar_manual,no_tocar,accesorio con precio placeholder 78 € igual que los tintes
+gid://shopify/Product/11377339269457,Philip Martin's - 3WAYS - 200 ml,OH! beauty,A,1,25.04,18.03,28.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377339302225,Kin Cosmetics - Kinactif Nº8 Scalp Daily Soothing Champú - 300ml,OH! beauty,A,1,11.53,8.3,28.01,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377339334993,Kin Cosmetics - Kin Nº8 Scalp Multivitamin Scalp Serum - 75ml,OH! beauty,A,1,13.12,9.44,28.05,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377339367761,Kin Cosmetics - Kin Nº8 Scalp Anti-Dandruff Purifying Champú - 1L,OH! beauty,A,1,34.87,25.1,28.02,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377339400529,Goldwell - Color Brush Pincel de Color Mediano - 40 mm,OH! beauty,A,1,6.88,4.95,28.05,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377339433297,Kin Cosmetics - Kin Nº8 Scalp Anti-Dandruff Purifying Scrub - 200ml,OH! beauty,A,1,14.98,10.78,28.04,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377339466065,REF Stockholm - Colour Boost - Sandy Blonde - 200ml,OH! beauty,A,1,10.27,9.24,10.03,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377339498833,Remember Ecosostenible - Vegan Rhassoul Clay,OH! beauty,A,1,78.00,70.2,10.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377339531601,Remember Ecosostenible - Gelatina Técnica con Aloe Vera,OH! beauty,A,1,56.25,40.5,28.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377339564369,L3VEL3 - Bálsamo Hidratante para Barba - 100ml,OH! beauty,A,1,5.63,4.05,28.06,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377339597137,L3VEL3 - Matte Putty Fijación Firme - 150g,OH! beauty,A,1,8.39,7.55,10.01,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377339629905,Kin Cosmetics - Kinactif Nº8 Scalp Oil Control Balancing Champú - 300ml,OH! beauty,A,1,11.53,8.3,28.01,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377339662673,Remember Ecosostenible - Free Hands Bleach,OH! beauty,A,1,78.00,70.2,10.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377339728209,Reuzel - Pomade - Concrete Hold Matte - 340g,OH! beauty,A,1,23.22,16.71,28.04,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377339760977,Reuzel - Fragrance - Solid Cologne Balm - 35g,OH! beauty,A,1,7.40,5.33,27.97,2,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377339793745,Reuzel - Pomade - Extreme Hold Matte - 35g,OH! beauty,A,1,6.83,4.91,28.11,2,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377339826513,Reuzel - Hair Styling - Grooming Tonic Texture Cream - 100ml,OH! beauty,A,1,6.40,4.61,27.97,2,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377339859281,Reuzel - Pomade - Green Grease Medium Hold - 95g,OH! beauty,A,1,10.40,7.49,27.98,2,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377339892049,L3VEL3 - Champú Reparador Sin Sulfatos - 500ml,OH! beauty,A,1,6.68,4.81,27.99,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377339924817,Reuzel - Beard Care - Beard Balm - 35g,OH! beauty,A,1,7.82,5.63,28.01,2,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377339957585,Reuzel - Pomade - Pink Strong Hold Grease - 95g,OH! beauty,A,1,10.40,7.49,27.98,2,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377340055889,Reuzel - Hair Styling - Fiber Hair Gel - 100ml,OH! beauty,A,1,6.35,5.72,9.92,2,DENY,margen_bajo,no_tocar,margen mínimo 9.92% < 10%
+gid://shopify/Product/11377340088657,Reuzel - Road Trip To Go - Clay Matte Pomade - 95g + 35g,OH! beauty,A,1,8.37,7.53,10.04,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377340121425,Reuzel - Pomade - Pink Strong Hold Grease - 340g,OH! beauty,A,1,23.22,16.71,28.04,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377340154193,Reuzel - Beard Care - Clean & Fresh Beard Foam - 70ml,OH! beauty,A,1,9.07,6.53,28.00,2,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377340186961,Reuzel - Road Trip To Go - Fiber Pomade - 95g + 35g,OH! beauty,A,1,8.29,7.46,10.01,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377340219729,Philip Martin's - Maple Aqua Rinse - Acondicionador - (sin tamaño indicado),OH! beauty,A,1,46.05,33.16,27.99,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377340252497,Remember Ecosostenible - Herbal Copper 7.43,OH! beauty,A,1,78.00,70.2,10.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377340285265,Remember Ecosostenible - Herbal Miracle Cool Reflects R,OH! beauty,A,1,78.00,70.2,10.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377340318033,Remember Ecosostenible - Herbal Mahogany 5.5 R,OH! beauty,A,1,78.00,70.2,10.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377340350801,Reuzel - Hair Styling - Matte Styling Paste - 100ml,OH! beauty,A,1,6.67,6.0,10.04,2,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377340383569,Reuzel - Road Trip To Go - Daily Shampoo - 350ml + 100ml,OH! beauty,A,1,9.90,7.13,27.98,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377340416337,Remember Ecosostenible - Listado PVP Retail,OH! beauty,A,1,78.00,70.2,10.00,1,DENY,revisar_manual,no_tocar,no es un producto (listado de precios)
+gid://shopify/Product/11377340481873,Remember Ecosostenible - Bakuchiol Miracle R,OH! beauty,A,1,78.00,70.2,10.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377340514641,Remember Ecosostenible - Natural Henna R,OH! beauty,A,1,78.00,70.2,10.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377340547409,Football Cosmetic - Cera de Peinado - 100 ml,OH! beauty,A,1,6.62,4.76,28.10,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377340612945,Remember Ecosostenible - Herbal Natural Blonde 8.0 R,OH! beauty,A,1,78.00,70.2,10.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377340645713,Remember Ecosostenible - Neutral Henna R,OH! beauty,A,1,78.00,70.2,10.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377340678481,Remember Ecosostenible - Herbal Brown 4.0 R,OH! beauty,A,1,78.00,70.2,10.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377340711249,Remember Ecosostenible - Herbal Wine Red 6.66 R,OH! beauty,A,1,78.00,70.2,10.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377340744017,REF Stockholm - Colour Boost - Mascarilla Colorante,OH! beauty,A,1,13.07,9.41,28.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377340776785,Remember Ecosostenible - Bol para Mezcla Herbal Color,OH! beauty,A,1,78.00,70.2,10.00,1,DENY,revisar_manual,no_tocar,accesorio con precio placeholder 78 € igual que los tintes
+gid://shopify/Product/11377340809553,Remember Ecosostenible - Herbal Blond Gold 8.3 R,OH! beauty,A,1,78.00,70.2,10.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377340842321,Remember Ecosostenible - Herbal Cool Blonde 9.1 R,OH! beauty,A,1,78.00,70.2,10.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377340875089,Remember Ecosostenible - Herbal Blond Beige 9.13 R,OH! beauty,A,1,78.00,70.2,10.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377341661521,L3VEL3 - Navaja Blanca Mango Plástico,OH! beauty,A,1,5.34,4.81,9.93,1,DENY,margen_bajo,no_tocar,margen mínimo 9.93% < 10%
+gid://shopify/Product/11377341694289,L3VEL3 - Champú para Barba con Extracto de Camomila - 150ml,OH! beauty,A,1,7.85,5.65,28.03,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377341727057,L3VEL3 - Hair Spray Acabado Natural Fijación Fuerte - 383g,OH! beauty,A,1,6.59,4.74,28.07,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377341759825,L3VEL3 - Fibras Capilares Negro 100% Natural - 27.5g,OH! beauty,A,1,11.90,8.57,27.98,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377341792593,L3VEL3 - Milly Clutch Navaja Blanca Mango Resina,OH! beauty,A,1,20.88,15.03,28.02,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377341825361,L3VEL3 - Aftershave Royale - 400ml,OH! beauty,A,1,6.59,4.74,28.07,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377341890897,L3VEL3 - Acondicionador para Barba en Espuma Sin Aclarado - 150ml,OH! beauty,A,1,9.65,6.95,27.98,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377341923665,L3VEL3 - Gel Fijación Fuerte con Aceite de Ricino - 1000ml,OH! beauty,A,1,9.20,6.62,28.04,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377341956433,L3VEL3 - Curly Hair Jam - 250ml,OH! beauty,A,1,8.17,7.35,10.04,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377341989201,L3VEL3 - Hair Styling Pomade Fijación Extrema - 150g,OH! beauty,A,1,6.43,5.79,9.95,1,DENY,margen_bajo,no_tocar,margen mínimo 9.95% < 10%
+gid://shopify/Product/11377342021969,L3VEL3 - Curly Curl Cream - 250ml,OH! beauty,A,1,9.69,8.72,10.01,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377342054737,L3VEL3 - Hair Wax Stick - 75g,OH! beauty,A,1,5.92,4.26,28.04,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377342087505,L3VEL3 - Hair Styling Pomade Fijación Extrema - 500ml,OH! beauty,A,1,17.32,15.59,9.99,1,DENY,margen_bajo,no_tocar,margen mínimo 9.99% < 10%
+gid://shopify/Product/11377342120273,L3VEL3 - Spider Wax Fijación Duradera - 150ml,OH! beauty,A,1,6.43,5.79,9.95,1,DENY,margen_bajo,no_tocar,margen mínimo 9.95% < 10%
+gid://shopify/Product/11377342153041,L3VEL3 - Brilliant Cream Fijación Duradera - 150ml,OH! beauty,A,1,6.43,5.79,9.95,1,DENY,margen_bajo,no_tocar,margen mínimo 9.95% < 10%
+gid://shopify/Product/11377342185809,L3VEL3 - Tinte Temporal Instantáneo Negro para Cabello y Barba - 125ml,OH! beauty,A,1,8.60,6.19,28.02,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377342218577,L3VEL3 - Sérum Antiencrespamiento con Aloe Vera - 200ml,OH! beauty,A,1,11.90,8.57,27.98,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377342251345,L3VEL3 - Aftershave Fresh - 400ml,OH! beauty,A,1,6.59,4.74,28.07,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377342284113,L3VEL3 - Gel Fijación Super Fuerte - 250ml,OH! beauty,A,1,6.43,5.79,9.95,1,DENY,margen_bajo,no_tocar,margen mínimo 9.95% < 10%
+gid://shopify/Product/11377342316881,L3VEL3 - Shaving Gel Aqua - 500ml,OH! beauty,A,1,5.47,3.93,28.15,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377342349649,L3VEL3 - Aftershave Aqua - 400ml,OH! beauty,A,1,6.59,4.74,28.07,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377342382417,L3VEL3 - Gel Fijación Fuerte con Aceite de Ricino - 100ml,OH! beauty,A,1,4.25,3.83,9.88,1,DENY,margen_bajo,no_tocar,margen mínimo 9.88% < 10%
+gid://shopify/Product/11377342415185,L3VEL3 - Matte Paste Fijación Firme - 150g,OH! beauty,A,1,6.43,5.79,9.95,1,DENY,margen_bajo,no_tocar,margen mínimo 9.95% < 10%
+gid://shopify/Product/11377342447953,Alcántara Cosmética - Mousse de Peinado Fuerte - 300 ml,OH! beauty,A,1,7.59,5.46,28.06,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377342480721,L3VEL3 - Aplicador para Fibras Capilares,OH! beauty,A,1,11.15,8.03,27.98,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377342513489,Bifull - Ren Natur Paletina Triangular Mini,OH! beauty,A,1,1.07,0.96,10.28,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377342546257,Bifull - Little Palette Espátula Pequeña para Mechas Negra,OH! beauty,A,1,6.44,5.8,9.94,1,DENY,margen_bajo,no_tocar,margen mínimo 9.94% < 10%
+gid://shopify/Product/11377342579025,L3VEL3 - Navaja Azul Mango Plástico,OH! beauty,A,1,2.93,2.64,9.90,1,DENY,margen_bajo,no_tocar,margen mínimo 9.90% < 10%
+gid://shopify/Product/11377342611793,L3VEL3 - Navaja Rosa Mango Plástico,OH! beauty,A,1,2.93,2.64,9.90,1,DENY,margen_bajo,no_tocar,margen mínimo 9.90% < 10%
+gid://shopify/Product/11377342644561,Bifull - Ren Natur Batidor Dúo para Tinte Hive,OH! beauty,A,1,1.18,1.06,10.17,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377342710097,L3VEL3 - Navaja Roja Mango Plástico,OH! beauty,A,1,5.34,4.81,9.93,1,DENY,margen_bajo,no_tocar,margen mínimo 9.93% < 10%
+gid://shopify/Product/11377342742865,Bifull - Collar de Corte Imantado - Negro,OH! beauty,A,1,5.60,5.04,10.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377342808401,L3VEL3 - Polvos de Peinado Extra Fuerte - 30g,OH! beauty,A,1,6.65,4.79,27.97,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377342841169,Bifull - Espejo Irrompible con Asa Negro,OH! beauty,A,1,11.98,10.78,10.02,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377342873937,BKT - Mascarilla Capilar - 1 kg,OH! beauty,A,1,146.41,131.77,10.00,1,DENY,margen_bajo,no_tocar,margen mínimo 10.00% < 10%
+gid://shopify/Product/11377342906705,Bifull - Cepillo Desenredante Especial Rizos Azul,OH! beauty,A,1,3.90,3.51,10.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377342972241,L3VEL3 - Tinte en Gel Negro Fijación Fuerte - 250ml,OH! beauty,A,1,5.47,3.93,28.15,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377343005009,L3VEL3 - Navaja Verde Mango Plástico,OH! beauty,A,1,5.34,4.81,9.93,1,DENY,margen_bajo,no_tocar,margen mínimo 9.93% < 10%
+gid://shopify/Product/11377343070545,Bifull - Ren Natur Paletina Triangular Pequeña - 4 cm,OH! beauty,A,1,1.18,1.06,10.17,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377343103313,Bifull - Ren Natur Peine Paletina para Coloración,OH! beauty,A,1,8.99,8.09,10.01,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377343136081,Bifull - Ren Natur Bol con Asa para Coloración - 300 ml,OH! beauty,A,1,8.99,8.09,10.01,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377343168849,L3VEL3 - Polvos de Peinado Extra Fuerte - 60g,OH! beauty,A,1,11.90,8.57,27.98,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377343201617,L3VEL3 - Spray Salino Texturizante - 250ml,OH! beauty,A,1,11.43,10.29,9.97,1,DENY,margen_bajo,no_tocar,margen mínimo 9.97% < 10%
+gid://shopify/Product/11377343234385,L3VEL3 - Polvos de Peinado Fijación Ligera - 30g,OH! beauty,A,1,6.65,4.79,27.97,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377343267153,Bifull - Ren Natur Espátula para Mechas Cortas - 15 cm,OH! beauty,A,1,1.86,1.67,10.22,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377343299921,L3VEL3 - Mascarilla Facial Exfoliante de Barro - 500ml,OH! beauty,A,1,7.25,5.22,28.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377343332689,L3VEL3 - Gel Fijación Super Fuerte - 500ml,OH! beauty,A,1,9.69,8.72,10.01,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377343365457,L3VEL3 - Gel Fijación Fuerte con Aceite de Ricino - 250ml,OH! beauty,A,1,6.43,5.79,9.95,1,DENY,margen_bajo,no_tocar,margen mínimo 9.95% < 10%
+gid://shopify/Product/11377343430993,L3VEL3 - Hair Spray Acabado Brillante Aceite de Oliva y Coco Fijación Ligera - 383g,OH! beauty,A,1,8.75,6.3,28.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377343463761,L3VEL3 - Forming Cream Fijación Media - 150ml,OH! beauty,A,1,6.43,5.79,9.95,1,DENY,margen_bajo,no_tocar,margen mínimo 9.95% < 10%
+gid://shopify/Product/11377343922513,Fudge - Fudge Professional Hair Gum - 150 ml,OH! beauty,A,1,18.75,13.5,28.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377343955281,Davines - SU Hair Milk - 135 ml,OH! beauty,A,1,26.75,24.08,9.98,2,DENY,margen_bajo,no_tocar,margen mínimo 9.98% < 10%
+gid://shopify/Product/11377343988049,Fudge - Fudge Professional Hair Shaper - 75 g,OH! beauty,A,1,18.75,13.5,28.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377600037201,Wella - EIMI Mistify Light - 75 ml,OH! beauty,A,1,9.24,6.65,28.03,1,DENY,duplicado,no_tocar,mismo título que 11377332519249 (lote)
+gid://shopify/Product/11377600266577,Wella Professionals - EIMI Fixing Dynamic Fix - 500 ml,OH! beauty,A,1,23.59,21.23,10.00,4,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377600299345,Wella - EIMI Flowing Form - 100 ml,OH! beauty,A,1,13.34,9.6,28.04,5,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377604821329,Sebastian Professional - Penetraitt - Conditioner - 50 ml,OH! beauty,A,1,8.50,7.65,10.00,5,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377607541073,Sebastian Professional - No.Breaker - Mask - 500 ml,OH! beauty,A,1,62.50,56.25,10.00,1,DENY,duplicado,no_tocar,mismo título que producto activo 11366173638993
+gid://shopify/Product/11377607606609,Sebastian Professional - Dark Oil - Conditioner - 50 ml,OH! beauty,A,1,9.00,6.48,28.00,4,DENY,duplicado,no_tocar,mismo título que producto activo 11366183371089
+gid://shopify/Product/11377607704913,Sebastian Professional - Seb Man - The Groom Liquid Tonic - 100 ml,OH! beauty,A,1,50.64,45.58,9.99,1,DENY,margen_bajo,no_tocar,margen mínimo 9.99% < 10%
+gid://shopify/Product/11377607999825,Sebastian Professional - Thickefy - Foam - 190 ml,OH! beauty,A,1,26.50,19.08,28.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377608065361,Sebastian Professional - No.Breaker - Cream - 145 ml,OH! beauty,A,1,48.69,35.06,27.99,1,DENY,duplicado,no_tocar,mismo título que producto activo 11366173835601
+gid://shopify/Product/11377608229201,Sebastian Professional - Dark Oil - Shampoo con Aceite de Jojoba y Argán - 50 ml,OH! beauty,A,1,7.12,5.12,28.09,4,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377609277777,Sebastian Professional - No.Breaker - Shampoo - 1000 ml,OH! beauty,A,1,47.24,34.01,28.01,2,DENY,duplicado,no_tocar,mismo título que producto activo 11366174064977
+gid://shopify/Product/11377609933137,Sebastian Professional - Dark Oil - Lightweight Oil - 30 ml,OH! beauty,A,1,15.82,11.39,28.00,9,DENY,duplicado,no_tocar,mismo título que producto activo 11366174622033
+gid://shopify/Product/11377618420049,L’Oréal Professionnel - X-Tenso Reductor Cabello Sensibilizado - 250 ml,OH! beauty,A,1,45.17,32.52,28.01,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377618452817,L’Oréal Professionnel - SteamPod 3 Herramienta Todo en Uno,OH! beauty,A,1,227.84,164.04,28.00,2,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377619763537,Voltage - Champú Stop Caída - 500ml,OH! beauty,A,1,17.24,12.41,28.02,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377619992913,Voltage - Programa Stop-Caída - 3 Fases,OH! beauty,A,1,47.37,34.1,28.01,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377620025681,Tahe - O.C. Intensive Treatment Anticaída - 15 x 5 ml,OH! beauty,A,1,28.50,25.65,10.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377620058449,Tahe - Peptide T98 Pack Programa Anticaída Tratamiento 6 x 10 ml + Champú 300 ml,OH! beauty,A,1,37.90,34.11,10.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377620091217,Tahe - Peptide T98 Pack Programa Anticaída Tratamiento 50 ml + Champú 300 ml,OH! beauty,A,1,37.90,34.11,10.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377620123985,Tahe - Peptide T98 Pack Champú Anticaída Densificante 300 ml + Spray Densificador 125ml,OH! beauty,A,1,19.95,17.96,9.97,1,DENY,margen_bajo,no_tocar,margen mínimo 9.97% < 10%
+gid://shopify/Product/11377620156753,Tahe - Fitoxil Pack Forte Plus Programa Anticaída Cabellos Castigados Champú 300 ml + Tratamiento 6 x 10 ml,OH! beauty,A,1,22.95,20.66,9.98,1,DENY,margen_bajo,no_tocar,margen mínimo 9.98% < 10%
+gid://shopify/Product/11377620255057,Tahe - O.C. Intensive Shampoo Anticaída - 300 ml,OH! beauty,A,1,14.00,12.6,10.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377620287825,Tahe - B.T. Fitoxil Champú Anticaída Efecto Reforzado,OH! beauty,A,2,11.55,10.4,9.96,7,DENY,margen_bajo,no_tocar,margen mínimo 9.96% < 10%
+gid://shopify/Product/11377620320593,Salerm - Biokera Pack Anticaída 3 Productos - Unidad,OH! beauty,A,1,67.45,60.71,9.99,1,DENY,margen_bajo,no_tocar,margen mínimo 9.99% < 10%
+gid://shopify/Product/11377620353361,Salerm - Biokera Champú Especial Caída,OH! beauty,A,2,16.75,15.08,9.97,3,DENY,margen_bajo,no_tocar,margen mínimo 9.97% < 10%
+gid://shopify/Product/11377620418897,Salerm - Biokera Tratamiento Intensivo Caída - 6 x 10 ml,OH! beauty,A,1,29.95,21.56,28.01,5,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377620451665,Tahe - Peptide T98 Tratamiento Anticaída,OH! beauty,A,2,31.55,28.4,9.98,2,DENY,margen_bajo,no_tocar,margen mínimo 9.98% < 10%
+gid://shopify/Product/11377620484433,Tahe - B.T. Fitoxil Tratamiento Anticaída Forte Classic Concentrado - 6 x 10 ml,OH! beauty,A,1,22.05,19.85,9.98,3,DENY,margen_bajo,no_tocar,margen mínimo 9.98% < 10%
+gid://shopify/Product/11377620517201,Tahe - Fitoxil Pack Forte Classic Concentrado Anticaída (Champú 300 ml + Tratamiento 6×10ml),OH! beauty,A,1,22.95,20.66,9.98,1,DENY,margen_bajo,no_tocar,margen mínimo 9.98% < 10%
+gid://shopify/Product/11377620549969,Tahe - Peptide T98 Champú Anticaída,OH! beauty,A,2,13.65,12.29,9.96,3,DENY,margen_bajo,no_tocar,margen mínimo 9.96% < 10%
+gid://shopify/Product/11377620582737,Salerm - Champú Control Caída,OH! beauty,A,2,11.87,8.54,28.00,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377620615505,Salerm - Biokera Pack Caída 2 Productos 23 - Unidad,OH! beauty,A,1,52.85,47.57,9.99,1,DENY,margen_bajo,no_tocar,margen mínimo 9.99% < 10%
+gid://shopify/Product/11377624940881,Alfaparf Milano - Keratin Therapy Lisse Design - Move Designer - 500 ml,OH! beauty,A,1,19.02,13.69,28.02,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377624973649,Alfaparf Milano - EOC Línea 2023 - 7.01 - 60 ml,OH! beauty,A,1,5.94,4.28,27.95,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377625203025,Alfaparf Milano - Benvoleo - Perfect Again Mist - 200 ml,OH! beauty,A,1,9.64,6.94,28.01,5,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377625235793,Alfaparf Milano - Blends of Many - Rebalancing Tonic - 100 ml,OH! beauty,A,1,29.87,21.5,28.02,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377625268561,Alfaparf Milano - Benvoleo - The Hydration Kit,OH! beauty,A,1,20.07,14.45,28.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377625334097,Alfaparf Milano - SDL Nutritive Aceite Esencial - 6x13 ml,OH! beauty,A,1,12.33,8.87,28.06,4,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377625366865,Alfaparf Milano - SDL Style & Care - Detangling Primer - 125 ml,OH! beauty,A,1,9.74,7.01,28.03,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377625399633,Alfaparf Milano - Benvoleo - The Glossy Kit,OH! beauty,A,1,17.43,12.55,28.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377625432401,Alfaparf Milano - Benvoleo Glossy - Express Acondicionador - 200 ml,OH! beauty,A,1,16.90,15.21,10.00,5,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377625465169,Alfaparf Milano - Benvoleo - The Recovery Kit,OH! beauty,A,1,20.07,14.45,28.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377625497937,Alfaparf Milano - Benvoleo Glossy - Acondicionador - 1000 ml,OH! beauty,A,1,21.32,15.35,28.00,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377625530705,Alfaparf Milano - Keratin Therapy Lisse Design - Move Fixer - 1000 ml,OH! beauty,A,1,10.88,7.83,28.03,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377626087761,Reuzel - Pomade - Fiber - 35g,OH! beauty,A,1,6.83,4.91,28.11,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377626120529,Davines - Pasta & Love Medium Fiber Cream - 50 ml,OH! beauty,A,1,30.00,27.0,10.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377626186065,Reuzel - Hair Styling - Fiber Cream - 100ml,OH! beauty,A,1,8.82,6.35,28.00,2,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377626251601,Reuzel - Try Reuzel Groom Kit - Fiber - 3pcs,OH! beauty,A,1,14.48,10.42,28.04,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377626284369,Kin Cosmetics - Kinmen Hair Fiber Paste - 100ml,OH! beauty,A,1,11.62,8.36,28.06,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377629593937,Termix - Soporte para Tijeras de Peluquería,OH! beauty,A,1,23.75,17.1,28.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377630052689,Termix - Tijera Profesional de Vacío CK23T 55,OH! beauty,A,1,103.57,74.57,28.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377630085457,Termix - Tijera Profesional Premium Barber 7,OH! beauty,A,1,128.27,92.35,28.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377637032273,Goldwell - Dualsenses Bond Pro Fortifying Sérum en Spray - 150 ml,OH! beauty,A,1,19.52,14.05,28.02,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377637097809,Goldwell - Dualsenses Scalp Specialist Balance & Hydration Sérum - 150 ml,OH! beauty,A,1,17.23,12.4,28.03,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377637130577,Goldwell - Dualsenses Color Extra Rich Sérum Intensivo 12 ampollas x - 18 ml,OH! beauty,A,1,46.04,33.15,28.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377637163345,Goldwell - Dualsenses Ultra Volume Bodifying Sérum en Spray - 150 ml,OH! beauty,A,1,19.52,14.05,28.02,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377637327185,Goldwell - Dualsenses Color Brilliance Sérum Intensivo 12 ampollas x - 18 ml,OH! beauty,A,1,36.99,33.29,10.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377637359953,Goldwell - Dualsenses Rich Repair 6 Effects Sérum - 100 ml,OH! beauty,A,1,15.85,11.41,28.01,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377637425489,Goldwell - Dualsenses Blondes & Highlights Brilliance Sérum en Spray - 150 ml,OH! beauty,A,1,19.52,14.05,28.02,2,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377637458257,Schwarzkopf - Bonacure - Root Activating Sérum - 100 ml,OH! beauty,A,1,17.79,12.81,27.99,3,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377637491025,Goldwell - Dualsenses Scalp Specialist Anti-Hair Loss Sérum - 150 ml,OH! beauty,A,1,20.84,18.76,9.98,1,DENY,margen_bajo,no_tocar,margen mínimo 9.98% < 10%
+gid://shopify/Product/11377637556561,Goldwell - StyleSign Smoothing Serum Spray Sérum Alisador en Spray - 100 ml,OH! beauty,A,1,11.99,10.79,10.01,2,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377637687633,Schwarzkopf - Sérum Bonacure Scalp Genesis - 100 ml,OH! beauty,A,1,16.88,12.15,28.02,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377637720401,Kin Cosmetics - Kin Nº8 Scalp SOS Soothing Serum - 30ml,OH! beauty,A,1,14.23,10.24,28.04,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377637851473,Lendan - Rich Nutr. Serum - 50 ml,OH! beauty,A,1,39.79,28.65,28.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377637917009,Lendan - LD Next Liss Age Sérum Activador - 300 ml,OH! beauty,A,1,43.00,30.96,28.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377637949777,Goldwell - Dualsenses Color & Wash Sérum Intensivo 12 ampollas x - 18 ml,OH! beauty,A,1,38.27,27.55,28.01,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377637982545,Goldwell - Dualsenses Rich Repair Sérum Intensivo 12 ampollas x - 18 ml,OH! beauty,A,1,46.38,33.39,28.01,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377638080849,Lendan - LD CS Sensocare Sérum Dérmico - 45 ml,OH! beauty,A,1,44.38,31.95,28.01,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377638146385,Sachajuan - Hair Shine Serum - 250 ml,OH! beauty,A,1,29.64,21.34,28.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377638179153,Goldwell - Dualsenses Just Smooth Sérum Intensivo 12 ampollas x - 18 ml,OH! beauty,A,1,38.27,27.55,28.01,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377638310225,Goldwell - Dualsenses Ultra Volume Sérum Intensivo 12 ampollas x - 18 ml,OH! beauty,A,1,38.27,27.55,28.01,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377638375761,Goldwell - SilkLift Intensive Conditioning Serum Concentrate - 30 ml,OH! beauty,A,1,31.57,22.73,28.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377638474065,Shu Uemura - Sérum Fortifiant 90 ml,OH! beauty,A,1,47.07,33.89,28.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377638572369,Davines - More Inside Invisible Serum - 50 ml,OH! beauty,A,1,29.25,26.33,9.98,2,DENY,margen_bajo,no_tocar,margen mínimo 9.98% < 10%
+gid://shopify/Product/11377638605137,Salerm - Biokera Scalp Care Sérum - 45 ml,OH! beauty,A,1,25.55,23.0,9.98,5,DENY,margen_bajo,no_tocar,margen mínimo 9.98% < 10%
+gid://shopify/Product/11377638637905,Schwarzkopf - Session Label - The Serum - 100 ml,OH! beauty,A,1,25.29,18.21,28.00,3,DENY,duplicado,no_tocar,mismo título que producto activo 11366476120401
+gid://shopify/Product/11377638670673,Goldwell - Dualsenses Color & Wash Sérum en Spray - 150 ml,OH! beauty,A,1,19.52,14.05,28.02,5,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377638703441,Goldwell - Dualsenses Rich Repair Restoring Sérum en Spray - 150 ml,OH! beauty,A,1,19.52,14.05,28.02,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377638932817,Shu Uemura - Essence Absolue Nourishing Overnight Hair Serum - 150 ml,OH! beauty,A,1,69.99,50.39,28.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377639227729,Goldwell - Dualsenses Bond & Heat Sérum Intensivo 12 ampollas x - 18 ml,OH! beauty,A,1,30.92,27.83,9.99,1,DENY,margen_bajo,no_tocar,margen mínimo 9.99% < 10%
+gid://shopify/Product/11377640702289,Shu Uemura - Overnight Serum Réparation Extrême 90 ml,OH! beauty,A,1,51.64,37.18,28.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377640735057,Reuzel - Beard Care - Clean & Fresh Beard Serum - 50g,OH! beauty,A,1,11.57,8.33,28.00,2,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377640767825,Maria Galland - 214 Sérum Infinie Tendresse - 30 ml,OH! beauty,A,1,43.75,31.5,28.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377640800593,Nioxin - Age Defense - Sérum - 70ml,OH! beauty,A,1,32.69,29.42,10.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377646960977,Nioxin Professional - Pump Negro - 1 L,OH! beauty,A,1,6.00,4.32,28.00,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377647092049,Nioxin - Age Defense - Acondicionador - 240ml,OH! beauty,A,1,18.24,13.13,28.02,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377647321425,Nioxin - Age Defense - Champú - 240ml,OH! beauty,A,1,18.24,13.13,28.02,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
+gid://shopify/Product/11377647452497,Nioxin - Age Defense - Champú - 475ml,OH! beauty,A,1,23.42,21.08,9.99,1,DENY,margen_bajo,no_tocar,margen mínimo 9.99% < 10%
+gid://shopify/Product/11377647681873,Nioxin - Age Defense - Acondicionador - 475ml,OH! beauty,A,1,25.26,22.73,10.02,1,DENY,,activar,pasa todas las comprobaciones; activar y publicar en Tienda online
