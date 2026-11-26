@@ -866,3 +866,13 @@ No tocados, por motivo:
 - No se han cambiado precios, precios tachados, SKU, códigos de barras, títulos ni descripciones. No se ha borrado nada. No se han tocado pedidos, Merchant Center ni temas.
 
 **Para deshacer:** las filas con `decision = activar` del CSV son los 496 productos activados. Hay que volver a ponerlos en DRAFT con `productUpdate(product:{id, status:DRAFT})`, con lo que dejan de verse en todos los canales. No hace falta despublicarlos.
+
+## 26-11 · Ocultados productos con margen ≤10 %
+
+- Aprobado por la dueña: los productos activados el 24-11 (`decision = activar` en `docs/auditoria_importados_2411.csv`, 496) en los que alguna variante tiene margen ≤ 10,5 % ((precio − coste) / precio) han vuelto a DRAFT.
+- Precio y `inventoryItem.unitCost` de cada variante se comprobaron en vivo en Shopify antes del cambio, sin fiarse solo del CSV. Resultado: **136 productos** (casi todos con margen 10,0–10,3 %; uno con 3,3 %). Los otros 360 tienen un margen mínimo muy por encima del umbral y siguen ACTIVE.
+- Lista: `docs/ocultados_margen_bajo_2611.csv` (product_id, titulo, margen_min_pct, precio, coste).
+- Solo se cambió `status` a DRAFT con `productUpdate`. No se tocaron precios, títulos, canales ni publicaciones, y no se borró nada.
+- Verificación: se consultaron los 136 ids después del cambio y los 136 están en DRAFT, sin userErrors.
+
+**Para deshacer:** poner en ACTIVE los ids de `docs/ocultados_margen_bajo_2611.csv` con `productUpdate(product:{id, status:ACTIVE})`. Siguen publicados en la Tienda online, así que vuelven a verse en cuanto estén en ACTIVE.
