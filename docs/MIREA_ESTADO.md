@@ -894,3 +894,9 @@ No tocados, por motivo:
 - Detalle: `docs/subida_precios_2611.csv` (product_id, variant_id, titulo, coste, precio_antes, precio_nuevo, compare_antes, compare_nuevo, precio_fijo_es_antes, precio_fijo_es_nuevo, margen_nuevo_pct).
 
 **Para deshacer:** con `productVariantsBulkUpdate` por producto, volver a poner `price = precio_antes` y `compareAtPrice = compare_antes` (vacío = null) de cada fila del CSV. Si además hay que ocultarlos, ponerlos en DRAFT con `productUpdate(product:{id, status:DRAFT})`.
+
+## 26/27-11 · Redes y Merchant
+- Metricool: los posts IG+TikTok del 26-11 al 02-12 estaban en BORRADOR (no se iban a publicar). Activados con autoPublish los de 27-11, 28-11, 29-11, 30-11, 01-12 y 02-12. El del 26-11 20:00 ya había pasado. En el post del 01-12 el BoJ Glow Serum se corrige de 60 ml a 30 ml (el de 60 ml está archivado). Productos de los posts comprobados: activos y con stock, y los de "oferta" tienen precio rebajado.
+- Black Friday: ya montado por Blanca (descuentos automáticos 10 % y 15 % del 20-11 al 30-11 en productos concretos). No se añade nada.
+- Merchant 5857344812 (HYPD reconectado sin pago): de 5.000 productos revisados, 4.600 aprobados, 321 limitados y 79 rechazados (políticas de Google: medicamentos, suplementos, productos retirados). "item_limit_reached" solo afecta a anuncios de pago. Últimos 30 días: 3.553 impresiones, 6 clics, 0 conversiones.
+- Decisiones de Blanca: los coreanos siguen visibles en España y la UE; solo fichas gratis, sin presupuesto de anuncios.
