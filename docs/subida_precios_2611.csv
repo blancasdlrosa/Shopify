@@ -1,0 +1,189 @@
+product_id,variant_id,titulo,coste,precio_antes,precio_nuevo,compare_antes,compare_nuevo,precio_fijo_es_antes,precio_fijo_es_nuevo,margen_nuevo_pct
+gid://shopify/Product/11377271013713,gid://shopify/ProductVariant/55887524233553,Heller Styler One 150ML,21.6,24.00,27.95,28.80,28.80,sin precio fijo,sin precio fijo,22.72
+gid://shopify/Product/11377271046481,gid://shopify/ProductVariant/55887524266321,Heller Color Protect Shp 500ml- Reformulado,16.11,17.90,20.95,21.48,21.48,sin precio fijo,sin precio fijo,23.10
+gid://shopify/Product/11377271472465,gid://shopify/ProductVariant/55887532425553,Heller Glaze Pure 200ML,20.7,23.00,25.95,27.60,27.60,sin precio fijo,sin precio fijo,20.23
+gid://shopify/Product/11377275928913,gid://shopify/ProductVariant/55887545270609,Tahe - Magic Rizos Curly Activador de Rizo,13.23,14.70,16.95,17.64,17.64,sin precio fijo,sin precio fijo,21.95
+gid://shopify/Product/11377275928913,gid://shopify/ProductVariant/55887545303377,Tahe - Magic Rizos Curly Activador de Rizo,23.22,25.80,29.95,30.96,30.96,sin precio fijo,sin precio fijo,22.47
+gid://shopify/Product/11377275994449,gid://shopify/ProductVariant/55887545336145,Salerm - Salerm 21 Express,11.88,16.50,16.50,18.00,18.00,sin precio fijo,sin precio fijo,28.00
+gid://shopify/Product/11377275994449,gid://shopify/ProductVariant/55887545368913,Salerm - Salerm 21 Express,3.69,4.10,4.95,4.67,,sin precio fijo,sin precio fijo,25.45
+gid://shopify/Product/11377276059985,gid://shopify/ProductVariant/55887545434449,REF Stockholm - Thickening Spray Nº215 - 175 ml,9.62,10.69,12.95,12.61,,sin precio fijo,sin precio fijo,25.71
+gid://shopify/Product/11377276289361,gid://shopify/ProductVariant/55887545631057,Davines - OI All In One Milk,13.95,14.43,17.95,21.00,21.00,sin precio fijo,sin precio fijo,22.28
+gid://shopify/Product/11377276289361,gid://shopify/ProductVariant/55887545663825,Davines - OI All In One Milk,33.75,37.50,42.95,45.00,45.00,sin precio fijo,sin precio fijo,21.42
+gid://shopify/Product/11377276453201,gid://shopify/ProductVariant/55887545860433,Goldwell - Elumen Champú Cabello Coloreado,25.11,27.90,31.95,34.46,34.46,sin precio fijo,sin precio fijo,21.41
+gid://shopify/Product/11377276453201,gid://shopify/ProductVariant/55887545893201,Goldwell - Elumen Champú Cabello Coloreado,8.82,12.25,12.25,18.57,18.57,sin precio fijo,sin precio fijo,28.00
+gid://shopify/Product/11377276518737,gid://shopify/ProductVariant/55887545958737,Goldwell - Dualsenses Bond Pro Champú,21.2,23.56,26.95,29.45,29.45,sin precio fijo,sin precio fijo,21.34
+gid://shopify/Product/11377276518737,gid://shopify/ProductVariant/55887545991505,Goldwell - Dualsenses Bond Pro Champú,9.26,12.87,12.87,20.57,20.57,sin precio fijo,sin precio fijo,28.05
+gid://shopify/Product/11377277206865,gid://shopify/ProductVariant/55887547564369,Heller Pure Clarifying Shp 1000ml,25.11,27.90,31.95,33.48,33.48,sin precio fijo,sin precio fijo,21.41
+gid://shopify/Product/11377277829457,gid://shopify/ProductVariant/55887548776785,Tahe - B.A. Gold Mascarilla - 1000 ml,27.27,30.30,34.95,36.36,36.36,sin precio fijo,sin precio fijo,21.97
+gid://shopify/Product/11377277862225,gid://shopify/ProductVariant/55887548875089,BKT - Leave-in moisturizimg cream Coconut infused - 200 ml,35.06,38.96,43.95,46.75,46.75,sin precio fijo,sin precio fijo,20.23
+gid://shopify/Product/11377277894993,gid://shopify/ProductVariant/55887548809553,REF Stockholm - Ocean Mist Nº303,16.2,18.00,20.95,21.96,21.96,sin precio fijo,sin precio fijo,22.67
+gid://shopify/Product/11377277894993,gid://shopify/ProductVariant/55887548842321,REF Stockholm - Ocean Mist Nº303,10.08,14.00,14.00,22.31,22.31,sin precio fijo,sin precio fijo,28.00
+gid://shopify/Product/11377318560081,gid://shopify/ProductVariant/55887755575633,Termix - Profesional Paddle Cepillo para Desenredar - Profesional,6.75,7.50,8.95,8.40,,sin precio fijo,sin precio fijo,24.58
+gid://shopify/Product/11377319182673,gid://shopify/ProductVariant/55887756198225,Tahe - Magic BX Gold Tratamiento Mantenimiento - 5 x 10 ml,13.23,14.70,16.95,17.64,17.64,sin precio fijo,sin precio fijo,21.95
+gid://shopify/Product/11377319313745,gid://shopify/ProductVariant/55887756329297,Termix - Pack Cepillos Redondos Profesionales Evolution Basic Ø17/Ø23/Ø28/Ø32/Ø43,51.75,57.50,64.95,67.85,67.85,sin precio fijo,sin precio fijo,20.32
+gid://shopify/Product/11377319346513,gid://shopify/ProductVariant/55887756394833,Davines - OI Body Wash - 280 ml,22.5,25.00,28.95,30.00,30.00,sin precio fijo,sin precio fijo,22.28
+gid://shopify/Product/11377319444817,gid://shopify/ProductVariant/55887756493137,Alfaparf Milano - SDL Reparative SOS Emergency Aceite - 6x13 ml,23.58,26.20,29.95,30.13,30.13,sin precio fijo,sin precio fijo,21.27
+gid://shopify/Product/11377319641425,gid://shopify/ProductVariant/55887756722513,REF Stockholm - Extreme Hold Spray Nº525,11.7,13.00,14.95,14.95,,sin precio fijo,sin precio fijo,21.74
+gid://shopify/Product/11377319772497,gid://shopify/ProductVariant/55887756853585,Davines - Energizing Gel - 150 ml,34.65,38.50,43.95,46.20,46.20,sin precio fijo,sin precio fijo,21.16
+gid://shopify/Product/11377319805265,gid://shopify/ProductVariant/55887756886353,Alfaparf Milano - SDL Reparative Loción - 6x13 ml,23.4,26.00,29.95,32.50,32.50,sin precio fijo,sin precio fijo,21.87
+gid://shopify/Product/11377319903569,gid://shopify/ProductVariant/55887756984657,Schwarzkopf - Bonacure - Repair Rescue Champú - 250 ml,8.55,9.50,10.95,11.31,11.31,sin precio fijo,sin precio fijo,21.92
+gid://shopify/Product/11377320001873,gid://shopify/ProductVariant/55887757148497,Alfaparf Milano - SDL Reparative Anti-Breakage Fluido - 125 ml,17.73,19.70,22.95,23.64,23.64,sin precio fijo,sin precio fijo,22.75
+gid://shopify/Product/11377321771345,gid://shopify/ProductVariant/55887758524753,Davines - Replumping Hair Filler - 100 ml,40.5,45.00,50.95,54.00,54.00,sin precio fijo,sin precio fijo,20.51
+gid://shopify/Product/11377321967953,gid://shopify/ProductVariant/55887758786897,BaBylissPRO - Recortadora 4Artists,169.73,188.59,212.95,232.81,232.81,sin precio fijo,sin precio fijo,20.30
+gid://shopify/Product/11377322197329,gid://shopify/ProductVariant/55887758852433,Davines - More Inside Curl Moisturizing Mousse - 250 ml,27.0,30.00,33.95,36.00,36.00,sin precio fijo,sin precio fijo,20.47
+gid://shopify/Product/11377322230097,gid://shopify/ProductVariant/55887758983505,Davines - Nourishing Keratin Sealer - 100 ml,33.75,37.50,42.95,45.00,45.00,sin precio fijo,sin precio fijo,21.42
+gid://shopify/Product/11377322459473,gid://shopify/ProductVariant/55887759114577,Tahe - Peptide T98 Pack Programa Anticaída 3 Meses Tratamiento 200 ml + Champú 300 ml,89.1,99.00,111.95,118.80,118.80,sin precio fijo,sin precio fijo,20.41
+gid://shopify/Product/11377322525009,gid://shopify/ProductVariant/55887759409489,Schwarzkopf - Bonacure - Color Freeze Silver Champú - 1000 ml,16.74,18.60,20.95,22.32,22.32,sin precio fijo,sin precio fijo,20.10
+gid://shopify/Product/11377324327249,gid://shopify/ProductVariant/55887760785745,Schwarzkopf - OSiS+ - Dust It - 10 g,8.36,9.29,10.95,11.62,11.62,sin precio fijo,sin precio fijo,23.65
+gid://shopify/Product/11377325506897,gid://shopify/ProductVariant/55887761834321,Alfaparf Milano - SDL Scalp Comfort - Calming Champú,12.51,17.38,17.38,31.22,31.22,sin precio fijo,sin precio fijo,28.02
+gid://shopify/Product/11377325506897,gid://shopify/ProductVariant/55887761867089,Alfaparf Milano - SDL Scalp Comfort - Calming Champú,12.69,14.10,15.95,17.14,17.14,sin precio fijo,sin precio fijo,20.44
+gid://shopify/Product/11377325539665,gid://shopify/ProductVariant/55887761899857,Davines - Renewing Shampoo,29.93,41.58,41.58,67.20,67.20,sin precio fijo,sin precio fijo,28.02
+gid://shopify/Product/11377325539665,gid://shopify/ProductVariant/55887761932625,Davines - Renewing Shampoo,15.75,17.50,19.95,21.00,21.00,sin precio fijo,sin precio fijo,21.05
+gid://shopify/Product/11377325539665,gid://shopify/ProductVariant/55887761965393,Davines - Renewing Shampoo,25.65,28.50,32.95,34.20,34.20,sin precio fijo,sin precio fijo,22.15
+gid://shopify/Product/11377325867345,gid://shopify/ProductVariant/55887762129233,Schwarzkopf - OSiS+ - Flatliner - 200 ml,12.5,13.89,15.95,14.73,,sin precio fijo,sin precio fijo,21.63
+gid://shopify/Product/11377325965649,gid://shopify/ProductVariant/55887762194769,Schwarzkopf - OSiS+ - Soft Dust - 10 g,8.36,9.29,10.95,11.62,11.62,sin precio fijo,sin precio fijo,23.65
+gid://shopify/Product/11377325998417,gid://shopify/ProductVariant/55887762227537,Salerm - Pro.Line Pro Laca - 300 ml,14.76,16.40,18.95,18.70,,sin precio fijo,sin precio fijo,22.11
+gid://shopify/Product/11377326031185,gid://shopify/ProductVariant/55887762391377,Tahe - B.A. Gold Espuma Satin Fijación 3 - 200 ml,10.89,12.10,13.95,14.52,14.52,sin precio fijo,sin precio fijo,21.94
+gid://shopify/Product/11377326621009,gid://shopify/ProductVariant/55887763472721,Davines - Calming Shampoo,44.82,49.80,56.95,59.76,59.76,sin precio fijo,sin precio fijo,21.30
+gid://shopify/Product/11377326621009,gid://shopify/ProductVariant/55887763505489,Davines - Calming Shampoo,15.75,17.50,19.95,21.00,21.00,sin precio fijo,sin precio fijo,21.05
+gid://shopify/Product/11377326621009,gid://shopify/ProductVariant/55887763538257,Davines - Calming Shampoo,25.65,28.50,32.95,34.20,34.20,sin precio fijo,sin precio fijo,22.15
+gid://shopify/Product/11377326653777,gid://shopify/ProductVariant/55887763571025,Schwarzkopf - BlondMe - Bond Repair Purple Acondicionador - 250 ml,11.25,12.50,14.95,15.07,15.07,sin precio fijo,sin precio fijo,24.75
+gid://shopify/Product/11377326817617,gid://shopify/ProductVariant/55887763669329,Davines - Rebalancing Shampoo,29.93,41.58,41.58,67.20,67.20,sin precio fijo,sin precio fijo,28.02
+gid://shopify/Product/11377326817617,gid://shopify/ProductVariant/55887763702097,Davines - Rebalancing Shampoo,15.75,17.50,19.95,21.00,21.00,sin precio fijo,sin precio fijo,21.05
+gid://shopify/Product/11377326817617,gid://shopify/ProductVariant/55887763734865,Davines - Rebalancing Shampoo,25.65,28.50,32.95,34.20,34.20,sin precio fijo,sin precio fijo,22.15
+gid://shopify/Product/11377327112529,gid://shopify/ProductVariant/55887764062545,Davines - Energizing Shampoo,29.93,41.58,41.58,97.15,97.15,sin precio fijo,sin precio fijo,28.02
+gid://shopify/Product/11377327112529,gid://shopify/ProductVariant/55887764095313,Davines - Energizing Shampoo,25.65,28.50,32.95,34.20,34.20,sin precio fijo,sin precio fijo,22.15
+gid://shopify/Product/11377327309137,gid://shopify/ProductVariant/55887764422993,Tahe - Bio-Fluid Kids Protect Champú - 300 ml,9.0,10.00,11.95,12.00,12.00,sin precio fijo,sin precio fijo,24.69
+gid://shopify/Product/11377327767889,gid://shopify/ProductVariant/55887764652369,Salerm - Mascarilla Multiproteínas - 250 ml,15.84,17.60,19.95,20.06,20.06,sin precio fijo,sin precio fijo,20.60
+gid://shopify/Product/11377329078609,gid://shopify/ProductVariant/55887766421841,Davines - Nourishing Shampoo,29.93,41.58,41.58,67.20,67.20,sin precio fijo,sin precio fijo,28.02
+gid://shopify/Product/11377329078609,gid://shopify/ProductVariant/55887766454609,Davines - Nourishing Shampoo,15.75,17.50,19.95,21.00,21.00,sin precio fijo,sin precio fijo,21.05
+gid://shopify/Product/11377329078609,gid://shopify/ProductVariant/55887766487377,Davines - Nourishing Shampoo,25.65,28.50,32.95,34.20,34.20,sin precio fijo,sin precio fijo,22.15
+gid://shopify/Product/11377329111377,gid://shopify/ProductVariant/55887766815057,Davines - Nourishing Vegetarian Miracle Mask,45.15,62.72,62.72,158.47,158.47,sin precio fijo,sin precio fijo,28.01
+gid://shopify/Product/11377329111377,gid://shopify/ProductVariant/55887766847825,Davines - Nourishing Vegetarian Miracle Mask,15.75,17.50,19.95,21.00,21.00,sin precio fijo,sin precio fijo,21.05
+gid://shopify/Product/11377329111377,gid://shopify/ProductVariant/55887766880593,Davines - Nourishing Vegetarian Miracle Mask,38.25,42.50,47.95,51.00,51.00,sin precio fijo,sin precio fijo,20.23
+gid://shopify/Product/11377329144145,gid://shopify/ProductVariant/55887766520145,Davines - OI Shampoo,34.6,48.05,48.05,70.72,70.72,sin precio fijo,sin precio fijo,27.99
+gid://shopify/Product/11377329144145,gid://shopify/ProductVariant/55887766552913,Davines - OI Shampoo,15.75,17.50,19.95,21.00,21.00,sin precio fijo,sin precio fijo,21.05
+gid://shopify/Product/11377329144145,gid://shopify/ProductVariant/55887766585681,Davines - OI Shampoo,27.0,30.00,33.95,36.00,36.00,sin precio fijo,sin precio fijo,20.47
+gid://shopify/Product/11377329242449,gid://shopify/ProductVariant/55887766716753,Davines - Replumping Shampoo,29.93,41.58,41.58,92.96,92.96,sin precio fijo,sin precio fijo,28.02
+gid://shopify/Product/11377329242449,gid://shopify/ProductVariant/55887766749521,Davines - Replumping Shampoo,15.75,17.50,19.95,21.00,21.00,sin precio fijo,sin precio fijo,21.05
+gid://shopify/Product/11377329242449,gid://shopify/ProductVariant/55887766782289,Davines - Replumping Shampoo,25.65,28.50,32.95,34.20,34.20,sin precio fijo,sin precio fijo,22.15
+gid://shopify/Product/11377329275217,gid://shopify/ProductVariant/55887766978897,Davines - Purifying Shampoo,29.93,41.58,41.58,57.98,57.98,sin precio fijo,sin precio fijo,28.02
+gid://shopify/Product/11377329275217,gid://shopify/ProductVariant/55887767011665,Davines - Purifying Shampoo,15.75,17.50,19.95,21.00,21.00,sin precio fijo,sin precio fijo,21.05
+gid://shopify/Product/11377329275217,gid://shopify/ProductVariant/55887767044433,Davines - Purifying Shampoo,25.65,28.50,32.95,34.20,34.20,sin precio fijo,sin precio fijo,22.15
+gid://shopify/Product/11377329340753,gid://shopify/ProductVariant/55887767208273,Davines - Heart of Glass Silkening Shampoo,29.93,41.58,41.58,111.26,111.26,sin precio fijo,sin precio fijo,28.02
+gid://shopify/Product/11377329340753,gid://shopify/ProductVariant/55887767241041,Davines - Heart of Glass Silkening Shampoo,15.75,17.50,19.95,21.00,21.00,sin precio fijo,sin precio fijo,21.05
+gid://shopify/Product/11377329340753,gid://shopify/ProductVariant/55887767273809,Davines - Heart of Glass Silkening Shampoo,27.0,30.00,33.95,36.00,36.00,sin precio fijo,sin precio fijo,20.47
+gid://shopify/Product/11377329406289,gid://shopify/ProductVariant/55887767503185,Davines - OI Liquid Luster,15.75,17.50,19.95,21.00,21.00,sin precio fijo,sin precio fijo,21.05
+gid://shopify/Product/11377329406289,gid://shopify/ProductVariant/55887767535953,Davines - OI Liquid Luster,43.65,48.50,54.95,58.20,58.20,sin precio fijo,sin precio fijo,20.56
+gid://shopify/Product/11377329471825,gid://shopify/ProductVariant/55887767634257,Davines - OI Soufflé,15.75,17.50,19.95,21.00,21.00,sin precio fijo,sin precio fijo,21.05
+gid://shopify/Product/11377329471825,gid://shopify/ProductVariant/55887767667025,Davines - OI Soufflé,33.75,37.50,42.95,45.00,45.00,sin precio fijo,sin precio fijo,21.42
+gid://shopify/Product/11377329504593,gid://shopify/ProductVariant/55887767568721,Goldwell - Dualsenses Blondes & Highlights Anti-Yellow Champú,21.14,23.49,26.95,29.37,29.37,sin precio fijo,sin precio fijo,21.56
+gid://shopify/Product/11377329504593,gid://shopify/ProductVariant/55887767601489,Goldwell - Dualsenses Blondes & Highlights Anti-Yellow Champú,9.26,12.87,12.87,20.57,20.57,sin precio fijo,sin precio fijo,28.05
+gid://shopify/Product/11377329537361,gid://shopify/ProductVariant/55887767699793,Goldwell - Dualsenses Just Smooth Tratamiento 60 Sec,11.41,15.85,15.85,31.70,31.70,sin precio fijo,sin precio fijo,28.01
+gid://shopify/Product/11377329537361,gid://shopify/ProductVariant/55887767732561,Goldwell - Dualsenses Just Smooth Tratamiento 60 Sec,26.09,28.99,32.95,35.37,35.37,sin precio fijo,sin precio fijo,20.82
+gid://shopify/Product/11377329701201,gid://shopify/ProductVariant/55887768289617,Schwarzkopf - Goodbye Yellow - Champú,29.38,40.80,40.80,,,sin precio fijo,sin precio fijo,27.99
+gid://shopify/Product/11377329701201,gid://shopify/ProductVariant/55887768322385,Schwarzkopf - Goodbye Yellow - Champú,8.87,9.86,11.95,12.33,12.33,sin precio fijo,sin precio fijo,25.77
+gid://shopify/Product/11377329930577,gid://shopify/ProductVariant/55887768781137,Schwarzkopf - BlondMe - Bond Repair Nourishing Champú,31.69,44.02,44.02,,,sin precio fijo,sin precio fijo,28.01
+gid://shopify/Product/11377329930577,gid://shopify/ProductVariant/55887768813905,Schwarzkopf - BlondMe - Bond Repair Nourishing Champú,9.63,10.70,12.95,12.91,,sin precio fijo,sin precio fijo,25.64
+gid://shopify/Product/11377329963345,gid://shopify/ProductVariant/55887768846673,Schwarzkopf - BlondMe - Bondfinity Deep Repair Mascarilla,12.69,14.10,15.95,16.99,16.99,sin precio fijo,sin precio fijo,20.44
+gid://shopify/Product/11377329963345,gid://shopify/ProductVariant/55887768879441,Schwarzkopf - BlondMe - Bondfinity Deep Repair Mascarilla,20.01,27.79,27.79,32.56,32.56,sin precio fijo,sin precio fijo,28.00
+gid://shopify/Product/11377330028881,gid://shopify/ProductVariant/55887769043281,Schwarzkopf - BlondMe - Bond Repair Nourishing Acondicionador,21.96,30.50,30.50,35.31,35.31,sin precio fijo,sin precio fijo,28.00
+gid://shopify/Product/11377330028881,gid://shopify/ProductVariant/55887769076049,Schwarzkopf - BlondMe - Bond Repair Nourishing Acondicionador,11.25,12.50,14.95,15.01,15.01,sin precio fijo,sin precio fijo,24.75
+gid://shopify/Product/11377330192721,gid://shopify/ProductVariant/55887769436497,Schwarzkopf - BlondMe - Bond Repair Purple Champú,21.28,29.55,29.55,34.28,34.28,sin precio fijo,sin precio fijo,27.99
+gid://shopify/Product/11377330192721,gid://shopify/ProductVariant/55887769469265,Schwarzkopf - BlondMe - Bond Repair Purple Champú,9.63,10.70,12.95,12.93,,sin precio fijo,sin precio fijo,25.64
+gid://shopify/Product/11377330258257,gid://shopify/ProductVariant/55887769600337,Davines - OI Hair Butter,52.6,73.05,73.05,114.92,114.92,sin precio fijo,sin precio fijo,27.99
+gid://shopify/Product/11377330258257,gid://shopify/ProductVariant/55887769633105,Davines - OI Hair Butter,15.75,17.50,19.95,21.00,21.00,sin precio fijo,sin precio fijo,21.05
+gid://shopify/Product/11377330258257,gid://shopify/ProductVariant/55887769665873,Davines - OI Hair Butter,39.15,43.50,48.95,52.20,52.20,sin precio fijo,sin precio fijo,20.02
+gid://shopify/Product/11377330487633,gid://shopify/ProductVariant/55887770354001,Davines - More Inside Sea Salt Spray,10.39,14.43,14.43,21.00,21.00,sin precio fijo,sin precio fijo,28.00
+gid://shopify/Product/11377330487633,gid://shopify/ProductVariant/55887770386769,Davines - More Inside Sea Salt Spray,27.0,30.00,33.95,36.00,36.00,sin precio fijo,sin precio fijo,20.47
+gid://shopify/Product/11377331110225,gid://shopify/ProductVariant/55887773106513,Schwarzkopf - OSiS+ - Session,12.15,16.88,16.88,17.00,17.00,sin precio fijo,sin precio fijo,28.02
+gid://shopify/Product/11377331110225,gid://shopify/ProductVariant/55887773139281,Schwarzkopf - OSiS+ - Session,14.85,16.50,18.95,20.00,20.00,sin precio fijo,sin precio fijo,21.64
+gid://shopify/Product/11377331175761,gid://shopify/ProductVariant/55887773335889,Schwarzkopf - BlondMe - Bond Repair Nourishing Mascarilla,12.69,14.10,15.95,16.96,16.96,sin precio fijo,sin precio fijo,20.44
+gid://shopify/Product/11377331175761,gid://shopify/ProductVariant/55887773368657,Schwarzkopf - BlondMe - Bond Repair Nourishing Mascarilla,20.01,27.79,27.79,32.56,32.56,sin precio fijo,sin precio fijo,28.00
+gid://shopify/Product/11377331568977,gid://shopify/ProductVariant/55887774351697,Davines - Rebalancing Cleansing Treatment,60.45,67.17,75.95,80.60,80.60,sin precio fijo,sin precio fijo,20.41
+gid://shopify/Product/11377331568977,gid://shopify/ProductVariant/55887774384465,Davines - Rebalancing Cleansing Treatment,29.7,33.00,37.95,39.60,39.60,sin precio fijo,sin precio fijo,21.74
+gid://shopify/Product/11377331601745,gid://shopify/ProductVariant/55887774482769,Salerm - Pro.Line Brushing Spray - 250 ml,11.07,12.30,13.95,14.02,14.02,sin precio fijo,sin precio fijo,20.65
+gid://shopify/Product/11377331667281,gid://shopify/ProductVariant/55887774515537,Schwarzkopf - OSiS+ - Freeze Pump - 200 ml,6.57,7.30,8.95,8.95,,sin precio fijo,sin precio fijo,26.59
+gid://shopify/Product/11377332027729,gid://shopify/ProductVariant/55887776186705,Davines - SU Aftersun - 150 ml,28.23,31.37,35.95,37.64,37.64,sin precio fijo,sin precio fijo,21.47
+gid://shopify/Product/11377332158801,gid://shopify/ProductVariant/55887776350545,Panasonic - Cortapelos ER-GP84,169.92,188.80,212.95,201.30,,sin precio fijo,sin precio fijo,20.21
+gid://shopify/Product/11377332322641,gid://shopify/ProductVariant/55887776612689,Davines - Liquid Spell Reinforcing Bodifying Fluid,11.47,15.93,15.93,24.60,24.60,sin precio fijo,sin precio fijo,28.00
+gid://shopify/Product/11377332322641,gid://shopify/ProductVariant/55887776645457,Davines - Liquid Spell Reinforcing Bodifying Fluid,36.9,41.00,46.95,49.20,49.20,sin precio fijo,sin precio fijo,21.41
+gid://shopify/Product/11377332552017,gid://shopify/ProductVariant/55887776842065,Salerm - Mega Acondicionador Intensivo - 12 x 5 ml,26.46,29.40,33.95,33.52,,sin precio fijo,sin precio fijo,22.06
+gid://shopify/Product/11377332715857,gid://shopify/ProductVariant/55887777104209,Termix - Evolution Gold Rose Cepillo Redondo Ø17,10.7,11.89,13.95,12.81,,sin precio fijo,sin precio fijo,23.30
+gid://shopify/Product/11377332715857,gid://shopify/ProductVariant/55887777136977,Termix - Evolution Gold Rose Cepillo Redondo Ø17,16.65,18.50,20.95,18.92,,sin precio fijo,sin precio fijo,20.53
+gid://shopify/Product/11377332715857,gid://shopify/ProductVariant/55887777169745,Termix - Evolution Gold Rose Cepillo Redondo Ø17,16.65,18.50,20.95,19.69,,sin precio fijo,sin precio fijo,20.53
+gid://shopify/Product/11377332715857,gid://shopify/ProductVariant/55887777202513,Termix - Evolution Gold Rose Cepillo Redondo Ø17,19.52,21.69,24.95,22.09,,sin precio fijo,sin precio fijo,21.76
+gid://shopify/Product/11377332715857,gid://shopify/ProductVariant/55887777235281,Termix - Evolution Gold Rose Cepillo Redondo Ø17,22.95,31.88,31.88,,,sin precio fijo,sin precio fijo,28.01
+gid://shopify/Product/11377332748625,gid://shopify/ProductVariant/55887777268049,Termix - Profesional Cepillo Plano Térmico Grande,11.6,12.89,14.95,13.17,,sin precio fijo,sin precio fijo,22.41
+gid://shopify/Product/11377332748625,gid://shopify/ProductVariant/55887777300817,Termix - Profesional Cepillo Plano Térmico Grande,9.9,11.00,12.95,12.21,,sin precio fijo,sin precio fijo,23.55
+gid://shopify/Product/11377332978001,gid://shopify/ProductVariant/55887777726801,Salerm - Protector de Piel - 60 ml,8.28,9.20,10.95,10.49,,sin precio fijo,sin precio fijo,24.38
+gid://shopify/Product/11377333043537,gid://shopify/ProductVariant/55887777825105,Davines - More Inside Invisible No Gas Spray - 250 ml,27.9,31.00,34.95,37.20,37.20,sin precio fijo,sin precio fijo,20.17
+gid://shopify/Product/11377334419793,gid://shopify/ProductVariant/55887783297361,Schwarzkopf - Bonacure - Moisture Kick Champú con Aloe Vera - 250 ml,6.39,7.10,8.95,8.52,,sin precio fijo,sin precio fijo,28.60
+gid://shopify/Product/11377334616401,gid://shopify/ProductVariant/55887783461201,BaBylissPRO - Recortadora Lo-ProFX Gold Edition FX726,112.95,125.50,141.95,139.69,,sin precio fijo,sin precio fijo,20.43
+gid://shopify/Product/11377334649169,gid://shopify/ProductVariant/55887783526737,Schwarzkopf - OSiS+ - Curl Jam - 300 ml,7.81,8.68,9.95,10.41,10.41,sin precio fijo,sin precio fijo,21.51
+gid://shopify/Product/11377334681937,gid://shopify/ProductVariant/55887783559505,Schwarzkopf - Bonacure - Color Freeze Tratamiento - 500 ml,15.27,16.97,19.95,20.37,20.37,sin precio fijo,sin precio fijo,23.46
+gid://shopify/Product/11377335075153,gid://shopify/ProductVariant/55887784214865,J Beverly Hills - Rescue - Acondicionador - 90ml,7.65,8.50,9.95,9.61,,sin precio fijo,sin precio fijo,23.12
+gid://shopify/Product/11377335271761,gid://shopify/ProductVariant/55887784608081,J Beverly Hills - AddBody - Acondicionador - 90ml,8.46,9.40,10.95,9.61,,sin precio fijo,sin precio fijo,22.74
+gid://shopify/Product/11377335697745,gid://shopify/ProductVariant/55887785558353,"Schwarzkopf - Bonacure - Color Freeze Champú pH 4,5 - 500 ml",9.18,10.20,11.95,12.24,12.24,sin precio fijo,sin precio fijo,23.18
+gid://shopify/Product/11377335959889,gid://shopify/ProductVariant/55887785984337,Philip Martin’s - Sea Salt Spray - 100 ml,26.55,29.50,33.95,34.00,34.00,sin precio fijo,sin precio fijo,21.80
+gid://shopify/Product/11377336189265,gid://shopify/ProductVariant/55887790702929,Davines - Alchemic Champú Pigmentado - 280 ml,23.4,26.00,29.95,31.20,31.20,sin precio fijo,sin precio fijo,21.87
+gid://shopify/Product/11377336189265,gid://shopify/ProductVariant/55887790735697,Davines - Alchemic Champú Pigmentado - 280 ml,23.4,26.00,29.95,31.20,31.20,sin precio fijo,sin precio fijo,21.87
+gid://shopify/Product/11377336189265,gid://shopify/ProductVariant/55887790768465,Davines - Alchemic Champú Pigmentado - 280 ml,23.4,26.00,29.95,31.20,31.20,sin precio fijo,sin precio fijo,21.87
+gid://shopify/Product/11377336189265,gid://shopify/ProductVariant/55887790801233,Davines - Alchemic Champú Pigmentado - 280 ml,23.4,26.00,29.95,31.20,31.20,sin precio fijo,sin precio fijo,21.87
+gid://shopify/Product/11377336189265,gid://shopify/ProductVariant/55887790834001,Davines - Alchemic Champú Pigmentado - 280 ml,23.4,26.00,29.95,31.20,31.20,sin precio fijo,sin precio fijo,21.87
+gid://shopify/Product/11377336713553,gid://shopify/ProductVariant/55887793619281,Tahe - Pack Cebolla Roja - (Champú 1000 ml + Mascarilla 700ml),19.32,21.47,24.95,26.19,26.19,sin precio fijo,sin precio fijo,22.57
+gid://shopify/Product/11377336942929,gid://shopify/ProductVariant/55887793881425,J Beverly Hills - Fragile - Champú - 90ml,8.46,9.40,10.95,9.61,,sin precio fijo,sin precio fijo,22.74
+gid://shopify/Product/11377336975697,gid://shopify/ProductVariant/55887793914193,J Beverly Hills - EveryDay - Champú - 90ml,8.46,9.40,10.95,9.61,,sin precio fijo,sin precio fijo,22.74
+gid://shopify/Product/11377337401681,gid://shopify/ProductVariant/55887794340177,Kin Cosmetics - Kinactif Nº7 Control Intensive Anti-Frizz Shot - 100ml,13.64,15.16,17.95,18.66,18.66,sin precio fijo,sin precio fijo,24.01
+gid://shopify/Product/11377337729361,gid://shopify/ProductVariant/55887794733393,Salerm - Salerm 21 Acondicionador Proteína de Seda Sin Aclarado - 200 ml (Pack 2),33.3,37.00,41.95,45.14,45.14,sin precio fijo,sin precio fijo,20.62
+gid://shopify/Product/11377337794897,gid://shopify/ProductVariant/55887794798929,J Beverly Hills - Fragile - Acondicionador - 90ml,8.46,9.40,10.95,9.61,,sin precio fijo,sin precio fijo,22.74
+gid://shopify/Product/11377337860433,gid://shopify/ProductVariant/55887794864465,Salerm - Salerm 21 Acondicionador Proteína de Seda Sin Aclarado - 50 ml (Pack 3),27.96,31.07,34.95,37.90,37.90,sin precio fijo,sin precio fijo,20.00
+gid://shopify/Product/11377338155345,gid://shopify/ProductVariant/55887795355985,REF Stockholm - Weightless Volume Shampoo,27.41,38.08,38.08,41.92,41.92,sin precio fijo,sin precio fijo,28.02
+gid://shopify/Product/11377338155345,gid://shopify/ProductVariant/55887795388753,REF Stockholm - Weightless Volume Shampoo,10.17,11.30,12.95,13.22,13.22,sin precio fijo,sin precio fijo,21.47
+gid://shopify/Product/11377338188113,gid://shopify/ProductVariant/55887795421521,Salerm - Homme Pack Caída - Unidad,57.42,63.80,71.95,72.73,72.73,sin precio fijo,sin precio fijo,20.19
+gid://shopify/Product/11377338253649,gid://shopify/ProductVariant/55887795487057,J Beverly Hills - Rescue - Champú - 90ml,8.46,9.40,10.95,9.61,,sin precio fijo,sin precio fijo,22.74
+gid://shopify/Product/11377338384721,gid://shopify/ProductVariant/55887795618129,J Beverly Hills - AddBody - Champú - 90ml,8.46,9.40,10.95,9.61,,sin precio fijo,sin precio fijo,22.74
+gid://shopify/Product/11377339138385,gid://shopify/ProductVariant/55887797748049,Davines - More Inside Primer - 100 ml,15.75,17.50,19.95,21.00,21.00,sin precio fijo,sin precio fijo,21.05
+gid://shopify/Product/11377339466065,gid://shopify/ProductVariant/55887797846353,REF Stockholm - Colour Boost - Sandy Blonde - 200ml,9.24,10.27,11.95,12.84,12.84,sin precio fijo,sin precio fijo,22.68
+gid://shopify/Product/11377339498833,gid://shopify/ProductVariant/55887797879121,Remember Ecosostenible - Vegan Rhassoul Clay,70.2,78.00,87.95,95.00,95.00,sin precio fijo,sin precio fijo,20.18
+gid://shopify/Product/11377339597137,gid://shopify/ProductVariant/55887798075729,L3VEL3 - Matte Putty Fijación Firme - 150g,7.55,8.39,9.95,10.48,10.48,sin precio fijo,sin precio fijo,24.12
+gid://shopify/Product/11377339662673,gid://shopify/ProductVariant/55887798108497,Remember Ecosostenible - Free Hands Bleach,70.2,78.00,87.95,95.00,95.00,sin precio fijo,sin precio fijo,20.18
+gid://shopify/Product/11377340088657,gid://shopify/ProductVariant/55887800631633,Reuzel - Road Trip To Go - Clay Matte Pomade - 95g + 35g,7.53,8.37,9.95,10.05,10.05,sin precio fijo,sin precio fijo,24.32
+gid://shopify/Product/11377340186961,gid://shopify/ProductVariant/55887800729937,Reuzel - Road Trip To Go - Fiber Pomade - 95g + 35g,7.46,8.29,9.95,10.05,10.05,sin precio fijo,sin precio fijo,25.03
+gid://shopify/Product/11377340252497,gid://shopify/ProductVariant/55887800828241,Remember Ecosostenible - Herbal Copper 7.43,70.2,78.00,87.95,95.00,95.00,sin precio fijo,sin precio fijo,20.18
+gid://shopify/Product/11377340285265,gid://shopify/ProductVariant/55887800795473,Remember Ecosostenible - Herbal Miracle Cool Reflects R,70.2,78.00,87.95,95.00,95.00,sin precio fijo,sin precio fijo,20.18
+gid://shopify/Product/11377340318033,gid://shopify/ProductVariant/55887800861009,Remember Ecosostenible - Herbal Mahogany 5.5 R,70.2,78.00,87.95,95.00,95.00,sin precio fijo,sin precio fijo,20.18
+gid://shopify/Product/11377340350801,gid://shopify/ProductVariant/55887800893777,Reuzel - Hair Styling - Matte Styling Paste - 100ml,6.0,6.67,7.95,8.08,8.08,sin precio fijo,sin precio fijo,24.53
+gid://shopify/Product/11377340481873,gid://shopify/ProductVariant/55887801024849,Remember Ecosostenible - Bakuchiol Miracle R,70.2,78.00,87.95,92.00,92.00,sin precio fijo,sin precio fijo,20.18
+gid://shopify/Product/11377340514641,gid://shopify/ProductVariant/55887801090385,Remember Ecosostenible - Natural Henna R,70.2,78.00,87.95,95.00,95.00,sin precio fijo,sin precio fijo,20.18
+gid://shopify/Product/11377340612945,gid://shopify/ProductVariant/55887801188689,Remember Ecosostenible - Herbal Natural Blonde 8.0 R,70.2,78.00,87.95,92.00,92.00,sin precio fijo,sin precio fijo,20.18
+gid://shopify/Product/11377340645713,gid://shopify/ProductVariant/55887801221457,Remember Ecosostenible - Neutral Henna R,70.2,78.00,87.95,95.00,95.00,sin precio fijo,sin precio fijo,20.18
+gid://shopify/Product/11377340678481,gid://shopify/ProductVariant/55887801254225,Remember Ecosostenible - Herbal Brown 4.0 R,70.2,78.00,87.95,95.00,95.00,sin precio fijo,sin precio fijo,20.18
+gid://shopify/Product/11377340711249,gid://shopify/ProductVariant/55887801286993,Remember Ecosostenible - Herbal Wine Red 6.66 R,70.2,78.00,87.95,95.00,95.00,sin precio fijo,sin precio fijo,20.18
+gid://shopify/Product/11377340809553,gid://shopify/ProductVariant/55887801319761,Remember Ecosostenible - Herbal Blond Gold 8.3 R,70.2,78.00,87.95,95.00,95.00,sin precio fijo,sin precio fijo,20.18
+gid://shopify/Product/11377340842321,gid://shopify/ProductVariant/55887801418065,Remember Ecosostenible - Herbal Cool Blonde 9.1 R,70.2,78.00,87.95,95.00,95.00,sin precio fijo,sin precio fijo,20.18
+gid://shopify/Product/11377340875089,gid://shopify/ProductVariant/55887801450833,Remember Ecosostenible - Herbal Blond Beige 9.13 R,70.2,78.00,87.95,95.00,95.00,sin precio fijo,sin precio fijo,20.18
+gid://shopify/Product/11377341956433,gid://shopify/ProductVariant/55887806038353,L3VEL3 - Curly Hair Jam - 250ml,7.35,8.17,9.95,10.21,10.21,sin precio fijo,sin precio fijo,26.13
+gid://shopify/Product/11377342021969,gid://shopify/ProductVariant/55887806136657,L3VEL3 - Curly Curl Cream - 250ml,8.72,9.69,10.95,12.12,12.12,sin precio fijo,sin precio fijo,20.37
+gid://shopify/Product/11377342513489,gid://shopify/ProductVariant/55887806595409,Bifull - Ren Natur Paletina Triangular Mini,0.96,1.07,1.95,1.28,,sin precio fijo,sin precio fijo,50.77
+gid://shopify/Product/11377342644561,gid://shopify/ProductVariant/55887806824785,Bifull - Ren Natur Batidor Dúo para Tinte Hive,1.06,1.18,1.95,1.42,,sin precio fijo,sin precio fijo,45.64
+gid://shopify/Product/11377342742865,gid://shopify/ProductVariant/55887807545681,Bifull - Collar de Corte Imantado - Negro,5.04,5.60,6.95,6.72,,sin precio fijo,sin precio fijo,27.48
+gid://shopify/Product/11377342841169,gid://shopify/ProductVariant/55887807643985,Bifull - Espejo Irrompible con Asa Negro,10.78,11.98,13.95,14.38,14.38,sin precio fijo,sin precio fijo,22.72
+gid://shopify/Product/11377342906705,gid://shopify/ProductVariant/55887807906129,Bifull - Cepillo Desenredante Especial Rizos Azul,3.51,3.90,4.95,4.68,,sin precio fijo,sin precio fijo,29.09
+gid://shopify/Product/11377343070545,gid://shopify/ProductVariant/55887808102737,Bifull - Ren Natur Paletina Triangular Pequeña - 4 cm,1.06,1.18,1.95,1.42,,sin precio fijo,sin precio fijo,45.64
+gid://shopify/Product/11377343103313,gid://shopify/ProductVariant/55887808168273,Bifull - Ren Natur Peine Paletina para Coloración,8.09,8.99,10.95,10.79,,sin precio fijo,sin precio fijo,26.12
+gid://shopify/Product/11377343136081,gid://shopify/ProductVariant/55887808397649,Bifull - Ren Natur Bol con Asa para Coloración - 300 ml,8.09,8.99,10.95,10.79,,sin precio fijo,sin precio fijo,26.12
+gid://shopify/Product/11377343267153,gid://shopify/ProductVariant/55887808594257,Bifull - Ren Natur Espátula para Mechas Cortas - 15 cm,1.67,1.86,2.95,2.23,,sin precio fijo,sin precio fijo,43.39
+gid://shopify/Product/11377343332689,gid://shopify/ProductVariant/55887808692561,L3VEL3 - Gel Fijación Super Fuerte - 500ml,8.72,9.69,10.95,12.12,12.12,sin precio fijo,sin precio fijo,20.37
+gid://shopify/Product/11377600266577,gid://shopify/ProductVariant/55888475095377,Wella Professionals - EIMI Fixing Dynamic Fix - 500 ml,21.23,23.59,26.95,25.46,,sin precio fijo,sin precio fijo,21.22
+gid://shopify/Product/11377604821329,gid://shopify/ProductVariant/55888516284753,Sebastian Professional - Penetraitt - Conditioner - 50 ml,7.65,8.50,9.95,10.37,10.37,sin precio fijo,sin precio fijo,23.12
+gid://shopify/Product/11377620025681,gid://shopify/ProductVariant/55888598696273,Tahe - O.C. Intensive Treatment Anticaída - 15 x 5 ml,25.65,28.50,32.95,34.20,34.20,sin precio fijo,sin precio fijo,22.15
+gid://shopify/Product/11377620058449,gid://shopify/ProductVariant/55888598827345,Tahe - Peptide T98 Pack Programa Anticaída Tratamiento 6 x 10 ml + Champú 300 ml,34.11,37.90,42.95,45.48,45.48,sin precio fijo,sin precio fijo,20.58
+gid://shopify/Product/11377620091217,gid://shopify/ProductVariant/55888598860113,Tahe - Peptide T98 Pack Programa Anticaída Tratamiento 50 ml + Champú 300 ml,34.11,37.90,42.95,45.48,45.48,sin precio fijo,sin precio fijo,20.58
+gid://shopify/Product/11377620255057,gid://shopify/ProductVariant/55888598892881,Tahe - O.C. Intensive Shampoo Anticaída - 300 ml,12.6,14.00,15.95,16.80,16.80,sin precio fijo,sin precio fijo,21.00
+gid://shopify/Product/11377625432401,gid://shopify/ProductVariant/55888619045201,Alfaparf Milano - Benvoleo Glossy - Express Acondicionador - 200 ml,15.21,16.90,19.95,19.78,,sin precio fijo,sin precio fijo,23.76
+gid://shopify/Product/11377626120529,gid://shopify/ProductVariant/55888622027089,Davines - Pasta & Love Medium Fiber Cream - 50 ml,27.0,30.00,33.95,36.00,36.00,sin precio fijo,sin precio fijo,20.47
+gid://shopify/Product/11377637327185,gid://shopify/ProductVariant/55888665837905,Goldwell - Dualsenses Color Brilliance Sérum Intensivo 12 ampollas x - 18 ml,33.29,36.99,41.95,45.13,45.13,sin precio fijo,sin precio fijo,20.64
+gid://shopify/Product/11377637556561,gid://shopify/ProductVariant/55888666165585,Goldwell - StyleSign Smoothing Serum Spray Sérum Alisador en Spray - 100 ml,10.79,11.99,13.95,14.99,14.99,sin precio fijo,sin precio fijo,22.65
+gid://shopify/Product/11377640800593,gid://shopify/ProductVariant/55888671867217,Nioxin - Age Defense - Sérum - 70ml,29.42,32.69,36.95,35.00,,sin precio fijo,sin precio fijo,20.38
+gid://shopify/Product/11377647681873,gid://shopify/ProductVariant/55888712696145,Nioxin - Age Defense - Acondicionador - 475ml,22.73,25.26,28.95,26.04,,sin precio fijo,sin precio fijo,21.49

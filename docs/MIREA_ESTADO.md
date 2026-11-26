@@ -876,3 +876,21 @@ No tocados, por motivo:
 - Verificación: se consultaron los 136 ids después del cambio y los 136 están en DRAFT, sin userErrors.
 
 **Para deshacer:** poner en ACTIVE los ids de `docs/ocultados_margen_bajo_2611.csv` con `productUpdate(product:{id, status:ACTIVE})`. Siguen publicados en la Tienda online, así que vuelven a verse en cuanto estén en ACTIVE.
+
+## 26-11 · Subida de precio a 20 % de margen (136 productos)
+
+- Aprobado por la dueña: subir el precio de los 136 productos de `docs/ocultados_margen_bajo_2611.csv` (en DRAFT desde hoy por margen ≈10 %) y volver a activarlos.
+- Regla por variante, con precio, precio tachado e `inventoryItem.unitCost` leídos en vivo antes del cambio:
+  - Precio nuevo = coste / 0,80 (20 % de margen sobre el precio), redondeado hacia arriba al siguiente ,95 (26,13 → 26,95; 26,96 → 27,95).
+  - Nunca se baja un precio: si la variante ya tenía ≥ 20 % de margen, se deja igual.
+  - Precio tachado: si el precio nuevo es ≥ al tachado, se quita (null) para no mostrar un descuento falso. Si el tachado sigue siendo mayor, se deja.
+- Resultado: 188 variantes revisadas, **160 con precio nuevo** y 28 sin cambio (ya tenían ≥ 20 %). Ninguna variante sin coste, así que no se saltó ningún producto.
+  - Subida media del precio en las variantes cambiadas: **+16,8 %** (mediana +14,8 %, mín. +12,5 %, máx. +82,2 % en accesorios Bifull de 1–2 €, p. ej. paletina 1,07 € → 1,95 €).
+  - Margen nuevo de las variantes cambiadas: 20,0–50,8 % (media 22,6 %).
+  - Precio tachado quitado en 39 variantes; se mantiene en 146; 3 no tenían.
+- Lista de precios España (`gid://shopify/PriceList/34062532945`, "Mirea · +60% coste Korealy · España", 2.838 precios fijos): se buscaron precios fijos de estos 136 productos con `prices(originType: FIXED, query: "product_id:…")`. **Ninguna de las 188 variantes tiene precio fijo**; su precio en España es relativo (ajuste 0 %) y sigue al precio base, así que no hubo que tocar la lista. El filtro se comprobó con un producto que sí tiene precio fijo.
+- Cambios: `productVariantsBulkUpdate` (solo `price` y `compareAtPrice`) una vez por producto, y después `productUpdate(status: ACTIVE)`. Un lote de activación dio error temporal de Shopify: se comprobó qué productos ya estaban en ACTIVE (38 de 46) y el resto se repitió en lotes de 20. No se tocaron títulos, SKU, descripciones, canales ni costes.
+- Verificación en vivo: las 188 variantes tienen el precio y el tachado previstos, todas con margen ≥ 20 %, y los 136 productos están en ACTIVE.
+- Detalle: `docs/subida_precios_2611.csv` (product_id, variant_id, titulo, coste, precio_antes, precio_nuevo, compare_antes, compare_nuevo, precio_fijo_es_antes, precio_fijo_es_nuevo, margen_nuevo_pct).
+
+**Para deshacer:** con `productVariantsBulkUpdate` por producto, volver a poner `price = precio_antes` y `compareAtPrice = compare_antes` (vacío = null) de cada fila del CSV. Si además hay que ocultarlos, ponerlos en DRAFT con `productUpdate(product:{id, status:DRAFT})`.
